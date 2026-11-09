@@ -1,0 +1,40 @@
+.class public La/a/a/b/s$a;
+.super Ljava/lang/Object;
+.source ""
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = La/a/a/b/s;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x9
+    name = "a"
+.end annotation
+
+
+# static fields
+.field public static a:La/a/a/b/s;
+
+
+# direct methods
+.method public static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, La/a/a/b/s;
+
+    invoke-direct {v0}, La/a/a/b/s;-><init>()V
+
+    sput-object v0, La/a/a/b/s$a;->a:La/a/a/b/s;
+
+    return-void
+.end method
+
+.method public static synthetic a()La/a/a/b/s;
+    .locals 1
+
+    sget-object v0, La/a/a/b/s$a;->a:La/a/a/b/s;
+
+    return-object v0
+.end method
