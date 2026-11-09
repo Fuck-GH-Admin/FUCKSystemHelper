@@ -72,7 +72,7 @@ APP 另声明保护级别为 signature 的 `com.mobiletools.systemhelper.permiss
 - 原始静态字段 `Lc/d/a/b/d;->l` 在 DEX `static_values` 中设为 `http://dm.wo.com.cn:18080/register`，可由 SharedPreferences `serverAddress` 覆盖。
 - `control/g->b(DeviceInfo)` 先检查应用标志和数据、China 网络条件、联网状态、联通卡或 Wi-Fi 条件；直接尝试上报，或将 JSON 写入 `dmregister` 待处理。并非所有状态都立刻上传。
 - `control/g->a(DeviceInfo)` 将设备模型序列化 JSON，先计算 MD5，利用 `assets/pub.cer` 加密其摘要并 Base64/URL 编码放入 `&sign=`；连接字符串还包含 `?ver=5.0`、`&model=`、`&manuf=`。JSON 数据使用 `AES/ECB/PKCS5Padding` 应用层加密。注意：AES 密钥材料为从 JSON 计算的 MD5 摘要（需要据调用参数理解其循环派生关系），不同于随机生成的认证密钥。HTTP body 为 `application/encrypted-json`。
-- `Lc/d/a/b/f` 的联网 helper 同时有 `http://` 和 `https://` 分支，`HttpURLConnection`/`HttpsURLConnection`，均配置连接/读取超时、POST、写入字节流并检查响应码。**默认端点选择 HTTP 而非 HTTPS**。
+- `Lc/d/a/b/f` 的联网 helper 同时有 `http://` 和 `https://` 分支，`HttpURLConnection`/`HttpsURLConnection`，均配置连接/读取超时、POST、写入字节流并检查响应码。**默认端点选择 HTTP 而非 HTTPS**。读取服务器地址时的代码为 `GlobalSetting.b ? GlobalSetting.l : SharedPreferences.serverAddress`；`GlobalSetting.b` 的静态默认值为 false，当前静态扫描未发现把它改成 true 的显式赋值，因此默认路径会读取可修改的持久化地址。
 - Baidu 定位 SDK 另带 `https://loc.map.baidu.com/sdk.php`、`https://loc.map.baidu.com/cc.php`、`https://api.map.baidu.com/sdkcs/verify` 等一系列独立网络地址；`http://ofloc.map.baidu.com/offline_loc` 亦在代码中。SDK 的端点不能全部等同于本宿主每次都会调用，需要运行态观测确认。
 
 ## 6. 数据落盘与日志
@@ -88,11 +88,11 @@ APP 另声明保护级别为 signature 的 `com.mobiletools.systemhelper.permiss
 Manifest: `RegisterHelperService` exported=true 且没有 `android:permission`；自定义的 signature 权限没有施加到该 service。
 
 `service/a$a->onTransact` 由 Binder 分派 1–5 号事务，调用 `service/a` 接口：
-1. `a():boolean` — 查询日志开关；
-2. `a(boolean)` — 设置日志开关；
-3. `b():void` — 删除 SharedPreferences 文件；
-4. `a(int)` — 根据传入整数调整多个不同的后台任务间隔；
-5. `a(String)` — 设置 `serverAddress`。
+1. **事务 1**：`a(String)` — 修改 `serverAddress`；
+2. **事务 2**：`a(int)` — 按比例设置七组后台任务时间间隔；
+3. **事务 3**：`b():void` — 删除 SharedPreferences 文件；
+4. **事务 4**：`a(boolean)` — 设置日志开关；
+5. **事务 5**：`a():boolean` — 查询日志开关。
 
 实现位于 `RegisterHelperService$a`，通过 `Lc/d/a/b/l;->a(Context,String)` 持久化网络地址。代码未见针对调用方 UID/签名的身份检查。只要别的本地 APP 能绑定此 exported service 并完成 Binder 事务，便有机会更改本应用配置、触发额外日志、影响周期任务或重定向上报 URL。**这里没有证明远程网页可直接攻击，也没有证明重定向后的外部服务器可直接解密 AES 密文。**
 
@@ -133,3 +133,12 @@ Manifest: `RegisterHelperService` exported=true 且没有 `android:permission`�
 未完成：JADX 源码级可读 Java 反编译、所有 try/catch 控制流与跨方法动态分派恢复、完整 ARM64 SO 逐函数逆向、资源表全 XML 化、APK 签名摘要的密码学验证、真机 Android framework 权限/AppOps 与 Binder 验证、真实联网流量取证和服务端行为验证。因此不能称为逐函数语义完全复原；**原件和可重放的 Dalvik 级索引已保存，遗漏均透明列明**。
 
 后续动态取证的最小要求：隔离测试手机、备份原厂 APK 与分区清单、记录 `dumpsys package`/`appops`/`dumpsys jobscheduler`/`alarm`/`ps`、由本机生成的仅测试数据负载、隔离网络中的 DNS/HTTP(S) 观察，以及对导出服务的本地权限边界验证。未经授权不要攻击实际运营商服务器。
+
+
+## 12. 后续逆向验证更新（高层反编译）
+
+GitHub Actions 运行 JADX 1.5.6 / Apktool 3.0.3 / ARM64 objdump：Apktool 成功生成 1,149 个 Smali 文件；JADX 常规模式 585 个 Java 文件、退出码 3（报告六处反编译错误）；JADX fallback 模式 586 个 Java 文件、退出码 0。AArch64 两份 SO 均生成完整反汇编文本。以上是工具层面的恢复，不代表原始源码语义无损。
+
+使用 Android apksigner 的初次校验在样本默认 API 范围内显示 **v3 签名验证成功**，证书是 BBK/iQOO（SHA-256 `bcc35d4d3606f154f0402ab7634e8490c0b244c2675c3c6238986987024f0c02`）；Vivo API 33+ 证书已从 Signing Block 提取，但该次命令尚未独立指定 API 33 范围复验。详见 `analysis/verification/apksigner.txt`。
+
+导出的 Binder 事务号已按 JADX 源码 `decompiled/jadx/sources/com/mobiletools/systemhelper/service/a.java` 与 `RegisterHelperService.java` 交叉核对（1 修改地址，2 调度间隔，3 删除配置，4 改日志，5 查询日志）。
