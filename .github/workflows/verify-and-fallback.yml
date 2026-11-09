@@ -1,0 +1,106 @@
+name: Verify signatures and recover JADX fallback
+on:
+  push:
+    paths:
+      - '.github/workflows/verify-and-fallback.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: systemhelper-quality
+  cancel-in-progress: false
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - name: Verify source and decompiled class coverage
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p analysis/verification decompiled/logs
+          echo '38a9010600bc91fd468701f53ba37ea0d43cb8e906544d0700a799f592011428  original/SystemHelper.apk' | sha256sum -c -
+          find decompiled/apktool/smali -type f -name '*.smali' | sort > analysis/verification/smali-file-list.txt
+          echo "Smali files: $(wc -l < analysis/verification/smali-file-list.txt)"
+          find decompiled/jadx -type f -name '*.java' | sort > analysis/verification/jadx-java-file-list.txt
+          echo "Readable Java files: $(wc -l < analysis/verification/jadx-java-file-list.txt)"
+          sha256sum extracted/classes.dex original/SystemHelper.apk > analysis/verification/input-sha256.txt
+      - name: Check APK signing signatures with Android SDK
+        shell: bash
+        run: |
+          set +e
+          tool=""
+          if [ -n "${ANDROID_HOME:-}" ] && [ -d "$ANDROID_HOME/build-tools" ]; then
+            tool="$(find "$ANDROID_HOME/build-tools" -type f -name apksigner | sort -V | tail -n 1)"
+          fi
+          if [ -z "$tool" ]; then
+            sudo apt-get update -qq && sudo apt-get install -y -qq apksigner > decompiled/logs/apksigner-install.log 2>&1
+            tool="$(command -v apksigner)"
+          fi
+          if [ -z "$tool" ]; then
+            printf 'apksigner unavailable on runner. Certificate extraction only; not verified.\n' > analysis/verification/apksigner.txt
+          else
+            "$tool" verify --verbose --print-certs original/SystemHelper.apk > analysis/verification/apksigner.txt 2>&1
+            status=$?
+            echo "$status" > analysis/verification/apksigner.exitcode
+          fi
+          exit 0
+      - name: JADX fallback mode
+        shell: bash
+        run: |
+          set -e
+          curl -fL --retry 3 'https://github.com/skylot/jadx/releases/download/v1.5.6/jadx-1.5.6.zip' -o "$RUNNER_TEMP/jadx.zip"
+          unzip -q "$RUNNER_TEMP/jadx.zip" -d "$RUNNER_TEMP/jadx"
+          chmod +x "$RUNNER_TEMP/jadx/bin/jadx"
+          "$RUNNER_TEMP/jadx/bin/jadx" --help > decompiled/logs/jadx-help.txt
+          set +e
+          "$RUNNER_TEMP/jadx/bin/jadx" --no-res -j 4 --decompilation-mode fallback -d decompiled/jadx-fallback original/SystemHelper.apk > decompiled/logs/jadx-fallback.log 2>&1
+          status=$?
+          echo "$status" > decompiled/logs/jadx-fallback.exitcode
+          echo "Fallback exit code $status"
+          tail -n 30 decompiled/logs/jadx-fallback.log || true
+          exit 0
+      - name: Write precise coverage and limitations
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          import json
+          d=Path("analysis/verification")
+          m=json.loads(Path("decoded/dex-summary.json").read_text())
+          docs=["# Analysis coverage and signature verification","",
+          "This is an offline static reconstruction of the supplied APK, not a claim of recovered original source code or actual device behavior.","",
+          "## Original Dalvik structures","",
+          "```json",json.dumps(m,ensure_ascii=False,indent=2),"```","",
+          "## Generated decompilation outputs",""]
+          for label,folder,ext in [("Smali","decompiled/apktool/smali",".smali"),("JADX Java","decompiled/jadx",".java"),("JADX fallback","decompiled/jadx-fallback",".java"),("AArch64 asm","decompiled/native",".asm")]:
+            p=Path(folder)
+            docs.append(f"- {label}: {sum(1 for f in p.rglob('*') if f.is_file() and f.suffix==ext) if p.exists() else 0} files")
+          docs+=["","## Tool status and error transparency",""]
+          for name in ("apktool","jadx","jadx-fallback"):
+            p=Path("decompiled/logs")/(name+".exitcode")
+            docs.append(f"- {name}: exit code {p.read_text().strip() if p.exists() else 'unknown'} (see decompiled/logs/{name}.log)")
+          p=d/"apksigner.txt"
+          docs+=["","## APK signature verification","",
+                  "See [apksigner.txt](apksigner.txt) for the platform signature digest and certificate verification output, if the Android tool was available.",
+                  "This only verifies cryptographic integrity and declared certificates; it does not prove that a particular Vivo device shipped the sample.",
+                  "","## Missing","",
+                  "No live-device privilege confirmation, observed server responses, runtime hook traces, native symbolic execution, or exhaustive control-flow equivalence proof.",
+                  "JADX is lossy; raw APK and Apktool smali remain the audit baseline."]
+          (d/"COVERAGE.md").write_text("\n".join(docs)+"\n")
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add analysis/verification/ decompiled/jadx-fallback/ decompiled/logs/
+          if ! git diff --cached --quiet; then
+            git commit -m 'verification: report exact class coverage, signature check and JADX fallback'
+            git push origin HEAD:main
+          fi
