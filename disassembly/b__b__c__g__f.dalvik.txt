@@ -1,0 +1,57 @@
+### Lb/b/c/g/f;->a(Landroid/view/LayoutInflater;,Landroid/view/LayoutInflater$Factory2;)V  [access=0xa, regs=8, ins=2, outs=3, code_off=0xbc4fc]
+00000  0063 13ee                sget-boolean  # FIELD Lb/b/c/g/f;->b:Z
+00002  011a 0277                const-string  # STR "; inflation may have unexpected results."
+00004  021a 0e97                const-string  # STR "LayoutInflaterCompatHC"
+00006  0039 0031                if-nez
+00008  1012                     const/4
+00009  031c 0434                const-class  # TYPE Landroid/view/LayoutInflater;
+0000b  041a 20fd                const-string  # STR "mFactory2"
+0000d  206e 2c79 0043           invoke-virtual  # CALL Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+00010  030c                     move-result-object
+00011  0369 13ed                sput-object  # FIELD Lb/b/c/g/f;->a:Ljava/lang/reflect/Field;
+00013  206e 2d73 0003           invoke-virtual  # CALL Ljava/lang/reflect/Field;->setAccessible(Z)V
+00016  1f28                     goto
+00017  030d                     op_0d
+00018  0422 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0001a  1070 2d35 0004           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0001d  051a 1c0f                const-string  # STR "forceSetFactory2 Could not find field 'mFactory2' on class "
+0001f  206e 2d3f 0054           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00022  051c 0434                const-class  # TYPE Landroid/view/LayoutInflater;
+00024  106e 2c7f 0005           invoke-virtual  # CALL Ljava/lang/Class;->getName()Ljava/lang/String;
+00027  050c                     move-result-object
+00028  206e 2d3f 0054           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0002b  206e 2d3f 0014           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0002e  106e 2d44 0004           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00031  040c                     move-result-object
+00032  3071 1c5c 0342           invoke-static  # CALL Landroid/util/Log;->e(Ljava/lang/String;,Ljava/lang/String;,Ljava/lang/Throwable;)I
+00035  006a 13ee                sput-boolean  # FIELD Lb/b/c/g/f;->b:Z
+00037  0062 13ed                sget-object  # FIELD Lb/b/c/g/f;->a:Ljava/lang/reflect/Field;
+00039  0038 001e                if-eqz
+0003b  306e 2d72 0760           invoke-virtual  # CALL Ljava/lang/reflect/Field;->set(Ljava/lang/Object;,Ljava/lang/Object;)V
+0003e  1928                     goto
+0003f  070d                     op_0d
+00040  0022 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00042  1070 2d35 0000           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00045  031a 1c10                const-string  # STR "forceSetFactory2 could not set the Factory2 on LayoutInflater "
+00047  206e 2d3f 0030           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0004a  206e 2d3e 0060           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+0004d  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00050  106e 2d44 0000           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00053  060c                     move-result-object
+00054  3071 1c5c 0762           invoke-static  # CALL Landroid/util/Log;->e(Ljava/lang/String;,Ljava/lang/String;,Ljava/lang/Throwable;)I
+00057  000e                     return-void
+
+### Lb/b/c/g/f;->b(Landroid/view/LayoutInflater;,Landroid/view/LayoutInflater$Factory2;)V  [access=0x9, regs=4, ins=2, outs=2, code_off=0xbc5d8]
+00000  206e 1cbd 0032           invoke-virtual  # CALL Landroid/view/LayoutInflater;->setFactory2(Landroid/view/LayoutInflater$Factory2;)V
+00003  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00005  0113 0015                const/16
+00007  1035 0013                if-ge
+00009  106e 1cb9 0002           invoke-virtual  # CALL Landroid/view/LayoutInflater;->getFactory()Landroid/view/LayoutInflater$Factory;
+0000c  000c                     move-result-object
+0000d  0120 0432                instance-of  # TYPE Landroid/view/LayoutInflater$Factory2;
+0000f  0138 0008                if-eqz
+00011  001f 0432                check-cast  # TYPE Landroid/view/LayoutInflater$Factory2;
+00013  2071 24f4 0002           invoke-static  # CALL Lb/b/c/g/f;->a(Landroid/view/LayoutInflater;,Landroid/view/LayoutInflater$Factory2;)V
+00016  0428                     goto
+00017  2071 24f4 0032           invoke-static  # CALL Lb/b/c/g/f;->a(Landroid/view/LayoutInflater;,Landroid/view/LayoutInflater$Factory2;)V
+0001a  000e                     return-void

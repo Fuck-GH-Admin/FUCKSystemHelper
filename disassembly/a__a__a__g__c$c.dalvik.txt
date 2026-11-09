@@ -1,0 +1,18 @@
+### La/a/a/g/c$c;-><init>(La/a/a/g/c;)V  [access=0x10001, regs=2, ins=2, outs=1, code_off=0x6de28]
+00000  015b 0339                iput-object  # FIELD La/a/a/g/c$c;->a:La/a/a/g/c;
+00002  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00005  000e                     return-void
+
+### La/a/a/g/c$c;-><init>(La/a/a/g/c;,La/a/a/g/c$a;)V  [access=0x11001, regs=3, ins=3, outs=2, code_off=0x6de44]
+00000  2070 04c5 0010           invoke-direct  # CALL La/a/a/g/c$c;-><init>(La/a/a/g/c;)V
+00003  000e                     return-void
+
+### La/a/a/g/c$c;->a(Landroid/location/Location;)V  [access=0x1, regs=4, ins=2, outs=0, code_off=0x6de5c]
+00000  0339 0003                if-nez
+00002  000e                     return-void
+00003  2254 0339                iget-object  # FIELD La/a/a/g/c$c;->a:La/a/a/g/c;
+00005  235b 033b                iput-object  # FIELD La/a/a/g/c;->b:Landroid/location/Location;
+00007  0071 2d46 0000           invoke-static  # CALL Ljava/lang/System;->currentTimeMillis()J
+0000a  000b                     move-result-wide
+0000b  205a 033e                iput-wide  # FIELD La/a/a/g/c;->e:J
+0000d  000e                     return-void

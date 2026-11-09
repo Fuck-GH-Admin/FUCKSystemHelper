@@ -1,0 +1,122 @@
+### Lc/a/b/g/a;-><clinit>()V  [access=0x10008, regs=0, ins=0, outs=0, code_off=0xfa830]
+00000  000e                     return-void
+
+### Lc/a/b/g/a;->a([B)[B  [access=0x9, regs=2, ins=1, outs=2, code_off=0xfa680]
+00000  1021                     array-length
+00001  2071 281f 0001           invoke-static  # CALL Lc/a/b/g/a;->a([B,I)[B
+00004  010c                     move-result-object
+00005  0111                     return-object
+
+### Lc/a/b/g/a;->a([B,I)[B  [access=0x9, regs=18, ins=2, outs=5, code_off=0xfa69c]
+00000  00db 0411                op_db
+00002  3112                     const/4
+00003  10b2                     op_b2
+00004  0212                     const/4
+00005  0039 0005                if-nez
+00007  2023 0720                new-array  # TYPE [B
+00009  0011                     return-object
+0000a  0023 0720                new-array  # TYPE [B
+0000c  0302 0011                op_02
+0000e  2401                     op_01
+0000f  05d8 ff03                op_d8
+00011  0548 0510                aget-byte
+00013  0613 000a                const/16
+00015  6532 00a8                if-eq
+00017  0713 000d                const/16
+00019  7532 00a4                if-eq
+0001b  0813 0020                const/16
+0001d  8532 00a0                if-eq
+0001f  0913 0009                const/16
+00021  9533 0004                if-ne
+00023  0029 009a                goto/16
+00025  0a13 003d                const/16
+00027  a533 0006                if-ne
+00029  04d8 0104                op_d8
+0002b  0029 0092                goto/16
+0002d  2501                     op_01
+0002e  5a01                     op_01
+0002f  ab01                     op_01
+00030  bc01                     op_01
+00031  0d14 ff00 0000           const
+00034  0e15 00ff                const/high16
+00036  3535 0065                if-ge
+00038  0f48 0510                aget-byte
+0003a  6f32 005c                if-eq
+0003c  7f32 005a                if-eq
+0003e  8f32 0058                if-eq
+00040  9f33 0003                if-ne
+00042  5428                     goto
+00043  0613 0041                const/16
+00045  6f34 0009                if-lt
+00047  0613 005a                const/16
+00049  6f36 0005                if-gt
+0004b  0fd8 bf0f                op_d8
+0004d  2428                     goto
+0004e  0613 0061                const/16
+00050  6f34 0009                if-lt
+00052  0613 007a                const/16
+00054  6f36 0005                if-gt
+00056  0fd8 b90f                op_d8
+00058  1928                     goto
+00059  0613 0030                const/16
+0005b  6f34 0009                if-lt
+0005d  0613 0039                const/16
+0005f  6f36 0005                if-gt
+00061  0fd8 040f                op_d8
+00063  0e28                     goto
+00064  0613 002b                const/16
+00066  6f33 0005                if-ne
+00068  0f13 003e                const/16
+0006a  0728                     goto
+0006b  0613 002f                const/16
+0006d  6f33 0027                if-ne
+0006f  0f13 003f                const/16
+00071  06e0 060b                op_e0
+00073  fb8d                     op_8d
+00074  6bb6                     op_b6
+00075  06dc 040c                op_dc
+00077  1633 001a                if-ne
+00079  06d8 010a                op_d8
+0007b  beb5                     op_b5
+0007c  0ee1 100e                op_e1
+0007e  ee8d                     op_8d
+0007f  0e4f 0a00                aput-byte
+00081  0ad8 0106                op_d8
+00083  bdb5                     op_b5
+00084  0de1 080d                op_e1
+00086  dd8d                     op_8d
+00087  0d4f 0600                aput-byte
+00089  06d8 010a                op_d8
+0008b  bdd5 00ff                op_d5
+0008d  dd8d                     op_8d
+0008e  0d4f 0a00                aput-byte
+00090  6a01                     op_01
+00091  0cd8 010c                op_d8
+00093  0328                     goto
+00094  0012                     const/4
+00095  0011                     return-object
+00096  05d8 0105                op_d8
+00098  0613 000a                const/16
+0009a  9728                     goto
+0009b  043d 001c                if-lez
+0009d  01da 0604                op_da
+0009f  0198 010b                int-shl
+000a1  03d8 010a                op_d8
+000a3  0595 0e01                int-and
+000a5  05e1 1005                op_e1
+000a7  558d                     op_8d
+000a8  054f 0a00                aput-byte
+000aa  1512                     const/4
+000ab  5433 000b                if-ne
+000ad  0ad8 0103                op_d8
+000af  d1b5                     op_b5
+000b0  01e1 0801                op_e1
+000b2  118d                     op_8d
+000b3  014f 0300                aput-byte
+000b5  0228                     goto
+000b6  3a01                     op_01
+000b7  a123 0720                new-array  # TYPE [B
+000b9  5a71 2d45 2120           invoke-static  # CALL Ljava/lang/System;->arraycopy(Ljava/lang/Object;,I,Ljava/lang/Object;,I,I)V
+000bc  0111                     return-object
+000bd  03d8 ff03                op_d8
+000bf  0029 ff50                goto/16

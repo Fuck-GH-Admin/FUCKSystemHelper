@@ -1,0 +1,78 @@
+### Lc/d/a/b/c;->a([B)Ljava/lang/String;  [access=0x9, regs=3, ins=1, outs=4, code_off=0x112560]
+00000  2021                     array-length
+00001  0112                     const/4
+00002  4071 1c58 1012           invoke-static  # CALL Landroid/util/Base64;->encodeToString([B,I,I,I)Ljava/lang/String;
+00005  020c                     move-result-object
+00006  0211                     return-object
+
+### Lc/d/a/b/c;->a(Landroid/content/Context;,[B)[B  [access=0x9, regs=4, ins=2, outs=3, code_off=0x1124b0]
+00000  0022 05f1                new-instance  # TYPE Lc/d/a/b/j;
+00002  1070 298b 0000           invoke-direct  # CALL Lc/d/a/b/j;-><init>()V
+00005  106e 0848 0002           invoke-virtual  # CALL Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+00008  020c                     move-result-object
+00009  106e 08c3 0002           invoke-virtual  # CALL Landroid/content/res/Resources;->getAssets()Landroid/content/res/AssetManager;
+0000c  020c                     move-result-object
+0000d  011a 23a6                const-string  # STR "pub.cer"
+0000f  206e 08b0 0012           invoke-virtual  # CALL Landroid/content/res/AssetManager;->open(Ljava/lang/String;)Ljava/io/InputStream;
+00012  020c                     move-result-object
+00013  206e 298c 0020           invoke-virtual  # CALL Lc/d/a/b/j;->a(Ljava/io/InputStream;)Ljava/security/Key;
+00016  020c                     move-result-object
+00017  306e 298d 0320           invoke-virtual  # CALL Lc/d/a/b/j;->a(Ljava/security/Key;,[B)[B
+0001a  020c                     move-result-object
+0001b  0211                     return-object
+
+### Lc/d/a/b/c;->a(Ljava/lang/String;)[B  [access=0x9, regs=3, ins=1, outs=3, code_off=0x1124f8]
+00000  001a 11b3                const-string  # STR "MD5"
+00002  1071 2dc7 0000           invoke-static  # CALL Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
+00005  000c                     move-result-object
+00006  011a 154c                const-string  # STR "UTF-8"
+00008  206e 2d08 0012           invoke-virtual  # CALL Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
+0000b  020c                     move-result-object
+0000c  206e 2dc5 0020           invoke-virtual  # CALL Ljava/security/MessageDigest;->digest([B)[B
+0000f  020c                     move-result-object
+00010  0211                     return-object
+00011  020d                     op_0d
+00012  0022 0680                new-instance  # TYPE Ljava/lang/RuntimeException;
+00014  011a 0835                const-string  # STR "Huh, UTF-8 should be supported?"
+00016  3070 2cef 0210           invoke-direct  # CALL Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;,Ljava/lang/Throwable;)V
+00019  0027                     throw
+0001a  020d                     op_0d
+0001b  0022 0680                new-instance  # TYPE Ljava/lang/RuntimeException;
+0001d  011a 0834                const-string  # STR "Huh, MD5 should be supported?"
+0001f  3070 2cef 0210           invoke-direct  # CALL Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;,Ljava/lang/Throwable;)V
+00022  0027                     throw
+
+### Lc/d/a/b/c;->a(Ljava/lang/String;,[B)[B  [access=0x9, regs=6, ins=2, outs=3, code_off=0x112400]
+00000  001a 2824                const-string  # STR "utf-8"
+00002  0112                     const/4
+00003  0222 0708                new-instance  # TYPE Ljavax/crypto/spec/SecretKeySpec;
+00005  031a 02e9                const-string  # STR "AES"
+00007  3070 2ede 0352           invoke-direct  # CALL Ljavax/crypto/spec/SecretKeySpec;-><init>([B,Ljava/lang/String;)V
+0000a  051a 02eb                const-string  # STR "AES/ECB/PKCS5Padding"
+0000c  1071 2ece 0005           invoke-static  # CALL Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
+0000f  050c                     move-result-object
+00010  1312                     const/4
+00011  306e 2ecf 0235           invoke-virtual  # CALL Ljavax/crypto/Cipher;->init(I,Ljava/security/Key;)V
+00014  206e 2d08 0004           invoke-virtual  # CALL Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
+00017  040c                     move-result-object
+00018  206e 2ecd 0045           invoke-virtual  # CALL Ljavax/crypto/Cipher;->doFinal([B)[B
+0001b  040c                     move-result-object
+0001c  0411                     return-object
+0001d  040d                     op_0d
+0001e  106e 2ecc 0004           invoke-virtual  # CALL Ljavax/crypto/BadPaddingException;->printStackTrace()V
+00021  0111                     return-object
+00022  040d                     op_0d
+00023  106e 2ed2 0004           invoke-virtual  # CALL Ljavax/crypto/IllegalBlockSizeException;->printStackTrace()V
+00026  0111                     return-object
+00027  040d                     op_0d
+00028  106e 2c60 0004           invoke-virtual  # CALL Ljava/io/UnsupportedEncodingException;->printStackTrace()V
+0002b  0111                     return-object
+0002c  040d                     op_0d
+0002d  106e 2dbd 0004           invoke-virtual  # CALL Ljava/security/InvalidKeyException;->printStackTrace()V
+00030  0111                     return-object
+00031  040d                     op_0d
+00032  106e 2ed4 0004           invoke-virtual  # CALL Ljavax/crypto/NoSuchPaddingException;->printStackTrace()V
+00035  0111                     return-object
+00036  040d                     op_0d
+00037  106e 2dcc 0004           invoke-virtual  # CALL Ljava/security/NoSuchAlgorithmException;->printStackTrace()V
+0003a  0111                     return-object

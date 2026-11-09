@@ -1,0 +1,36 @@
+### Landroid/support/v7/view/menu/l$a;-><init>(Landroid/support/v7/view/menu/l;,Landroid/content/Context;,Landroid/view/ActionProvider;)V  [access=0x10001, regs=4, ins=4, outs=4, code_off=0xd70ac]
+00000  4070 14e9 3210           invoke-direct  # CALL Landroid/support/v7/view/menu/k$a;-><init>(Landroid/support/v7/view/menu/k;,Landroid/content/Context;,Landroid/view/ActionProvider;)V
+00003  000e                     return-void
+
+### Landroid/support/v7/view/menu/l$a;->a(Landroid/view/MenuItem;)Landroid/view/View;  [access=0x1, regs=2, ins=2, outs=2, code_off=0xd704c]
+00000  0054 0fd3                iget-object  # FIELD Landroid/support/v7/view/menu/k$a;->b:Landroid/view/ActionProvider;
+00002  206e 1c8d 0010           invoke-virtual  # CALL Landroid/view/ActionProvider;->onCreateActionView(Landroid/view/MenuItem;)Landroid/view/View;
+00005  000c                     move-result-object
+00006  0011                     return-object
+
+### Landroid/support/v7/view/menu/l$a;->a(Lb/b/c/g/c$b;)V  [access=0x1, regs=3, ins=2, outs=2, code_off=0xd70e4]
+00000  125b 0fd9                iput-object  # FIELD Landroid/support/v7/view/menu/l$a;->d:Lb/b/c/g/c$b;
+00002  1054 0fd3                iget-object  # FIELD Landroid/support/v7/view/menu/k$a;->b:Landroid/view/ActionProvider;
+00004  0238 0003                if-eqz
+00006  0228                     goto
+00007  0112                     const/4
+00008  206e 1c91 0010           invoke-virtual  # CALL Landroid/view/ActionProvider;->setVisibilityListener(Landroid/view/ActionProvider$VisibilityListener;)V
+0000b  000e                     return-void
+
+### Landroid/support/v7/view/menu/l$a;->b()Z  [access=0x1, regs=1, ins=1, outs=1, code_off=0xd706c]
+00000  0054 0fd3                iget-object  # FIELD Landroid/support/v7/view/menu/k$a;->b:Landroid/view/ActionProvider;
+00002  106e 1c8b 0000           invoke-virtual  # CALL Landroid/view/ActionProvider;->isVisible()Z
+00005  000a                     move-result
+00006  000f                     return
+
+### Landroid/support/v7/view/menu/l$a;->e()Z  [access=0x1, regs=1, ins=1, outs=1, code_off=0xd708c]
+00000  0054 0fd3                iget-object  # FIELD Landroid/support/v7/view/menu/k$a;->b:Landroid/view/ActionProvider;
+00002  106e 1c90 0000           invoke-virtual  # CALL Landroid/view/ActionProvider;->overridesItemVisibility()Z
+00005  000a                     move-result
+00006  000f                     return
+
+### Landroid/support/v7/view/menu/l$a;->onActionProviderVisibilityChanged(Z)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0xd70c4]
+00000  0054 0fd9                iget-object  # FIELD Landroid/support/v7/view/menu/l$a;->d:Lb/b/c/g/c$b;
+00002  0038 0005                if-eqz
+00004  2072 24df 0010           invoke-interface  # CALL Lb/b/c/g/c$b;->onActionProviderVisibilityChanged(Z)V
+00007  000e                     return-void

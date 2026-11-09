@@ -1,0 +1,1780 @@
+### La/a/a/g/l/b;-><init>()V  [access=0x10001, regs=4, ins=1, outs=1, code_off=0x795dc]
+00000  1070 2ce0 0003           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  0012                     const/4
+00004  305c 03f3                iput-boolean  # FIELD La/a/a/g/l/b;->c:Z
+00006  0012                     const/4
+00007  305b 03f4                iput-object  # FIELD La/a/a/g/l/b;->d:Landroid/net/wifi/WifiManager;
+00009  305b 03f5                iput-object  # FIELD La/a/a/g/l/b;->e:La/a/a/g/l/b$c;
+0000b  305b 03f6                iput-object  # FIELD La/a/a/g/l/b;->f:La/a/a/g/k;
+0000d  0113 07d0                const/16
+0000f  3159 03f8                iput  # FIELD La/a/a/g/l/b;->h:I
+00011  0116 0000                const-wide/16
+00013  315a 03f9                iput-wide  # FIELD La/a/a/g/l/b;->i:J
+00015  315a 03fa                iput-wide  # FIELD La/a/a/g/l/b;->j:J
+00017  315a 03fb                iput-wide  # FIELD La/a/a/g/l/b;->k:J
+00019  315a 03fc                iput-wide  # FIELD La/a/a/g/l/b;->l:J
+0001b  305b 03fd                iput-object  # FIELD La/a/a/g/l/b;->m:Ljava/lang/String;
+0001d  0122 067b                new-instance  # TYPE Ljava/lang/Object;
+0001f  1070 2ce0 0001           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00022  315b 03fe                iput-object  # FIELD La/a/a/g/l/b;->n:Ljava/lang/Object;
+00024  0122 067b                new-instance  # TYPE Ljava/lang/Object;
+00026  1070 2ce0 0001           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00029  315b 03ff                iput-object  # FIELD La/a/a/g/l/b;->o:Ljava/lang/Object;
+0002b  305b 0400                iput-object  # FIELD La/a/a/g/l/b;->p:Landroid/os/Handler;
+0002d  305b 0401                iput-object  # FIELD La/a/a/g/l/b;->q:Ljava/lang/String;
+0002f  000e                     return-void
+
+### La/a/a/g/l/b;->a(La/a/a/g/l/b;)V  [access=0x1009, regs=1, ins=1, outs=1, code_off=0x7964c]
+00000  106e 0616 0000           invoke-virtual  # CALL La/a/a/g/l/b;->f()V
+00003  000e                     return-void
+
+### La/a/a/g/l/b;->a(La/a/a/g/k;,La/a/a/g/k;,F)Z  [access=0x9, regs=13, ins=3, outs=2, code_off=0x781dc]
+00000  0012                     const/4
+00001  0a38 008f                if-eqz
+00003  0b39 0004                if-nez
+00005  0029 008b                goto/16
+00007  aa54 03c4                iget-object  # FIELD La/a/a/g/k;->a:Ljava/util/List;
+00009  bb54 03c4                iget-object  # FIELD La/a/a/g/k;->a:Ljava/util/List;
+0000b  1112                     const/4
+0000c  ba33 0003                if-ne
+0000e  010f                     return
+0000f  0a38 0081                if-eqz
+00011  0b39 0004                if-nez
+00013  0029 007d                goto/16
+00015  1072 2e5d 000a           invoke-interface  # CALL Ljava/util/List;->size()I
+00018  020a                     move-result
+00019  1072 2e5d 000b           invoke-interface  # CALL Ljava/util/List;->size()I
+0001c  030a                     move-result
+0001d  0239 0005                if-nez
+0001f  0339 0003                if-nez
+00021  010f                     return
+00022  0238 006e                if-eqz
+00024  0339 0004                if-nez
+00026  0029 006a                goto/16
+00028  0401                     op_01
+00029  4501                     op_01
+0002a  2435 003b                if-ge
+0002c  2072 2e57 004a           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+0002f  060c                     move-result-object
+00030  0712                     const/4
+00031  0638 000b                if-eqz
+00033  2072 2e57 004a           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+00036  060c                     move-result-object
+00037  061f 01e9                check-cast  # TYPE Landroid/net/wifi/ScanResult;
+00039  6654 0548                iget-object  # FIELD Landroid/net/wifi/ScanResult;->BSSID:Ljava/lang/String;
+0003b  0228                     goto
+0003c  7607                     op_07
+0003d  0639 0003                if-nez
+0003f  2328                     goto
+00040  0801                     op_01
+00041  3835 0021                if-ge
+00043  2072 2e57 008b           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+00046  090c                     move-result-object
+00047  0938 000b                if-eqz
+00049  2072 2e57 008b           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+0004c  090c                     move-result-object
+0004d  091f 01e9                check-cast  # TYPE Landroid/net/wifi/ScanResult;
+0004f  9954 0548                iget-object  # FIELD Landroid/net/wifi/ScanResult;->BSSID:Ljava/lang/String;
+00051  0228                     goto
+00052  7907                     op_07
+00053  0939 0003                if-nez
+00055  0a28                     goto
+00056  206e 2d03 0096           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+00059  090a                     move-result
+0005a  0938 0005                if-eqz
+0005c  05d8 0105                op_d8
+0005e  0428                     goto
+0005f  08d8 0108                op_d8
+00061  e028                     goto
+00062  04d8 0104                op_d8
+00064  c628                     goto
+00065  0a63 0402                sget-boolean  # FIELD La/a/a/g/m/a;->a:Z
+00067  0a38 0021                if-eqz
+00069  0a63 0403                sget-boolean  # FIELD La/a/a/g/m/a;->b:Z
+0006b  0a38 001d                if-eqz
+0006d  0071 05af 0000           invoke-static  # CALL La/a/a/g/g;->h()La/a/a/g/e;
+00070  0a0c                     move-result-object
+00071  0b22 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00073  1070 2d35 000b           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00076  031a 288b                const-string  # STR "wifi same!"
+00078  206e 2d3f 003b           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0007b  5382                     op_82
+0007c  2482                     op_82
+0007d  43c9                     op_c9
+0007e  206e 2d3a 003b           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+00081  106e 2d44 000b           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00084  0b0c                     move-result-object
+00085  206e 0543 00ba           invoke-virtual  # CALL La/a/a/g/e;->a(Ljava/lang/String;)V
+00088  5a82                     op_82
+00089  2b82                     op_82
+0008a  cbc8                     op_c8
+0008b  0a2d 0b0a                op_2d
+0008d  0a3a 0003                if-ltz
+0008f  010f                     return
+00090  000f                     return
+
+### La/a/a/g/l/b;->b(La/a/a/g/l/b;)Ljava/lang/Object;  [access=0x1009, regs=1, ins=1, outs=0, code_off=0x78350]
+00000  0054 03fe                iget-object  # FIELD La/a/a/g/l/b;->n:Ljava/lang/Object;
+00002  0011                     return-object
+
+### La/a/a/g/l/b;->c(La/a/a/g/l/b;)Landroid/os/Handler;  [access=0x1009, regs=1, ins=1, outs=0, code_off=0x780f8]
+00000  0054 0400                iget-object  # FIELD La/a/a/g/l/b;->p:Landroid/os/Handler;
+00002  0011                     return-object
+
+### La/a/a/g/l/b;->i()La/a/a/g/l/b;  [access=0x9, regs=1, ins=0, outs=0, code_off=0x7803c]
+00000  0071 05fb 0000           invoke-static  # CALL La/a/a/g/l/b$b;->a()La/a/a/g/l/b;
+00003  000c                     move-result-object
+00004  0011                     return-object
+
+### La/a/a/g/l/b;->a(La/a/a/g/k;)La/a/a/g/k;  [access=0x11, regs=5, ins=2, outs=4, code_off=0x77e20]
+00000  0438 000c                if-eqz
+00002  0322 00dc                new-instance  # TYPE La/a/a/g/k;
+00004  4054 03c4                iget-object  # FIELD La/a/a/g/k;->a:Ljava/util/List;
+00006  4153 03c5                iget-wide  # FIELD La/a/a/g/k;->b:J
+00008  4070 05b6 2103           invoke-direct  # CALL La/a/a/g/k;-><init>(Ljava/util/List;,J)V
+0000b  0311                     return-object
+0000c  0312                     const/4
+0000d  0311                     return-object
+
+### La/a/a/g/l/b;->a()Landroid/net/wifi/WifiInfo;  [access=0x1, regs=6, ins=1, outs=3, code_off=0x78058]
+00000  001a 0000                const-string  # STR ""
+00002  0112                     const/4
+00003  5254 03f4                iget-object  # FIELD La/a/a/g/l/b;->d:Landroid/net/wifi/WifiManager;
+00005  0238 0007                if-eqz
+00007  106e 0a7b 0002           invoke-virtual  # CALL Landroid/net/wifi/WifiManager;->getConnectionInfo()Landroid/net/wifi/WifiInfo;
+0000a  020c                     move-result-object
+0000b  0228                     goto
+0000c  1207                     op_07
+0000d  306e 0607 0125           invoke-virtual  # CALL La/a/a/g/l/b;->a(Landroid/net/wifi/WifiInfo;,Ljava/lang/String;)Ljava/lang/String;
+00010  050c                     move-result-object
+00011  0238 002d                if-eqz
+00013  0538 002b                if-eqz
+00015  106e 0a78 0002           invoke-virtual  # CALL Landroid/net/wifi/WifiInfo;->getRssi()I
+00018  030a                     move-result
+00019  0413 ff9c                const/16
+0001b  4336 0003                if-gt
+0001d  2128                     goto
+0001e  0538 001f                if-eqz
+00020  031a 0258                const-string  # STR ":"
+00022  306e 2d14 0035           invoke-virtual  # CALL Ljava/lang/String;->replace(Ljava/lang/CharSequence;,Ljava/lang/CharSequence;)Ljava/lang/String;
+00025  050c                     move-result-object
+00026  031a 0228                const-string  # STR "000000000000"
+00028  206e 2d03 0053           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+0002b  030a                     move-result
+0002c  0339 0010                if-nez
+0002e  206e 2d03 0050           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+00031  000a                     move-result
+00032  0039 000a                if-nez
+00034  001a 022b                const-string  # STR "020000000000"
+00036  206e 2d03 0050           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+00039  050a                     move-result
+0003a  0538 0003                if-eqz
+0003c  0111                     return-object
+0003d  0211                     return-object
+0003e  0111                     return-object
+
+### La/a/a/g/l/b;->a(I,Z,La/a/a/g/k;,I)Ljava/lang/String;  [access=0x1, regs=40, ins=5, outs=3, code_off=0x788dc]
+00000  0108 0023                op_08
+00002  0202 0024                op_02
+00004  0308 0026                op_08
+00006  0402 0027                op_02
+00008  0512                     const/4
+00009  0338 04eb                if-eqz
+0000b  0174 05bb 0026           invoke-virtual/range  # CALL La/a/a/g/k;->c()I
+0000e  060a                     move-result
+0000f  1712                     const/4
+00010  7635 0004                if-ge
+00012  0029 04e2                goto/16
+00014  0622 06e0                new-instance  # TYPE Ljava/util/Random;
+00016  1070 2e72 0006           invoke-direct  # CALL Ljava/util/Random;-><init>()V
+00019  0822 0684                new-instance  # TYPE Ljava/lang/StringBuffer;
+0001b  0913 0200                const/16
+0001d  2070 2d26 0098           invoke-direct  # CALL Ljava/lang/StringBuffer;-><init>(I)V
+00020  0922 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00022  1070 2d35 0009           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00025  0a22 06c8                new-instance  # TYPE Ljava/util/ArrayList;
+00027  1070 2de7 000a           invoke-direct  # CALL Ljava/util/ArrayList;-><init>()V
+0002a  0174 0603 0023           invoke-virtual/range  # CALL La/a/a/g/l/b;->a()Landroid/net/wifi/WifiInfo;
+0002d  0b0c                     move-result-object
+0002e  306e 0607 05b1           invoke-virtual  # CALL La/a/a/g/l/b;->a(Landroid/net/wifi/WifiInfo;,Ljava/lang/String;)Ljava/lang/String;
+00031  0c0c                     move-result-object
+00032  0e1a 0258                const-string  # STR ":"
+00034  0f1a 0000                const-string  # STR ""
+00036  0b38 0052                if-eqz
+00038  0c38 0050                if-eqz
+0003a  306e 2d14 0fec           invoke-virtual  # CALL Ljava/lang/String;->replace(Ljava/lang/CharSequence;,Ljava/lang/CharSequence;)Ljava/lang/String;
+0003d  0c0c                     move-result-object
+0003e  106e 0a78 000b           invoke-virtual  # CALL Landroid/net/wifi/WifiInfo;->getRssi()I
+00041  0b0a                     move-result
+00042  0071 0619 0000           invoke-static  # CALL La/a/a/g/l/b;->i()La/a/a/g/l/b;
+00045  100c                     move-result-object
+00046  0174 0614 0010           invoke-virtual/range  # CALL La/a/a/g/l/b;->d()Ljava/lang/String;
+00049  100c                     move-result-object
+0004a  0b3b 0003                if-gez
+0004c  bb7b                     op_7b
+0004d  1163 0402                sget-boolean  # FIELD La/a/a/g/m/a;->a:Z
+0004f  1138 0036                if-eqz
+00051  1163 0403                sget-boolean  # FIELD La/a/a/g/m/a;->b:Z
+00053  1138 0032                if-eqz
+00055  0071 05af 0000           invoke-static  # CALL La/a/a/g/g;->h()La/a/a/g/e;
+00058  050c                     move-result-object
+00059  0d22 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0005b  1070 2d35 000d           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0005e  071a 2886                const-string  # STR "wifi connected mac = "
+00060  206e 2d3f 007d           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00063  206e 2d3f 00cd           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00066  106e 2d44 000d           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00069  070c                     move-result-object
+0006a  206e 0543 0075           invoke-virtual  # CALL La/a/a/g/e;->a(Ljava/lang/String;)V
+0006d  0071 05af 0000           invoke-static  # CALL La/a/a/g/g;->h()La/a/a/g/e;
+00070  050c                     move-result-object
+00071  0722 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00073  1070 2d35 0007           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00076  0d1a 2887                const-string  # STR "wifi connected mac rssi= "
+00078  206e 2d3f 00d7           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0007b  206e 2d3b 00b7           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+0007e  106e 2d44 0007           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00081  070c                     move-result-object
+00082  206e 0543 0075           invoke-virtual  # CALL La/a/a/g/e;->a(Ljava/lang/String;)V
+00085  0508 0010                op_08
+00087  0428                     goto
+00088  0512                     const/4
+00089  fb12                     const/4
+0008a  0c12                     const/4
+0008b  0760 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+0008d  0d13 0011                const/16
+0008f  1216 0000                const-wide/16
+00091  1008 0005                op_08
+00093  d734 0013                if-lt
+00095  0071 0b0a 0000           invoke-static  # CALL Landroid/os/SystemClock;->elapsedRealtimeNanos()J
+00098  140b                     move-result-wide
+00099  1616 03e8                const-wide/16
+0009b  149e 1614                op_9e
+0009d  0328                     goto
+0009e  1405 0012                op_05
+000a0  0731 1214                op_31
+000a2  073d 0006                if-lez
+000a4  1712                     const/4
+000a5  0428                     goto
+000a6  1405 0012                op_05
+000a8  0712                     const/4
+000a9  0738 0009                if-eqz
+000ab  0738 0006                if-eqz
+000ad  2538 0004                if-eqz
+000af  1712                     const/4
+000b0  0228                     goto
+000b1  0712                     const/4
+000b2  3d54 03c4                iget-object  # FIELD La/a/a/g/k;->a:Ljava/util/List;
+000b4  1072 2e5d 000d           invoke-interface  # CALL Ljava/util/List;->size()I
+000b7  0d0a                     move-result
+000b8  2d37 0006                if-le
+000ba  4235 0005                if-ge
+000bc  1d12                     const/4
+000bd  0328                     goto
+000be  d201                     op_01
+000bf  0d12                     const/4
+000c0  1d02 000b                op_02
+000c2  1b05 0012                op_05
+000c4  2413 0000                const/16
+000c6  0512                     const/4
+000c7  1613 0000                const/16
+000c9  1813 0000                const/16
+000cb  1913 0000                const/16
+000cd  1a13 0000                const/16
+000cf  1e13 0001                const/16
+000d1  0b1a 0281                const-string  # STR ";%d;"
+000d3  041a 28d8                const-string  # STR "|"
+000d5  2535 0263                if-ge
+000d7  19d8 0119                op_d8
+000d9  2502 0002                op_02
+000db  3254 03c4                iget-object  # FIELD La/a/a/g/k;->a:Ljava/util/List;
+000dd  2072 2e57 0052           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+000e0  020c                     move-result-object
+000e1  1f02 000d                op_02
+000e3  0238 0239                if-eqz
+000e5  3254 03c4                iget-object  # FIELD La/a/a/g/k;->a:Ljava/util/List;
+000e7  2072 2e57 0052           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+000ea  020c                     move-result-object
+000eb  021f 01e9                check-cast  # TYPE Landroid/net/wifi/ScanResult;
+000ed  2252 054c                iget  # FIELD Landroid/net/wifi/ScanResult;->level:I
+000ef  0239 0004                if-nez
+000f1  0029 022b                goto/16
+000f3  0738 0076                if-eqz
+000f5  3254 03c4                iget-object  # FIELD La/a/a/g/k;->a:Ljava/util/List;
+000f7  2072 2e57 0052           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+000fa  020c                     move-result-object
+000fb  021f 01e9                check-cast  # TYPE Landroid/net/wifi/ScanResult;
+000fd  2008 000e                op_08
+000ff  2d53 054d                iget-wide  # FIELD Landroid/net/wifi/ScanResult;->timestamp:J
+00101  0d9c 0d14                op_9c
+00103  2117 4240 000f           const-wide/32
+00106  0d9e 210d                op_9e
+00108  1028                     goto
+00109  000d                     op_0d
+0010a  0428                     goto
+0010b  000d                     op_0d
+0010c  2008 000e                op_08
+0010e  0207                     op_07
+0010f  0d63 0402                sget-boolean  # FIELD La/a/a/g/m/a;->a:Z
+00111  0d38 0005                if-eqz
+00113  106e 2c96 0002           invoke-virtual  # CALL Ljava/lang/Exception;->printStackTrace()V
+00116  0d05 0012                op_05
+00118  0263 0402                sget-boolean  # FIELD La/a/a/g/m/a;->a:Z
+0011a  0238 0023                if-eqz
+0011c  2163 0403                sget-boolean  # FIELD La/a/a/g/m/a;->b:Z
+0011e  2138 001f                if-eqz
+00120  2102 0007                op_02
+00122  0071 05af 0000           invoke-static  # CALL La/a/a/g/g;->h()La/a/a/g/e;
+00125  070c                     move-result-object
+00126  2208 0006                op_08
+00128  0622 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0012a  1070 2d35 0006           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0012d  011a 288a                const-string  # STR "wifi noUpdateTime = "
+0012f  206e 2d3f 0016           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00132  306e 2d3c 0ed6           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+00135  106e 2d44 0006           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00138  010c                     move-result-object
+00139  206e 0543 0017           invoke-virtual  # CALL La/a/a/g/e;->a(Ljava/lang/String;)V
+0013c  0528                     goto
+0013d  2208 0006                op_08
+0013f  2102 0007                op_02
+00141  2071 2cbb 00ed           invoke-static  # CALL Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+00144  010c                     move-result-object
+00145  2072 2e52 001a           invoke-interface  # CALL Ljava/util/List;->add(Ljava/lang/Object;)Z
+00148  0131 1b0d                op_31
+0014a  013d 0025                if-lez
+0014c  0238 001a                if-eqz
+0014e  0071 05af 0000           invoke-static  # CALL La/a/a/g/g;->h()La/a/a/g/e;
+00151  010c                     move-result-object
+00152  0222 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00154  1070 2d35 0002           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00157  061a 2889                const-string  # STR "wifi maxScanTime = "
+00159  206e 2d3f 0062           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0015c  306e 2d3c 0ed2           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+0015f  106e 2d44 0002           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00162  020c                     move-result-object
+00163  206e 0543 0021           invoke-virtual  # CALL La/a/a/g/e;->a(Ljava/lang/String;)V
+00166  1b05 000d                op_05
+00168  0728                     goto
+00169  2208 0006                op_08
+0016b  2102 0007                op_02
+0016d  2008 000e                op_08
+0016f  0160 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00171  0213 0017                const/16
+00173  2134 002d                if-lt
+00175  3154 03c4                iget-object  # FIELD La/a/a/g/k;->a:Ljava/util/List;
+00177  2072 2e57 0051           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+0017a  010c                     move-result-object
+0017b  011f 01e9                check-cast  # TYPE Landroid/net/wifi/ScanResult;
+0017d  106e 0a76 0001           invoke-virtual  # CALL Landroid/net/wifi/ScanResult;->is80211mcResponder()Z
+00180  010a                     move-result
+00181  0138 001f                if-eqz
+00183  1639 0008                if-nez
+00185  0122 0684                new-instance  # TYPE Ljava/lang/StringBuffer;
+00187  1070 2d25 0001           invoke-direct  # CALL Ljava/lang/StringBuffer;-><init>()V
+0018a  0328                     goto
+0018b  0108 0016                op_08
+0018d  206e 2d2b 0051           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
+00190  206e 2d2e 0041           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+00193  1608 0001                op_08
+00195  0b28                     goto
+00196  000d                     op_0d
+00197  0207                     op_07
+00198  1608 0001                op_08
+0019a  0328                     goto
+0019b  000d                     op_0d
+0019c  0207                     op_07
+0019d  106e 2d60 0002           invoke-virtual  # CALL Ljava/lang/Throwable;->printStackTrace()V
+001a0  1e38 000a                if-eqz
+001a2  011a 016e                const-string  # STR "&wf="
+001a4  206e 2d2e 0018           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+001a7  1e13 0000                const/16
+001a9  0728                     goto
+001aa  206e 2d2e 0048           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+001ad  206e 2d3f 0049           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+001b0  3154 03c4                iget-object  # FIELD La/a/a/g/k;->a:Ljava/util/List;
+001b2  2072 2e57 0051           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+001b5  010c                     move-result-object
+001b6  011f 01e9                check-cast  # TYPE Landroid/net/wifi/ScanResult;
+001b8  1154 0548                iget-object  # FIELD Landroid/net/wifi/ScanResult;->BSSID:Ljava/lang/String;
+001ba  0138 0157                if-eqz
+001bc  0208 0020                op_08
+001be  306e 2d14 0f21           invoke-virtual  # CALL Ljava/lang/String;->replace(Ljava/lang/CharSequence;,Ljava/lang/CharSequence;)Ljava/lang/String;
+001c1  010c                     move-result-object
+001c2  206e 2d2e 0018           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+001c5  206e 2d3f 0019           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+001c8  3454 03c4                iget-object  # FIELD La/a/a/g/k;->a:Ljava/util/List;
+001ca  2072 2e57 0054           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+001cd  040c                     move-result-object
+001ce  041f 01e9                check-cast  # TYPE Landroid/net/wifi/ScanResult;
+001d0  4452 054c                iget  # FIELD Landroid/net/wifi/ScanResult;->level:I
+001d2  043b 0003                if-gez
+001d4  447b                     op_7b
+001d5  0662 1d71                sget-object  # FIELD Ljava/util/Locale;->CHINA:Ljava/util/Locale;
+001d7  1712                     const/4
+001d8  7d23 075d                new-array  # TYPE [Ljava/lang/Object;
+001da  1071 2cae 0004           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+001dd  040c                     move-result-object
+001de  0712                     const/4
+001df  044d 070d                aput-object
+001e1  3071 2d06 0db6           invoke-static  # CALL Ljava/lang/String;->format(Ljava/util/Locale;,Ljava/lang/String;,[Ljava/lang/Object;)Ljava/lang/String;
+001e4  040c                     move-result-object
+001e5  206e 2d2e 0048           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+001e8  206e 2d3f 0049           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+001eb  1ad8 011a                op_d8
+001ed  0c38 001e                if-eqz
+001ef  206e 2d03 001c           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+001f2  010a                     move-result
+001f3  0138 0018                if-eqz
+001f5  3154 03c4                iget-object  # FIELD La/a/a/g/k;->a:Ljava/util/List;
+001f7  2072 2e57 0051           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+001fa  010c                     move-result-object
+001fb  011f 01e9                check-cast  # TYPE Landroid/net/wifi/ScanResult;
+001fd  1154 054a                iget-object  # FIELD Landroid/net/wifi/ScanResult;->capabilities:Ljava/lang/String;
+001ff  0608 0023                op_08
+00201  206e 060d 0016           invoke-virtual  # CALL La/a/a/g/l/b;->a(Ljava/lang/String;)Z
+00204  010a                     move-result
+00205  315c 03c8                iput-boolean  # FIELD La/a/a/g/k;->e:Z
+00207  0b02 001a                op_02
+00209  1112                     const/4
+0020a  0628                     goto
+0020b  0608 0023                op_08
+0020d  0b02 0024                op_02
+0020f  0112                     const/4
+00210  0139 00b0                if-nez
+00212  0113 001e                const/16
+00214  0402 0018                op_02
+00216  0439 0052                if-nez
+00218  0713 000a                const/16
+0021a  0d08 0022                op_08
+0021c  206e 2e75 007d           invoke-virtual  # CALL Ljava/util/Random;->nextInt(I)I
+0021f  070a                     move-result
+00220  2e12                     const/4
+00221  e733 0104                if-ne
+00223  3754 03c4                iget-object  # FIELD La/a/a/g/k;->a:Ljava/util/List;
+00225  2072 2e57 0057           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+00228  070c                     move-result-object
+00229  071f 01e9                check-cast  # TYPE Landroid/net/wifi/ScanResult;
+0022b  7754 0549                iget-object  # FIELD Landroid/net/wifi/ScanResult;->SSID:Ljava/lang/String;
+0022d  0738 00f8                if-eqz
+0022f  3754 03c4                iget-object  # FIELD La/a/a/g/k;->a:Ljava/util/List;
+00231  2072 2e57 0057           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+00234  070c                     move-result-object
+00235  071f 01e9                check-cast  # TYPE Landroid/net/wifi/ScanResult;
+00237  7754 0549                iget-object  # FIELD Landroid/net/wifi/ScanResult;->SSID:Ljava/lang/String;
+00239  106e 2d12 0007           invoke-virtual  # CALL Ljava/lang/String;->length()I
+0023c  070a                     move-result
+0023d  1735 00e8                if-ge
+0023f  3154 03c4                iget-object  # FIELD La/a/a/g/k;->a:Ljava/util/List;
+00241  2072 2e57 0051           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+00244  010c                     move-result-object
+00245  011f 01e9                check-cast  # TYPE Landroid/net/wifi/ScanResult;
+00247  1154 0549                iget-object  # FIELD Landroid/net/wifi/ScanResult;->SSID:Ljava/lang/String;
+00249  206e 0611 0016           invoke-virtual  # CALL La/a/a/g/l/b;->b(Ljava/lang/String;)Ljava/lang/String;
+0024c  010c                     move-result-object
+0024d  206e 2d2e 0018           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+00250  3154 03c4                iget-object  # FIELD La/a/a/g/k;->a:Ljava/util/List;
+00252  2072 2e57 0051           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+00255  010c                     move-result-object
+00256  011f 01e9                check-cast  # TYPE Landroid/net/wifi/ScanResult;
+00258  1154 0549                iget-object  # FIELD Landroid/net/wifi/ScanResult;->SSID:Ljava/lang/String;
+0025a  206e 0611 0016           invoke-virtual  # CALL La/a/a/g/l/b;->b(Ljava/lang/String;)Ljava/lang/String;
+0025d  010c                     move-result-object
+0025e  206e 2d3f 0019           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00261  1813 0001                const/16
+00263  0029 00c4                goto/16
+00265  000d                     op_0d
+00266  0107                     op_07
+00267  5128                     goto
+00268  0d08 0022                op_08
+0026a  1712                     const/4
+0026b  2e12                     const/4
+0026c  7433 00b9                if-ne
+0026e  0e13 0014                const/16
+00270  206e 2e75 00ed           invoke-virtual  # CALL Ljava/util/Random;->nextInt(I)I
+00273  0e0a                     move-result
+00274  7e33 00b1                if-ne
+00276  3754 03c4                iget-object  # FIELD La/a/a/g/k;->a:Ljava/util/List;
+00278  2072 2e57 0057           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+0027b  070c                     move-result-object
+0027c  071f 01e9                check-cast  # TYPE Landroid/net/wifi/ScanResult;
+0027e  7754 0549                iget-object  # FIELD Landroid/net/wifi/ScanResult;->SSID:Ljava/lang/String;
+00280  0738 00a5                if-eqz
+00282  3754 03c4                iget-object  # FIELD La/a/a/g/k;->a:Ljava/util/List;
+00284  2072 2e57 0057           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+00287  070c                     move-result-object
+00288  071f 01e9                check-cast  # TYPE Landroid/net/wifi/ScanResult;
+0028a  7754 0549                iget-object  # FIELD Landroid/net/wifi/ScanResult;->SSID:Ljava/lang/String;
+0028c  106e 2d12 0007           invoke-virtual  # CALL Ljava/lang/String;->length()I
+0028f  070a                     move-result
+00290  1735 0095                if-ge
+00292  3154 03c4                iget-object  # FIELD La/a/a/g/k;->a:Ljava/util/List;
+00294  2072 2e57 0051           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+00297  010c                     move-result-object
+00298  011f 01e9                check-cast  # TYPE Landroid/net/wifi/ScanResult;
+0029a  1154 0549                iget-object  # FIELD Landroid/net/wifi/ScanResult;->SSID:Ljava/lang/String;
+0029c  206e 0611 0016           invoke-virtual  # CALL La/a/a/g/l/b;->b(Ljava/lang/String;)Ljava/lang/String;
+0029f  010c                     move-result-object
+002a0  206e 2d2e 0018           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+002a3  3154 03c4                iget-object  # FIELD La/a/a/g/k;->a:Ljava/util/List;
+002a5  2072 2e57 0051           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+002a8  010c                     move-result-object
+002a9  011f 01e9                check-cast  # TYPE Landroid/net/wifi/ScanResult;
+002ab  1154 0549                iget-object  # FIELD Landroid/net/wifi/ScanResult;->SSID:Ljava/lang/String;
+002ad  206e 0611 0016           invoke-virtual  # CALL La/a/a/g/l/b;->b(Ljava/lang/String;)Ljava/lang/String;
+002b0  010c                     move-result-object
+002b1  206e 2d3f 0019           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+002b4  1813 0002                const/16
+002b6  0029 0071                goto/16
+002b8  0763 0402                sget-boolean  # FIELD La/a/a/g/m/a;->a:Z
+002ba  0738 006b                if-eqz
+002bc  106e 2c96 0001           invoke-virtual  # CALL Ljava/lang/Exception;->printStackTrace()V
+002bf  6628                     goto
+002c0  0402 0018                op_02
+002c2  0d08 0022                op_08
+002c4  0163 0402                sget-boolean  # FIELD La/a/a/g/m/a;->a:Z
+002c6  0138 0028                if-eqz
+002c8  0163 0403                sget-boolean  # FIELD La/a/a/g/m/a;->b:Z
+002ca  0138 0024                if-eqz
+002cc  0071 05af 0000           invoke-static  # CALL La/a/a/g/g;->h()La/a/a/g/e;
+002cf  010c                     move-result-object
+002d0  0722 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+002d2  1070 2d35 0007           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+002d5  0e1a 288d                const-string  # STR "wifi str add connected ssid = "
+002d7  206e 2d3f 00e7           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+002da  3e54 03c4                iget-object  # FIELD La/a/a/g/k;->a:Ljava/util/List;
+002dc  2072 2e57 005e           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+002df  0e0c                     move-result-object
+002e0  0e1f 01e9                check-cast  # TYPE Landroid/net/wifi/ScanResult;
+002e2  ee54 0549                iget-object  # FIELD Landroid/net/wifi/ScanResult;->SSID:Ljava/lang/String;
+002e4  206e 2d3f 00e7           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+002e7  106e 2d44 0007           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+002ea  070c                     move-result-object
+002eb  206e 0543 0071           invoke-virtual  # CALL La/a/a/g/e;->a(Ljava/lang/String;)V
+002ee  3154 03c4                iget-object  # FIELD La/a/a/g/k;->a:Ljava/util/List;
+002f0  2072 2e57 0051           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+002f3  010c                     move-result-object
+002f4  011f 01e9                check-cast  # TYPE Landroid/net/wifi/ScanResult;
+002f6  1154 0549                iget-object  # FIELD Landroid/net/wifi/ScanResult;->SSID:Ljava/lang/String;
+002f8  206e 0611 0016           invoke-virtual  # CALL La/a/a/g/l/b;->b(Ljava/lang/String;)Ljava/lang/String;
+002fb  010c                     move-result-object
+002fc  206e 2d2e 0018           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+002ff  3154 03c4                iget-object  # FIELD La/a/a/g/k;->a:Ljava/util/List;
+00301  2072 2e57 0051           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+00304  010c                     move-result-object
+00305  011f 01e9                check-cast  # TYPE Landroid/net/wifi/ScanResult;
+00307  1154 0549                iget-object  # FIELD Landroid/net/wifi/ScanResult;->SSID:Ljava/lang/String;
+00309  206e 0611 0016           invoke-virtual  # CALL La/a/a/g/l/b;->b(Ljava/lang/String;)Ljava/lang/String;
+0030c  010c                     move-result-object
+0030d  206e 2d3f 0019           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00310  1528                     goto
+00311  0608 0023                op_08
+00313  0402 0018                op_02
+00315  0208 0020                op_08
+00317  0d08 0022                op_08
+00319  0b02 0024                op_02
+0031b  0c28                     goto
+0031c  6d07                     op_07
+0031d  2102 0007                op_02
+0031f  e207                     op_07
+00320  0402 0018                op_02
+00322  1607                     op_07
+00323  0b02 0024                op_02
+00325  1802 0004                op_02
+00327  05d8 0105                op_d8
+00329  0402 0027                op_02
+0032b  2e07                     op_07
+0032c  6107                     op_07
+0032d  2402 000b                op_02
+0032f  d607                     op_07
+00330  0d02 001f                op_02
+00332  0702 0021                op_02
+00334  0202 0025                op_02
+00336  0029 fd9b                goto/16
+00338  1607                     op_07
+00339  2502 0002                op_02
+0033b  1f02 000d                op_02
+0033d  e207                     op_07
+0033e  106e 2d44 0009           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00341  010c                     move-result-object
+00342  615b 0401                iput-object  # FIELD La/a/a/g/l/b;->q:Ljava/lang/String;
+00344  0163 0402                sget-boolean  # FIELD La/a/a/g/m/a;->a:Z
+00346  0138 001c                if-eqz
+00348  0071 05af 0000           invoke-static  # CALL La/a/a/g/g;->h()La/a/a/g/e;
+0034b  010c                     move-result-object
+0034c  0522 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0034e  1070 2d35 0005           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00351  071a 208d                const-string  # STR "last wifi str = "
+00353  206e 2d3f 0075           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00356  6754 0401                iget-object  # FIELD La/a/a/g/l/b;->q:Ljava/lang/String;
+00358  206e 2d3f 0075           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0035b  106e 2d44 0005           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0035e  050c                     move-result-object
+0035f  206e 0543 0051           invoke-virtual  # CALL La/a/a/g/e;->a(Ljava/lang/String;)V
+00362  1f38 0079                if-eqz
+00364  0102 0025                op_02
+00366  1512                     const/4
+00367  3754 03c4                iget-object  # FIELD La/a/a/g/k;->a:Ljava/util/List;
+00369  1072 2e5d 0007           invoke-interface  # CALL Ljava/util/List;->size()I
+0036c  070a                     move-result
+0036d  7135 006e                if-ge
+0036f  1712                     const/4
+00370  09d8 0119                op_d8
+00372  3754 03c4                iget-object  # FIELD La/a/a/g/k;->a:Ljava/util/List;
+00374  2072 2e57 0017           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+00377  070c                     move-result-object
+00378  0738 0058                if-eqz
+0037a  3754 03c4                iget-object  # FIELD La/a/a/g/k;->a:Ljava/util/List;
+0037c  2072 2e57 0017           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+0037f  070c                     move-result-object
+00380  071f 01e9                check-cast  # TYPE Landroid/net/wifi/ScanResult;
+00382  7752 054c                iget  # FIELD Landroid/net/wifi/ScanResult;->level:I
+00384  0739 0003                if-nez
+00386  4a28                     goto
+00387  0538 0009                if-eqz
+00389  051a 016d                const-string  # STR "&wf2="
+0038b  206e 2d2e 0058           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+0038e  0512                     const/4
+0038f  0428                     goto
+00390  206e 2d2e 0048           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+00393  3754 03c4                iget-object  # FIELD La/a/a/g/k;->a:Ljava/util/List;
+00395  2072 2e57 0017           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+00398  070c                     move-result-object
+00399  071f 01e9                check-cast  # TYPE Landroid/net/wifi/ScanResult;
+0039b  7754 0548                iget-object  # FIELD Landroid/net/wifi/ScanResult;->BSSID:Ljava/lang/String;
+0039d  0738 002c                if-eqz
+0039f  306e 2d14 0f27           invoke-virtual  # CALL Ljava/lang/String;->replace(Ljava/lang/CharSequence;,Ljava/lang/CharSequence;)Ljava/lang/String;
+003a2  070c                     move-result-object
+003a3  206e 2d2e 0078           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+003a6  3754 03c4                iget-object  # FIELD La/a/a/g/k;->a:Ljava/util/List;
+003a8  2072 2e57 0017           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+003ab  070c                     move-result-object
+003ac  071f 01e9                check-cast  # TYPE Landroid/net/wifi/ScanResult;
+003ae  7752 054c                iget  # FIELD Landroid/net/wifi/ScanResult;->level:I
+003b0  073b 0003                if-gez
+003b2  777b                     op_7b
+003b3  0d62 1d71                sget-object  # FIELD Ljava/util/Locale;->CHINA:Ljava/util/Locale;
+003b5  2008 0002                op_08
+003b7  1e12                     const/4
+003b8  e223 075d                new-array  # TYPE [Ljava/lang/Object;
+003ba  1071 2cae 0007           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+003bd  070c                     move-result-object
+003be  0e12                     const/4
+003bf  074d 0e02                aput-object
+003c1  3071 2d06 02bd           invoke-static  # CALL Ljava/lang/String;->format(Ljava/util/Locale;,Ljava/lang/String;,[Ljava/lang/Object;)Ljava/lang/String;
+003c4  020c                     move-result-object
+003c5  206e 2d2e 0028           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+003c8  0328                     goto
+003c9  2008 0002                op_08
+003cb  0202 0027                op_02
+003cd  2934 0007                if-lt
+003cf  0c28                     goto
+003d0  2008 0002                op_08
+003d2  0202 0027                op_02
+003d4  01d8 0101                op_d8
+003d6  1902 0009                op_02
+003d8  0208 0020                op_08
+003da  8d28                     goto
+003db  1e39 010c                if-nez
+003dd  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+003df  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+003e2  021a 0174                const-string  # STR "&wf_n="
+003e4  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+003e7  0b02 0024                op_02
+003e9  206e 2d3b 00b1           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+003ec  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+003ef  010c                     move-result-object
+003f0  206e 2d2e 0018           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+003f3  1638 000e                if-eqz
+003f5  011a 0173                const-string  # STR "&wf_mc="
+003f7  206e 2d2e 0018           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+003fa  0174 2d34 0016           invoke-virtual/range  # CALL Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+003fd  010c                     move-result-object
+003fe  206e 2d2e 0018           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+00401  0c38 001b                if-eqz
+00403  0102 001d                op_02
+00405  f212                     const/4
+00406  2132 0016                if-eq
+00408  0222 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0040a  1070 2d35 0002           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0040d  051a 0177                const-string  # STR "&wf_rs="
+0040f  206e 2d3f 0052           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00412  206e 2d3b 0012           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+00415  106e 2d44 0002           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00418  010c                     move-result-object
+00419  206e 2d2e 0018           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+0041c  0116 000a                const-wide/16
+0041e  0131 011b                op_31
+00420  013d 0089                if-lez
+00422  1072 2e5d 000a           invoke-interface  # CALL Ljava/util/List;->size()I
+00425  010a                     move-result
+00426  013d 0083                if-lez
+00428  0112                     const/4
+00429  2072 2e57 001a           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+0042c  020c                     move-result-object
+0042d  021f 0671                check-cast  # TYPE Ljava/lang/Long;
+0042f  106e 2cb6 0002           invoke-virtual  # CALL Ljava/lang/Long;->longValue()J
+00432  010b                     move-result-wide
+00433  0131 1201                op_31
+00435  013d 0074                if-lez
+00437  0122 0684                new-instance  # TYPE Ljava/lang/StringBuffer;
+00439  0213 0080                const/16
+0043b  2070 2d26 0021           invoke-direct  # CALL Ljava/lang/StringBuffer;-><init>(I)V
+0043e  021a 0179                const-string  # STR "&wf_ut="
+00440  206e 2d2e 0021           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+00443  0712                     const/4
+00444  2072 2e57 007a           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+00447  020c                     move-result-object
+00448  021f 0671                check-cast  # TYPE Ljava/lang/Long;
+0044a  1072 2e59 000a           invoke-interface  # CALL Ljava/util/List;->iterator()Ljava/util/Iterator;
+0044d  050c                     move-result-object
+0044e  1912                     const/4
+0044f  1072 2e43 0005           invoke-interface  # CALL Ljava/util/Iterator;->hasNext()Z
+00452  0a0a                     move-result
+00453  0a38 002b                if-eqz
+00455  1072 2e44 0005           invoke-interface  # CALL Ljava/util/Iterator;->next()Ljava/lang/Object;
+00458  0a0c                     move-result-object
+00459  0a1f 0671                check-cast  # TYPE Ljava/lang/Long;
+0045b  0938 000b                if-eqz
+0045d  106e 2cb6 000a           invoke-virtual  # CALL Ljava/lang/Long;->longValue()J
+00460  090b                     move-result-wide
+00461  306e 2d2c 0a91           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(J)Ljava/lang/StringBuffer;
+00464  7901                     op_01
+00465  1528                     goto
+00466  106e 2cb6 000a           invoke-virtual  # CALL Ljava/lang/Long;->longValue()J
+00469  0c0b                     move-result-wide
+0046a  106e 2cb6 0002           invoke-virtual  # CALL Ljava/lang/Long;->longValue()J
+0046d  140b                     move-result-wide
+0046e  0c9c 140c                op_9c
+00470  0a31 120c                op_31
+00472  0a38 0008                if-eqz
+00474  206e 2d2e 00f1           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+00477  306e 2d2c 0dc1           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(J)Ljava/lang/StringBuffer;
+0047a  206e 2d2e 0041           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+0047d  d228                     goto
+0047e  0263 0402                sget-boolean  # FIELD La/a/a/g/m/a;->a:Z
+00480  0238 0022                if-eqz
+00482  0263 0403                sget-boolean  # FIELD La/a/a/g/m/a;->b:Z
+00484  0238 001e                if-eqz
+00486  0071 05af 0000           invoke-static  # CALL La/a/a/g/g;->h()La/a/a/g/e;
+00489  020c                     move-result-object
+0048a  0422 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0048c  1070 2d35 0004           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0048f  051a 288c                const-string  # STR "wifi scantime list str = "
+00491  206e 2d3f 0054           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00494  106e 2d34 0001           invoke-virtual  # CALL Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+00497  050c                     move-result-object
+00498  206e 2d3f 0054           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0049b  106e 2d44 0004           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0049e  040c                     move-result-object
+0049f  206e 0543 0042           invoke-virtual  # CALL La/a/a/g/e;->a(Ljava/lang/String;)V
+004a2  106e 2d34 0001           invoke-virtual  # CALL Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+004a5  010c                     move-result-object
+004a6  206e 2d2e 0018           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+004a9  011a 0178                const-string  # STR "&wf_st="
+004ab  206e 2d2e 0018           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+004ae  3153 03c5                iget-wide  # FIELD La/a/a/g/k;->b:J
+004b0  306e 2d2c 0218           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(J)Ljava/lang/StringBuffer;
+004b3  011a 0170                const-string  # STR "&wf_et="
+004b5  206e 2d2e 0018           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+004b8  3153 03c6                iget-wide  # FIELD La/a/a/g/k;->c:J
+004ba  306e 2d2c 0218           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(J)Ljava/lang/StringBuffer;
+004bd  011a 017a                const-string  # STR "&wf_vt="
+004bf  206e 2d2e 0018           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+004c2  6153 03f9                iget-wide  # FIELD La/a/a/g/l/b;->i:J
+004c4  306e 2d2c 0218           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(J)Ljava/lang/StringBuffer;
+004c7  0b3d 000f                if-lez
+004c9  1112                     const/4
+004ca  315c 03c7                iput-boolean  # FIELD La/a/a/g/k;->d:Z
+004cc  011a 016f                const-string  # STR "&wf_en="
+004ce  206e 2d2e 0018           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+004d1  3155 03c8                iget-boolean  # FIELD La/a/a/g/k;->e:Z
+004d3  206e 2d2b 0018           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
+004d6  1038 000c                if-eqz
+004d8  011a 0172                const-string  # STR "&wf_gw="
+004da  206e 2d2e 0018           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+004dd  0108 0010                op_08
+004df  206e 2d2e 0018           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+004e2  106e 2d34 0008           invoke-virtual  # CALL Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+004e5  010c                     move-result-object
+004e6  0111                     return-object
+004e7  0112                     const/4
+004e8  0111                     return-object
+004e9  000d                     op_0d
+004ea  0107                     op_07
+004eb  0263 0402                sget-boolean  # FIELD La/a/a/g/m/a;->a:Z
+004ed  0238 0005                if-eqz
+004ef  106e 2d60 0001           invoke-virtual  # CALL Ljava/lang/Throwable;->printStackTrace()V
+004f2  0112                     const/4
+004f3  0111                     return-object
+004f4  5107                     op_07
+004f5  0111                     return-object
+
+### La/a/a/g/l/b;->a(J)Ljava/lang/String;  [access=0x11, regs=8, ins=3, outs=2, code_off=0x79374]
+00000  0522 0684                new-instance  # TYPE Ljava/lang/StringBuffer;
+00002  1070 2d25 0005           invoke-direct  # CALL Ljava/lang/StringBuffer;-><init>()V
+00005  0016 00ff                const-wide/16
+00007  02a0 0006                op_a0
+00009  2284                     op_84
+0000a  1071 2d22 0002           invoke-static  # CALL Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+0000d  020c                     move-result-object
+0000e  206e 2d2e 0025           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+00011  0213 002e                const/16
+00013  206e 2d28 0025           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
+00016  0313 0008                const/16
+00018  03a4 0306                op_a4
+0001a  03c0                     op_c0
+0001b  3384                     op_84
+0001c  1071 2d22 0003           invoke-static  # CALL Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+0001f  030c                     move-result-object
+00020  206e 2d2e 0035           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+00023  206e 2d28 0025           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
+00026  0313 0010                const/16
+00028  03a4 0306                op_a4
+0002a  03c0                     op_c0
+0002b  3384                     op_84
+0002c  1071 2d22 0003           invoke-static  # CALL Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+0002f  030c                     move-result-object
+00030  206e 2d2e 0035           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+00033  206e 2d28 0025           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
+00036  0213 0018                const/16
+00038  26c4                     op_c4
+00039  06c0                     op_c0
+0003a  6684                     op_84
+0003b  1071 2d22 0006           invoke-static  # CALL Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+0003e  060c                     move-result-object
+0003f  206e 2d2e 0065           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+00042  106e 2d34 0005           invoke-virtual  # CALL Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+00045  050c                     move-result-object
+00046  0511                     return-object
+
+### La/a/a/g/l/b;->a(La/a/a/g/k;,I,Ljava/lang/String;,Z,I)Ljava/lang/String;  [access=0x1, regs=33, ins=6, outs=3, code_off=0x78368]
+00000  0108 001c                op_08
+00002  0202 001d                op_02
+00004  0308 001e                op_08
+00006  0402 0020                op_02
+00008  0174 05bb 001c           invoke-virtual/range  # CALL La/a/a/g/k;->c()I
+0000b  000a                     move-result
+0000c  0512                     const/4
+0000d  1612                     const/4
+0000e  6035 0003                if-ge
+00010  0511                     return-object
+00011  0722 06c8                new-instance  # TYPE Ljava/util/ArrayList;
+00013  1070 2de7 0007           invoke-direct  # CALL Ljava/util/ArrayList;-><init>()V
+00016  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00018  0813 0013                const/16
+0001a  0916 0000                const-wide/16
+0001c  8034 0011                if-lt
+0001e  0071 0b0a 0000           invoke-static  # CALL Landroid/os/SystemClock;->elapsedRealtimeNanos()J
+00021  0c0b                     move-result-wide
+00022  0e16 03e8                const-wide/16
+00024  ecbe                     op_be
+00025  0228                     goto
+00026  9c04                     op_04
+00027  0031 090c                op_31
+00029  003d 0005                if-lez
+0002b  6801                     op_01
+0002c  0328                     goto
+0002d  9c04                     op_04
+0002e  0812                     const/4
+0002f  0e22 0684                new-instance  # TYPE Ljava/lang/StringBuffer;
+00031  0013 0200                const/16
+00033  2070 2d26 000e           invoke-direct  # CALL Ljava/lang/StringBuffer;-><init>(I)V
+00036  1054 03c4                iget-object  # FIELD La/a/a/g/k;->a:Ljava/util/List;
+00038  1072 2e5d 0000           invoke-interface  # CALL Ljava/util/List;->size()I
+0003b  0f0a                     move-result
+0003c  6001                     op_01
+0003d  1005 0009                op_05
+0003f  0912                     const/4
+00040  0a12                     const/4
+00041  1213 0000                const/16
+00043  1313 0000                const/16
+00045  051a 0281                const-string  # STR ";%d;"
+00047  0b1a 0258                const-string  # STR ":"
+00049  061a 0000                const-string  # STR ""
+0004b  041a 28d8                const-string  # STR "|"
+0004d  f935 0106                if-ge
+0004f  1402 000f                op_02
+00051  1f54 03c4                iget-object  # FIELD La/a/a/g/k;->a:Ljava/util/List;
+00053  2072 2e57 009f           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+00056  0f0c                     move-result-object
+00057  0f38 00e9                if-eqz
+00059  1f54 03c4                iget-object  # FIELD La/a/a/g/k;->a:Ljava/util/List;
+0005b  2072 2e57 009f           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+0005e  0f0c                     move-result-object
+0005f  0f1f 01e9                check-cast  # TYPE Landroid/net/wifi/ScanResult;
+00061  ff52 054c                iget  # FIELD Landroid/net/wifi/ScanResult;->level:I
+00063  0f39 0004                if-nez
+00065  0029 00db                goto/16
+00067  0ad8 010a                op_d8
+00069  0038 0009                if-eqz
+0006b  001a 016e                const-string  # STR "&wf="
+0006d  206e 2d2e 000e           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+00070  0f12                     const/4
+00071  0528                     goto
+00072  206e 2d2e 004e           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+00075  0f01                     op_01
+00076  1054 03c4                iget-object  # FIELD La/a/a/g/k;->a:Ljava/util/List;
+00078  2072 2e57 0090           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+0007b  000c                     move-result-object
+0007c  001f 01e9                check-cast  # TYPE Landroid/net/wifi/ScanResult;
+0007e  0054 0548                iget-object  # FIELD Landroid/net/wifi/ScanResult;->BSSID:Ljava/lang/String;
+00080  306e 2d14 06b0           invoke-virtual  # CALL Ljava/lang/String;->replace(Ljava/lang/CharSequence;,Ljava/lang/CharSequence;)Ljava/lang/String;
+00083  000c                     move-result-object
+00084  206e 2d2e 000e           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+00087  0338 000a                if-eqz
+00089  206e 2d03 0030           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+0008c  000a                     move-result
+0008d  0038 0004                if-eqz
+0008f  1302 000a                op_02
+00091  1054 03c4                iget-object  # FIELD La/a/a/g/k;->a:Ljava/util/List;
+00093  2072 2e57 0090           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+00096  000c                     move-result-object
+00097  001f 01e9                check-cast  # TYPE Landroid/net/wifi/ScanResult;
+00099  0052 054c                iget  # FIELD Landroid/net/wifi/ScanResult;->level:I
+0009b  003b 0003                if-gez
+0009d  007b                     op_7b
+0009e  0362 1d71                sget-object  # FIELD Ljava/util/Locale;->CHINA:Ljava/util/Locale;
+000a0  1508 0004                op_08
+000a2  1602 000a                op_02
+000a4  1412                     const/4
+000a5  4a23 075d                new-array  # TYPE [Ljava/lang/Object;
+000a7  1071 2cae 0000           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+000aa  000c                     move-result-object
+000ab  0412                     const/4
+000ac  004d 040a                aput-object
+000ae  3071 2d06 0a53           invoke-static  # CALL Ljava/lang/String;->format(Ljava/util/Locale;,Ljava/lang/String;,[Ljava/lang/Object;)Ljava/lang/String;
+000b1  000c                     move-result-object
+000b2  206e 2d2e 000e           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+000b5  03d8 0112                op_d8
+000b7  0838 0079                if-eqz
+000b9  1054 03c4                iget-object  # FIELD La/a/a/g/k;->a:Ljava/util/List;
+000bb  2072 2e57 0090           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+000be  000c                     move-result-object
+000bf  001f 01e9                check-cast  # TYPE Landroid/net/wifi/ScanResult;
+000c1  1708 0005                op_08
+000c3  0453 054d                iget-wide  # FIELD Landroid/net/wifi/ScanResult;->timestamp:J
+000c5  049c 040c                op_9c
+000c7  1817 4240 000f           const-wide/32
+000ca  049e 1804                op_9e
+000cc  0f28                     goto
+000cd  000d                     op_0d
+000ce  0428                     goto
+000cf  000d                     op_0d
+000d0  1708 0005                op_08
+000d2  0463 0402                sget-boolean  # FIELD La/a/a/g/m/a;->a:Z
+000d4  0438 0005                if-eqz
+000d6  106e 2d60 0000           invoke-virtual  # CALL Ljava/lang/Throwable;->printStackTrace()V
+000d9  0416 0000                const-wide/16
+000db  0063 0402                sget-boolean  # FIELD La/a/a/g/m/a;->a:Z
+000dd  0038 0023                if-eqz
+000df  0a63 0403                sget-boolean  # FIELD La/a/a/g/m/a;->b:Z
+000e1  0a38 001f                if-eqz
+000e3  0071 05af 0000           invoke-static  # CALL La/a/a/g/g;->h()La/a/a/g/e;
+000e6  0a0c                     move-result-object
+000e7  1802 0008                op_02
+000e9  0822 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+000eb  1070 2d35 0008           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+000ee  1905 000c                op_05
+000f0  0c1a 288a                const-string  # STR "wifi noUpdateTime = "
+000f2  206e 2d3f 00c8           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000f5  306e 2d3c 0548           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+000f8  106e 2d44 0008           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+000fb  080c                     move-result-object
+000fc  206e 0543 008a           invoke-virtual  # CALL La/a/a/g/e;->a(Ljava/lang/String;)V
+000ff  0528                     goto
+00100  1802 0008                op_02
+00102  1905 000c                op_05
+00104  2071 2cbb 0054           invoke-static  # CALL Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+00107  080c                     move-result-object
+00108  2072 2e52 0087           invoke-interface  # CALL Ljava/util/List;->add(Ljava/lang/Object;)Z
+0010b  0831 1004                op_31
+0010d  083d 0029                if-lez
+0010f  0038 001e                if-eqz
+00111  0063 0403                sget-boolean  # FIELD La/a/a/g/m/a;->b:Z
+00113  0038 001a                if-eqz
+00115  0071 05af 0000           invoke-static  # CALL La/a/a/g/g;->h()La/a/a/g/e;
+00118  000c                     move-result-object
+00119  0822 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0011b  1070 2d35 0008           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0011e  0a1a 2889                const-string  # STR "wifi maxScanTime = "
+00120  206e 2d3f 00a8           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00123  306e 2d3c 0548           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+00126  106e 2d44 0008           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00129  080c                     move-result-object
+0012a  206e 0543 0080           invoke-virtual  # CALL La/a/a/g/e;->a(Ljava/lang/String;)V
+0012d  1005 0004                op_05
+0012f  0728                     goto
+00130  1708 0005                op_08
+00132  1802 0008                op_02
+00134  1905 000c                op_05
+00136  2337 0004                if-le
+00138  f001                     op_01
+00139  2228                     goto
+0013a  1202 0003                op_02
+0013c  f001                     op_01
+0013d  0a02 0016                op_02
+0013f  0528                     goto
+00140  1802 0008                op_02
+00142  1905 000c                op_05
+00144  09d8 0109                op_d8
+00146  0308 001e                op_08
+00148  0402 0020                op_02
+0014a  0f02 0014                op_02
+0014c  0802 0018                op_02
+0014e  0c05 0019                op_05
+00150  1612                     const/4
+00151  0029 fef4                goto/16
+00153  1508 0004                op_08
+00155  1708 0005                op_08
+00157  1402 000f                op_02
+00159  0302 0012                op_02
+0015b  0402 0013                op_02
+0015d  1f38 0007                if-eqz
+0015f  106e 2d34 000e           invoke-virtual  # CALL Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+00162  000c                     move-result-object
+00163  0011                     return-object
+00164  043d 000a                if-lez
+00166  051a 0174                const-string  # STR "&wf_n="
+00168  206e 2d2e 005e           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+0016b  206e 2d2b 004e           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
+0016e  2337 0055                if-le
+00170  1412                     const/4
+00171  42b0                     op_b0
+00172  0402 0020                op_02
+00174  0508 0015                op_08
+00176  2437 004f                if-le
+00178  3801                     op_01
+00179  0202 0014                op_02
+0017b  2835 004a                if-ge
+0017d  3833 0008                if-ne
+0017f  091a 016d                const-string  # STR "&wf2="
+00181  206e 2d2e 009e           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+00184  0428                     goto
+00185  206e 2d2e 005e           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+00188  1954 03c4                iget-object  # FIELD La/a/a/g/k;->a:Ljava/util/List;
+0018a  2072 2e57 0089           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+0018d  090c                     move-result-object
+0018e  091f 01e9                check-cast  # TYPE Landroid/net/wifi/ScanResult;
+00190  9954 0548                iget-object  # FIELD Landroid/net/wifi/ScanResult;->BSSID:Ljava/lang/String;
+00192  306e 2d14 06b9           invoke-virtual  # CALL Ljava/lang/String;->replace(Ljava/lang/CharSequence;,Ljava/lang/CharSequence;)Ljava/lang/String;
+00195  090c                     move-result-object
+00196  206e 2d2e 009e           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+00199  1954 03c4                iget-object  # FIELD La/a/a/g/k;->a:Ljava/util/List;
+0019b  2072 2e57 0089           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+0019e  090c                     move-result-object
+0019f  091f 01e9                check-cast  # TYPE Landroid/net/wifi/ScanResult;
+001a1  9952 054c                iget  # FIELD Landroid/net/wifi/ScanResult;->level:I
+001a3  093b 0003                if-gez
+001a5  997b                     op_7b
+001a6  0a62 1d71                sget-object  # FIELD Ljava/util/Locale;->CHINA:Ljava/util/Locale;
+001a8  1c12                     const/4
+001a9  cd23 075d                new-array  # TYPE [Ljava/lang/Object;
+001ab  1071 2cae 0009           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+001ae  090c                     move-result-object
+001af  0f12                     const/4
+001b0  094d 0f0d                aput-object
+001b2  0908 0017                op_08
+001b4  3071 2d06 0d9a           invoke-static  # CALL Ljava/lang/String;->format(Ljava/util/Locale;,Ljava/lang/String;,[Ljava/lang/Object;)Ljava/lang/String;
+001b7  0a0c                     move-result-object
+001b8  206e 2d2e 00ae           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+001bb  4834 0003                if-lt
+001bd  0928                     goto
+001be  08d8 0108                op_d8
+001c0  1708 0009                op_08
+001c2  b928                     goto
+001c3  0508 0015                op_08
+001c5  1c12                     const/4
+001c6  0038 0004                if-eqz
+001c8  0112                     const/4
+001c9  0111                     return-object
+001ca  0016 000a                const-wide/16
+001cc  0031 0010                op_31
+001ce  003d 0094                if-lez
+001d0  1072 2e5d 0007           invoke-interface  # CALL Ljava/util/List;->size()I
+001d3  000a                     move-result
+001d4  003d 008e                if-lez
+001d6  0112                     const/4
+001d7  2072 2e57 0017           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+001da  000c                     move-result-object
+001db  001f 0671                check-cast  # TYPE Ljava/lang/Long;
+001dd  106e 2cb6 0000           invoke-virtual  # CALL Ljava/lang/Long;->longValue()J
+001e0  020b                     move-result-wide
+001e1  0816 0000                const-wide/16
+001e3  0031 0802                op_31
+001e5  003d 007d                if-lez
+001e7  0022 0684                new-instance  # TYPE Ljava/lang/StringBuffer;
+001e9  0213 0080                const/16
+001eb  2070 2d26 0020           invoke-direct  # CALL Ljava/lang/StringBuffer;-><init>(I)V
+001ee  021a 0179                const-string  # STR "&wf_ut="
+001f0  206e 2d2e 0020           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+001f3  2072 2e57 0017           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+001f6  020c                     move-result-object
+001f7  021f 0671                check-cast  # TYPE Ljava/lang/Long;
+001f9  1072 2e59 0007           invoke-interface  # CALL Ljava/util/List;->iterator()Ljava/util/Iterator;
+001fc  030c                     move-result-object
+001fd  1072 2e43 0003           invoke-interface  # CALL Ljava/util/Iterator;->hasNext()Z
+00200  040a                     move-result
+00201  0438 0036                if-eqz
+00203  1072 2e44 0003           invoke-interface  # CALL Ljava/util/Iterator;->next()Ljava/lang/Object;
+00206  040c                     move-result-object
+00207  041f 0671                check-cast  # TYPE Ljava/lang/Long;
+00209  106e 2cb6 0004           invoke-virtual  # CALL Ljava/lang/Long;->longValue()J
+0020c  070b                     move-result-wide
+0020d  0c38 0009                if-eqz
+0020f  306e 2d2c 0870           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(J)Ljava/lang/StringBuffer;
+00212  1c01                     op_01
+00213  0916 0000                const-wide/16
+00215  1e28                     goto
+00216  106e 2cb6 0002           invoke-virtual  # CALL Ljava/lang/Long;->longValue()J
+00219  090b                     move-result-wide
+0021a  97bc                     op_bc
+0021b  0916 0000                const-wide/16
+0021d  0431 0907                op_31
+0021f  0438 0014                if-eqz
+00221  0422 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00223  1070 2d35 0004           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00226  206e 2d3f 0064           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00229  306e 2d3c 0874           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+0022c  106e 2d44 0004           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0022f  040c                     move-result-object
+00230  206e 2d2e 0040           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+00233  206e 2d2e 0050           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+00236  c728                     goto
+00237  0163 0402                sget-boolean  # FIELD La/a/a/g/m/a;->a:Z
+00239  0138 0022                if-eqz
+0023b  0163 0403                sget-boolean  # FIELD La/a/a/g/m/a;->b:Z
+0023d  0138 001e                if-eqz
+0023f  0071 05af 0000           invoke-static  # CALL La/a/a/g/g;->h()La/a/a/g/e;
+00242  010c                     move-result-object
+00243  0222 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00245  1070 2d35 0002           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00248  031a 288c                const-string  # STR "wifi scantime list str = "
+0024a  206e 2d3f 0032           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0024d  106e 2d34 0000           invoke-virtual  # CALL Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+00250  030c                     move-result-object
+00251  206e 2d3f 0032           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00254  106e 2d44 0002           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00257  020c                     move-result-object
+00258  206e 0543 0021           invoke-virtual  # CALL La/a/a/g/e;->a(Ljava/lang/String;)V
+0025b  106e 2d34 0000           invoke-virtual  # CALL Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+0025e  000c                     move-result-object
+0025f  206e 2d2e 000e           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+00262  106e 2d34 000e           invoke-virtual  # CALL Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+00265  000c                     move-result-object
+00266  0011                     return-object
+
+### La/a/a/g/l/b;->a(Landroid/net/wifi/WifiInfo;,Ljava/lang/String;)Ljava/lang/String;  [access=0x20001, regs=9, ins=3, outs=1, code_off=0x7886c]
+00000  061d                     monitor-enter
+00001  0739 0007                if-nez
+00003  0839 0005                if-nez
+00005  0712                     const/4
+00006  061e                     monitor-exit
+00007  0711                     return-object
+00008  0071 2d46 0000           invoke-static  # CALL Ljava/lang/System;->currentTimeMillis()J
+0000b  000b                     move-result-wide
+0000c  6253 03fc                iget-wide  # FIELD La/a/a/g/l/b;->l:J
+0000e  029c 0200                op_9c
+00010  0416 03e8                const-wide/16
+00012  0231 0402                op_31
+00014  023d 000f                if-lez
+00016  0738 0009                if-eqz
+00018  106e 0a77 0007           invoke-virtual  # CALL Landroid/net/wifi/WifiInfo;->getBSSID()Ljava/lang/String;
+0001b  070c                     move-result-object
+0001c  675b 03fd                iput-object  # FIELD La/a/a/g/l/b;->m:Ljava/lang/String;
+0001e  0328                     goto
+0001f  685b 03fd                iput-object  # FIELD La/a/a/g/l/b;->m:Ljava/lang/String;
+00021  605a 03fc                iput-wide  # FIELD La/a/a/g/l/b;->l:J
+00023  6754 03fd                iget-object  # FIELD La/a/a/g/l/b;->m:Ljava/lang/String;
+00025  061e                     monitor-exit
+00026  0711                     return-object
+00027  070d                     op_0d
+00028  061e                     monitor-exit
+00029  0727                     throw
+
+### La/a/a/g/l/b;->a(I)V  [access=0x1, regs=2, ins=2, outs=0, code_off=0x79774]
+00000  0159 03f8                iput  # FIELD La/a/a/g/l/b;->h:I
+00002  000e                     return-void
+
+### La/a/a/g/l/b;->a(Landroid/content/Context;,Ljava/util/List;)V  [access=0x1, regs=6, ins=3, outs=3, code_off=0x79664]
+00000  3055 03f3                iget-boolean  # FIELD La/a/a/g/l/b;->c:Z
+00002  0038 0003                if-eqz
+00004  000e                     return-void
+00005  345b 03f7                iput-object  # FIELD La/a/a/g/l/b;->g:Landroid/content/Context;
+00007  106e 083a 0004           invoke-virtual  # CALL Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+0000a  040c                     move-result-object
+0000b  001a 2885                const-string  # STR "wifi"
+0000d  206e 084c 0004           invoke-virtual  # CALL Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+00010  040c                     move-result-object
+00011  041f 01ec                check-cast  # TYPE Landroid/net/wifi/WifiManager;
+00013  345b 03f4                iput-object  # FIELD La/a/a/g/l/b;->d:Landroid/net/wifi/WifiManager;
+00015  0422 00e8                new-instance  # TYPE La/a/a/g/l/b$c;
+00017  0012                     const/4
+00018  3070 05ff 0034           invoke-direct  # CALL La/a/a/g/l/b$c;-><init>(La/a/a/g/l/b;,La/a/a/g/l/b$a;)V
+0001b  345b 03f5                iput-object  # FIELD La/a/a/g/l/b;->e:La/a/a/g/l/b$c;
+0001d  3454 0400                iget-object  # FIELD La/a/a/g/l/b;->p:Landroid/os/Handler;
+0001f  0439 000d                if-nez
+00021  0422 01f6                new-instance  # TYPE Landroid/os/Handler;
+00023  0071 0ac8 0000           invoke-static  # CALL Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+00026  000c                     move-result-object
+00027  2070 0aac 0004           invoke-direct  # CALL Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+0002a  345b 0400                iput-object  # FIELD La/a/a/g/l/b;->p:Landroid/os/Handler;
+0002c  0539 0007                if-nez
+0002e  0522 06c8                new-instance  # TYPE Ljava/util/ArrayList;
+00030  1070 2de7 0005           invoke-direct  # CALL Ljava/util/ArrayList;-><init>()V
+00033  041a 191c                const-string  # STR "android.net.wifi.SCAN_RESULTS"
+00035  2072 2e55 0045           invoke-interface  # CALL Ljava/util/List;->contains(Ljava/lang/Object;)Z
+00038  000a                     move-result
+00039  0039 0005                if-nez
+0003b  2072 2e52 0045           invoke-interface  # CALL Ljava/util/List;->add(Ljava/lang/Object;)Z
+0003e  1072 2e59 0005           invoke-interface  # CALL Ljava/util/List;->iterator()Ljava/util/Iterator;
+00041  040c                     move-result-object
+00042  1072 2e43 0004           invoke-interface  # CALL Ljava/util/Iterator;->hasNext()Z
+00045  050a                     move-result
+00046  0538 001d                if-eqz
+00048  1072 2e44 0004           invoke-interface  # CALL Ljava/util/Iterator;->next()Ljava/lang/Object;
+0004b  050c                     move-result-object
+0004c  051f 0683                check-cast  # TYPE Ljava/lang/String;
+0004e  3054 03f7                iget-object  # FIELD La/a/a/g/l/b;->g:Landroid/content/Context;
+00050  3154 03f5                iget-object  # FIELD La/a/a/g/l/b;->e:La/a/a/g/l/b$c;
+00052  0222 0177                new-instance  # TYPE Landroid/content/IntentFilter;
+00054  2070 0885 0052           invoke-direct  # CALL Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
+00057  306e 0854 0210           invoke-virtual  # CALL Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;,Landroid/content/IntentFilter;)Landroid/content/Intent;
+0005a  e828                     goto
+0005b  040d                     op_0d
+0005c  0563 0402                sget-boolean  # FIELD La/a/a/g/m/a;->a:Z
+0005e  0538 0005                if-eqz
+00060  106e 2c96 0004           invoke-virtual  # CALL Ljava/lang/Exception;->printStackTrace()V
+00063  1412                     const/4
+00064  345c 03f3                iput-boolean  # FIELD La/a/a/g/l/b;->c:Z
+00066  0363 0402                sget-boolean  # FIELD La/a/a/g/m/a;->a:Z
+00068  0338 000f                if-eqz
+0006a  0363 0403                sget-boolean  # FIELD La/a/a/g/m/a;->b:Z
+0006c  0338 000b                if-eqz
+0006e  0071 05af 0000           invoke-static  # CALL La/a/a/g/g;->h()La/a/a/g/e;
+00071  030c                     move-result-object
+00072  041a 288e                const-string  # STR "wifimanager start ..."
+00074  206e 0543 0043           invoke-virtual  # CALL La/a/a/g/e;->a(Ljava/lang/String;)V
+00077  000e                     return-void
+
+### La/a/a/g/l/b;->a(La/a/a/g/k;,La/a/a/g/k;)Z  [access=0x1, regs=8, ins=3, outs=2, code_off=0x78110]
+00000  6554 03c4                iget-object  # FIELD La/a/a/g/k;->a:Ljava/util/List;
+00002  0012                     const/4
+00003  0538 0051                if-eqz
+00005  0738 004f                if-eqz
+00007  7154 03c4                iget-object  # FIELD La/a/a/g/k;->a:Ljava/util/List;
+00009  0138 004b                if-eqz
+0000b  1072 2e5d 0005           invoke-interface  # CALL Ljava/util/List;->size()I
+0000e  050a                     move-result
+0000f  7154 03c4                iget-object  # FIELD La/a/a/g/k;->a:Ljava/util/List;
+00011  1072 2e5d 0001           invoke-interface  # CALL Ljava/util/List;->size()I
+00014  010a                     move-result
+00015  2071 2ccf 0015           invoke-static  # CALL Ljava/lang/Math;->min(I,I)I
+00018  050a                     move-result
+00019  0101                     op_01
+0001a  5135 0038                if-ge
+0001c  6254 03c4                iget-object  # FIELD La/a/a/g/k;->a:Ljava/util/List;
+0001e  2072 2e57 0012           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+00021  020c                     move-result-object
+00022  0239 0003                if-nez
+00024  2228                     goto
+00025  6254 03c4                iget-object  # FIELD La/a/a/g/k;->a:Ljava/util/List;
+00027  2072 2e57 0012           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+0002a  020c                     move-result-object
+0002b  021f 01e9                check-cast  # TYPE Landroid/net/wifi/ScanResult;
+0002d  2254 0548                iget-object  # FIELD Landroid/net/wifi/ScanResult;->BSSID:Ljava/lang/String;
+0002f  7354 03c4                iget-object  # FIELD La/a/a/g/k;->a:Ljava/util/List;
+00031  2072 2e57 0013           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+00034  030c                     move-result-object
+00035  031f 01e9                check-cast  # TYPE Landroid/net/wifi/ScanResult;
+00037  3354 0548                iget-object  # FIELD Landroid/net/wifi/ScanResult;->BSSID:Ljava/lang/String;
+00039  1071 1c37 0002           invoke-static  # CALL Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+0003c  040a                     move-result
+0003d  0439 0009                if-nez
+0003f  206e 2d03 0032           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+00042  020a                     move-result
+00043  0239 0003                if-nez
+00045  000f                     return
+00046  01d8 0101                op_d8
+00048  d228                     goto
+00049  050d                     op_0d
+0004a  0663 0402                sget-boolean  # FIELD La/a/a/g/m/a;->a:Z
+0004c  0638 0005                if-eqz
+0004e  106e 2c96 0005           invoke-virtual  # CALL Ljava/lang/Exception;->printStackTrace()V
+00051  000f                     return
+00052  1512                     const/4
+00053  050f                     return
+00054  000f                     return
+
+### La/a/a/g/l/b;->a(Ljava/lang/String;)Z  [access=0x11, regs=3, ins=2, outs=2, code_off=0x78310]
+00000  1071 1c37 0002           invoke-static  # CALL Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+00003  010a                     move-result
+00004  0138 0004                if-eqz
+00006  0112                     const/4
+00007  1028                     goto
+00008  2112                     const/4
+00009  001a 28a5                const-string  # STR "wpa|wep"
+0000b  2071 2ebe 0010           invoke-static  # CALL Ljava/util/regex/Pattern;->compile(Ljava/lang/String;,I)Ljava/util/regex/Pattern;
+0000e  010c                     move-result-object
+0000f  206e 2ebf 0021           invoke-virtual  # CALL Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+00012  010c                     move-result-object
+00013  106e 2eb9 0001           invoke-virtual  # CALL Ljava/util/regex/Matcher;->find()Z
+00016  010a                     move-result
+00017  010f                     return
+
+### La/a/a/g/l/b;->b(J)La/a/a/g/k;  [access=0x1, regs=8, ins=3, outs=3, code_off=0x77e4c]
+00000  5054 03f4                iget-object  # FIELD La/a/a/g/l/b;->d:Landroid/net/wifi/WifiManager;
+00002  0038 0097                if-eqz
+00004  0017 ffff 7fff           const-wide/32
+00007  0031 0006                op_31
+00009  003b 0090                if-gez
+0000b  0063 0402                sget-boolean  # FIELD La/a/a/g/m/a;->a:Z
+0000d  0038 0028                if-eqz
+0000f  0163 0403                sget-boolean  # FIELD La/a/a/g/m/a;->b:Z
+00011  0138 0024                if-eqz
+00013  0071 05af 0000           invoke-static  # CALL La/a/a/g/g;->h()La/a/a/g/e;
+00016  010c                     move-result-object
+00017  0222 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00019  1070 2d35 0002           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0001c  031a 1667                const-string  # STR "Wi-Fi diffTime = "
+0001e  206e 2d3f 0032           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00021  306e 2d3c 0762           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+00024  031a 2106                const-string  # STR "mLastDiffTime = "
+00026  206e 2d3f 0032           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00029  5353 03fb                iget-wide  # FIELD La/a/a/g/l/b;->k:J
+0002b  306e 2d3c 0432           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+0002e  106e 2d44 0002           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00031  020c                     move-result-object
+00032  206e 0543 0021           invoke-virtual  # CALL La/a/a/g/e;->a(Ljava/lang/String;)V
+00035  5153 03fb                iget-wide  # FIELD La/a/a/g/l/b;->k:J
+00037  0131 0106                op_31
+00039  0139 004e                if-nez
+0003b  0038 0034                if-eqz
+0003d  0163 0403                sget-boolean  # FIELD La/a/a/g/m/a;->b:Z
+0003f  0138 0030                if-eqz
+00041  0071 05af 0000           invoke-static  # CALL La/a/a/g/g;->h()La/a/a/g/e;
+00044  010c                     move-result-object
+00045  0222 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00047  1070 2d35 0002           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0004a  031a 1445                const-string  # STR "System.currentTimeMillis() = "
+0004c  206e 2d3f 0032           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0004f  0071 2d46 0000           invoke-static  # CALL Ljava/lang/System;->currentTimeMillis()J
+00052  030b                     move-result-wide
+00053  306e 2d3c 0432           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+00056  031a 2888                const-string  # STR "wifi diffTime = "
+00058  206e 2d3f 0032           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0005b  306e 2d3c 0762           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+0005e  031a 01db                const-string  # STR ", mScanTime = "
+00060  206e 2d3f 0032           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00063  5353 03fa                iget-wide  # FIELD La/a/a/g/l/b;->j:J
+00065  306e 2d3c 0432           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+00068  106e 2d44 0002           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0006b  020c                     move-result-object
+0006c  206e 0543 0021           invoke-virtual  # CALL La/a/a/g/e;->a(Ljava/lang/String;)V
+0006f  0071 2d46 0000           invoke-static  # CALL Ljava/lang/System;->currentTimeMillis()J
+00072  010b                     move-result-wide
+00073  5353 03fa                iget-wide  # FIELD La/a/a/g/l/b;->j:J
+00075  31bc                     op_bc
+00076  0131 0601                op_31
+00078  013d 0021                if-lez
+0007a  0038 001c                if-eqz
+0007c  0063 0403                sget-boolean  # FIELD La/a/a/g/m/a;->b:Z
+0007e  0038 0018                if-eqz
+00080  0071 05af 0000           invoke-static  # CALL La/a/a/g/g;->h()La/a/a/g/e;
+00083  000c                     move-result-object
+00084  011a 2797                const-string  # STR "time is over"
+00086  0d28                     goto
+00087  0038 000f                if-eqz
+00089  0063 0403                sget-boolean  # FIELD La/a/a/g/m/a;->b:Z
+0008b  0038 000b                if-eqz
+0008d  0071 05af 0000           invoke-static  # CALL La/a/a/g/g;->h()La/a/a/g/e;
+00090  000c                     move-result-object
+00091  011a 1b3b                const-string  # STR "diffTime is changed"
+00093  206e 0543 0010           invoke-virtual  # CALL La/a/a/g/e;->a(Ljava/lang/String;)V
+00096  106e 0617 0005           invoke-virtual  # CALL La/a/a/g/l/b;->g()V
+00099  565a 03fb                iput-wide  # FIELD La/a/a/g/l/b;->k:J
+0009b  5554 03f6                iget-object  # FIELD La/a/a/g/l/b;->f:La/a/a/g/k;
+0009d  0511                     return-object
+
+### La/a/a/g/l/b;->b()Ljava/lang/String;  [access=0x1, regs=8, ins=1, outs=3, code_off=0x79414]
+00000  0022 0684                new-instance  # TYPE Ljava/lang/StringBuffer;
+00002  1070 2d25 0000           invoke-direct  # CALL Ljava/lang/StringBuffer;-><init>()V
+00005  0071 0619 0000           invoke-static  # CALL La/a/a/g/l/b;->i()La/a/a/g/l/b;
+00008  010c                     move-result-object
+00009  106e 0603 0001           invoke-virtual  # CALL La/a/a/g/l/b;->a()Landroid/net/wifi/WifiInfo;
+0000c  010c                     move-result-object
+0000d  0212                     const/4
+0000e  306e 0607 0217           invoke-virtual  # CALL La/a/a/g/l/b;->a(Landroid/net/wifi/WifiInfo;,Ljava/lang/String;)Ljava/lang/String;
+00011  070c                     move-result-object
+00012  0138 007b                if-eqz
+00014  0738 0079                if-eqz
+00016  031a 0000                const-string  # STR ""
+00018  041a 0258                const-string  # STR ":"
+0001a  306e 2d14 0347           invoke-virtual  # CALL Ljava/lang/String;->replace(Ljava/lang/CharSequence;,Ljava/lang/CharSequence;)Ljava/lang/String;
+0001d  070c                     move-result-object
+0001e  106e 0a78 0001           invoke-virtual  # CALL Landroid/net/wifi/WifiInfo;->getRssi()I
+00021  040a                     move-result
+00022  0071 0619 0000           invoke-static  # CALL La/a/a/g/l/b;->i()La/a/a/g/l/b;
+00025  050c                     move-result-object
+00026  106e 0614 0005           invoke-virtual  # CALL La/a/a/g/l/b;->d()Ljava/lang/String;
+00029  050c                     move-result-object
+0002a  043b 0003                if-gez
+0002c  447b                     op_7b
+0002d  0738 0060                if-eqz
+0002f  0613 0064                const/16
+00031  6435 005c                if-ge
+00033  061a 022b                const-string  # STR "020000000000"
+00035  206e 2d03 0076           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+00038  060a                     move-result
+00039  0639 0054                if-nez
+0003b  021a 016e                const-string  # STR "&wf="
+0003d  206e 2d2e 0020           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+00040  206e 2d2e 0070           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+00043  071a 0269                const-string  # STR ";"
+00045  206e 2d2e 0070           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+00048  0222 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0004a  1070 2d35 0002           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0004d  206e 2d3f 0032           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00050  206e 2d3b 0042           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+00053  206e 2d3f 0072           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00056  106e 2d44 0002           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00059  020c                     move-result-object
+0005a  206e 2d2e 0020           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+0005d  106e 0a79 0001           invoke-virtual  # CALL Landroid/net/wifi/WifiInfo;->getSSID()Ljava/lang/String;
+00060  010c                     move-result-object
+00061  0138 0016                if-eqz
+00063  021a 00d2                const-string  # STR "&"
+00065  206e 2d01 0021           invoke-virtual  # CALL Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+00068  030a                     move-result
+00069  0339 0008                if-nez
+0006b  206e 2d01 0071           invoke-virtual  # CALL Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+0006e  070a                     move-result
+0006f  0738 0008                if-eqz
+00071  071a 176e                const-string  # STR "_"
+00073  306e 2d14 0721           invoke-virtual  # CALL Ljava/lang/String;->replace(Ljava/lang/CharSequence;,Ljava/lang/CharSequence;)Ljava/lang/String;
+00076  010c                     move-result-object
+00077  206e 2d2e 0010           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+0007a  071a 0175                const-string  # STR "&wf_n=1"
+0007c  206e 2d2e 0070           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+0007f  0538 000a                if-eqz
+00081  071a 0172                const-string  # STR "&wf_gw="
+00083  206e 2d2e 0070           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+00086  206e 2d2e 0050           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+00089  106e 2d34 0000           invoke-virtual  # CALL Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+0008c  020c                     move-result-object
+0008d  0211                     return-object
+
+### La/a/a/g/l/b;->b(Ljava/lang/String;)Ljava/lang/String;  [access=0x11, regs=4, ins=2, outs=3, code_off=0x79540]
+00000  0338 001c                if-eqz
+00002  021a 00d2                const-string  # STR "&"
+00004  206e 2d01 0023           invoke-virtual  # CALL Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+00007  000a                     move-result
+00008  011a 0269                const-string  # STR ";"
+0000a  0039 0008                if-nez
+0000c  206e 2d01 0013           invoke-virtual  # CALL Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+0000f  000a                     move-result
+00010  0038 000c                if-eqz
+00012  001a 176e                const-string  # STR "_"
+00014  306e 2d14 0023           invoke-virtual  # CALL Ljava/lang/String;->replace(Ljava/lang/CharSequence;,Ljava/lang/CharSequence;)Ljava/lang/String;
+00017  020c                     move-result-object
+00018  306e 2d14 0012           invoke-virtual  # CALL Ljava/lang/String;->replace(Ljava/lang/CharSequence;,Ljava/lang/CharSequence;)Ljava/lang/String;
+0001b  030c                     move-result-object
+0001c  0311                     return-object
+
+### La/a/a/g/l/b;->c()La/a/a/g/k;  [access=0x1, regs=6, ins=1, outs=4, code_off=0x77f98]
+00000  5054 03ff                iget-object  # FIELD La/a/a/g/l/b;->o:Ljava/lang/Object;
+00002  001d                     monitor-enter
+00003  5154 03f6                iget-object  # FIELD La/a/a/g/l/b;->f:La/a/a/g/k;
+00005  206e 0602 0015           invoke-virtual  # CALL La/a/a/g/l/b;->a(La/a/a/g/k;)La/a/a/g/k;
+00008  010c                     move-result-object
+00009  001e                     monitor-exit
+0000a  0138 0008                if-eqz
+0000c  106e 05ba 0001           invoke-virtual  # CALL La/a/a/g/k;->b()Z
+0000f  000a                     move-result
+00010  0039 0025                if-nez
+00012  5054 03f4                iget-object  # FIELD La/a/a/g/l/b;->d:Landroid/net/wifi/WifiManager;
+00014  0038 000f                if-eqz
+00016  0222 00dc                new-instance  # TYPE La/a/a/g/k;
+00018  106e 0a7d 0000           invoke-virtual  # CALL Landroid/net/wifi/WifiManager;->getScanResults()Ljava/util/List;
+0001b  000c                     move-result-object
+0001c  5353 03fa                iget-wide  # FIELD La/a/a/g/l/b;->j:J
+0001e  4070 05b6 4302           invoke-direct  # CALL La/a/a/g/k;-><init>(Ljava/util/List;,J)V
+00021  2107                     op_07
+00022  1328                     goto
+00023  0522 00dc                new-instance  # TYPE La/a/a/g/k;
+00025  0012                     const/4
+00026  0216 0000                const-wide/16
+00028  4070 05b6 3205           invoke-direct  # CALL La/a/a/g/k;-><init>(Ljava/util/List;,J)V
+0002b  5107                     op_07
+0002c  0928                     goto
+0002d  050d                     op_0d
+0002e  0063 0402                sget-boolean  # FIELD La/a/a/g/m/a;->a:Z
+00030  0038 0005                if-eqz
+00032  106e 2c96 0005           invoke-virtual  # CALL Ljava/lang/Exception;->printStackTrace()V
+00035  0111                     return-object
+00036  050d                     op_0d
+00037  001e                     monitor-exit
+00038  0527                     throw
+
+### La/a/a/g/l/b;->d()Ljava/lang/String;  [access=0x11, regs=3, ins=1, outs=3, code_off=0x7958c]
+00000  2054 03f4                iget-object  # FIELD La/a/a/g/l/b;->d:Landroid/net/wifi/WifiManager;
+00002  0038 0010                if-eqz
+00004  106e 0a7c 0000           invoke-virtual  # CALL Landroid/net/wifi/WifiManager;->getDhcpInfo()Landroid/net/DhcpInfo;
+00007  000c                     move-result-object
+00008  0038 000a                if-eqz
+0000a  0052 0546                iget  # FIELD Landroid/net/DhcpInfo;->gateway:I
+0000c  0081                     op_81
+0000d  306e 0605 0102           invoke-virtual  # CALL La/a/a/g/l/b;->a(J)Ljava/lang/String;
+00010  020c                     move-result-object
+00011  0228                     goto
+00012  0212                     const/4
+00013  0211                     return-object
+
+### La/a/a/g/l/b;->e()J  [access=0x1, regs=3, ins=1, outs=0, code_off=0x795c4]
+00000  2053 03fa                iget-wide  # FIELD La/a/a/g/l/b;->j:J
+00002  0010                     return-wide
+
+### La/a/a/g/l/b;->f()V  [access=0x11, regs=16, ins=1, outs=4, code_off=0x7978c]
+00000  f054 03f4                iget-object  # FIELD La/a/a/g/l/b;->d:Landroid/net/wifi/WifiManager;
+00002  0039 0003                if-nez
+00004  000e                     return-void
+00005  106e 0a7d 0000           invoke-virtual  # CALL Landroid/net/wifi/WifiManager;->getScanResults()Ljava/util/List;
+00008  000c                     move-result-object
+00009  0163 0402                sget-boolean  # FIELD La/a/a/g/m/a;->a:Z
+0000b  0138 0130                if-eqz
+0000d  0163 0403                sget-boolean  # FIELD La/a/a/g/m/a;->b:Z
+0000f  0138 012c                if-eqz
+00011  0122 06c6                new-instance  # TYPE Ljava/text/SimpleDateFormat;
+00013  021a 28cd                const-string  # STR "yyyy-MM-dd HH:mm:ss"
+00015  2070 2dde 0021           invoke-direct  # CALL Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
+00018  0071 2d46 0000           invoke-static  # CALL Ljava/lang/System;->currentTimeMillis()J
+0001b  020b                     move-result-wide
+0001c  0038 011f                if-eqz
+0001e  1072 2e5d 0000           invoke-interface  # CALL Ljava/util/List;->size()I
+00021  040a                     move-result
+00022  043d 0119                if-lez
+00024  0422 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00026  1070 2d35 0004           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00029  0516 0000                const-wide/16
+0002b  0712                     const/4
+0002c  5904                     op_04
+0002d  7801                     op_01
+0002e  1072 2e5d 0000           invoke-interface  # CALL Ljava/util/List;->size()I
+00031  0b0a                     move-result
+00032  b835 00e0                if-ge
+00034  0b17 4240 000f           const-wide/32
+00037  0839 006f                if-nez
+00039  2072 2e57 0070           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+0003c  090c                     move-result-object
+0003d  091f 01e9                check-cast  # TYPE Landroid/net/wifi/ScanResult;
+0003f  9953 054d                iget-wide  # FIELD Landroid/net/wifi/ScanResult;->timestamp:J
+00041  099c 0902                op_9c
+00043  b9be                     op_be
+00044  0628                     goto
+00045  090d                     op_0d
+00046  106e 2c96 0009           invoke-virtual  # CALL Ljava/lang/Exception;->printStackTrace()V
+00049  5904                     op_04
+0004a  0d22 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0004c  1070 2d35 000d           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0004f  2072 2e57 0070           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+00052  0e0c                     move-result-object
+00053  0e1f 01e9                check-cast  # TYPE Landroid/net/wifi/ScanResult;
+00055  ee54 0548                iget-object  # FIELD Landroid/net/wifi/ScanResult;->BSSID:Ljava/lang/String;
+00057  206e 2d3f 00ed           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0005a  0e1a 0269                const-string  # STR ";"
+0005c  206e 2d3f 00ed           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0005f  2072 2e57 0070           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+00062  0e0c                     move-result-object
+00063  0e1f 01e9                check-cast  # TYPE Landroid/net/wifi/ScanResult;
+00065  ee52 054c                iget  # FIELD Landroid/net/wifi/ScanResult;->level:I
+00067  1071 2cbf 000e           invoke-static  # CALL Ljava/lang/Math;->abs(I)I
+0006a  0e0a                     move-result
+0006b  206e 2d3b 00ed           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+0006e  0e1a 0269                const-string  # STR ";"
+00070  206e 2d3f 00ed           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00073  2072 2e57 0070           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+00076  0e0c                     move-result-object
+00077  0e1f 01e9                check-cast  # TYPE Landroid/net/wifi/ScanResult;
+00079  ee54 0549                iget-object  # FIELD Landroid/net/wifi/ScanResult;->SSID:Ljava/lang/String;
+0007b  106e 2d20 000e           invoke-virtual  # CALL Ljava/lang/String;->trim()Ljava/lang/String;
+0007e  0e0c                     move-result-object
+0007f  206e 2d3f 00ed           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00082  0e1a 0269                const-string  # STR ";"
+00084  206e 2d3f 00ed           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00087  2072 2e57 0070           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+0008a  0e0c                     move-result-object
+0008b  0e1f 01e9                check-cast  # TYPE Landroid/net/wifi/ScanResult;
+0008d  ee52 054b                iget  # FIELD Landroid/net/wifi/ScanResult;->frequency:I
+0008f  206e 2d3b 00ed           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+00092  0e1a 0269                const-string  # STR ";"
+00094  206e 2d3f 00ed           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00097  306e 2d3c 0a9d           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+0009a  0e1a 28d8                const-string  # STR "|"
+0009c  206e 2d3f 00ed           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0009f  106e 2d44 000d           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+000a2  0d0c                     move-result-object
+000a3  206e 2d3f 00d4           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000a6  2072 2e57 0080           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+000a9  0d0c                     move-result-object
+000aa  0d1f 01e9                check-cast  # TYPE Landroid/net/wifi/ScanResult;
+000ac  dd53 054d                iget-wide  # FIELD Landroid/net/wifi/ScanResult;->timestamp:J
+000ae  0d9c 0d02                op_9c
+000b0  bdbe                     op_be
+000b1  9dbc                     op_bc
+000b2  0b22 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+000b4  1070 2d35 000b           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+000b7  2072 2e57 0080           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+000ba  0c0c                     move-result-object
+000bb  0c1f 01e9                check-cast  # TYPE Landroid/net/wifi/ScanResult;
+000bd  cc54 0548                iget-object  # FIELD Landroid/net/wifi/ScanResult;->BSSID:Ljava/lang/String;
+000bf  206e 2d3f 00cb           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000c2  0c1a 0269                const-string  # STR ";"
+000c4  206e 2d3f 00cb           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000c7  2072 2e57 0080           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+000ca  0c0c                     move-result-object
+000cb  0c1f 01e9                check-cast  # TYPE Landroid/net/wifi/ScanResult;
+000cd  cc52 054c                iget  # FIELD Landroid/net/wifi/ScanResult;->level:I
+000cf  1071 2cbf 000c           invoke-static  # CALL Ljava/lang/Math;->abs(I)I
+000d2  0c0a                     move-result
+000d3  206e 2d3b 00cb           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+000d6  0c1a 0269                const-string  # STR ";"
+000d8  206e 2d3f 00cb           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000db  2072 2e57 0080           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+000de  0c0c                     move-result-object
+000df  0c1f 01e9                check-cast  # TYPE Landroid/net/wifi/ScanResult;
+000e1  cc54 0549                iget-object  # FIELD Landroid/net/wifi/ScanResult;->SSID:Ljava/lang/String;
+000e3  106e 2d20 000c           invoke-virtual  # CALL Ljava/lang/String;->trim()Ljava/lang/String;
+000e6  0c0c                     move-result-object
+000e7  206e 2d3f 00cb           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000ea  0c1a 0269                const-string  # STR ";"
+000ec  206e 2d3f 00cb           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000ef  2072 2e57 0080           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+000f2  0c0c                     move-result-object
+000f3  0c1f 01e9                check-cast  # TYPE Landroid/net/wifi/ScanResult;
+000f5  cc52 054b                iget  # FIELD Landroid/net/wifi/ScanResult;->frequency:I
+000f7  206e 2d3b 00cb           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+000fa  0c1a 0269                const-string  # STR ";"
+000fc  206e 2d3f 00cb           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000ff  306e 2d3c 0edb           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+00102  0c1a 28d8                const-string  # STR "|"
+00104  206e 2d3f 00cb           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00107  106e 2d44 000b           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0010a  0b0c                     move-result-object
+0010b  206e 2d3f 00b4           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0010e  08d8 0108                op_d8
+00110  0029 ff1e                goto/16
+00112  051a 0001                const-string  # STR "\t"
+00114  206e 2d3f 0054           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00117  0522 06d1                new-instance  # TYPE Ljava/util/Date;
+00119  3070 2e1e 0325           invoke-direct  # CALL Ljava/util/Date;-><init>(J)V
+0011c  206e 2de1 0051           invoke-virtual  # CALL Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+0011f  010c                     move-result-object
+00120  206e 2d3f 0014           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00123  011a 0001                const-string  # STR "\t"
+00125  206e 2d3f 0014           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00128  306e 2d3c 0324           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+0012b  011a 0002                const-string  # STR "\tnull\n"
+0012d  206e 2d3f 0014           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00130  0071 05af 0000           invoke-static  # CALL La/a/a/g/g;->h()La/a/a/g/e;
+00133  010c                     move-result-object
+00134  106e 2d44 0004           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00137  020c                     move-result-object
+00138  206e 0543 0021           invoke-virtual  # CALL La/a/a/g/e;->a(Ljava/lang/String;)V
+0013b  0038 001f                if-eqz
+0013d  0122 00dc                new-instance  # TYPE La/a/a/g/k;
+0013f  0071 2d46 0000           invoke-static  # CALL Ljava/lang/System;->currentTimeMillis()J
+00142  020b                     move-result-wide
+00143  4070 05b6 3201           invoke-direct  # CALL La/a/a/g/k;-><init>(Ljava/util/List;,J)V
+00146  f054 03ff                iget-object  # FIELD La/a/a/g/l/b;->o:Ljava/lang/Object;
+00148  001d                     monitor-enter
+00149  f254 03f6                iget-object  # FIELD La/a/a/g/l/b;->f:La/a/a/g/k;
+0014b  0238 0008                if-eqz
+0014d  306e 060b 021f           invoke-virtual  # CALL La/a/a/g/l/b;->a(La/a/a/g/k;,La/a/a/g/k;)Z
+00150  020a                     move-result
+00151  0239 0004                if-nez
+00153  f15b 03f6                iput-object  # FIELD La/a/a/g/l/b;->f:La/a/a/g/k;
+00155  001e                     monitor-exit
+00156  0428                     goto
+00157  0f0d                     op_0d
+00158  001e                     monitor-exit
+00159  0f27                     throw
+0015a  000e                     return-void
+0015b  0f0d                     op_0d
+0015c  0063 0402                sget-boolean  # FIELD La/a/a/g/m/a;->a:Z
+0015e  0038 0005                if-eqz
+00160  106e 2c96 000f           invoke-virtual  # CALL Ljava/lang/Exception;->printStackTrace()V
+00163  000e                     return-void
+
+### La/a/a/g/l/b;->g()V  [access=0x11, regs=4, ins=1, outs=3, code_off=0x79a94]
+00000  3054 03f4                iget-object  # FIELD La/a/a/g/l/b;->d:Landroid/net/wifi/WifiManager;
+00002  106e 0a7f 0000           invoke-virtual  # CALL Landroid/net/wifi/WifiManager;->isWifiEnabled()Z
+00005  000a                     move-result
+00006  0039 0010                if-nez
+00008  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+0000a  0113 0011                const/16
+0000c  1037 0025                if-le
+0000e  3054 03f4                iget-object  # FIELD La/a/a/g/l/b;->d:Landroid/net/wifi/WifiManager;
+00010  106e 0a7e 0000           invoke-virtual  # CALL Landroid/net/wifi/WifiManager;->isScanAlwaysAvailable()Z
+00013  000a                     move-result
+00014  0038 001d                if-eqz
+00016  3054 03f4                iget-object  # FIELD La/a/a/g/l/b;->d:Landroid/net/wifi/WifiManager;
+00018  106e 0a80 0000           invoke-virtual  # CALL Landroid/net/wifi/WifiManager;->startScan()Z
+0001b  0063 0402                sget-boolean  # FIELD La/a/a/g/m/a;->a:Z
+0001d  0038 0014                if-eqz
+0001f  0063 0403                sget-boolean  # FIELD La/a/a/g/m/a;->b:Z
+00021  0038 0010                if-eqz
+00023  0071 05af 0000           invoke-static  # CALL La/a/a/g/g;->h()La/a/a/g/e;
+00026  000c                     move-result-object
+00027  011a 288f                const-string  # STR "wifimanager start scan ..."
+00029  206e 0543 0010           invoke-virtual  # CALL La/a/a/g/e;->a(Ljava/lang/String;)V
+0002c  0528                     goto
+0002d  000d                     op_0d
+0002e  106e 2c96 0000           invoke-virtual  # CALL Ljava/lang/Exception;->printStackTrace()V
+00031  0071 2d46 0000           invoke-static  # CALL Ljava/lang/System;->currentTimeMillis()J
+00034  000b                     move-result-wide
+00035  305a 03fa                iput-wide  # FIELD La/a/a/g/l/b;->j:J
+00037  3054 03fe                iget-object  # FIELD La/a/a/g/l/b;->n:Ljava/lang/Object;
+00039  001d                     monitor-enter
+0003a  3152 03f8                iget  # FIELD La/a/a/g/l/b;->h:I
+0003c  0138 000f                if-eqz
+0003e  3354 03fe                iget-object  # FIELD La/a/a/g/l/b;->n:Ljava/lang/Object;
+00040  1181                     op_81
+00041  306e 2ce8 0213           invoke-virtual  # CALL Ljava/lang/Object;->wait(J)V
+00044  0728                     goto
+00045  030d                     op_0d
+00046  0728                     goto
+00047  030d                     op_0d
+00048  106e 2c96 0003           invoke-virtual  # CALL Ljava/lang/Exception;->printStackTrace()V
+0004b  001e                     monitor-exit
+0004c  000e                     return-void
+0004d  001e                     monitor-exit
+0004e  0327                     throw
+
+### La/a/a/g/l/b;->h()V  [access=0x1, regs=3, ins=1, outs=2, code_off=0x79b68]
+00000  2055 03f3                iget-boolean  # FIELD La/a/a/g/l/b;->c:Z
+00002  0039 0003                if-nez
+00004  000e                     return-void
+00005  2054 03f7                iget-object  # FIELD La/a/a/g/l/b;->g:Landroid/content/Context;
+00007  2154 03f5                iget-object  # FIELD La/a/a/g/l/b;->e:La/a/a/g/l/b$c;
+00009  206e 085e 0010           invoke-virtual  # CALL Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+0000c  0016 0000                const-wide/16
+0000e  205a 03f9                iput-wide  # FIELD La/a/a/g/l/b;->i:J
+00010  0928                     goto
+00011  000d                     op_0d
+00012  0163 0402                sget-boolean  # FIELD La/a/a/g/m/a;->a:Z
+00014  0138 0005                if-eqz
+00016  106e 2c96 0000           invoke-virtual  # CALL Ljava/lang/Exception;->printStackTrace()V
+00019  0012                     const/4
+0001a  205b 03f5                iput-object  # FIELD La/a/a/g/l/b;->e:La/a/a/g/l/b$c;
+0001c  205b 03f4                iput-object  # FIELD La/a/a/g/l/b;->d:Landroid/net/wifi/WifiManager;
+0001e  0012                     const/4
+0001f  205c 03f3                iput-boolean  # FIELD La/a/a/g/l/b;->c:Z
+00021  0263 0402                sget-boolean  # FIELD La/a/a/g/m/a;->a:Z
+00023  0238 000f                if-eqz
+00025  0263 0403                sget-boolean  # FIELD La/a/a/g/m/a;->b:Z
+00027  0238 000b                if-eqz
+00029  0071 05af 0000           invoke-static  # CALL La/a/a/g/g;->h()La/a/a/g/e;
+0002c  020c                     move-result-object
+0002d  001a 2890                const-string  # STR "wifimanager stop ..."
+0002f  206e 0543 0002           invoke-virtual  # CALL La/a/a/g/e;->a(Ljava/lang/String;)V
+00032  000e                     return-void

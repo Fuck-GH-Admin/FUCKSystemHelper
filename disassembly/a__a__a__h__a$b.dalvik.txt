@@ -1,0 +1,100 @@
+### La/a/a/h/a$b;-><init>(Landroid/os/Looper;,La/a/a/h/a;)V  [access=0x10001, regs=3, ins=3, outs=2, code_off=0x79e60]
+00000  2070 0aac 0010           invoke-direct  # CALL Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+00003  0122 0692                new-instance  # TYPE Ljava/lang/ref/WeakReference;
+00005  2070 2d67 0021           invoke-direct  # CALL Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+00008  015b 0405                iput-object  # FIELD La/a/a/h/a$b;->a:Ljava/lang/ref/WeakReference;
+0000a  000e                     return-void
+
+### La/a/a/h/a$b;->handleMessage(Landroid/os/Message;)V  [access=0x1, regs=6, ins=2, outs=3, code_off=0x79e88]
+00000  4054 0405                iget-object  # FIELD La/a/a/h/a$b;->a:Ljava/lang/ref/WeakReference;
+00002  106e 2d68 0000           invoke-virtual  # CALL Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+00005  000c                     move-result-object
+00006  001f 00ee                check-cast  # TYPE La/a/a/h/a;
+00008  0039 0003                if-nez
+0000a  000e                     return-void
+0000b  0163 1c65                sget-boolean  # FIELD Lcom/baidu/location/f;->f:Z
+0000d  1212                     const/4
+0000e  2133 0098                if-ne
+00010  5152 0559                iget  # FIELD Landroid/os/Message;->what:I
+00012  0313 000b                const/16
+00014  3132 008f                if-eq
+00016  0313 000c                const/16
+00018  3132 0087                if-eq
+0001a  0313 000f                const/16
+0001c  3132 007f                if-eq
+0001e  0313 0016                const/16
+00020  3132 0073                if-eq
+00022  0313 001c                const/16
+00024  3132 0067                if-eq
+00026  0313 0029                const/16
+00028  3132 005b                if-eq
+0002a  0313 0072                const/16
+0002c  3132 0049                if-eq
+0002e  0313 0191                const/16
+00030  3132 0041                if-eq
+00032  0313 0196                const/16
+00034  3132 0035                if-eq
+00036  0313 02c1                const/16
+00038  3132 001f                if-eq
+0003a  012b 007e 0000           packed-switch
+0003d  0029 0069                goto/16
+0003f  0071 0322 0000           invoke-static  # CALL La/a/a/d/i;->m()La/a/a/d/i;
+00042  010c                     move-result-object
+00043  106e 02f3 0001           invoke-virtual  # CALL La/a/a/d/i;->a()V
+00046  6028                     goto
+00047  0071 0322 0000           invoke-static  # CALL La/a/a/d/i;->m()La/a/a/d/i;
+0004a  010c                     move-result-object
+0004b  106e 0320 0001           invoke-virtual  # CALL La/a/a/d/i;->l()V
+0004e  5828                     goto
+0004f  0071 0322 0000           invoke-static  # CALL La/a/a/d/i;->m()La/a/a/d/i;
+00052  010c                     move-result-object
+00053  106e 031e 0001           invoke-virtual  # CALL La/a/a/d/i;->k()V
+00056  5028                     goto
+00057  106e 0acf 0005           invoke-virtual  # CALL Landroid/os/Message;->getData()Landroid/os/Bundle;
+0005a  010c                     move-result-object
+0005b  031a 1c12                const-string  # STR "foreground"
+0005d  206e 0a8a 0031           invoke-virtual  # CALL Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
+00060  010a                     move-result
+00061  0071 004a 0000           invoke-static  # CALL La/a/a/b/c;->h()La/a/a/b/c;
+00064  030c                     move-result-object
+00065  206e 003b 0013           invoke-virtual  # CALL La/a/a/b/c;->a(Z)V
+00068  3e28                     goto
+00069  0071 00f5 0000           invoke-static  # CALL La/a/a/b/l;->f()La/a/a/b/l;
+0006c  010c                     move-result-object
+0006d  106e 00ef 0001           invoke-virtual  # CALL La/a/a/b/l;->b()V
+00070  3628                     goto
+00071  106e 0acf 0005           invoke-virtual  # CALL Landroid/os/Message;->getData()Landroid/os/Bundle;
+00074  3228                     goto
+00075  5154 0557                iget-object  # FIELD Landroid/os/Message;->obj:Ljava/lang/Object;
+00077  0138 002f                if-eqz
+00079  0071 0322 0000           invoke-static  # CALL La/a/a/d/i;->m()La/a/a/d/i;
+0007c  030c                     move-result-object
+0007d  011f 01f1                check-cast  # TYPE Landroid/os/Bundle;
+0007f  206e 02fe 0013           invoke-virtual  # CALL La/a/a/d/i;->a(Landroid/os/Bundle;)Z
+00082  2428                     goto
+00083  0071 0145 0000           invoke-static  # CALL La/a/a/b/o;->q()La/a/a/b/o;
+00086  010c                     move-result-object
+00087  106e 0141 0001           invoke-virtual  # CALL La/a/a/b/o;->m()V
+0008a  1c28                     goto
+0008b  0071 0145 0000           invoke-static  # CALL La/a/a/b/o;->q()La/a/a/b/o;
+0008e  010c                     move-result-object
+0008f  306e 011c 0221           invoke-virtual  # CALL La/a/a/b/o;->a(Z,Z)V
+00092  1428                     goto
+00093  0071 0145 0000           invoke-static  # CALL La/a/a/b/o;->q()La/a/a/b/o;
+00096  010c                     move-result-object
+00097  206e 0137 0051           invoke-virtual  # CALL La/a/a/b/o;->f(Landroid/os/Message;)V
+0009a  0c28                     goto
+0009b  2071 0631 0050           invoke-static  # CALL La/a/a/h/a;->c(La/a/a/h/a;,Landroid/os/Message;)V
+0009e  0828                     goto
+0009f  2071 062d 0050           invoke-static  # CALL La/a/a/h/a;->b(La/a/a/h/a;,Landroid/os/Message;)V
+000a2  0428                     goto
+000a3  2071 0627 0050           invoke-static  # CALL La/a/a/h/a;->a(La/a/a/h/a;,Landroid/os/Message;)V
+000a6  5152 0559                iget  # FIELD Landroid/os/Message;->what:I
+000a8  2133 0005                if-ne
+000aa  1071 062c 0000           invoke-static  # CALL La/a/a/h/a;->b(La/a/a/h/a;)V
+000ad  5152 0559                iget  # FIELD Landroid/os/Message;->what:I
+000af  0139 0005                if-nez
+000b1  1071 0630 0000           invoke-static  # CALL La/a/a/h/a;->c(La/a/a/h/a;)V
+000b4  206f 0ab0 0054           invoke-super  # CALL Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
+000b7  000e                     return-void
+000b8  0100 0003 006e 0000 0015 0000 000d 0000 0005 0000 ... <payload; units=10>

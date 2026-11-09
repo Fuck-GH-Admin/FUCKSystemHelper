@@ -1,0 +1,339 @@
+### Lc/b/a/a/b;-><init>([B,I,I)V  [access=0x10002, regs=5, ins=4, outs=1, code_off=0x107f3c]
+00000  1070 2ce0 0001           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  0012                     const/4
+00004  105b 1b9d                iput-object  # FIELD Lc/b/a/a/b;->d:Ljava/io/OutputStream;
+00006  125b 1b9a                iput-object  # FIELD Lc/b/a/a/b;->a:[B
+00008  1359 1b9c                iput  # FIELD Lc/b/a/a/b;->c:I
+0000a  43b0                     op_b0
+0000b  1359 1b9b                iput  # FIELD Lc/b/a/a/b;->b:I
+0000d  000e                     return-void
+
+### Lc/b/a/a/b;->b(I,J)I  [access=0x9, regs=3, ins=3, outs=2, code_off=0x107ec8]
+00000  1071 2904 0000           invoke-static  # CALL Lc/b/a/a/b;->f(I)I
+00003  000a                     move-result
+00004  2071 2902 0021           invoke-static  # CALL Lc/b/a/a/b;->d(J)I
+00007  010a                     move-result
+00008  10b0                     op_b0
+00009  000f                     return
+
+### Lc/b/a/a/b;->b(I,Lc/b/a/a/a;)I  [access=0x9, regs=2, ins=2, outs=1, code_off=0x107cac]
+00000  1071 2904 0000           invoke-static  # CALL Lc/b/a/a/b;->f(I)I
+00003  000a                     move-result
+00004  1071 28f7 0001           invoke-static  # CALL Lc/b/a/a/b;->b(Lc/b/a/a/a;)I
+00007  010a                     move-result
+00008  10b0                     op_b0
+00009  000f                     return
+
+### Lc/b/a/a/b;->b(I,Lc/b/a/a/c;)I  [access=0x9, regs=2, ins=2, outs=1, code_off=0x107d44]
+00000  1071 2904 0000           invoke-static  # CALL Lc/b/a/a/b;->f(I)I
+00003  000a                     move-result
+00004  1071 28f8 0001           invoke-static  # CALL Lc/b/a/a/b;->b(Lc/b/a/a/c;)I
+00007  010a                     move-result
+00008  10b0                     op_b0
+00009  000f                     return
+
+### Lc/b/a/a/b;->b(Lc/b/a/a/a;)I  [access=0x9, regs=2, ins=1, outs=1, code_off=0x107cd0]
+00000  106e 28e0 0001           invoke-virtual  # CALL Lc/b/a/a/a;->a()I
+00003  000a                     move-result
+00004  1071 2903 0000           invoke-static  # CALL Lc/b/a/a/b;->e(I)I
+00007  000a                     move-result
+00008  106e 28e0 0001           invoke-virtual  # CALL Lc/b/a/a/a;->a()I
+0000b  010a                     move-result
+0000c  10b0                     op_b0
+0000d  000f                     return
+
+### Lc/b/a/a/b;->b(Lc/b/a/a/c;)I  [access=0x9, regs=2, ins=1, outs=1, code_off=0x107d68]
+00000  106e 2909 0001           invoke-virtual  # CALL Lc/b/a/a/c;->b()I
+00003  010a                     move-result
+00004  1071 2903 0001           invoke-static  # CALL Lc/b/a/a/b;->e(I)I
+00007  000a                     move-result
+00008  10b0                     op_b0
+00009  000f                     return
+
+### Lc/b/a/a/b;->b([B,I,I)Lc/b/a/a/b;  [access=0x9, regs=4, ins=3, outs=4, code_off=0x107c90]
+00000  0022 05d1                new-instance  # TYPE Lc/b/a/a/b;
+00002  4070 28e6 3210           invoke-direct  # CALL Lc/b/a/a/b;-><init>([B,I,I)V
+00005  0011                     return-object
+
+### Lc/b/a/a/b;->c(I,I)I  [access=0x9, regs=2, ins=2, outs=1, code_off=0x107cfc]
+00000  1071 2904 0000           invoke-static  # CALL Lc/b/a/a/b;->f(I)I
+00003  000a                     move-result
+00004  1071 2901 0001           invoke-static  # CALL Lc/b/a/a/b;->d(I)I
+00007  010a                     move-result
+00008  10b0                     op_b0
+00009  000f                     return
+
+### Lc/b/a/a/b;->c(J)I  [access=0x9, regs=6, ins=2, outs=0, code_off=0x107dd4]
+00000  0016 ff80                const-wide/16
+00002  40c0                     op_c0
+00003  0216 0000                const-wide/16
+00005  0031 0200                op_31
+00007  0039 0004                if-nez
+00009  1412                     const/4
+0000a  040f                     return
+0000b  0016 c000                const-wide/16
+0000d  40c0                     op_c0
+0000e  0031 0200                op_31
+00010  0039 0004                if-nez
+00012  2412                     const/4
+00013  040f                     return
+00014  0017 0000 ffe0           const-wide/32
+00017  40c0                     op_c0
+00018  0031 0200                op_31
+0001a  0039 0004                if-nez
+0001c  3412                     const/4
+0001d  040f                     return
+0001e  0017 0000 f000           const-wide/32
+00021  40c0                     op_c0
+00022  0031 0200                op_31
+00024  0039 0004                if-nez
+00026  4412                     const/4
+00027  040f                     return
+00028  0018 0000 0000 fff8 ffff const-wide
+0002d  40c0                     op_c0
+0002e  0031 0200                op_31
+00030  0039 0004                if-nez
+00032  5412                     const/4
+00033  040f                     return
+00034  0018 0000 0000 fc00 ffff const-wide
+00039  40c0                     op_c0
+0003a  0031 0200                op_31
+0003c  0039 0004                if-nez
+0003e  6412                     const/4
+0003f  040f                     return
+00040  0019 fffe                const-wide/high16
+00042  40c0                     op_c0
+00043  0031 0200                op_31
+00045  0039 0004                if-nez
+00047  7412                     const/4
+00048  040f                     return
+00049  0019 ff00                const-wide/high16
+0004b  40c0                     op_c0
+0004c  0031 0200                op_31
+0004e  0039 0005                if-nez
+00050  0413 0008                const/16
+00052  040f                     return
+00053  0019 8000                const-wide/high16
+00055  04c0                     op_c0
+00056  0431 0204                op_31
+00058  0439 0005                if-nez
+0005a  0413 0009                const/16
+0005c  040f                     return
+0005d  0413 000a                const/16
+0005f  040f                     return
+
+### Lc/b/a/a/b;->c()V  [access=0x2, regs=5, ins=1, outs=4, code_off=0x107f98]
+00000  4054 1b9d                iget-object  # FIELD Lc/b/a/a/b;->d:Ljava/io/OutputStream;
+00002  0038 000d                if-eqz
+00004  4154 1b9a                iget-object  # FIELD Lc/b/a/a/b;->a:[B
+00006  4252 1b9c                iget  # FIELD Lc/b/a/a/b;->c:I
+00008  0312                     const/4
+00009  406e 2c40 2310           invoke-virtual  # CALL Ljava/io/OutputStream;->write([B,I,I)V
+0000c  4359 1b9c                iput  # FIELD Lc/b/a/a/b;->c:I
+0000e  000e                     return-void
+0000f  0422 05d0                new-instance  # TYPE Lc/b/a/a/b$a;
+00011  1070 28e5 0004           invoke-direct  # CALL Lc/b/a/a/b$a;-><init>()V
+00014  0427                     throw
+
+### Lc/b/a/a/b;->d(I)I  [access=0x9, regs=1, ins=1, outs=1, code_off=0x107d20]
+00000  003a 0007                if-ltz
+00002  1071 2903 0000           invoke-static  # CALL Lc/b/a/a/b;->e(I)I
+00005  000a                     move-result
+00006  000f                     return
+00007  0013 000a                const/16
+00009  000f                     return
+
+### Lc/b/a/a/b;->d(J)I  [access=0x9, regs=2, ins=2, outs=2, code_off=0x107eec]
+00000  2071 28fe 0010           invoke-static  # CALL Lc/b/a/a/b;->c(J)I
+00003  000a                     move-result
+00004  000f                     return
+
+### Lc/b/a/a/b;->e(I)I  [access=0x9, regs=2, ins=1, outs=0, code_off=0x107d8c]
+00000  00dd 8001                op_dd
+00002  0039 0004                if-nez
+00004  1112                     const/4
+00005  010f                     return
+00006  10d5 c000                op_d5
+00008  0039 0004                if-nez
+0000a  2112                     const/4
+0000b  010f                     return
+0000c  0015 ffe0                const/high16
+0000e  10b5                     op_b5
+0000f  0039 0004                if-nez
+00011  3112                     const/4
+00012  010f                     return
+00013  0015 f000                const/high16
+00015  01b5                     op_b5
+00016  0139 0004                if-nez
+00018  4112                     const/4
+00019  010f                     return
+0001a  5112                     const/4
+0001b  010f                     return
+
+### Lc/b/a/a/b;->f(I)I  [access=0x9, regs=2, ins=1, outs=2, code_off=0x107ea4]
+00000  0012                     const/4
+00001  2071 290c 0001           invoke-static  # CALL Lc/b/a/a/d;->a(I,I)I
+00004  010a                     move-result
+00005  1071 2903 0001           invoke-static  # CALL Lc/b/a/a/b;->e(I)I
+00008  010a                     move-result
+00009  010f                     return
+
+### Lc/b/a/a/b;->a()V  [access=0x1, regs=2, ins=1, outs=2, code_off=0x107f68]
+00000  106e 28f3 0001           invoke-virtual  # CALL Lc/b/a/a/b;->b()I
+00003  010a                     move-result
+00004  0139 0003                if-nez
+00006  000e                     return-void
+00007  0122 066a                new-instance  # TYPE Ljava/lang/IllegalStateException;
+00009  001a 0734                const-string  # STR "Did not write as much data as expected."
+0000b  2070 2ca3 0001           invoke-direct  # CALL Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+0000e  0127                     throw
+
+### Lc/b/a/a/b;->a(B)V  [access=0x1, regs=5, ins=2, outs=1, code_off=0x1080ac]
+00000  3052 1b9c                iget  # FIELD Lc/b/a/a/b;->c:I
+00002  3152 1b9b                iget  # FIELD Lc/b/a/a/b;->b:I
+00004  1033 0005                if-ne
+00006  1070 28ff 0003           invoke-direct  # CALL Lc/b/a/a/b;->c()V
+00009  3054 1b9a                iget-object  # FIELD Lc/b/a/a/b;->a:[B
+0000b  3152 1b9c                iget  # FIELD Lc/b/a/a/b;->c:I
+0000d  02d8 0101                op_d8
+0000f  3259 1b9c                iput  # FIELD Lc/b/a/a/b;->c:I
+00011  044f 0100                aput-byte
+00013  000e                     return-void
+
+### Lc/b/a/a/b;->a(I)V  [access=0x1, regs=4, ins=2, outs=3, code_off=0x10803c]
+00000  033a 0006                if-ltz
+00002  206e 2900 0032           invoke-virtual  # CALL Lc/b/a/a/b;->c(I)V
+00005  0528                     goto
+00006  3081                     op_81
+00007  306e 28ee 0102           invoke-virtual  # CALL Lc/b/a/a/b;->a(J)V
+0000a  000e                     return-void
+
+### Lc/b/a/a/b;->a(I,I)V  [access=0x1, regs=4, ins=3, outs=3, code_off=0x10801c]
+00000  0012                     const/4
+00001  306e 28fb 0021           invoke-virtual  # CALL Lc/b/a/a/b;->b(I,I)V
+00004  206e 28e9 0031           invoke-virtual  # CALL Lc/b/a/a/b;->a(I)V
+00007  000e                     return-void
+
+### Lc/b/a/a/b;->a(I,J)V  [access=0x1, regs=5, ins=4, outs=3, code_off=0x108230]
+00000  0012                     const/4
+00001  306e 28fb 0021           invoke-virtual  # CALL Lc/b/a/a/b;->b(I,I)V
+00004  306e 28fc 0431           invoke-virtual  # CALL Lc/b/a/a/b;->b(J)V
+00007  000e                     return-void
+
+### Lc/b/a/a/b;->a(I,Lc/b/a/a/a;)V  [access=0x1, regs=4, ins=3, outs=3, code_off=0x107fd4]
+00000  2012                     const/4
+00001  306e 28fb 0021           invoke-virtual  # CALL Lc/b/a/a/b;->b(I,I)V
+00004  206e 28ef 0031           invoke-virtual  # CALL Lc/b/a/a/b;->a(Lc/b/a/a/a;)V
+00007  000e                     return-void
+
+### Lc/b/a/a/b;->a(I,Lc/b/a/a/c;)V  [access=0x1, regs=4, ins=3, outs=3, code_off=0x108064]
+00000  2012                     const/4
+00001  306e 28fb 0021           invoke-virtual  # CALL Lc/b/a/a/b;->b(I,I)V
+00004  206e 28f0 0031           invoke-virtual  # CALL Lc/b/a/a/b;->a(Lc/b/a/a/c;)V
+00007  000e                     return-void
+
+### Lc/b/a/a/b;->a(J)V  [access=0x1, regs=7, ins=3, outs=2, code_off=0x1081cc]
+00000  0016 ff80                const-wide/16
+00002  50c0                     op_c0
+00003  0216 0000                const-wide/16
+00005  0031 0200                op_31
+00007  0039 0007                if-nez
+00009  5584                     op_84
+0000a  206e 28fa 0054           invoke-virtual  # CALL Lc/b/a/a/b;->b(I)V
+0000d  000e                     return-void
+0000e  5084                     op_84
+0000f  00dd 7f00                op_dd
+00011  00d6 0080                op_d6
+00013  206e 28fa 0004           invoke-virtual  # CALL Lc/b/a/a/b;->b(I)V
+00016  7012                     const/4
+00017  05c5                     op_c5
+00018  e828                     goto
+
+### Lc/b/a/a/b;->a(Lc/b/a/a/a;)V  [access=0x1, regs=3, ins=2, outs=2, code_off=0x107ff4]
+00000  106e 28e2 0002           invoke-virtual  # CALL Lc/b/a/a/a;->b()[B
+00003  020c                     move-result-object
+00004  2021                     array-length
+00005  206e 2900 0001           invoke-virtual  # CALL Lc/b/a/a/b;->c(I)V
+00008  206e 28f1 0021           invoke-virtual  # CALL Lc/b/a/a/b;->a([B)V
+0000b  000e                     return-void
+
+### Lc/b/a/a/b;->a(Lc/b/a/a/c;)V  [access=0x1, regs=3, ins=2, outs=2, code_off=0x108084]
+00000  106e 2906 0002           invoke-virtual  # CALL Lc/b/a/a/c;->a()I
+00003  000a                     move-result
+00004  206e 2900 0001           invoke-virtual  # CALL Lc/b/a/a/b;->c(I)V
+00007  206e 2907 0012           invoke-virtual  # CALL Lc/b/a/a/c;->a(Lc/b/a/a/b;)V
+0000a  000e                     return-void
+
+### Lc/b/a/a/b;->a([B)V  [access=0x1, regs=4, ins=2, outs=4, code_off=0x108100]
+00000  3021                     array-length
+00001  0112                     const/4
+00002  406e 28f2 0132           invoke-virtual  # CALL Lc/b/a/a/b;->a([B,I,I)V
+00005  000e                     return-void
+
+### Lc/b/a/a/b;->a([B,I,I)V  [access=0x1, regs=7, ins=4, outs=5, code_off=0x10811c]
+00000  3052 1b9b                iget  # FIELD Lc/b/a/a/b;->b:I
+00002  3152 1b9c                iget  # FIELD Lc/b/a/a/b;->c:I
+00004  0291 0100                int-sub
+00006  6234 000d                if-lt
+00008  3054 1b9a                iget-object  # FIELD Lc/b/a/a/b;->a:[B
+0000a  5671 2d45 1054           invoke-static  # CALL Ljava/lang/System;->arraycopy(Ljava/lang/Object;,I,Ljava/lang/Object;,I,I)V
+0000d  3452 1b9c                iget  # FIELD Lc/b/a/a/b;->c:I
+0000f  64b0                     op_b0
+00010  3459 1b9c                iput  # FIELD Lc/b/a/a/b;->c:I
+00012  2228                     goto
+00013  10b1                     op_b1
+00014  3254 1b9a                iget-object  # FIELD Lc/b/a/a/b;->a:[B
+00016  5071 2d45 1254           invoke-static  # CALL Ljava/lang/System;->arraycopy(Ljava/lang/Object;,I,Ljava/lang/Object;,I,I)V
+00019  05b0                     op_b0
+0001a  06b1                     op_b1
+0001b  3052 1b9b                iget  # FIELD Lc/b/a/a/b;->b:I
+0001d  3059 1b9c                iput  # FIELD Lc/b/a/a/b;->c:I
+0001f  1070 28ff 0003           invoke-direct  # CALL Lc/b/a/a/b;->c()V
+00022  3052 1b9b                iget  # FIELD Lc/b/a/a/b;->b:I
+00024  0636 000b                if-gt
+00026  3054 1b9a                iget-object  # FIELD Lc/b/a/a/b;->a:[B
+00028  0112                     const/4
+00029  5671 2d45 1054           invoke-static  # CALL Ljava/lang/System;->arraycopy(Ljava/lang/Object;,I,Ljava/lang/Object;,I,I)V
+0002c  3659 1b9c                iput  # FIELD Lc/b/a/a/b;->c:I
+0002e  0628                     goto
+0002f  3354 1b9d                iget-object  # FIELD Lc/b/a/a/b;->d:Ljava/io/OutputStream;
+00031  406e 2c40 6543           invoke-virtual  # CALL Ljava/io/OutputStream;->write([B,I,I)V
+00034  000e                     return-void
+
+### Lc/b/a/a/b;->b()I  [access=0x1, regs=2, ins=1, outs=2, code_off=0x107f08]
+00000  1054 1b9d                iget-object  # FIELD Lc/b/a/a/b;->d:Ljava/io/OutputStream;
+00002  0039 0008                if-nez
+00004  1052 1b9b                iget  # FIELD Lc/b/a/a/b;->b:I
+00006  1152 1b9c                iget  # FIELD Lc/b/a/a/b;->c:I
+00008  10b1                     op_b1
+00009  000f                     return
+0000a  0122 068c                new-instance  # TYPE Ljava/lang/UnsupportedOperationException;
+0000c  001a 26cc                const-string  # STR "spaceLeft() can only be called on CodedOutputStreams that are writing to a flat array."
+0000e  2070 2d66 0001           invoke-direct  # CALL Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+00011  0127                     throw
+
+### Lc/b/a/a/b;->b(I)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0x1080e4]
+00000  118d                     op_8d
+00001  206e 28e8 0010           invoke-virtual  # CALL Lc/b/a/a/b;->a(B)V
+00004  000e                     return-void
+
+### Lc/b/a/a/b;->b(I,I)V  [access=0x1, regs=3, ins=3, outs=2, code_off=0x108210]
+00000  2071 290c 0021           invoke-static  # CALL Lc/b/a/a/d;->a(I,I)I
+00003  010a                     move-result
+00004  206e 2900 0010           invoke-virtual  # CALL Lc/b/a/a/b;->c(I)V
+00007  000e                     return-void
+
+### Lc/b/a/a/b;->b(J)V  [access=0x1, regs=3, ins=3, outs=3, code_off=0x108250]
+00000  306e 28ee 0210           invoke-virtual  # CALL Lc/b/a/a/b;->a(J)V
+00003  000e                     return-void
+
+### Lc/b/a/a/b;->c(I)V  [access=0x1, regs=3, ins=2, outs=2, code_off=0x108198]
+00000  00dd 8002                op_dd
+00002  0039 0006                if-nez
+00004  206e 28fa 0021           invoke-virtual  # CALL Lc/b/a/a/b;->b(I)V
+00007  000e                     return-void
+00008  00dd 7f02                op_dd
+0000a  00d6 0080                op_d6
+0000c  206e 28fa 0001           invoke-virtual  # CALL Lc/b/a/a/b;->b(I)V
+0000f  02e2 0702                op_e2
+00011  ef28                     goto

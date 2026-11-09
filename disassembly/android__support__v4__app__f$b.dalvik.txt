@@ -1,0 +1,76 @@
+### Landroid/support/v4/app/f$b;-><init>(Landroid/support/v4/app/f;)V  [access=0x10001, regs=2, ins=2, outs=2, code_off=0xa592c]
+00000  015b 0cf1                iput-object  # FIELD Landroid/support/v4/app/f$b;->e:Landroid/support/v4/app/f;
+00002  2070 0f03 0010           invoke-direct  # CALL Landroid/support/v4/app/i;-><init>(Landroid/support/v4/app/f;)V
+00005  000e                     return-void
+
+### Landroid/support/v4/app/f$b;->a(I)Landroid/view/View;  [access=0x1, regs=2, ins=2, outs=2, code_off=0xa5858]
+00000  0054 0cf1                iget-object  # FIELD Landroid/support/v4/app/f$b;->e:Landroid/support/v4/app/f;
+00002  206e 06f6 0010           invoke-virtual  # CALL Landroid/app/Activity;->findViewById(I)Landroid/view/View;
+00005  000c                     move-result-object
+00006  0011                     return-object
+
+### Landroid/support/v4/app/f$b;->a(Landroid/support/v4/app/e;)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0xa5948]
+00000  0054 0cf1                iget-object  # FIELD Landroid/support/v4/app/f$b;->e:Landroid/support/v4/app/f;
+00002  206e 0ebc 0010           invoke-virtual  # CALL Landroid/support/v4/app/f;->a(Landroid/support/v4/app/e;)V
+00005  000e                     return-void
+
+### Landroid/support/v4/app/f$b;->a(Ljava/lang/String;,Ljava/io/FileDescriptor;,Ljava/io/PrintWriter;,[Ljava/lang/String;)V  [access=0x1, regs=5, ins=5, outs=5, code_off=0xa5964]
+00000  0054 0cf1                iget-object  # FIELD Landroid/support/v4/app/f$b;->e:Landroid/support/v4/app/f;
+00002  546e 0ec2 3210           invoke-virtual  # CALL Landroid/support/v4/app/f;->dump(Ljava/lang/String;,Ljava/io/FileDescriptor;,Ljava/io/PrintWriter;,[Ljava/lang/String;)V
+00005  000e                     return-void
+
+### Landroid/support/v4/app/f$b;->a()Z  [access=0x1, regs=1, ins=1, outs=1, code_off=0xa5878]
+00000  0054 0cf1                iget-object  # FIELD Landroid/support/v4/app/f$b;->e:Landroid/support/v4/app/f;
+00002  106e 0708 0000           invoke-virtual  # CALL Landroid/app/Activity;->getWindow()Landroid/view/Window;
+00005  000c                     move-result-object
+00006  0038 000a                if-eqz
+00008  106e 1e74 0000           invoke-virtual  # CALL Landroid/view/Window;->peekDecorView()Landroid/view/View;
+0000b  000c                     move-result-object
+0000c  0038 0004                if-eqz
+0000e  1012                     const/4
+0000f  0228                     goto
+00010  0012                     const/4
+00011  000f                     return
+
+### Landroid/support/v4/app/f$b;->b(Landroid/support/v4/app/e;)Z  [access=0x1, regs=2, ins=2, outs=1, code_off=0xa58d4]
+00000  0054 0cf1                iget-object  # FIELD Landroid/support/v4/app/f$b;->e:Landroid/support/v4/app/f;
+00002  106e 070b 0000           invoke-virtual  # CALL Landroid/app/Activity;->isFinishing()Z
+00005  000a                     move-result
+00006  00df 0100                op_df
+00008  000f                     return
+
+### Landroid/support/v4/app/f$b;->f()Landroid/view/LayoutInflater;  [access=0x1, regs=2, ins=1, outs=2, code_off=0xa582c]
+00000  1054 0cf1                iget-object  # FIELD Landroid/support/v4/app/f$b;->e:Landroid/support/v4/app/f;
+00002  106e 0700 0000           invoke-virtual  # CALL Landroid/app/Activity;->getLayoutInflater()Landroid/view/LayoutInflater;
+00005  000c                     move-result-object
+00006  1154 0cf1                iget-object  # FIELD Landroid/support/v4/app/f$b;->e:Landroid/support/v4/app/f;
+00008  206e 1cb7 0010           invoke-virtual  # CALL Landroid/view/LayoutInflater;->cloneInContext(Landroid/content/Context;)Landroid/view/LayoutInflater;
+0000b  010c                     move-result-object
+0000c  0111                     return-object
+
+### Landroid/support/v4/app/f$b;->g()I  [access=0x1, regs=1, ins=1, outs=1, code_off=0xa58f8]
+00000  0054 0cf1                iget-object  # FIELD Landroid/support/v4/app/f$b;->e:Landroid/support/v4/app/f;
+00002  106e 0708 0000           invoke-virtual  # CALL Landroid/app/Activity;->getWindow()Landroid/view/Window;
+00005  000c                     move-result-object
+00006  0039 0004                if-nez
+00008  0012                     const/4
+00009  0728                     goto
+0000a  106e 1e70 0000           invoke-virtual  # CALL Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
+0000d  000c                     move-result-object
+0000e  0052 1268                iget  # FIELD Landroid/view/WindowManager$LayoutParams;->windowAnimations:I
+00010  000f                     return
+
+### Landroid/support/v4/app/f$b;->h()Z  [access=0x1, regs=1, ins=1, outs=1, code_off=0xa58ac]
+00000  0054 0cf1                iget-object  # FIELD Landroid/support/v4/app/f$b;->e:Landroid/support/v4/app/f;
+00002  106e 0708 0000           invoke-virtual  # CALL Landroid/app/Activity;->getWindow()Landroid/view/Window;
+00005  000c                     move-result-object
+00006  0038 0004                if-eqz
+00008  1012                     const/4
+00009  0228                     goto
+0000a  0012                     const/4
+0000b  000f                     return
+
+### Landroid/support/v4/app/f$b;->i()V  [access=0x1, regs=1, ins=1, outs=1, code_off=0xa5980]
+00000  0054 0cf1                iget-object  # FIELD Landroid/support/v4/app/f$b;->e:Landroid/support/v4/app/f;
+00002  106e 0ec5 0000           invoke-virtual  # CALL Landroid/support/v4/app/f;->g()V
+00005  000e                     return-void

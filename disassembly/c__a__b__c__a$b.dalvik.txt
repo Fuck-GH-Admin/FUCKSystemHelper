@@ -1,0 +1,57 @@
+### Lc/a/b/c/a$b;-><init>(Lc/a/b/i/a$a;,Ljava/lang/String;)V  [access=0x10001, regs=4, ins=3, outs=2, code_off=0xf4668]
+00000  1070 2ce0 0001           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  1012                     const/4
+00004  105c 1ad2                iput-boolean  # FIELD Lc/a/b/c/a$b;->c:Z
+00006  125b 1ad0                iput-object  # FIELD Lc/a/b/c/a$b;->a:Lc/a/b/i/a$a;
+00008  0222 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0000a  1070 2d35 0002           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0000d  001a 276f                const-string  # STR "target-pkg-"
+0000f  206e 2d3f 0002           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00012  106e 2d07 0003           invoke-virtual  # CALL Ljava/lang/String;->getBytes()[B
+00015  030c                     move-result-object
+00016  3012                     const/4
+00017  2071 1c57 0003           invoke-static  # CALL Landroid/util/Base64;->encodeToString([B,I)Ljava/lang/String;
+0001a  030c                     move-result-object
+0001b  206e 2d3f 0032           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0001e  106e 2d44 0002           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00021  020c                     move-result-object
+00022  125b 1ad1                iput-object  # FIELD Lc/a/b/c/a$b;->b:Ljava/lang/String;
+00024  000e                     return-void
+
+### Lc/a/b/c/a$b;->a(Z)V  [access=0x1, regs=2, ins=2, outs=0, code_off=0xf46c4]
+00000  015c 1ad2                iput-boolean  # FIELD Lc/a/b/c/a$b;->c:Z
+00002  000e                     return-void
+
+### Lc/a/b/c/a$b;->a()Z  [access=0x1, regs=5, ins=1, outs=3, code_off=0xf45b0]
+00000  4054 1ad0                iget-object  # FIELD Lc/a/b/c/a$b;->a:Lc/a/b/i/a$a;
+00002  4154 1ad1                iget-object  # FIELD Lc/a/b/c/a$b;->b:Ljava/lang/String;
+00004  1212                     const/4
+00005  306e 282a 0210           invoke-virtual  # CALL Lc/a/b/i/a$a;->a(Ljava/lang/String;,Z)Ljava/lang/String;
+00008  000c                     move-result-object
+00009  1071 1c37 0000           invoke-static  # CALL Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+0000c  010a                     move-result
+0000d  0312                     const/4
+0000e  0139 000e                if-nez
+00010  0122 071a                new-instance  # TYPE Lorg/json/JSONObject;
+00012  2070 2f14 0001           invoke-direct  # CALL Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+00015  206e 274e 0014           invoke-virtual  # CALL Lc/a/b/c/a$b;->a(Lorg/json/JSONObject;)V
+00018  206e 274f 0034           invoke-virtual  # CALL Lc/a/b/c/a$b;->a(Z)V
+0001b  020f                     return
+0001c  030f                     return
+
+### Lc/a/b/c/a$b;->b()Z  [access=0x1, regs=6, ins=1, outs=4, code_off=0xf460c]
+00000  5055 1ad2                iget-boolean  # FIELD Lc/a/b/c/a$b;->c:Z
+00002  0112                     const/4
+00003  0038 001a                if-eqz
+00005  0022 071a                new-instance  # TYPE Lorg/json/JSONObject;
+00007  1070 2f13 0000           invoke-direct  # CALL Lorg/json/JSONObject;-><init>()V
+0000a  206e 2751 0005           invoke-virtual  # CALL Lc/a/b/c/a$b;->b(Lorg/json/JSONObject;)V
+0000d  5254 1ad0                iget-object  # FIELD Lc/a/b/c/a$b;->a:Lc/a/b/i/a$a;
+0000f  5354 1ad1                iget-object  # FIELD Lc/a/b/c/a$b;->b:Ljava/lang/String;
+00011  106e 2f2e 0000           invoke-virtual  # CALL Lorg/json/JSONObject;->toString()Ljava/lang/String;
+00014  000c                     move-result-object
+00015  1412                     const/4
+00016  406e 282c 4032           invoke-virtual  # CALL Lc/a/b/i/a$a;->a(Ljava/lang/String;,Ljava/lang/String;,Z)Z
+00019  206e 274f 0015           invoke-virtual  # CALL Lc/a/b/c/a$b;->a(Z)V
+0001c  040f                     return
+0001d  010f                     return

@@ -1,0 +1,92 @@
+### La/a/a/b/p;-><init>()V  [access=0x10001, regs=2, ins=1, outs=1, code_off=0x5275c]
+00000  1070 2ce0 0001           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  0022 06c8                new-instance  # TYPE Ljava/util/ArrayList;
+00005  1070 2de7 0000           invoke-direct  # CALL Ljava/util/ArrayList;-><init>()V
+00008  105b 0100                iput-object  # FIELD La/a/a/b/p;->a:Ljava/util/List;
+0000a  0012                     const/4
+0000b  105b 0101                iput-object  # FIELD La/a/a/b/p;->b:Landroid/location/LocationManager;
+0000d  105b 0102                iput-object  # FIELD La/a/a/b/p;->c:La/a/a/b/p$c;
+0000f  0012                     const/4
+00010  105c 0103                iput-boolean  # FIELD La/a/a/b/p;->d:Z
+00012  000e                     return-void
+
+### La/a/a/b/p;->c()La/a/a/b/p;  [access=0x9, regs=1, ins=0, outs=0, code_off=0x52740]
+00000  0071 0147 0000           invoke-static  # CALL La/a/a/b/p$b;->a()La/a/a/b/p;
+00003  000c                     move-result-object
+00004  0011                     return-object
+
+### La/a/a/b/p;->a()V  [access=0x1, regs=3, ins=1, outs=2, code_off=0x52794]
+00000  2054 0102                iget-object  # FIELD La/a/a/b/p;->c:La/a/a/b/p$c;
+00002  0038 000c                if-eqz
+00004  2154 0101                iget-object  # FIELD La/a/a/b/p;->b:Landroid/location/LocationManager;
+00006  0138 0008                if-eqz
+00008  206e 0a52 0001           invoke-virtual  # CALL Landroid/location/LocationManager;->removeUpdates(Landroid/location/LocationListener;)V
+0000b  0012                     const/4
+0000c  205b 0102                iput-object  # FIELD La/a/a/b/p;->c:La/a/a/b/p$c;
+0000e  000e                     return-void
+
+### La/a/a/b/p;->a(La/a/a/b/p$d;)V  [access=0x1, regs=3, ins=2, outs=2, code_off=0x527c4]
+00000  0239 0003                if-nez
+00002  000e                     return-void
+00003  1054 0100                iget-object  # FIELD La/a/a/b/p;->a:Ljava/util/List;
+00005  2072 2e55 0020           invoke-interface  # CALL Ljava/util/List;->contains(Ljava/lang/Object;)Z
+00008  000a                     move-result
+00009  0039 0007                if-nez
+0000b  1054 0100                iget-object  # FIELD La/a/a/b/p;->a:Ljava/util/List;
+0000d  2072 2e52 0020           invoke-interface  # CALL Ljava/util/List;->add(Ljava/lang/Object;)Z
+00010  1254 0100                iget-object  # FIELD La/a/a/b/p;->a:Ljava/util/List;
+00012  1072 2e5d 0002           invoke-interface  # CALL Ljava/util/List;->size()I
+00015  020a                     move-result
+00016  1012                     const/4
+00017  0233 000b                if-ne
+00019  1255 0103                iget-boolean  # FIELD La/a/a/b/p;->d:Z
+0001b  0239 0007                if-nez
+0001d  106e 0152 0001           invoke-virtual  # CALL La/a/a/b/p;->b()V
+00020  105c 0103                iput-boolean  # FIELD La/a/a/b/p;->d:Z
+00022  000e                     return-void
+
+### La/a/a/b/p;->b()V  [access=0x1, regs=8, ins=1, outs=6, code_off=0x5281c]
+00000  7054 0101                iget-object  # FIELD La/a/a/b/p;->b:Landroid/location/LocationManager;
+00002  0039 0010                if-nez
+00004  0071 2a5a 0000           invoke-static  # CALL Lcom/baidu/location/f;->c()Landroid/content/Context;
+00007  000c                     move-result-object
+00008  011a 20df                const-string  # STR "location"
+0000a  206e 084c 0010           invoke-virtual  # CALL Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+0000d  000c                     move-result-object
+0000e  001f 01de                check-cast  # TYPE Landroid/location/LocationManager;
+00010  705b 0101                iput-object  # FIELD La/a/a/b/p;->b:Landroid/location/LocationManager;
+00012  7054 0102                iget-object  # FIELD La/a/a/b/p;->c:La/a/a/b/p$c;
+00014  0039 000a                if-nez
+00016  0022 0037                new-instance  # TYPE La/a/a/b/p$c;
+00018  0112                     const/4
+00019  3070 0149 0170           invoke-direct  # CALL La/a/a/b/p$c;-><init>(La/a/a/b/p;,La/a/a/b/p$a;)V
+0001c  705b 0102                iput-object  # FIELD La/a/a/b/p;->c:La/a/a/b/p$c;
+0001e  7054 0101                iget-object  # FIELD La/a/a/b/p;->b:Landroid/location/LocationManager;
+00020  0038 0016                if-eqz
+00022  011a 21a4                const-string  # STR "network"
+00024  206e 0a4d 0010           invoke-virtual  # CALL Landroid/location/LocationManager;->isProviderEnabled(Ljava/lang/String;)Z
+00027  000a                     move-result
+00028  0038 000e                if-eqz
+0002a  7154 0101                iget-object  # FIELD La/a/a/b/p;->b:Landroid/location/LocationManager;
+0002c  021a 21a4                const-string  # STR "network"
+0002e  0316 03e8                const-wide/16
+00030  0512                     const/4
+00031  7654 0102                iget-object  # FIELD La/a/a/b/p;->c:La/a/a/b/p$c;
+00033  0674 0a53 0001           invoke-virtual/range  # CALL Landroid/location/LocationManager;->requestLocationUpdates(Ljava/lang/String;,J,F,Landroid/location/LocationListener;)V
+00036  000e                     return-void
+
+### La/a/a/b/p;->b(La/a/a/b/p$d;)V  [access=0x1, regs=3, ins=2, outs=2, code_off=0x528b4]
+00000  0239 0003                if-nez
+00002  000e                     return-void
+00003  1054 0100                iget-object  # FIELD La/a/a/b/p;->a:Ljava/util/List;
+00005  2072 2e5b 0020           invoke-interface  # CALL Ljava/util/List;->remove(Ljava/lang/Object;)Z
+00008  1254 0100                iget-object  # FIELD La/a/a/b/p;->a:Ljava/util/List;
+0000a  1072 2e5d 0002           invoke-interface  # CALL Ljava/util/List;->size()I
+0000d  020a                     move-result
+0000e  0239 000c                if-nez
+00010  1255 0103                iget-boolean  # FIELD La/a/a/b/p;->d:Z
+00012  0238 0008                if-eqz
+00014  106e 0150 0001           invoke-virtual  # CALL La/a/a/b/p;->a()V
+00017  0212                     const/4
+00018  125c 0103                iput-boolean  # FIELD La/a/a/b/p;->d:Z
+0001a  000e                     return-void

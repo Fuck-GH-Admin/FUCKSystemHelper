@@ -1,0 +1,178 @@
+### Landroid/support/v7/app/h;->a(Landroid/content/res/Resources;)V  [access=0x8, regs=3, ins=1, outs=1, code_off=0xc9e38]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0113 001c                const/16
+00004  1034 0003                if-lt
+00006  000e                     return-void
+00007  0113 0018                const/16
+00009  1034 0006                if-lt
+0000b  1071 130f 0002           invoke-static  # CALL Landroid/support/v7/app/h;->d(Landroid/content/res/Resources;)V
+0000e  1028                     goto
+0000f  0113 0017                const/16
+00011  1034 0006                if-lt
+00013  1071 130e 0002           invoke-static  # CALL Landroid/support/v7/app/h;->c(Landroid/content/res/Resources;)V
+00016  0828                     goto
+00017  0113 0015                const/16
+00019  1034 0005                if-lt
+0001b  1071 130d 0002           invoke-static  # CALL Landroid/support/v7/app/h;->b(Landroid/content/res/Resources;)V
+0001e  000e                     return-void
+
+### Landroid/support/v7/app/h;->a(Ljava/lang/Object;)V  [access=0xa, regs=5, ins=1, outs=3, code_off=0xca0c0]
+00000  0063 0ee7                sget-boolean  # FIELD Landroid/support/v7/app/h;->d:Z
+00002  1112                     const/4
+00003  021a 1399                const-string  # STR "ResourcesFlusher"
+00005  0039 0013                if-nez
+00007  001a 1907                const-string  # STR "android.content.res.ThemedResourceCache"
+00009  1071 2c72 0000           invoke-static  # CALL Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+0000c  000c                     move-result-object
+0000d  0069 0ee6                sput-object  # FIELD Landroid/support/v7/app/h;->c:Ljava/lang/Class;
+0000f  0728                     goto
+00010  000d                     op_0d
+00011  031a 06b3                const-string  # STR "Could not find ThemedResourceCache class"
+00013  3071 1c5c 0032           invoke-static  # CALL Landroid/util/Log;->e(Ljava/lang/String;,Ljava/lang/String;,Ljava/lang/Throwable;)I
+00016  016a 0ee7                sput-boolean  # FIELD Landroid/support/v7/app/h;->d:Z
+00018  0062 0ee6                sget-object  # FIELD Landroid/support/v7/app/h;->c:Ljava/lang/Class;
+0001a  0039 0003                if-nez
+0001c  000e                     return-void
+0001d  0363 0ee9                sget-boolean  # FIELD Landroid/support/v7/app/h;->f:Z
+0001f  0339 0016                if-nez
+00021  031a 211c                const-string  # STR "mUnthemedEntries"
+00023  206e 2c79 0030           invoke-virtual  # CALL Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+00026  000c                     move-result-object
+00027  0069 0ee8                sput-object  # FIELD Landroid/support/v7/app/h;->e:Ljava/lang/reflect/Field;
+00029  206e 2d73 0010           invoke-virtual  # CALL Ljava/lang/reflect/Field;->setAccessible(Z)V
+0002c  0728                     goto
+0002d  000d                     op_0d
+0002e  031a 06c8                const-string  # STR "Could not retrieve ThemedResourceCache#mUnthemedEntries field"
+00030  3071 1c5c 0032           invoke-static  # CALL Landroid/util/Log;->e(Ljava/lang/String;,Ljava/lang/String;,Ljava/lang/Throwable;)I
+00033  016a 0ee9                sput-boolean  # FIELD Landroid/support/v7/app/h;->f:Z
+00035  0062 0ee8                sget-object  # FIELD Landroid/support/v7/app/h;->e:Ljava/lang/reflect/Field;
+00037  0039 0003                if-nez
+00039  000e                     return-void
+0003a  0112                     const/4
+0003b  206e 2d6f 0040           invoke-virtual  # CALL Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+0003e  040c                     move-result-object
+0003f  041f 0419                check-cast  # TYPE Landroid/util/LongSparseArray;
+00041  4107                     op_07
+00042  0728                     goto
+00043  040d                     op_0d
+00044  001a 06cc                const-string  # STR "Could not retrieve value from ThemedResourceCache#mUnthemedEntries"
+00046  3071 1c5c 0402           invoke-static  # CALL Landroid/util/Log;->e(Ljava/lang/String;,Ljava/lang/String;,Ljava/lang/Throwable;)I
+00049  0138 0005                if-eqz
+0004b  106e 1c63 0001           invoke-virtual  # CALL Landroid/util/LongSparseArray;->clear()V
+0004e  000e                     return-void
+
+### Landroid/support/v7/app/h;->b(Landroid/content/res/Resources;)V  [access=0xa, regs=5, ins=1, outs=3, code_off=0xc9e88]
+00000  0063 0ee5                sget-boolean  # FIELD Landroid/support/v7/app/h;->b:Z
+00002  011a 1399                const-string  # STR "ResourcesFlusher"
+00004  0039 0019                if-nez
+00006  1012                     const/4
+00007  021c 018b                const-class  # TYPE Landroid/content/res/Resources;
+00009  031a 20fb                const-string  # STR "mDrawableCache"
+0000b  206e 2c79 0032           invoke-virtual  # CALL Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+0000e  020c                     move-result-object
+0000f  0269 0ee4                sput-object  # FIELD Landroid/support/v7/app/h;->a:Ljava/lang/reflect/Field;
+00011  206e 2d73 0002           invoke-virtual  # CALL Ljava/lang/reflect/Field;->setAccessible(Z)V
+00014  0728                     goto
+00015  020d                     op_0d
+00016  031a 06c5                const-string  # STR "Could not retrieve Resources#mDrawableCache field"
+00018  3071 1c5c 0231           invoke-static  # CALL Landroid/util/Log;->e(Ljava/lang/String;,Ljava/lang/String;,Ljava/lang/Throwable;)I
+0001b  006a 0ee5                sput-boolean  # FIELD Landroid/support/v7/app/h;->b:Z
+0001d  0062 0ee4                sget-object  # FIELD Landroid/support/v7/app/h;->a:Ljava/lang/reflect/Field;
+0001f  0038 0016                if-eqz
+00021  0212                     const/4
+00022  206e 2d6f 0040           invoke-virtual  # CALL Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+00025  040c                     move-result-object
+00026  041f 06dd                check-cast  # TYPE Ljava/util/Map;
+00028  4207                     op_07
+00029  0728                     goto
+0002a  040d                     op_0d
+0002b  001a 06c9                const-string  # STR "Could not retrieve value from Resources#mDrawableCache"
+0002d  3071 1c5c 0401           invoke-static  # CALL Landroid/util/Log;->e(Ljava/lang/String;,Ljava/lang/String;,Ljava/lang/Throwable;)I
+00030  0238 0005                if-eqz
+00032  1072 2e66 0002           invoke-interface  # CALL Ljava/util/Map;->clear()V
+00035  000e                     return-void
+
+### Landroid/support/v7/app/h;->c(Landroid/content/res/Resources;)V  [access=0xa, regs=5, ins=1, outs=3, code_off=0xc9f20]
+00000  0063 0ee5                sget-boolean  # FIELD Landroid/support/v7/app/h;->b:Z
+00002  011a 1399                const-string  # STR "ResourcesFlusher"
+00004  0039 0019                if-nez
+00006  1012                     const/4
+00007  021c 018b                const-class  # TYPE Landroid/content/res/Resources;
+00009  031a 20fb                const-string  # STR "mDrawableCache"
+0000b  206e 2c79 0032           invoke-virtual  # CALL Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+0000e  020c                     move-result-object
+0000f  0269 0ee4                sput-object  # FIELD Landroid/support/v7/app/h;->a:Ljava/lang/reflect/Field;
+00011  206e 2d73 0002           invoke-virtual  # CALL Ljava/lang/reflect/Field;->setAccessible(Z)V
+00014  0728                     goto
+00015  020d                     op_0d
+00016  031a 06c5                const-string  # STR "Could not retrieve Resources#mDrawableCache field"
+00018  3071 1c5c 0231           invoke-static  # CALL Landroid/util/Log;->e(Ljava/lang/String;,Ljava/lang/String;,Ljava/lang/Throwable;)I
+0001b  006a 0ee5                sput-boolean  # FIELD Landroid/support/v7/app/h;->b:Z
+0001d  0012                     const/4
+0001e  0262 0ee4                sget-object  # FIELD Landroid/support/v7/app/h;->a:Ljava/lang/reflect/Field;
+00020  0238 000d                if-eqz
+00022  206e 2d6f 0042           invoke-virtual  # CALL Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+00025  000c                     move-result-object
+00026  0728                     goto
+00027  040d                     op_0d
+00028  021a 06c9                const-string  # STR "Could not retrieve value from Resources#mDrawableCache"
+0002a  3071 1c5c 0421           invoke-static  # CALL Landroid/util/Log;->e(Ljava/lang/String;,Ljava/lang/String;,Ljava/lang/Throwable;)I
+0002d  0039 0003                if-nez
+0002f  000e                     return-void
+00030  1071 130c 0000           invoke-static  # CALL Landroid/support/v7/app/h;->a(Ljava/lang/Object;)V
+00033  000e                     return-void
+
+### Landroid/support/v7/app/h;->d(Landroid/content/res/Resources;)V  [access=0xa, regs=6, ins=1, outs=3, code_off=0xc9fb4]
+00000  0063 0eeb                sget-boolean  # FIELD Landroid/support/v7/app/h;->h:Z
+00002  1112                     const/4
+00003  021a 1399                const-string  # STR "ResourcesFlusher"
+00005  0039 0018                if-nez
+00007  001c 018b                const-class  # TYPE Landroid/content/res/Resources;
+00009  031a 2113                const-string  # STR "mResourcesImpl"
+0000b  206e 2c79 0030           invoke-virtual  # CALL Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+0000e  000c                     move-result-object
+0000f  0069 0eea                sput-object  # FIELD Landroid/support/v7/app/h;->g:Ljava/lang/reflect/Field;
+00011  206e 2d73 0010           invoke-virtual  # CALL Ljava/lang/reflect/Field;->setAccessible(Z)V
+00014  0728                     goto
+00015  000d                     op_0d
+00016  031a 06c6                const-string  # STR "Could not retrieve Resources#mResourcesImpl field"
+00018  3071 1c5c 0032           invoke-static  # CALL Landroid/util/Log;->e(Ljava/lang/String;,Ljava/lang/String;,Ljava/lang/Throwable;)I
+0001b  016a 0eeb                sput-boolean  # FIELD Landroid/support/v7/app/h;->h:Z
+0001d  0062 0eea                sget-object  # FIELD Landroid/support/v7/app/h;->g:Ljava/lang/reflect/Field;
+0001f  0039 0003                if-nez
+00021  000e                     return-void
+00022  0312                     const/4
+00023  206e 2d6f 0050           invoke-virtual  # CALL Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+00026  050c                     move-result-object
+00027  0828                     goto
+00028  050d                     op_0d
+00029  001a 06ca                const-string  # STR "Could not retrieve value from Resources#mResourcesImpl"
+0002b  3071 1c5c 0502           invoke-static  # CALL Landroid/util/Log;->e(Ljava/lang/String;,Ljava/lang/String;,Ljava/lang/Throwable;)I
+0002e  3507                     op_07
+0002f  0539 0003                if-nez
+00031  000e                     return-void
+00032  0063 0ee5                sget-boolean  # FIELD Landroid/support/v7/app/h;->b:Z
+00034  0039 001a                if-nez
+00036  106e 2ce3 0005           invoke-virtual  # CALL Ljava/lang/Object;->getClass()Ljava/lang/Class;
+00039  000c                     move-result-object
+0003a  041a 20fb                const-string  # STR "mDrawableCache"
+0003c  206e 2c79 0040           invoke-virtual  # CALL Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+0003f  000c                     move-result-object
+00040  0069 0ee4                sput-object  # FIELD Landroid/support/v7/app/h;->a:Ljava/lang/reflect/Field;
+00042  206e 2d73 0010           invoke-virtual  # CALL Ljava/lang/reflect/Field;->setAccessible(Z)V
+00045  0728                     goto
+00046  000d                     op_0d
+00047  041a 06c7                const-string  # STR "Could not retrieve ResourcesImpl#mDrawableCache field"
+00049  3071 1c5c 0042           invoke-static  # CALL Landroid/util/Log;->e(Ljava/lang/String;,Ljava/lang/String;,Ljava/lang/Throwable;)I
+0004c  016a 0ee5                sput-boolean  # FIELD Landroid/support/v7/app/h;->b:Z
+0004e  0062 0ee4                sget-object  # FIELD Landroid/support/v7/app/h;->a:Ljava/lang/reflect/Field;
+00050  0038 000d                if-eqz
+00052  206e 2d6f 0050           invoke-virtual  # CALL Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+00055  030c                     move-result-object
+00056  0728                     goto
+00057  050d                     op_0d
+00058  001a 06cb                const-string  # STR "Could not retrieve value from ResourcesImpl#mDrawableCache"
+0005a  3071 1c5c 0502           invoke-static  # CALL Landroid/util/Log;->e(Ljava/lang/String;,Ljava/lang/String;,Ljava/lang/Throwable;)I
+0005d  0338 0005                if-eqz
+0005f  1071 130c 0003           invoke-static  # CALL Landroid/support/v7/app/h;->a(Ljava/lang/Object;)V
+00062  000e                     return-void

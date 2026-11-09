@@ -1,0 +1,113 @@
+### Lc/a/b/i/a$a;-><init>(Lc/a/b/i/a;,Ljava/io/File;)V  [access=0x10000, regs=3, ins=3, outs=1, code_off=0xfab6c]
+00000  015b 1b45                iput-object  # FIELD Lc/a/b/i/a$a;->e:Lc/a/b/i/a;
+00002  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00005  0112                     const/4
+00006  015c 1b44                iput-boolean  # FIELD Lc/a/b/i/a$a;->d:Z
+00008  1112                     const/4
+00009  015c 1b44                iput-boolean  # FIELD Lc/a/b/i/a$a;->d:Z
+0000b  025b 1b41                iput-object  # FIELD Lc/a/b/i/a$a;->a:Ljava/io/File;
+0000d  106e 2c13 0002           invoke-virtual  # CALL Ljava/io/File;->getName()Ljava/lang/String;
+00010  010c                     move-result-object
+00011  015b 1b42                iput-object  # FIELD Lc/a/b/i/a$a;->b:Ljava/lang/String;
+00013  000e                     return-void
+
+### Lc/a/b/i/a$a;-><init>(Lc/a/b/i/a;,Ljava/lang/String;,Lc/a/b/i/a$a;)V  [access=0x10000, regs=4, ins=4, outs=1, code_off=0xfaba4]
+00000  015b 1b45                iput-object  # FIELD Lc/a/b/i/a$a;->e:Lc/a/b/i/a;
+00002  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00005  0112                     const/4
+00006  015c 1b44                iput-boolean  # FIELD Lc/a/b/i/a$a;->d:Z
+00008  025b 1b42                iput-object  # FIELD Lc/a/b/i/a$a;->b:Ljava/lang/String;
+0000a  035b 1b43                iput-object  # FIELD Lc/a/b/i/a$a;->c:Lc/a/b/i/a$a;
+0000c  015c 1b44                iput-boolean  # FIELD Lc/a/b/i/a$a;->d:Z
+0000e  000e                     return-void
+
+### Lc/a/b/i/a$a;->a(Ljava/io/File;)Lc/a/b/i/a$a;  [access=0x1, regs=6, ins=2, outs=3, code_off=0xfaa08]
+00000  4055 1b44                iget-boolean  # FIELD Lc/a/b/i/a$a;->d:Z
+00002  0039 0034                if-nez
+00004  0022 06c8                new-instance  # TYPE Ljava/util/ArrayList;
+00006  1070 2de7 0000           invoke-direct  # CALL Ljava/util/ArrayList;-><init>()V
+00009  4107                     op_07
+0000a  106e 282e 0001           invoke-virtual  # CALL Lc/a/b/i/a$a;->c()Ljava/lang/String;
+0000d  020c                     move-result-object
+0000e  2072 2e52 0020           invoke-interface  # CALL Ljava/util/List;->add(Ljava/lang/Object;)Z
+00011  106e 282f 0001           invoke-virtual  # CALL Lc/a/b/i/a$a;->d()Lc/a/b/i/a$a;
+00014  010c                     move-result-object
+00015  0139 fff5                if-nez
+00017  1072 2e5d 0000           invoke-interface  # CALL Ljava/util/List;->size()I
+0001a  010a                     move-result
+0001b  01d8 ff01                op_d8
+0001d  013a 0011                if-ltz
+0001f  0222 063e                new-instance  # TYPE Ljava/io/File;
+00021  2072 2e57 0010           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+00024  030c                     move-result-object
+00025  031f 0683                check-cast  # TYPE Ljava/lang/String;
+00027  3070 2c0b 0352           invoke-direct  # CALL Ljava/io/File;-><init>(Ljava/io/File;,Ljava/lang/String;)V
+0002a  01d8 ff01                op_d8
+0002c  2507                     op_07
+0002d  f028                     goto
+0002e  0022 05ae                new-instance  # TYPE Lc/a/b/i/a$a;
+00030  4454 1b45                iget-object  # FIELD Lc/a/b/i/a$a;->e:Lc/a/b/i/a;
+00032  3070 2826 0540           invoke-direct  # CALL Lc/a/b/i/a$a;-><init>(Lc/a/b/i/a;,Ljava/io/File;)V
+00035  0011                     return-object
+00036  0422 066a                new-instance  # TYPE Ljava/lang/IllegalStateException;
+00038  051a 2066                const-string  # STR "isolate session is not support"
+0003a  2070 2ca3 0054           invoke-direct  # CALL Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+0003d  0427                     throw
+
+### Lc/a/b/i/a$a;->a(Ljava/lang/String;)Lc/a/b/i/a$a;  [access=0x1, regs=4, ins=2, outs=4, code_off=0xfaa94]
+00000  0022 05ae                new-instance  # TYPE Lc/a/b/i/a$a;
+00002  2154 1b45                iget-object  # FIELD Lc/a/b/i/a$a;->e:Lc/a/b/i/a;
+00004  4070 2827 2310           invoke-direct  # CALL Lc/a/b/i/a$a;-><init>(Lc/a/b/i/a;,Ljava/lang/String;,Lc/a/b/i/a$a;)V
+00007  0011                     return-object
+
+### Lc/a/b/i/a$a;->a(Ljava/lang/String;,Z)Ljava/lang/String;  [access=0x1, regs=4, ins=3, outs=4, code_off=0xfab2c]
+00000  106e 282d 0001           invoke-virtual  # CALL Lc/a/b/i/a$a;->b()Ljava/io/File;
+00003  010c                     move-result-object
+00004  001a 154c                const-string  # STR "UTF-8"
+00006  4071 2832 3021           invoke-static  # CALL Lc/a/b/i/a;->a(Ljava/io/File;,Ljava/lang/String;,Ljava/lang/String;,Z)Ljava/lang/String;
+00009  010c                     move-result-object
+0000a  0111                     return-object
+
+### Lc/a/b/i/a$a;->a()V  [access=0x1, regs=1, ins=1, outs=1, code_off=0xfabd4]
+00000  106e 282d 0000           invoke-virtual  # CALL Lc/a/b/i/a$a;->b()Ljava/io/File;
+00003  000c                     move-result-object
+00004  106e 2c1c 0000           invoke-virtual  # CALL Ljava/io/File;->mkdirs()Z
+00007  000e                     return-void
+
+### Lc/a/b/i/a$a;->a(Ljava/lang/String;,Ljava/lang/String;,Z)Z  [access=0x1, regs=5, ins=4, outs=5, code_off=0xfa9e0]
+00000  106e 282d 0001           invoke-virtual  # CALL Lc/a/b/i/a$a;->b()Ljava/io/File;
+00003  010c                     move-result-object
+00004  001a 154c                const-string  # STR "UTF-8"
+00006  5471 2834 0321           invoke-static  # CALL Lc/a/b/i/a;->a(Ljava/io/File;,Ljava/lang/String;,Ljava/lang/String;,Ljava/lang/String;,Z)Z
+00009  010a                     move-result
+0000a  010f                     return
+
+### Lc/a/b/i/a$a;->b()Ljava/io/File;  [access=0x1, regs=4, ins=1, outs=3, code_off=0xfaacc]
+00000  3054 1b41                iget-object  # FIELD Lc/a/b/i/a$a;->a:Ljava/io/File;
+00002  0038 0003                if-eqz
+00004  0011                     return-object
+00005  3054 1b43                iget-object  # FIELD Lc/a/b/i/a$a;->c:Lc/a/b/i/a$a;
+00007  0039 0010                if-nez
+00009  0022 063e                new-instance  # TYPE Ljava/io/File;
+0000b  3154 1b45                iget-object  # FIELD Lc/a/b/i/a$a;->e:Lc/a/b/i/a;
+0000d  106e 2831 0001           invoke-virtual  # CALL Lc/a/b/i/a;->a()Ljava/io/File;
+00010  010c                     move-result-object
+00011  3254 1b42                iget-object  # FIELD Lc/a/b/i/a$a;->b:Ljava/lang/String;
+00013  3070 2c0b 0210           invoke-direct  # CALL Ljava/io/File;-><init>(Ljava/io/File;,Ljava/lang/String;)V
+00016  0e28                     goto
+00017  0022 063e                new-instance  # TYPE Ljava/io/File;
+00019  3154 1b43                iget-object  # FIELD Lc/a/b/i/a$a;->c:Lc/a/b/i/a$a;
+0001b  106e 282d 0001           invoke-virtual  # CALL Lc/a/b/i/a$a;->b()Ljava/io/File;
+0001e  010c                     move-result-object
+0001f  3254 1b42                iget-object  # FIELD Lc/a/b/i/a$a;->b:Ljava/lang/String;
+00021  3070 2c0b 0210           invoke-direct  # CALL Ljava/io/File;-><init>(Ljava/io/File;,Ljava/lang/String;)V
+00024  305b 1b41                iput-object  # FIELD Lc/a/b/i/a$a;->a:Ljava/io/File;
+00026  0011                     return-object
+
+### Lc/a/b/i/a$a;->c()Ljava/lang/String;  [access=0x1, regs=1, ins=1, outs=0, code_off=0xfab54]
+00000  0054 1b42                iget-object  # FIELD Lc/a/b/i/a$a;->b:Ljava/lang/String;
+00002  0011                     return-object
+
+### Lc/a/b/i/a$a;->d()Lc/a/b/i/a$a;  [access=0x1, regs=1, ins=1, outs=0, code_off=0xfaab4]
+00000  0054 1b43                iget-object  # FIELD Lc/a/b/i/a$a;->c:Lc/a/b/i/a$a;
+00002  0011                     return-object

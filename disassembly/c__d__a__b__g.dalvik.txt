@@ -1,0 +1,299 @@
+### Lc/d/a/b/g;->a(Landroid/content/Context;)J  [access=0x9, regs=5, ins=1, outs=1, code_off=0x112f3c]
+00000  0071 2983 0000           invoke-static  # CALL Lc/d/a/b/g;->c()J
+00003  000b                     move-result-wide
+00004  0216 0000                const-wide/16
+00006  0231 0200                op_31
+00008  023b 0006                if-gez
+0000a  1071 2984 0004           invoke-static  # CALL Lc/d/a/b/g;->c(Landroid/content/Context;)J
+0000d  000b                     move-result-wide
+0000e  0010                     return-wide
+
+### Lc/d/a/b/g;->a()Ljava/lang/String;  [access=0x9, regs=6, ins=0, outs=4, code_off=0x112dc8]
+00000  0022 0205                new-instance  # TYPE Landroid/os/StatFs;
+00002  0071 0aa8 0000           invoke-static  # CALL Landroid/os/Environment;->getDataDirectory()Ljava/io/File;
+00005  010c                     move-result-object
+00006  106e 2c15 0001           invoke-virtual  # CALL Ljava/io/File;->getPath()Ljava/lang/String;
+00009  010c                     move-result-object
+0000a  2070 0b03 0010           invoke-direct  # CALL Landroid/os/StatFs;-><init>(Ljava/lang/String;)V
+0000d  106e 0b05 0000           invoke-virtual  # CALL Landroid/os/StatFs;->getBlockSizeLong()J
+00010  010b                     move-result-wide
+00011  106e 0b06 0000           invoke-virtual  # CALL Landroid/os/StatFs;->getFreeBlocksLong()J
+00014  030b                     move-result-wide
+00015  13bd                     op_bd
+00016  3086                     op_86
+00017  0219 4090                const-wide/high16
+00019  0419 4008                const-wide/high16
+0001b  4071 2cd1 5432           invoke-static  # CALL Ljava/lang/Math;->pow(D,D)D
+0001e  020b                     move-result-wide
+0001f  20ce                     op_ce
+00020  2071 2c8a 0010           invoke-static  # CALL Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+00023  000c                     move-result-object
+00024  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00026  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00029  106e 2c87 0000           invoke-virtual  # CALL Ljava/lang/Double;->doubleValue()D
+0002c  020b                     move-result-wide
+0002d  2071 2cd4 0032           invoke-static  # CALL Ljava/lang/Math;->round(D)J
+00030  020b                     move-result-wide
+00031  2084                     op_84
+00032  206e 2d3b 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+00035  001a 07e9                const-string  # STR "G"
+00037  206e 2d3f 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0003a  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0003d  000c                     move-result-object
+0003e  0011                     return-object
+
+### Lc/d/a/b/g;->b()Ljava/lang/String;  [access=0x9, regs=9, ins=0, outs=4, code_off=0x112e58]
+00000  0022 0205                new-instance  # TYPE Landroid/os/StatFs;
+00002  0071 0aa8 0000           invoke-static  # CALL Landroid/os/Environment;->getDataDirectory()Ljava/io/File;
+00005  010c                     move-result-object
+00006  106e 2c15 0001           invoke-virtual  # CALL Ljava/io/File;->getPath()Ljava/lang/String;
+00009  010c                     move-result-object
+0000a  2070 0b03 0010           invoke-direct  # CALL Landroid/os/StatFs;-><init>(Ljava/lang/String;)V
+0000d  106e 0b05 0000           invoke-virtual  # CALL Landroid/os/StatFs;->getBlockSizeLong()J
+00010  010b                     move-result-wide
+00011  106e 0b04 0000           invoke-virtual  # CALL Landroid/os/StatFs;->getBlockCountLong()J
+00014  030b                     move-result-wide
+00015  13bd                     op_bd
+00016  3086                     op_86
+00017  0219 4090                const-wide/high16
+00019  0419 4008                const-wide/high16
+0001b  4071 2cd1 5432           invoke-static  # CALL Ljava/lang/Math;->pow(D,D)D
+0001e  020b                     move-result-wide
+0001f  20ce                     op_ce
+00020  2071 2c8a 0010           invoke-static  # CALL Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+00023  000c                     move-result-object
+00024  0112                     const/4
+00025  106e 2c87 0000           invoke-virtual  # CALL Ljava/lang/Double;->doubleValue()D
+00028  020b                     move-result-wide
+00029  0416 0000                const-wide/16
+0002b  022f 0402                op_2f
+0002d  0319 4000                const-wide/high16
+0002f  023d 0020                if-lez
+00031  106e 2c87 0000           invoke-virtual  # CALL Ljava/lang/Double;->doubleValue()D
+00034  050b                     move-result-wide
+00035  02d8 0101                op_d8
+00037  2783                     op_83
+00038  4071 2cd1 8743           invoke-static  # CALL Ljava/lang/Math;->pow(D,D)D
+0003b  070b                     move-result-wide
+0003c  052f 0705                op_2f
+0003e  053b 000f                if-gez
+00040  106e 2c87 0000           invoke-virtual  # CALL Ljava/lang/Double;->doubleValue()D
+00043  050b                     move-result-wide
+00044  1783                     op_83
+00045  4071 2cd1 8743           invoke-static  # CALL Ljava/lang/Math;->pow(D,D)D
+00048  070b                     move-result-wide
+00049  0530 0705                op_30
+0004b  053b 0004                if-gez
+0004d  2101                     op_01
+0004e  d728                     goto
+0004f  0022 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00051  1070 2d35 0000           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00054  01d8 0101                op_d8
+00056  1183                     op_83
+00057  4071 2cd1 2143           invoke-static  # CALL Ljava/lang/Math;->pow(D,D)D
+0005a  010b                     move-result-wide
+0005b  118a                     op_8a
+0005c  206e 2d3b 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+0005f  011a 07e9                const-string  # STR "G"
+00061  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00064  106e 2d44 0000           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00067  000c                     move-result-object
+00068  0011                     return-object
+
+### Lc/d/a/b/g;->b(Landroid/content/Context;)Lorg/json/JSONObject;  [access=0x9, regs=5, ins=1, outs=3, code_off=0x1131ec]
+00000  0022 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00002  1070 2d35 0000           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00005  1071 297f 0004           invoke-static  # CALL Lc/d/a/b/g;->a(Landroid/content/Context;)J
+00008  010b                     move-result-wide
+00009  306e 2d3c 0210           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+0000c  041a 07e9                const-string  # STR "G"
+0000e  206e 2d3f 0040           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00011  106e 2d44 0000           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00014  040c                     move-result-object
+00015  0071 2981 0000           invoke-static  # CALL Lc/d/a/b/g;->b()Ljava/lang/String;
+00018  000c                     move-result-object
+00019  0071 2980 0000           invoke-static  # CALL Lc/d/a/b/g;->a()Ljava/lang/String;
+0001c  010c                     move-result-object
+0001d  021a 155a                const-string  # STR "Unknown"
+0001f  0439 0003                if-nez
+00021  2407                     op_07
+00022  0039 0003                if-nez
+00024  2007                     op_07
+00025  0139 0003                if-nez
+00027  2107                     op_07
+00028  0222 071a                new-instance  # TYPE Lorg/json/JSONObject;
+0002a  1070 2f13 0002           invoke-direct  # CALL Lorg/json/JSONObject;-><init>()V
+0002d  031a 1348                const-string  # STR "RAM"
+0002f  306e 2f2b 0432           invoke-virtual  # CALL Lorg/json/JSONObject;->put(Ljava/lang/String;,Ljava/lang/Object;)Lorg/json/JSONObject;
+00032  041a 135e                const-string  # STR "ROM"
+00034  306e 2f2b 0042           invoke-virtual  # CALL Lorg/json/JSONObject;->put(Ljava/lang/String;,Ljava/lang/Object;)Lorg/json/JSONObject;
+00037  041a 07aa                const-string  # STR "FREE"
+00039  306e 2f2b 0142           invoke-virtual  # CALL Lorg/json/JSONObject;->put(Ljava/lang/String;,Ljava/lang/Object;)Lorg/json/JSONObject;
+0003c  0211                     return-object
+0003d  040d                     op_0d
+0003e  106e 2f11 0004           invoke-virtual  # CALL Lorg/json/JSONException;->getMessage()Ljava/lang/String;
+00041  040c                     move-result-object
+00042  001a 11f5                const-string  # STR "MemoryUtils"
+00044  2071 2988 0040           invoke-static  # CALL Lc/d/a/b/h;->b(Ljava/lang/String;,Ljava/lang/String;)V
+00047  0412                     const/4
+00048  0411                     return-object
+
+### Lc/d/a/b/g;->c()J  [access=0xa, regs=7, ins=0, outs=3, code_off=0x113108]
+00000  001a 0000                const-string  # STR ""
+00002  011a 247b                const-string  # STR "ro.boot.dram_info"
+00004  2071 299e 0001           invoke-static  # CALL Lc/d/a/b/l;->b(Ljava/lang/String;,Ljava/lang/String;)Ljava/lang/String;
+00007  010c                     move-result-object
+00008  0216 ffff                const-wide/16
+0000a  041a 11f5                const-string  # STR "MemoryUtils"
+0000c  0138 0058                if-eqz
+0000e  106e 2d0f 0001           invoke-virtual  # CALL Ljava/lang/String;->isEmpty()Z
+00011  050a                     move-result
+00012  0538 0003                if-eqz
+00014  5028                     goto
+00015  0522 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00017  1070 2d35 0005           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0001a  061a 1b73                const-string  # STR "dramInfo:"
+0001c  206e 2d3f 0065           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0001f  206e 2d3f 0015           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00022  106e 2d44 0005           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00025  050c                     move-result-object
+00026  2071 2987 0054           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+00029  051a 01c9                const-string  # STR ","
+0002b  206e 2d16 0051           invoke-virtual  # CALL Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+0002e  010c                     move-result-object
+0002f  1521                     array-length
+00030  05d8 ff05                op_d8
+00032  0146 0501                aget-object
+00034  051a 1767                const-string  # STR "\\D+"
+00036  306e 2d15 0051           invoke-virtual  # CALL Ljava/lang/String;->replaceAll(Ljava/lang/String;,Ljava/lang/String;)Ljava/lang/String;
+00039  000c                     move-result-object
+0003a  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0003c  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0003f  051a 232c                const-string  # STR "parsed value : "
+00041  206e 2d3f 0051           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00044  206e 2d3f 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00047  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0004a  010c                     move-result-object
+0004b  2071 2987 0014           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+0004e  0038 0015                if-eqz
+00050  106e 2d0f 0000           invoke-virtual  # CALL Ljava/lang/String;->isEmpty()Z
+00053  010a                     move-result
+00054  0138 0003                if-eqz
+00056  0d28                     goto
+00057  1071 2cbc 0000           invoke-static  # CALL Ljava/lang/Long;->valueOf(Ljava/lang/String;)Ljava/lang/Long;
+0005a  000c                     move-result-object
+0005b  106e 2cb6 0000           invoke-virtual  # CALL Ljava/lang/Long;->longValue()J
+0005e  000b                     move-result-wide
+0005f  0216 0001                const-wide/16
+00061  20bd                     op_bd
+00062  0010                     return-wide
+00063  0210                     return-wide
+00064  001a 1293                const-string  # STR "No dram_info property"
+00066  2071 2988 0004           invoke-static  # CALL Lc/d/a/b/h;->b(Ljava/lang/String;,Ljava/lang/String;)V
+00069  0210                     return-wide
+
+### Lc/d/a/b/g;->c(Landroid/content/Context;)J  [access=0xa, regs=9, ins=1, outs=2, code_off=0x112f6c]
+00000  001a 18c0                const-string  # STR "activity"
+00002  206e 084c 0008           invoke-virtual  # CALL Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+00005  080c                     move-result-object
+00006  081f 0121                check-cast  # TYPE Landroid/app/ActivityManager;
+00008  0022 0120                new-instance  # TYPE Landroid/app/ActivityManager$MemoryInfo;
+0000a  1070 0731 0000           invoke-direct  # CALL Landroid/app/ActivityManager$MemoryInfo;-><init>()V
+0000d  206e 0732 0008           invoke-virtual  # CALL Landroid/app/ActivityManager;->getMemoryInfo(Landroid/app/ActivityManager$MemoryInfo;)V
+00010  0053 04c2                iget-wide  # FIELD Landroid/app/ActivityManager$MemoryInfo;->totalMem:J
+00012  0217 0000 0010           const-wide/32
+00015  20be                     op_be
+00016  0216 7800                const-wide/16
+00018  0831 0200                op_31
+0001a  0216 0000                const-wide/16
+0001c  0416 0001                const-wide/16
+0001e  083d 0006                if-lez
+00020  0216 0020                const-wide/16
+00022  0029 00a2                goto/16
+00024  0616 7000                const-wide/16
+00026  0831 0600                op_31
+00028  083d 0006                if-lez
+0002a  0216 001e                const-wide/16
+0002c  0029 0098                goto/16
+0002e  0616 6800                const-wide/16
+00030  0831 0600                op_31
+00032  083d 0006                if-lez
+00034  0216 001c                const-wide/16
+00036  0029 008e                goto/16
+00038  0616 6000                const-wide/16
+0003a  0831 0600                op_31
+0003c  083d 0006                if-lez
+0003e  0216 001a                const-wide/16
+00040  0029 0084                goto/16
+00042  0616 5800                const-wide/16
+00044  0831 0600                op_31
+00046  083d 0006                if-lez
+00048  0216 0018                const-wide/16
+0004a  0029 007a                goto/16
+0004c  0616 5000                const-wide/16
+0004e  0831 0600                op_31
+00050  083d 0006                if-lez
+00052  0216 0016                const-wide/16
+00054  0029 0070                goto/16
+00056  0616 4800                const-wide/16
+00058  0831 0600                op_31
+0005a  083d 0006                if-lez
+0005c  0216 0014                const-wide/16
+0005e  0029 0066                goto/16
+00060  0616 4000                const-wide/16
+00062  0831 0600                op_31
+00064  083d 0005                if-lez
+00066  0216 0012                const-wide/16
+00068  5c28                     goto
+00069  0616 3800                const-wide/16
+0006b  0831 0600                op_31
+0006d  083d 0005                if-lez
+0006f  0216 0010                const-wide/16
+00071  5328                     goto
+00072  0616 3000                const-wide/16
+00074  0831 0600                op_31
+00076  083d 0005                if-lez
+00078  0216 000e                const-wide/16
+0007a  4a28                     goto
+0007b  0616 2800                const-wide/16
+0007d  0831 0600                op_31
+0007f  083d 0005                if-lez
+00081  0216 000c                const-wide/16
+00083  4128                     goto
+00084  0616 1800                const-wide/16
+00086  0831 0600                op_31
+00088  083d 0005                if-lez
+0008a  0216 0008                const-wide/16
+0008c  3828                     goto
+0008d  0616 1000                const-wide/16
+0008f  0831 0600                op_31
+00091  083d 0005                if-lez
+00093  0216 0006                const-wide/16
+00095  2f28                     goto
+00096  0616 0c00                const-wide/16
+00098  0831 0600                op_31
+0009a  083d 0005                if-lez
+0009c  0216 0004                const-wide/16
+0009e  2628                     goto
+0009f  0616 0800                const-wide/16
+000a1  0831 0600                op_31
+000a3  083d 0005                if-lez
+000a5  0216 0003                const-wide/16
+000a7  1d28                     goto
+000a8  0616 0600                const-wide/16
+000aa  0831 0600                op_31
+000ac  083d 0005                if-lez
+000ae  0216 0002                const-wide/16
+000b0  1428                     goto
+000b1  0616 0400                const-wide/16
+000b3  0831 0600                op_31
+000b5  083d 0004                if-lez
+000b7  4204                     op_04
+000b8  0c28                     goto
+000b9  0616 0300                const-wide/16
+000bb  0831 0600                op_31
+000bd  083d 0003                if-lez
+000bf  f828                     goto
+000c0  0416 0200                const-wide/16
+000c2  0831 0400                op_31
+000c4  0210                     return-wide

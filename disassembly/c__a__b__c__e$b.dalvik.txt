@@ -1,0 +1,100 @@
+### Lc/a/b/c/e$b;-><init>(Lc/a/b/c/e;)V  [access=0x10001, regs=2, ins=2, outs=1, code_off=0xf5138]
+00000  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  0113 0021                const/16
+00005  1123 0753                new-array  # TYPE [Lc/a/b/c/e$a;
+00007  015b 1ae7                iput-object  # FIELD Lc/a/b/c/e$b;->a:[Lc/a/b/c/e$a;
+00009  000e                     return-void
+
+### Lc/a/b/c/e$b;->b(I)V  [access=0x2, regs=4, ins=2, outs=2, code_off=0xf5190]
+00000  2054 1ae7                iget-object  # FIELD Lc/a/b/c/e$b;->a:[Lc/a/b/c/e$a;
+00002  0121                     array-length
+00003  0191 0103                int-sub
+00005  013d 0016                if-lez
+00007  0021                     array-length
+00008  01e1 0100                op_e1
+0000a  10b0                     op_b0
+0000b  0191 0300                int-sub
+0000d  013b 0003                if-gez
+0000f  0228                     goto
+00010  0301                     op_01
+00011  2054 1ae7                iget-object  # FIELD Lc/a/b/c/e$b;->a:[Lc/a/b/c/e$a;
+00013  2071 2e00 0030           invoke-static  # CALL Ljava/util/Arrays;->copyOf([Ljava/lang/Object;,I)[Ljava/lang/Object;
+00016  030c                     move-result-object
+00017  031f 0753                check-cast  # TYPE [Lc/a/b/c/e$a;
+00019  235b 1ae7                iput-object  # FIELD Lc/a/b/c/e$b;->a:[Lc/a/b/c/e$a;
+0001b  000e                     return-void
+
+### Lc/a/b/c/e$b;->a()I  [access=0x1, regs=1, ins=1, outs=0, code_off=0xf5120]
+00000  0052 1ae8                iget  # FIELD Lc/a/b/c/e$b;->b:I
+00002  000f                     return
+
+### Lc/a/b/c/e$b;->a(I)Lc/a/b/c/e$a;  [access=0x1, regs=5, ins=2, outs=2, code_off=0xf50bc]
+00000  3052 1ae8                iget  # FIELD Lc/a/b/c/e$b;->b:I
+00002  0435 0007                if-ge
+00004  3354 1ae7                iget-object  # FIELD Lc/a/b/c/e$b;->a:[Lc/a/b/c/e$a;
+00006  0346 0403                aget-object
+00008  0311                     return-object
+00009  0022 066b                new-instance  # TYPE Ljava/lang/IndexOutOfBoundsException;
+0000b  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0000d  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00010  021a 1fac                const-string  # STR "idx "
+00012  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00015  206e 2d3b 0041           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+00018  041a 0095                const-string  # STR " size "
+0001a  206e 2d3f 0041           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0001d  3352 1ae8                iget  # FIELD Lc/a/b/c/e$b;->b:I
+0001f  206e 2d3b 0031           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+00022  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00025  030c                     move-result-object
+00026  2070 2ca5 0030           invoke-direct  # CALL Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+00029  0027                     throw
+
+### Lc/a/b/c/e$b;->a(Lc/a/b/c/e$a;)V  [access=0x1, regs=5, ins=2, outs=2, code_off=0xf515c]
+00000  3052 1ae8                iget  # FIELD Lc/a/b/c/e$b;->b:I
+00002  00d8 0100                op_d8
+00004  2070 2789 0003           invoke-direct  # CALL Lc/a/b/c/e$b;->b(I)V
+00007  3054 1ae7                iget-object  # FIELD Lc/a/b/c/e$b;->a:[Lc/a/b/c/e$a;
+00009  3152 1ae8                iget  # FIELD Lc/a/b/c/e$b;->b:I
+0000b  02d8 0101                op_d8
+0000d  3259 1ae8                iput  # FIELD Lc/a/b/c/e$b;->b:I
+0000f  044d 0100                aput-object
+00011  000e                     return-void
+
+### Lc/a/b/c/e$b;->b()[B  [access=0x1, regs=5, ins=1, outs=2, code_off=0xf501c]
+00000  0022 063a                new-instance  # TYPE Ljava/io/ByteArrayOutputStream;
+00002  1070 2bfd 0000           invoke-direct  # CALL Ljava/io/ByteArrayOutputStream;-><init>()V
+00005  0112                     const/4
+00006  4252 1ae8                iget  # FIELD Lc/a/b/c/e$b;->b:I
+00008  03db 0202                op_db
+0000a  3135 0024                if-ge
+0000c  02da 0201                op_da
+0000e  206e 2787 0024           invoke-virtual  # CALL Lc/a/b/c/e$b;->a(I)Lc/a/b/c/e$a;
+00011  030c                     move-result-object
+00012  106e 2781 0003           invoke-virtual  # CALL Lc/a/b/c/e$a;->b()B
+00015  030a                     move-result
+00016  33d5 00ff                op_d5
+00018  02d8 0102                op_d8
+0001a  206e 2787 0024           invoke-virtual  # CALL Lc/a/b/c/e$b;->a(I)Lc/a/b/c/e$a;
+0001d  020c                     move-result-object
+0001e  106e 2781 0002           invoke-virtual  # CALL Lc/a/b/c/e$a;->b()B
+00021  020a                     move-result
+00022  22d5 00ff                op_d5
+00024  02e0 0402                op_e0
+00026  32b6                     op_b6
+00027  228d                     op_8d
+00028  206e 2c00 0020           invoke-virtual  # CALL Ljava/io/ByteArrayOutputStream;->write(I)V
+0002b  01d8 0101                op_d8
+0002d  d928                     goto
+0002e  01dc 0202                op_dc
+00030  0138 0012                if-eqz
+00032  02d8 ff02                op_d8
+00034  206e 2787 0024           invoke-virtual  # CALL Lc/a/b/c/e$b;->a(I)Lc/a/b/c/e$a;
+00037  040c                     move-result-object
+00038  106e 2781 0004           invoke-virtual  # CALL Lc/a/b/c/e$a;->b()B
+0003b  040a                     move-result
+0003c  44d5 00ff                op_d5
+0003e  448d                     op_8d
+0003f  206e 2c00 0040           invoke-virtual  # CALL Ljava/io/ByteArrayOutputStream;->write(I)V
+00042  106e 2bff 0000           invoke-virtual  # CALL Ljava/io/ByteArrayOutputStream;->toByteArray()[B
+00045  040c                     move-result-object
+00046  0411                     return-object

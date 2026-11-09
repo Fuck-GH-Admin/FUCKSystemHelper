@@ -1,0 +1,416 @@
+### Landroid/arch/lifecycle/f;-><init>(Landroid/arch/lifecycle/e;)V  [access=0x10001, regs=3, ins=2, outs=2, code_off=0x809fc]
+00000  1070 07d3 0001           invoke-direct  # CALL Landroid/arch/lifecycle/c;-><init>()V
+00003  0022 04b1                new-instance  # TYPE Lb/a/a/b/a;
+00005  1070 219d 0000           invoke-direct  # CALL Lb/a/a/b/a;-><init>()V
+00008  105b 04f2                iput-object  # FIELD Landroid/arch/lifecycle/f;->a:Lb/a/a/b/a;
+0000a  0012                     const/4
+0000b  1059 04f5                iput  # FIELD Landroid/arch/lifecycle/f;->d:I
+0000d  105c 04f6                iput-boolean  # FIELD Landroid/arch/lifecycle/f;->e:Z
+0000f  105c 04f7                iput-boolean  # FIELD Landroid/arch/lifecycle/f;->f:Z
+00011  0022 06c8                new-instance  # TYPE Ljava/util/ArrayList;
+00013  1070 2de7 0000           invoke-direct  # CALL Ljava/util/ArrayList;-><init>()V
+00016  105b 04f8                iput-object  # FIELD Landroid/arch/lifecycle/f;->g:Ljava/util/ArrayList;
+00018  0022 0692                new-instance  # TYPE Ljava/lang/ref/WeakReference;
+0001a  2070 2d67 0020           invoke-direct  # CALL Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+0001d  105b 04f4                iput-object  # FIELD Landroid/arch/lifecycle/f;->c:Ljava/lang/ref/WeakReference;
+0001f  0262 04e9                sget-object  # FIELD Landroid/arch/lifecycle/c$b;->c:Landroid/arch/lifecycle/c$b;
+00021  125b 04f3                iput-object  # FIELD Landroid/arch/lifecycle/f;->b:Landroid/arch/lifecycle/c$b;
+00023  000e                     return-void
+
+### Landroid/arch/lifecycle/f;->a(Landroid/arch/lifecycle/c$b;,Landroid/arch/lifecycle/c$b;)Landroid/arch/lifecycle/c$b;  [access=0x8, regs=3, ins=2, outs=2, code_off=0x80968]
+00000  0238 0009                if-eqz
+00002  206e 2c8d 0012           invoke-virtual  # CALL Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
+00005  000a                     move-result
+00006  003b 0003                if-gez
+00008  2107                     op_07
+00009  0111                     return-object
+
+### Landroid/arch/lifecycle/f;->a(Landroid/arch/lifecycle/e;)V  [access=0x2, regs=7, ins=2, outs=3, code_off=0x80b3c]
+00000  5054 04f2                iget-object  # FIELD Landroid/arch/lifecycle/f;->a:Lb/a/a/b/a;
+00002  106e 21c2 0000           invoke-virtual  # CALL Lb/a/a/b/b;->a()Ljava/util/Iterator;
+00005  000c                     move-result-object
+00006  1072 2e43 0000           invoke-interface  # CALL Ljava/util/Iterator;->hasNext()Z
+00009  010a                     move-result
+0000a  0138 0040                if-eqz
+0000c  5155 04f7                iget-boolean  # FIELD Landroid/arch/lifecycle/f;->f:Z
+0000e  0139 003c                if-nez
+00010  1072 2e44 0000           invoke-interface  # CALL Ljava/util/Iterator;->next()Ljava/lang/Object;
+00013  010c                     move-result-object
+00014  011f 06dc                check-cast  # TYPE Ljava/util/Map$Entry;
+00016  1072 2e65 0001           invoke-interface  # CALL Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+00019  020c                     move-result-object
+0001a  021f 014e                check-cast  # TYPE Landroid/arch/lifecycle/f$b;
+0001c  2354 04f0                iget-object  # FIELD Landroid/arch/lifecycle/f$b;->a:Landroid/arch/lifecycle/c$b;
+0001e  5454 04f3                iget-object  # FIELD Landroid/arch/lifecycle/f;->b:Landroid/arch/lifecycle/c$b;
+00020  206e 2c8d 0043           invoke-virtual  # CALL Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
+00023  030a                     move-result
+00024  033d ffe2                if-lez
+00026  5355 04f7                iget-boolean  # FIELD Landroid/arch/lifecycle/f;->f:Z
+00028  0339 ffde                if-nez
+0002a  5354 04f2                iget-object  # FIELD Landroid/arch/lifecycle/f;->a:Lb/a/a/b/a;
+0002c  1072 2e64 0001           invoke-interface  # CALL Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+0002f  040c                     move-result-object
+00030  206e 21a1 0043           invoke-virtual  # CALL Lb/a/a/b/a;->contains(Ljava/lang/Object;)Z
+00033  030a                     move-result
+00034  0338 ffd2                if-eqz
+00036  2354 04f0                iget-object  # FIELD Landroid/arch/lifecycle/f$b;->a:Landroid/arch/lifecycle/c$b;
+00038  1071 07e2 0003           invoke-static  # CALL Landroid/arch/lifecycle/f;->b(Landroid/arch/lifecycle/c$b;)Landroid/arch/lifecycle/c$a;
+0003b  030c                     move-result-object
+0003c  1071 07e3 0003           invoke-static  # CALL Landroid/arch/lifecycle/f;->b(Landroid/arch/lifecycle/c$a;)Landroid/arch/lifecycle/c$b;
+0003f  040c                     move-result-object
+00040  2070 07eb 0045           invoke-direct  # CALL Landroid/arch/lifecycle/f;->d(Landroid/arch/lifecycle/c$b;)V
+00043  306e 07da 0362           invoke-virtual  # CALL Landroid/arch/lifecycle/f$b;->a(Landroid/arch/lifecycle/e;,Landroid/arch/lifecycle/c$a;)V
+00046  1070 07e8 0005           invoke-direct  # CALL Landroid/arch/lifecycle/f;->c()V
+00049  d328                     goto
+0004a  000e                     return-void
+
+### Landroid/arch/lifecycle/f;->b(Landroid/arch/lifecycle/c$b;)Landroid/arch/lifecycle/c$a;  [access=0xa, regs=4, ins=1, outs=2, code_off=0x80728]
+00000  0062 04ef                sget-object  # FIELD Landroid/arch/lifecycle/f$a;->b:[I
+00002  106e 2c8f 0003           invoke-virtual  # CALL Ljava/lang/Enum;->ordinal()I
+00005  010a                     move-result
+00006  0044 0100                aget
+00008  1112                     const/4
+00009  1032 0034                if-eq
+0000b  2112                     const/4
+0000c  1032 002e                if-eq
+0000e  3112                     const/4
+0000f  1032 0028                if-eq
+00011  4112                     const/4
+00012  1032 0022                if-eq
+00014  5112                     const/4
+00015  1032 0019                if-eq
+00017  0022 0669                new-instance  # TYPE Ljava/lang/IllegalArgumentException;
+00019  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0001b  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0001e  021a 1559                const-string  # STR "Unexpected state value "
+00020  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00023  206e 2d3e 0031           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+00026  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00029  030c                     move-result-object
+0002a  2070 2c9f 0030           invoke-direct  # CALL Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+0002d  0027                     throw
+0002e  0322 0669                new-instance  # TYPE Ljava/lang/IllegalArgumentException;
+00030  1070 2c9e 0003           invoke-direct  # CALL Ljava/lang/IllegalArgumentException;-><init>()V
+00033  0327                     throw
+00034  0362 04e4                sget-object  # FIELD Landroid/arch/lifecycle/c$a;->ON_PAUSE:Landroid/arch/lifecycle/c$a;
+00036  0311                     return-object
+00037  0362 04e7                sget-object  # FIELD Landroid/arch/lifecycle/c$a;->ON_STOP:Landroid/arch/lifecycle/c$a;
+00039  0311                     return-object
+0003a  0362 04e3                sget-object  # FIELD Landroid/arch/lifecycle/c$a;->ON_DESTROY:Landroid/arch/lifecycle/c$a;
+0003c  0311                     return-object
+0003d  0322 0669                new-instance  # TYPE Ljava/lang/IllegalArgumentException;
+0003f  1070 2c9e 0003           invoke-direct  # CALL Ljava/lang/IllegalArgumentException;-><init>()V
+00042  0327                     throw
+
+### Landroid/arch/lifecycle/f;->b(Landroid/arch/lifecycle/c$a;)Landroid/arch/lifecycle/c$b;  [access=0x8, regs=4, ins=1, outs=2, code_off=0x808dc]
+00000  0062 04ee                sget-object  # FIELD Landroid/arch/lifecycle/f$a;->a:[I
+00002  106e 2c8f 0003           invoke-virtual  # CALL Ljava/lang/Enum;->ordinal()I
+00005  010a                     move-result
+00006  0044 0100                aget
+00008  002b 0026 0000           packed-switch
+0000b  0022 0669                new-instance  # TYPE Ljava/lang/IllegalArgumentException;
+0000d  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0000f  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00012  021a 1558                const-string  # STR "Unexpected event value "
+00014  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00017  206e 2d3e 0031           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+0001a  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0001d  030c                     move-result-object
+0001e  2070 2c9f 0030           invoke-direct  # CALL Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+00021  0027                     throw
+00022  0362 04e8                sget-object  # FIELD Landroid/arch/lifecycle/c$b;->b:Landroid/arch/lifecycle/c$b;
+00024  0311                     return-object
+00025  0362 04ec                sget-object  # FIELD Landroid/arch/lifecycle/c$b;->f:Landroid/arch/lifecycle/c$b;
+00027  0311                     return-object
+00028  0362 04eb                sget-object  # FIELD Landroid/arch/lifecycle/c$b;->e:Landroid/arch/lifecycle/c$b;
+0002a  0311                     return-object
+0002b  0362 04ea                sget-object  # FIELD Landroid/arch/lifecycle/c$b;->d:Landroid/arch/lifecycle/c$b;
+0002d  0311                     return-object
+0002e  0100 0006 0001 0000 0023 0000 0023 0000 0020 0000 0020 0000 001d 0000 001a 0000 ... <payload; units=16>
+
+### Landroid/arch/lifecycle/f;->b(Landroid/arch/lifecycle/e;)V  [access=0x2, regs=7, ins=2, outs=3, code_off=0x80be4]
+00000  5054 04f2                iget-object  # FIELD Landroid/arch/lifecycle/f;->a:Lb/a/a/b/a;
+00002  106e 21c5 0000           invoke-virtual  # CALL Lb/a/a/b/b;->c()Lb/a/a/b/b$e;
+00005  000c                     move-result-object
+00006  1072 2e43 0000           invoke-interface  # CALL Ljava/util/Iterator;->hasNext()Z
+00009  010a                     move-result
+0000a  0138 003e                if-eqz
+0000c  5155 04f7                iget-boolean  # FIELD Landroid/arch/lifecycle/f;->f:Z
+0000e  0139 003a                if-nez
+00010  1072 2e44 0000           invoke-interface  # CALL Ljava/util/Iterator;->next()Ljava/lang/Object;
+00013  010c                     move-result-object
+00014  011f 06dc                check-cast  # TYPE Ljava/util/Map$Entry;
+00016  1072 2e65 0001           invoke-interface  # CALL Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+00019  020c                     move-result-object
+0001a  021f 014e                check-cast  # TYPE Landroid/arch/lifecycle/f$b;
+0001c  2354 04f0                iget-object  # FIELD Landroid/arch/lifecycle/f$b;->a:Landroid/arch/lifecycle/c$b;
+0001e  5454 04f3                iget-object  # FIELD Landroid/arch/lifecycle/f;->b:Landroid/arch/lifecycle/c$b;
+00020  206e 2c8d 0043           invoke-virtual  # CALL Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
+00023  030a                     move-result
+00024  033b ffe2                if-gez
+00026  5355 04f7                iget-boolean  # FIELD Landroid/arch/lifecycle/f;->f:Z
+00028  0339 ffde                if-nez
+0002a  5354 04f2                iget-object  # FIELD Landroid/arch/lifecycle/f;->a:Lb/a/a/b/a;
+0002c  1072 2e64 0001           invoke-interface  # CALL Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+0002f  040c                     move-result-object
+00030  206e 21a1 0043           invoke-virtual  # CALL Lb/a/a/b/a;->contains(Ljava/lang/Object;)Z
+00033  030a                     move-result
+00034  0338 ffd2                if-eqz
+00036  2354 04f0                iget-object  # FIELD Landroid/arch/lifecycle/f$b;->a:Landroid/arch/lifecycle/c$b;
+00038  2070 07eb 0035           invoke-direct  # CALL Landroid/arch/lifecycle/f;->d(Landroid/arch/lifecycle/c$b;)V
+0003b  2354 04f0                iget-object  # FIELD Landroid/arch/lifecycle/f$b;->a:Landroid/arch/lifecycle/c$b;
+0003d  1071 07ec 0003           invoke-static  # CALL Landroid/arch/lifecycle/f;->e(Landroid/arch/lifecycle/c$b;)Landroid/arch/lifecycle/c$a;
+00040  030c                     move-result-object
+00041  306e 07da 0362           invoke-virtual  # CALL Landroid/arch/lifecycle/f$b;->a(Landroid/arch/lifecycle/e;,Landroid/arch/lifecycle/c$a;)V
+00044  1070 07e8 0005           invoke-direct  # CALL Landroid/arch/lifecycle/f;->c()V
+00047  d528                     goto
+00048  000e                     return-void
+
+### Landroid/arch/lifecycle/f;->b()Z  [access=0x2, regs=4, ins=1, outs=1, code_off=0x8098c]
+00000  3054 04f2                iget-object  # FIELD Landroid/arch/lifecycle/f;->a:Lb/a/a/b/a;
+00002  106e 21ca 0000           invoke-virtual  # CALL Lb/a/a/b/b;->size()I
+00005  000a                     move-result
+00006  1112                     const/4
+00007  0039 0003                if-nez
+00009  010f                     return
+0000a  3054 04f2                iget-object  # FIELD Landroid/arch/lifecycle/f;->a:Lb/a/a/b/a;
+0000c  106e 21c4 0000           invoke-virtual  # CALL Lb/a/a/b/b;->b()Ljava/util/Map$Entry;
+0000f  000c                     move-result-object
+00010  1072 2e65 0000           invoke-interface  # CALL Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+00013  000c                     move-result-object
+00014  001f 014e                check-cast  # TYPE Landroid/arch/lifecycle/f$b;
+00016  0054 04f0                iget-object  # FIELD Landroid/arch/lifecycle/f$b;->a:Landroid/arch/lifecycle/c$b;
+00018  3254 04f2                iget-object  # FIELD Landroid/arch/lifecycle/f;->a:Lb/a/a/b/a;
+0001a  106e 21c6 0002           invoke-virtual  # CALL Lb/a/a/b/b;->d()Ljava/util/Map$Entry;
+0001d  020c                     move-result-object
+0001e  1072 2e65 0002           invoke-interface  # CALL Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+00021  020c                     move-result-object
+00022  021f 014e                check-cast  # TYPE Landroid/arch/lifecycle/f$b;
+00024  2254 04f0                iget-object  # FIELD Landroid/arch/lifecycle/f$b;->a:Landroid/arch/lifecycle/c$b;
+00026  2033 0007                if-ne
+00028  3354 04f3                iget-object  # FIELD Landroid/arch/lifecycle/f;->b:Landroid/arch/lifecycle/c$b;
+0002a  2333 0003                if-ne
+0002c  0228                     goto
+0002d  0112                     const/4
+0002e  010f                     return
+
+### Landroid/arch/lifecycle/f;->c(Landroid/arch/lifecycle/d;)Landroid/arch/lifecycle/c$b;  [access=0x2, regs=4, ins=2, outs=2, code_off=0x8084c]
+00000  2054 04f2                iget-object  # FIELD Landroid/arch/lifecycle/f;->a:Lb/a/a/b/a;
+00002  206e 21a0 0030           invoke-virtual  # CALL Lb/a/a/b/a;->b(Ljava/lang/Object;)Ljava/util/Map$Entry;
+00005  030c                     move-result-object
+00006  0012                     const/4
+00007  0338 000b                if-eqz
+00009  1072 2e65 0003           invoke-interface  # CALL Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+0000c  030c                     move-result-object
+0000d  031f 014e                check-cast  # TYPE Landroid/arch/lifecycle/f$b;
+0000f  3354 04f0                iget-object  # FIELD Landroid/arch/lifecycle/f$b;->a:Landroid/arch/lifecycle/c$b;
+00011  0228                     goto
+00012  0307                     op_07
+00013  2154 04f8                iget-object  # FIELD Landroid/arch/lifecycle/f;->g:Ljava/util/ArrayList;
+00015  106e 2df2 0001           invoke-virtual  # CALL Ljava/util/ArrayList;->isEmpty()Z
+00018  010a                     move-result
+00019  0139 0010                if-nez
+0001b  2054 04f8                iget-object  # FIELD Landroid/arch/lifecycle/f;->g:Ljava/util/ArrayList;
+0001d  106e 2df8 0000           invoke-virtual  # CALL Ljava/util/ArrayList;->size()I
+00020  010a                     move-result
+00021  01d8 ff01                op_d8
+00023  206e 2df0 0010           invoke-virtual  # CALL Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+00026  000c                     move-result-object
+00027  001f 0149                check-cast  # TYPE Landroid/arch/lifecycle/c$b;
+00029  2254 04f3                iget-object  # FIELD Landroid/arch/lifecycle/f;->b:Landroid/arch/lifecycle/c$b;
+0002b  2071 07dd 0032           invoke-static  # CALL Landroid/arch/lifecycle/f;->a(Landroid/arch/lifecycle/c$b;,Landroid/arch/lifecycle/c$b;)Landroid/arch/lifecycle/c$b;
+0002e  020c                     move-result-object
+0002f  2071 07dd 0002           invoke-static  # CALL Landroid/arch/lifecycle/f;->a(Landroid/arch/lifecycle/c$b;,Landroid/arch/lifecycle/c$b;)Landroid/arch/lifecycle/c$b;
+00032  020c                     move-result-object
+00033  0211                     return-object
+
+### Landroid/arch/lifecycle/f;->c()V  [access=0x2, regs=2, ins=1, outs=2, code_off=0x80d0c]
+00000  1154 04f8                iget-object  # FIELD Landroid/arch/lifecycle/f;->g:Ljava/util/ArrayList;
+00002  106e 2df8 0001           invoke-virtual  # CALL Ljava/util/ArrayList;->size()I
+00005  000a                     move-result
+00006  00d8 ff00                op_d8
+00008  206e 2df4 0001           invoke-virtual  # CALL Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+0000b  000e                     return-void
+
+### Landroid/arch/lifecycle/f;->c(Landroid/arch/lifecycle/c$b;)V  [access=0x2, regs=3, ins=2, outs=1, code_off=0x80cc0]
+00000  1054 04f3                iget-object  # FIELD Landroid/arch/lifecycle/f;->b:Landroid/arch/lifecycle/c$b;
+00002  2033 0003                if-ne
+00004  000e                     return-void
+00005  125b 04f3                iput-object  # FIELD Landroid/arch/lifecycle/f;->b:Landroid/arch/lifecycle/c$b;
+00007  1255 04f6                iget-boolean  # FIELD Landroid/arch/lifecycle/f;->e:Z
+00009  1012                     const/4
+0000a  0239 0010                if-nez
+0000c  1252 04f5                iget  # FIELD Landroid/arch/lifecycle/f;->d:I
+0000e  0238 0003                if-eqz
+00010  0a28                     goto
+00011  105c 04f6                iput-boolean  # FIELD Landroid/arch/lifecycle/f;->e:Z
+00013  1070 07ea 0001           invoke-direct  # CALL Landroid/arch/lifecycle/f;->d()V
+00016  0212                     const/4
+00017  125c 04f6                iput-boolean  # FIELD Landroid/arch/lifecycle/f;->e:Z
+00019  000e                     return-void
+0001a  105c 04f7                iput-boolean  # FIELD Landroid/arch/lifecycle/f;->f:Z
+0001c  000e                     return-void
+
+### Landroid/arch/lifecycle/f;->d()V  [access=0x2, regs=4, ins=1, outs=2, code_off=0x80d6c]
+00000  3054 04f4                iget-object  # FIELD Landroid/arch/lifecycle/f;->c:Ljava/lang/ref/WeakReference;
+00002  106e 2d68 0000           invoke-virtual  # CALL Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+00005  000c                     move-result-object
+00006  001f 014c                check-cast  # TYPE Landroid/arch/lifecycle/e;
+00008  0039 000a                if-nez
+0000a  031a 1077                const-string  # STR "LifecycleRegistry"
+0000c  001a 1076                const-string  # STR "LifecycleOwner is garbage collected, you shouldn't try dispatch new events from it."
+0000e  2071 1c61 0003           invoke-static  # CALL Landroid/util/Log;->w(Ljava/lang/String;,Ljava/lang/String;)I
+00011  000e                     return-void
+00012  1070 07e6 0003           invoke-direct  # CALL Landroid/arch/lifecycle/f;->b()Z
+00015  010a                     move-result
+00016  0212                     const/4
+00017  325c 04f7                iput-boolean  # FIELD Landroid/arch/lifecycle/f;->f:Z
+00019  0139 003b                if-nez
+0001b  3154 04f3                iget-object  # FIELD Landroid/arch/lifecycle/f;->b:Landroid/arch/lifecycle/c$b;
+0001d  3254 04f2                iget-object  # FIELD Landroid/arch/lifecycle/f;->a:Lb/a/a/b/a;
+0001f  106e 21c4 0002           invoke-virtual  # CALL Lb/a/a/b/b;->b()Ljava/util/Map$Entry;
+00022  020c                     move-result-object
+00023  1072 2e65 0002           invoke-interface  # CALL Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+00026  020c                     move-result-object
+00027  021f 014e                check-cast  # TYPE Landroid/arch/lifecycle/f$b;
+00029  2254 04f0                iget-object  # FIELD Landroid/arch/lifecycle/f$b;->a:Landroid/arch/lifecycle/c$b;
+0002b  206e 2c8d 0021           invoke-virtual  # CALL Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
+0002e  010a                     move-result
+0002f  013b 0005                if-gez
+00031  2070 07e1 0003           invoke-direct  # CALL Landroid/arch/lifecycle/f;->a(Landroid/arch/lifecycle/e;)V
+00034  3154 04f2                iget-object  # FIELD Landroid/arch/lifecycle/f;->a:Lb/a/a/b/a;
+00036  106e 21c6 0001           invoke-virtual  # CALL Lb/a/a/b/b;->d()Ljava/util/Map$Entry;
+00039  010c                     move-result-object
+0003a  3255 04f7                iget-boolean  # FIELD Landroid/arch/lifecycle/f;->f:Z
+0003c  0239 ffd6                if-nez
+0003e  0138 ffd4                if-eqz
+00040  3254 04f3                iget-object  # FIELD Landroid/arch/lifecycle/f;->b:Landroid/arch/lifecycle/c$b;
+00042  1072 2e65 0001           invoke-interface  # CALL Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+00045  010c                     move-result-object
+00046  011f 014e                check-cast  # TYPE Landroid/arch/lifecycle/f$b;
+00048  1154 04f0                iget-object  # FIELD Landroid/arch/lifecycle/f$b;->a:Landroid/arch/lifecycle/c$b;
+0004a  206e 2c8d 0012           invoke-virtual  # CALL Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
+0004d  010a                     move-result
+0004e  013d ffc4                if-lez
+00050  2070 07e5 0003           invoke-direct  # CALL Landroid/arch/lifecycle/f;->b(Landroid/arch/lifecycle/e;)V
+00053  bf28                     goto
+00054  000e                     return-void
+
+### Landroid/arch/lifecycle/f;->d(Landroid/arch/lifecycle/c$b;)V  [access=0x2, regs=2, ins=2, outs=2, code_off=0x80d34]
+00000  0054 04f8                iget-object  # FIELD Landroid/arch/lifecycle/f;->g:Ljava/util/ArrayList;
+00002  206e 2deb 0010           invoke-virtual  # CALL Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+00005  000e                     return-void
+
+### Landroid/arch/lifecycle/f;->e(Landroid/arch/lifecycle/c$b;)Landroid/arch/lifecycle/c$a;  [access=0xa, regs=4, ins=1, outs=2, code_off=0x807c0]
+00000  0062 04ef                sget-object  # FIELD Landroid/arch/lifecycle/f$a;->b:[I
+00002  106e 2c8f 0003           invoke-virtual  # CALL Ljava/lang/Enum;->ordinal()I
+00005  010a                     move-result
+00006  0044 0100                aget
+00008  1112                     const/4
+00009  1032 0032                if-eq
+0000b  2112                     const/4
+0000c  1032 002c                if-eq
+0000e  3112                     const/4
+0000f  1032 0026                if-eq
+00011  4112                     const/4
+00012  1032 001d                if-eq
+00014  5112                     const/4
+00015  1033 0003                if-ne
+00017  2428                     goto
+00018  0022 0669                new-instance  # TYPE Ljava/lang/IllegalArgumentException;
+0001a  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0001c  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0001f  021a 1559                const-string  # STR "Unexpected state value "
+00021  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00024  206e 2d3e 0031           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+00027  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0002a  030c                     move-result-object
+0002b  2070 2c9f 0030           invoke-direct  # CALL Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+0002e  0027                     throw
+0002f  0322 0669                new-instance  # TYPE Ljava/lang/IllegalArgumentException;
+00031  1070 2c9e 0003           invoke-direct  # CALL Ljava/lang/IllegalArgumentException;-><init>()V
+00034  0327                     throw
+00035  0362 04e5                sget-object  # FIELD Landroid/arch/lifecycle/c$a;->ON_RESUME:Landroid/arch/lifecycle/c$a;
+00037  0311                     return-object
+00038  0362 04e6                sget-object  # FIELD Landroid/arch/lifecycle/c$a;->ON_START:Landroid/arch/lifecycle/c$a;
+0003a  0311                     return-object
+0003b  0362 04e2                sget-object  # FIELD Landroid/arch/lifecycle/c$a;->ON_CREATE:Landroid/arch/lifecycle/c$a;
+0003d  0311                     return-object
+
+### Landroid/arch/lifecycle/f;->a()Landroid/arch/lifecycle/c$b;  [access=0x1, regs=1, ins=1, outs=0, code_off=0x808c4]
+00000  0054 04f3                iget-object  # FIELD Landroid/arch/lifecycle/f;->b:Landroid/arch/lifecycle/c$b;
+00002  0011                     return-object
+
+### Landroid/arch/lifecycle/f;->a(Landroid/arch/lifecycle/c$a;)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0x80c88]
+00000  1071 07e3 0001           invoke-static  # CALL Landroid/arch/lifecycle/f;->b(Landroid/arch/lifecycle/c$a;)Landroid/arch/lifecycle/c$b;
+00003  010c                     move-result-object
+00004  2070 07e9 0010           invoke-direct  # CALL Landroid/arch/lifecycle/f;->c(Landroid/arch/lifecycle/c$b;)V
+00007  000e                     return-void
+
+### Landroid/arch/lifecycle/f;->a(Landroid/arch/lifecycle/c$b;)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0x80ca8]
+00000  2070 07e9 0010           invoke-direct  # CALL Landroid/arch/lifecycle/f;->c(Landroid/arch/lifecycle/c$b;)V
+00003  000e                     return-void
+
+### Landroid/arch/lifecycle/f;->a(Landroid/arch/lifecycle/d;)V  [access=0x1, regs=8, ins=2, outs=3, code_off=0x80a54]
+00000  6054 04f3                iget-object  # FIELD Landroid/arch/lifecycle/f;->b:Landroid/arch/lifecycle/c$b;
+00002  0162 04e8                sget-object  # FIELD Landroid/arch/lifecycle/c$b;->b:Landroid/arch/lifecycle/c$b;
+00004  1033 0003                if-ne
+00006  0328                     goto
+00007  0162 04e9                sget-object  # FIELD Landroid/arch/lifecycle/c$b;->c:Landroid/arch/lifecycle/c$b;
+00009  0022 014e                new-instance  # TYPE Landroid/arch/lifecycle/f$b;
+0000b  3070 07d9 0170           invoke-direct  # CALL Landroid/arch/lifecycle/f$b;-><init>(Landroid/arch/lifecycle/d;,Landroid/arch/lifecycle/c$b;)V
+0000e  6154 04f2                iget-object  # FIELD Landroid/arch/lifecycle/f;->a:Lb/a/a/b/a;
+00010  306e 219f 0071           invoke-virtual  # CALL Lb/a/a/b/a;->b(Ljava/lang/Object;,Ljava/lang/Object;)Ljava/lang/Object;
+00013  010c                     move-result-object
+00014  011f 014e                check-cast  # TYPE Landroid/arch/lifecycle/f$b;
+00016  0138 0003                if-eqz
+00018  000e                     return-void
+00019  6154 04f4                iget-object  # FIELD Landroid/arch/lifecycle/f;->c:Ljava/lang/ref/WeakReference;
+0001b  106e 2d68 0001           invoke-virtual  # CALL Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+0001e  010c                     move-result-object
+0001f  011f 014c                check-cast  # TYPE Landroid/arch/lifecycle/e;
+00021  0139 0003                if-nez
+00023  000e                     return-void
+00024  6252 04f5                iget  # FIELD Landroid/arch/lifecycle/f;->d:I
+00026  1312                     const/4
+00027  0239 0009                if-nez
+00029  6255 04f6                iget-boolean  # FIELD Landroid/arch/lifecycle/f;->e:Z
+0002b  0238 0003                if-eqz
+0002d  0328                     goto
+0002e  0212                     const/4
+0002f  0228                     goto
+00030  3201                     op_01
+00031  2070 07e7 0076           invoke-direct  # CALL Landroid/arch/lifecycle/f;->c(Landroid/arch/lifecycle/d;)Landroid/arch/lifecycle/c$b;
+00034  040c                     move-result-object
+00035  6552 04f5                iget  # FIELD Landroid/arch/lifecycle/f;->d:I
+00037  35b0                     op_b0
+00038  6559 04f5                iput  # FIELD Landroid/arch/lifecycle/f;->d:I
+0003a  0554 04f0                iget-object  # FIELD Landroid/arch/lifecycle/f$b;->a:Landroid/arch/lifecycle/c$b;
+0003c  206e 2c8d 0045           invoke-virtual  # CALL Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
+0003f  040a                     move-result
+00040  043b 0020                if-gez
+00042  6454 04f2                iget-object  # FIELD Landroid/arch/lifecycle/f;->a:Lb/a/a/b/a;
+00044  206e 21a1 0074           invoke-virtual  # CALL Lb/a/a/b/a;->contains(Ljava/lang/Object;)Z
+00047  040a                     move-result
+00048  0438 0018                if-eqz
+0004a  0454 04f0                iget-object  # FIELD Landroid/arch/lifecycle/f$b;->a:Landroid/arch/lifecycle/c$b;
+0004c  2070 07eb 0046           invoke-direct  # CALL Landroid/arch/lifecycle/f;->d(Landroid/arch/lifecycle/c$b;)V
+0004f  0454 04f0                iget-object  # FIELD Landroid/arch/lifecycle/f$b;->a:Landroid/arch/lifecycle/c$b;
+00051  1071 07ec 0004           invoke-static  # CALL Landroid/arch/lifecycle/f;->e(Landroid/arch/lifecycle/c$b;)Landroid/arch/lifecycle/c$a;
+00054  040c                     move-result-object
+00055  306e 07da 0410           invoke-virtual  # CALL Landroid/arch/lifecycle/f$b;->a(Landroid/arch/lifecycle/e;,Landroid/arch/lifecycle/c$a;)V
+00058  1070 07e8 0006           invoke-direct  # CALL Landroid/arch/lifecycle/f;->c()V
+0005b  2070 07e7 0076           invoke-direct  # CALL Landroid/arch/lifecycle/f;->c(Landroid/arch/lifecycle/d;)Landroid/arch/lifecycle/c$b;
+0005e  040c                     move-result-object
+0005f  db28                     goto
+00060  0239 0005                if-nez
+00062  1070 07ea 0006           invoke-direct  # CALL Landroid/arch/lifecycle/f;->d()V
+00065  6752 04f5                iget  # FIELD Landroid/arch/lifecycle/f;->d:I
+00067  37b1                     op_b1
+00068  6759 04f5                iput  # FIELD Landroid/arch/lifecycle/f;->d:I
+0006a  000e                     return-void
+
+### Landroid/arch/lifecycle/f;->b(Landroid/arch/lifecycle/d;)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0x80d50]
+00000  0054 04f2                iget-object  # FIELD Landroid/arch/lifecycle/f;->a:Lb/a/a/b/a;
+00002  206e 21a2 0010           invoke-virtual  # CALL Lb/a/a/b/a;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+00005  000e                     return-void

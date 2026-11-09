@@ -1,0 +1,104 @@
+### Lcom/mobiletools/systemhelper/control/SIMStateReceiver;-><clinit>()V  [access=0x10008, regs=0, ins=0, outs=0, code_off=0x10db7c]
+00000  000e                     return-void
+
+### Lcom/mobiletools/systemhelper/control/SIMStateReceiver;-><init>()V  [access=0x10001, regs=1, ins=1, outs=1, code_off=0x10db90]
+00000  1070 0826 0000           invoke-direct  # CALL Landroid/content/BroadcastReceiver;-><init>()V
+00003  000e                     return-void
+
+### Lcom/mobiletools/systemhelper/control/SIMStateReceiver;->a()V  [access=0x9, regs=2, ins=0, outs=2, code_off=0x10dba8]
+00000  0062 1d15                sget-object  # FIELD Lcom/mobiletools/systemhelper/control/SIMStateReceiver;->b:Lcom/mobiletools/systemhelper/control/SIMStateReceiver;
+00002  0038 0014                if-eqz
+00004  0162 1d14                sget-object  # FIELD Lcom/mobiletools/systemhelper/control/SIMStateReceiver;->a:Landroid/content/Context;
+00006  206e 085e 0001           invoke-virtual  # CALL Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+00009  001a 13d5                const-string  # STR "SIMStateReceiver"
+0000b  011a 1416                const-string  # STR "SimStateReceiver cancel watch-->"
+0000d  2071 2987 0010           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+00010  0012                     const/4
+00011  0069 1d15                sput-object  # FIELD Lcom/mobiletools/systemhelper/control/SIMStateReceiver;->b:Lcom/mobiletools/systemhelper/control/SIMStateReceiver;
+00013  0012                     const/4
+00014  006a 1bba                sput-boolean  # FIELD Lc/d/a/b/d;->j:Z
+00016  000e                     return-void
+
+### Lcom/mobiletools/systemhelper/control/SIMStateReceiver;->a(Landroid/content/Context;)V  [access=0x1, regs=3, ins=2, outs=3, code_off=0x10dd10]
+00000  0269 1d14                sput-object  # FIELD Lcom/mobiletools/systemhelper/control/SIMStateReceiver;->a:Landroid/content/Context;
+00002  0071 2b9c 0000           invoke-static  # CALL Lcom/mobiletools/systemhelper/control/SIMStateReceiver;->a()V
+00005  1212                     const/4
+00006  026a 1bba                sput-boolean  # FIELD Lc/d/a/b/d;->j:Z
+00008  0169 1d15                sput-object  # FIELD Lcom/mobiletools/systemhelper/control/SIMStateReceiver;->b:Lcom/mobiletools/systemhelper/control/SIMStateReceiver;
+0000a  021a 13d5                const-string  # STR "SIMStateReceiver"
+0000c  001a 1417                const-string  # STR "SimStateReceiver startWatch-->"
+0000e  2071 2987 0002           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+00011  0222 0177                new-instance  # TYPE Landroid/content/IntentFilter;
+00013  1070 0884 0002           invoke-direct  # CALL Landroid/content/IntentFilter;-><init>()V
+00016  001a 1914                const-string  # STR "android.intent.action.SIM_STATE_CHANGED"
+00018  206e 0886 0002           invoke-virtual  # CALL Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+0001b  0062 1d14                sget-object  # FIELD Lcom/mobiletools/systemhelper/control/SIMStateReceiver;->a:Landroid/content/Context;
+0001d  306e 0854 0210           invoke-virtual  # CALL Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;,Landroid/content/IntentFilter;)Landroid/content/Intent;
+00020  000e                     return-void
+
+### Lcom/mobiletools/systemhelper/control/SIMStateReceiver;->onReceive(Landroid/content/Context;,Landroid/content/Intent;)V  [access=0x1, regs=5, ins=3, outs=3, code_off=0x10dbe8]
+00000  0369 1d14                sput-object  # FIELD Lcom/mobiletools/systemhelper/control/SIMStateReceiver;->a:Landroid/content/Context;
+00002  0222 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00004  1070 2d35 0002           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00007  001a 22ac                const-string  # STR "onReceive-->intent action: "
+00009  206e 2d3f 0002           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0000c  106e 086f 0004           invoke-virtual  # CALL Landroid/content/Intent;->getAction()Ljava/lang/String;
+0000f  000c                     move-result-object
+00010  206e 2d3f 0002           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00013  106e 2d44 0002           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00016  020c                     move-result-object
+00017  001a 13d5                const-string  # STR "SIMStateReceiver"
+00019  2071 2987 0020           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+0001c  0263 1bba                sget-boolean  # FIELD Lc/d/a/b/d;->j:Z
+0001e  0238 0006                if-eqz
+00020  0212                     const/4
+00021  026a 1bba                sput-boolean  # FIELD Lc/d/a/b/d;->j:Z
+00023  000e                     return-void
+00024  106e 086f 0004           invoke-virtual  # CALL Landroid/content/Intent;->getAction()Ljava/lang/String;
+00027  020c                     move-result-object
+00028  0238 0050                if-eqz
+0002a  041a 1914                const-string  # STR "android.intent.action.SIM_STATE_CHANGED"
+0002c  206e 2d03 0042           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+0002f  020a                     move-result
+00030  0238 0048                if-eqz
+00032  021a 234e                const-string  # STR "phone"
+00034  206e 084c 0023           invoke-virtual  # CALL Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+00037  020c                     move-result-object
+00038  021f 03f4                check-cast  # TYPE Landroid/telephony/TelephonyManager;
+0003a  106e 1be9 0002           invoke-virtual  # CALL Landroid/telephony/TelephonyManager;->getSimState()I
+0003d  020a                     move-result
+0003e  0422 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00040  1070 2d35 0004           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00043  011a 13d7                const-string  # STR "SIM_STATE_CHANGED, state:"
+00045  206e 2d3f 0014           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00048  206e 2d3b 0024           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+0004b  106e 2d44 0004           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0004e  040c                     move-result-object
+0004f  2071 2987 0040           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+00052  0238 000c                if-eqz
+00054  1412                     const/4
+00055  4232 000c                if-eq
+00057  5412                     const/4
+00058  4232 000f                if-eq
+0005a  6412                     const/4
+0005b  4232 0009                if-eq
+0005d  1b28                     goto
+0005e  1071 2923 0003           invoke-static  # CALL Lc/d/a/a/a;->f(Landroid/content/Context;)V
+00061  1071 2923 0003           invoke-static  # CALL Lc/d/a/a/a;->f(Landroid/content/Context;)V
+00064  1071 2923 0003           invoke-static  # CALL Lc/d/a/a/a;->f(Landroid/content/Context;)V
+00067  1071 2922 0003           invoke-static  # CALL Lc/d/a/a/a;->e(Landroid/content/Context;)V
+0006a  021a 2875                const-string  # STR "wait for sim ready for 6 minutes-->"
+0006c  2071 2987 0020           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+0006f  0262 1d14                sget-object  # FIELD Lcom/mobiletools/systemhelper/control/SIMStateReceiver;->a:Landroid/content/Context;
+00071  0317 bf20 0002           const-wide/32
+00074  3071 295c 0432           invoke-static  # CALL Lc/d/a/b/a;->c(Landroid/content/Context;,J)V
+00077  000e                     return-void
+00078  0071 2956 0000           invoke-static  # CALL Lc/d/a/a/n;->c()V
+0007b  1071 294c 0003           invoke-static  # CALL Lc/d/a/a/n;->a(Landroid/content/Context;)Lc/d/a/a/n$c;
+0007e  020c                     move-result-object
+0007f  0238 000c                if-eqz
+00081  0262 1d14                sget-object  # FIELD Lcom/mobiletools/systemhelper/control/SIMStateReceiver;->a:Landroid/content/Context;
+00083  041a 1446                const-string  # STR "T"
+00085  2071 2bab 0042           invoke-static  # CALL Lcom/mobiletools/systemhelper/control/b;->a(Landroid/content/Context;,Ljava/lang/String;)Lcom/mobiletools/systemhelper/control/b;
+00088  1071 2923 0003           invoke-static  # CALL Lc/d/a/a/a;->f(Landroid/content/Context;)V
+0008b  000e                     return-void

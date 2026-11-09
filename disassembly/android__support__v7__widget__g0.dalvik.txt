@@ -1,0 +1,2224 @@
+### Landroid/support/v7/widget/g0;-><init>(Landroid/content/Context;)V  [access=0x10001, regs=3, ins=2, outs=3, code_off=0xe5894]
+00000  0012                     const/4
+00001  3070 18be 0021           invoke-direct  # CALL Landroid/support/v7/widget/g0;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;)V
+00004  000e                     return-void
+
+### Landroid/support/v7/widget/g0;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;)V  [access=0x10001, regs=4, ins=3, outs=4, code_off=0xe58b0]
+00000  0012                     const/4
+00001  4070 18bf 0321           invoke-direct  # CALL Landroid/support/v7/widget/g0;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;,I)V
+00004  000e                     return-void
+
+### Landroid/support/v7/widget/g0;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;,I)V  [access=0x10001, regs=8, ins=4, outs=5, code_off=0xe58cc]
+00000  4070 1de5 7654           invoke-direct  # CALL Landroid/view/ViewGroup;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;,I)V
+00003  1012                     const/4
+00004  405c 112d                iput-boolean  # FIELD Landroid/support/v7/widget/g0;->b:Z
+00006  f112                     const/4
+00007  4159 112e                iput  # FIELD Landroid/support/v7/widget/g0;->c:I
+00009  0212                     const/4
+0000a  4259 112f                iput  # FIELD Landroid/support/v7/widget/g0;->d:I
+0000c  0314 0033 0080           const
+0000f  4359 1131                iput  # FIELD Landroid/support/v7/widget/g0;->f:I
+00011  0362 1975                sget-object  # FIELD Lb/b/d/a/j;->LinearLayoutCompat:[I
+00013  5271 1a72 7365           invoke-static  # CALL Landroid/support/v7/widget/t0;->a(Landroid/content/Context;,Landroid/util/AttributeSet;,[I,I,I)Landroid/support/v7/widget/t0;
+00016  050c                     move-result-object
+00017  0660 197e                sget  # FIELD Lb/b/d/a/j;->LinearLayoutCompat_android_orientation:I
+00019  306e 1a79 0165           invoke-virtual  # CALL Landroid/support/v7/widget/t0;->d(I,I)I
+0001c  060a                     move-result
+0001d  063a 0005                if-ltz
+0001f  206e 18ef 0064           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->setOrientation(I)V
+00022  0660 197d                sget  # FIELD Lb/b/d/a/j;->LinearLayoutCompat_android_gravity:I
+00024  306e 1a79 0165           invoke-virtual  # CALL Landroid/support/v7/widget/t0;->d(I,I)I
+00027  060a                     move-result
+00028  063a 0005                if-ltz
+0002a  206e 18ec 0064           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->setGravity(I)V
+0002d  0660 197b                sget  # FIELD Lb/b/d/a/j;->LinearLayoutCompat_android_baselineAligned:I
+0002f  306e 1a74 0065           invoke-virtual  # CALL Landroid/support/v7/widget/t0;->a(I,Z)Z
+00032  060a                     move-result
+00033  0639 0005                if-nez
+00035  206e 18e8 0064           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->setBaselineAligned(Z)V
+00038  0660 197f                sget  # FIELD Lb/b/d/a/j;->LinearLayoutCompat_android_weightSum:I
+0003a  0715 bf80                const/high16
+0003c  306e 1a6c 0765           invoke-virtual  # CALL Landroid/support/v7/widget/t0;->a(I,F)F
+0003f  060a                     move-result
+00040  4659 1133                iput  # FIELD Landroid/support/v7/widget/g0;->h:F
+00042  0660 197c                sget  # FIELD Lb/b/d/a/j;->LinearLayoutCompat_android_baselineAlignedChildIndex:I
+00044  306e 1a79 0165           invoke-virtual  # CALL Landroid/support/v7/widget/t0;->d(I,I)I
+00047  060a                     move-result
+00048  4659 112e                iput  # FIELD Landroid/support/v7/widget/g0;->c:I
+0004a  0660 1982                sget  # FIELD Lb/b/d/a/j;->LinearLayoutCompat_measureWithLargestChild:I
+0004c  306e 1a74 0265           invoke-virtual  # CALL Landroid/support/v7/widget/t0;->a(I,Z)Z
+0004f  060a                     move-result
+00050  465c 1134                iput-boolean  # FIELD Landroid/support/v7/widget/g0;->i:Z
+00052  0660 1980                sget  # FIELD Lb/b/d/a/j;->LinearLayoutCompat_divider:I
+00054  206e 1a76 0065           invoke-virtual  # CALL Landroid/support/v7/widget/t0;->b(I)Landroid/graphics/drawable/Drawable;
+00057  060c                     move-result-object
+00058  206e 18ea 0064           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->setDividerDrawable(Landroid/graphics/drawable/Drawable;)V
+0005b  0660 1983                sget  # FIELD Lb/b/d/a/j;->LinearLayoutCompat_showDividers:I
+0005d  306e 1a79 0265           invoke-virtual  # CALL Landroid/support/v7/widget/t0;->d(I,I)I
+00060  060a                     move-result
+00061  4659 113a                iput  # FIELD Landroid/support/v7/widget/g0;->o:I
+00063  0660 1981                sget  # FIELD Lb/b/d/a/j;->LinearLayoutCompat_dividerPadding:I
+00065  306e 1a77 0265           invoke-virtual  # CALL Landroid/support/v7/widget/t0;->c(I,I)I
+00068  060a                     move-result
+00069  4659 113b                iput  # FIELD Landroid/support/v7/widget/g0;->p:I
+0006b  106e 1a73 0005           invoke-virtual  # CALL Landroid/support/v7/widget/t0;->a()V
+0006e  000e                     return-void
+
+### Landroid/support/v7/widget/g0;->a(Landroid/view/View;,I,I,I,I)V  [access=0x2, regs=6, ins=6, outs=5, code_off=0xe7448]
+00000  24b0                     op_b0
+00001  35b0                     op_b0
+00002  556e 1d8f 4321           invoke-virtual  # CALL Landroid/view/View;->layout(I,I,I,I)V
+00005  000e                     return-void
+
+### Landroid/support/v7/widget/g0;->c(I,I)V  [access=0x2, regs=13, ins=3, outs=6, code_off=0xe5c38]
+00000  106e 1dfe 000a           invoke-virtual  # CALL Landroid/view/ViewGroup;->getMeasuredHeight()I
+00003  000a                     move-result
+00004  0115 4000                const/high16
+00006  2071 1d38 0010           invoke-static  # CALL Landroid/view/View$MeasureSpec;->makeMeasureSpec(I,I)I
+00009  000a                     move-result
+0000a  0112                     const/4
+0000b  b135 002f                if-ge
+0000d  206e 18c2 001a           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->a(I)Landroid/view/View;
+00010  030c                     move-result-object
+00011  106e 1d7c 0003           invoke-virtual  # CALL Landroid/view/View;->getVisibility()I
+00014  020a                     move-result
+00015  0413 0008                const/16
+00017  4232 0020                if-eq
+00019  106e 1d5b 0003           invoke-virtual  # CALL Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+0001c  020c                     move-result-object
+0001d  2807                     op_07
+0001e  081f 038a                check-cast  # TYPE Landroid/support/v7/widget/g0$a;
+00020  8252 1258                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->height:I
+00022  f412                     const/4
+00023  4233 0014                if-ne
+00025  8952 125c                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->width:I
+00027  106e 1d61 0003           invoke-virtual  # CALL Landroid/view/View;->getMeasuredWidth()I
+0002a  020a                     move-result
+0002b  8259 125c                iput  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->width:I
+0002d  0512                     const/4
+0002e  0712                     const/4
+0002f  a207                     op_07
+00030  c401                     op_01
+00031  0601                     op_01
+00032  0674 1e19 0002           invoke-virtual/range  # CALL Landroid/view/ViewGroup;->measureChildWithMargins(Landroid/view/View;,I,I,I,I)V
+00035  8959 125c                iput  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->width:I
+00037  01d8 0101                op_d8
+00039  d228                     goto
+0003a  000e                     return-void
+
+### Landroid/support/v7/widget/g0;->d(I,I)V  [access=0x2, regs=13, ins=3, outs=6, code_off=0xe5cc0]
+00000  106e 1e00 000a           invoke-virtual  # CALL Landroid/view/ViewGroup;->getMeasuredWidth()I
+00003  000a                     move-result
+00004  0115 4000                const/high16
+00006  2071 1d38 0010           invoke-static  # CALL Landroid/view/View$MeasureSpec;->makeMeasureSpec(I,I)I
+00009  000a                     move-result
+0000a  0112                     const/4
+0000b  b135 002f                if-ge
+0000d  206e 18c2 001a           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->a(I)Landroid/view/View;
+00010  030c                     move-result-object
+00011  106e 1d7c 0003           invoke-virtual  # CALL Landroid/view/View;->getVisibility()I
+00014  020a                     move-result
+00015  0413 0008                const/16
+00017  4232 0020                if-eq
+00019  106e 1d5b 0003           invoke-virtual  # CALL Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+0001c  020c                     move-result-object
+0001d  2807                     op_07
+0001e  081f 038a                check-cast  # TYPE Landroid/support/v7/widget/g0$a;
+00020  8252 125c                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->width:I
+00022  f412                     const/4
+00023  4233 0014                if-ne
+00025  8952 1258                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->height:I
+00027  106e 1d5f 0003           invoke-virtual  # CALL Landroid/view/View;->getMeasuredHeight()I
+0002a  020a                     move-result
+0002b  8259 1258                iput  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->height:I
+0002d  0512                     const/4
+0002e  0712                     const/4
+0002f  a207                     op_07
+00030  0401                     op_01
+00031  c601                     op_01
+00032  0674 1e19 0002           invoke-virtual/range  # CALL Landroid/view/ViewGroup;->measureChildWithMargins(Landroid/view/View;,I,I,I,I)V
+00035  8959 1258                iput  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->height:I
+00037  01d8 0101                op_d8
+00039  d228                     goto
+0003a  000e                     return-void
+
+### Landroid/support/v7/widget/g0;->a(Landroid/view/View;)I  [access=0x0, regs=2, ins=2, outs=0, code_off=0xe580c]
+00000  0012                     const/4
+00001  000f                     return
+
+### Landroid/support/v7/widget/g0;->a(Landroid/view/View;,I)I  [access=0x0, regs=3, ins=3, outs=0, code_off=0xe57b0]
+00000  0012                     const/4
+00001  000f                     return
+
+### Landroid/support/v7/widget/g0;->a(I)Landroid/view/View;  [access=0x0, regs=2, ins=2, outs=2, code_off=0xe555c]
+00000  206e 1df5 0010           invoke-virtual  # CALL Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+00003  000c                     move-result-object
+00004  0011                     return-object
+
+### Landroid/support/v7/widget/g0;->a(I,I)V  [access=0x0, regs=41, ins=3, outs=7, code_off=0xe61b4]
+00000  0708 0026                op_08
+00002  0802 0027                op_02
+00004  0902 0028                op_02
+00006  0a12                     const/4
+00007  7a59 1132                iput  # FIELD Landroid/support/v7/widget/g0;->g:I
+00009  0174 18e1 0026           invoke-virtual/range  # CALL Landroid/support/v7/widget/g0;->getVirtualChildCount()I
+0000c  0b0a                     move-result
+0000d  0177 1d36 0027           invoke-static/range  # CALL Landroid/view/View$MeasureSpec;->getMode(I)I
+00010  0c0a                     move-result
+00011  0177 1d36 0028           invoke-static/range  # CALL Landroid/view/View$MeasureSpec;->getMode(I)I
+00014  0d0a                     move-result
+00015  7054 1135                iget-object  # FIELD Landroid/support/v7/widget/g0;->j:[I
+00017  4e12                     const/4
+00018  0038 0006                if-eqz
+0001a  7054 1136                iget-object  # FIELD Landroid/support/v7/widget/g0;->k:[I
+0001c  0039 000a                if-nez
+0001e  e023 0724                new-array  # TYPE [I
+00020  705b 1135                iput-object  # FIELD Landroid/support/v7/widget/g0;->j:[I
+00022  e023 0724                new-array  # TYPE [I
+00024  705b 1136                iput-object  # FIELD Landroid/support/v7/widget/g0;->k:[I
+00026  7f54 1135                iget-object  # FIELD Landroid/support/v7/widget/g0;->j:[I
+00028  7654 1136                iget-object  # FIELD Landroid/support/v7/widget/g0;->k:[I
+0002a  1013 0003                const/16
+0002c  f512                     const/4
+0002d  054b 100f                aput
+0002f  1113 0002                const/16
+00031  054b 110f                aput
+00033  1213 0001                const/16
+00035  054b 120f                aput
+00037  054b 0a0f                aput
+00039  054b 1006                aput
+0003b  054b 1106                aput
+0003d  054b 1206                aput
+0003f  054b 0a06                aput
+00041  7455 112d                iget-boolean  # FIELD Landroid/support/v7/widget/g0;->b:Z
+00043  7355 1134                iget-boolean  # FIELD Landroid/support/v7/widget/g0;->i:Z
+00045  0215 4000                const/high16
+00047  2c33 0005                if-ne
+00049  1302 0012                op_02
+0004b  0328                     goto
+0004c  1302 000a                op_02
+0004e  1413 0000                const/16
+00050  a101                     op_01
+00051  1e01                     op_01
+00052  1502 000e                op_02
+00054  1602 0015                op_02
+00056  1702 0016                op_02
+00058  1802 0017                op_02
+0005a  1902 0018                op_02
+0005c  1b02 0019                op_02
+0005e  1a02 0012                op_02
+00060  0002 0014                op_02
+00062  1c08 0006                op_08
+00064  0513 0008                const/16
+00066  b135 0199                if-ge
+00068  206e 18c2 0017           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->a(I)Landroid/view/View;
+0006b  060c                     move-result-object
+0006c  0639 0016                if-nez
+0006e  7552 1132                iget  # FIELD Landroid/support/v7/widget/g0;->g:I
+00070  206e 18cf 0017           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->c(I)I
+00073  060a                     move-result
+00074  65b0                     op_b0
+00075  7559 1132                iput  # FIELD Landroid/support/v7/widget/g0;->g:I
+00077  2002 0003                op_02
+00079  2402 0004                op_02
+0007b  2502 0002                op_02
+0007d  1201                     op_01
+0007e  0102 0025                op_02
+00080  0029 016c                goto/16
+00082  106e 1d7c 0006           invoke-virtual  # CALL Landroid/view/View;->getVisibility()I
+00085  0a0a                     move-result
+00086  5a33 0008                if-ne
+00088  306e 18c1 0167           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->a(Landroid/view/View;,I)I
+0008b  050a                     move-result
+0008c  51b0                     op_b0
+0008d  ea28                     goto
+0008e  206e 18ce 0017           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->b(I)Z
+00091  050a                     move-result
+00092  0538 0009                if-eqz
+00094  7552 1132                iget  # FIELD Landroid/support/v7/widget/g0;->g:I
+00096  7a52 1138                iget  # FIELD Landroid/support/v7/widget/g0;->m:I
+00098  a5b0                     op_b0
+00099  7559 1132                iput  # FIELD Landroid/support/v7/widget/g0;->g:I
+0009b  106e 1d5b 0006           invoke-virtual  # CALL Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+0009e  050c                     move-result-object
+0009f  5a07                     op_07
+000a0  0a1f 038a                check-cast  # TYPE Landroid/support/v7/widget/g0$a;
+000a2  a552 112b                iget  # FIELD Landroid/support/v7/widget/g0$a;->a:F
+000a4  1fa6 0500                op_a6
+000a6  2c33 0045                if-ne
+000a8  a052 125c                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->width:I
+000aa  0039 0041                if-nez
+000ac  002d 1405                op_2d
+000ae  003d 003d                if-lez
+000b0  7052 1132                iget  # FIELD Landroid/support/v7/widget/g0;->g:I
+000b2  1338 0009                if-eqz
+000b4  a552 1259                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+000b6  a252 125a                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+000b8  25b0                     op_b0
+000b9  50b0                     op_b0
+000ba  0b28                     goto
+000bb  a252 1259                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+000bd  02b0                     op_b0
+000be  a552 125a                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+000c0  52b0                     op_b0
+000c1  2071 2ccb 0020           invoke-static  # CALL Ljava/lang/Math;->max(I,I)I
+000c4  000a                     move-result
+000c5  7059 1132                iput  # FIELD Landroid/support/v7/widget/g0;->g:I
+000c7  0438 0015                if-eqz
+000c9  0012                     const/4
+000ca  2071 1d38 0000           invoke-static  # CALL Landroid/view/View$MeasureSpec;->makeMeasureSpec(I,I)I
+000cd  020a                     move-result
+000ce  306e 1d90 0226           invoke-virtual  # CALL Landroid/view/View;->measure(I,I)V
+000d1  2202 0001                op_02
+000d3  2002 0003                op_02
+000d5  2402 0004                op_02
+000d7  6307                     op_07
+000d8  1e13 fffe                const/16
+000da  0029 008b                goto/16
+000dc  2202 0001                op_02
+000de  2002 0003                op_02
+000e0  2402 0004                op_02
+000e2  6307                     op_07
+000e3  1802 0012                op_02
+000e5  0115 4000                const/high16
+000e7  1e13 fffe                const/16
+000e9  0029 007e                goto/16
+000eb  a052 125c                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->width:I
+000ed  0039 000d                if-nez
+000ef  a052 112b                iget  # FIELD Landroid/support/v7/widget/g0$a;->a:F
+000f1  002d 1400                op_2d
+000f3  003d 0007                if-lez
+000f5  e512                     const/4
+000f6  a559 125c                iput  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->width:I
+000f8  0212                     const/4
+000f9  0428                     goto
+000fa  e512                     const/4
+000fb  0215 8000                const/high16
+000fd  002d 141f                op_2d
+000ff  0039 0007                if-nez
+00101  7052 1132                iget  # FIELD Landroid/support/v7/widget/g0;->g:I
+00103  1d02 0000                op_02
+00105  0328                     goto
+00106  1d13 0000                const/16
+00108  2113 0000                const/16
+0010a  0008 0026                op_08
+0010c  2202 0001                op_02
+0010e  6107                     op_07
+0010f  2302 0002                op_02
+00111  0202 0022                op_02
+00113  2002 0003                op_02
+00115  0302 0027                op_02
+00117  2402 0004                op_02
+00119  0402 001d                op_02
+0011b  1d02 0005                op_02
+0011d  f912                     const/4
+0011e  0502 0028                op_02
+00120  1e02 001d                op_02
+00122  0915 8000                const/high16
+00124  1d08 0006                op_08
+00126  0602 0021                op_02
+00128  0774 18c8 0000           invoke-virtual/range  # CALL Landroid/support/v7/widget/g0;->a(Landroid/view/View;,I,I,I,I,I)V
+0012b  0002 0023                op_02
+0012d  9032 0004                if-eq
+0012f  a059 125c                iput  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->width:I
+00131  0174 1d61 001d           invoke-virtual/range  # CALL Landroid/view/View;->getMeasuredWidth()I
+00134  000a                     move-result
+00135  1338 0013                if-eqz
+00137  7152 1132                iget  # FIELD Landroid/support/v7/widget/g0;->g:I
+00139  a252 1259                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+0013b  02b0                     op_b0
+0013c  a352 125a                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+0013e  32b0                     op_b0
+0013f  0308 001d                op_08
+00141  206e 18c9 0037           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->b(Landroid/view/View;)I
+00144  040a                     move-result
+00145  42b0                     op_b0
+00146  21b0                     op_b0
+00147  1628                     goto
+00148  0308 001d                op_08
+0014a  7152 1132                iget  # FIELD Landroid/support/v7/widget/g0;->g:I
+0014c  0290 0001                int-add
+0014e  a452 1259                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+00150  42b0                     op_b0
+00151  a452 125a                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+00153  42b0                     op_b0
+00154  206e 18c9 0037           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->b(Landroid/view/View;)I
+00157  040a                     move-result
+00158  42b0                     op_b0
+00159  2071 2ccb 0021           invoke-static  # CALL Ljava/lang/Math;->max(I,I)I
+0015c  010a                     move-result
+0015d  7159 1132                iput  # FIELD Landroid/support/v7/widget/g0;->g:I
+0015f  2038 0006                if-eqz
+00161  2071 2ccb 00e0           invoke-static  # CALL Ljava/lang/Math;->max(I,I)I
+00164  0e0a                     move-result
+00165  0115 4000                const/high16
+00167  1d32 000c                if-eq
+00169  a052 1258                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->height:I
+0016b  f212                     const/4
+0016c  2033 0007                if-ne
+0016e  0002 0012                op_02
+00170  1b02 0000                op_02
+00172  0228                     goto
+00173  0012                     const/4
+00174  a252 125b                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+00176  a452 1257                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+00178  42b0                     op_b0
+00179  106e 1d5f 0003           invoke-virtual  # CALL Landroid/view/View;->getMeasuredHeight()I
+0017c  040a                     move-result
+0017d  24b0                     op_b0
+0017e  106e 1d60 0003           invoke-virtual  # CALL Landroid/view/View;->getMeasuredState()I
+00181  050a                     move-result
+00182  0602 0019                op_02
+00184  2071 1d43 0056           invoke-static  # CALL Landroid/view/View;->combineMeasuredStates(I,I)I
+00187  190a                     move-result
+00188  2438 0029                if-eqz
+0018a  106e 1d4f 0003           invoke-virtual  # CALL Landroid/view/View;->getBaseline()I
+0018d  050a                     move-result
+0018e  f612                     const/4
+0018f  6532 0022                if-eq
+00191  a652 112c                iget  # FIELD Landroid/support/v7/widget/g0$a;->b:I
+00193  063b 0004                if-gez
+00195  7652 1131                iget  # FIELD Landroid/support/v7/widget/g0;->f:I
+00197  06dd 7006                op_dd
+00199  4912                     const/4
+0019a  96b9                     op_b9
+0019b  06dd fe06                op_dd
+0019d  06e1 0106                op_e1
+0019f  0944 060f                aget
+001a1  2071 2ccb 0059           invoke-static  # CALL Ljava/lang/Math;->max(I,I)I
+001a4  090a                     move-result
+001a5  094b 060f                aput
+001a7  0944 061c                aget
+001a9  0591 0504                int-sub
+001ab  2071 2ccb 0059           invoke-static  # CALL Ljava/lang/Math;->max(I,I)I
+001ae  050a                     move-result
+001af  054b 061c                aput
+001b1  0502 0015                op_02
+001b3  2071 2ccb 0045           invoke-static  # CALL Ljava/lang/Math;->max(I,I)I
+001b6  150a                     move-result
+001b7  1a38 000a                if-eqz
+001b9  a552 1258                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->height:I
+001bb  f612                     const/4
+001bc  6533 0005                if-ne
+001be  1a02 0012                op_02
+001c0  0328                     goto
+001c1  1a13 0000                const/16
+001c3  a552 112b                iget  # FIELD Landroid/support/v7/widget/g0$a;->a:F
+001c5  052d 1405                op_2d
+001c7  053d 000d                if-lez
+001c9  0038 0003                if-eqz
+001cb  0228                     goto
+001cc  4201                     op_01
+001cd  0a02 0017                op_02
+001cf  2071 2ccb 002a           invoke-static  # CALL Ljava/lang/Math;->max(I,I)I
+001d2  170a                     move-result
+001d3  0f28                     goto
+001d4  0a02 0017                op_02
+001d6  0038 0003                if-eqz
+001d8  0228                     goto
+001d9  4201                     op_01
+001da  0402 0016                op_02
+001dc  2071 2ccb 0024           invoke-static  # CALL Ljava/lang/Math;->max(I,I)I
+001df  160a                     move-result
+001e0  1702 000a                op_02
+001e2  0a02 0022                op_02
+001e4  306e 18c1 0a37           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->a(Landroid/view/View;,I)I
+001e7  000a                     move-result
+001e8  a0b0                     op_b0
+001e9  0201                     op_01
+001ea  0002 001f                op_02
+001ec  02d8 0102                op_d8
+001ee  0902 0028                op_02
+001f0  0608 001c                op_08
+001f2  0302 0020                op_02
+001f4  0402 0024                op_02
+001f6  f512                     const/4
+001f7  0a12                     const/4
+001f8  2502 0002                op_02
+001fa  1201                     op_01
+001fb  0102 0025                op_02
+001fd  0029 fe65                goto/16
+001ff  2101                     op_01
+00200  2002 0003                op_02
+00202  2402 0004                op_02
+00204  0202 0015                op_02
+00206  0402 0016                op_02
+00208  0a02 0017                op_02
+0020a  0602 0019                op_02
+0020c  0915 8000                const/high16
+0020e  1e13 fffe                const/16
+00210  7352 1132                iget  # FIELD Landroid/support/v7/widget/g0;->g:I
+00212  033d 000f                if-lez
+00214  206e 18ce 00b7           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->b(I)Z
+00217  030a                     move-result
+00218  0338 0009                if-eqz
+0021a  7352 1132                iget  # FIELD Landroid/support/v7/widget/g0;->g:I
+0021c  7152 1138                iget  # FIELD Landroid/support/v7/widget/g0;->m:I
+0021e  13b0                     op_b0
+0021f  7359 1132                iput  # FIELD Landroid/support/v7/widget/g0;->g:I
+00221  0144 120f                aget
+00223  f312                     const/4
+00224  3133 0014                if-ne
+00226  0112                     const/4
+00227  0544 010f                aget
+00229  3533 000f                if-ne
+0022b  0144 110f                aget
+0022d  3133 000b                if-ne
+0022f  0144 100f                aget
+00231  3132 0003                if-eq
+00233  0528                     goto
+00234  2101                     op_01
+00235  1702 0006                op_02
+00237  3228                     goto
+00238  0144 100f                aget
+0023a  0312                     const/4
+0023b  0544 030f                aget
+0023d  0944 120f                aget
+0023f  0344 110f                aget
+00241  2071 2ccb 0039           invoke-static  # CALL Ljava/lang/Math;->max(I,I)I
+00244  030a                     move-result
+00245  2071 2ccb 0035           invoke-static  # CALL Ljava/lang/Math;->max(I,I)I
+00248  030a                     move-result
+00249  2071 2ccb 0031           invoke-static  # CALL Ljava/lang/Math;->max(I,I)I
+0024c  010a                     move-result
+0024d  0344 101c                aget
+0024f  0512                     const/4
+00250  0944 051c                aget
+00252  0544 121c                aget
+00254  1702 0006                op_02
+00256  0644 111c                aget
+00258  2071 2ccb 0065           invoke-static  # CALL Ljava/lang/Math;->max(I,I)I
+0025b  050a                     move-result
+0025c  2071 2ccb 0059           invoke-static  # CALL Ljava/lang/Math;->max(I,I)I
+0025f  050a                     move-result
+00260  2071 2ccb 0053           invoke-static  # CALL Ljava/lang/Math;->max(I,I)I
+00263  030a                     move-result
+00264  31b0                     op_b0
+00265  2071 2ccb 0012           invoke-static  # CALL Ljava/lang/Math;->max(I,I)I
+00268  010a                     move-result
+00269  2038 0061                if-eqz
+0026b  0215 8000                const/high16
+0026d  2c32 0004                if-eq
+0026f  0c39 005b                if-nez
+00271  0212                     const/4
+00272  7259 1132                iput  # FIELD Landroid/support/v7/widget/g0;->g:I
+00274  0212                     const/4
+00275  b235 0055                if-ge
+00277  206e 18c2 0027           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->a(I)Landroid/view/View;
+0027a  030c                     move-result-object
+0027b  0339 000c                if-nez
+0027d  7352 1132                iget  # FIELD Landroid/support/v7/widget/g0;->g:I
+0027f  206e 18cf 0027           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->c(I)I
+00282  050a                     move-result
+00283  53b0                     op_b0
+00284  7359 1132                iput  # FIELD Landroid/support/v7/widget/g0;->g:I
+00286  0e28                     goto
+00287  106e 1d7c 0003           invoke-virtual  # CALL Landroid/view/View;->getVisibility()I
+0028a  050a                     move-result
+0028b  0613 0008                const/16
+0028d  6533 000a                if-ne
+0028f  306e 18c1 0237           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->a(Landroid/view/View;,I)I
+00292  030a                     move-result
+00293  32b0                     op_b0
+00294  1602 0001                op_02
+00296  2f28                     goto
+00297  106e 1d5b 0003           invoke-virtual  # CALL Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+0029a  050c                     move-result-object
+0029b  051f 038a                check-cast  # TYPE Landroid/support/v7/widget/g0$a;
+0029d  7652 1132                iget  # FIELD Landroid/support/v7/widget/g0;->g:I
+0029f  1338 0011                if-eqz
+002a1  5952 1259                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+002a3  e9b0                     op_b0
+002a4  5552 125a                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+002a6  59b0                     op_b0
+002a7  206e 18c9 0037           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->b(Landroid/view/View;)I
+002aa  030a                     move-result
+002ab  39b0                     op_b0
+002ac  96b0                     op_b0
+002ad  7659 1132                iput  # FIELD Landroid/support/v7/widget/g0;->g:I
+002af  e528                     goto
+002b0  0990 0e06                int-add
+002b2  1602 0001                op_02
+002b4  5152 1259                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+002b6  19b0                     op_b0
+002b7  5152 125a                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+002b9  19b0                     op_b0
+002ba  206e 18c9 0037           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->b(Landroid/view/View;)I
+002bd  010a                     move-result
+002be  19b0                     op_b0
+002bf  2071 2ccb 0096           invoke-static  # CALL Ljava/lang/Math;->max(I,I)I
+002c2  010a                     move-result
+002c3  7159 1132                iput  # FIELD Landroid/support/v7/widget/g0;->g:I
+002c5  02d8 0102                op_d8
+002c7  0102 0016                op_02
+002c9  ac28                     goto
+002ca  1602 0001                op_02
+002cc  7152 1132                iget  # FIELD Landroid/support/v7/widget/g0;->g:I
+002ce  0174 1e03 0026           invoke-virtual/range  # CALL Landroid/view/ViewGroup;->getPaddingLeft()I
+002d1  020a                     move-result
+002d2  0174 1e04 0026           invoke-virtual/range  # CALL Landroid/view/ViewGroup;->getPaddingRight()I
+002d5  030a                     move-result
+002d6  32b0                     op_b0
+002d7  21b0                     op_b0
+002d8  7159 1132                iput  # FIELD Landroid/support/v7/widget/g0;->g:I
+002da  0174 1e0a 0026           invoke-virtual/range  # CALL Landroid/view/ViewGroup;->getSuggestedMinimumWidth()I
+002dd  020a                     move-result
+002de  2071 2ccb 0021           invoke-static  # CALL Ljava/lang/Math;->max(I,I)I
+002e1  010a                     move-result
+002e2  0212                     const/4
+002e3  3071 1da4 0281           invoke-static  # CALL Landroid/view/View;->resolveSizeAndState(I,I,I)I
+002e6  010a                     move-result
+002e7  0214 ffff 00ff           const
+002ea  12b5                     op_b5
+002eb  7352 1132                iget  # FIELD Landroid/support/v7/widget/g0;->g:I
+002ed  32b1                     op_b1
+002ee  1839 004d                if-nez
+002f0  0238 0007                if-eqz
+002f2  052d 1400                op_2d
+002f4  053d 0003                if-lez
+002f6  4528                     goto
+002f7  2071 2ccb 00a4           invoke-static  # CALL Ljava/lang/Math;->max(I,I)I
+002fa  000a                     move-result
+002fb  2038 0038                if-eqz
+002fd  0215 4000                const/high16
+002ff  2c32 0034                if-eq
+00301  0a12                     const/4
+00302  ba35 0031                if-ge
+00304  206e 18c2 00a7           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->a(I)Landroid/view/View;
+00307  020c                     move-result-object
+00308  0238 0028                if-eqz
+0030a  106e 1d7c 0002           invoke-virtual  # CALL Landroid/view/View;->getVisibility()I
+0030d  040a                     move-result
+0030e  0513 0008                const/16
+00310  5433 0003                if-ne
+00312  1e28                     goto
+00313  106e 1d5b 0002           invoke-virtual  # CALL Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+00316  040c                     move-result-object
+00317  041f 038a                check-cast  # TYPE Landroid/support/v7/widget/g0$a;
+00319  4452 112b                iget  # FIELD Landroid/support/v7/widget/g0$a;->a:F
+0031b  042d 1404                op_2d
+0031d  043d 0013                if-lez
+0031f  0415 4000                const/high16
+00321  2071 1d38 004e           invoke-static  # CALL Landroid/view/View$MeasureSpec;->makeMeasureSpec(I,I)I
+00324  050a                     move-result
+00325  106e 1d5f 0002           invoke-virtual  # CALL Landroid/view/View;->getMeasuredHeight()I
+00328  060a                     move-result
+00329  2071 1d38 0046           invoke-static  # CALL Landroid/view/View$MeasureSpec;->makeMeasureSpec(I,I)I
+0032c  060a                     move-result
+0032d  306e 1d90 0652           invoke-virtual  # CALL Landroid/view/View;->measure(I,I)V
+00330  0ad8 010a                op_d8
+00332  d028                     goto
+00333  0202 0028                op_02
+00335  1902 000b                op_02
+00337  0302 0016                op_02
+00339  0029 0192                goto/16
+0033b  7552 1133                iget  # FIELD Landroid/support/v7/widget/g0;->h:F
+0033d  062d 1405                op_2d
+0033f  063d 0003                if-lez
+00341  5001                     op_01
+00342  f512                     const/4
+00343  054b 100f                aput
+00345  054b 110f                aput
+00347  054b 120f                aput
+00349  0612                     const/4
+0034a  054b 060f                aput
+0034c  054b 101c                aput
+0034e  054b 111c                aput
+00350  054b 121c                aput
+00352  054b 061c                aput
+00354  7659 1132                iput  # FIELD Landroid/support/v7/widget/g0;->g:I
+00356  4601                     op_01
+00357  5401                     op_01
+00358  0902 0017                op_02
+0035a  0a12                     const/4
+0035b  ba35 0117                if-ge
+0035d  206e 18c2 00a7           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->a(I)Landroid/view/View;
+00360  0e0c                     move-result-object
+00361  0e38 0102                if-eqz
+00363  106e 1d7c 000e           invoke-virtual  # CALL Landroid/view/View;->getVisibility()I
+00366  050a                     move-result
+00367  0313 0008                const/16
+00369  3533 0004                if-ne
+0036b  0029 00f8                goto/16
+0036d  106e 1d5b 000e           invoke-virtual  # CALL Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+00370  050c                     move-result-object
+00371  051f 038a                check-cast  # TYPE Landroid/support/v7/widget/g0$a;
+00373  5352 112b                iget  # FIELD Landroid/support/v7/widget/g0$a;->a:F
+00375  172d 1403                op_2d
+00377  173d 0055                if-lez
+00379  2882                     op_82
+0037a  38c8                     op_c8
+0037b  08c9                     op_c9
+0037c  8887                     op_87
+0037d  30c7                     op_c7
+0037e  82b1                     op_b1
+0037f  0174 1e06 0026           invoke-virtual/range  # CALL Landroid/view/ViewGroup;->getPaddingTop()I
+00382  030a                     move-result
+00383  0174 1e01 0026           invoke-virtual/range  # CALL Landroid/view/ViewGroup;->getPaddingBottom()I
+00386  170a                     move-result
+00387  0390 1703                int-add
+00389  1702 0000                op_02
+0038b  5052 125b                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+0038d  03b0                     op_b0
+0038e  5052 1257                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+00390  03b0                     op_b0
+00391  5052 1258                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->height:I
+00393  1802 0002                op_02
+00395  1902 000b                op_02
+00397  fb12                     const/4
+00398  0202 0028                op_02
+0039a  3071 1df7 0032           invoke-static  # CALL Landroid/view/ViewGroup;->getChildMeasureSpec(I,I,I)I
+0039d  000a                     move-result
+0039e  5352 125c                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->width:I
+003a0  0339 000a                if-nez
+003a2  0315 4000                const/high16
+003a4  3c32 0003                if-eq
+003a6  0628                     goto
+003a7  083d 000d                if-lez
+003a9  0c28                     goto
+003aa  0315 4000                const/high16
+003ac  106e 1d61 000e           invoke-virtual  # CALL Landroid/view/View;->getMeasuredWidth()I
+003af  1d0a                     move-result
+003b0  0890 081d                int-add
+003b2  083b 0003                if-gez
+003b4  0812                     const/4
+003b5  2071 1d38 0038           invoke-static  # CALL Landroid/view/View$MeasureSpec;->makeMeasureSpec(I,I)I
+003b8  080a                     move-result
+003b9  306e 1d90 008e           invoke-virtual  # CALL Landroid/view/View;->measure(I,I)V
+003bc  106e 1d60 000e           invoke-virtual  # CALL Landroid/view/View;->getMeasuredState()I
+003bf  000a                     move-result
+003c0  0315 ff00                const/high16
+003c2  30b5                     op_b5
+003c3  2071 1d43 0009           invoke-static  # CALL Landroid/view/View;->combineMeasuredStates(I,I)I
+003c6  090a                     move-result
+003c7  0002 0017                op_02
+003c9  0302 0018                op_02
+003cb  0728                     goto
+003cc  2301                     op_01
+003cd  1902 000b                op_02
+003cf  fb12                     const/4
+003d0  0202 0028                op_02
+003d2  7852 1132                iget  # FIELD Landroid/support/v7/widget/g0;->g:I
+003d4  1338 001b                if-eqz
+003d6  106e 1d61 000e           invoke-virtual  # CALL Landroid/view/View;->getMeasuredWidth()I
+003d9  170a                     move-result
+003da  5b52 1259                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+003dc  1790 0b17                int-add
+003de  5b52 125a                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+003e0  1790 0b17                int-add
+003e2  206e 18c9 00e7           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->b(Landroid/view/View;)I
+003e5  0b0a                     move-result
+003e6  1790 0b17                int-add
+003e8  0890 1708                int-add
+003ea  7859 1132                iput  # FIELD Landroid/support/v7/widget/g0;->g:I
+003ec  1702 0000                op_02
+003ee  1928                     goto
+003ef  106e 1d61 000e           invoke-virtual  # CALL Landroid/view/View;->getMeasuredWidth()I
+003f2  0b0a                     move-result
+003f3  8bb0                     op_b0
+003f4  1702 0000                op_02
+003f6  5052 1259                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+003f8  0bb0                     op_b0
+003f9  5052 125a                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+003fb  0bb0                     op_b0
+003fc  206e 18c9 00e7           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->b(Landroid/view/View;)I
+003ff  000a                     move-result
+00400  0bb0                     op_b0
+00401  2071 2ccb 00b8           invoke-static  # CALL Ljava/lang/Math;->max(I,I)I
+00404  000a                     move-result
+00405  7059 1132                iput  # FIELD Landroid/support/v7/widget/g0;->g:I
+00407  0015 4000                const/high16
+00409  0d32 000a                if-eq
+0040b  5052 1258                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->height:I
+0040d  f812                     const/4
+0040e  8033 0005                if-ne
+00410  0002 0012                op_02
+00412  0228                     goto
+00413  0012                     const/4
+00414  5852 125b                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+00416  5b52 1257                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+00418  b8b0                     op_b0
+00419  106e 1d5f 000e           invoke-virtual  # CALL Landroid/view/View;->getMeasuredHeight()I
+0041c  0b0a                     move-result
+0041d  8bb0                     op_b0
+0041e  2071 2ccb 00b4           invoke-static  # CALL Ljava/lang/Math;->max(I,I)I
+00421  040a                     move-result
+00422  0038 0003                if-eqz
+00424  0228                     goto
+00425  b801                     op_01
+00426  2071 2ccb 0086           invoke-static  # CALL Ljava/lang/Math;->max(I,I)I
+00429  000a                     move-result
+0042a  1a38 000a                if-eqz
+0042c  5652 1258                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->height:I
+0042e  f812                     const/4
+0042f  8633 0006                if-ne
+00431  0602 0012                op_02
+00433  0328                     goto
+00434  f812                     const/4
+00435  0612                     const/4
+00436  2438 0027                if-eqz
+00438  106e 1d4f 000e           invoke-virtual  # CALL Landroid/view/View;->getBaseline()I
+0043b  0e0a                     move-result
+0043c  8e32 0021                if-eq
+0043e  5552 112c                iget  # FIELD Landroid/support/v7/widget/g0$a;->b:I
+00440  053b 0004                if-gez
+00442  7552 1131                iget  # FIELD Landroid/support/v7/widget/g0;->f:I
+00444  05dd 7005                op_dd
+00446  4812                     const/4
+00447  85b9                     op_b9
+00448  05dd fe05                op_dd
+0044a  05e1 0105                op_e1
+0044c  0844 050f                aget
+0044e  2071 2ccb 00e8           invoke-static  # CALL Ljava/lang/Math;->max(I,I)I
+00451  080a                     move-result
+00452  084b 050f                aput
+00454  0844 051c                aget
+00456  ebb1                     op_b1
+00457  2071 2ccb 00b8           invoke-static  # CALL Ljava/lang/Math;->max(I,I)I
+0045a  080a                     move-result
+0045b  084b 051c                aput
+0045d  1a02 0006                op_02
+0045f  0601                     op_01
+00460  0002 0017                op_02
+00462  0628                     goto
+00463  2301                     op_01
+00464  1902 000b                op_02
+00466  0202 0028                op_02
+00468  0ad8 010a                op_d8
+0046a  0802 0027                op_02
+0046c  3201                     op_01
+0046d  0b02 0019                op_02
+0046f  f512                     const/4
+00470  0029 feeb                goto/16
+00472  0202 0028                op_02
+00474  1902 000b                op_02
+00476  7052 1132                iget  # FIELD Landroid/support/v7/widget/g0;->g:I
+00478  0174 1e03 0026           invoke-virtual/range  # CALL Landroid/view/ViewGroup;->getPaddingLeft()I
+0047b  030a                     move-result
+0047c  0174 1e04 0026           invoke-virtual/range  # CALL Landroid/view/ViewGroup;->getPaddingRight()I
+0047f  050a                     move-result
+00480  53b0                     op_b0
+00481  30b0                     op_b0
+00482  7059 1132                iput  # FIELD Landroid/support/v7/widget/g0;->g:I
+00484  0044 120f                aget
+00486  f312                     const/4
+00487  3033 0012                if-ne
+00489  0012                     const/4
+0048a  0544 000f                aget
+0048c  3533 000d                if-ne
+0048e  0044 110f                aget
+00490  3033 0009                if-ne
+00492  0044 100f                aget
+00494  3032 0003                if-eq
+00496  0328                     goto
+00497  4001                     op_01
+00498  2f28                     goto
+00499  0044 100f                aget
+0049b  0312                     const/4
+0049c  0544 030f                aget
+0049e  0844 120f                aget
+004a0  0a44 110f                aget
+004a2  2071 2ccb 00a8           invoke-static  # CALL Ljava/lang/Math;->max(I,I)I
+004a5  080a                     move-result
+004a6  2071 2ccb 0085           invoke-static  # CALL Ljava/lang/Math;->max(I,I)I
+004a9  050a                     move-result
+004aa  2071 2ccb 0050           invoke-static  # CALL Ljava/lang/Math;->max(I,I)I
+004ad  000a                     move-result
+004ae  0544 101c                aget
+004b0  0344 031c                aget
+004b2  0844 121c                aget
+004b4  0a44 111c                aget
+004b6  2071 2ccb 00a8           invoke-static  # CALL Ljava/lang/Math;->max(I,I)I
+004b9  080a                     move-result
+004ba  2071 2ccb 0083           invoke-static  # CALL Ljava/lang/Math;->max(I,I)I
+004bd  030a                     move-result
+004be  2071 2ccb 0035           invoke-static  # CALL Ljava/lang/Math;->max(I,I)I
+004c1  030a                     move-result
+004c2  30b0                     op_b0
+004c3  2071 2ccb 0004           invoke-static  # CALL Ljava/lang/Math;->max(I,I)I
+004c6  000a                     move-result
+004c7  0301                     op_01
+004c8  6001                     op_01
+004c9  1702 0009                op_02
+004cb  1a39 0007                if-nez
+004cd  0415 4000                const/high16
+004cf  4d32 0003                if-eq
+004d1  0228                     goto
+004d2  3001                     op_01
+004d3  0174 1e06 0026           invoke-virtual/range  # CALL Landroid/view/ViewGroup;->getPaddingTop()I
+004d6  030a                     move-result
+004d7  0174 1e01 0026           invoke-virtual/range  # CALL Landroid/view/ViewGroup;->getPaddingBottom()I
+004da  040a                     move-result
+004db  43b0                     op_b0
+004dc  30b0                     op_b0
+004dd  0174 1e09 0026           invoke-virtual/range  # CALL Landroid/view/ViewGroup;->getSuggestedMinimumHeight()I
+004e0  030a                     move-result
+004e1  2071 2ccb 0030           invoke-static  # CALL Ljava/lang/Math;->max(I,I)I
+004e4  000a                     move-result
+004e5  0315 ff00                const/high16
+004e7  0395 0317                int-and
+004e9  31b6                     op_b6
+004ea  03e0 1017                op_e0
+004ec  3071 1da4 0320           invoke-static  # CALL Landroid/view/View;->resolveSizeAndState(I,I,I)I
+004ef  000a                     move-result
+004f0  306e 1e38 0017           invoke-virtual  # CALL Landroid/view/ViewGroup;->setMeasuredDimension(I,I)V
+004f3  1b38 0009                if-eqz
+004f5  0002 0027                op_02
+004f7  0102 0019                op_02
+004f9  3070 18d0 0017           invoke-direct  # CALL Landroid/support/v7/widget/g0;->c(I,I)V
+004fc  000e                     return-void
+
+### Landroid/support/v7/widget/g0;->a(I,I,I,I)V  [access=0x0, regs=29, ins=5, outs=6, code_off=0xe5d48]
+00000  0608 0018                op_08
+00002  0177 1b5c 0018           invoke-static/range  # CALL Landroid/support/v7/widget/z0;->a(Landroid/view/View;)Z
+00005  000a                     move-result
+00006  0174 1e06 0018           invoke-virtual/range  # CALL Landroid/view/ViewGroup;->getPaddingTop()I
+00009  070a                     move-result
+0000a  0191 1a1c                int-sub
+0000c  0174 1e01 0018           invoke-virtual/range  # CALL Landroid/view/ViewGroup;->getPaddingBottom()I
+0000f  020a                     move-result
+00010  0891 0201                int-sub
+00012  71b1                     op_b1
+00013  0174 1e01 0018           invoke-virtual/range  # CALL Landroid/view/ViewGroup;->getPaddingBottom()I
+00016  020a                     move-result
+00017  0991 0201                int-sub
+00019  0174 18e1 0018           invoke-virtual/range  # CALL Landroid/support/v7/widget/g0;->getVirtualChildCount()I
+0001c  0a0a                     move-result
+0001d  6152 1131                iget  # FIELD Landroid/support/v7/widget/g0;->f:I
+0001f  0214 0007 0080           const
+00022  12b5                     op_b5
+00023  0bdd 7001                op_dd
+00025  6c55 112d                iget-boolean  # FIELD Landroid/support/v7/widget/g0;->b:Z
+00027  6d54 1135                iget-object  # FIELD Landroid/support/v7/widget/g0;->j:[I
+00029  6e54 1136                iget-object  # FIELD Landroid/support/v7/widget/g0;->k:[I
+0002b  0177 253f 0018           invoke-static/range  # CALL Lb/b/c/g/q;->d(Landroid/view/View;)I
+0002e  010a                     move-result
+0002f  2071 24eb 0012           invoke-static  # CALL Lb/b/c/g/d;->a(I,I)I
+00032  010a                     move-result
+00033  2f12                     const/4
+00034  1512                     const/4
+00035  5132 0016                if-eq
+00037  5212                     const/4
+00038  2132 0007                if-eq
+0003a  0174 1e03 0018           invoke-virtual/range  # CALL Landroid/view/ViewGroup;->getPaddingLeft()I
+0003d  010a                     move-result
+0003e  1828                     goto
+0003f  0174 1e03 0018           invoke-virtual/range  # CALL Landroid/view/ViewGroup;->getPaddingLeft()I
+00042  010a                     move-result
+00043  0190 1b01                int-add
+00045  0191 1901                int-sub
+00047  6252 1132                iget  # FIELD Landroid/support/v7/widget/g0;->g:I
+00049  21b1                     op_b1
+0004a  0c28                     goto
+0004b  0174 1e03 0018           invoke-virtual/range  # CALL Landroid/view/ViewGroup;->getPaddingLeft()I
+0004e  010a                     move-result
+0004f  0291 191b                int-sub
+00051  6352 1132                iget  # FIELD Landroid/support/v7/widget/g0;->g:I
+00053  32b1                     op_b1
+00054  f2b3                     op_b3
+00055  21b0                     op_b0
+00056  0212                     const/4
+00057  0038 0009                if-eqz
+00059  00d8 ff0a                op_d8
+0005b  1002 0000                op_02
+0005d  1113 ffff                const/16
+0005f  0528                     goto
+00060  1002 0002                op_02
+00062  1102 0005                op_02
+00064  2301                     op_01
+00065  a335 00e3                if-ge
+00067  0092 0311                int-mul
+00069  0290 0010                int-add
+0006b  206e 18c2 0026           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->a(I)Landroid/view/View;
+0006e  000c                     move-result-object
+0006f  0039 0011                if-nez
+00071  206e 18cf 0026           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->c(I)I
+00074  000a                     move-result
+00075  01b0                     op_b0
+00076  1502 0005                op_02
+00078  1602 0007                op_02
+0007a  1302 000a                op_02
+0007c  1402 000b                op_02
+0007e  0029 00bb                goto/16
+00080  106e 1d7c 0000           invoke-virtual  # CALL Landroid/view/View;->getVisibility()I
+00083  050a                     move-result
+00084  0f13 0008                const/16
+00086  f532 00a9                if-eq
+00088  106e 1d61 0000           invoke-virtual  # CALL Landroid/view/View;->getMeasuredWidth()I
+0008b  0f0a                     move-result
+0008c  106e 1d5f 0000           invoke-virtual  # CALL Landroid/view/View;->getMeasuredHeight()I
+0008f  050a                     move-result
+00090  106e 1d5b 0000           invoke-virtual  # CALL Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+00093  120c                     move-result-object
+00094  0408 0012                op_08
+00096  041f 038a                check-cast  # TYPE Landroid/support/v7/widget/g0$a;
+00098  1202 0003                op_02
+0009a  0c38 000e                if-eqz
+0009c  4352 1258                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->height:I
+0009e  1302 000a                op_02
+000a0  fa12                     const/4
+000a1  a332 0009                if-eq
+000a3  106e 1d4f 0000           invoke-virtual  # CALL Landroid/view/View;->getBaseline()I
+000a6  0a0a                     move-result
+000a7  0428                     goto
+000a8  1302 000a                op_02
+000aa  fa12                     const/4
+000ab  4352 112c                iget  # FIELD Landroid/support/v7/widget/g0$a;->b:I
+000ad  033b 0003                if-gez
+000af  b301                     op_01
+000b0  03dd 7003                op_dd
+000b2  1402 000b                op_02
+000b4  0b13 0010                const/16
+000b6  b332 0035                if-eq
+000b8  0b13 0030                const/16
+000ba  b332 001f                if-eq
+000bc  0b13 0050                const/16
+000be  b332 0005                if-eq
+000c0  7301                     op_01
+000c1  fb12                     const/4
+000c2  2628                     goto
+000c3  0391 0508                int-sub
+000c5  4b52 1257                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+000c7  b3b1                     op_b1
+000c8  fb12                     const/4
+000c9  ba32 001f                if-eq
+000cb  106e 1d5f 0000           invoke-virtual  # CALL Landroid/view/View;->getMeasuredHeight()I
+000ce  150a                     move-result
+000cf  1591 0a15                int-sub
+000d1  2a12                     const/4
+000d2  1644 0a0e                aget
+000d4  1691 1516                int-sub
+000d6  0391 1603                int-sub
+000d8  1028                     goto
+000d9  fb12                     const/4
+000da  4352 125b                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+000dc  73b0                     op_b0
+000dd  ba32 000b                if-eq
+000df  1513 0001                const/16
+000e1  1644 150d                aget
+000e3  1691 0a16                int-sub
+000e5  0390 1603                int-add
+000e7  1228                     goto
+000e8  1513 0001                const/16
+000ea  0f28                     goto
+000eb  fb12                     const/4
+000ec  1513 0001                const/16
+000ee  0391 0509                int-sub
+000f0  2a12                     const/4
+000f1  a3b3                     op_b3
+000f2  73b0                     op_b0
+000f3  4a52 125b                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+000f5  a3b0                     op_b0
+000f6  4a52 1257                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+000f8  a3b1                     op_b1
+000f9  206e 18ce 0026           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->b(I)Z
+000fc  0a0a                     move-result
+000fd  0a38 0005                if-eqz
+000ff  6a52 1138                iget  # FIELD Landroid/support/v7/widget/g0;->m:I
+00101  a1b0                     op_b0
+00102  4a52 1259                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+00104  1ab0                     op_b0
+00105  206e 18c0 0006           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->a(Landroid/view/View;)I
+00108  010a                     move-result
+00109  1690 010a                int-add
+0010b  0107                     op_07
+0010c  0008 0018                op_08
+0010e  1908 0001                op_08
+00110  2b01                     op_01
+00111  0202 0016                op_02
+00113  1602 0007                op_02
+00115  1713 ffff                const/16
+00117  4707                     op_07
+00118  f401                     op_01
+00119  0676 18c7 0000           invoke-direct/range  # CALL Landroid/support/v7/widget/g0;->a(Landroid/view/View;,I,I,I,I)V
+0011c  7052 125a                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+0011e  0fb0                     op_b0
+0011f  0008 0019                op_08
+00121  206e 18c9 0006           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->b(Landroid/view/View;)I
+00124  010a                     move-result
+00125  1fb0                     op_b0
+00126  fab0                     op_b0
+00127  306e 18c1 0b06           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->a(Landroid/view/View;,I)I
+0012a  000a                     move-result
+0012b  0390 0012                int-add
+0012d  a101                     op_01
+0012e  0d28                     goto
+0012f  1202 0003                op_02
+00131  1602 0007                op_02
+00133  1302 000a                op_02
+00135  1402 000b                op_02
+00137  1513 0001                const/16
+00139  1713 ffff                const/16
+0013b  03d8 0103                op_d8
+0013d  0a02 0013                op_02
+0013f  0b02 0014                op_02
+00141  0502 0015                op_02
+00143  0702 0016                op_02
+00145  2f12                     const/4
+00146  0029 ff1f                goto/16
+00148  000e                     return-void
+
+### Landroid/support/v7/widget/g0;->a(Landroid/graphics/Canvas;)V  [access=0x0, regs=8, ins=2, outs=3, code_off=0xe59bc]
+00000  106e 18e1 0006           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->getVirtualChildCount()I
+00003  000a                     move-result
+00004  1071 1b5c 0006           invoke-static  # CALL Landroid/support/v7/widget/z0;->a(Landroid/view/View;)Z
+00007  010a                     move-result
+00008  0212                     const/4
+00009  0235 0036                if-ge
+0000b  206e 18c2 0026           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->a(I)Landroid/view/View;
+0000e  030c                     move-result-object
+0000f  0338 002d                if-eqz
+00011  106e 1d7c 0003           invoke-virtual  # CALL Landroid/view/View;->getVisibility()I
+00014  040a                     move-result
+00015  0513 0008                const/16
+00017  5432 0025                if-eq
+00019  206e 18ce 0026           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->b(I)Z
+0001c  040a                     move-result
+0001d  0438 001f                if-eqz
+0001f  106e 1d5b 0003           invoke-virtual  # CALL Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+00022  040c                     move-result-object
+00023  041f 038a                check-cast  # TYPE Landroid/support/v7/widget/g0$a;
+00025  0138 000a                if-eqz
+00027  106e 1d6b 0003           invoke-virtual  # CALL Landroid/view/View;->getRight()I
+0002a  030a                     move-result
+0002b  4452 125a                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+0002d  43b0                     op_b0
+0002e  0b28                     goto
+0002f  106e 1d5c 0003           invoke-virtual  # CALL Landroid/view/View;->getLeft()I
+00032  030a                     move-result
+00033  4452 1259                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+00035  43b1                     op_b1
+00036  6452 1138                iget  # FIELD Landroid/support/v7/widget/g0;->m:I
+00038  43b1                     op_b1
+00039  306e 18cd 0376           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->b(Landroid/graphics/Canvas;,I)V
+0003c  02d8 0102                op_d8
+0003e  cb28                     goto
+0003f  206e 18ce 0006           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->b(I)Z
+00042  020a                     move-result
+00043  0238 0037                if-eqz
+00045  00d8 ff00                op_d8
+00047  206e 18c2 0006           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->a(I)Landroid/view/View;
+0004a  000c                     move-result-object
+0004b  0039 0012                if-nez
+0004d  0138 0007                if-eqz
+0004f  106e 1e03 0006           invoke-virtual  # CALL Landroid/view/ViewGroup;->getPaddingLeft()I
+00052  000a                     move-result
+00053  2428                     goto
+00054  106e 1e0e 0006           invoke-virtual  # CALL Landroid/view/ViewGroup;->getWidth()I
+00057  000a                     move-result
+00058  106e 1e04 0006           invoke-virtual  # CALL Landroid/view/ViewGroup;->getPaddingRight()I
+0005b  010a                     move-result
+0005c  0f28                     goto
+0005d  106e 1d5b 0000           invoke-virtual  # CALL Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+00060  020c                     move-result-object
+00061  021f 038a                check-cast  # TYPE Landroid/support/v7/widget/g0$a;
+00063  0138 000d                if-eqz
+00065  106e 1d5c 0000           invoke-virtual  # CALL Landroid/view/View;->getLeft()I
+00068  000a                     move-result
+00069  2152 1259                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+0006b  10b1                     op_b1
+0006c  6152 1138                iget  # FIELD Landroid/support/v7/widget/g0;->m:I
+0006e  10b1                     op_b1
+0006f  0828                     goto
+00070  106e 1d6b 0000           invoke-virtual  # CALL Landroid/view/View;->getRight()I
+00073  000a                     move-result
+00074  2152 125a                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+00076  10b0                     op_b0
+00077  306e 18cd 0076           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->b(Landroid/graphics/Canvas;,I)V
+0007a  000e                     return-void
+
+### Landroid/support/v7/widget/g0;->a(Landroid/graphics/Canvas;,I)V  [access=0x0, regs=7, ins=3, outs=5, code_off=0xe5b90]
+00000  4054 1137                iget-object  # FIELD Landroid/support/v7/widget/g0;->l:Landroid/graphics/drawable/Drawable;
+00002  106e 1e03 0004           invoke-virtual  # CALL Landroid/view/ViewGroup;->getPaddingLeft()I
+00005  010a                     move-result
+00006  4252 113b                iget  # FIELD Landroid/support/v7/widget/g0;->p:I
+00008  21b0                     op_b0
+00009  106e 1e0e 0004           invoke-virtual  # CALL Landroid/view/ViewGroup;->getWidth()I
+0000c  020a                     move-result
+0000d  106e 1e04 0004           invoke-virtual  # CALL Landroid/view/ViewGroup;->getPaddingRight()I
+00010  030a                     move-result
+00011  32b1                     op_b1
+00012  4352 113b                iget  # FIELD Landroid/support/v7/widget/g0;->p:I
+00014  32b1                     op_b1
+00015  4352 1139                iget  # FIELD Landroid/support/v7/widget/g0;->n:I
+00017  63b0                     op_b0
+00018  536e 09f7 2610           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setBounds(I,I,I,I)V
+0001b  4454 1137                iget-object  # FIELD Landroid/support/v7/widget/g0;->l:Landroid/graphics/drawable/Drawable;
+0001d  206e 09d5 0054           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
+00020  000e                     return-void
+
+### Landroid/support/v7/widget/g0;->a(Landroid/view/View;,I,I,I,I,I)V  [access=0x0, regs=13, ins=7, outs=6, code_off=0xe6190]
+00000  6007                     op_07
+00001  7107                     op_07
+00002  9201                     op_01
+00003  a301                     op_01
+00004  b401                     op_01
+00005  c501                     op_01
+00006  0674 1e19 0000           invoke-virtual/range  # CALL Landroid/view/ViewGroup;->measureChildWithMargins(Landroid/view/View;,I,I,I,I)V
+00009  000e                     return-void
+
+### Landroid/support/v7/widget/g0;->b(Landroid/view/View;)I  [access=0x0, regs=2, ins=2, outs=0, code_off=0xe5820]
+00000  0012                     const/4
+00001  000f                     return
+
+### Landroid/support/v7/widget/g0;->b(I,I)V  [access=0x0, regs=36, ins=3, outs=7, code_off=0xe6bc0]
+00000  0708 0021                op_08
+00002  0802 0022                op_02
+00004  0902 0023                op_02
+00006  0a12                     const/4
+00007  7a59 1132                iput  # FIELD Landroid/support/v7/widget/g0;->g:I
+00009  0174 18e1 0021           invoke-virtual/range  # CALL Landroid/support/v7/widget/g0;->getVirtualChildCount()I
+0000c  0b0a                     move-result
+0000d  0177 1d36 0022           invoke-static/range  # CALL Landroid/view/View$MeasureSpec;->getMode(I)I
+00010  0c0a                     move-result
+00011  0177 1d36 0023           invoke-static/range  # CALL Landroid/view/View$MeasureSpec;->getMode(I)I
+00014  0d0a                     move-result
+00015  7e52 112e                iget  # FIELD Landroid/support/v7/widget/g0;->c:I
+00017  7f55 1134                iget-boolean  # FIELD Landroid/support/v7/widget/g0;->i:Z
+00019  1013 0000                const/16
+0001b  1113 0001                const/16
+0001d  a101                     op_01
+0001e  1201                     op_01
+0001f  2301                     op_01
+00020  3401                     op_01
+00021  4501                     op_01
+00022  5601                     op_01
+00023  1202 0006                op_02
+00025  1402 0012                op_02
+00027  0002 0010                op_02
+00029  1302 0011                op_02
+0002b  0a13 0008                const/16
+0002d  1602 0004                op_02
+0002f  b635 016c                if-ge
+00031  206e 18c2 0067           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->a(I)Landroid/view/View;
+00034  040c                     move-result-object
+00035  0439 0013                if-nez
+00037  7452 1132                iget  # FIELD Landroid/support/v7/widget/g0;->g:I
+00039  206e 18cf 0067           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->c(I)I
+0003c  0a0a                     move-result
+0003d  a4b0                     op_b0
+0003e  7459 1132                iput  # FIELD Landroid/support/v7/widget/g0;->g:I
+00040  1a02 000b                op_02
+00042  1802 000d                op_02
+00044  0402 0016                op_02
+00046  0029 0149                goto/16
+00048  1802 0001                op_02
+0004a  106e 1d7c 0004           invoke-virtual  # CALL Landroid/view/View;->getVisibility()I
+0004d  010a                     move-result
+0004e  a133 0011                if-ne
+00050  306e 18c1 0647           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->a(Landroid/view/View;,I)I
+00053  010a                     move-result
+00054  16b0                     op_b0
+00055  1a02 000b                op_02
+00057  0402 0016                op_02
+00059  0102 0018                op_02
+0005b  1802 000d                op_02
+0005d  0029 0132                goto/16
+0005f  206e 18ce 0067           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->b(I)Z
+00062  010a                     move-result
+00063  0138 0009                if-eqz
+00065  7152 1132                iget  # FIELD Landroid/support/v7/widget/g0;->g:I
+00067  7a52 1139                iget  # FIELD Landroid/support/v7/widget/g0;->n:I
+00069  a1b0                     op_b0
+0006a  7159 1132                iput  # FIELD Landroid/support/v7/widget/g0;->g:I
+0006c  106e 1d5b 0004           invoke-virtual  # CALL Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+0006f  010c                     move-result-object
+00070  1a07                     op_07
+00071  0a1f 038a                check-cast  # TYPE Landroid/support/v7/widget/g0$a;
+00073  a152 112b                iget  # FIELD Landroid/support/v7/widget/g0$a;->a:F
+00075  19a6 0100                op_a6
+00077  0015 4000                const/high16
+00079  0d33 002d                if-ne
+0007b  a052 1258                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->height:I
+0007d  0039 0029                if-nez
+0007f  002d 1001                op_2d
+00081  003d 0025                if-lez
+00083  7052 1132                iget  # FIELD Landroid/support/v7/widget/g0;->g:I
+00085  a152 125b                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+00087  01b0                     op_b0
+00088  1a02 0002                op_02
+0008a  a252 1257                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+0008c  21b0                     op_b0
+0008d  2071 2ccb 0010           invoke-static  # CALL Ljava/lang/Math;->max(I,I)I
+00090  000a                     move-result
+00091  7059 1132                iput  # FIELD Landroid/support/v7/widget/g0;->g:I
+00093  3001                     op_01
+00094  4307                     op_07
+00095  1f02 0005                op_02
+00097  1202 0011                op_02
+00099  0802 0018                op_02
+0009b  1d02 001a                op_02
+0009d  1a02 000b                op_02
+0009f  1802 000d                op_02
+000a1  0d02 0016                op_02
+000a3  6b01                     op_01
+000a4  0029 0072                goto/16
+000a6  1a02 0002                op_02
+000a8  a052 1258                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->height:I
+000aa  0039 000d                if-nez
+000ac  a052 112b                iget  # FIELD Landroid/support/v7/widget/g0$a;->a:F
+000ae  002d 1000                op_2d
+000b0  003d 0007                if-lez
+000b2  e012                     const/4
+000b3  a059 1258                iput  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->height:I
+000b5  0212                     const/4
+000b6  0328                     goto
+000b7  0215 8000                const/high16
+000b9  1b13 0000                const/16
+000bb  002d 1019                op_2d
+000bd  0039 0007                if-nez
+000bf  7052 1132                iget  # FIELD Landroid/support/v7/widget/g0;->g:I
+000c1  1702 0000                op_02
+000c3  0328                     goto
+000c4  1713 0000                const/16
+000c6  1c15 4000                const/high16
+000c8  0008 0021                op_08
+000ca  0802 0018                op_02
+000cc  4107                     op_07
+000cd  1e02 0002                op_02
+000cf  1d02 001a                op_02
+000d1  6201                     op_01
+000d2  3901                     op_01
+000d3  0302 0022                op_02
+000d5  1a02 000b                op_02
+000d7  1802 000d                op_02
+000d9  0d02 0016                op_02
+000db  0b02 001c                op_02
+000dd  1608 0004                op_08
+000df  0402 001b                op_02
+000e1  1f02 0005                op_02
+000e3  0502 0023                op_02
+000e5  6b01                     op_01
+000e6  0602 0017                op_02
+000e8  0774 18c8 0000           invoke-virtual/range  # CALL Landroid/support/v7/widget/g0;->a(Landroid/view/View;,I,I,I,I,I)V
+000eb  0002 001e                op_02
+000ed  0115 8000                const/high16
+000ef  1032 0004                if-eq
+000f1  a059 1258                iput  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->height:I
+000f3  0174 1d5f 0016           invoke-virtual/range  # CALL Landroid/view/View;->getMeasuredHeight()I
+000f6  000a                     move-result
+000f7  7152 1132                iget  # FIELD Landroid/support/v7/widget/g0;->g:I
+000f9  0290 0001                int-add
+000fb  a352 125b                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+000fd  32b0                     op_b0
+000fe  a352 1257                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+00100  32b0                     op_b0
+00101  0308 0016                op_08
+00103  206e 18c9 0037           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->b(Landroid/view/View;)I
+00106  040a                     move-result
+00107  42b0                     op_b0
+00108  2071 2ccb 0021           invoke-static  # CALL Ljava/lang/Math;->max(I,I)I
+0010b  010a                     move-result
+0010c  7159 1132                iput  # FIELD Landroid/support/v7/widget/g0;->g:I
+0010e  0f38 0007                if-eqz
+00110  2071 2ccb 0090           invoke-static  # CALL Ljava/lang/Math;->max(I,I)I
+00113  000a                     move-result
+00114  0228                     goto
+00115  9001                     op_01
+00116  0e3a 000a                if-ltz
+00118  06d8 010b                op_d8
+0011a  6e33 0006                if-ne
+0011c  7152 1132                iget  # FIELD Landroid/support/v7/widget/g0;->g:I
+0011e  7159 112f                iput  # FIELD Landroid/support/v7/widget/g0;->d:I
+00120  eb35 0011                if-ge
+00122  a152 112b                iget  # FIELD Landroid/support/v7/widget/g0$a;->a:F
+00124  012d 1001                op_2d
+00126  013c 0003                if-gtz
+00128  0928                     goto
+00129  0022 0680                new-instance  # TYPE Ljava/lang/RuntimeException;
+0012b  011a 02c6                const-string  # STR "A child of LinearLayout with index less than mBaselineAlignedChildIndex has weight > 0, which won't work.  Either remove the weight, or don't set mBaselineAlignedChildIndex."
+0012d  2070 2cee 0010           invoke-direct  # CALL Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+00130  0027                     throw
+00131  0115 4000                const/high16
+00133  1c32 000c                if-eq
+00135  a152 125c                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->width:I
+00137  f212                     const/4
+00138  2133 0007                if-ne
+0013a  0102 0011                op_02
+0013c  1402 0001                op_02
+0013e  0228                     goto
+0013f  0112                     const/4
+00140  a252 1259                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+00142  a452 125a                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+00144  42b0                     op_b0
+00145  106e 1d61 0003           invoke-virtual  # CALL Landroid/view/View;->getMeasuredWidth()I
+00148  040a                     move-result
+00149  24b0                     op_b0
+0014a  0502 001d                op_02
+0014c  2071 2ccb 0045           invoke-static  # CALL Ljava/lang/Math;->max(I,I)I
+0014f  050a                     move-result
+00150  106e 1d60 0003           invoke-virtual  # CALL Landroid/view/View;->getMeasuredState()I
+00153  060a                     move-result
+00154  2071 1d43 0068           invoke-static  # CALL Landroid/view/View;->combineMeasuredStates(I,I)I
+00157  060a                     move-result
+00158  1338 000a                if-eqz
+0015a  a852 125c                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->width:I
+0015c  f912                     const/4
+0015d  9833 0005                if-ne
+0015f  1302 0011                op_02
+00161  0328                     goto
+00162  1313 0000                const/16
+00164  a852 112b                iget  # FIELD Landroid/support/v7/widget/g0$a;->a:F
+00166  082d 1008                op_2d
+00168  083d 000d                if-lez
+0016a  0138 0003                if-eqz
+0016c  0228                     goto
+0016d  4201                     op_01
+0016e  2071 2ccb 002d           invoke-static  # CALL Ljava/lang/Math;->max(I,I)I
+00171  040a                     move-result
+00172  0102 001f                op_02
+00174  0c28                     goto
+00175  0138 0003                if-eqz
+00177  0228                     goto
+00178  4201                     op_01
+00179  0102 001f                op_02
+0017b  2071 2ccb 0021           invoke-static  # CALL Ljava/lang/Math;->max(I,I)I
+0017e  010a                     move-result
+0017f  d401                     op_01
+00180  306e 18c1 0b37           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->a(Landroid/view/View;,I)I
+00183  020a                     move-result
+00184  b2b0                     op_b0
+00185  0301                     op_01
+00186  0002 0019                op_02
+00188  2002 0005                op_02
+0018a  1501                     op_01
+0018b  6101                     op_01
+0018c  2601                     op_01
+0018d  0202 0020                op_02
+0018f  06d8 0106                op_d8
+00191  0802 0022                op_02
+00193  0902 0023                op_02
+00195  0d02 0018                op_02
+00197  0b02 001a                op_02
+00199  0029 fe92                goto/16
+0019b  1801                     op_01
+0019c  3901                     op_01
+0019d  5101                     op_01
+0019e  1a02 000b                op_02
+001a0  1802 000d                op_02
+001a2  0d02 0016                op_02
+001a4  2501                     op_01
+001a5  7252 1132                iget  # FIELD Landroid/support/v7/widget/g0;->g:I
+001a7  023d 0012                if-lez
+001a9  0202 001a                op_02
+001ab  206e 18ce 0027           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->b(I)Z
+001ae  030a                     move-result
+001af  0338 000c                if-eqz
+001b1  7352 1132                iget  # FIELD Landroid/support/v7/widget/g0;->g:I
+001b3  7452 1139                iget  # FIELD Landroid/support/v7/widget/g0;->n:I
+001b5  43b0                     op_b0
+001b6  7359 1132                iput  # FIELD Landroid/support/v7/widget/g0;->g:I
+001b8  0328                     goto
+001b9  0202 001a                op_02
+001bb  0302 0018                op_02
+001bd  0f38 004c                if-eqz
+001bf  0415 8000                const/high16
+001c1  4332 0004                if-eq
+001c3  0339 0046                if-nez
+001c5  0412                     const/4
+001c6  7459 1132                iput  # FIELD Landroid/support/v7/widget/g0;->g:I
+001c8  0412                     const/4
+001c9  2435 0040                if-ge
+001cb  206e 18c2 0047           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->a(I)Landroid/view/View;
+001ce  060c                     move-result-object
+001cf  0639 000c                if-nez
+001d1  7652 1132                iget  # FIELD Landroid/support/v7/widget/g0;->g:I
+001d3  206e 18cf 0047           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->c(I)I
+001d6  0b0a                     move-result
+001d7  b6b0                     op_b0
+001d8  7659 1132                iput  # FIELD Landroid/support/v7/widget/g0;->g:I
+001da  2a28                     goto
+001db  106e 1d7c 0006           invoke-virtual  # CALL Landroid/view/View;->getVisibility()I
+001de  0b0a                     move-result
+001df  ab33 0008                if-ne
+001e1  306e 18c1 0467           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->a(Landroid/view/View;,I)I
+001e4  060a                     move-result
+001e5  64b0                     op_b0
+001e6  1e28                     goto
+001e7  106e 1d5b 0006           invoke-virtual  # CALL Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+001ea  0b0c                     move-result-object
+001eb  0b1f 038a                check-cast  # TYPE Landroid/support/v7/widget/g0$a;
+001ed  7e52 1132                iget  # FIELD Landroid/support/v7/widget/g0;->g:I
+001ef  1590 090e                int-add
+001f1  ba52 125b                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+001f3  1590 0a15                int-add
+001f5  ba52 1257                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+001f7  1590 0a15                int-add
+001f9  206e 18c9 0067           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->b(Landroid/view/View;)I
+001fc  060a                     move-result
+001fd  0690 0615                int-add
+001ff  2071 2ccb 006e           invoke-static  # CALL Ljava/lang/Math;->max(I,I)I
+00202  060a                     move-result
+00203  d528                     goto
+00204  04d8 0104                op_d8
+00206  0a13 0008                const/16
+00208  c128                     goto
+00209  7452 1132                iget  # FIELD Landroid/support/v7/widget/g0;->g:I
+0020b  0174 1e06 0021           invoke-virtual/range  # CALL Landroid/view/ViewGroup;->getPaddingTop()I
+0020e  060a                     move-result
+0020f  0174 1e01 0021           invoke-virtual/range  # CALL Landroid/view/ViewGroup;->getPaddingBottom()I
+00212  0a0a                     move-result
+00213  a6b0                     op_b0
+00214  64b0                     op_b0
+00215  7459 1132                iput  # FIELD Landroid/support/v7/widget/g0;->g:I
+00217  0174 1e09 0021           invoke-virtual/range  # CALL Landroid/view/ViewGroup;->getSuggestedMinimumHeight()I
+0021a  060a                     move-result
+0021b  2071 2ccb 0064           invoke-static  # CALL Ljava/lang/Math;->max(I,I)I
+0021e  040a                     move-result
+0021f  0602 0023                op_02
+00221  9a01                     op_01
+00222  0912                     const/4
+00223  3071 1da4 0964           invoke-static  # CALL Landroid/view/View;->resolveSizeAndState(I,I,I)I
+00226  040a                     move-result
+00227  0914 ffff 00ff           const
+0022a  49b5                     op_b5
+0022b  7b52 1132                iget  # FIELD Landroid/support/v7/widget/g0;->g:I
+0022d  b9b1                     op_b1
+0022e  1239 004a                if-nez
+00230  0938 0007                if-eqz
+00232  0b2d 1000                op_2d
+00234  0b3d 0003                if-lez
+00236  4228                     goto
+00237  2071 2ccb 00d1           invoke-static  # CALL Ljava/lang/Math;->max(I,I)I
+0023a  000a                     move-result
+0023b  0f38 0038                if-eqz
+0023d  0115 4000                const/high16
+0023f  1332 0034                if-eq
+00241  0112                     const/4
+00242  2135 0031                if-ge
+00244  206e 18c2 0017           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->a(I)Landroid/view/View;
+00247  030c                     move-result-object
+00248  0338 0028                if-eqz
+0024a  106e 1d7c 0003           invoke-virtual  # CALL Landroid/view/View;->getVisibility()I
+0024d  090a                     move-result
+0024e  0b13 0008                const/16
+00250  b933 0003                if-ne
+00252  1e28                     goto
+00253  106e 1d5b 0003           invoke-virtual  # CALL Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+00256  090c                     move-result-object
+00257  091f 038a                check-cast  # TYPE Landroid/support/v7/widget/g0$a;
+00259  9952 112b                iget  # FIELD Landroid/support/v7/widget/g0$a;->a:F
+0025b  092d 1009                op_2d
+0025d  093d 0013                if-lez
+0025f  106e 1d61 0003           invoke-virtual  # CALL Landroid/view/View;->getMeasuredWidth()I
+00262  090a                     move-result
+00263  0b15 4000                const/high16
+00265  2071 1d38 00b9           invoke-static  # CALL Landroid/view/View$MeasureSpec;->makeMeasureSpec(I,I)I
+00268  090a                     move-result
+00269  2071 1d38 00ba           invoke-static  # CALL Landroid/view/View$MeasureSpec;->makeMeasureSpec(I,I)I
+0026c  0d0a                     move-result
+0026d  306e 1d90 0d93           invoke-virtual  # CALL Landroid/view/View;->measure(I,I)V
+00270  01d8 0101                op_d8
+00272  d028                     goto
+00273  0b02 0022                op_02
+00275  8101                     op_01
+00276  0029 00ed                goto/16
+00278  7a52 1133                iget  # FIELD Landroid/support/v7/widget/g0;->h:F
+0027a  0b2d 100a                op_2d
+0027c  0b3d 0003                if-lez
+0027e  a001                     op_01
+0027f  0a12                     const/4
+00280  7a59 1132                iput  # FIELD Landroid/support/v7/widget/g0;->g:I
+00282  9b01                     op_01
+00283  1901                     op_01
+00284  8101                     op_01
+00285  a801                     op_01
+00286  2835 00cc                if-ge
+00288  206e 18c2 0087           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->a(I)Landroid/view/View;
+0028b  0d0c                     move-result-object
+0028c  106e 1d7c 000d           invoke-virtual  # CALL Landroid/view/View;->getVisibility()I
+0028f  0e0a                     move-result
+00290  0f13 0008                const/16
+00292  fe33 0008                if-ne
+00294  1502 000b                op_02
+00296  0b02 0022                op_02
+00298  0029 00b3                goto/16
+0029a  106e 1d5b 000d           invoke-virtual  # CALL Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+0029d  0e0c                     move-result-object
+0029e  0e1f 038a                check-cast  # TYPE Landroid/support/v7/widget/g0$a;
+002a0  ea52 112b                iget  # FIELD Landroid/support/v7/widget/g0$a;->a:F
+002a2  122d 100a                op_2d
+002a4  123d 004f                if-lez
+002a6  bf82                     op_82
+002a7  afc8                     op_c8
+002a8  0fc9                     op_c9
+002a9  ff87                     op_87
+002aa  a0c7                     op_c7
+002ab  fbb1                     op_b1
+002ac  0174 1e03 0021           invoke-virtual/range  # CALL Landroid/view/ViewGroup;->getPaddingLeft()I
+002af  0a0a                     move-result
+002b0  0174 1e04 0021           invoke-virtual/range  # CALL Landroid/view/ViewGroup;->getPaddingRight()I
+002b3  120a                     move-result
+002b4  0a90 120a                int-add
+002b6  1202 0000                op_02
+002b8  e052 1259                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+002ba  0ab0                     op_b0
+002bb  e052 125a                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+002bd  0ab0                     op_b0
+002be  e052 125c                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->width:I
+002c0  1502 000b                op_02
+002c2  0b02 0022                op_02
+002c4  3071 1df7 00ab           invoke-static  # CALL Landroid/view/ViewGroup;->getChildMeasureSpec(I,I,I)I
+002c7  000a                     move-result
+002c8  ea52 1258                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->height:I
+002ca  0a39 000a                if-nez
+002cc  0a15 4000                const/high16
+002ce  a332 0003                if-eq
+002d0  0628                     goto
+002d1  0f3d 000d                if-lez
+002d3  0c28                     goto
+002d4  0a15 4000                const/high16
+002d6  106e 1d5f 000d           invoke-virtual  # CALL Landroid/view/View;->getMeasuredHeight()I
+002d9  170a                     move-result
+002da  0f90 0f17                int-add
+002dc  0f3b 0003                if-gez
+002de  0f12                     const/4
+002df  2071 1d38 00af           invoke-static  # CALL Landroid/view/View$MeasureSpec;->makeMeasureSpec(I,I)I
+002e2  0f0a                     move-result
+002e3  306e 1d90 0f0d           invoke-virtual  # CALL Landroid/view/View;->measure(I,I)V
+002e6  106e 1d60 000d           invoke-virtual  # CALL Landroid/view/View;->getMeasuredState()I
+002e9  000a                     move-result
+002ea  00d5 ff00                op_d5
+002ec  2071 1d43 0001           invoke-static  # CALL Landroid/view/View;->combineMeasuredStates(I,I)I
+002ef  010a                     move-result
+002f0  0002 0012                op_02
+002f2  0628                     goto
+002f3  ba01                     op_01
+002f4  0b02 0022                op_02
+002f6  1502 000a                op_02
+002f8  ea52 1259                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+002fa  ef52 125a                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+002fc  fab0                     op_b0
+002fd  106e 1d61 000d           invoke-virtual  # CALL Landroid/view/View;->getMeasuredWidth()I
+00300  0f0a                     move-result
+00301  afb0                     op_b0
+00302  2071 2ccb 00f5           invoke-static  # CALL Ljava/lang/Math;->max(I,I)I
+00305  050a                     move-result
+00306  1202 0000                op_02
+00308  0015 4000                const/high16
+0030a  0c32 000c                if-eq
+0030c  e052 125c                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->width:I
+0030e  1702 0001                op_02
+00310  f112                     const/4
+00311  1033 0008                if-ne
+00313  0002 0011                op_02
+00315  0528                     goto
+00316  1702 0001                op_02
+00318  f112                     const/4
+00319  0012                     const/4
+0031a  0038 0003                if-eqz
+0031c  0228                     goto
+0031d  fa01                     op_01
+0031e  2071 2ccb 00a9           invoke-static  # CALL Ljava/lang/Math;->max(I,I)I
+00321  000a                     move-result
+00322  1338 0009                if-eqz
+00324  e952 125c                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->width:I
+00326  1933 0005                if-ne
+00328  0902 0011                op_02
+0032a  0228                     goto
+0032b  0912                     const/4
+0032c  7a52 1132                iget  # FIELD Landroid/support/v7/widget/g0;->g:I
+0032e  106e 1d5f 000d           invoke-virtual  # CALL Landroid/view/View;->getMeasuredHeight()I
+00331  0f0a                     move-result
+00332  afb0                     op_b0
+00333  e152 125b                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+00335  1fb0                     op_b0
+00336  e152 1257                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+00338  1fb0                     op_b0
+00339  206e 18c9 00d7           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->b(Landroid/view/View;)I
+0033c  010a                     move-result
+0033d  1fb0                     op_b0
+0033e  2071 2ccb 00fa           invoke-static  # CALL Ljava/lang/Math;->max(I,I)I
+00341  010a                     move-result
+00342  7159 1132                iput  # FIELD Landroid/support/v7/widget/g0;->g:I
+00344  1302 0009                op_02
+00346  0102 0017                op_02
+00348  0901                     op_01
+00349  0002 0012                op_02
+0034b  08d8 0108                op_d8
+0034d  0b02 0015                op_02
+0034f  0a12                     const/4
+00350  0029 ff36                goto/16
+00352  0b02 0022                op_02
+00354  7052 1132                iget  # FIELD Landroid/support/v7/widget/g0;->g:I
+00356  0174 1e06 0021           invoke-virtual/range  # CALL Landroid/view/ViewGroup;->getPaddingTop()I
+00359  030a                     move-result
+0035a  0174 1e01 0021           invoke-virtual/range  # CALL Landroid/view/ViewGroup;->getPaddingBottom()I
+0035d  080a                     move-result
+0035e  83b0                     op_b0
+0035f  30b0                     op_b0
+00360  7059 1132                iput  # FIELD Landroid/support/v7/widget/g0;->g:I
+00362  9001                     op_01
+00363  1339 0007                if-nez
+00365  0315 4000                const/high16
+00367  3c32 0003                if-eq
+00369  0228                     goto
+0036a  5001                     op_01
+0036b  0174 1e03 0021           invoke-virtual/range  # CALL Landroid/view/ViewGroup;->getPaddingLeft()I
+0036e  030a                     move-result
+0036f  0174 1e04 0021           invoke-virtual/range  # CALL Landroid/view/ViewGroup;->getPaddingRight()I
+00372  050a                     move-result
+00373  53b0                     op_b0
+00374  30b0                     op_b0
+00375  0174 1e0a 0021           invoke-virtual/range  # CALL Landroid/view/ViewGroup;->getSuggestedMinimumWidth()I
+00378  030a                     move-result
+00379  2071 2ccb 0030           invoke-static  # CALL Ljava/lang/Math;->max(I,I)I
+0037c  000a                     move-result
+0037d  3071 1da4 01b0           invoke-static  # CALL Landroid/view/View;->resolveSizeAndState(I,I,I)I
+00380  000a                     move-result
+00381  306e 1e38 0407           invoke-virtual  # CALL Landroid/view/ViewGroup;->setMeasuredDimension(I,I)V
+00384  1438 0005                if-eqz
+00386  3070 18d2 0627           invoke-direct  # CALL Landroid/support/v7/widget/g0;->d(I,I)V
+00389  000e                     return-void
+
+### Landroid/support/v7/widget/g0;->b(I,I,I,I)V  [access=0x0, regs=22, ins=5, outs=6, code_off=0xe5fec]
+00000  0608 0011                op_08
+00002  0174 1e03 0011           invoke-virtual/range  # CALL Landroid/view/ViewGroup;->getPaddingLeft()I
+00005  070a                     move-result
+00006  0091 1214                int-sub
+00008  0174 1e04 0011           invoke-virtual/range  # CALL Landroid/view/ViewGroup;->getPaddingRight()I
+0000b  010a                     move-result
+0000c  0891 0100                int-sub
+0000e  70b1                     op_b1
+0000f  0174 1e04 0011           invoke-virtual/range  # CALL Landroid/view/ViewGroup;->getPaddingRight()I
+00012  010a                     move-result
+00013  0991 0100                int-sub
+00015  0174 18e1 0011           invoke-virtual/range  # CALL Landroid/support/v7/widget/g0;->getVirtualChildCount()I
+00018  0a0a                     move-result
+00019  6052 1131                iget  # FIELD Landroid/support/v7/widget/g0;->f:I
+0001b  01dd 7000                op_dd
+0001d  0214 0007 0080           const
+00020  0b95 0200                int-and
+00022  0013 0010                const/16
+00024  0132 0017                if-eq
+00026  0013 0050                const/16
+00028  0132 0007                if-eq
+0002a  0174 1e06 0011           invoke-virtual/range  # CALL Landroid/view/ViewGroup;->getPaddingTop()I
+0002d  000a                     move-result
+0002e  1928                     goto
+0002f  0174 1e06 0011           invoke-virtual/range  # CALL Landroid/view/ViewGroup;->getPaddingTop()I
+00032  000a                     move-result
+00033  0090 1500                int-add
+00035  0091 1300                int-sub
+00037  6152 1132                iget  # FIELD Landroid/support/v7/widget/g0;->g:I
+00039  10b1                     op_b1
+0003a  0d28                     goto
+0003b  0174 1e06 0011           invoke-virtual/range  # CALL Landroid/view/ViewGroup;->getPaddingTop()I
+0003e  000a                     move-result
+0003f  0191 1315                int-sub
+00041  6252 1132                iget  # FIELD Landroid/support/v7/widget/g0;->g:I
+00043  21b1                     op_b1
+00044  01db 0201                op_db
+00046  10b0                     op_b0
+00047  0112                     const/4
+00048  1c01                     op_01
+00049  ac35 007f                if-ge
+0004b  206e 18c2 00c6           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->a(I)Landroid/view/View;
+0004e  0d0c                     move-result-object
+0004f  1e12                     const/4
+00050  0d39 0009                if-nez
+00052  206e 18cf 00c6           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->c(I)I
+00055  010a                     move-result
+00056  10b0                     op_b0
+00057  0029 006e                goto/16
+00059  106e 1d7c 000d           invoke-virtual  # CALL Landroid/view/View;->getVisibility()I
+0005c  010a                     move-result
+0005d  0213 0008                const/16
+0005f  2132 0066                if-eq
+00061  106e 1d61 000d           invoke-virtual  # CALL Landroid/view/View;->getMeasuredWidth()I
+00064  040a                     move-result
+00065  106e 1d5f 000d           invoke-virtual  # CALL Landroid/view/View;->getMeasuredHeight()I
+00068  0f0a                     move-result
+00069  106e 1d5b 000d           invoke-virtual  # CALL Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+0006c  010c                     move-result-object
+0006d  1507                     op_07
+0006e  051f 038a                check-cast  # TYPE Landroid/support/v7/widget/g0$a;
+00070  5152 112c                iget  # FIELD Landroid/support/v7/widget/g0$a;->b:I
+00072  013b 0003                if-gez
+00074  b101                     op_01
+00075  0177 253f 0011           invoke-static/range  # CALL Lb/b/c/g/q;->d(Landroid/view/View;)I
+00078  020a                     move-result
+00079  2071 24eb 0021           invoke-static  # CALL Lb/b/c/g/d;->a(I,I)I
+0007c  010a                     move-result
+0007d  01dd 0701                op_dd
+0007f  e132 000c                if-eq
+00081  5212                     const/4
+00082  2132 0006                if-eq
+00084  5152 1259                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+00086  71b0                     op_b0
+00087  0f28                     goto
+00088  0191 0408                int-sub
+0008a  0928                     goto
+0008b  0191 0409                int-sub
+0008d  01db 0201                op_db
+0008f  71b0                     op_b0
+00090  5252 1259                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+00092  21b0                     op_b0
+00093  5252 125a                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+00095  21b1                     op_b1
+00096  1201                     op_01
+00097  206e 18ce 00c6           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->b(I)Z
+0009a  010a                     move-result
+0009b  0138 0005                if-eqz
+0009d  6152 1139                iget  # FIELD Landroid/support/v7/widget/g0;->n:I
+0009f  10b0                     op_b0
+000a0  5152 125b                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+000a2  1090 0100                int-add
+000a4  206e 18c0 00d6           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->a(Landroid/view/View;)I
+000a7  000a                     move-result
+000a8  0390 0010                int-add
+000aa  0008 0011                op_08
+000ac  d107                     op_07
+000ad  5e07                     op_07
+000ae  f501                     op_01
+000af  0676 18c7 0000           invoke-direct/range  # CALL Landroid/support/v7/widget/g0;->a(Landroid/view/View;,I,I,I,I)V
+000b2  e052 1257                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+000b4  0fb0                     op_b0
+000b5  206e 18c9 00d6           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->b(Landroid/view/View;)I
+000b8  000a                     move-result
+000b9  0fb0                     op_b0
+000ba  1090 0f10                int-add
+000bc  306e 18c1 0cd6           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->a(Landroid/view/View;,I)I
+000bf  000a                     move-result
+000c0  0cb0                     op_b0
+000c1  0002 0010                op_02
+000c3  1112                     const/4
+000c4  0228                     goto
+000c5  e101                     op_01
+000c6  1cb0                     op_b0
+000c7  8228                     goto
+000c8  000e                     return-void
+
+### Landroid/support/v7/widget/g0;->b(Landroid/graphics/Canvas;)V  [access=0x0, regs=7, ins=2, outs=3, code_off=0xe5ac4]
+00000  106e 18e1 0005           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->getVirtualChildCount()I
+00003  000a                     move-result
+00004  0112                     const/4
+00005  0135 002c                if-ge
+00007  206e 18c2 0015           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->a(I)Landroid/view/View;
+0000a  020c                     move-result-object
+0000b  0238 0023                if-eqz
+0000d  106e 1d7c 0002           invoke-virtual  # CALL Landroid/view/View;->getVisibility()I
+00010  030a                     move-result
+00011  0413 0008                const/16
+00013  4332 001b                if-eq
+00015  206e 18ce 0015           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->b(I)Z
+00018  030a                     move-result
+00019  0338 0015                if-eqz
+0001b  106e 1d5b 0002           invoke-virtual  # CALL Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+0001e  030c                     move-result-object
+0001f  031f 038a                check-cast  # TYPE Landroid/support/v7/widget/g0$a;
+00021  106e 1d76 0002           invoke-virtual  # CALL Landroid/view/View;->getTop()I
+00024  020a                     move-result
+00025  3352 125b                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+00027  32b1                     op_b1
+00028  5352 1139                iget  # FIELD Landroid/support/v7/widget/g0;->n:I
+0002a  32b1                     op_b1
+0002b  306e 18c6 0265           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->a(Landroid/graphics/Canvas;,I)V
+0002e  01d8 0101                op_d8
+00030  d528                     goto
+00031  206e 18ce 0005           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->b(I)Z
+00034  010a                     move-result
+00035  0138 0027                if-eqz
+00037  00d8 ff00                op_d8
+00039  206e 18c2 0005           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->a(I)Landroid/view/View;
+0003c  000c                     move-result-object
+0003d  0039 000f                if-nez
+0003f  106e 1df9 0005           invoke-virtual  # CALL Landroid/view/ViewGroup;->getHeight()I
+00042  000a                     move-result
+00043  106e 1e01 0005           invoke-virtual  # CALL Landroid/view/ViewGroup;->getPaddingBottom()I
+00046  010a                     move-result
+00047  10b1                     op_b1
+00048  5152 1139                iget  # FIELD Landroid/support/v7/widget/g0;->n:I
+0004a  10b1                     op_b1
+0004b  0e28                     goto
+0004c  106e 1d5b 0000           invoke-virtual  # CALL Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+0004f  010c                     move-result-object
+00050  011f 038a                check-cast  # TYPE Landroid/support/v7/widget/g0$a;
+00052  106e 1d50 0000           invoke-virtual  # CALL Landroid/view/View;->getBottom()I
+00055  000a                     move-result
+00056  1152 1257                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+00058  10b0                     op_b0
+00059  306e 18c6 0065           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->a(Landroid/graphics/Canvas;,I)V
+0005c  000e                     return-void
+
+### Landroid/support/v7/widget/g0;->b(Landroid/graphics/Canvas;,I)V  [access=0x0, regs=8, ins=3, outs=5, code_off=0xe5be4]
+00000  5054 1137                iget-object  # FIELD Landroid/support/v7/widget/g0;->l:Landroid/graphics/drawable/Drawable;
+00002  106e 1e06 0005           invoke-virtual  # CALL Landroid/view/ViewGroup;->getPaddingTop()I
+00005  010a                     move-result
+00006  5252 113b                iget  # FIELD Landroid/support/v7/widget/g0;->p:I
+00008  21b0                     op_b0
+00009  5252 1138                iget  # FIELD Landroid/support/v7/widget/g0;->m:I
+0000b  72b0                     op_b0
+0000c  106e 1df9 0005           invoke-virtual  # CALL Landroid/view/ViewGroup;->getHeight()I
+0000f  030a                     move-result
+00010  106e 1e01 0005           invoke-virtual  # CALL Landroid/view/ViewGroup;->getPaddingBottom()I
+00013  040a                     move-result
+00014  43b1                     op_b1
+00015  5452 113b                iget  # FIELD Landroid/support/v7/widget/g0;->p:I
+00017  43b1                     op_b1
+00018  536e 09f7 2170           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setBounds(I,I,I,I)V
+0001b  5554 1137                iget-object  # FIELD Landroid/support/v7/widget/g0;->l:Landroid/graphics/drawable/Drawable;
+0001d  206e 09d5 0065           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
+00020  000e                     return-void
+
+### Landroid/support/v7/widget/g0;->b(I)Z  [access=0x4, regs=6, ins=2, outs=2, code_off=0xe55e4]
+00000  0012                     const/4
+00001  1112                     const/4
+00002  0539 0009                if-nez
+00004  4452 113a                iget  # FIELD Landroid/support/v7/widget/g0;->o:I
+00006  14b5                     op_b5
+00007  0438 0003                if-eqz
+00009  1001                     op_01
+0000a  000f                     return
+0000b  106e 1df6 0004           invoke-virtual  # CALL Landroid/view/ViewGroup;->getChildCount()I
+0000e  020a                     move-result
+0000f  2533 000a                if-ne
+00011  4452 113a                iget  # FIELD Landroid/support/v7/widget/g0;->o:I
+00013  04dd 0404                op_dd
+00015  0438 0003                if-eqz
+00017  1001                     op_01
+00018  000f                     return
+00019  4252 113a                iget  # FIELD Landroid/support/v7/widget/g0;->o:I
+0001b  02dd 0202                op_dd
+0001d  0238 0016                if-eqz
+0001f  15b1                     op_b1
+00020  053a 0013                if-ltz
+00022  206e 1df5 0054           invoke-virtual  # CALL Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+00025  020c                     move-result-object
+00026  106e 1d7c 0002           invoke-virtual  # CALL Landroid/view/View;->getVisibility()I
+00029  020a                     move-result
+0002a  0313 0008                const/16
+0002c  3232 0004                if-eq
+0002e  1001                     op_01
+0002f  0428                     goto
+00030  05d8 ff05                op_d8
+00032  ee28                     goto
+00033  000f                     return
+
+### Landroid/support/v7/widget/g0;->c(I)I  [access=0x0, regs=2, ins=2, outs=0, code_off=0xe5880]
+00000  0012                     const/4
+00001  000f                     return
+
+### Landroid/support/v7/widget/g0;->checkLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Z  [access=0x4, regs=2, ins=2, outs=0, code_off=0xe55cc]
+00000  1020 038a                instance-of  # TYPE Landroid/support/v7/widget/g0$a;
+00002  000f                     return
+
+### Landroid/support/v7/widget/g0;->generateDefaultLayoutParams()Landroid/support/v7/widget/g0$a;  [access=0x4, regs=3, ins=1, outs=3, code_off=0xe54dc]
+00000  2252 1130                iget  # FIELD Landroid/support/v7/widget/g0;->e:I
+00002  e012                     const/4
+00003  0239 0008                if-nez
+00005  0222 038a                new-instance  # TYPE Landroid/support/v7/widget/g0$a;
+00007  3070 18ba 0002           invoke-direct  # CALL Landroid/support/v7/widget/g0$a;-><init>(I,I)V
+0000a  0211                     return-object
+0000b  1112                     const/4
+0000c  1233 0009                if-ne
+0000e  0222 038a                new-instance  # TYPE Landroid/support/v7/widget/g0$a;
+00010  f112                     const/4
+00011  3070 18ba 0012           invoke-direct  # CALL Landroid/support/v7/widget/g0$a;-><init>(I,I)V
+00014  0211                     return-object
+00015  0212                     const/4
+00016  0211                     return-object
+
+### Landroid/support/v7/widget/g0;->generateDefaultLayoutParams()Landroid/view/ViewGroup$LayoutParams;  [access=0x1044, regs=1, ins=1, outs=1, code_off=0xe5578]
+00000  106e 18d3 0000           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->generateDefaultLayoutParams()Landroid/support/v7/widget/g0$a;
+00003  000c                     move-result-object
+00004  0011                     return-object
+
+### Landroid/support/v7/widget/g0;->generateLayoutParams(Landroid/util/AttributeSet;)Landroid/support/v7/widget/g0$a;  [access=0x1, regs=3, ins=2, outs=3, code_off=0xe551c]
+00000  0022 038a                new-instance  # TYPE Landroid/support/v7/widget/g0$a;
+00002  106e 1df8 0001           invoke-virtual  # CALL Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
+00005  010c                     move-result-object
+00006  3070 18bb 0210           invoke-direct  # CALL Landroid/support/v7/widget/g0$a;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;)V
+00009  0011                     return-object
+
+### Landroid/support/v7/widget/g0;->generateLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Landroid/support/v7/widget/g0$a;  [access=0x4, regs=2, ins=2, outs=2, code_off=0xe5540]
+00000  0022 038a                new-instance  # TYPE Landroid/support/v7/widget/g0$a;
+00002  2070 18bc 0010           invoke-direct  # CALL Landroid/support/v7/widget/g0$a;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
+00005  0011                     return-object
+
+### Landroid/support/v7/widget/g0;->generateLayoutParams(Landroid/util/AttributeSet;)Landroid/view/ViewGroup$LayoutParams;  [access=0x1041, regs=2, ins=2, outs=2, code_off=0xe5594]
+00000  206e 18d5 0010           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->generateLayoutParams(Landroid/util/AttributeSet;)Landroid/support/v7/widget/g0$a;
+00003  000c                     move-result-object
+00004  0011                     return-object
+
+### Landroid/support/v7/widget/g0;->generateLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Landroid/view/ViewGroup$LayoutParams;  [access=0x1044, regs=2, ins=2, outs=2, code_off=0xe55b0]
+00000  206e 18d6 0010           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->generateLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Landroid/support/v7/widget/g0$a;
+00003  000c                     move-result-object
+00004  0011                     return-object
+
+### Landroid/support/v7/widget/g0;->getBaseline()I  [access=0x1, regs=6, ins=1, outs=2, code_off=0xe5688]
+00000  5052 112e                iget  # FIELD Landroid/support/v7/widget/g0;->c:I
+00002  003b 0007                if-gez
+00004  106f 1df3 0005           invoke-super  # CALL Landroid/view/ViewGroup;->getBaseline()I
+00007  050a                     move-result
+00008  050f                     return
+00009  106e 1df6 0005           invoke-virtual  # CALL Landroid/view/ViewGroup;->getChildCount()I
+0000c  000a                     move-result
+0000d  5152 112e                iget  # FIELD Landroid/support/v7/widget/g0;->c:I
+0000f  1037 0068                if-le
+00011  206e 1df5 0015           invoke-virtual  # CALL Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+00014  000c                     move-result-object
+00015  106e 1d4f 0000           invoke-virtual  # CALL Landroid/view/View;->getBaseline()I
+00018  010a                     move-result
+00019  f212                     const/4
+0001a  2133 000f                if-ne
+0001c  5552 112e                iget  # FIELD Landroid/support/v7/widget/g0;->c:I
+0001e  0539 0003                if-nez
+00020  020f                     return
+00021  0522 0680                new-instance  # TYPE Ljava/lang/RuntimeException;
+00023  001a 20f3                const-string  # STR "mBaselineAlignedChildIndex of LinearLayout points to a View that doesn't know how to get its baseline."
+00025  2070 2cee 0005           invoke-direct  # CALL Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+00028  0527                     throw
+00029  5252 112f                iget  # FIELD Landroid/support/v7/widget/g0;->d:I
+0002b  5352 1130                iget  # FIELD Landroid/support/v7/widget/g0;->e:I
+0002d  1412                     const/4
+0002e  4333 003e                if-ne
+00030  5352 1131                iget  # FIELD Landroid/support/v7/widget/g0;->f:I
+00032  03dd 7003                op_dd
+00034  0413 0030                const/16
+00036  4332 0036                if-eq
+00038  0413 0010                const/16
+0003a  4332 0019                if-eq
+0003c  0413 0050                const/16
+0003e  4332 0003                if-eq
+00040  2c28                     goto
+00041  106e 1df4 0005           invoke-virtual  # CALL Landroid/view/ViewGroup;->getBottom()I
+00044  020a                     move-result
+00045  106e 1e0c 0005           invoke-virtual  # CALL Landroid/view/ViewGroup;->getTop()I
+00048  030a                     move-result
+00049  32b1                     op_b1
+0004a  106e 1e01 0005           invoke-virtual  # CALL Landroid/view/ViewGroup;->getPaddingBottom()I
+0004d  030a                     move-result
+0004e  32b1                     op_b1
+0004f  5552 1132                iget  # FIELD Landroid/support/v7/widget/g0;->g:I
+00051  52b1                     op_b1
+00052  1a28                     goto
+00053  106e 1df4 0005           invoke-virtual  # CALL Landroid/view/ViewGroup;->getBottom()I
+00056  030a                     move-result
+00057  106e 1e0c 0005           invoke-virtual  # CALL Landroid/view/ViewGroup;->getTop()I
+0005a  040a                     move-result
+0005b  43b1                     op_b1
+0005c  106e 1e06 0005           invoke-virtual  # CALL Landroid/view/ViewGroup;->getPaddingTop()I
+0005f  040a                     move-result
+00060  43b1                     op_b1
+00061  106e 1e01 0005           invoke-virtual  # CALL Landroid/view/ViewGroup;->getPaddingBottom()I
+00064  040a                     move-result
+00065  43b1                     op_b1
+00066  5552 1132                iget  # FIELD Landroid/support/v7/widget/g0;->g:I
+00068  53b1                     op_b1
+00069  03db 0203                op_db
+0006b  32b0                     op_b0
+0006c  106e 1d5b 0000           invoke-virtual  # CALL Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+0006f  050c                     move-result-object
+00070  051f 038a                check-cast  # TYPE Landroid/support/v7/widget/g0$a;
+00072  5552 125b                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+00074  52b0                     op_b0
+00075  12b0                     op_b0
+00076  020f                     return
+00077  0522 0680                new-instance  # TYPE Ljava/lang/RuntimeException;
+00079  001a 20f4                const-string  # STR "mBaselineAlignedChildIndex of LinearLayout set to an index that is out of bounds."
+0007b  2070 2cee 0005           invoke-direct  # CALL Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+0007e  0527                     throw
+
+### Landroid/support/v7/widget/g0;->getBaselineAlignedChildIndex()I  [access=0x1, regs=1, ins=1, outs=0, code_off=0xe5798]
+00000  0052 112e                iget  # FIELD Landroid/support/v7/widget/g0;->c:I
+00002  000f                     return
+
+### Landroid/support/v7/widget/g0;->getDividerDrawable()Landroid/graphics/drawable/Drawable;  [access=0x1, regs=1, ins=1, outs=0, code_off=0xe54c4]
+00000  0054 1137                iget-object  # FIELD Landroid/support/v7/widget/g0;->l:Landroid/graphics/drawable/Drawable;
+00002  0011                     return-object
+
+### Landroid/support/v7/widget/g0;->getDividerPadding()I  [access=0x1, regs=1, ins=1, outs=0, code_off=0xe57c4]
+00000  0052 113b                iget  # FIELD Landroid/support/v7/widget/g0;->p:I
+00002  000f                     return
+
+### Landroid/support/v7/widget/g0;->getDividerWidth()I  [access=0x1, regs=1, ins=1, outs=0, code_off=0xe57dc]
+00000  0052 1138                iget  # FIELD Landroid/support/v7/widget/g0;->m:I
+00002  000f                     return
+
+### Landroid/support/v7/widget/g0;->getGravity()I  [access=0x1, regs=1, ins=1, outs=0, code_off=0xe57f4]
+00000  0052 1131                iget  # FIELD Landroid/support/v7/widget/g0;->f:I
+00002  000f                     return
+
+### Landroid/support/v7/widget/g0;->getOrientation()I  [access=0x1, regs=1, ins=1, outs=0, code_off=0xe5834]
+00000  0052 1130                iget  # FIELD Landroid/support/v7/widget/g0;->e:I
+00002  000f                     return
+
+### Landroid/support/v7/widget/g0;->getShowDividers()I  [access=0x1, regs=1, ins=1, outs=0, code_off=0xe584c]
+00000  0052 113a                iget  # FIELD Landroid/support/v7/widget/g0;->o:I
+00002  000f                     return
+
+### Landroid/support/v7/widget/g0;->getVirtualChildCount()I  [access=0x0, regs=1, ins=1, outs=1, code_off=0xe5864]
+00000  106e 1df6 0000           invoke-virtual  # CALL Landroid/view/ViewGroup;->getChildCount()I
+00003  000a                     move-result
+00004  000f                     return
+
+### Landroid/support/v7/widget/g0;->getWeightSum()F  [access=0x1, regs=1, ins=1, outs=0, code_off=0xe5670]
+00000  0052 1133                iget  # FIELD Landroid/support/v7/widget/g0;->h:F
+00002  000f                     return
+
+### Landroid/support/v7/widget/g0;->onDraw(Landroid/graphics/Canvas;)V  [access=0x4, regs=4, ins=2, outs=2, code_off=0xe72e4]
+00000  2054 1137                iget-object  # FIELD Landroid/support/v7/widget/g0;->l:Landroid/graphics/drawable/Drawable;
+00002  0039 0003                if-nez
+00004  000e                     return-void
+00005  2052 1130                iget  # FIELD Landroid/support/v7/widget/g0;->e:I
+00007  1112                     const/4
+00008  1033 0006                if-ne
+0000a  206e 18cc 0032           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->b(Landroid/graphics/Canvas;)V
+0000d  0428                     goto
+0000e  206e 18c5 0032           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->a(Landroid/graphics/Canvas;)V
+00011  000e                     return-void
+
+### Landroid/support/v7/widget/g0;->onInitializeAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0xe7318]
+00000  206f 1e1d 0010           invoke-super  # CALL Landroid/view/ViewGroup;->onInitializeAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
+00003  001c 038b                const-class  # TYPE Landroid/support/v7/widget/g0;
+00005  106e 2c7f 0000           invoke-virtual  # CALL Ljava/lang/Class;->getName()Ljava/lang/String;
+00008  000c                     move-result-object
+00009  206e 1e88 0001           invoke-virtual  # CALL Landroid/view/accessibility/AccessibilityEvent;->setClassName(Ljava/lang/CharSequence;)V
+0000c  000e                     return-void
+
+### Landroid/support/v7/widget/g0;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0xe7344]
+00000  206f 1e1e 0010           invoke-super  # CALL Landroid/view/ViewGroup;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
+00003  001c 038b                const-class  # TYPE Landroid/support/v7/widget/g0;
+00005  106e 2c7f 0000           invoke-virtual  # CALL Ljava/lang/Class;->getName()Ljava/lang/String;
+00008  000c                     move-result-object
+00009  206e 1ea6 0001           invoke-virtual  # CALL Landroid/view/accessibility/AccessibilityNodeInfo;->setClassName(Ljava/lang/CharSequence;)V
+0000c  000e                     return-void
+
+### Landroid/support/v7/widget/g0;->onLayout(Z,I,I,I,I)V  [access=0x4, regs=7, ins=6, outs=5, code_off=0xe7370]
+00000  1252 1130                iget  # FIELD Landroid/support/v7/widget/g0;->e:I
+00002  1012                     const/4
+00003  0233 0006                if-ne
+00005  566e 18cb 5431           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->b(I,I,I,I)V
+00008  0428                     goto
+00009  566e 18c4 5431           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->a(I,I,I,I)V
+0000c  000e                     return-void
+
+### Landroid/support/v7/widget/g0;->onMeasure(I,I)V  [access=0x4, regs=5, ins=3, outs=3, code_off=0xe739c]
+00000  2052 1130                iget  # FIELD Landroid/support/v7/widget/g0;->e:I
+00002  1112                     const/4
+00003  1033 0006                if-ne
+00005  306e 18ca 0432           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->b(I,I)V
+00008  0428                     goto
+00009  306e 18c3 0432           invoke-virtual  # CALL Landroid/support/v7/widget/g0;->a(I,I)V
+0000c  000e                     return-void
+
+### Landroid/support/v7/widget/g0;->setBaselineAligned(Z)V  [access=0x1, regs=2, ins=2, outs=0, code_off=0xe73c8]
+00000  015c 112d                iput-boolean  # FIELD Landroid/support/v7/widget/g0;->b:Z
+00002  000e                     return-void
+
+### Landroid/support/v7/widget/g0;->setBaselineAlignedChildIndex(I)V  [access=0x1, regs=4, ins=2, outs=2, code_off=0xe73e0]
+00000  033a 000b                if-ltz
+00002  106e 1df6 0002           invoke-virtual  # CALL Landroid/view/ViewGroup;->getChildCount()I
+00005  000a                     move-result
+00006  0335 0005                if-ge
+00008  2359 112e                iput  # FIELD Landroid/support/v7/widget/g0;->c:I
+0000a  000e                     return-void
+0000b  0322 0669                new-instance  # TYPE Ljava/lang/IllegalArgumentException;
+0000d  0022 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0000f  1070 2d35 0000           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00012  011a 19b3                const-string  # STR "base aligned child index out of range (0, "
+00014  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00017  106e 1df6 0002           invoke-virtual  # CALL Landroid/view/ViewGroup;->getChildCount()I
+0001a  020a                     move-result
+0001b  206e 2d3b 0020           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+0001e  021a 01ae                const-string  # STR ")"
+00020  206e 2d3f 0020           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00023  106e 2d44 0000           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00026  020c                     move-result-object
+00027  2070 2c9f 0023           invoke-direct  # CALL Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+0002a  0327                     throw
+
+### Landroid/support/v7/widget/g0;->setDividerDrawable(Landroid/graphics/drawable/Drawable;)V  [access=0x1, regs=4, ins=2, outs=2, code_off=0xe7464]
+00000  2054 1137                iget-object  # FIELD Landroid/support/v7/widget/g0;->l:Landroid/graphics/drawable/Drawable;
+00002  0333 0003                if-ne
+00004  000e                     return-void
+00005  235b 1137                iput-object  # FIELD Landroid/support/v7/widget/g0;->l:Landroid/graphics/drawable/Drawable;
+00007  0012                     const/4
+00008  0338 000f                if-eqz
+0000a  106e 09e0 0003           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+0000d  010a                     move-result
+0000e  2159 1138                iput  # FIELD Landroid/support/v7/widget/g0;->m:I
+00010  106e 09df 0003           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
+00013  010a                     move-result
+00014  2159 1139                iput  # FIELD Landroid/support/v7/widget/g0;->n:I
+00016  0528                     goto
+00017  2059 1138                iput  # FIELD Landroid/support/v7/widget/g0;->m:I
+00019  2059 1139                iput  # FIELD Landroid/support/v7/widget/g0;->n:I
+0001b  0339 0003                if-nez
+0001d  1012                     const/4
+0001e  206e 1e3b 0002           invoke-virtual  # CALL Landroid/view/ViewGroup;->setWillNotDraw(Z)V
+00021  106e 1e30 0002           invoke-virtual  # CALL Landroid/view/ViewGroup;->requestLayout()V
+00024  000e                     return-void
+
+### Landroid/support/v7/widget/g0;->setDividerPadding(I)V  [access=0x1, regs=2, ins=2, outs=0, code_off=0xe74c0]
+00000  0159 113b                iput  # FIELD Landroid/support/v7/widget/g0;->p:I
+00002  000e                     return-void
+
+### Landroid/support/v7/widget/g0;->setGravity(I)V  [access=0x1, regs=3, ins=2, outs=1, code_off=0xe74d8]
+00000  1052 1131                iget  # FIELD Landroid/support/v7/widget/g0;->f:I
+00002  2032 0017                if-eq
+00004  0014 0007 0080           const
+00007  20b5                     op_b5
+00008  0039 0006                if-nez
+0000a  0014 0003 0080           const
+0000d  02b6                     op_b6
+0000e  00dd 7002                op_dd
+00010  0039 0004                if-nez
+00012  02de 3002                op_de
+00014  1259 1131                iput  # FIELD Landroid/support/v7/widget/g0;->f:I
+00016  106e 1e30 0001           invoke-virtual  # CALL Landroid/view/ViewGroup;->requestLayout()V
+00019  000e                     return-void
+
+### Landroid/support/v7/widget/g0;->setHorizontalGravity(I)V  [access=0x1, regs=4, ins=2, outs=1, code_off=0xe751c]
+00000  0014 0007 0080           const
+00003  03b5                     op_b5
+00004  2152 1131                iget  # FIELD Landroid/support/v7/widget/g0;->f:I
+00006  10b5                     op_b5
+00007  3032 000c                if-eq
+00009  0014 fff8 ff7f           const
+0000c  10b5                     op_b5
+0000d  03b6                     op_b6
+0000e  2359 1131                iput  # FIELD Landroid/support/v7/widget/g0;->f:I
+00010  106e 1e30 0002           invoke-virtual  # CALL Landroid/view/ViewGroup;->requestLayout()V
+00013  000e                     return-void
+
+### Landroid/support/v7/widget/g0;->setMeasureWithLargestChildEnabled(Z)V  [access=0x1, regs=2, ins=2, outs=0, code_off=0xe7554]
+00000  015c 1134                iput-boolean  # FIELD Landroid/support/v7/widget/g0;->i:Z
+00002  000e                     return-void
+
+### Landroid/support/v7/widget/g0;->setOrientation(I)V  [access=0x1, regs=3, ins=2, outs=1, code_off=0xe756c]
+00000  1052 1130                iget  # FIELD Landroid/support/v7/widget/g0;->e:I
+00002  2032 0007                if-eq
+00004  1259 1130                iput  # FIELD Landroid/support/v7/widget/g0;->e:I
+00006  106e 1e30 0001           invoke-virtual  # CALL Landroid/view/ViewGroup;->requestLayout()V
+00009  000e                     return-void
+
+### Landroid/support/v7/widget/g0;->setShowDividers(I)V  [access=0x1, regs=3, ins=2, outs=1, code_off=0xe7590]
+00000  1052 113a                iget  # FIELD Landroid/support/v7/widget/g0;->o:I
+00002  0232 0005                if-eq
+00004  106e 1e30 0001           invoke-virtual  # CALL Landroid/view/ViewGroup;->requestLayout()V
+00007  1259 113a                iput  # FIELD Landroid/support/v7/widget/g0;->o:I
+00009  000e                     return-void
+
+### Landroid/support/v7/widget/g0;->setVerticalGravity(I)V  [access=0x1, regs=4, ins=2, outs=1, code_off=0xe75b4]
+00000  03dd 7003                op_dd
+00002  2052 1131                iget  # FIELD Landroid/support/v7/widget/g0;->f:I
+00004  01dd 7000                op_dd
+00006  3132 000a                if-eq
+00008  00dd 8f00                op_dd
+0000a  03b6                     op_b6
+0000b  2359 1131                iput  # FIELD Landroid/support/v7/widget/g0;->f:I
+0000d  106e 1e30 0002           invoke-virtual  # CALL Landroid/view/ViewGroup;->requestLayout()V
+00010  000e                     return-void
+
+### Landroid/support/v7/widget/g0;->setWeightSum(F)V  [access=0x1, regs=3, ins=2, outs=2, code_off=0xe75e8]
+00000  0012                     const/4
+00001  2071 2cca 0020           invoke-static  # CALL Ljava/lang/Math;->max(F,F)F
+00004  020a                     move-result
+00005  1259 1133                iput  # FIELD Landroid/support/v7/widget/g0;->h:F
+00007  000e                     return-void
+
+### Landroid/support/v7/widget/g0;->shouldDelayChildPressedState()Z  [access=0x1, regs=1, ins=1, outs=0, code_off=0xe565c]
+00000  0012                     const/4
+00001  000f                     return

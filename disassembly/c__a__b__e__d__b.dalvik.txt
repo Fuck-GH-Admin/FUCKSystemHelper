@@ -1,0 +1,78 @@
+### Lc/a/b/e/d/b;-><clinit>()V  [access=0x10008, regs=1, ins=0, outs=1, code_off=0xf9474]
+00000  0022 06bd                new-instance  # TYPE Ljava/security/SecureRandom;
+00002  1070 2dcf 0000           invoke-direct  # CALL Ljava/security/SecureRandom;-><init>()V
+00005  0069 1b2d                sput-object  # FIELD Lc/a/b/e/d/b;->a:Ljava/security/SecureRandom;
+00007  000e                     return-void
+
+### Lc/a/b/e/d/b;->a(Ljava/math/BigInteger;)I  [access=0x9, regs=1, ins=1, outs=1, code_off=0xf9414]
+00000  106e 2d82 0000           invoke-virtual  # CALL Ljava/math/BigInteger;->bitLength()I
+00003  000a                     move-result
+00004  00d8 0700                op_d8
+00006  00e1 0300                op_e1
+00008  000f                     return
+
+### Lc/a/b/e/d/b;->a([B,Ljava/math/BigInteger;)Ljava/math/BigInteger;  [access=0xa, regs=4, ins=2, outs=3, code_off=0xf9438]
+00000  0022 0699                new-instance  # TYPE Ljava/math/BigInteger;
+00002  1112                     const/4
+00003  3070 2d80 0210           invoke-direct  # CALL Ljava/math/BigInteger;-><init>(I,[B)V
+00006  206e 2d83 0030           invoke-virtual  # CALL Ljava/math/BigInteger;->compareTo(Ljava/math/BigInteger;)I
+00009  020a                     move-result
+0000a  023b 0003                if-gez
+0000c  0011                     return-object
+0000d  0222 06ff                new-instance  # TYPE Ljavax/crypto/BadPaddingException;
+0000f  031a 1224                const-string  # STR "Message is larger than modulus"
+00011  2070 2ecb 0032           invoke-direct  # CALL Ljavax/crypto/BadPaddingException;-><init>(Ljava/lang/String;)V
+00014  0227                     throw
+
+### Lc/a/b/e/d/b;->a(Ljava/math/BigInteger;,I)[B  [access=0xa, regs=5, ins=2, outs=5, code_off=0xf93bc]
+00000  106e 2d85 0003           invoke-virtual  # CALL Ljava/math/BigInteger;->toByteArray()[B
+00003  030c                     move-result-object
+00004  3021                     array-length
+00005  4033 0003                if-ne
+00007  0311                     return-object
+00008  01d8 0104                op_d8
+0000a  0212                     const/4
+0000b  1033 000d                if-ne
+0000d  0148 0203                aget-byte
+0000f  0139 0009                if-nez
+00011  4023 0720                new-array  # TYPE [B
+00013  1112                     const/4
+00014  5471 2d45 2013           invoke-static  # CALL Ljava/lang/System;->arraycopy(Ljava/lang/Object;,I,Ljava/lang/Object;,I,I)V
+00017  0011                     return-object
+00018  4034 0004                if-lt
+0001a  0312                     const/4
+0001b  0311                     return-object
+0001c  4123 0720                new-array  # TYPE [B
+0001e  04b1                     op_b1
+0001f  5071 2d45 4123           invoke-static  # CALL Ljava/lang/System;->arraycopy(Ljava/lang/Object;,I,Ljava/lang/Object;,I,I)V
+00022  0111                     return-object
+
+### Lc/a/b/e/d/b;->a([B,I,I)[B  [access=0x9, regs=5, ins=3, outs=5, code_off=0xf935c]
+00000  0339 0006                if-nez
+00002  2021                     array-length
+00003  0433 0003                if-ne
+00005  0211                     return-object
+00006  4023 0720                new-array  # TYPE [B
+00008  0112                     const/4
+00009  5471 2d45 1032           invoke-static  # CALL Ljava/lang/System;->arraycopy(Ljava/lang/Object;,I,Ljava/lang/Object;,I,I)V
+0000c  0011                     return-object
+
+### Lc/a/b/e/d/b;->a([B,Lc/a/b/e/d/d;)[B  [access=0x9, regs=3, ins=2, outs=3, code_off=0xf9330]
+00000  1072 2801 0002           invoke-interface  # CALL Lc/a/b/e/d/d;->a()Ljava/math/BigInteger;
+00003  000c                     move-result-object
+00004  1072 2802 0002           invoke-interface  # CALL Lc/a/b/e/d/d;->b()Ljava/math/BigInteger;
+00007  020c                     move-result-object
+00008  3071 27f8 0201           invoke-static  # CALL Lc/a/b/e/d/b;->a([B,Ljava/math/BigInteger;,Ljava/math/BigInteger;)[B
+0000b  010c                     move-result-object
+0000c  0111                     return-object
+
+### Lc/a/b/e/d/b;->a([B,Ljava/math/BigInteger;,Ljava/math/BigInteger;)[B  [access=0xa, regs=3, ins=3, outs=3, code_off=0xf9388]
+00000  2071 27f4 0010           invoke-static  # CALL Lc/a/b/e/d/b;->a([B,Ljava/math/BigInteger;)Ljava/math/BigInteger;
+00003  000c                     move-result-object
+00004  306e 2d84 0120           invoke-virtual  # CALL Ljava/math/BigInteger;->modPow(Ljava/math/BigInteger;,Ljava/math/BigInteger;)Ljava/math/BigInteger;
+00007  000c                     move-result-object
+00008  1071 27f3 0001           invoke-static  # CALL Lc/a/b/e/d/b;->a(Ljava/math/BigInteger;)I
+0000b  010a                     move-result
+0000c  2071 27f5 0010           invoke-static  # CALL Lc/a/b/e/d/b;->a(Ljava/math/BigInteger;,I)[B
+0000f  000c                     move-result-object
+00010  0011                     return-object

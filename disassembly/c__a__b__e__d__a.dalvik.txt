@@ -1,0 +1,32 @@
+### Lc/a/b/e/d/a;-><init>()V  [access=0x10002, regs=1, ins=1, outs=1, code_off=0xf92f8]
+00000  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  000e                     return-void
+
+### Lc/a/b/e/d/a;->a()Lc/a/b/e/d/a;  [access=0x9, regs=3, ins=0, outs=2, code_off=0xf92c4]
+00000  0022 05a3                new-instance  # TYPE Lc/a/b/e/d/a;
+00002  1070 27ee 0000           invoke-direct  # CALL Lc/a/b/e/d/a;-><init>()V
+00005  0122 05a5                new-instance  # TYPE Lc/a/b/e/d/c;
+00007  1070 27fa 0001           invoke-direct  # CALL Lc/a/b/e/d/c;-><init>()V
+0000a  015b 1b2c                iput-object  # FIELD Lc/a/b/e/d/a;->a:Lc/a/b/e/d/c;
+0000c  021a 1304                const-string  # STR "PKCS1Padding"
+0000e  206e 27fd 0021           invoke-virtual  # CALL Lc/a/b/e/d/c;->a(Ljava/lang/String;)V
+00011  0011                     return-object
+
+### Lc/a/b/e/d/a;->a(I,Lc/a/b/e/d/d;)V  [access=0x1, regs=4, ins=3, outs=4, code_off=0xf9310]
+00000  1154 1b2c                iget-object  # FIELD Lc/a/b/e/d/a;->a:Lc/a/b/e/d/c;
+00002  0062 1b2d                sget-object  # FIELD Lc/a/b/e/d/b;->a:Ljava/security/SecureRandom;
+00004  406e 27fb 0321           invoke-virtual  # CALL Lc/a/b/e/d/c;->a(I,Lc/a/b/e/d/d;,Ljava/security/SecureRandom;)V
+00007  000e                     return-void
+
+### Lc/a/b/e/d/a;->a([B)[B  [access=0x11, regs=4, ins=2, outs=4, code_off=0xf928c]
+00000  0338 000b                if-eqz
+00002  2254 1b2c                iget-object  # FIELD Lc/a/b/e/d/a;->a:Lc/a/b/e/d/c;
+00004  3021                     array-length
+00005  0112                     const/4
+00006  406e 27ff 0132           invoke-virtual  # CALL Lc/a/b/e/d/c;->a([B,I,I)[B
+00009  020c                     move-result-object
+0000a  0211                     return-object
+0000b  0222 0669                new-instance  # TYPE Ljava/lang/IllegalArgumentException;
+0000d  031a 12a4                const-string  # STR "Null input buffer"
+0000f  2070 2c9f 0032           invoke-direct  # CALL Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+00012  0227                     throw

@@ -1,0 +1,48 @@
+### Landroid/support/v4/widget/h;-><init>(Landroid/widget/ListView;)V  [access=0x10001, regs=2, ins=2, outs=2, code_off=0xc0894]
+00000  2070 1145 0010           invoke-direct  # CALL Landroid/support/v4/widget/a;-><init>(Landroid/view/View;)V
+00003  015b 0dfc                iput-object  # FIELD Landroid/support/v4/widget/h;->t:Landroid/widget/ListView;
+00005  000e                     return-void
+
+### Landroid/support/v4/widget/h;->a(I,I)V  [access=0x1, regs=3, ins=3, outs=2, code_off=0xc08b0]
+00000  0054 0dfc                iget-object  # FIELD Landroid/support/v4/widget/h;->t:Landroid/widget/ListView;
+00002  2071 1188 0020           invoke-static  # CALL Landroid/support/v4/widget/i;->a(Landroid/widget/ListView;,I)V
+00005  000e                     return-void
+
+### Landroid/support/v4/widget/h;->a(I)Z  [access=0x1, regs=2, ins=2, outs=0, code_off=0xc07fc]
+00000  0012                     const/4
+00001  000f                     return
+
+### Landroid/support/v4/widget/h;->b(I)Z  [access=0x1, regs=8, ins=2, outs=2, code_off=0xc0810]
+00000  6654 0dfc                iget-object  # FIELD Landroid/support/v4/widget/h;->t:Landroid/widget/ListView;
+00002  106e 203a 0006           invoke-virtual  # CALL Landroid/widget/ListView;->getCount()I
+00005  000a                     move-result
+00006  0112                     const/4
+00007  0039 0003                if-nez
+00009  010f                     return
+0000a  106e 2038 0006           invoke-virtual  # CALL Landroid/widget/ListView;->getChildCount()I
+0000d  020a                     move-result
+0000e  106e 203e 0006           invoke-virtual  # CALL Landroid/widget/ListView;->getFirstVisiblePosition()I
+00011  030a                     move-result
+00012  0490 0203                int-add
+00014  1512                     const/4
+00015  073d 0014                if-lez
+00017  0434 0021                if-lt
+00019  52b1                     op_b1
+0001a  206e 2037 0026           invoke-virtual  # CALL Landroid/widget/ListView;->getChildAt(I)Landroid/view/View;
+0001d  070c                     move-result-object
+0001e  106e 1d50 0007           invoke-virtual  # CALL Landroid/view/View;->getBottom()I
+00021  070a                     move-result
+00022  106e 203f 0006           invoke-virtual  # CALL Landroid/widget/ListView;->getHeight()I
+00025  060a                     move-result
+00026  6736 0012                if-gt
+00028  010f                     return
+00029  073b 0010                if-gez
+0002b  033c 000d                if-gtz
+0002d  206e 2037 0016           invoke-virtual  # CALL Landroid/widget/ListView;->getChildAt(I)Landroid/view/View;
+00030  060c                     move-result-object
+00031  106e 1d76 0006           invoke-virtual  # CALL Landroid/view/View;->getTop()I
+00034  060a                     move-result
+00035  063a 0003                if-ltz
+00037  010f                     return
+00038  050f                     return
+00039  010f                     return

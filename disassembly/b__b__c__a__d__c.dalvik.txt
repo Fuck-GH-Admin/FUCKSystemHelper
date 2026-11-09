@@ -1,0 +1,275 @@
+### Lb/b/c/a/d/c;->a(Landroid/content/res/TypedArray;,I)I  [access=0xa, regs=4, ins=2, outs=3, code_off=0xb197c]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0113 0015                const/16
+00004  1034 0007                if-lt
+00006  206e 0905 0032           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getType(I)I
+00009  020a                     move-result
+0000a  020f                     return
+0000b  0022 041f                new-instance  # TYPE Landroid/util/TypedValue;
+0000d  1070 1c7e 0000           invoke-direct  # CALL Landroid/util/TypedValue;-><init>()V
+00010  306e 0906 0032           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getValue(I,Landroid/util/TypedValue;)Z
+00013  0252 1253                iget  # FIELD Landroid/util/TypedValue;->type:I
+00015  020f                     return
+
+### Lb/b/c/a/d/c;->a(Lorg/xmlpull/v1/XmlPullParser;,Landroid/content/res/Resources;)Lb/b/c/a/d/c$a;  [access=0x9, regs=5, ins=2, outs=2, code_off=0xb169c]
+00000  1072 2f38 0003           invoke-interface  # CALL Lorg/xmlpull/v1/XmlPullParser;->next()I
+00003  000a                     move-result
+00004  2112                     const/4
+00005  1032 0006                if-eq
+00007  1212                     const/4
+00008  2032 0003                if-eq
+0000a  f628                     goto
+0000b  1033 0007                if-ne
+0000d  2071 22ed 0043           invoke-static  # CALL Lb/b/c/a/d/c;->b(Lorg/xmlpull/v1/XmlPullParser;,Landroid/content/res/Resources;)Lb/b/c/a/d/c$a;
+00010  030c                     move-result-object
+00011  0311                     return-object
+00012  0322 071c                new-instance  # TYPE Lorg/xmlpull/v1/XmlPullParserException;
+00014  041a 129b                const-string  # STR "No start tag found"
+00016  2070 2f3a 0043           invoke-direct  # CALL Lorg/xmlpull/v1/XmlPullParserException;-><init>(Ljava/lang/String;)V
+00019  0327                     throw
+
+### Lb/b/c/a/d/c;->a(Landroid/content/res/Resources;,I)Ljava/util/List;  [access=0x9, regs=7, ins=2, outs=3, code_off=0xb19b8]
+00000  0639 0007                if-nez
+00002  0071 2e14 0000           invoke-static  # CALL Ljava/util/Collections;->emptyList()Ljava/util/List;
+00005  050c                     move-result-object
+00006  0511                     return-object
+00007  206e 08ea 0065           invoke-virtual  # CALL Landroid/content/res/Resources;->obtainTypedArray(I)Landroid/content/res/TypedArray;
+0000a  000c                     move-result-object
+0000b  106e 0908 0000           invoke-virtual  # CALL Landroid/content/res/TypedArray;->length()I
+0000e  010a                     move-result
+0000f  0139 000a                if-nez
+00011  0071 2e14 0000           invoke-static  # CALL Ljava/util/Collections;->emptyList()Ljava/util/List;
+00014  050c                     move-result-object
+00015  106e 090a 0000           invoke-virtual  # CALL Landroid/content/res/TypedArray;->recycle()V
+00018  0511                     return-object
+00019  0122 06c8                new-instance  # TYPE Ljava/util/ArrayList;
+0001b  1070 2de7 0001           invoke-direct  # CALL Ljava/util/ArrayList;-><init>()V
+0001e  0212                     const/4
+0001f  2071 22e8 0020           invoke-static  # CALL Lb/b/c/a/d/c;->a(Landroid/content/res/TypedArray;,I)I
+00022  030a                     move-result
+00023  1412                     const/4
+00024  4333 001d                if-ne
+00026  2601                     op_01
+00027  106e 0908 0000           invoke-virtual  # CALL Landroid/content/res/TypedArray;->length()I
+0002a  030a                     move-result
+0002b  3635 0021                if-ge
+0002d  306e 0900 0260           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getResourceId(I,I)I
+00030  030a                     move-result
+00031  0338 000d                if-eqz
+00033  206e 08df 0035           invoke-virtual  # CALL Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
+00036  030c                     move-result-object
+00037  1071 22eb 0003           invoke-static  # CALL Lb/b/c/a/d/c;->a([Ljava/lang/String;)Ljava/util/List;
+0003a  030c                     move-result-object
+0003b  2072 2e52 0031           invoke-interface  # CALL Ljava/util/List;->add(Ljava/lang/Object;)Z
+0003e  06d8 0106                op_d8
+00040  e728                     goto
+00041  206e 08df 0065           invoke-virtual  # CALL Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
+00044  050c                     move-result-object
+00045  1071 22eb 0005           invoke-static  # CALL Lb/b/c/a/d/c;->a([Ljava/lang/String;)Ljava/util/List;
+00048  050c                     move-result-object
+00049  2072 2e52 0051           invoke-interface  # CALL Ljava/util/List;->add(Ljava/lang/Object;)Z
+0004c  106e 090a 0000           invoke-virtual  # CALL Landroid/content/res/TypedArray;->recycle()V
+0004f  0111                     return-object
+00050  050d                     op_0d
+00051  106e 090a 0000           invoke-virtual  # CALL Landroid/content/res/TypedArray;->recycle()V
+00054  0527                     throw
+
+### Lb/b/c/a/d/c;->a([Ljava/lang/String;)Ljava/util/List;  [access=0xa, regs=6, ins=1, outs=2, code_off=0xb1a88]
+00000  0022 06c8                new-instance  # TYPE Ljava/util/ArrayList;
+00002  1070 2de7 0000           invoke-direct  # CALL Ljava/util/ArrayList;-><init>()V
+00005  5121                     array-length
+00006  0212                     const/4
+00007  2301                     op_01
+00008  1335 000e                if-ge
+0000a  0446 0305                aget-object
+0000c  2071 1c54 0024           invoke-static  # CALL Landroid/util/Base64;->decode(Ljava/lang/String;,I)[B
+0000f  040c                     move-result-object
+00010  2072 2e52 0040           invoke-interface  # CALL Ljava/util/List;->add(Ljava/lang/Object;)Z
+00013  03d8 0103                op_d8
+00015  f328                     goto
+00016  0011                     return-object
+
+### Lb/b/c/a/d/c;->a(Lorg/xmlpull/v1/XmlPullParser;)V  [access=0xa, regs=4, ins=1, outs=1, code_off=0xb1ac8]
+00000  1012                     const/4
+00001  003d 0013                if-lez
+00003  1072 2f38 0003           invoke-interface  # CALL Lorg/xmlpull/v1/XmlPullParser;->next()I
+00006  010a                     move-result
+00007  2212                     const/4
+00008  2132 0009                if-eq
+0000a  3212                     const/4
+0000b  2132 0003                if-eq
+0000d  f428                     goto
+0000e  00d8 ff00                op_d8
+00010  f128                     goto
+00011  00d8 0100                op_d8
+00013  ee28                     goto
+00014  000e                     return-void
+
+### Lb/b/c/a/d/c;->b(Lorg/xmlpull/v1/XmlPullParser;,Landroid/content/res/Resources;)Lb/b/c/a/d/c$a;  [access=0xa, regs=5, ins=2, outs=4, code_off=0xb16e0]
+00000  001a 1bfc                const-string  # STR "font-family"
+00002  0112                     const/4
+00003  2212                     const/4
+00004  4072 2f39 0123           invoke-interface  # CALL Lorg/xmlpull/v1/XmlPullParser;->require(I,Ljava/lang/String;,Ljava/lang/String;)V
+00007  1072 2f36 0003           invoke-interface  # CALL Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
+0000a  020c                     move-result-object
+0000b  206e 2d03 0002           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+0000e  000a                     move-result
+0000f  0038 0007                if-eqz
+00011  2071 22ee 0043           invoke-static  # CALL Lb/b/c/a/d/c;->c(Lorg/xmlpull/v1/XmlPullParser;,Landroid/content/res/Resources;)Lb/b/c/a/d/c$a;
+00014  030c                     move-result-object
+00015  0311                     return-object
+00016  1071 22ec 0003           invoke-static  # CALL Lb/b/c/a/d/c;->a(Lorg/xmlpull/v1/XmlPullParser;)V
+00019  0111                     return-object
+
+### Lb/b/c/a/d/c;->c(Lorg/xmlpull/v1/XmlPullParser;,Landroid/content/res/Resources;)Lb/b/c/a/d/c$a;  [access=0xa, regs=10, ins=2, outs=5, code_off=0xb1724]
+00000  1071 1c84 0008           invoke-static  # CALL Landroid/util/Xml;->asAttributeSet(Lorg/xmlpull/v1/XmlPullParser;)Landroid/util/AttributeSet;
+00003  000c                     move-result-object
+00004  0162 12c1                sget-object  # FIELD Lb/b/a/c;->FontFamily:[I
+00006  306e 08e9 0109           invoke-virtual  # CALL Landroid/content/res/Resources;->obtainAttributes(Landroid/util/AttributeSet;,[I)Landroid/content/res/TypedArray;
+00009  000c                     move-result-object
+0000a  0160 12cd                sget  # FIELD Lb/b/a/c;->FontFamily_fontProviderAuthority:I
+0000c  206e 0902 0010           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
+0000f  010c                     move-result-object
+00010  0260 12d1                sget  # FIELD Lb/b/a/c;->FontFamily_fontProviderPackage:I
+00012  206e 0902 0020           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
+00015  020c                     move-result-object
+00016  0360 12d2                sget  # FIELD Lb/b/a/c;->FontFamily_fontProviderQuery:I
+00018  206e 0902 0030           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
+0001b  030c                     move-result-object
+0001c  0460 12ce                sget  # FIELD Lb/b/a/c;->FontFamily_fontProviderCerts:I
+0001e  0512                     const/4
+0001f  306e 0900 0540           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getResourceId(I,I)I
+00022  040a                     move-result
+00023  0560 12cf                sget  # FIELD Lb/b/a/c;->FontFamily_fontProviderFetchStrategy:I
+00025  1612                     const/4
+00026  306e 08fd 0650           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getInteger(I,I)I
+00029  050a                     move-result
+0002a  0660 12d0                sget  # FIELD Lb/b/a/c;->FontFamily_fontProviderFetchTimeout:I
+0002c  0713 01f4                const/16
+0002e  306e 08fd 0760           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getInteger(I,I)I
+00031  060a                     move-result
+00032  106e 090a 0000           invoke-virtual  # CALL Landroid/content/res/TypedArray;->recycle()V
+00035  3012                     const/4
+00036  0138 001f                if-eqz
+00038  0238 001d                if-eqz
+0003a  0338 001b                if-eqz
+0003c  1072 2f38 0008           invoke-interface  # CALL Lorg/xmlpull/v1/XmlPullParser;->next()I
+0003f  070a                     move-result
+00040  0732 0006                if-eq
+00042  1071 22ec 0008           invoke-static  # CALL Lb/b/c/a/d/c;->a(Lorg/xmlpull/v1/XmlPullParser;)V
+00045  f728                     goto
+00046  2071 22ea 0049           invoke-static  # CALL Lb/b/c/a/d/c;->a(Landroid/content/res/Resources;,I)Ljava/util/List;
+00049  080c                     move-result-object
+0004a  0922 04db                new-instance  # TYPE Lb/b/c/a/d/c$d;
+0004c  0022 04f6                new-instance  # TYPE Lb/b/c/d/a;
+0004e  5870 2381 3210           invoke-direct  # CALL Lb/b/c/d/a;-><init>(Ljava/lang/String;,Ljava/lang/String;,Ljava/lang/String;,Ljava/util/List;)V
+00051  4070 22e4 6509           invoke-direct  # CALL Lb/b/c/a/d/c$d;-><init>(Lb/b/c/d/a;,I,I)V
+00054  0911                     return-object
+00055  0122 06c8                new-instance  # TYPE Ljava/util/ArrayList;
+00057  1070 2de7 0001           invoke-direct  # CALL Ljava/util/ArrayList;-><init>()V
+0005a  1072 2f38 0008           invoke-interface  # CALL Lorg/xmlpull/v1/XmlPullParser;->next()I
+0005d  020a                     move-result
+0005e  0232 0022                if-eq
+00060  1072 2f34 0008           invoke-interface  # CALL Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
+00063  020a                     move-result
+00064  2312                     const/4
+00065  3232 0003                if-eq
+00067  f328                     goto
+00068  1072 2f36 0008           invoke-interface  # CALL Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
+0006b  020c                     move-result-object
+0006c  031a 1bfb                const-string  # STR "font"
+0006e  206e 2d03 0032           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+00071  020a                     move-result
+00072  0238 000a                if-eqz
+00074  2071 22ef 0098           invoke-static  # CALL Lb/b/c/a/d/c;->d(Lorg/xmlpull/v1/XmlPullParser;,Landroid/content/res/Resources;)Lb/b/c/a/d/c$c;
+00077  020c                     move-result-object
+00078  2072 2e52 0021           invoke-interface  # CALL Ljava/util/List;->add(Ljava/lang/Object;)Z
+0007b  df28                     goto
+0007c  1071 22ec 0008           invoke-static  # CALL Lb/b/c/a/d/c;->a(Lorg/xmlpull/v1/XmlPullParser;)V
+0007f  db28                     goto
+00080  1072 2e58 0001           invoke-interface  # CALL Ljava/util/List;->isEmpty()Z
+00083  080a                     move-result
+00084  0838 0004                if-eqz
+00086  0812                     const/4
+00087  0811                     return-object
+00088  0822 04d9                new-instance  # TYPE Lb/b/c/a/d/c$b;
+0008a  1072 2e5d 0001           invoke-interface  # CALL Ljava/util/List;->size()I
+0008d  090a                     move-result
+0008e  9923 074e                new-array  # TYPE [Lb/b/c/a/d/c$c;
+00090  2072 2e5f 0091           invoke-interface  # CALL Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+00093  090c                     move-result-object
+00094  091f 074e                check-cast  # TYPE [Lb/b/c/a/d/c$c;
+00096  2070 22db 0098           invoke-direct  # CALL Lb/b/c/a/d/c$b;-><init>([Lb/b/c/a/d/c$c;)V
+00099  0811                     return-object
+
+### Lb/b/c/a/d/c;->d(Lorg/xmlpull/v1/XmlPullParser;,Landroid/content/res/Resources;)Lb/b/c/a/d/c$c;  [access=0xa, regs=11, ins=2, outs=7, code_off=0xb1868]
+00000  1071 1c84 0009           invoke-static  # CALL Landroid/util/Xml;->asAttributeSet(Lorg/xmlpull/v1/XmlPullParser;)Landroid/util/AttributeSet;
+00003  000c                     move-result-object
+00004  0162 12c2                sget-object  # FIELD Lb/b/a/c;->FontFamilyFont:[I
+00006  306e 08e9 010a           invoke-virtual  # CALL Landroid/content/res/Resources;->obtainAttributes(Landroid/util/AttributeSet;,[I)Landroid/content/res/TypedArray;
+00009  0a0c                     move-result-object
+0000a  0060 12cb                sget  # FIELD Lb/b/a/c;->FontFamilyFont_fontWeight:I
+0000c  206e 0907 000a           invoke-virtual  # CALL Landroid/content/res/TypedArray;->hasValue(I)Z
+0000f  000a                     move-result
+00010  0038 0005                if-eqz
+00012  0060 12cb                sget  # FIELD Lb/b/a/c;->FontFamilyFont_fontWeight:I
+00014  0328                     goto
+00015  0060 12c6                sget  # FIELD Lb/b/a/c;->FontFamilyFont_android_fontWeight:I
+00017  0113 0190                const/16
+00019  306e 08fc 010a           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getInt(I,I)I
+0001c  040a                     move-result
+0001d  0060 12c9                sget  # FIELD Lb/b/a/c;->FontFamilyFont_fontStyle:I
+0001f  206e 0907 000a           invoke-virtual  # CALL Landroid/content/res/TypedArray;->hasValue(I)Z
+00022  000a                     move-result
+00023  0038 0005                if-eqz
+00025  0060 12c9                sget  # FIELD Lb/b/a/c;->FontFamilyFont_fontStyle:I
+00027  0328                     goto
+00028  0060 12c4                sget  # FIELD Lb/b/a/c;->FontFamilyFont_android_fontStyle:I
+0002a  0112                     const/4
+0002b  306e 08fc 010a           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getInt(I,I)I
+0002e  000a                     move-result
+0002f  1212                     const/4
+00030  0233 0004                if-ne
+00032  2501                     op_01
+00033  0228                     goto
+00034  1501                     op_01
+00035  0060 12cc                sget  # FIELD Lb/b/a/c;->FontFamilyFont_ttcIndex:I
+00037  206e 0907 000a           invoke-virtual  # CALL Landroid/content/res/TypedArray;->hasValue(I)Z
+0003a  000a                     move-result
+0003b  0038 0005                if-eqz
+0003d  0060 12cc                sget  # FIELD Lb/b/a/c;->FontFamilyFont_ttcIndex:I
+0003f  0328                     goto
+00040  0060 12c7                sget  # FIELD Lb/b/a/c;->FontFamilyFont_android_ttcIndex:I
+00042  0260 12ca                sget  # FIELD Lb/b/a/c;->FontFamilyFont_fontVariationSettings:I
+00044  206e 0907 002a           invoke-virtual  # CALL Landroid/content/res/TypedArray;->hasValue(I)Z
+00047  020a                     move-result
+00048  0238 0005                if-eqz
+0004a  0260 12ca                sget  # FIELD Lb/b/a/c;->FontFamilyFont_fontVariationSettings:I
+0004c  0328                     goto
+0004d  0260 12c5                sget  # FIELD Lb/b/a/c;->FontFamilyFont_android_fontVariationSettings:I
+0004f  206e 0902 002a           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
+00052  060c                     move-result-object
+00053  306e 08fc 010a           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getInt(I,I)I
+00056  070a                     move-result
+00057  0060 12c8                sget  # FIELD Lb/b/a/c;->FontFamilyFont_font:I
+00059  206e 0907 000a           invoke-virtual  # CALL Landroid/content/res/TypedArray;->hasValue(I)Z
+0005c  000a                     move-result
+0005d  0038 0005                if-eqz
+0005f  0060 12c8                sget  # FIELD Lb/b/a/c;->FontFamilyFont_font:I
+00061  0328                     goto
+00062  0060 12c3                sget  # FIELD Lb/b/a/c;->FontFamilyFont_android_font:I
+00064  306e 0900 010a           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getResourceId(I,I)I
+00067  080a                     move-result
+00068  206e 0902 000a           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
+0006b  030c                     move-result-object
+0006c  106e 090a 000a           invoke-virtual  # CALL Landroid/content/res/TypedArray;->recycle()V
+0006f  1072 2f38 0009           invoke-interface  # CALL Lorg/xmlpull/v1/XmlPullParser;->next()I
+00072  0a0a                     move-result
+00073  3012                     const/4
+00074  0a32 0006                if-eq
+00076  1071 22ec 0009           invoke-static  # CALL Lb/b/c/a/d/c;->a(Lorg/xmlpull/v1/XmlPullParser;)V
+00079  f628                     goto
+0007a  0922 04da                new-instance  # TYPE Lb/b/c/a/d/c$c;
+0007c  9207                     op_07
+0007d  0776 22dd 0002           invoke-direct/range  # CALL Lb/b/c/a/d/c$c;-><init>(Ljava/lang/String;,I,Z,Ljava/lang/String;,I,I)V
+00080  0911                     return-object

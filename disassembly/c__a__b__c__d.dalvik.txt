@@ -1,0 +1,74 @@
+### Lc/a/b/c/d;-><init>()V  [access=0x10001, regs=4, ins=1, outs=4, code_off=0xf4df4]
+00000  001a 205e                const-string  # STR "isc"
+00002  0117 1200 007a           const-wide/32
+00005  4070 275b 2103           invoke-direct  # CALL Lc/a/b/c/a;-><init>(Ljava/lang/String;,J)V
+00008  0022 0588                new-instance  # TYPE Lc/a/b/c/d$a;
+0000a  2070 2767 0030           invoke-direct  # CALL Lc/a/b/c/d$a;-><init>(Lc/a/b/c/d;)V
+0000d  000e                     return-void
+
+### Lc/a/b/c/d;->a(Ljava/lang/String;,Lc/a/b/c/a$d;)Lc/a/b/c/a$e;  [access=0x1, regs=10, ins=3, outs=3, code_off=0xf4cf0]
+00000  7054 1ad6                iget-object  # FIELD Lc/a/b/c/a;->a:Lc/a/b/c/a$a;
+00002  0054 1ace                iget-object  # FIELD Lc/a/b/c/a$a;->a:Landroid/content/Context;
+00004  106e 0846 0000           invoke-virtual  # CALL Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+00007  000c                     move-result-object
+00008  0112                     const/4
+00009  0212                     const/4
+0000a  306e 089f 0180           invoke-virtual  # CALL Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;,I)Landroid/content/pm/PackageInfo;
+0000d  000c                     move-result-object
+0000e  0228                     goto
+0000f  2007                     op_07
+00010  e112                     const/4
+00011  0039 0007                if-nez
+00013  1071 2756 0001           invoke-static  # CALL Lc/a/b/c/a$e;->a(I)Lc/a/b/c/a$e;
+00016  070c                     move-result-object
+00017  0711                     return-object
+00018  9355 1ad3                iget-boolean  # FIELD Lc/a/b/c/a$d;->a:Z
+0001a  0338 0027                if-eqz
+0001c  0222 0589                new-instance  # TYPE Lc/a/b/c/d$b;
+0001e  3070 276c 0872           invoke-direct  # CALL Lc/a/b/c/d$b;-><init>(Lc/a/b/c/d;,Ljava/lang/String;)V
+00021  106e 2750 0002           invoke-virtual  # CALL Lc/a/b/c/a$b;->a()Z
+00024  106e 2774 0002           invoke-virtual  # CALL Lc/a/b/c/d$b;->c()Ljava/lang/String;
+00027  030c                     move-result-object
+00028  206e 2d03 0038           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+0002b  030a                     move-result
+0002c  0338 0015                if-eqz
+0002e  0353 050e                iget-wide  # FIELD Landroid/content/pm/PackageInfo;->lastUpdateTime:J
+00030  106e 2777 0002           invoke-virtual  # CALL Lc/a/b/c/d$b;->e()J
+00033  050b                     move-result-wide
+00034  0331 0503                op_31
+00036  0339 000b                if-nez
+00038  106e 2776 0002           invoke-virtual  # CALL Lc/a/b/c/d$b;->d()Lc/a/b/n$a;
+0003b  070c                     move-result-object
+0003c  1071 2757 0007           invoke-static  # CALL Lc/a/b/c/a$e;->a(Lc/a/b/n$a;)Lc/a/b/c/a$e;
+0003f  070c                     move-result-object
+00040  0711                     return-object
+00041  0322 0588                new-instance  # TYPE Lc/a/b/c/d$a;
+00043  2070 2767 0073           invoke-direct  # CALL Lc/a/b/c/d$a;-><init>(Lc/a/b/c/d;)V
+00046  206e 2769 0003           invoke-virtual  # CALL Lc/a/b/c/d$a;->a(Landroid/content/pm/PackageInfo;)Z
+00049  070a                     move-result
+0004a  0739 0007                if-nez
+0004c  1071 2756 0001           invoke-static  # CALL Lc/a/b/c/a$e;->a(I)Lc/a/b/c/a$e;
+0004f  070c                     move-result-object
+00050  0711                     return-object
+00051  9755 1ad3                iget-boolean  # FIELD Lc/a/b/c/a$d;->a:Z
+00053  0738 0019                if-eqz
+00055  0238 0017                if-eqz
+00057  206e 276d 0032           invoke-virtual  # CALL Lc/a/b/c/d$b;->a(Lc/a/b/c/d$a;)V
+0005a  0071 2d46 0000           invoke-static  # CALL Ljava/lang/System;->currentTimeMillis()J
+0005d  040b                     move-result-wide
+0005e  306e 276f 0542           invoke-virtual  # CALL Lc/a/b/c/d$b;->a(J)Z
+00061  0053 050e                iget-wide  # FIELD Landroid/content/pm/PackageInfo;->lastUpdateTime:J
+00063  306e 2775 0102           invoke-virtual  # CALL Lc/a/b/c/d$b;->c(J)Z
+00066  206e 2771 0082           invoke-virtual  # CALL Lc/a/b/c/d$b;->a(Ljava/lang/String;)Z
+00069  106e 2752 0002           invoke-virtual  # CALL Lc/a/b/c/a$b;->b()Z
+0006c  106e 276b 0003           invoke-virtual  # CALL Lc/a/b/c/d$a;->b()Lc/a/b/n$a;
+0006f  070c                     move-result-object
+00070  cc28                     goto
+
+### Lc/a/b/c/d;->a(Lc/a/b/c/a$c;)V  [access=0x1, regs=3, ins=2, outs=2, code_off=0xf4e20]
+00000  1254 1ad7                iget-object  # FIELD Lc/a/b/c/a;->b:Lc/a/b/i/a$a;
+00002  001a 205e                const-string  # STR "isc"
+00004  206e 2829 0002           invoke-virtual  # CALL Lc/a/b/i/a$a;->a(Ljava/lang/String;)Lc/a/b/i/a$a;
+00007  020c                     move-result-object
+00008  125b 1ae4                iput-object  # FIELD Lc/a/b/c/d;->f:Lc/a/b/i/a$a;
+0000a  000e                     return-void

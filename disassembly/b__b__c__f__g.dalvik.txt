@@ -1,0 +1,243 @@
+### Lb/b/c/f/g;-><init>(I)V  [access=0x10001, regs=5, ins=2, outs=4, code_off=0xb9bac]
+00000  1070 2ce0 0003           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  043d 0010                if-lez
+00005  3459 13bc                iput  # FIELD Lb/b/c/f/g;->c:I
+00007  0422 06d8                new-instance  # TYPE Ljava/util/LinkedHashMap;
+00009  0012                     const/4
+0000a  0115 3f40                const/high16
+0000c  1212                     const/4
+0000d  4070 2e47 2104           invoke-direct  # CALL Ljava/util/LinkedHashMap;-><init>(I,F,Z)V
+00010  345b 13ba                iput-object  # FIELD Lb/b/c/f/g;->a:Ljava/util/LinkedHashMap;
+00012  000e                     return-void
+00013  0322 0669                new-instance  # TYPE Ljava/lang/IllegalArgumentException;
+00015  041a 2139                const-string  # STR "maxSize <= 0"
+00017  2070 2c9f 0043           invoke-direct  # CALL Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+0001a  0327                     throw
+
+### Lb/b/c/f/g;->c(Ljava/lang/Object;,Ljava/lang/Object;)I  [access=0x2, regs=5, ins=3, outs=3, code_off=0xb98f8]
+00000  306e 242e 0432           invoke-virtual  # CALL Lb/b/c/f/g;->b(Ljava/lang/Object;,Ljava/lang/Object;)I
+00003  020a                     move-result
+00004  023a 0003                if-ltz
+00006  020f                     return
+00007  0222 066a                new-instance  # TYPE Ljava/lang/IllegalStateException;
+00009  0022 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0000b  1070 2d35 0000           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0000e  011a 127e                const-string  # STR "Negative size: "
+00010  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00013  206e 2d3e 0030           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+00016  031a 0293                const-string  # STR "="
+00018  206e 2d3f 0030           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0001b  206e 2d3e 0040           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+0001e  106e 2d44 0000           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00021  030c                     move-result-object
+00022  2070 2ca3 0032           invoke-direct  # CALL Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+00025  0227                     throw
+
+### Lb/b/c/f/g;->a(Ljava/lang/Object;)Ljava/lang/Object;  [access=0x4, regs=2, ins=2, outs=0, code_off=0xb9968]
+00000  0012                     const/4
+00001  0011                     return-object
+
+### Lb/b/c/f/g;->a(Ljava/lang/Object;,Ljava/lang/Object;)Ljava/lang/Object;  [access=0x11, regs=6, ins=3, outs=5, code_off=0xb9a6c]
+00000  0438 0035                if-eqz
+00002  0538 0033                if-eqz
+00004  031d                     monitor-enter
+00005  3052 13bd                iget  # FIELD Lb/b/c/f/g;->d:I
+00007  00d8 0100                op_d8
+00009  3059 13bd                iput  # FIELD Lb/b/c/f/g;->d:I
+0000b  3052 13bb                iget  # FIELD Lb/b/c/f/g;->b:I
+0000d  3070 2430 0543           invoke-direct  # CALL Lb/b/c/f/g;->c(Ljava/lang/Object;,Ljava/lang/Object;)I
+00010  010a                     move-result
+00011  10b0                     op_b0
+00012  3059 13bb                iput  # FIELD Lb/b/c/f/g;->b:I
+00014  3054 13ba                iget-object  # FIELD Lb/b/c/f/g;->a:Ljava/util/LinkedHashMap;
+00016  306e 2e4b 0540           invoke-virtual  # CALL Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;,Ljava/lang/Object;)Ljava/lang/Object;
+00019  000c                     move-result-object
+0001a  0038 000b                if-eqz
+0001c  3152 13bb                iget  # FIELD Lb/b/c/f/g;->b:I
+0001e  3070 2430 0043           invoke-direct  # CALL Lb/b/c/f/g;->c(Ljava/lang/Object;,Ljava/lang/Object;)I
+00021  020a                     move-result
+00022  21b1                     op_b1
+00023  3159 13bb                iput  # FIELD Lb/b/c/f/g;->b:I
+00025  031e                     monitor-exit
+00026  0038 0006                if-eqz
+00028  0112                     const/4
+00029  556e 242d 0413           invoke-virtual  # CALL Lb/b/c/f/g;->a(Z,Ljava/lang/Object;,Ljava/lang/Object;,Ljava/lang/Object;)V
+0002c  3452 13bc                iget  # FIELD Lb/b/c/f/g;->c:I
+0002e  206e 242c 0043           invoke-virtual  # CALL Lb/b/c/f/g;->a(I)V
+00031  0011                     return-object
+00032  040d                     op_0d
+00033  031e                     monitor-exit
+00034  0427                     throw
+00035  0322 0679                new-instance  # TYPE Ljava/lang/NullPointerException;
+00037  041a 207e                const-string  # STR "key == null || value == null"
+00039  2070 2cde 0043           invoke-direct  # CALL Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+0003c  0327                     throw
+
+### Lb/b/c/f/g;->a(I)V  [access=0x1, regs=6, ins=2, outs=5, code_off=0xb9c08]
+00000  041d                     monitor-enter
+00001  4052 13bb                iget  # FIELD Lb/b/c/f/g;->b:I
+00003  003a 004f                if-ltz
+00005  4054 13ba                iget-object  # FIELD Lb/b/c/f/g;->a:Ljava/util/LinkedHashMap;
+00007  106e 2e4a 0000           invoke-virtual  # CALL Ljava/util/LinkedHashMap;->isEmpty()Z
+0000a  000a                     move-result
+0000b  0038 0006                if-eqz
+0000d  4052 13bb                iget  # FIELD Lb/b/c/f/g;->b:I
+0000f  0039 0043                if-nez
+00011  4052 13bb                iget  # FIELD Lb/b/c/f/g;->b:I
+00013  5037 003d                if-le
+00015  4054 13ba                iget-object  # FIELD Lb/b/c/f/g;->a:Ljava/util/LinkedHashMap;
+00017  106e 2e4a 0000           invoke-virtual  # CALL Ljava/util/LinkedHashMap;->isEmpty()Z
+0001a  000a                     move-result
+0001b  0038 0003                if-eqz
+0001d  3328                     goto
+0001e  4054 13ba                iget-object  # FIELD Lb/b/c/f/g;->a:Ljava/util/LinkedHashMap;
+00020  106e 2e48 0000           invoke-virtual  # CALL Ljava/util/LinkedHashMap;->entrySet()Ljava/util/Set;
+00023  000c                     move-result-object
+00024  1072 2e7c 0000           invoke-interface  # CALL Ljava/util/Set;->iterator()Ljava/util/Iterator;
+00027  000c                     move-result-object
+00028  1072 2e44 0000           invoke-interface  # CALL Ljava/util/Iterator;->next()Ljava/lang/Object;
+0002b  000c                     move-result-object
+0002c  001f 06dc                check-cast  # TYPE Ljava/util/Map$Entry;
+0002e  1072 2e64 0000           invoke-interface  # CALL Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+00031  010c                     move-result-object
+00032  1072 2e65 0000           invoke-interface  # CALL Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+00035  000c                     move-result-object
+00036  4254 13ba                iget-object  # FIELD Lb/b/c/f/g;->a:Ljava/util/LinkedHashMap;
+00038  206e 2e4c 0012           invoke-virtual  # CALL Ljava/util/LinkedHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+0003b  4252 13bb                iget  # FIELD Lb/b/c/f/g;->b:I
+0003d  3070 2430 0014           invoke-direct  # CALL Lb/b/c/f/g;->c(Ljava/lang/Object;,Ljava/lang/Object;)I
+00040  030a                     move-result
+00041  32b1                     op_b1
+00042  4259 13bb                iput  # FIELD Lb/b/c/f/g;->b:I
+00044  4252 13bf                iget  # FIELD Lb/b/c/f/g;->f:I
+00046  1312                     const/4
+00047  32b0                     op_b0
+00048  4259 13bf                iput  # FIELD Lb/b/c/f/g;->f:I
+0004a  041e                     monitor-exit
+0004b  0212                     const/4
+0004c  526e 242d 0134           invoke-virtual  # CALL Lb/b/c/f/g;->a(Z,Ljava/lang/Object;,Ljava/lang/Object;,Ljava/lang/Object;)V
+0004f  b128                     goto
+00050  041e                     monitor-exit
+00051  000e                     return-void
+00052  0522 066a                new-instance  # TYPE Ljava/lang/IllegalStateException;
+00054  0022 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00056  1070 2d35 0000           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00059  106e 2ce3 0004           invoke-virtual  # CALL Ljava/lang/Object;->getClass()Ljava/lang/Class;
+0005c  010c                     move-result-object
+0005d  106e 2c7f 0001           invoke-virtual  # CALL Ljava/lang/Class;->getName()Ljava/lang/String;
+00060  010c                     move-result-object
+00061  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00064  011a 0209                const-string  # STR ".sizeOf() is reporting inconsistent results!"
+00066  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00069  106e 2d44 0000           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0006c  000c                     move-result-object
+0006d  2070 2ca3 0005           invoke-direct  # CALL Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+00070  0527                     throw
+00071  050d                     op_0d
+00072  041e                     monitor-exit
+00073  0527                     throw
+
+### Lb/b/c/f/g;->a(Z,Ljava/lang/Object;,Ljava/lang/Object;,Ljava/lang/Object;)V  [access=0x4, regs=5, ins=5, outs=0, code_off=0xb9bf4]
+00000  000e                     return-void
+
+### Lb/b/c/f/g;->b(Ljava/lang/Object;,Ljava/lang/Object;)I  [access=0x4, regs=3, ins=3, outs=0, code_off=0xb9954]
+00000  1012                     const/4
+00001  000f                     return
+
+### Lb/b/c/f/g;->b(Ljava/lang/Object;)Ljava/lang/Object;  [access=0x11, regs=6, ins=2, outs=5, code_off=0xb997c]
+00000  0538 0054                if-eqz
+00002  041d                     monitor-enter
+00003  4054 13ba                iget-object  # FIELD Lb/b/c/f/g;->a:Ljava/util/LinkedHashMap;
+00005  206e 2e49 0050           invoke-virtual  # CALL Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+00008  000c                     move-result-object
+00009  0038 000a                if-eqz
+0000b  4552 13c0                iget  # FIELD Lb/b/c/f/g;->g:I
+0000d  05d8 0105                op_d8
+0000f  4559 13c0                iput  # FIELD Lb/b/c/f/g;->g:I
+00011  041e                     monitor-exit
+00012  0011                     return-object
+00013  4052 13c1                iget  # FIELD Lb/b/c/f/g;->h:I
+00015  00d8 0100                op_d8
+00017  4059 13c1                iput  # FIELD Lb/b/c/f/g;->h:I
+00019  041e                     monitor-exit
+0001a  206e 242a 0054           invoke-virtual  # CALL Lb/b/c/f/g;->a(Ljava/lang/Object;)Ljava/lang/Object;
+0001d  000c                     move-result-object
+0001e  0039 0004                if-nez
+00020  0412                     const/4
+00021  0411                     return-object
+00022  041d                     monitor-enter
+00023  4152 13be                iget  # FIELD Lb/b/c/f/g;->e:I
+00025  01d8 0101                op_d8
+00027  4159 13be                iput  # FIELD Lb/b/c/f/g;->e:I
+00029  4154 13ba                iget-object  # FIELD Lb/b/c/f/g;->a:Ljava/util/LinkedHashMap;
+0002b  306e 2e4b 0051           invoke-virtual  # CALL Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;,Ljava/lang/Object;)Ljava/lang/Object;
+0002e  010c                     move-result-object
+0002f  0138 0008                if-eqz
+00031  4254 13ba                iget-object  # FIELD Lb/b/c/f/g;->a:Ljava/util/LinkedHashMap;
+00033  306e 2e4b 0152           invoke-virtual  # CALL Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;,Ljava/lang/Object;)Ljava/lang/Object;
+00036  0a28                     goto
+00037  4252 13bb                iget  # FIELD Lb/b/c/f/g;->b:I
+00039  3070 2430 0054           invoke-direct  # CALL Lb/b/c/f/g;->c(Ljava/lang/Object;,Ljava/lang/Object;)I
+0003c  030a                     move-result
+0003d  32b0                     op_b0
+0003e  4259 13bb                iput  # FIELD Lb/b/c/f/g;->b:I
+00040  041e                     monitor-exit
+00041  0138 0007                if-eqz
+00043  0212                     const/4
+00044  516e 242d 0524           invoke-virtual  # CALL Lb/b/c/f/g;->a(Z,Ljava/lang/Object;,Ljava/lang/Object;,Ljava/lang/Object;)V
+00047  0111                     return-object
+00048  4552 13bc                iget  # FIELD Lb/b/c/f/g;->c:I
+0004a  206e 242c 0054           invoke-virtual  # CALL Lb/b/c/f/g;->a(I)V
+0004d  0011                     return-object
+0004e  050d                     op_0d
+0004f  041e                     monitor-exit
+00050  0527                     throw
+00051  050d                     op_0d
+00052  041e                     monitor-exit
+00053  0527                     throw
+00054  0422 0679                new-instance  # TYPE Ljava/lang/NullPointerException;
+00056  051a 207d                const-string  # STR "key == null"
+00058  2070 2cde 0054           invoke-direct  # CALL Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+0005b  0427                     throw
+
+### Lb/b/c/f/g;->toString()Ljava/lang/String;  [access=0x20011, regs=7, ins=1, outs=3, code_off=0xb9b0c]
+00000  061d                     monitor-enter
+00001  6052 13c0                iget  # FIELD Lb/b/c/f/g;->g:I
+00003  6152 13c1                iget  # FIELD Lb/b/c/f/g;->h:I
+00005  10b0                     op_b0
+00006  0112                     const/4
+00007  0038 0008                if-eqz
+00009  6252 13c0                iget  # FIELD Lb/b/c/f/g;->g:I
+0000b  02da 6402                op_da
+0000d  02b3                     op_b3
+0000e  0228                     goto
+0000f  1201                     op_01
+00010  0062 1d74                sget-object  # FIELD Ljava/util/Locale;->US:Ljava/util/Locale;
+00012  031a 11a3                const-string  # STR "LruCache[maxSize=%d,hits=%d,misses=%d,hitRate=%d%%]"
+00014  4412                     const/4
+00015  4423 075d                new-array  # TYPE [Ljava/lang/Object;
+00017  6552 13bc                iget  # FIELD Lb/b/c/f/g;->c:I
+00019  1071 2cae 0005           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+0001c  050c                     move-result-object
+0001d  054d 0104                aput-object
+0001f  1112                     const/4
+00020  6552 13c0                iget  # FIELD Lb/b/c/f/g;->g:I
+00022  1071 2cae 0005           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+00025  050c                     move-result-object
+00026  054d 0104                aput-object
+00028  2112                     const/4
+00029  6552 13c1                iget  # FIELD Lb/b/c/f/g;->h:I
+0002b  1071 2cae 0005           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+0002e  050c                     move-result-object
+0002f  054d 0104                aput-object
+00031  3112                     const/4
+00032  1071 2cae 0002           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+00035  020c                     move-result-object
+00036  024d 0104                aput-object
+00038  3071 2d06 0430           invoke-static  # CALL Ljava/lang/String;->format(Ljava/util/Locale;,Ljava/lang/String;,[Ljava/lang/Object;)Ljava/lang/String;
+0003b  000c                     move-result-object
+0003c  061e                     monitor-exit
+0003d  0011                     return-object
+0003e  000d                     op_0d
+0003f  061e                     monitor-exit
+00040  0027                     throw

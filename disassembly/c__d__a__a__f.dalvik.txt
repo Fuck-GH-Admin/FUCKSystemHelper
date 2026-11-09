@@ -1,0 +1,38 @@
+### Lc/d/a/a/f;-><init>()V  [access=0x10001, regs=1, ins=1, outs=1, code_off=0x10f9d0]
+00000  1070 2911 0000           invoke-direct  # CALL Lc/d/a/a/a;-><init>()V
+00003  000e                     return-void
+
+### Lc/d/a/a/f;->a(Landroid/content/Context;,Lcom/mobiletools/systemhelper/control/b;)V  [access=0x1, regs=6, ins=3, outs=3, code_off=0x10f9e8]
+00000  306f 2918 0543           invoke-super  # CALL Lc/d/a/a/a;->a(Landroid/content/Context;,Lcom/mobiletools/systemhelper/control/b;)V
+00003  0062 0552                sget-object  # FIELD Landroid/os/Build;->DISPLAY:Ljava/lang/String;
+00005  011a 1768                const-string  # STR "\\s+"
+00007  206e 2d16 0010           invoke-virtual  # CALL Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+0000a  000c                     move-result-object
+0000b  1112                     const/4
+0000c  0046 0100                aget-object
+0000e  505b 1d30                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->d:Ljava/lang/String;
+00010  001a 247a                const-string  # STR "ro.board.hardware_version"
+00012  1071 2997 0000           invoke-static  # CALL Lc/d/a/b/l;->a(Ljava/lang/String;)Ljava/lang/String;
+00015  000c                     move-result-object
+00016  505b 1d2f                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->c:Ljava/lang/String;
+00018  0063 1bb5                sget-boolean  # FIELD Lc/d/a/b/d;->e:Z
+0001a  011a 0728                const-string  # STR "DeviceInfoReaderPTAC"
+0001c  0039 0008                if-nez
+0001e  031a 2052                const-string  # STR "isUserPermissionOpen==false, do not read!"
+00020  2071 2988 0031           invoke-static  # CALL Lc/d/a/b/h;->b(Ljava/lang/String;,Ljava/lang/String;)V
+00023  000e                     return-void
+00024  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00026  0213 001e                const/16
+00028  2034 0006                if-lt
+0002a  306e 291c 0543           invoke-virtual  # CALL Lc/d/a/a/a;->b(Landroid/content/Context;,Lcom/mobiletools/systemhelper/control/b;)V
+0002d  1728                     goto
+0002e  0322 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00030  1070 2d35 0003           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00033  041a 1563                const-string  # STR "Unsupported API:"
+00035  206e 2d3f 0043           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00038  0460 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+0003a  206e 2d3b 0043           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+0003d  106e 2d44 0003           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00040  030c                     move-result-object
+00041  2071 2988 0031           invoke-static  # CALL Lc/d/a/b/h;->b(Ljava/lang/String;,Ljava/lang/String;)V
+00044  000e                     return-void

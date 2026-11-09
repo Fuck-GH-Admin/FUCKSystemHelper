@@ -1,0 +1,210 @@
+### Landroid/support/v7/widget/n;-><init>(Landroid/widget/ImageView;)V  [access=0x10001, regs=2, ins=2, outs=1, code_off=0xdfaac]
+00000  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  015b 11b6                iput-object  # FIELD Landroid/support/v7/widget/n;->a:Landroid/widget/ImageView;
+00005  000e                     return-void
+
+### Landroid/support/v7/widget/n;->a(Landroid/graphics/drawable/Drawable;)Z  [access=0x2, regs=5, ins=2, outs=3, code_off=0xdf9b0]
+00000  3054 11b9                iget-object  # FIELD Landroid/support/v7/widget/n;->d:Landroid/support/v7/widget/r0;
+00002  0039 0009                if-nez
+00004  0022 03b3                new-instance  # TYPE Landroid/support/v7/widget/r0;
+00006  1070 1a57 0000           invoke-direct  # CALL Landroid/support/v7/widget/r0;-><init>()V
+00009  305b 11b9                iput-object  # FIELD Landroid/support/v7/widget/n;->d:Landroid/support/v7/widget/r0;
+0000b  3054 11b9                iget-object  # FIELD Landroid/support/v7/widget/n;->d:Landroid/support/v7/widget/r0;
+0000d  106e 1a58 0000           invoke-virtual  # CALL Landroid/support/v7/widget/r0;->a()V
+00010  3154 11b6                iget-object  # FIELD Landroid/support/v7/widget/n;->a:Landroid/widget/ImageView;
+00012  1071 1180 0001           invoke-static  # CALL Landroid/support/v4/widget/g;->a(Landroid/widget/ImageView;)Landroid/content/res/ColorStateList;
+00015  010c                     move-result-object
+00016  1212                     const/4
+00017  0138 0006                if-eqz
+00019  025c 11cf                iput-boolean  # FIELD Landroid/support/v7/widget/r0;->d:Z
+0001b  015b 11cc                iput-object  # FIELD Landroid/support/v7/widget/r0;->a:Landroid/content/res/ColorStateList;
+0001d  3154 11b6                iget-object  # FIELD Landroid/support/v7/widget/n;->a:Landroid/widget/ImageView;
+0001f  1071 1183 0001           invoke-static  # CALL Landroid/support/v4/widget/g;->b(Landroid/widget/ImageView;)Landroid/graphics/PorterDuff$Mode;
+00022  010c                     move-result-object
+00023  0138 0006                if-eqz
+00025  025c 11ce                iput-boolean  # FIELD Landroid/support/v7/widget/r0;->c:Z
+00027  015b 11cd                iput-object  # FIELD Landroid/support/v7/widget/r0;->b:Landroid/graphics/PorterDuff$Mode;
+00029  0155 11cf                iget-boolean  # FIELD Landroid/support/v7/widget/r0;->d:Z
+0002b  0139 0009                if-nez
+0002d  0155 11ce                iget-boolean  # FIELD Landroid/support/v7/widget/r0;->c:Z
+0002f  0138 0003                if-eqz
+00031  0328                     goto
+00032  0312                     const/4
+00033  030f                     return
+00034  3354 11b6                iget-object  # FIELD Landroid/support/v7/widget/n;->a:Landroid/widget/ImageView;
+00036  106e 1fd4 0003           invoke-virtual  # CALL Landroid/widget/ImageView;->getDrawableState()[I
+00039  030c                     move-result-object
+0003a  3071 196e 0304           invoke-static  # CALL Landroid/support/v7/widget/j;->a(Landroid/graphics/drawable/Drawable;,Landroid/support/v7/widget/r0;,[I)V
+0003d  020f                     return
+
+### Landroid/support/v7/widget/n;->e()Z  [access=0x2, regs=5, ins=1, outs=0, code_off=0xdfa74]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  1112                     const/4
+00003  0212                     const/4
+00004  0313 0015                const/16
+00006  3037 0009                if-le
+00008  4454 11b7                iget-object  # FIELD Landroid/support/v7/widget/n;->b:Landroid/support/v7/widget/r0;
+0000a  0438 0003                if-eqz
+0000c  0228                     goto
+0000d  2101                     op_01
+0000e  010f                     return
+0000f  3033 0003                if-ne
+00011  010f                     return
+00012  020f                     return
+
+### Landroid/support/v7/widget/n;->a()V  [access=0x0, regs=3, ins=1, outs=3, code_off=0xdfac8]
+00000  2054 11b6                iget-object  # FIELD Landroid/support/v7/widget/n;->a:Landroid/widget/ImageView;
+00002  106e 1fd3 0000           invoke-virtual  # CALL Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
+00005  000c                     move-result-object
+00006  0038 0005                if-eqz
+00008  1071 182f 0000           invoke-static  # CALL Landroid/support/v7/widget/c0;->b(Landroid/graphics/drawable/Drawable;)V
+0000b  0038 002a                if-eqz
+0000d  1070 1a1f 0002           invoke-direct  # CALL Landroid/support/v7/widget/n;->e()Z
+00010  010a                     move-result
+00011  0138 0009                if-eqz
+00013  2070 1a1b 0002           invoke-direct  # CALL Landroid/support/v7/widget/n;->a(Landroid/graphics/drawable/Drawable;)Z
+00016  010a                     move-result
+00017  0138 0003                if-eqz
+00019  000e                     return-void
+0001a  2154 11b8                iget-object  # FIELD Landroid/support/v7/widget/n;->c:Landroid/support/v7/widget/r0;
+0001c  0138 000c                if-eqz
+0001e  2254 11b6                iget-object  # FIELD Landroid/support/v7/widget/n;->a:Landroid/widget/ImageView;
+00020  106e 1fd4 0002           invoke-virtual  # CALL Landroid/widget/ImageView;->getDrawableState()[I
+00023  020c                     move-result-object
+00024  3071 196e 0210           invoke-static  # CALL Landroid/support/v7/widget/j;->a(Landroid/graphics/drawable/Drawable;,Landroid/support/v7/widget/r0;,[I)V
+00027  0e28                     goto
+00028  2154 11b7                iget-object  # FIELD Landroid/support/v7/widget/n;->b:Landroid/support/v7/widget/r0;
+0002a  0138 000b                if-eqz
+0002c  2254 11b6                iget-object  # FIELD Landroid/support/v7/widget/n;->a:Landroid/widget/ImageView;
+0002e  106e 1fd4 0002           invoke-virtual  # CALL Landroid/widget/ImageView;->getDrawableState()[I
+00031  020c                     move-result-object
+00032  3071 196e 0210           invoke-static  # CALL Landroid/support/v7/widget/j;->a(Landroid/graphics/drawable/Drawable;,Landroid/support/v7/widget/r0;,[I)V
+00035  000e                     return-void
+
+### Landroid/support/v7/widget/n;->a(I)V  [access=0x1, regs=3, ins=2, outs=2, code_off=0xdfc30]
+00000  0238 0017                if-eqz
+00002  1054 11b6                iget-object  # FIELD Landroid/support/v7/widget/n;->a:Landroid/widget/ImageView;
+00004  106e 1fd2 0000           invoke-virtual  # CALL Landroid/widget/ImageView;->getContext()Landroid/content/Context;
+00007  000c                     move-result-object
+00008  2071 25a3 0020           invoke-static  # CALL Lb/b/d/b/a/a;->c(Landroid/content/Context;,I)Landroid/graphics/drawable/Drawable;
+0000b  020c                     move-result-object
+0000c  0238 0005                if-eqz
+0000e  1071 182f 0002           invoke-static  # CALL Landroid/support/v7/widget/c0;->b(Landroid/graphics/drawable/Drawable;)V
+00011  1054 11b6                iget-object  # FIELD Landroid/support/v7/widget/n;->a:Landroid/widget/ImageView;
+00013  206e 1fef 0020           invoke-virtual  # CALL Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+00016  0728                     goto
+00017  1254 11b6                iget-object  # FIELD Landroid/support/v7/widget/n;->a:Landroid/widget/ImageView;
+00019  0012                     const/4
+0001a  206e 1fef 0002           invoke-virtual  # CALL Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+0001d  106e 1a16 0001           invoke-virtual  # CALL Landroid/support/v7/widget/n;->a()V
+00020  000e                     return-void
+
+### Landroid/support/v7/widget/n;->a(Landroid/content/res/ColorStateList;)V  [access=0x0, regs=3, ins=2, outs=1, code_off=0xdfc84]
+00000  1054 11b8                iget-object  # FIELD Landroid/support/v7/widget/n;->c:Landroid/support/v7/widget/r0;
+00002  0039 0009                if-nez
+00004  0022 03b3                new-instance  # TYPE Landroid/support/v7/widget/r0;
+00006  1070 1a57 0000           invoke-direct  # CALL Landroid/support/v7/widget/r0;-><init>()V
+00009  105b 11b8                iput-object  # FIELD Landroid/support/v7/widget/n;->c:Landroid/support/v7/widget/r0;
+0000b  1054 11b8                iget-object  # FIELD Landroid/support/v7/widget/n;->c:Landroid/support/v7/widget/r0;
+0000d  025b 11cc                iput-object  # FIELD Landroid/support/v7/widget/r0;->a:Landroid/content/res/ColorStateList;
+0000f  1212                     const/4
+00010  025c 11cf                iput-boolean  # FIELD Landroid/support/v7/widget/r0;->d:Z
+00012  106e 1a16 0001           invoke-virtual  # CALL Landroid/support/v7/widget/n;->a()V
+00015  000e                     return-void
+
+### Landroid/support/v7/widget/n;->a(Landroid/graphics/PorterDuff$Mode;)V  [access=0x0, regs=3, ins=2, outs=1, code_off=0xdfcc0]
+00000  1054 11b8                iget-object  # FIELD Landroid/support/v7/widget/n;->c:Landroid/support/v7/widget/r0;
+00002  0039 0009                if-nez
+00004  0022 03b3                new-instance  # TYPE Landroid/support/v7/widget/r0;
+00006  1070 1a57 0000           invoke-direct  # CALL Landroid/support/v7/widget/r0;-><init>()V
+00009  105b 11b8                iput-object  # FIELD Landroid/support/v7/widget/n;->c:Landroid/support/v7/widget/r0;
+0000b  1054 11b8                iget-object  # FIELD Landroid/support/v7/widget/n;->c:Landroid/support/v7/widget/r0;
+0000d  025b 11cd                iput-object  # FIELD Landroid/support/v7/widget/r0;->b:Landroid/graphics/PorterDuff$Mode;
+0000f  1212                     const/4
+00010  025c 11ce                iput-boolean  # FIELD Landroid/support/v7/widget/r0;->c:Z
+00012  106e 1a16 0001           invoke-virtual  # CALL Landroid/support/v7/widget/n;->a()V
+00015  000e                     return-void
+
+### Landroid/support/v7/widget/n;->a(Landroid/util/AttributeSet;,I)V  [access=0x1, regs=6, ins=3, outs=5, code_off=0xdfb44]
+00000  3054 11b6                iget-object  # FIELD Landroid/support/v7/widget/n;->a:Landroid/widget/ImageView;
+00002  106e 1fd2 0000           invoke-virtual  # CALL Landroid/widget/ImageView;->getContext()Landroid/content/Context;
+00005  000c                     move-result-object
+00006  0162 189d                sget-object  # FIELD Lb/b/d/a/j;->AppCompatImageView:[I
+00008  0212                     const/4
+00009  5271 1a72 5140           invoke-static  # CALL Landroid/support/v7/widget/t0;->a(Landroid/content/Context;,Landroid/util/AttributeSet;,[I,I,I)Landroid/support/v7/widget/t0;
+0000c  040c                     move-result-object
+0000d  3554 11b6                iget-object  # FIELD Landroid/support/v7/widget/n;->a:Landroid/widget/ImageView;
+0000f  106e 1fd3 0005           invoke-virtual  # CALL Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
+00012  050c                     move-result-object
+00013  f012                     const/4
+00014  0539 001b                if-nez
+00016  0160 189f                sget  # FIELD Lb/b/d/a/j;->AppCompatImageView_srcCompat:I
+00018  306e 1a7f 0014           invoke-virtual  # CALL Landroid/support/v7/widget/t0;->g(I,I)I
+0001b  010a                     move-result
+0001c  0132 0013                if-eq
+0001e  3554 11b6                iget-object  # FIELD Landroid/support/v7/widget/n;->a:Landroid/widget/ImageView;
+00020  106e 1fd2 0005           invoke-virtual  # CALL Landroid/widget/ImageView;->getContext()Landroid/content/Context;
+00023  050c                     move-result-object
+00024  2071 25a3 0015           invoke-static  # CALL Lb/b/d/b/a/a;->c(Landroid/content/Context;,I)Landroid/graphics/drawable/Drawable;
+00027  050c                     move-result-object
+00028  0538 0007                if-eqz
+0002a  3154 11b6                iget-object  # FIELD Landroid/support/v7/widget/n;->a:Landroid/widget/ImageView;
+0002c  206e 1fef 0051           invoke-virtual  # CALL Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+0002f  0538 0005                if-eqz
+00031  1071 182f 0005           invoke-static  # CALL Landroid/support/v7/widget/c0;->b(Landroid/graphics/drawable/Drawable;)V
+00034  0560 18a0                sget  # FIELD Lb/b/d/a/j;->AppCompatImageView_tint:I
+00036  206e 1a80 0054           invoke-virtual  # CALL Landroid/support/v7/widget/t0;->g(I)Z
+00039  050a                     move-result
+0003a  0538 000d                if-eqz
+0003c  3554 11b6                iget-object  # FIELD Landroid/support/v7/widget/n;->a:Landroid/widget/ImageView;
+0003e  0160 18a0                sget  # FIELD Lb/b/d/a/j;->AppCompatImageView_tint:I
+00040  206e 1a6e 0014           invoke-virtual  # CALL Landroid/support/v7/widget/t0;->a(I)Landroid/content/res/ColorStateList;
+00043  010c                     move-result-object
+00044  2071 1181 0015           invoke-static  # CALL Landroid/support/v4/widget/g;->a(Landroid/widget/ImageView;,Landroid/content/res/ColorStateList;)V
+00047  0560 18a1                sget  # FIELD Lb/b/d/a/j;->AppCompatImageView_tintMode:I
+00049  206e 1a80 0054           invoke-virtual  # CALL Landroid/support/v7/widget/t0;->g(I)Z
+0004c  050a                     move-result
+0004d  0538 0012                if-eqz
+0004f  3354 11b6                iget-object  # FIELD Landroid/support/v7/widget/n;->a:Landroid/widget/ImageView;
+00051  0560 18a1                sget  # FIELD Lb/b/d/a/j;->AppCompatImageView_tintMode:I
+00053  306e 1a79 0054           invoke-virtual  # CALL Landroid/support/v7/widget/t0;->d(I,I)I
+00056  050a                     move-result
+00057  0012                     const/4
+00058  2071 182d 0005           invoke-static  # CALL Landroid/support/v7/widget/c0;->a(I,Landroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuff$Mode;
+0005b  050c                     move-result-object
+0005c  2071 1182 0053           invoke-static  # CALL Landroid/support/v4/widget/g;->a(Landroid/widget/ImageView;,Landroid/graphics/PorterDuff$Mode;)V
+0005f  106e 1a73 0004           invoke-virtual  # CALL Landroid/support/v7/widget/t0;->a()V
+00062  000e                     return-void
+00063  030d                     op_0d
+00064  106e 1a73 0004           invoke-virtual  # CALL Landroid/support/v7/widget/t0;->a()V
+00067  0327                     throw
+
+### Landroid/support/v7/widget/n;->b()Landroid/content/res/ColorStateList;  [access=0x0, regs=1, ins=1, outs=0, code_off=0xdf968]
+00000  0054 11b8                iget-object  # FIELD Landroid/support/v7/widget/n;->c:Landroid/support/v7/widget/r0;
+00002  0038 0005                if-eqz
+00004  0054 11cc                iget-object  # FIELD Landroid/support/v7/widget/r0;->a:Landroid/content/res/ColorStateList;
+00006  0228                     goto
+00007  0012                     const/4
+00008  0011                     return-object
+
+### Landroid/support/v7/widget/n;->c()Landroid/graphics/PorterDuff$Mode;  [access=0x0, regs=1, ins=1, outs=0, code_off=0xdf98c]
+00000  0054 11b8                iget-object  # FIELD Landroid/support/v7/widget/n;->c:Landroid/support/v7/widget/r0;
+00002  0038 0005                if-eqz
+00004  0054 11cd                iget-object  # FIELD Landroid/support/v7/widget/r0;->b:Landroid/graphics/PorterDuff$Mode;
+00006  0228                     goto
+00007  0012                     const/4
+00008  0011                     return-object
+
+### Landroid/support/v7/widget/n;->d()Z  [access=0x0, regs=3, ins=1, outs=1, code_off=0xdfa3c]
+00000  2254 11b6                iget-object  # FIELD Landroid/support/v7/widget/n;->a:Landroid/widget/ImageView;
+00002  106e 1fd0 0002           invoke-virtual  # CALL Landroid/widget/ImageView;->getBackground()Landroid/graphics/drawable/Drawable;
+00005  020c                     move-result-object
+00006  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00008  0113 0015                const/16
+0000a  1034 0008                if-lt
+0000c  2220 01c7                instance-of  # TYPE Landroid/graphics/drawable/RippleDrawable;
+0000e  0238 0004                if-eqz
+00010  0212                     const/4
+00011  020f                     return
+00012  1212                     const/4
+00013  020f                     return

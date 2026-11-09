@@ -1,0 +1,244 @@
+### La/a/a/f/g$c$b;-><init>(Ljava/lang/String;,I,Ljava/lang/String;,Ljava/lang/String;,Ljava/lang/String;,I,I)V  [access=0x10001, regs=17, ins=8, outs=9, code_off=0x6b8f8]
+00000  0812                     const/4
+00001  9007                     op_07
+00002  a107                     op_07
+00003  b201                     op_01
+00004  c307                     op_07
+00005  d407                     op_07
+00006  e507                     op_07
+00007  f601                     op_01
+00008  0702 0010                op_02
+0000a  0976 049a 0000           invoke-direct/range  # CALL La/a/a/f/g$c;-><init>(Ljava/lang/String;,I,Ljava/lang/String;,Ljava/lang/String;,Ljava/lang/String;,I,I,La/a/a/f/g$a;)V
+0000d  000e                     return-void
+
+### La/a/a/f/g$c$b;->a(Lorg/json/JSONObject;,Ljava/lang/String;,I)Ljava/util/List;  [access=0x1, regs=29, ins=4, outs=4, code_off=0x6b4fc]
+00000  001a 28c2                const-string  # STR "y2"
+00002  011a 28be                const-string  # STR "x2"
+00004  021a 28c1                const-string  # STR "y1"
+00006  031a 28bd                const-string  # STR "x1"
+00008  041a 26e7                const-string  # STR "st"
+0000a  0174 2f1d 001a           invoke-virtual/range  # CALL Lorg/json/JSONObject;->keys()Ljava/util/Iterator;
+0000d  050c                     move-result-object
+0000e  0622 06c8                new-instance  # TYPE Ljava/util/ArrayList;
+00010  1070 2de7 0006           invoke-direct  # CALL Ljava/util/ArrayList;-><init>()V
+00013  0722 0684                new-instance  # TYPE Ljava/lang/StringBuffer;
+00015  1070 2d25 0007           invoke-direct  # CALL Ljava/lang/StringBuffer;-><init>()V
+00018  1072 2e43 0005           invoke-interface  # CALL Ljava/util/Iterator;->hasNext()Z
+0001b  080a                     move-result
+0001c  091a 088b                const-string  # STR "INSERT OR REPLACE INTO %s VALUES %s"
+0001e  0c12                     const/4
+0001f  0838 0171                if-eqz
+00021  0822 0684                new-instance  # TYPE Ljava/lang/StringBuffer;
+00023  1070 2d25 0008           invoke-direct  # CALL Ljava/lang/StringBuffer;-><init>()V
+00026  1072 2e44 0005           invoke-interface  # CALL Ljava/util/Iterator;->next()Ljava/lang/Object;
+00029  0d0c                     move-result-object
+0002a  0d1f 0683                check-cast  # TYPE Ljava/lang/String;
+0002c  0e08 001b                op_08
+0002e  4071 04a1 ced7           invoke-static  # CALL La/a/a/f/g$c;->a(Ljava/lang/StringBuffer;,Ljava/lang/String;,Ljava/lang/String;,I)V
+00031  0f08 001a                op_08
+00033  206e 2f18 00df           invoke-virtual  # CALL Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
+00036  100c                     move-result-object
+00037  0b08 0010                op_08
+00039  0228                     goto
+0003a  0b12                     const/4
+0003b  0b38 ffdd                if-eqz
+0003d  106e 2f0d 000b           invoke-virtual  # CALL Lorg/json/JSONArray;->length()I
+00040  0a0a                     move-result
+00041  111a 1357                const-string  # STR "RGCROAD"
+00043  ac35 0117                if-ge
+00045  206e 2f0b 00cb           invoke-virtual  # CALL Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
+00048  0a0c                     move-result-object
+00049  206e 2f1c 004a           invoke-virtual  # CALL Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
+0004c  120a                     move-result
+0004d  1238 000d                if-eqz
+0004f  206e 2f1b 004a           invoke-virtual  # CALL Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+00052  120c                     move-result-object
+00053  1808 0012                op_08
+00055  1208 0004                op_08
+00057  0408 0018                op_08
+00059  0428                     goto
+0005a  1208 0004                op_08
+0005c  0412                     const/4
+0005d  206e 2f1c 003a           invoke-virtual  # CALL Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
+00060  130a                     move-result
+00061  1338 0011                if-eqz
+00063  206e 2f16 003a           invoke-virtual  # CALL Lorg/json/JSONObject;->getDouble(Ljava/lang/String;)D
+00066  130b                     move-result-wide
+00067  0277 2c8a 0013           invoke-static/range  # CALL Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+0006a  130c                     move-result-object
+0006b  1808 0013                op_08
+0006d  1308 0003                op_08
+0006f  0308 0018                op_08
+00071  0428                     goto
+00072  1308 0003                op_08
+00074  0312                     const/4
+00075  206e 2f1c 002a           invoke-virtual  # CALL Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
+00078  140a                     move-result
+00079  1438 0011                if-eqz
+0007b  206e 2f16 002a           invoke-virtual  # CALL Lorg/json/JSONObject;->getDouble(Ljava/lang/String;)D
+0007e  140b                     move-result-wide
+0007f  0277 2c8a 0014           invoke-static/range  # CALL Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+00082  140c                     move-result-object
+00083  1808 0014                op_08
+00085  1408 0002                op_08
+00087  0208 0018                op_08
+00089  0428                     goto
+0008a  1408 0002                op_08
+0008c  0212                     const/4
+0008d  206e 2f1c 001a           invoke-virtual  # CALL Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
+00090  150a                     move-result
+00091  1538 0011                if-eqz
+00093  206e 2f16 001a           invoke-virtual  # CALL Lorg/json/JSONObject;->getDouble(Ljava/lang/String;)D
+00096  150b                     move-result-wide
+00097  0277 2c8a 0015           invoke-static/range  # CALL Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+0009a  150c                     move-result-object
+0009b  1808 0015                op_08
+0009d  1508 0001                op_08
+0009f  0108 0018                op_08
+000a1  0428                     goto
+000a2  1508 0001                op_08
+000a4  0112                     const/4
+000a5  206e 2f1c 000a           invoke-virtual  # CALL Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
+000a8  160a                     move-result
+000a9  1638 000b                if-eqz
+000ab  206e 2f16 000a           invoke-virtual  # CALL Lorg/json/JSONObject;->getDouble(Ljava/lang/String;)D
+000ae  160b                     move-result-wide
+000af  0277 2c8a 0016           invoke-static/range  # CALL Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+000b2  0a0c                     move-result-object
+000b3  0228                     goto
+000b4  0a12                     const/4
+000b5  0438 0049                if-eqz
+000b7  0338 0047                if-eqz
+000b9  0238 0045                if-eqz
+000bb  0138 0043                if-eqz
+000bd  0a38 0041                if-eqz
+000bf  106e 2d31 0008           invoke-virtual  # CALL Ljava/lang/StringBuffer;->length()I
+000c2  160a                     move-result
+000c3  1708 0000                op_08
+000c5  001a 01c9                const-string  # STR ","
+000c7  163d 0005                if-lez
+000c9  206e 2d2e 0008           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+000cc  1608 0005                op_08
+000ce  051a 0195                const-string  # STR "(NULL,\""
+000d0  206e 2d2e 0058           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+000d3  206e 2d2e 00d8           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+000d6  051a 00ac                const-string  # STR "\",\""
+000d8  206e 2d2e 0058           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+000db  206e 2d2e 0048           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+000de  041a 00ab                const-string  # STR "\","
+000e0  206e 2d2e 0048           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+000e3  206e 2d2d 0038           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/Object;)Ljava/lang/StringBuffer;
+000e6  206e 2d2e 0008           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+000e9  206e 2d2d 0028           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/Object;)Ljava/lang/StringBuffer;
+000ec  206e 2d2e 0008           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+000ef  206e 2d2d 0018           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/Object;)Ljava/lang/StringBuffer;
+000f2  206e 2d2e 0008           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+000f5  206e 2d2d 00a8           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/Object;)Ljava/lang/StringBuffer;
+000f8  001a 01ae                const-string  # STR ")"
+000fa  206e 2d2e 0008           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+000fd  2628                     goto
+000fe  1708 0000                op_08
+00100  1608 0005                op_08
+00102  2128                     goto
+00103  1708 0000                op_08
+00105  1508 0001                op_08
+00107  f928                     goto
+00108  1708 0000                op_08
+0010a  1508 0001                op_08
+0010c  1408 0002                op_08
+0010e  f228                     goto
+0010f  1708 0000                op_08
+00111  1508 0001                op_08
+00113  1408 0002                op_08
+00115  1308 0003                op_08
+00117  e928                     goto
+00118  1708 0000                op_08
+0011a  1508 0001                op_08
+0011c  1408 0002                op_08
+0011e  1308 0003                op_08
+00120  1208 0004                op_08
+00122  de28                     goto
+00123  00dc 320c                op_dc
+00125  0113 0031                const/16
+00127  1033 0022                if-ne
+00129  106e 2d31 0008           invoke-virtual  # CALL Ljava/lang/StringBuffer;->length()I
+0012c  000a                     move-result
+0012d  003d 001c                if-lez
+0012f  0062 1d74                sget-object  # FIELD Ljava/util/Locale;->US:Ljava/util/Locale;
+00131  2112                     const/4
+00132  1223 075d                new-array  # TYPE [Ljava/lang/Object;
+00134  0112                     const/4
+00135  114d 0102                aput-object
+00137  106e 2d34 0008           invoke-virtual  # CALL Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+0013a  030c                     move-result-object
+0013b  1412                     const/4
+0013c  034d 0402                aput-object
+0013e  3071 2d06 0290           invoke-static  # CALL Ljava/lang/String;->format(Ljava/util/Locale;,Ljava/lang/String;,[Ljava/lang/Object;)Ljava/lang/String;
+00141  000c                     move-result-object
+00142  2072 2e52 0006           invoke-interface  # CALL Ljava/util/List;->add(Ljava/lang/Object;)Z
+00145  206e 2d33 0018           invoke-virtual  # CALL Ljava/lang/StringBuffer;->setLength(I)V
+00148  0228                     goto
+00149  0112                     const/4
+0014a  0cd8 010c                op_d8
+0014c  0408 0012                op_08
+0014e  0308 0013                op_08
+00150  0208 0014                op_08
+00152  0108 0015                op_08
+00154  0508 0016                op_08
+00156  0008 0017                op_08
+00158  0029 fee5                goto/16
+0015a  1708 0000                op_08
+0015c  1508 0001                op_08
+0015e  1408 0002                op_08
+00160  1308 0003                op_08
+00162  1208 0004                op_08
+00164  1608 0005                op_08
+00166  0112                     const/4
+00167  106e 2d31 0008           invoke-virtual  # CALL Ljava/lang/StringBuffer;->length()I
+0016a  000a                     move-result
+0016b  003d 0017                if-lez
+0016d  0062 1d74                sget-object  # FIELD Ljava/util/Locale;->US:Ljava/util/Locale;
+0016f  2212                     const/4
+00170  2223 075d                new-array  # TYPE [Ljava/lang/Object;
+00172  114d 0102                aput-object
+00174  106e 2d34 0008           invoke-virtual  # CALL Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+00177  010c                     move-result-object
+00178  1312                     const/4
+00179  014d 0302                aput-object
+0017b  3071 2d06 0290           invoke-static  # CALL Ljava/lang/String;->format(Ljava/util/Locale;,Ljava/lang/String;,[Ljava/lang/Object;)Ljava/lang/String;
+0017e  000c                     move-result-object
+0017f  2072 2e52 0006           invoke-interface  # CALL Ljava/util/List;->add(Ljava/lang/Object;)Z
+00182  0408 0012                op_08
+00184  0308 0013                op_08
+00186  0208 0014                op_08
+00188  0108 0015                op_08
+0018a  0508 0016                op_08
+0018c  0008 0017                op_08
+0018e  0029 fe8a                goto/16
+00190  106e 2d31 0007           invoke-virtual  # CALL Ljava/lang/StringBuffer;->length()I
+00193  000a                     move-result
+00194  003d 0017                if-lez
+00196  0062 1d74                sget-object  # FIELD Ljava/util/Locale;->US:Ljava/util/Locale;
+00198  2112                     const/4
+00199  1123 075d                new-array  # TYPE [Ljava/lang/Object;
+0019b  021a 1359                const-string  # STR "RGCUPDATE"
+0019d  0312                     const/4
+0019e  024d 0301                aput-object
+001a0  1212                     const/4
+001a1  074d 0201                aput-object
+001a3  3071 2d06 0190           invoke-static  # CALL Ljava/lang/String;->format(Ljava/util/Locale;,Ljava/lang/String;,[Ljava/lang/Object;)Ljava/lang/String;
+001a6  000c                     move-result-object
+001a7  2072 2e52 0006           invoke-interface  # CALL Ljava/util/List;->add(Ljava/lang/Object;)Z
+001aa  0328                     goto
+001ab  1212                     const/4
+001ac  0312                     const/4
+001ad  0062 1d74                sget-object  # FIELD Ljava/util/Locale;->US:Ljava/util/Locale;
+001af  2123 075d                new-array  # TYPE [Ljava/lang/Object;
+001b1  0177 2cae 001c           invoke-static/range  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+001b4  020c                     move-result-object
+001b5  024d 0301                aput-object
+001b7  021a 06f8                const-string  # STR "DELETE FROM RGCROAD WHERE _id NOT IN (SELECT _id FROM RGCROAD LIMIT %d);"
+001b9  3071 2d06 0120           invoke-static  # CALL Ljava/lang/String;->format(Ljava/util/Locale;,Ljava/lang/String;,[Ljava/lang/Object;)Ljava/lang/String;
+001bc  000c                     move-result-object
+001bd  2072 2e52 0006           invoke-interface  # CALL Ljava/util/List;->add(Ljava/lang/Object;)Z
+001c0  0611                     return-object

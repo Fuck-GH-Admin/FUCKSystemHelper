@@ -1,0 +1,88 @@
+### Lb/b/d/d/f$a;-><init>(Landroid/content/Context;,Landroid/view/ActionMode$Callback;)V  [access=0x10001, regs=3, ins=3, outs=1, code_off=0xcf9ac]
+00000  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  015b 1a7a                iput-object  # FIELD Lb/b/d/d/f$a;->b:Landroid/content/Context;
+00005  025b 1a79                iput-object  # FIELD Lb/b/d/d/f$a;->a:Landroid/view/ActionMode$Callback;
+00007  0122 06c8                new-instance  # TYPE Ljava/util/ArrayList;
+00009  1070 2de7 0001           invoke-direct  # CALL Ljava/util/ArrayList;-><init>()V
+0000c  015b 1a7b                iput-object  # FIELD Lb/b/d/d/f$a;->c:Ljava/util/ArrayList;
+0000e  0122 0519                new-instance  # TYPE Lb/b/c/f/k;
+00010  1070 2487 0001           invoke-direct  # CALL Lb/b/c/f/k;-><init>()V
+00013  015b 1a7c                iput-object  # FIELD Lb/b/d/d/f$a;->d:Lb/b/c/f/k;
+00015  000e                     return-void
+
+### Lb/b/d/d/f$a;->a(Landroid/view/Menu;)Landroid/view/Menu;  [access=0x2, regs=4, ins=2, outs=3, code_off=0xcf8d0]
+00000  2054 1a7c                iget-object  # FIELD Lb/b/d/d/f$a;->d:Lb/b/c/f/k;
+00002  206e 2499 0030           invoke-virtual  # CALL Lb/b/c/f/k;->get(Ljava/lang/Object;)Ljava/lang/Object;
+00005  000c                     move-result-object
+00006  001f 0435                check-cast  # TYPE Landroid/view/Menu;
+00008  0039 0010                if-nez
+0000a  2054 1a7a                iget-object  # FIELD Lb/b/d/d/f$a;->b:Landroid/content/Context;
+0000c  3107                     op_07
+0000d  011f 04f3                check-cast  # TYPE Lb/b/c/c/a/a;
+0000f  2071 156b 0010           invoke-static  # CALL Landroid/support/v7/view/menu/q;->a(Landroid/content/Context;,Lb/b/c/c/a/a;)Landroid/view/Menu;
+00012  000c                     move-result-object
+00013  2254 1a7c                iget-object  # FIELD Lb/b/d/d/f$a;->d:Lb/b/c/f/k;
+00015  306e 249c 0032           invoke-virtual  # CALL Lb/b/c/f/k;->put(Ljava/lang/Object;,Ljava/lang/Object;)Ljava/lang/Object;
+00018  0011                     return-object
+
+### Lb/b/d/d/f$a;->a(Lb/b/d/d/b;)V  [access=0x1, regs=3, ins=2, outs=2, code_off=0xcf9e8]
+00000  1054 1a79                iget-object  # FIELD Lb/b/d/d/f$a;->a:Landroid/view/ActionMode$Callback;
+00002  206e 26a5 0021           invoke-virtual  # CALL Lb/b/d/d/f$a;->b(Lb/b/d/d/b;)Landroid/view/ActionMode;
+00005  010c                     move-result-object
+00006  2072 1c87 0010           invoke-interface  # CALL Landroid/view/ActionMode$Callback;->onDestroyActionMode(Landroid/view/ActionMode;)V
+00009  000e                     return-void
+
+### Lb/b/d/d/f$a;->a(Lb/b/d/d/b;,Landroid/view/Menu;)Z  [access=0x1, regs=4, ins=3, outs=3, code_off=0xcf97c]
+00000  1054 1a79                iget-object  # FIELD Lb/b/d/d/f$a;->a:Landroid/view/ActionMode$Callback;
+00002  206e 26a5 0021           invoke-virtual  # CALL Lb/b/d/d/f$a;->b(Lb/b/d/d/b;)Landroid/view/ActionMode;
+00005  020c                     move-result-object
+00006  2070 26a1 0031           invoke-direct  # CALL Lb/b/d/d/f$a;->a(Landroid/view/Menu;)Landroid/view/Menu;
+00009  010c                     move-result-object
+0000a  3072 1c88 0120           invoke-interface  # CALL Landroid/view/ActionMode$Callback;->onPrepareActionMode(Landroid/view/ActionMode;,Landroid/view/Menu;)Z
+0000d  010a                     move-result
+0000e  010f                     return
+
+### Lb/b/d/d/f$a;->a(Lb/b/d/d/b;,Landroid/view/MenuItem;)Z  [access=0x1, regs=4, ins=3, outs=3, code_off=0xcf914]
+00000  1054 1a79                iget-object  # FIELD Lb/b/d/d/f$a;->a:Landroid/view/ActionMode$Callback;
+00002  206e 26a5 0021           invoke-virtual  # CALL Lb/b/d/d/f$a;->b(Lb/b/d/d/b;)Landroid/view/ActionMode;
+00005  020c                     move-result-object
+00006  1154 1a7a                iget-object  # FIELD Lb/b/d/d/f$a;->b:Landroid/content/Context;
+00008  031f 04f4                check-cast  # TYPE Lb/b/c/c/a/b;
+0000a  2071 156c 0031           invoke-static  # CALL Landroid/support/v7/view/menu/q;->a(Landroid/content/Context;,Lb/b/c/c/a/b;)Landroid/view/MenuItem;
+0000d  010c                     move-result-object
+0000e  3072 1c85 0120           invoke-interface  # CALL Landroid/view/ActionMode$Callback;->onActionItemClicked(Landroid/view/ActionMode;,Landroid/view/MenuItem;)Z
+00011  010a                     move-result
+00012  010f                     return
+
+### Lb/b/d/d/f$a;->b(Lb/b/d/d/b;)Landroid/view/ActionMode;  [access=0x1, regs=6, ins=2, outs=3, code_off=0xcf870]
+00000  4054 1a7b                iget-object  # FIELD Lb/b/d/d/f$a;->c:Ljava/util/ArrayList;
+00002  106e 2df8 0000           invoke-virtual  # CALL Ljava/util/ArrayList;->size()I
+00005  000a                     move-result
+00006  0112                     const/4
+00007  0135 0014                if-ge
+00009  4254 1a7b                iget-object  # FIELD Lb/b/d/d/f$a;->c:Ljava/util/ArrayList;
+0000b  206e 2df0 0012           invoke-virtual  # CALL Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+0000e  020c                     move-result-object
+0000f  021f 0569                check-cast  # TYPE Lb/b/d/d/f;
+00011  0238 0007                if-eqz
+00013  2354 1a7e                iget-object  # FIELD Lb/b/d/d/f;->b:Lb/b/d/d/b;
+00015  5333 0003                if-ne
+00017  0211                     return-object
+00018  01d8 0101                op_d8
+0001a  ed28                     goto
+0001b  0022 0569                new-instance  # TYPE Lb/b/d/d/f;
+0001d  4154 1a7a                iget-object  # FIELD Lb/b/d/d/f$a;->b:Landroid/content/Context;
+0001f  3070 26a7 0510           invoke-direct  # CALL Lb/b/d/d/f;-><init>(Landroid/content/Context;,Lb/b/d/d/b;)V
+00022  4454 1a7b                iget-object  # FIELD Lb/b/d/d/f$a;->c:Ljava/util/ArrayList;
+00024  206e 2deb 0004           invoke-virtual  # CALL Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+00027  0011                     return-object
+
+### Lb/b/d/d/f$a;->b(Lb/b/d/d/b;,Landroid/view/Menu;)Z  [access=0x1, regs=4, ins=3, outs=3, code_off=0xcf94c]
+00000  1054 1a79                iget-object  # FIELD Lb/b/d/d/f$a;->a:Landroid/view/ActionMode$Callback;
+00002  206e 26a5 0021           invoke-virtual  # CALL Lb/b/d/d/f$a;->b(Lb/b/d/d/b;)Landroid/view/ActionMode;
+00005  020c                     move-result-object
+00006  2070 26a1 0031           invoke-direct  # CALL Lb/b/d/d/f$a;->a(Landroid/view/Menu;)Landroid/view/Menu;
+00009  010c                     move-result-object
+0000a  3072 1c86 0120           invoke-interface  # CALL Landroid/view/ActionMode$Callback;->onCreateActionMode(Landroid/view/ActionMode;,Landroid/view/Menu;)Z
+0000d  010a                     move-result
+0000e  010f                     return

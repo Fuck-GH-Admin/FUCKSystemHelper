@@ -1,0 +1,189 @@
+### Landroid/support/v7/app/j;-><init>(Landroid/content/Context;,Landroid/location/LocationManager;)V  [access=0x10000, regs=4, ins=3, outs=1, code_off=0xca5c8]
+00000  1070 2ce0 0001           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  0022 0305                new-instance  # TYPE Landroid/support/v7/app/j$a;
+00005  1070 1313 0000           invoke-direct  # CALL Landroid/support/v7/app/j$a;-><init>()V
+00008  105b 0ef8                iput-object  # FIELD Landroid/support/v7/app/j;->c:Landroid/support/v7/app/j$a;
+0000a  125b 0ef6                iput-object  # FIELD Landroid/support/v7/app/j;->a:Landroid/content/Context;
+0000c  135b 0ef7                iput-object  # FIELD Landroid/support/v7/app/j;->b:Landroid/location/LocationManager;
+0000e  000e                     return-void
+
+### Landroid/support/v7/app/j;->a(Ljava/lang/String;)Landroid/location/Location;  [access=0x2, regs=3, ins=2, outs=3, code_off=0xca488]
+00000  1054 0ef7                iget-object  # FIELD Landroid/support/v7/app/j;->b:Landroid/location/LocationManager;
+00002  206e 0a4d 0020           invoke-virtual  # CALL Landroid/location/LocationManager;->isProviderEnabled(Ljava/lang/String;)Z
+00005  000a                     move-result
+00006  0038 0011                if-eqz
+00008  1154 0ef7                iget-object  # FIELD Landroid/support/v7/app/j;->b:Landroid/location/LocationManager;
+0000a  206e 0a4c 0021           invoke-virtual  # CALL Landroid/location/LocationManager;->getLastKnownLocation(Ljava/lang/String;)Landroid/location/Location;
+0000d  010c                     move-result-object
+0000e  0111                     return-object
+0000f  010d                     op_0d
+00010  021a 1529                const-string  # STR "TwilightManager"
+00012  001a 07b0                const-string  # STR "Failed to get last known location"
+00014  3071 1c5a 0102           invoke-static  # CALL Landroid/util/Log;->d(Ljava/lang/String;,Ljava/lang/String;,Ljava/lang/Throwable;)I
+00017  0112                     const/4
+00018  0111                     return-object
+
+### Landroid/support/v7/app/j;->a(Landroid/content/Context;)Landroid/support/v7/app/j;  [access=0x8, regs=3, ins=1, outs=3, code_off=0xca4dc]
+00000  0062 0ef9                sget-object  # FIELD Landroid/support/v7/app/j;->d:Landroid/support/v7/app/j;
+00002  0039 0015                if-nez
+00004  106e 083a 0002           invoke-virtual  # CALL Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+00007  020c                     move-result-object
+00008  0022 0306                new-instance  # TYPE Landroid/support/v7/app/j;
+0000a  011a 20df                const-string  # STR "location"
+0000c  206e 084c 0012           invoke-virtual  # CALL Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+0000f  010c                     move-result-object
+00010  011f 01de                check-cast  # TYPE Landroid/location/LocationManager;
+00012  3070 1314 0120           invoke-direct  # CALL Landroid/support/v7/app/j;-><init>(Landroid/content/Context;,Landroid/location/LocationManager;)V
+00015  0069 0ef9                sput-object  # FIELD Landroid/support/v7/app/j;->d:Landroid/support/v7/app/j;
+00017  0262 0ef9                sget-object  # FIELD Landroid/support/v7/app/j;->d:Landroid/support/v7/app/j;
+00019  0211                     return-object
+
+### Landroid/support/v7/app/j;->a(Landroid/location/Location;)V  [access=0x2, regs=22, ins=2, outs=7, code_off=0xca5f8]
+00000  0008 0014                op_08
+00002  0054 0ef8                iget-object  # FIELD Landroid/support/v7/app/j;->c:Landroid/support/v7/app/j$a;
+00004  0071 2d46 0000           invoke-static  # CALL Ljava/lang/System;->currentTimeMillis()J
+00007  080b                     move-result-wide
+00008  0071 1311 0000           invoke-static  # CALL Landroid/support/v7/app/i;->a()Landroid/support/v7/app/i;
+0000b  0a0c                     move-result-object
+0000c  0b17 5c00 0526           const-wide/32
+0000f  029c 0b08                op_9c
+00011  0174 0a3b 0015           invoke-virtual/range  # CALL Landroid/location/Location;->getLatitude()D
+00014  040b                     move-result-wide
+00015  0174 0a3c 0015           invoke-virtual/range  # CALL Landroid/location/Location;->getLongitude()D
+00018  060b                     move-result-wide
+00019  a107                     op_07
+0001a  0774 1312 0001           invoke-virtual/range  # CALL Landroid/support/v7/app/i;->a(J,D,D)V
+0001d  ad53 0eec                iget-wide  # FIELD Landroid/support/v7/app/i;->a:J
+0001f  0174 0a3b 0015           invoke-virtual/range  # CALL Landroid/location/Location;->getLatitude()D
+00022  040b                     move-result-wide
+00023  0174 0a3c 0015           invoke-virtual/range  # CALL Landroid/location/Location;->getLongitude()D
+00026  060b                     move-result-wide
+00027  8204                     op_04
+00028  0774 1312 0001           invoke-virtual/range  # CALL Landroid/support/v7/app/i;->a(J,D,D)V
+0002b  a152 0eee                iget  # FIELD Landroid/support/v7/app/i;->c:I
+0002d  1212                     const/4
+0002e  2133 0003                if-ne
+00030  0228                     goto
+00031  0212                     const/4
+00032  2f01                     op_01
+00033  a653 0eed                iget-wide  # FIELD Landroid/support/v7/app/i;->b:J
+00035  a453 0eec                iget-wide  # FIELD Landroid/support/v7/app/i;->a:J
+00037  029b 0b08                op_9b
+00039  0174 0a3b 0015           invoke-virtual/range  # CALL Landroid/location/Location;->getLatitude()D
+0003c  0b0b                     move-result-wide
+0003d  0174 0a3c 0015           invoke-virtual/range  # CALL Landroid/location/Location;->getLongitude()D
+00040  100b                     move-result-wide
+00041  a107                     op_07
+00042  1205 000d                op_05
+00044  4d04                     op_04
+00045  b404                     op_04
+00046  6b04                     op_04
+00047  0605 0010                op_05
+00049  0774 1312 0001           invoke-virtual/range  # CALL Landroid/support/v7/app/i;->a(J,D,D)V
+0004c  a153 0eed                iget-wide  # FIELD Landroid/support/v7/app/i;->b:J
+0004e  0316 0000                const-wide/16
+00050  0516 ffff                const-wide/16
+00052  0731 050b                op_31
+00054  0738 0019                if-eqz
+00056  0531 050d                op_31
+00058  0539 0003                if-nez
+0005a  1328                     goto
+0005b  0531 0d08                op_31
+0005d  053d 0004                if-lez
+0005f  13bb                     op_bb
+00060  0828                     goto
+00061  0531 0b08                op_31
+00063  053d 0004                if-lez
+00065  d3bb                     op_bb
+00066  0228                     goto
+00067  b3bb                     op_bb
+00068  0517 ea60 0000           const-wide/32
+0006b  53bb                     op_bb
+0006c  0528                     goto
+0006d  0317 2e00 0293           const-wide/32
+00070  83bb                     op_bb
+00071  0f5c 0ef0                iput-boolean  # FIELD Landroid/support/v7/app/j$a;->a:Z
+00073  0505 0012                op_05
+00075  055a 0ef1                iput-wide  # FIELD Landroid/support/v7/app/j$a;->b:J
+00077  0b5a 0ef2                iput-wide  # FIELD Landroid/support/v7/app/j$a;->c:J
+00079  0d5a 0ef3                iput-wide  # FIELD Landroid/support/v7/app/j$a;->d:J
+0007b  015a 0ef4                iput-wide  # FIELD Landroid/support/v7/app/j$a;->e:J
+0007d  035a 0ef5                iput-wide  # FIELD Landroid/support/v7/app/j$a;->f:J
+0007f  000e                     return-void
+
+### Landroid/support/v7/app/j;->b()Landroid/location/Location;  [access=0x2, regs=7, ins=1, outs=2, code_off=0xca404]
+00000  6054 0ef6                iget-object  # FIELD Landroid/support/v7/app/j;->a:Landroid/content/Context;
+00002  011a 1920                const-string  # STR "android.permission.ACCESS_COARSE_LOCATION"
+00004  2071 22c7 0010           invoke-static  # CALL Lb/b/c/a/c;->a(Landroid/content/Context;,Ljava/lang/String;)I
+00007  000a                     move-result
+00008  0112                     const/4
+00009  0039 0009                if-nez
+0000b  001a 21a4                const-string  # STR "network"
+0000d  2070 1315 0006           invoke-direct  # CALL Landroid/support/v7/app/j;->a(Ljava/lang/String;)Landroid/location/Location;
+00010  000c                     move-result-object
+00011  0228                     goto
+00012  1007                     op_07
+00013  6254 0ef6                iget-object  # FIELD Landroid/support/v7/app/j;->a:Landroid/content/Context;
+00015  031a 1921                const-string  # STR "android.permission.ACCESS_FINE_LOCATION"
+00017  2071 22c7 0032           invoke-static  # CALL Lb/b/c/a/c;->a(Landroid/content/Context;,Ljava/lang/String;)I
+0001a  020a                     move-result
+0001b  0239 0008                if-nez
+0001d  011a 1f0d                const-string  # STR "gps"
+0001f  2070 1315 0016           invoke-direct  # CALL Landroid/support/v7/app/j;->a(Ljava/lang/String;)Landroid/location/Location;
+00022  010c                     move-result-object
+00023  0138 0012                if-eqz
+00025  0038 0010                if-eqz
+00027  106e 0a3f 0001           invoke-virtual  # CALL Landroid/location/Location;->getTime()J
+0002a  020b                     move-result-wide
+0002b  106e 0a3f 0000           invoke-virtual  # CALL Landroid/location/Location;->getTime()J
+0002e  040b                     move-result-wide
+0002f  0631 0402                op_31
+00031  063d 0003                if-lez
+00033  1007                     op_07
+00034  0011                     return-object
+00035  0138 0003                if-eqz
+00037  1007                     op_07
+00038  0011                     return-object
+
+### Landroid/support/v7/app/j;->c()Z  [access=0x2, regs=5, ins=1, outs=0, code_off=0xca598]
+00000  4454 0ef8                iget-object  # FIELD Landroid/support/v7/app/j;->c:Landroid/support/v7/app/j$a;
+00002  4053 0ef5                iget-wide  # FIELD Landroid/support/v7/app/j$a;->f:J
+00004  0071 2d46 0000           invoke-static  # CALL Ljava/lang/System;->currentTimeMillis()J
+00007  020b                     move-result-wide
+00008  0431 0200                op_31
+0000a  043d 0004                if-lez
+0000c  1412                     const/4
+0000d  0228                     goto
+0000e  0412                     const/4
+0000f  040f                     return
+
+### Landroid/support/v7/app/j;->a()Z  [access=0x0, regs=3, ins=1, outs=2, code_off=0xca520]
+00000  2054 0ef8                iget-object  # FIELD Landroid/support/v7/app/j;->c:Landroid/support/v7/app/j$a;
+00002  1070 131a 0002           invoke-direct  # CALL Landroid/support/v7/app/j;->c()Z
+00005  010a                     move-result
+00006  0138 0005                if-eqz
+00008  0255 0ef0                iget-boolean  # FIELD Landroid/support/v7/app/j$a;->a:Z
+0000a  020f                     return
+0000b  1070 1319 0002           invoke-direct  # CALL Landroid/support/v7/app/j;->b()Landroid/location/Location;
+0000e  010c                     move-result-object
+0000f  0138 0008                if-eqz
+00011  2070 1317 0012           invoke-direct  # CALL Landroid/support/v7/app/j;->a(Landroid/location/Location;)V
+00014  0255 0ef0                iget-boolean  # FIELD Landroid/support/v7/app/j$a;->a:Z
+00016  020f                     return
+00017  021a 1529                const-string  # STR "TwilightManager"
+00019  001a 06bf                const-string  # STR "Could not get last known location. This is probably because the app does not have any location permissions. Falling back to hardcoded sunrise/sunset values."
+0001b  2071 1c5e 0002           invoke-static  # CALL Landroid/util/Log;->i(Ljava/lang/String;,Ljava/lang/String;)I
+0001e  0071 2e0e 0000           invoke-static  # CALL Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
+00021  020c                     move-result-object
+00022  0013 000b                const/16
+00024  206e 2e0d 0002           invoke-virtual  # CALL Ljava/util/Calendar;->get(I)I
+00027  020a                     move-result
+00028  6012                     const/4
+00029  0234 0009                if-lt
+0002b  0013 0016                const/16
+0002d  0234 0003                if-lt
+0002f  0328                     goto
+00030  0212                     const/4
+00031  0228                     goto
+00032  1212                     const/4
+00033  020f                     return

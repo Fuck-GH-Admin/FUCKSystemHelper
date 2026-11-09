@@ -1,0 +1,303 @@
+### Lcom/mobiletools/systemhelper/control/f;-><init>(Landroid/content/Context;,Lcom/mobiletools/systemhelper/control/b;,Lcom/mobiletools/systemhelper/control/f$a;)V  [access=0x10001, regs=6, ins=4, outs=1, code_off=0x10d338]
+00000  1070 2d4a 0002           invoke-direct  # CALL Ljava/lang/Thread;-><init>()V
+00003  0016 0000                const-wide/16
+00005  205a 1d4e                iput-wide  # FIELD Lcom/mobiletools/systemhelper/control/f;->b:J
+00007  205a 1d4f                iput-wide  # FIELD Lcom/mobiletools/systemhelper/control/f;->c:J
+00009  0012                     const/4
+0000a  205b 1d52                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/f;->f:Ljava/util/List;
+0000c  205b 1d54                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/f;->h:Lcom/mobiletools/systemhelper/control/b;
+0000e  235b 1d51                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/f;->e:Landroid/content/Context;
+00010  245b 1d54                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/f;->h:Lcom/mobiletools/systemhelper/control/b;
+00012  255b 1d53                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/f;->g:Lcom/mobiletools/systemhelper/control/f$a;
+00014  000e                     return-void
+
+### Lcom/mobiletools/systemhelper/control/f;->a(Ljava/util/List;,Landroid/app/usage/UsageStats;)Lc/d/a/b/b;  [access=0x2, regs=7, ins=3, outs=3, code_off=0x10d15c]
+00000  0022 05e9                new-instance  # TYPE Lc/d/a/b/b;
+00002  1070 295e 0000           invoke-direct  # CALL Lc/d/a/b/b;-><init>()V
+00005  106e 078b 0006           invoke-virtual  # CALL Landroid/app/usage/UsageStats;->getPackageName()Ljava/lang/String;
+00008  010c                     move-result-object
+00009  206e 2965 0010           invoke-virtual  # CALL Lc/d/a/b/b;->b(Ljava/lang/String;)V
+0000c  1072 2e59 0005           invoke-interface  # CALL Ljava/util/List;->iterator()Ljava/util/Iterator;
+0000f  050c                     move-result-object
+00010  1072 2e43 0005           invoke-interface  # CALL Ljava/util/Iterator;->hasNext()Z
+00013  010a                     move-result
+00014  0138 0024                if-eqz
+00016  1072 2e44 0005           invoke-interface  # CALL Ljava/util/Iterator;->next()Ljava/lang/Object;
+00019  010c                     move-result-object
+0001a  011f 017d                check-cast  # TYPE Landroid/content/pm/ApplicationInfo;
+0001c  1254 050a                iget-object  # FIELD Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+0001e  106e 078b 0006           invoke-virtual  # CALL Landroid/app/usage/UsageStats;->getPackageName()Ljava/lang/String;
+00021  030c                     move-result-object
+00022  206e 2d04 0032           invoke-virtual  # CALL Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+00025  020a                     move-result
+00026  0238 ffea                if-eqz
+00028  1552 050c                iget  # FIELD Landroid/content/pm/ApplicationInfo;->uid:I
+0002a  206e 2960 0050           invoke-virtual  # CALL Lc/d/a/b/b;->a(I)V
+0002d  4554 1d50                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/f;->d:Landroid/content/pm/PackageManager;
+0002f  206e 0895 0051           invoke-virtual  # CALL Landroid/content/pm/ApplicationInfo;->loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
+00032  050c                     move-result-object
+00033  051f 0683                check-cast  # TYPE Ljava/lang/String;
+00035  206e 2962 0050           invoke-virtual  # CALL Lc/d/a/b/b;->a(Ljava/lang/String;)V
+00038  106e 078c 0006           invoke-virtual  # CALL Landroid/app/usage/UsageStats;->getTotalTimeInForeground()J
+0003b  050b                     move-result-wide
+0003c  0117 ea60 0000           const-wide/32
+0003f  15be                     op_be
+00040  306e 2961 0650           invoke-virtual  # CALL Lc/d/a/b/b;->a(J)V
+00043  2070 2bbf 0004           invoke-direct  # CALL Lcom/mobiletools/systemhelper/control/f;->a(Lc/d/a/b/b;)V
+00046  0011                     return-object
+
+### Lcom/mobiletools/systemhelper/control/f;->a()Ljava/util/List;  [access=0x2, regs=7, ins=1, outs=5, code_off=0x10d1fc]
+00000  6054 1d51                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/f;->e:Landroid/content/Context;
+00002  011a 2820                const-string  # STR "usagestats"
+00004  206e 084c 0010           invoke-virtual  # CALL Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+00007  000c                     move-result-object
+00008  001f 0137                check-cast  # TYPE Landroid/app/usage/UsageStatsManager;
+0000a  0122 06c8                new-instance  # TYPE Ljava/util/ArrayList;
+0000c  1070 2de7 0001           invoke-direct  # CALL Ljava/util/ArrayList;-><init>()V
+0000f  6253 1d4f                iget-wide  # FIELD Lcom/mobiletools/systemhelper/control/f;->c:J
+00011  6453 1d4e                iget-wide  # FIELD Lcom/mobiletools/systemhelper/control/f;->b:J
+00013  556e 078d 4320           invoke-virtual  # CALL Landroid/app/usage/UsageStatsManager;->queryAndAggregateUsageStats(J,J)Ljava/util/Map;
+00016  060c                     move-result-object
+00017  1072 2e68 0006           invoke-interface  # CALL Ljava/util/Map;->entrySet()Ljava/util/Set;
+0001a  060c                     move-result-object
+0001b  1072 2e7c 0006           invoke-interface  # CALL Ljava/util/Set;->iterator()Ljava/util/Iterator;
+0001e  060c                     move-result-object
+0001f  1072 2e43 0006           invoke-interface  # CALL Ljava/util/Iterator;->hasNext()Z
+00022  000a                     move-result
+00023  0038 0012                if-eqz
+00025  1072 2e44 0006           invoke-interface  # CALL Ljava/util/Iterator;->next()Ljava/lang/Object;
+00028  000c                     move-result-object
+00029  001f 06dc                check-cast  # TYPE Ljava/util/Map$Entry;
+0002b  1072 2e65 0000           invoke-interface  # CALL Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+0002e  000c                     move-result-object
+0002f  001f 0136                check-cast  # TYPE Landroid/app/usage/UsageStats;
+00031  2072 2e52 0001           invoke-interface  # CALL Ljava/util/List;->add(Ljava/lang/Object;)Z
+00034  eb28                     goto
+00035  0111                     return-object
+
+### Lcom/mobiletools/systemhelper/control/f;->a(Lc/d/a/b/b;)V  [access=0x2, regs=16, ins=2, outs=7, code_off=0x10d374]
+00000  e054 1d51                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/f;->e:Landroid/content/Context;
+00002  011a 21a3                const-string  # STR "netstats"
+00004  206e 084c 0010           invoke-virtual  # CALL Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+00007  000c                     move-result-object
+00008  001f 0135                check-cast  # TYPE Landroid/app/usage/NetworkStatsManager;
+0000a  e154 1d54                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/f;->h:Lcom/mobiletools/systemhelper/control/b;
+0000c  1154 1d35                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->i:Ljava/lang/String;
+0000e  0816 0400                const-wide/16
+00010  0a16 0000                const-wide/16
+00012  0c12                     const/4
+00013  0138 0055                if-eqz
+00015  106e 2d0f 0001           invoke-virtual  # CALL Ljava/lang/String;->isEmpty()Z
+00018  010a                     move-result
+00019  0139 004f                if-nez
+0001b  0d22 0133                new-instance  # TYPE Landroid/app/usage/NetworkStats$Bucket;
+0001d  1070 0783 000d           invoke-direct  # CALL Landroid/app/usage/NetworkStats$Bucket;-><init>()V
+00020  0212                     const/4
+00021  e154 1d54                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/f;->h:Lcom/mobiletools/systemhelper/control/b;
+00023  1354 1d35                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->i:Ljava/lang/String;
+00025  e453 1d4f                iget-wide  # FIELD Lcom/mobiletools/systemhelper/control/f;->c:J
+00027  e653 1d4e                iget-wide  # FIELD Lcom/mobiletools/systemhelper/control/f;->b:J
+00029  0107                     op_07
+0002a  0774 078a 0001           invoke-virtual/range  # CALL Landroid/app/usage/NetworkStatsManager;->querySummary(I,Ljava/lang/String;,J,J)Landroid/app/usage/NetworkStats;
+0002d  0c0c                     move-result-object
+0002e  a104                     op_04
+0002f  1304                     op_04
+00030  206e 0788 00dc           invoke-virtual  # CALL Landroid/app/usage/NetworkStats;->getNextBucket(Landroid/app/usage/NetworkStats$Bucket;)Z
+00033  106e 0786 000d           invoke-virtual  # CALL Landroid/app/usage/NetworkStats$Bucket;->getUid()I
+00036  050a                     move-result
+00037  106e 2963 000f           invoke-virtual  # CALL Lc/d/a/b/b;->b()I
+0003a  060a                     move-result
+0003b  5633 000c                if-ne
+0003d  106e 0784 000d           invoke-virtual  # CALL Landroid/app/usage/NetworkStats$Bucket;->getRxBytes()J
+00040  050b                     move-result-wide
+00041  51bb                     op_bb
+00042  106e 0785 000d           invoke-virtual  # CALL Landroid/app/usage/NetworkStats$Bucket;->getTxBytes()J
+00045  050b                     move-result-wide
+00046  53bb                     op_bb
+00047  106e 0789 000c           invoke-virtual  # CALL Landroid/app/usage/NetworkStats;->hasNextBucket()Z
+0004a  050a                     move-result
+0004b  0539 ffe5                if-nez
+0004d  0928                     goto
+0004e  050d                     op_0d
+0004f  0428                     goto
+00050  050d                     op_0d
+00051  a104                     op_04
+00052  1304                     op_04
+00053  106e 0b02 0005           invoke-virtual  # CALL Landroid/os/RemoteException;->printStackTrace()V
+00056  106e 0787 000c           invoke-virtual  # CALL Landroid/app/usage/NetworkStats;->close()V
+00059  059e 0803                op_9e
+0005b  306e 296b 065f           invoke-virtual  # CALL Lc/d/a/b/b;->h(J)V
+0005e  059e 0801                op_9e
+00060  306e 2964 065f           invoke-virtual  # CALL Lc/d/a/b/b;->b(J)V
+00063  13bb                     op_bb
+00064  83be                     op_be
+00065  306e 2968 043f           invoke-virtual  # CALL Lc/d/a/b/b;->e(J)V
+00068  e154 1d54                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/f;->h:Lcom/mobiletools/systemhelper/control/b;
+0006a  1154 1d41                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->u:Ljava/lang/String;
+0006c  0138 0055                if-eqz
+0006e  106e 2d0f 0001           invoke-virtual  # CALL Ljava/lang/String;->isEmpty()Z
+00071  010a                     move-result
+00072  0139 004f                if-nez
+00074  0d22 0133                new-instance  # TYPE Landroid/app/usage/NetworkStats$Bucket;
+00076  1070 0783 000d           invoke-direct  # CALL Landroid/app/usage/NetworkStats$Bucket;-><init>()V
+00079  0212                     const/4
+0007a  e154 1d54                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/f;->h:Lcom/mobiletools/systemhelper/control/b;
+0007c  1354 1d41                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->u:Ljava/lang/String;
+0007e  e453 1d4f                iget-wide  # FIELD Lcom/mobiletools/systemhelper/control/f;->c:J
+00080  e653 1d4e                iget-wide  # FIELD Lcom/mobiletools/systemhelper/control/f;->b:J
+00082  0107                     op_07
+00083  0774 078a 0001           invoke-virtual/range  # CALL Landroid/app/usage/NetworkStatsManager;->querySummary(I,Ljava/lang/String;,J,J)Landroid/app/usage/NetworkStats;
+00086  0c0c                     move-result-object
+00087  a104                     op_04
+00088  1304                     op_04
+00089  206e 0788 00dc           invoke-virtual  # CALL Landroid/app/usage/NetworkStats;->getNextBucket(Landroid/app/usage/NetworkStats$Bucket;)Z
+0008c  106e 0786 000d           invoke-virtual  # CALL Landroid/app/usage/NetworkStats$Bucket;->getUid()I
+0008f  050a                     move-result
+00090  106e 2963 000f           invoke-virtual  # CALL Lc/d/a/b/b;->b()I
+00093  060a                     move-result
+00094  5633 000c                if-ne
+00096  106e 0784 000d           invoke-virtual  # CALL Landroid/app/usage/NetworkStats$Bucket;->getRxBytes()J
+00099  050b                     move-result-wide
+0009a  51bb                     op_bb
+0009b  106e 0785 000d           invoke-virtual  # CALL Landroid/app/usage/NetworkStats$Bucket;->getTxBytes()J
+0009e  050b                     move-result-wide
+0009f  53bb                     op_bb
+000a0  106e 0789 000c           invoke-virtual  # CALL Landroid/app/usage/NetworkStats;->hasNextBucket()Z
+000a3  050a                     move-result
+000a4  0539 ffe5                if-nez
+000a6  0928                     goto
+000a7  050d                     op_0d
+000a8  0428                     goto
+000a9  050d                     op_0d
+000aa  a104                     op_04
+000ab  1304                     op_04
+000ac  106e 0b02 0005           invoke-virtual  # CALL Landroid/os/RemoteException;->printStackTrace()V
+000af  106e 0787 000c           invoke-virtual  # CALL Landroid/app/usage/NetworkStats;->close()V
+000b2  059e 0803                op_9e
+000b4  306e 296c 065f           invoke-virtual  # CALL Lc/d/a/b/b;->i(J)V
+000b7  059e 0801                op_9e
+000b9  306e 2966 065f           invoke-virtual  # CALL Lc/d/a/b/b;->c(J)V
+000bc  13bb                     op_bb
+000bd  83be                     op_be
+000be  306e 2969 043f           invoke-virtual  # CALL Lc/d/a/b/b;->f(J)V
+000c1  0822 0133                new-instance  # TYPE Landroid/app/usage/NetworkStats$Bucket;
+000c3  1070 0783 0008           invoke-direct  # CALL Landroid/app/usage/NetworkStats$Bucket;-><init>()V
+000c6  1212                     const/4
+000c7  0312                     const/4
+000c8  e453 1d4f                iget-wide  # FIELD Lcom/mobiletools/systemhelper/control/f;->c:J
+000ca  e653 1d4e                iget-wide  # FIELD Lcom/mobiletools/systemhelper/control/f;->b:J
+000cc  0107                     op_07
+000cd  0774 078a 0001           invoke-virtual/range  # CALL Landroid/app/usage/NetworkStatsManager;->querySummary(I,Ljava/lang/String;,J,J)Landroid/app/usage/NetworkStats;
+000d0  0c0c                     move-result-object
+000d1  a004                     op_04
+000d2  206e 0788 008c           invoke-virtual  # CALL Landroid/app/usage/NetworkStats;->getNextBucket(Landroid/app/usage/NetworkStats$Bucket;)Z
+000d5  106e 0786 0008           invoke-virtual  # CALL Landroid/app/usage/NetworkStats$Bucket;->getUid()I
+000d8  0e0a                     move-result
+000d9  106e 2963 000f           invoke-virtual  # CALL Lc/d/a/b/b;->b()I
+000dc  020a                     move-result
+000dd  e233 000c                if-ne
+000df  106e 0784 0008           invoke-virtual  # CALL Landroid/app/usage/NetworkStats$Bucket;->getRxBytes()J
+000e2  020b                     move-result-wide
+000e3  2abb                     op_bb
+000e4  106e 0785 0008           invoke-virtual  # CALL Landroid/app/usage/NetworkStats$Bucket;->getTxBytes()J
+000e7  020b                     move-result-wide
+000e8  20bb                     op_bb
+000e9  106e 0789 000c           invoke-virtual  # CALL Landroid/app/usage/NetworkStats;->hasNextBucket()Z
+000ec  0e0a                     move-result
+000ed  0e39 ffe5                if-nez
+000ef  0828                     goto
+000f0  0e0d                     op_0d
+000f1  0328                     goto
+000f2  0e0d                     op_0d
+000f3  a004                     op_04
+000f4  106e 0b02 000e           invoke-virtual  # CALL Landroid/os/RemoteException;->printStackTrace()V
+000f7  106e 0787 000c           invoke-virtual  # CALL Landroid/app/usage/NetworkStats;->close()V
+000fa  0217 0000 0010           const-wide/32
+000fd  049e 0200                op_9e
+000ff  306e 296d 054f           invoke-virtual  # CALL Lc/d/a/b/b;->j(J)V
+00102  049e 020a                op_9e
+00104  306e 2967 054f           invoke-virtual  # CALL Lc/d/a/b/b;->d(J)V
+00107  a0bb                     op_bb
+00108  20be                     op_be
+00109  306e 296a 010f           invoke-virtual  # CALL Lc/d/a/b/b;->g(J)V
+0010c  000e                     return-void
+
+### Lcom/mobiletools/systemhelper/control/f;->b()Ljava/util/List;  [access=0x2, regs=5, ins=1, outs=3, code_off=0x10d278]
+00000  0063 1bb5                sget-boolean  # FIELD Lc/d/a/b/d;->e:Z
+00002  0038 0053                if-eqz
+00004  0022 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00006  1070 2d35 0000           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00009  011a 23c6                const-string  # STR "queryAppUsageStatsDescend  isUserPermissionOpen :"
+0000b  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0000e  0163 1bb5                sget-boolean  # FIELD Lc/d/a/b/d;->e:Z
+00010  206e 2d40 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+00013  106e 2d44 0000           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00016  000c                     move-result-object
+00017  011a 1341                const-string  # STR "QueryAppInfoThread"
+00019  2071 2987 0001           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+0001c  4054 1d51                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/f;->e:Landroid/content/Context;
+0001e  106e 0846 0000           invoke-virtual  # CALL Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+00021  000c                     move-result-object
+00022  405b 1d50                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/f;->d:Landroid/content/pm/PackageManager;
+00024  0112                     const/4
+00025  206e 089e 0010           invoke-virtual  # CALL Landroid/content/pm/PackageManager;->getInstalledApplications(I)Ljava/util/List;
+00028  000c                     move-result-object
+00029  1070 2bbe 0004           invoke-direct  # CALL Lcom/mobiletools/systemhelper/control/f;->a()Ljava/util/List;
+0002c  010c                     move-result-object
+0002d  0138 000a                if-eqz
+0002f  0222 0626                new-instance  # TYPE Lcom/mobiletools/systemhelper/control/f$b;
+00031  2070 2bb9 0042           invoke-direct  # CALL Lcom/mobiletools/systemhelper/control/f$b;-><init>(Lcom/mobiletools/systemhelper/control/f;)V
+00034  2071 2e16 0021           invoke-static  # CALL Ljava/util/Collections;->sort(Ljava/util/List;,Ljava/util/Comparator;)V
+00037  0222 06c8                new-instance  # TYPE Ljava/util/ArrayList;
+00039  1070 2de7 0002           invoke-direct  # CALL Ljava/util/ArrayList;-><init>()V
+0003c  1072 2e59 0001           invoke-interface  # CALL Ljava/util/List;->iterator()Ljava/util/Iterator;
+0003f  010c                     move-result-object
+00040  1072 2e43 0001           invoke-interface  # CALL Ljava/util/Iterator;->hasNext()Z
+00043  030a                     move-result
+00044  0338 0010                if-eqz
+00046  1072 2e44 0001           invoke-interface  # CALL Ljava/util/Iterator;->next()Ljava/lang/Object;
+00049  030c                     move-result-object
+0004a  031f 0136                check-cast  # TYPE Landroid/app/usage/UsageStats;
+0004c  3070 2bbd 0304           invoke-direct  # CALL Lcom/mobiletools/systemhelper/control/f;->a(Ljava/util/List;,Landroid/app/usage/UsageStats;)Lc/d/a/b/b;
+0004f  030c                     move-result-object
+00050  2072 2e52 0032           invoke-interface  # CALL Ljava/util/List;->add(Ljava/lang/Object;)Z
+00053  ed28                     goto
+00054  0211                     return-object
+00055  0412                     const/4
+00056  0411                     return-object
+
+### Lcom/mobiletools/systemhelper/control/f;->run()V  [access=0x1, regs=5, ins=1, outs=4, code_off=0x10d5f0]
+00000  4053 1d4f                iget-wide  # FIELD Lcom/mobiletools/systemhelper/control/f;->c:J
+00002  0216 0000                const-wide/16
+00004  0031 0200                op_31
+00006  0039 0013                if-nez
+00008  4053 1d4e                iget-wide  # FIELD Lcom/mobiletools/systemhelper/control/f;->b:J
+0000a  0031 0200                op_31
+0000c  0039 000d                if-nez
+0000e  0071 2d46 0000           invoke-static  # CALL Ljava/lang/System;->currentTimeMillis()J
+00011  000b                     move-result-wide
+00012  405a 1d4e                iput-wide  # FIELD Lcom/mobiletools/systemhelper/control/f;->b:J
+00014  0261 1bc4                sget-wide  # FIELD Lc/d/a/b/d;->t:J
+00016  20bc                     op_bc
+00017  405a 1d4f                iput-wide  # FIELD Lcom/mobiletools/systemhelper/control/f;->c:J
+00019  1070 2bc0 0004           invoke-direct  # CALL Lcom/mobiletools/systemhelper/control/f;->b()Ljava/util/List;
+0001c  000c                     move-result-object
+0001d  405b 1d52                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/f;->f:Ljava/util/List;
+0001f  0063 1bb5                sget-boolean  # FIELD Lc/d/a/b/d;->e:Z
+00021  0038 0025                if-eqz
+00023  0022 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00025  1070 2d35 0000           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00028  011a 23c6                const-string  # STR "queryAppUsageStatsDescend  isUserPermissionOpen :"
+0002a  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0002d  0163 1bb5                sget-boolean  # FIELD Lc/d/a/b/d;->e:Z
+0002f  206e 2d40 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+00032  106e 2d44 0000           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00035  000c                     move-result-object
+00036  011a 1341                const-string  # STR "QueryAppInfoThread"
+00038  2071 2987 0001           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+0003b  4054 1d53                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/f;->g:Lcom/mobiletools/systemhelper/control/f$a;
+0003d  4154 1d51                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/f;->e:Landroid/content/Context;
+0003f  4254 1d54                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/f;->h:Lcom/mobiletools/systemhelper/control/b;
+00041  4454 1d52                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/f;->f:Ljava/util/List;
+00043  4072 2bb8 4210           invoke-interface  # CALL Lcom/mobiletools/systemhelper/control/f$a;->a(Landroid/content/Context;,Lcom/mobiletools/systemhelper/control/b;,Ljava/util/List;)V
+00046  000e                     return-void

@@ -1,0 +1,273 @@
+### Lc/a/c/a/i;-><init>(Landroid/content/Context;)V  [access=0x10004, regs=3, ins=2, outs=1, code_off=0xfe890]
+00000  1070 2ce0 0001           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  0012                     const/4
+00004  105b 1b78                iput-object  # FIELD Lc/a/c/a/i;->b:Ljava/util/List;
+00006  105b 1b79                iput-object  # FIELD Lc/a/c/a/i;->c:Lc/a/c/a/i$a;
+00008  125b 1b77                iput-object  # FIELD Lc/a/c/a/i;->a:Landroid/content/Context;
+0000a  000e                     return-void
+
+### Lc/a/c/a/i;->a(Lc/a/c/a/i;)Ljava/util/List;  [access=0x1008, regs=1, ins=1, outs=0, code_off=0xfe794]
+00000  0054 1b78                iget-object  # FIELD Lc/a/c/a/i;->b:Ljava/util/List;
+00002  0011                     return-object
+
+### Lc/a/c/a/i;->a(Ljava/util/HashMap;,[Ljava/lang/String;)Ljava/util/List;  [access=0x2, regs=8, ins=3, outs=3, code_off=0xfe7ac]
+00000  0522 06c8                new-instance  # TYPE Ljava/util/ArrayList;
+00002  1070 2de7 0005           invoke-direct  # CALL Ljava/util/ArrayList;-><init>()V
+00005  0738 003b                if-eqz
+00007  7021                     array-length
+00008  003d 0038                if-lez
+0000a  0012                     const/4
+0000b  7121                     array-length
+0000c  1035 005c                if-ge
+0000e  0122 06d4                new-instance  # TYPE Ljava/util/HashMap;
+00010  1070 2e29 0001           invoke-direct  # CALL Ljava/util/HashMap;-><init>()V
+00013  106e 2e2e 0006           invoke-virtual  # CALL Ljava/util/HashMap;->keySet()Ljava/util/Set;
+00016  020c                     move-result-object
+00017  1072 2e7c 0002           invoke-interface  # CALL Ljava/util/Set;->iterator()Ljava/util/Iterator;
+0001a  020c                     move-result-object
+0001b  1072 2e43 0002           invoke-interface  # CALL Ljava/util/Iterator;->hasNext()Z
+0001e  030a                     move-result
+0001f  0338 0014                if-eqz
+00021  1072 2e44 0002           invoke-interface  # CALL Ljava/util/Iterator;->next()Ljava/lang/Object;
+00024  030c                     move-result-object
+00025  031f 0683                check-cast  # TYPE Ljava/lang/String;
+00027  106e 2d1e 0003           invoke-virtual  # CALL Ljava/lang/String;->toString()Ljava/lang/String;
+0002a  030c                     move-result-object
+0002b  206e 2e2d 0036           invoke-virtual  # CALL Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+0002e  040c                     move-result-object
+0002f  306e 2e2f 0431           invoke-virtual  # CALL Ljava/util/HashMap;->put(Ljava/lang/Object;,Ljava/lang/Object;)Ljava/lang/Object;
+00032  e928                     goto
+00033  0246 0007                aget-object
+00035  031a 213d                const-string  # STR "mcode"
+00037  306e 2e2f 0231           invoke-virtual  # CALL Ljava/util/HashMap;->put(Ljava/lang/Object;,Ljava/lang/Object;)Ljava/lang/Object;
+0003a  2072 2e52 0015           invoke-interface  # CALL Ljava/util/List;->add(Ljava/lang/Object;)Z
+0003d  00d8 0100                op_d8
+0003f  cc28                     goto
+00040  0722 06d4                new-instance  # TYPE Ljava/util/HashMap;
+00042  1070 2e29 0007           invoke-direct  # CALL Ljava/util/HashMap;-><init>()V
+00045  106e 2e2e 0006           invoke-virtual  # CALL Ljava/util/HashMap;->keySet()Ljava/util/Set;
+00048  000c                     move-result-object
+00049  1072 2e7c 0000           invoke-interface  # CALL Ljava/util/Set;->iterator()Ljava/util/Iterator;
+0004c  000c                     move-result-object
+0004d  1072 2e43 0000           invoke-interface  # CALL Ljava/util/Iterator;->hasNext()Z
+00050  010a                     move-result
+00051  0138 0014                if-eqz
+00053  1072 2e44 0000           invoke-interface  # CALL Ljava/util/Iterator;->next()Ljava/lang/Object;
+00056  010c                     move-result-object
+00057  011f 0683                check-cast  # TYPE Ljava/lang/String;
+00059  106e 2d1e 0001           invoke-virtual  # CALL Ljava/lang/String;->toString()Ljava/lang/String;
+0005c  010c                     move-result-object
+0005d  206e 2e2d 0016           invoke-virtual  # CALL Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+00060  020c                     move-result-object
+00061  306e 2e2f 0217           invoke-virtual  # CALL Ljava/util/HashMap;->put(Ljava/lang/Object;,Ljava/lang/Object;)Ljava/lang/Object;
+00064  e928                     goto
+00065  2072 2e52 0075           invoke-interface  # CALL Ljava/util/List;->add(Ljava/lang/Object;)Z
+00068  0511                     return-object
+
+### Lc/a/c/a/i;->a(Lc/a/c/a/i;,Ljava/util/List;,Ljava/lang/String;,I,Ljava/lang/String;,Ljava/lang/String;)V  [access=0x1008, regs=6, ins=6, outs=6, code_off=0xfe8b8]
+00000  0676 28b8 0000           invoke-direct/range  # CALL Lc/a/c/a/i;->a(Ljava/util/List;,Ljava/lang/String;,I,Ljava/lang/String;,Ljava/lang/String;)V
+00003  000e                     return-void
+
+### Lc/a/c/a/i;->a(Ljava/lang/String;)V  [access=0x2, regs=5, ins=2, outs=3, code_off=0xfe8d0]
+00000  001a 270a                const-string  # STR "status"
+00002  0439 0004                if-nez
+00004  041a 0000                const-string  # STR ""
+00006  f112                     const/4
+00007  0222 071a                new-instance  # TYPE Lorg/json/JSONObject;
+00009  2070 2f14 0042           invoke-direct  # CALL Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+0000c  206e 2f1c 0002           invoke-virtual  # CALL Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
+0000f  040a                     move-result
+00010  0439 0013                if-nez
+00012  306e 2f29 0102           invoke-virtual  # CALL Lorg/json/JSONObject;->put(Ljava/lang/String;,I)Lorg/json/JSONObject;
+00015  0e28                     goto
+00016  0222 071a                new-instance  # TYPE Lorg/json/JSONObject;
+00018  1070 2f13 0002           invoke-direct  # CALL Lorg/json/JSONObject;-><init>()V
+0001b  306e 2f29 0102           invoke-virtual  # CALL Lorg/json/JSONObject;->put(Ljava/lang/String;,I)Lorg/json/JSONObject;
+0001e  0528                     goto
+0001f  040d                     op_0d
+00020  106e 2f12 0004           invoke-virtual  # CALL Lorg/json/JSONException;->printStackTrace()V
+00023  3354 1b79                iget-object  # FIELD Lc/a/c/a/i;->c:Lc/a/c/a/i$a;
+00025  0338 0009                if-eqz
+00027  106e 2f2e 0002           invoke-virtual  # CALL Lorg/json/JSONObject;->toString()Ljava/lang/String;
+0002a  040c                     move-result-object
+0002b  2072 28b1 0043           invoke-interface  # CALL Lc/a/c/a/i$a;->a(Ljava/lang/Object;)V
+0002e  000e                     return-void
+
+### Lc/a/c/a/i;->a(Ljava/util/List;,Ljava/lang/String;,I,Ljava/lang/String;,Ljava/lang/String;)V  [access=0x2, regs=20, ins=6, outs=6, code_off=0xfe9a4]
+00000  e107                     op_07
+00001  f007                     op_07
+00002  0222 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00004  1070 2d35 0002           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00007  031a 275c                const-string  # STR "syncConnect start Thread id = "
+00009  206e 2d3f 0032           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0000c  0071 2d4d 0000           invoke-static  # CALL Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+0000f  030c                     move-result-object
+00010  106e 2d4f 0003           invoke-virtual  # CALL Ljava/lang/Thread;->getId()J
+00013  030b                     move-result-wide
+00014  2071 2d23 0043           invoke-static  # CALL Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+00017  030c                     move-result-object
+00018  206e 2d3f 0032           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0001b  106e 2d44 0002           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0001e  020c                     move-result-object
+0001f  1071 2898 0002           invoke-static  # CALL Lc/a/c/a/d;->a(Ljava/lang/String;)V
+00022  0038 0134                if-eqz
+00024  1072 2e5d 000f           invoke-interface  # CALL Ljava/util/List;->size()I
+00027  020a                     move-result
+00028  0239 0004                if-nez
+0002a  0029 012c                goto/16
+0002c  0222 06c8                new-instance  # TYPE Ljava/util/ArrayList;
+0002e  1070 2de7 0002           invoke-direct  # CALL Ljava/util/ArrayList;-><init>()V
+00031  0312                     const/4
+00032  3401                     op_01
+00033  1072 2e5d 000f           invoke-interface  # CALL Ljava/util/List;->size()I
+00036  050a                     move-result
+00037  061a 270a                const-string  # STR "status"
+00039  5435 0091                if-ge
+0003b  0522 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0003d  1070 2d35 0005           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00040  071a 275b                const-string  # STR "syncConnect resuest "
+00042  206e 2d3f 0075           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00045  206e 2d3b 0045           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+00048  081a 0016                const-string  # STR "  start!!!"
+0004a  206e 2d3f 0085           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0004d  106e 2d44 0005           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00050  050c                     move-result-object
+00051  1071 2898 0005           invoke-static  # CALL Lc/a/c/a/d;->a(Ljava/lang/String;)V
+00054  2072 2e57 004f           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+00057  050c                     move-result-object
+00058  5907                     op_07
+00059  091f 06d4                check-cast  # TYPE Ljava/util/HashMap;
+0005b  0822 05c5                new-instance  # TYPE Lc/a/c/a/k;
+0005d  1554 1b77                iget-object  # FIELD Lc/a/c/a/i;->a:Landroid/content/Context;
+0005f  2070 28bb 0058           invoke-direct  # CALL Lc/a/c/a/k;-><init>(Landroid/content/Context;)V
+00062  106e 28c1 0008           invoke-virtual  # CALL Lc/a/c/a/k;->a()Z
+00065  050a                     move-result
+00066  0538 004f                if-eqz
+00068  0a08 0010                op_08
+0006a  0b02 0011                op_02
+0006c  0c08 0012                op_08
+0006e  0d08 0013                op_08
+00070  0674 28bf 0008           invoke-virtual/range  # CALL Lc/a/c/a/k;->a(Ljava/util/HashMap;,Ljava/lang/String;,I,Ljava/lang/String;,Ljava/lang/String;)Ljava/lang/String;
+00073  050c                     move-result-object
+00074  0539 0004                if-nez
+00076  051a 0000                const-string  # STR ""
+00078  0822 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0007a  1070 2d35 0008           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0007d  206e 2d3f 0078           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00080  206e 2d3b 0048           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+00083  071a 0015                const-string  # STR "  result:"
+00085  206e 2d3f 0078           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00088  206e 2d3f 0058           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0008b  106e 2d44 0008           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0008e  070c                     move-result-object
+0008f  1071 2898 0007           invoke-static  # CALL Lc/a/c/a/d;->a(Ljava/lang/String;)V
+00092  2072 2e52 0052           invoke-interface  # CALL Ljava/util/List;->add(Ljava/lang/Object;)Z
+00095  0722 071a                new-instance  # TYPE Lorg/json/JSONObject;
+00097  2070 2f14 0057           invoke-direct  # CALL Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+0009a  206e 2f1c 0067           invoke-virtual  # CALL Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
+0009d  080a                     move-result
+0009e  0838 0023                if-eqz
+000a0  206e 2f17 0067           invoke-virtual  # CALL Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
+000a3  060a                     move-result
+000a4  0639 001d                if-nez
+000a6  061a 1984                const-string  # STR "auth end and break"
+000a8  1071 2898 0006           invoke-static  # CALL Lc/a/c/a/d;->a(Ljava/lang/String;)V
+000ab  2070 28b6 005e           invoke-direct  # CALL Lc/a/c/a/i;->a(Ljava/lang/String;)V
+000ae  000e                     return-void
+000af  051a 1acb                const-string  # STR "continue-------------------------------"
+000b1  1071 2898 0005           invoke-static  # CALL Lc/a/c/a/d;->a(Ljava/lang/String;)V
+000b4  0d28                     goto
+000b5  051a 06d4                const-string  # STR "Current network is not available."
+000b7  1071 2898 0005           invoke-static  # CALL Lc/a/c/a/d;->a(Ljava/lang/String;)V
+000ba  1071 286d 0005           invoke-static  # CALL Lc/a/c/a/a;->a(Ljava/lang/String;)Ljava/lang/String;
+000bd  050c                     move-result-object
+000be  2072 2e52 0052           invoke-interface  # CALL Ljava/util/List;->add(Ljava/lang/Object;)Z
+000c1  051a 2758                const-string  # STR "syncConnect end"
+000c3  1071 2898 0005           invoke-static  # CALL Lc/a/c/a/d;->a(Ljava/lang/String;)V
+000c6  04d8 0104                op_d8
+000c8  0029 ff6b                goto/16
+000ca  0522 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+000cc  1070 2d35 0005           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+000cf  071a 01f8                const-string  # STR "--iiiiii:"
+000d1  206e 2d3f 0075           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000d4  206e 2d3b 0045           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+000d7  071a 0286                const-string  # STR "<><>paramList.size():"
+000d9  206e 2d3f 0075           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000dc  1072 2e5d 000f           invoke-interface  # CALL Ljava/util/List;->size()I
+000df  070a                     move-result
+000e0  206e 2d3b 0075           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+000e3  071a 0285                const-string  # STR "<><>authResults.size():"
+000e5  206e 2d3f 0075           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000e8  1072 2e5d 0002           invoke-interface  # CALL Ljava/util/List;->size()I
+000eb  070a                     move-result
+000ec  206e 2d3b 0075           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+000ef  106e 2d44 0005           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+000f2  050c                     move-result-object
+000f3  1071 2898 0005           invoke-static  # CALL Lc/a/c/a/d;->a(Ljava/lang/String;)V
+000f6  1072 2e5d 000f           invoke-interface  # CALL Ljava/util/List;->size()I
+000f9  050a                     move-result
+000fa  053d 005b                if-lez
+000fc  1072 2e5d 000f           invoke-interface  # CALL Ljava/util/List;->size()I
+000ff  000a                     move-result
+00100  0433 0055                if-ne
+00102  1072 2e5d 0002           invoke-interface  # CALL Ljava/util/List;->size()I
+00105  000a                     move-result
+00106  003d 004f                if-lez
+00108  1072 2e5d 0002           invoke-interface  # CALL Ljava/util/List;->size()I
+0010b  000a                     move-result
+0010c  0433 0049                if-ne
+0010e  04d8 ff04                op_d8
+00110  043d 0045                if-lez
+00112  0022 071a                new-instance  # TYPE Lorg/json/JSONObject;
+00114  2072 2e57 0042           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+00117  040c                     move-result-object
+00118  041f 0683                check-cast  # TYPE Ljava/lang/String;
+0011a  2070 2f14 0040           invoke-direct  # CALL Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+0011d  206e 2f1c 0060           invoke-virtual  # CALL Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
+00120  040a                     move-result
+00121  0438 0034                if-eqz
+00123  206e 2f17 0060           invoke-virtual  # CALL Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
+00126  000a                     move-result
+00127  0038 002e                if-eqz
+00129  001a 1f95                const-string  # STR "i-1 result is not 0,return first result"
+0012b  1071 2898 0000           invoke-static  # CALL Lc/a/c/a/d;->a(Ljava/lang/String;)V
+0012e  2072 2e57 0032           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+00131  000c                     move-result-object
+00132  001f 0683                check-cast  # TYPE Ljava/lang/String;
+00134  2070 28b6 000e           invoke-direct  # CALL Lc/a/c/a/i;->a(Ljava/lang/String;)V
+00137  000e                     return-void
+00138  000d                     op_0d
+00139  0222 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0013b  1070 2d35 0002           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0013e  031a 08f9                const-string  # STR "JSONException:"
+00140  206e 2d3f 0032           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00143  106e 2f11 0000           invoke-virtual  # CALL Lorg/json/JSONException;->getMessage()Ljava/lang/String;
+00146  000c                     move-result-object
+00147  206e 2d3f 0002           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0014a  106e 2d44 0002           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0014d  000c                     move-result-object
+0014e  1071 286d 0000           invoke-static  # CALL Lc/a/c/a/a;->a(Ljava/lang/String;)Ljava/lang/String;
+00151  000c                     move-result-object
+00152  2070 28b6 000e           invoke-direct  # CALL Lc/a/c/a/i;->a(Ljava/lang/String;)V
+00155  000e                     return-void
+00156  001a 275a                const-string  # STR "syncConnect failed,params list is null or size is 0"
+00158  1071 289a 0000           invoke-static  # CALL Lc/a/c/a/d;->c(Ljava/lang/String;)V
+0015b  000e                     return-void
+
+### Lc/a/c/a/i;->a(Ljava/util/HashMap;,[Ljava/lang/String;,Ljava/lang/String;,I,Ljava/lang/String;,Ljava/lang/String;,Lc/a/c/a/i$a;)V  [access=0x4, regs=14, ins=8, outs=6, code_off=0xfe95c]
+00000  3070 28b4 0876           invoke-direct  # CALL Lc/a/c/a/i;->a(Ljava/util/HashMap;,[Ljava/lang/String;)Ljava/util/List;
+00003  070c                     move-result-object
+00004  675b 1b78                iput-object  # FIELD Lc/a/c/a/i;->b:Ljava/util/List;
+00006  6d5b 1b79                iput-object  # FIELD Lc/a/c/a/i;->c:Lc/a/c/a/i$a;
+00008  0722 0688                new-instance  # TYPE Ljava/lang/Thread;
+0000a  0822 05c4                new-instance  # TYPE Lc/a/c/a/j;
+0000c  8007                     op_07
+0000d  6107                     op_07
+0000e  9207                     op_07
+0000f  a301                     op_01
+00010  b407                     op_07
+00011  c507                     op_07
+00012  0676 28b9 0000           invoke-direct/range  # CALL Lc/a/c/a/j;-><init>(Lc/a/c/a/i;,Ljava/lang/String;,I,Ljava/lang/String;,Ljava/lang/String;)V
+00015  2070 2d4b 0087           invoke-direct  # CALL Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
+00018  106e 2d56 0007           invoke-virtual  # CALL Ljava/lang/Thread;->start()V
+0001b  000e                     return-void

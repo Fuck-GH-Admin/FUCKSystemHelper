@@ -1,0 +1,134 @@
+### Landroid/support/constraint/a;-><init>(Landroid/content/Context;)V  [access=0x10001, regs=2, ins=2, outs=2, code_off=0x81e4c]
+00000  2070 0b65 0010           invoke-direct  # CALL Landroid/support/constraint/c;-><init>(Landroid/content/Context;)V
+00003  0113 0008                const/16
+00005  206f 1dcb 0010           invoke-super  # CALL Landroid/view/View;->setVisibility(I)V
+00008  000e                     return-void
+
+### Landroid/support/constraint/a;->a(Landroid/support/constraint/n/k/e;,I,Z)V  [access=0x2, regs=9, ins=4, outs=2, code_off=0x81fd8]
+00000  5759 05ba                iput  # FIELD Landroid/support/constraint/a;->k:I
+00002  0760 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00004  1012                     const/4
+00005  0112                     const/4
+00006  6212                     const/4
+00007  5312                     const/4
+00008  0413 0011                const/16
+0000a  4735 000c                if-ge
+0000c  5752 05b9                iget  # FIELD Landroid/support/constraint/a;->j:I
+0000e  3733 0005                if-ne
+00010  5159 05ba                iput  # FIELD Landroid/support/constraint/a;->k:I
+00012  1628                     goto
+00013  2733 0015                if-ne
+00015  0728                     goto
+00016  5752 05b9                iget  # FIELD Landroid/support/constraint/a;->j:I
+00018  0838 000a                if-eqz
+0001a  3733 0005                if-ne
+0001c  5059 05ba                iput  # FIELD Landroid/support/constraint/a;->k:I
+0001e  0a28                     goto
+0001f  2733 0009                if-ne
+00021  ef28                     goto
+00022  3733 0003                if-ne
+00024  ec28                     goto
+00025  2733 0003                if-ne
+00027  ee28                     goto
+00028  6720 023a                instance-of  # TYPE Landroid/support/constraint/n/k/a;
+0002a  0738 0009                if-eqz
+0002c  061f 023a                check-cast  # TYPE Landroid/support/constraint/n/k/a;
+0002e  5552 05ba                iget  # FIELD Landroid/support/constraint/a;->k:I
+00030  206e 0c80 0056           invoke-virtual  # CALL Landroid/support/constraint/n/k/a;->x(I)V
+00033  000e                     return-void
+
+### Landroid/support/constraint/a;->a(Landroid/support/constraint/n/k/e;,Z)V  [access=0x1, regs=4, ins=3, outs=4, code_off=0x81f30]
+00000  1052 05b9                iget  # FIELD Landroid/support/constraint/a;->j:I
+00002  4070 0b50 3021           invoke-direct  # CALL Landroid/support/constraint/a;->a(Landroid/support/constraint/n/k/e;,I,Z)V
+00005  000e                     return-void
+
+### Landroid/support/constraint/a;->a(Landroid/util/AttributeSet;)V  [access=0x4, regs=8, ins=2, outs=3, code_off=0x81e70]
+00000  206f 0b6b 0076           invoke-super  # CALL Landroid/support/constraint/c;->a(Landroid/util/AttributeSet;)V
+00003  0022 023a                new-instance  # TYPE Landroid/support/constraint/n/k/a;
+00005  1070 0c73 0000           invoke-direct  # CALL Landroid/support/constraint/n/k/a;-><init>()V
+00008  605b 05bb                iput-object  # FIELD Landroid/support/constraint/a;->l:Landroid/support/constraint/n/k/a;
+0000a  0738 0046                if-eqz
+0000c  106e 1d51 0006           invoke-virtual  # CALL Landroid/view/View;->getContext()Landroid/content/Context;
+0000f  000c                     move-result-object
+00010  0162 07e8                sget-object  # FIELD Landroid/support/constraint/k;->ConstraintLayout_Layout:[I
+00012  306e 0851 0170           invoke-virtual  # CALL Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;,[I)Landroid/content/res/TypedArray;
+00015  070c                     move-result-object
+00016  106e 08fb 0007           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getIndexCount()I
+00019  000a                     move-result
+0001a  0112                     const/4
+0001b  1201                     op_01
+0001c  0235 0031                if-ge
+0001e  206e 08fa 0027           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getIndex(I)I
+00021  030a                     move-result
+00022  0460 07f8                sget  # FIELD Landroid/support/constraint/k;->ConstraintLayout_Layout_barrierDirection:I
+00024  4333 000a                if-ne
+00026  306e 08fc 0137           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getInt(I,I)I
+00029  030a                     move-result
+0002a  206e 0b59 0036           invoke-virtual  # CALL Landroid/support/constraint/a;->setType(I)V
+0002d  1d28                     goto
+0002e  0460 07f7                sget  # FIELD Landroid/support/constraint/k;->ConstraintLayout_Layout_barrierAllowsGoneWidgets:I
+00030  4333 000d                if-ne
+00032  6454 05bb                iget-object  # FIELD Landroid/support/constraint/a;->l:Landroid/support/constraint/n/k/a;
+00034  1512                     const/4
+00035  306e 08f1 0537           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getBoolean(I,Z)Z
+00038  030a                     move-result
+00039  206e 0c7e 0034           invoke-virtual  # CALL Landroid/support/constraint/n/k/a;->e(Z)V
+0003c  0e28                     goto
+0003d  0460 07f9                sget  # FIELD Landroid/support/constraint/k;->ConstraintLayout_Layout_barrierMargin:I
+0003f  4333 000b                if-ne
+00041  306e 08f7 0137           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getDimensionPixelSize(I,I)I
+00044  030a                     move-result
+00045  6454 05bb                iget-object  # FIELD Landroid/support/constraint/a;->l:Landroid/support/constraint/n/k/a;
+00047  206e 0c81 0034           invoke-virtual  # CALL Landroid/support/constraint/n/k/a;->y(I)V
+0004a  02d8 0102                op_d8
+0004c  d028                     goto
+0004d  106e 090a 0007           invoke-virtual  # CALL Landroid/content/res/TypedArray;->recycle()V
+00050  6754 05bb                iget-object  # FIELD Landroid/support/constraint/a;->l:Landroid/support/constraint/n/k/a;
+00052  675b 05cf                iput-object  # FIELD Landroid/support/constraint/c;->e:Landroid/support/constraint/n/k/h;
+00054  106e 0b6d 0006           invoke-virtual  # CALL Landroid/support/constraint/c;->b()V
+00057  000e                     return-void
+
+### Landroid/support/constraint/a;->c()Z  [access=0x1, regs=1, ins=1, outs=1, code_off=0x81df4]
+00000  0054 05bb                iget-object  # FIELD Landroid/support/constraint/a;->l:Landroid/support/constraint/n/k/a;
+00002  106e 0c77 0000           invoke-virtual  # CALL Landroid/support/constraint/n/k/a;->S()Z
+00005  000a                     move-result
+00006  000f                     return
+
+### Landroid/support/constraint/a;->getMargin()I  [access=0x1, regs=1, ins=1, outs=1, code_off=0x81e14]
+00000  0054 05bb                iget-object  # FIELD Landroid/support/constraint/a;->l:Landroid/support/constraint/n/k/a;
+00002  106e 0c79 0000           invoke-virtual  # CALL Landroid/support/constraint/n/k/a;->U()I
+00005  000a                     move-result
+00006  000f                     return
+
+### Landroid/support/constraint/a;->getType()I  [access=0x1, regs=1, ins=1, outs=0, code_off=0x81e34]
+00000  0052 05b9                iget  # FIELD Landroid/support/constraint/a;->j:I
+00002  000f                     return
+
+### Landroid/support/constraint/a;->setAllowsGoneWidget(Z)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0x81f4c]
+00000  0054 05bb                iget-object  # FIELD Landroid/support/constraint/a;->l:Landroid/support/constraint/n/k/a;
+00002  206e 0c7e 0010           invoke-virtual  # CALL Landroid/support/constraint/n/k/a;->e(Z)V
+00005  000e                     return-void
+
+### Landroid/support/constraint/a;->setDpMargin(I)V  [access=0x1, regs=3, ins=2, outs=2, code_off=0x81f68]
+00000  106e 1d6a 0001           invoke-virtual  # CALL Landroid/view/View;->getResources()Landroid/content/res/Resources;
+00003  000c                     move-result-object
+00004  106e 08cb 0000           invoke-virtual  # CALL Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+00007  000c                     move-result-object
+00008  0052 1249                iget  # FIELD Landroid/util/DisplayMetrics;->density:F
+0000a  2282                     op_82
+0000b  02c8                     op_c8
+0000c  0015 3f00                const/high16
+0000e  02c6                     op_c6
+0000f  2287                     op_87
+00010  1154 05bb                iget-object  # FIELD Landroid/support/constraint/a;->l:Landroid/support/constraint/n/k/a;
+00012  206e 0c81 0021           invoke-virtual  # CALL Landroid/support/constraint/n/k/a;->y(I)V
+00015  000e                     return-void
+
+### Landroid/support/constraint/a;->setMargin(I)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0x81fa4]
+00000  0054 05bb                iget-object  # FIELD Landroid/support/constraint/a;->l:Landroid/support/constraint/n/k/a;
+00002  206e 0c81 0010           invoke-virtual  # CALL Landroid/support/constraint/n/k/a;->y(I)V
+00005  000e                     return-void
+
+### Landroid/support/constraint/a;->setType(I)V  [access=0x1, regs=2, ins=2, outs=0, code_off=0x81fc0]
+00000  0159 05b9                iput  # FIELD Landroid/support/constraint/a;->j:I
+00002  000e                     return-void

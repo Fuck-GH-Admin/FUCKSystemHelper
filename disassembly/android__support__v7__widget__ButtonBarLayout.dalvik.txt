@@ -1,0 +1,187 @@
+### Landroid/support/v7/widget/ButtonBarLayout;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;)V  [access=0x10001, regs=4, ins=3, outs=3, code_off=0xe3a94]
+00000  3070 1ffc 0321           invoke-direct  # CALL Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;)V
+00003  f012                     const/4
+00004  1059 104b                iput  # FIELD Landroid/support/v7/widget/ButtonBarLayout;->c:I
+00006  0012                     const/4
+00007  1059 104c                iput  # FIELD Landroid/support/v7/widget/ButtonBarLayout;->d:I
+00009  0062 1935                sget-object  # FIELD Lb/b/d/a/j;->ButtonBarLayout:[I
+0000b  306e 0851 0032           invoke-virtual  # CALL Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;,[I)Landroid/content/res/TypedArray;
+0000e  020c                     move-result-object
+0000f  0360 1936                sget  # FIELD Lb/b/d/a/j;->ButtonBarLayout_allowStacking:I
+00011  1012                     const/4
+00012  306e 08f1 0032           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getBoolean(I,Z)Z
+00015  030a                     move-result
+00016  135c 104a                iput-boolean  # FIELD Landroid/support/v7/widget/ButtonBarLayout;->b:Z
+00018  106e 090a 0002           invoke-virtual  # CALL Landroid/content/res/TypedArray;->recycle()V
+0001b  000e                     return-void
+
+### Landroid/support/v7/widget/ButtonBarLayout;->a(I)I  [access=0x2, regs=4, ins=2, outs=2, code_off=0xe3a58]
+00000  106e 2005 0002           invoke-virtual  # CALL Landroid/widget/LinearLayout;->getChildCount()I
+00003  000a                     move-result
+00004  0335 0010                if-ge
+00006  206e 2004 0032           invoke-virtual  # CALL Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
+00009  010c                     move-result-object
+0000a  106e 1d7c 0001           invoke-virtual  # CALL Landroid/view/View;->getVisibility()I
+0000d  010a                     move-result
+0000e  0139 0003                if-nez
+00010  030f                     return
+00011  03d8 0103                op_d8
+00013  f128                     goto
+00014  f212                     const/4
+00015  020f                     return
+
+### Landroid/support/v7/widget/ButtonBarLayout;->a()Z  [access=0x2, regs=2, ins=1, outs=1, code_off=0xe3a0c]
+00000  106e 200b 0001           invoke-virtual  # CALL Landroid/widget/LinearLayout;->getOrientation()I
+00003  010a                     move-result
+00004  1012                     const/4
+00005  0133 0003                if-ne
+00007  0228                     goto
+00008  0012                     const/4
+00009  000f                     return
+
+### Landroid/support/v7/widget/ButtonBarLayout;->setStacked(Z)V  [access=0x2, regs=3, ins=2, outs=2, code_off=0xe3c88]
+00000  206e 2023 0021           invoke-virtual  # CALL Landroid/widget/LinearLayout;->setOrientation(I)V
+00003  0238 0004                if-eqz
+00005  5012                     const/4
+00006  0328                     goto
+00007  0013 0050                const/16
+00009  206e 201f 0001           invoke-virtual  # CALL Landroid/widget/LinearLayout;->setGravity(I)V
+0000c  0060 1696                sget  # FIELD Lb/b/d/a/f;->spacer:I
+0000e  206e 2002 0001           invoke-virtual  # CALL Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
+00011  000c                     move-result-object
+00012  0038 000b                if-eqz
+00014  0238 0005                if-eqz
+00016  0213 0008                const/16
+00018  0228                     goto
+00019  4212                     const/4
+0001a  206e 1dcb 0020           invoke-virtual  # CALL Landroid/view/View;->setVisibility(I)V
+0001d  106e 2005 0001           invoke-virtual  # CALL Landroid/widget/LinearLayout;->getChildCount()I
+00020  020a                     move-result
+00021  02d8 fe02                op_d8
+00023  023a 000c                if-ltz
+00025  206e 2004 0021           invoke-virtual  # CALL Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
+00028  000c                     move-result-object
+00029  206e 2001 0001           invoke-virtual  # CALL Landroid/widget/LinearLayout;->bringChildToFront(Landroid/view/View;)V
+0002c  02d8 ff02                op_d8
+0002e  f528                     goto
+0002f  000e                     return-void
+
+### Landroid/support/v7/widget/ButtonBarLayout;->getMinimumHeight()I  [access=0x1, regs=2, ins=1, outs=2, code_off=0xe3a30]
+00000  1052 104c                iget  # FIELD Landroid/support/v7/widget/ButtonBarLayout;->d:I
+00002  106f 200a 0001           invoke-super  # CALL Landroid/widget/LinearLayout;->getMinimumHeight()I
+00005  010a                     move-result
+00006  2071 2ccb 0010           invoke-static  # CALL Ljava/lang/Math;->max(I,I)I
+00009  010a                     move-result
+0000a  010f                     return
+
+### Landroid/support/v7/widget/ButtonBarLayout;->onMeasure(I,I)V  [access=0x4, regs=8, ins=3, outs=3, code_off=0xe3adc]
+00000  1071 1d37 0006           invoke-static  # CALL Landroid/view/View$MeasureSpec;->getSize(I)I
+00003  000a                     move-result
+00004  5155 104a                iget-boolean  # FIELD Landroid/support/v7/widget/ButtonBarLayout;->b:Z
+00006  0212                     const/4
+00007  0138 0011                if-eqz
+00009  5152 104b                iget  # FIELD Landroid/support/v7/widget/ButtonBarLayout;->c:I
+0000b  1037 000b                if-le
+0000d  1070 1687 0005           invoke-direct  # CALL Landroid/support/v7/widget/ButtonBarLayout;->a()Z
+00010  010a                     move-result
+00011  0138 0005                if-eqz
+00013  2070 168b 0025           invoke-direct  # CALL Landroid/support/v7/widget/ButtonBarLayout;->setStacked(Z)V
+00016  5059 104b                iput  # FIELD Landroid/support/v7/widget/ButtonBarLayout;->c:I
+00018  1070 1687 0005           invoke-direct  # CALL Landroid/support/v7/widget/ButtonBarLayout;->a()Z
+0001b  010a                     move-result
+0001c  1312                     const/4
+0001d  0139 0012                if-nez
+0001f  1071 1d36 0006           invoke-static  # CALL Landroid/view/View$MeasureSpec;->getMode(I)I
+00022  010a                     move-result
+00023  0415 4000                const/high16
+00025  4133 000a                if-ne
+00027  0115 8000                const/high16
+00029  2071 1d38 0010           invoke-static  # CALL Landroid/view/View$MeasureSpec;->makeMeasureSpec(I,I)I
+0002c  000a                     move-result
+0002d  3101                     op_01
+0002e  0328                     goto
+0002f  6001                     op_01
+00030  2101                     op_01
+00031  306f 2017 0705           invoke-super  # CALL Landroid/widget/LinearLayout;->onMeasure(I,I)V
+00034  5055 104a                iget-boolean  # FIELD Landroid/support/v7/widget/ButtonBarLayout;->b:Z
+00036  0038 001c                if-eqz
+00038  1070 1687 0005           invoke-direct  # CALL Landroid/support/v7/widget/ButtonBarLayout;->a()Z
+0003b  000a                     move-result
+0003c  0039 0016                if-nez
+0003e  106e 2009 0005           invoke-virtual  # CALL Landroid/widget/LinearLayout;->getMeasuredWidthAndState()I
+00041  000a                     move-result
+00042  0415 ff00                const/high16
+00044  40b5                     op_b5
+00045  0415 0100                const/high16
+00047  4033 0004                if-ne
+00049  3001                     op_01
+0004a  0228                     goto
+0004b  2001                     op_01
+0004c  0038 0006                if-eqz
+0004e  2070 168b 0035           invoke-direct  # CALL Landroid/support/v7/widget/ButtonBarLayout;->setStacked(Z)V
+00051  3101                     op_01
+00052  0138 0005                if-eqz
+00054  306f 2017 0765           invoke-super  # CALL Landroid/widget/LinearLayout;->onMeasure(I,I)V
+00057  2070 1686 0025           invoke-direct  # CALL Landroid/support/v7/widget/ButtonBarLayout;->a(I)I
+0005a  060a                     move-result
+0005b  063a 0049                if-ltz
+0005d  206e 2004 0065           invoke-virtual  # CALL Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
+00060  070c                     move-result-object
+00061  106e 1d5b 0007           invoke-virtual  # CALL Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+00064  000c                     move-result-object
+00065  001f 0492                check-cast  # TYPE Landroid/widget/LinearLayout$LayoutParams;
+00067  106e 200d 0005           invoke-virtual  # CALL Landroid/widget/LinearLayout;->getPaddingTop()I
+0006a  010a                     move-result
+0006b  106e 1d5f 0007           invoke-virtual  # CALL Landroid/view/View;->getMeasuredHeight()I
+0006e  070a                     move-result
+0006f  71b0                     op_b0
+00070  0752 1275                iget  # FIELD Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
+00072  71b0                     op_b0
+00073  0752 1273                iget  # FIELD Landroid/widget/LinearLayout$LayoutParams;->bottomMargin:I
+00075  71b0                     op_b0
+00076  21b0                     op_b0
+00077  1070 1687 0005           invoke-direct  # CALL Landroid/support/v7/widget/ButtonBarLayout;->a()Z
+0007a  070a                     move-result
+0007b  0738 0023                if-eqz
+0007d  36b0                     op_b0
+0007e  2070 1686 0065           invoke-direct  # CALL Landroid/support/v7/widget/ButtonBarLayout;->a(I)I
+00081  060a                     move-result
+00082  063a 001a                if-ltz
+00084  206e 2004 0065           invoke-virtual  # CALL Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
+00087  060c                     move-result-object
+00088  106e 1d66 0006           invoke-virtual  # CALL Landroid/view/View;->getPaddingTop()I
+0008b  060a                     move-result
+0008c  0715 4180                const/high16
+0008e  106e 200f 0005           invoke-virtual  # CALL Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
+00091  000c                     move-result-object
+00092  106e 08cb 0000           invoke-virtual  # CALL Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+00095  000c                     move-result-object
+00096  0052 1249                iget  # FIELD Landroid/util/DisplayMetrics;->density:F
+00098  70c8                     op_c8
+00099  0787                     op_87
+0009a  76b0                     op_b0
+0009b  61b0                     op_b0
+0009c  1201                     op_01
+0009d  0728                     goto
+0009e  106e 200c 0005           invoke-virtual  # CALL Landroid/widget/LinearLayout;->getPaddingBottom()I
+000a1  060a                     move-result
+000a2  0290 0601                int-add
+000a4  1071 2540 0005           invoke-static  # CALL Lb/b/c/g/q;->e(Landroid/view/View;)I
+000a7  060a                     move-result
+000a8  2632 0005                if-eq
+000aa  206e 2021 0025           invoke-virtual  # CALL Landroid/widget/LinearLayout;->setMinimumHeight(I)V
+000ad  000e                     return-void
+
+### Landroid/support/v7/widget/ButtonBarLayout;->setAllowStacking(Z)V  [access=0x1, regs=3, ins=2, outs=2, code_off=0xe3c48]
+00000  1055 104a                iget-boolean  # FIELD Landroid/support/v7/widget/ButtonBarLayout;->b:Z
+00002  2032 0014                if-eq
+00004  125c 104a                iput-boolean  # FIELD Landroid/support/v7/widget/ButtonBarLayout;->b:Z
+00006  0239 000d                if-nez
+00008  106e 200b 0001           invoke-virtual  # CALL Landroid/widget/LinearLayout;->getOrientation()I
+0000b  020a                     move-result
+0000c  1012                     const/4
+0000d  0233 0006                if-ne
+0000f  0212                     const/4
+00010  2070 168b 0021           invoke-direct  # CALL Landroid/support/v7/widget/ButtonBarLayout;->setStacked(Z)V
+00013  106e 2019 0001           invoke-virtual  # CALL Landroid/widget/LinearLayout;->requestLayout()V
+00016  000e                     return-void

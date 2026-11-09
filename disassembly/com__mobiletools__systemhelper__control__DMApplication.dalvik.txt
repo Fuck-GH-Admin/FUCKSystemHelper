@@ -1,0 +1,21 @@
+### Lcom/mobiletools/systemhelper/control/DMApplication;-><init>()V  [access=0x10001, regs=1, ins=1, outs=1, code_off=0x108768]
+00000  1070 073e 0000           invoke-direct  # CALL Landroid/app/Application;-><init>()V
+00003  000e                     return-void
+
+### Lcom/mobiletools/systemhelper/control/DMApplication;->onCreate()V  [access=0x1, regs=3, ins=1, outs=2, code_off=0x108780]
+00000  106f 073f 0002           invoke-super  # CALL Landroid/app/Application;->onCreate()V
+00003  001a 070f                const-string  # STR "DMApplication"
+00005  011a 2258                const-string  # STR "onCreate--->"
+00007  2071 2987 0010           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+0000a  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+0000c  0113 001f                const/16
+0000e  1034 0005                if-lt
+00010  1071 2922 0002           invoke-static  # CALL Lc/d/a/a/a;->e(Landroid/content/Context;)V
+00013  000e                     return-void
+
+### Lcom/mobiletools/systemhelper/control/DMApplication;->onTerminate()V  [access=0x1, regs=2, ins=1, outs=2, code_off=0x1087b8]
+00000  106f 0740 0001           invoke-super  # CALL Landroid/app/Application;->onTerminate()V
+00003  011a 070f                const-string  # STR "DMApplication"
+00005  001a 22d1                const-string  # STR "onTerminate--->"
+00007  2071 2987 0001           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+0000a  000e                     return-void

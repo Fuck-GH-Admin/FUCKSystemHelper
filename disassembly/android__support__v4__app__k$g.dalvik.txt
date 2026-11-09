@@ -1,0 +1,23 @@
+### Landroid/support/v4/app/k$g;-><init>(Landroid/animation/Animator;)V  [access=0x10000, regs=3, ins=2, outs=2, code_off=0xa6cc8]
+00000  1070 2ce0 0001           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  0012                     const/4
+00004  105b 0d13                iput-object  # FIELD Landroid/support/v4/app/k$g;->a:Landroid/view/animation/Animation;
+00006  125b 0d14                iput-object  # FIELD Landroid/support/v4/app/k$g;->b:Landroid/animation/Animator;
+00008  0238 0003                if-eqz
+0000a  000e                     return-void
+0000b  0122 066a                new-instance  # TYPE Ljava/lang/IllegalStateException;
+0000d  021a 0364                const-string  # STR "Animator cannot be null"
+0000f  2070 2ca3 0021           invoke-direct  # CALL Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+00012  0127                     throw
+
+### Landroid/support/v4/app/k$g;-><init>(Landroid/view/animation/Animation;)V  [access=0x10000, regs=3, ins=2, outs=2, code_off=0xa6d00]
+00000  1070 2ce0 0001           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  125b 0d13                iput-object  # FIELD Landroid/support/v4/app/k$g;->a:Landroid/view/animation/Animation;
+00005  0012                     const/4
+00006  105b 0d14                iput-object  # FIELD Landroid/support/v4/app/k$g;->b:Landroid/animation/Animator;
+00008  0238 0003                if-eqz
+0000a  000e                     return-void
+0000b  0122 066a                new-instance  # TYPE Ljava/lang/IllegalStateException;
+0000d  021a 0360                const-string  # STR "Animation cannot be null"
+0000f  2070 2ca3 0021           invoke-direct  # CALL Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+00012  0127                     throw

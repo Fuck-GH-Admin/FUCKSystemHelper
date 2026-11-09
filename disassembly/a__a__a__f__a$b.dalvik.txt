@@ -1,0 +1,67 @@
+### La/a/a/f/a$b;-><init>(La/a/a/f/a;)V  [access=0x10001, regs=2, ins=2, outs=1, code_off=0x636c0]
+00000  1070 0a81 0000           invoke-direct  # CALL Landroid/os/AsyncTask;-><init>()V
+00003  000e                     return-void
+
+### La/a/a/f/a$b;-><init>(La/a/a/f/a;,La/a/a/f/a$a;)V  [access=0x11001, regs=3, ins=3, outs=2, code_off=0x636d8]
+00000  2070 03b4 0010           invoke-direct  # CALL La/a/a/f/a$b;-><init>(La/a/a/f/a;)V
+00003  000e                     return-void
+
+### La/a/a/f/a$b;->a([Ljava/lang/Boolean;)Ljava/lang/Boolean;  [access=0x81, regs=5, ins=2, outs=2, code_off=0x63578]
+00000  4321                     array-length
+00001  4012                     const/4
+00002  0332 0005                if-eq
+00004  0362 1d5c                sget-object  # FIELD Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+00006  0311                     return-object
+00007  0312                     const/4
+00008  0071 03ce 0000           invoke-static  # CALL La/a/a/f/a;->d()Ljava/lang/String;
+0000b  000c                     move-result-object
+0000c  2071 0938 0030           invoke-static  # CALL Landroid/database/sqlite/SQLiteDatabase;->openOrCreateDatabase(Ljava/lang/String;,Landroid/database/sqlite/SQLiteDatabase$CursorFactory;)Landroid/database/sqlite/SQLiteDatabase;
+0000f  030c                     move-result-object
+00010  0339 0005                if-nez
+00012  0362 1d5c                sget-object  # FIELD Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+00014  0311                     return-object
+00015  0071 2d46 0000           invoke-static  # CALL Ljava/lang/System;->currentTimeMillis()J
+00018  000b                     move-result-wide
+00019  0213 001c                const/16
+0001b  20c4                     op_c4
+0001c  0084                     op_84
+0001d  106e 0930 0003           invoke-virtual  # CALL Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
+00020  0112                     const/4
+00021  0146 0104                aget-object
+00023  106e 2c65 0001           invoke-virtual  # CALL Ljava/lang/Boolean;->booleanValue()Z
+00026  010a                     move-result
+00027  0138 0018                if-eqz
+00029  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0002b  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0002e  021a 1b26                const-string  # STR "delete from wof where ac < "
+00030  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00033  02d8 dd00                op_d8
+00035  206e 2d3b 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+00038  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0003b  010c                     move-result-object
+0003c  206e 0934 0013           invoke-virtual  # CALL Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+0003f  1112                     const/4
+00040  0446 0104                aget-object
+00042  106e 2c65 0004           invoke-virtual  # CALL Ljava/lang/Boolean;->booleanValue()Z
+00045  040a                     move-result
+00046  0438 0018                if-eqz
+00048  0422 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0004a  1070 2d35 0004           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0004d  011a 1b25                const-string  # STR "delete from bdcltb09 where ac is NULL or ac < "
+0004f  206e 2d3f 0014           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00052  00d0 ff7e                op_d0
+00054  206e 2d3b 0004           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+00057  106e 2d44 0004           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0005a  040c                     move-result-object
+0005b  206e 0934 0043           invoke-virtual  # CALL Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+0005e  106e 093c 0003           invoke-virtual  # CALL Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
+00061  106e 0933 0003           invoke-virtual  # CALL Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
+00064  106e 0931 0003           invoke-virtual  # CALL Landroid/database/sqlite/SQLiteDatabase;->close()V
+00067  0362 1d5d                sget-object  # FIELD Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+00069  0311                     return-object
+
+### La/a/a/f/a$b;->doInBackground([Ljava/lang/Object;)Ljava/lang/Object;  [access=0x1041, regs=2, ins=2, outs=2, code_off=0x636a0]
+00000  011f 075a                check-cast  # TYPE [Ljava/lang/Boolean;
+00002  206e 03b6 0010           invoke-virtual  # CALL La/a/a/f/a$b;->a([Ljava/lang/Boolean;)Ljava/lang/Boolean;
+00005  000c                     move-result-object
+00006  0011                     return-object

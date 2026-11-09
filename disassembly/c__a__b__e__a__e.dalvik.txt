@@ -1,0 +1,354 @@
+### Lc/a/b/e/a/e;-><init>(Lc/a/b/e/a/b;,I)V  [access=0x10001, regs=5, ins=3, outs=2, code_off=0xf831c]
+00000  1070 2ce0 0002           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  0012                     const/4
+00004  205b 1b14                iput-object  # FIELD Lc/a/b/e/a/e;->a:[B
+00006  0112                     const/4
+00007  2159 1b15                iput  # FIELD Lc/a/b/e/a/e;->b:I
+00009  2159 1b16                iput  # FIELD Lc/a/b/e/a/e;->c:I
+0000b  2159 1b17                iput  # FIELD Lc/a/b/e/a/e;->d:I
+0000d  2159 1b18                iput  # FIELD Lc/a/b/e/a/e;->e:I
+0000f  205b 1b19                iput-object  # FIELD Lc/a/b/e/a/e;->f:Lc/a/b/e/a/i;
+00011  205b 1b1a                iput-object  # FIELD Lc/a/b/e/a/e;->g:Lc/a/b/e/a/f;
+00013  1012                     const/4
+00014  2059 1b1b                iput  # FIELD Lc/a/b/e/a/e;->h:I
+00016  215c 1b1c                iput-boolean  # FIELD Lc/a/b/e/a/e;->i:Z
+00018  2459 1b15                iput  # FIELD Lc/a/b/e/a/e;->b:I
+0001a  2459 1b16                iput  # FIELD Lc/a/b/e/a/e;->c:I
+0001c  2459 1b18                iput  # FIELD Lc/a/b/e/a/e;->e:I
+0001e  04da 0204                op_da
+00020  4423 0720                new-array  # TYPE [B
+00022  245b 1b14                iput-object  # FIELD Lc/a/b/e/a/e;->a:[B
+00024  0422 0598                new-instance  # TYPE Lc/a/b/e/a/d;
+00026  2070 27b8 0034           invoke-direct  # CALL Lc/a/b/e/a/d;-><init>(Lc/a/b/e/a/b;)V
+00029  245b 1b1a                iput-object  # FIELD Lc/a/b/e/a/e;->g:Lc/a/b/e/a/f;
+0002b  0322 059c                new-instance  # TYPE Lc/a/b/e/a/h;
+0002d  2452 1b15                iget  # FIELD Lc/a/b/e/a/e;->b:I
+0002f  2070 27d0 0043           invoke-direct  # CALL Lc/a/b/e/a/h;-><init>(I)V
+00032  235b 1b19                iput-object  # FIELD Lc/a/b/e/a/e;->f:Lc/a/b/e/a/i;
+00034  000e                     return-void
+
+### Lc/a/b/e/a/e;->a([B,I,[B,I,I)I  [access=0x2, regs=14, ins=6, outs=6, code_off=0xf7f18]
+00000  0938 006f                if-eqz
+00002  0d39 0004                if-nez
+00004  0029 006b                goto/16
+00006  8052 1b1b                iget  # FIELD Lc/a/b/e/a/e;->h:I
+00008  2112                     const/4
+00009  1032 004c                if-eq
+0000b  3112                     const/4
+0000c  1032 0049                if-eq
+0000e  8152 1b16                iget  # FIELD Lc/a/b/e/a/e;->c:I
+00010  0194 010d                int-rem
+00012  0138 0043                if-eqz
+00014  6112                     const/4
+00015  1032 0040                if-eq
+00017  8954 1b19                iget-object  # FIELD Lc/a/b/e/a/e;->f:Lc/a/b/e/a/i;
+00019  0a1a 0032                const-string  # STR " bytes"
+0001b  0938 001e                if-eqz
+0001d  0922 0701                new-instance  # TYPE Ljavax/crypto/IllegalBlockSizeException;
+0001f  0b22 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00021  1070 2d35 000b           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00024  0c1a 08d8                const-string  # STR "Input length (with padding) not multiple of "
+00026  206e 2d3f 00cb           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00029  8852 1b16                iget  # FIELD Lc/a/b/e/a/e;->c:I
+0002b  206e 2d3b 008b           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+0002e  206e 2d3f 00ab           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00031  106e 2d44 000b           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00034  080c                     move-result-object
+00035  2070 2ed1 0089           invoke-direct  # CALL Ljavax/crypto/IllegalBlockSizeException;-><init>(Ljava/lang/String;)V
+00038  0927                     throw
+00039  0922 0701                new-instance  # TYPE Ljavax/crypto/IllegalBlockSizeException;
+0003b  0b22 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0003d  1070 2d35 000b           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00040  0c1a 08da                const-string  # STR "Input length not multiple of "
+00042  206e 2d3f 00cb           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00045  8852 1b16                iget  # FIELD Lc/a/b/e/a/e;->c:I
+00047  206e 2d3b 008b           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+0004a  206e 2d3f 00ab           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0004d  106e 2d44 000b           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00050  080c                     move-result-object
+00051  2070 2ed1 0089           invoke-direct  # CALL Ljavax/crypto/IllegalBlockSizeException;-><init>(Ljava/lang/String;)V
+00054  0927                     throw
+00055  8055 1b1c                iget-boolean  # FIELD Lc/a/b/e/a/e;->i:Z
+00057  0038 000d                if-eqz
+00059  8154 1b1a                iget-object  # FIELD Lc/a/b/e/a/e;->g:Lc/a/b/e/a/f;
+0005b  9207                     op_07
+0005c  a301                     op_01
+0005d  d401                     op_01
+0005e  b507                     op_07
+0005f  c601                     op_01
+00060  0674 27cd 0001           invoke-virtual/range  # CALL Lc/a/b/e/a/f;->d([B,I,I,[B,I)V
+00063  0b28                     goto
+00064  8254 1b1a                iget-object  # FIELD Lc/a/b/e/a/e;->g:Lc/a/b/e/a/f;
+00066  9307                     op_07
+00067  a401                     op_01
+00068  d501                     op_01
+00069  b607                     op_07
+0006a  c701                     op_01
+0006b  0674 27cc 0002           invoke-virtual/range  # CALL Lc/a/b/e/a/f;->c([B,I,I,[B,I)V
+0006e  0d0f                     return
+0006f  0812                     const/4
+00070  080f                     return
+
+### Lc/a/b/e/a/e;->a(I)I  [access=0x0, regs=5, ins=2, outs=2, code_off=0xf82c4]
+00000  3052 1b17                iget  # FIELD Lc/a/b/e/a/e;->d:I
+00002  40b0                     op_b0
+00003  3454 1b19                iget-object  # FIELD Lc/a/b/e/a/e;->f:Lc/a/b/e/a/i;
+00005  0439 0003                if-nez
+00007  000f                     return
+00008  3155 1b1c                iget-boolean  # FIELD Lc/a/b/e/a/e;->i:Z
+0000a  0138 0003                if-eqz
+0000c  000f                     return
+0000d  3152 1b16                iget  # FIELD Lc/a/b/e/a/e;->c:I
+0000f  3252 1b15                iget  # FIELD Lc/a/b/e/a/e;->b:I
+00011  2132 000d                if-eq
+00013  3352 1b18                iget  # FIELD Lc/a/b/e/a/e;->e:I
+00015  3035 0003                if-ge
+00017  030f                     return
+00018  0490 0200                int-add
+0001a  30b1                     op_b1
+0001b  20b4                     op_b4
+0001c  04b1                     op_b1
+0001d  040f                     return
+0001e  2072 27d4 0004           invoke-interface  # CALL Lc/a/b/e/a/i;->a(I)I
+00021  030a                     move-result
+00022  30b0                     op_b0
+00023  000f                     return
+
+### Lc/a/b/e/a/e;->a([B,I,I,[B,I)I  [access=0x0, regs=21, ins=6, outs=6, code_off=0xf800c]
+00000  f607                     op_07
+00001  0002 0012                op_02
+00003  0708 0013                op_08
+00005  6152 1b17                iget  # FIELD Lc/a/b/e/a/e;->d:I
+00007  0590 0001                int-add
+00009  6152 1b16                iget  # FIELD Lc/a/b/e/a/e;->c:I
+0000b  6252 1b15                iget  # FIELD Lc/a/b/e/a/e;->b:I
+0000d  0812                     const/4
+0000e  2132 000e                if-eq
+00010  6152 1b18                iget  # FIELD Lc/a/b/e/a/e;->e:I
+00012  1535 0004                if-ge
+00014  51b1                     op_b1
+00015  1128                     goto
+00016  0191 0105                int-sub
+00018  21b4                     op_b4
+00019  0191 0102                int-sub
+0001b  0b28                     goto
+0001c  6154 1b19                iget-object  # FIELD Lc/a/b/e/a/e;->f:Lc/a/b/e/a/i;
+0001e  0138 0007                if-eqz
+00020  2072 27d4 0051           invoke-interface  # CALL Lc/a/b/e/a/i;->a(I)I
+00023  010a                     move-result
+00024  0228                     goto
+00025  8101                     op_01
+00026  013d 002d                if-lez
+00028  6252 1b15                iget  # FIELD Lc/a/b/e/a/e;->b:I
+0002a  2132 0029                if-eq
+0002c  6254 1b19                iget-object  # FIELD Lc/a/b/e/a/e;->f:Lc/a/b/e/a/i;
+0002e  0238 0025                if-eqz
+00030  6255 1b1c                iget-boolean  # FIELD Lc/a/b/e/a/e;->i:Z
+00032  0239 0003                if-nez
+00034  1f28                     goto
+00035  0022 0701                new-instance  # TYPE Ljavax/crypto/IllegalBlockSizeException;
+00037  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00039  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0003c  021a 08d9                const-string  # STR "Input length must be multiple of "
+0003e  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00041  6252 1b15                iget  # FIELD Lc/a/b/e/a/e;->b:I
+00043  206e 2d3b 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+00046  021a 009f                const-string  # STR " when decrypting with padded cipher"
+00048  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0004b  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0004e  010c                     move-result-object
+0004f  2070 2ed1 0010           invoke-direct  # CALL Ljavax/crypto/IllegalBlockSizeException;-><init>(Ljava/lang/String;)V
+00052  0027                     throw
+00053  6255 1b1c                iget-boolean  # FIELD Lc/a/b/e/a/e;->i:Z
+00055  0239 000a                if-nez
+00057  6254 1b19                iget-object  # FIELD Lc/a/b/e/a/e;->f:Lc/a/b/e/a/i;
+00059  0238 0006                if-eqz
+0005b  0290 0105                int-add
+0005d  2901                     op_01
+0005e  0228                     goto
+0005f  5901                     op_01
+00060  0738 00ec                if-eqz
+00062  7221                     array-length
+00063  0291 1402                int-sub
+00065  6355 1b1c                iget-boolean  # FIELD Lc/a/b/e/a/e;->i:Z
+00067  0a1a 0034                const-string  # STR " bytes needed"
+00069  0b1a 0033                const-string  # STR " bytes given, "
+0006b  0c1a 12ea                const-string  # STR "Output buffer too short: "
+0006d  0338 0006                if-eqz
+0006f  6354 1b19                iget-object  # FIELD Lc/a/b/e/a/e;->f:Lc/a/b/e/a/i;
+00071  0339 0004                if-nez
+00073  9234 00bb                if-lt
+00075  6355 1b1c                iget-boolean  # FIELD Lc/a/b/e/a/e;->i:Z
+00077  0338 0008                if-eqz
+00079  6352 1b15                iget  # FIELD Lc/a/b/e/a/e;->b:I
+0007b  0391 0309                int-sub
+0007d  3234 00b1                if-lt
+0007f  6352 1b17                iget  # FIELD Lc/a/b/e/a/e;->d:I
+00081  0339 0010                if-nez
+00083  6355 1b1c                iget-boolean  # FIELD Lc/a/b/e/a/e;->i:Z
+00085  0339 0007                if-nez
+00087  6354 1b19                iget-object  # FIELD Lc/a/b/e/a/e;->f:Lc/a/b/e/a/i;
+00089  0338 0003                if-eqz
+0008b  0628                     goto
+0008c  0108 0010                op_08
+0008e  0302 0011                op_02
+00090  2428                     goto
+00091  9323 0720                new-array  # TYPE [B
+00093  6452 1b17                iget  # FIELD Lc/a/b/e/a/e;->d:I
+00095  0438 0007                if-eqz
+00097  6d54 1b14                iget-object  # FIELD Lc/a/b/e/a/e;->a:[B
+00099  5471 2d45 838d           invoke-static  # CALL Ljava/lang/System;->arraycopy(Ljava/lang/Object;,I,Ljava/lang/Object;,I,I)V
+0009c  0038 000b                if-eqz
+0009e  6452 1b17                iget  # FIELD Lc/a/b/e/a/e;->d:I
+000a0  0d08 0010                op_08
+000a2  0e02 0011                op_02
+000a4  5071 2d45 43ed           invoke-static  # CALL Ljava/lang/System;->arraycopy(Ljava/lang/Object;,I,Ljava/lang/Object;,I,I)V
+000a7  6055 1b1c                iget-boolean  # FIELD Lc/a/b/e/a/e;->i:Z
+000a9  0039 0009                if-nez
+000ab  6054 1b19                iget-object  # FIELD Lc/a/b/e/a/e;->f:Lc/a/b/e/a/i;
+000ad  0038 0005                if-eqz
+000af  4072 27d5 1530           invoke-interface  # CALL Lc/a/b/e/a/i;->a([B,I,I)V
+000b2  3107                     op_07
+000b3  8301                     op_01
+000b4  6055 1b1c                iget-boolean  # FIELD Lc/a/b/e/a/e;->i:Z
+000b6  0038 005d                if-eqz
+000b8  9235 0007                if-ge
+000ba  6054 1b1a                iget-object  # FIELD Lc/a/b/e/a/e;->g:Lc/a/b/e/a/f;
+000bc  106e 27c9 0000           invoke-virtual  # CALL Lc/a/b/e/a/f;->b()V
+000bf  5923 0720                new-array  # TYPE [B
+000c1  0412                     const/4
+000c2  f007                     op_07
+000c3  3201                     op_01
+000c4  9307                     op_07
+000c5  0676 27c2 0000           invoke-direct/range  # CALL Lc/a/b/e/a/e;->a([B,I,[B,I,I)I
+000c8  000a                     move-result
+000c9  6154 1b19                iget-object  # FIELD Lc/a/b/e/a/e;->f:Lc/a/b/e/a/i;
+000cb  0138 0011                if-eqz
+000cd  4072 27d6 0891           invoke-interface  # CALL Lc/a/b/e/a/i;->b([B,I,I)I
+000d0  000a                     move-result
+000d1  003a 0003                if-ltz
+000d3  0928                     goto
+000d4  0022 06ff                new-instance  # TYPE Ljavax/crypto/BadPaddingException;
+000d6  011a 07fb                const-string  # STR "Given final block not properly padded"
+000d8  2070 2ecb 0010           invoke-direct  # CALL Ljavax/crypto/BadPaddingException;-><init>(Ljava/lang/String;)V
+000db  0027                     throw
+000dc  7121                     array-length
+000dd  0191 1401                int-sub
+000df  0134 000e                if-lt
+000e1  8101                     op_01
+000e2  0135 003c                if-ge
+000e4  0290 0114                int-add
+000e6  0348 0109                aget-byte
+000e8  034f 0207                aput-byte
+000ea  01d8 0101                op_d8
+000ec  f628                     goto
+000ed  6154 1b1a                iget-object  # FIELD Lc/a/b/e/a/e;->g:Lc/a/b/e/a/f;
+000ef  106e 27cb 0001           invoke-virtual  # CALL Lc/a/b/e/a/f;->c()V
+000f2  0122 0703                new-instance  # TYPE Ljavax/crypto/ShortBufferException;
+000f4  0222 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+000f6  1070 2d35 0002           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+000f9  206e 2d3f 00c2           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000fc  7321                     array-length
+000fd  0391 1403                int-sub
+000ff  206e 2d3b 0032           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+00102  206e 2d3f 00b2           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00105  206e 2d3b 0002           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+00108  206e 2d3f 00a2           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0010b  106e 2d44 0002           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0010e  000c                     move-result-object
+0010f  2070 2ed5 0001           invoke-direct  # CALL Ljavax/crypto/ShortBufferException;-><init>(Ljava/lang/String;)V
+00112  0127                     throw
+00113  f007                     op_07
+00114  3201                     op_01
+00115  0308 0013                op_08
+00117  0402 0014                op_02
+00119  9501                     op_01
+0011a  0676 27c2 0000           invoke-direct/range  # CALL Lc/a/b/e/a/e;->a([B,I,[B,I,I)I
+0011d  000a                     move-result
+0011e  6859 1b17                iput  # FIELD Lc/a/b/e/a/e;->d:I
+00120  6152 1b15                iget  # FIELD Lc/a/b/e/a/e;->b:I
+00122  6159 1b18                iput  # FIELD Lc/a/b/e/a/e;->e:I
+00124  6152 1b1b                iget  # FIELD Lc/a/b/e/a/e;->h:I
+00126  0138 0007                if-eqz
+00128  6154 1b1a                iget-object  # FIELD Lc/a/b/e/a/e;->g:Lc/a/b/e/a/f;
+0012a  106e 27c6 0001           invoke-virtual  # CALL Lc/a/b/e/a/f;->a()V
+0012d  000f                     return
+0012e  0022 0703                new-instance  # TYPE Ljavax/crypto/ShortBufferException;
+00130  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00132  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00135  206e 2d3f 00c1           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00138  206e 2d3b 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+0013b  206e 2d3f 00b1           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0013e  206e 2d3b 0091           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+00141  206e 2d3f 00a1           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00144  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00147  010c                     move-result-object
+00148  2070 2ed5 0010           invoke-direct  # CALL Ljavax/crypto/ShortBufferException;-><init>(Ljava/lang/String;)V
+0014b  0027                     throw
+0014c  0022 0703                new-instance  # TYPE Ljavax/crypto/ShortBufferException;
+0014e  011a 12e9                const-string  # STR "Output buffer is null"
+00150  2070 2ed5 0010           invoke-direct  # CALL Ljavax/crypto/ShortBufferException;-><init>(Ljava/lang/String;)V
+00153  0027                     throw
+
+### Lc/a/b/e/a/e;->a(I,[B,[B,Ljava/security/SecureRandom;)V  [access=0x1, regs=7, ins=5, outs=5, code_off=0xf8398]
+00000  0012                     const/4
+00001  2112                     const/4
+00002  1332 0008                if-eq
+00004  4112                     const/4
+00005  1333 0003                if-ne
+00007  0328                     goto
+00008  0301                     op_01
+00009  0228                     goto
+0000a  1312                     const/4
+0000b  235c 1b1c                iput-boolean  # FIELD Lc/a/b/e/a/e;->i:Z
+0000d  2152 1b1b                iget  # FIELD Lc/a/b/e/a/e;->h:I
+0000f  0139 000d                if-nez
+00011  0539 0003                if-nez
+00013  2128                     goto
+00014  0222 06b4                new-instance  # TYPE Ljava/security/InvalidAlgorithmParameterException;
+00016  031a 0747                const-string  # STR "ECB mode cannot use IV"
+00018  2070 2db9 0032           invoke-direct  # CALL Ljava/security/InvalidAlgorithmParameterException;-><init>(Ljava/lang/String;)V
+0001b  0227                     throw
+0001c  0539 0018                if-nez
+0001e  0339 000e                if-nez
+00020  0639 0004                if-nez
+00022  0662 1b10                sget-object  # FIELD Lc/a/b/e/a/c;->b:Ljava/security/SecureRandom;
+00024  2352 1b15                iget  # FIELD Lc/a/b/e/a/e;->b:I
+00026  3523 0720                new-array  # TYPE [B
+00028  206e 2dd0 0056           invoke-virtual  # CALL Ljava/security/SecureRandom;->nextBytes([B)V
+0002b  0928                     goto
+0002c  0222 06b4                new-instance  # TYPE Ljava/security/InvalidAlgorithmParameterException;
+0002e  031a 131c                const-string  # STR "Parameters missing"
+00030  2070 2db9 0032           invoke-direct  # CALL Ljava/security/InvalidAlgorithmParameterException;-><init>(Ljava/lang/String;)V
+00033  0227                     throw
+00034  2059 1b17                iput  # FIELD Lc/a/b/e/a/e;->d:I
+00036  2352 1b15                iget  # FIELD Lc/a/b/e/a/e;->b:I
+00038  2359 1b18                iput  # FIELD Lc/a/b/e/a/e;->e:I
+0003a  2354 1b1a                iget-object  # FIELD Lc/a/b/e/a/e;->g:Lc/a/b/e/a/f;
+0003c  2255 1b1c                iget-boolean  # FIELD Lc/a/b/e/a/e;->i:Z
+0003e  061a 0000                const-string  # STR ""
+00040  556e 27c7 4623           invoke-virtual  # CALL Lc/a/b/e/a/f;->a(Z,Ljava/lang/String;,[B,[B)V
+00043  000e                     return-void
+
+### Lc/a/b/e/a/e;->a([B,I,I)[B  [access=0x1, regs=12, ins=4, outs=6, code_off=0xf7eac]
+00000  206e 27c0 00b8           invoke-virtual  # CALL Lc/a/b/e/a/e;->a(I)I
+00003  000a                     move-result
+00004  0723 0720                new-array  # TYPE [B
+00006  0612                     const/4
+00007  8107                     op_07
+00008  9207                     op_07
+00009  a301                     op_01
+0000a  b401                     op_01
+0000b  7507                     op_07
+0000c  0674 27c1 0001           invoke-virtual/range  # CALL Lc/a/b/e/a/e;->a([B,I,I,[B,I)I
+0000f  080a                     move-result
+00010  0835 000e                if-ge
+00012  8923 0720                new-array  # TYPE [B
+00014  0838 0006                if-eqz
+00016  0a12                     const/4
+00017  5871 2d45 a9a7           invoke-static  # CALL Ljava/lang/System;->arraycopy(Ljava/lang/Object;,I,Ljava/lang/Object;,I,I)V
+0001a  9707                     op_07
+0001b  0328                     goto
+0001c  0812                     const/4
+0001d  8707                     op_07
+0001e  0711                     return-object

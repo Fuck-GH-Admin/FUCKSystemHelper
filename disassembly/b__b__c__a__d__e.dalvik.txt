@@ -1,0 +1,42 @@
+### Lb/b/c/a/d/e;-><clinit>()V  [access=0x10008, regs=0, ins=0, outs=0, code_off=0xb205c]
+00000  000e                     return-void
+
+### Lb/b/c/a/d/e;->a(I)I  [access=0x9, regs=2, ins=1, outs=0, code_off=0xb1fb0]
+00000  4012                     const/4
+00001  0136 0005                if-gt
+00003  0113 0008                const/16
+00005  0328                     goto
+00006  01da 0201                op_da
+00008  010f                     return
+
+### Lb/b/c/a/d/e;->a([I,I,I)[I  [access=0x9, regs=5, ins=3, outs=5, code_off=0xb1fd4]
+00000  00d8 0103                op_d8
+00002  2121                     array-length
+00003  1037 000d                if-le
+00005  1071 22f8 0003           invoke-static  # CALL Lb/b/c/a/d/e;->a(I)I
+00008  000a                     move-result
+00009  0023 0724                new-array  # TYPE [I
+0000b  0112                     const/4
+0000c  5371 2d45 1012           invoke-static  # CALL Ljava/lang/System;->arraycopy(Ljava/lang/Object;,I,Ljava/lang/Object;,I,I)V
+0000f  0207                     op_07
+00010  044b 0302                aput
+00012  0211                     return-object
+
+### Lb/b/c/a/d/e;->a([Ljava/lang/Object;,I,Ljava/lang/Object;)[Ljava/lang/Object;  [access=0x9, regs=5, ins=3, outs=5, code_off=0xb200c]
+00000  00d8 0103                op_d8
+00002  2121                     array-length
+00003  1037 0019                if-le
+00005  106e 2ce3 0002           invoke-virtual  # CALL Ljava/lang/Object;->getClass()Ljava/lang/Class;
+00008  000c                     move-result-object
+00009  106e 2c76 0000           invoke-virtual  # CALL Ljava/lang/Class;->getComponentType()Ljava/lang/Class;
+0000c  000c                     move-result-object
+0000d  1071 22f8 0003           invoke-static  # CALL Lb/b/c/a/d/e;->a(I)I
+00010  010a                     move-result
+00011  2071 2d69 0010           invoke-static  # CALL Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;,I)Ljava/lang/Object;
+00014  000c                     move-result-object
+00015  001f 075d                check-cast  # TYPE [Ljava/lang/Object;
+00017  0112                     const/4
+00018  5371 2d45 1012           invoke-static  # CALL Ljava/lang/System;->arraycopy(Ljava/lang/Object;,I,Ljava/lang/Object;,I,I)V
+0001b  0207                     op_07
+0001c  044d 0302                aput-object
+0001e  0211                     return-object

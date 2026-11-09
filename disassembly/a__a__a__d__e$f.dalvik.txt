@@ -1,0 +1,18 @@
+### La/a/a/d/e$f;-><init>(La/a/a/d/e;)V  [access=0x10001, regs=2, ins=2, outs=1, code_off=0x5ac5c]
+00000  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  000e                     return-void
+
+### La/a/a/d/e$f;->a(La/a/a/d/e$e;,La/a/a/d/e$e;)I  [access=0x1, regs=3, ins=3, outs=1, code_off=0x5ac14]
+00000  1071 0266 0001           invoke-static  # CALL La/a/a/d/e$e;->a(La/a/a/d/e$e;)I
+00003  000a                     move-result
+00004  1071 0266 0002           invoke-static  # CALL La/a/a/d/e$e;->a(La/a/a/d/e$e;)I
+00007  010a                     move-result
+00008  10b1                     op_b1
+00009  000f                     return
+
+### La/a/a/d/e$f;->compare(Ljava/lang/Object;,Ljava/lang/Object;)I  [access=0x1041, regs=3, ins=3, outs=3, code_off=0x5ac38]
+00000  011f 006c                check-cast  # TYPE La/a/a/d/e$e;
+00002  021f 006c                check-cast  # TYPE La/a/a/d/e$e;
+00004  306e 026d 0210           invoke-virtual  # CALL La/a/a/d/e$f;->a(La/a/a/d/e$e;,La/a/a/d/e$e;)I
+00007  000a                     move-result
+00008  000f                     return

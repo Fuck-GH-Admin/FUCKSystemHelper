@@ -1,0 +1,150 @@
+### Lc/a/b/k/a;-><init>(Ljava/lang/String;,Z,Z)V  [access=0x10001, regs=4, ins=4, outs=1, code_off=0xfb1b0]
+00000  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  015b 1b48                iput-object  # FIELD Lc/a/b/k/a;->a:Ljava/lang/String;
+00005  025c 1b49                iput-boolean  # FIELD Lc/a/b/k/a;->b:Z
+00007  035c 1b4a                iput-boolean  # FIELD Lc/a/b/k/a;->c:Z
+00009  000e                     return-void
+
+### Lc/a/b/k/a;->a(I)I  [access=0xa, regs=4, ins=1, outs=0, code_off=0xfafc8]
+00000  1012                     const/4
+00001  0332 0015                if-eq
+00003  2112                     const/4
+00004  4212                     const/4
+00005  1332 0010                if-eq
+00007  3112                     const/4
+00008  1332 000c                if-eq
+0000a  2332 0009                if-eq
+0000c  5012                     const/4
+0000d  0332 0004                if-eq
+0000f  f312                     const/4
+00010  030f                     return
+00011  0312                     const/4
+00012  030f                     return
+00013  000f                     return
+00014  010f                     return
+00015  020f                     return
+00016  6312                     const/4
+00017  030f                     return
+
+### Lc/a/b/k/a;->a([B)Ljava/lang/String;  [access=0x1, regs=20, ins=2, outs=2, code_off=0xfb008]
+00000  0008 0012                op_08
+00002  0108 0013                op_08
+00004  0222 063a                new-instance  # TYPE Ljava/io/ByteArrayOutputStream;
+00006  1070 2bfd 0002           invoke-direct  # CALL Ljava/io/ByteArrayOutputStream;-><init>()V
+00009  0312                     const/4
+0000a  3401                     op_01
+0000b  1521                     array-length
+0000c  4612                     const/4
+0000d  65b0                     op_b0
+0000e  5712                     const/4
+0000f  75b3                     op_b3
+00010  5435 00b1                if-ge
+00012  7523 0764                new-array  # TYPE [S
+00014  0813 0008                const/16
+00016  8923 0724                new-array  # TYPE [I
+00018  3a01                     op_01
+00019  7b01                     op_01
+0001a  7a35 0017                if-ge
+0001c  0cda 0504                op_da
+0001e  acb0                     op_b0
+0001f  1d21                     array-length
+00020  dc35 000a                if-ge
+00022  0c48 0c01                aget-byte
+00024  ccd5 00ff                op_d5
+00026  cc8f                     op_8f
+00027  0c51 0a05                aput-short
+00029  0528                     goto
+0002a  0351 0a05                aput-short
+0002c  0bd8 ff0b                op_d8
+0002e  0ad8 010a                op_d8
+00030  ea28                     goto
+00031  1071 283a 000b           invoke-static  # CALL Lc/a/b/k/a;->a(I)I
+00034  0a0a                     move-result
+00035  0b4a 0305                aget-short
+00037  3c12                     const/4
+00038  cbb9                     op_b9
+00039  0bdd 1f0b                op_dd
+0003b  bb8d                     op_8d
+0003c  0b4b 0309                aput
+0003e  0b4a 0305                aget-short
+00040  7d12                     const/4
+00041  dbb5                     op_b5
+00042  2e12                     const/4
+00043  ebb8                     op_b8
+00044  1f12                     const/4
+00045  104a 0f05                aget-short
+00047  1113 0006                const/16
+00049  10e1 0610                op_e1
+0004b  10dd 0310                op_dd
+0004d  0b96 100b                int-or
+0004f  bb8d                     op_8d
+00050  0b4b 0f09                aput
+00052  0b4a 0f05                aget-short
+00054  fbb9                     op_b9
+00055  0bdd 1f0b                op_dd
+00057  bb8d                     op_8d
+00058  0b4b 0e09                aput
+0005a  0b4a 0f05                aget-short
+0005c  fbb5                     op_b5
+0005d  6bb8                     op_b8
+0005e  104a 0e05                aget-short
+00060  10e1 0410                op_e1
+00062  10dd 0f10                op_dd
+00064  0b96 100b                int-or
+00066  bb8d                     op_8d
+00067  0b4b 0c09                aput
+00069  0b4a 0e05                aget-short
+0006b  0bdd 0f0b                op_dd
+0006d  fbb8                     op_b8
+0006e  104a 0c05                aget-short
+00070  10e1 0710                op_e1
+00072  0fdd 0110                op_dd
+00074  fbb6                     op_b6
+00075  bb8d                     op_8d
+00076  0b4b 0609                aput
+00078  0b4a 0c05                aget-short
+0007a  ebb9                     op_b9
+0007b  0bdd 1f0b                op_dd
+0007d  bb8d                     op_8d
+0007e  0b4b 0709                aput
+00080  0b4a 0c05                aget-short
+00082  cbb5                     op_b5
+00083  cbb8                     op_b8
+00084  0c4a 0605                aget-short
+00086  07e1 050c                op_e1
+00088  d7b5                     op_b5
+00089  b7b6                     op_b6
+0008a  778d                     op_8d
+0008b  074b 1109                aput
+0008d  054a 0605                aget-short
+0008f  05dd 1f05                op_dd
+00091  558d                     op_8d
+00092  054b 0d09                aput
+00094  3501                     op_01
+00095  06d9 080a                op_d9
+00097  6535 0018                if-ge
+00099  0654 1b48                iget-object  # FIELD Lc/a/b/k/a;->a:Ljava/lang/String;
+0009b  0744 0509                aget
+0009d  206e 2cfe 0076           invoke-virtual  # CALL Ljava/lang/String;->charAt(I)C
+000a0  060a                     move-result
+000a1  0755 1b4a                iget-boolean  # FIELD Lc/a/b/k/a;->c:Z
+000a3  0738 0006                if-eqz
+000a5  1071 2c6e 0006           invoke-static  # CALL Ljava/lang/Character;->toLowerCase(C)C
+000a8  060a                     move-result
+000a9  206e 2c00 0062           invoke-virtual  # CALL Ljava/io/ByteArrayOutputStream;->write(I)V
+000ac  05d8 0105                op_d8
+000ae  e728                     goto
+000af  0555 1b49                iget-boolean  # FIELD Lc/a/b/k/a;->b:Z
+000b1  0538 000c                if-eqz
+000b3  8635 000a                if-ge
+000b5  0513 003d                const/16
+000b7  206e 2c00 0052           invoke-virtual  # CALL Ljava/io/ByteArrayOutputStream;->write(I)V
+000ba  06d8 0106                op_d8
+000bc  f728                     goto
+000bd  04d8 0104                op_d8
+000bf  0029 ff4c                goto/16
+000c1  0022 0683                new-instance  # TYPE Ljava/lang/String;
+000c3  106e 2bff 0002           invoke-virtual  # CALL Ljava/io/ByteArrayOutputStream;->toByteArray()[B
+000c6  010c                     move-result-object
+000c7  2070 2cf8 0010           invoke-direct  # CALL Ljava/lang/String;-><init>([B)V
+000ca  0011                     return-object

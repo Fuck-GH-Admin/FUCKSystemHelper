@@ -1,0 +1,116 @@
+### Lc/a/b/e/a/g;-><init>()V  [access=0x10001, regs=1, ins=1, outs=1, code_off=0xf8648]
+00000  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  000e                     return-void
+
+### Lc/a/b/e/a/g;->a()[B  [access=0x9, regs=10, ins=0, outs=5, code_off=0xf8488]
+00000  0062 1b20                sget-object  # FIELD Lc/a/b/e/a/g;->a:[B
+00002  0039 00cd                if-nez
+00004  001c 059b                const-class  # TYPE Lc/a/b/e/a/g;
+00006  001d                     monitor-enter
+00007  0162 1b20                sget-object  # FIELD Lc/a/b/e/a/g;->a:[B
+00009  0139 00c1                if-nez
+0000b  0071 27ed 0000           invoke-static  # CALL Lc/a/b/e/c/b;->b()[B
+0000e  010c                     move-result-object
+0000f  0213 0010                const/16
+00011  2323 0720                new-array  # TYPE [B
+00013  0412                     const/4
+00014  5271 2d45 4341           invoke-static  # CALL Ljava/lang/System;->arraycopy(Ljava/lang/Object;,I,Ljava/lang/Object;,I,I)V
+00017  0122 0597                new-instance  # TYPE Lc/a/b/e/a/c;
+00019  1070 27b4 0001           invoke-direct  # CALL Lc/a/b/e/a/c;-><init>()V
+0001c  2512                     const/4
+0001d  406e 27b5 3351           invoke-virtual  # CALL Lc/a/b/e/a/c;->a(I,[B,[B)V
+00020  0313 0020                const/16
+00022  3323 0720                new-array  # TYPE [B
+00024  0613 ffb9                const/16
+00026  064f 0403                aput-byte
+00028  0413 ff9c                const/16
+0002a  1612                     const/4
+0002b  044f 0603                aput-byte
+0002d  0413 ff8d                const/16
+0002f  044f 0503                aput-byte
+00031  3412                     const/4
+00032  0513 001a                const/16
+00034  054f 0403                aput-byte
+00036  4412                     const/4
+00037  0713 0027                const/16
+00039  074f 0403                aput-byte
+0003b  0413 ff84                const/16
+0003d  5712                     const/4
+0003e  044f 0703                aput-byte
+00040  6412                     const/4
+00041  0813 000e                const/16
+00043  084f 0403                aput-byte
+00045  7412                     const/4
+00046  084f 0403                aput-byte
+00048  0413 0008                const/16
+0004a  0913 ffe1                const/16
+0004c  094f 0403                aput-byte
+0004e  0413 0009                const/16
+00050  0913 ffd2                const/16
+00052  094f 0403                aput-byte
+00054  0413 000a                const/16
+00056  0913 ffc8                const/16
+00058  094f 0403                aput-byte
+0005a  0413 000b                const/16
+0005c  064f 0403                aput-byte
+0005e  0413 000c                const/16
+00060  0613 0019                const/16
+00062  064f 0403                aput-byte
+00064  0413 000d                const/16
+00066  0913 ff81                const/16
+00068  094f 0403                aput-byte
+0006a  0413 ff9d                const/16
+0006c  044f 0803                aput-byte
+0006e  0413 000f                const/16
+00070  0913 ff95                const/16
+00072  094f 0403                aput-byte
+00074  0413 ffca                const/16
+00076  044f 0203                aput-byte
+00078  0213 0011                const/16
+0007a  0413 0033                const/16
+0007c  044f 0203                aput-byte
+0007e  0213 0012                const/16
+00080  0413 002e                const/16
+00082  044f 0203                aput-byte
+00084  0213 0013                const/16
+00086  084f 0203                aput-byte
+00088  0413 0014                const/16
+0008a  0813 0044                const/16
+0008c  084f 0403                aput-byte
+0008e  0413 0015                const/16
+00090  0813 ffbc                const/16
+00092  084f 0403                aput-byte
+00094  0413 0016                const/16
+00096  0813 ffed                const/16
+00098  084f 0403                aput-byte
+0009a  0413 0017                const/16
+0009c  0813 001c                const/16
+0009e  084f 0403                aput-byte
+000a0  0413 0018                const/16
+000a2  0913 0042                const/16
+000a4  094f 0403                aput-byte
+000a6  024f 0603                aput-byte
+000a8  0213 ff8f                const/16
+000aa  024f 0503                aput-byte
+000ac  0213 001b                const/16
+000ae  074f 0203                aput-byte
+000b0  064f 0803                aput-byte
+000b2  0213 001d                const/16
+000b4  0413 fff5                const/16
+000b6  044f 0203                aput-byte
+000b8  0213 001e                const/16
+000ba  0413 ff85                const/16
+000bc  044f 0203                aput-byte
+000be  0213 001f                const/16
+000c0  0413 0032                const/16
+000c2  044f 0203                aput-byte
+000c4  206e 27b6 0031           invoke-virtual  # CALL Lc/a/b/e/a/c;->a([B)[B
+000c7  010c                     move-result-object
+000c8  0169 1b20                sput-object  # FIELD Lc/a/b/e/a/g;->a:[B
+000ca  001e                     monitor-exit
+000cb  0428                     goto
+000cc  010d                     op_0d
+000cd  001e                     monitor-exit
+000ce  0127                     throw
+000cf  0062 1b20                sget-object  # FIELD Lc/a/b/e/a/g;->a:[B
+000d1  0011                     return-object

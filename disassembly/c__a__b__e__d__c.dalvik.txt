@@ -1,0 +1,281 @@
+### Lc/a/b/e/d/c;-><clinit>()V  [access=0x10008, regs=0, ins=0, outs=0, code_off=0xf95c4]
+00000  000e                     return-void
+
+### Lc/a/b/e/d/c;-><init>()V  [access=0x10001, regs=2, ins=1, outs=1, code_off=0xf95d8]
+00000  1070 2ce0 0001           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  001a 13c9                const-string  # STR "SHA-1"
+00005  105b 1b34                iput-object  # FIELD Lc/a/b/e/d/c;->g:Ljava/lang/String;
+00007  001a 1304                const-string  # STR "PKCS1Padding"
+00009  105b 1b2f                iput-object  # FIELD Lc/a/b/e/d/c;->b:Ljava/lang/String;
+0000b  000e                     return-void
+
+### Lc/a/b/e/d/c;->a(I,Lc/a/b/e/d/d;,Ljava/security/SecureRandom;,Ljava/security/spec/AlgorithmParameterSpec;)V  [access=0x2, regs=12, ins=5, outs=5, code_off=0xf9644]
+00000  0012                     const/4
+00001  3112                     const/4
+00002  2212                     const/4
+00003  4312                     const/4
+00004  1412                     const/4
+00005  4832 0022                if-eq
+00007  2832 001e                if-eq
+00009  1832 001e                if-eq
+0000b  3833 0003                if-ne
+0000d  1828                     goto
+0000e  0722 06b5                new-instance  # TYPE Ljava/security/InvalidKeyException;
+00010  0922 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00012  1070 2d35 0009           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00015  0a1a 1560                const-string  # STR "Unknown mode: "
+00017  206e 2d3f 00a9           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0001a  206e 2d3b 0089           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+0001d  106e 2d44 0009           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00020  080c                     move-result-object
+00021  2070 2dba 0087           invoke-direct  # CALL Ljava/security/InvalidKeyException;-><init>(Ljava/lang/String;)V
+00024  0727                     throw
+00025  0801                     op_01
+00026  0228                     goto
+00027  4801                     op_01
+00028  9520 05a6                instance-of  # TYPE Lc/a/b/e/d/d;
+0002a  0538 009a                if-eqz
+0002c  0838 0004                if-eqz
+0002e  4501                     op_01
+0002f  0228                     goto
+00030  3501                     op_01
+00031  7559 1b2e                iput  # FIELD Lc/a/b/e/d/c;->a:I
+00033  795b 1b33                iput-object  # FIELD Lc/a/b/e/d/c;->f:Lc/a/b/e/d/d;
+00035  1072 2801 0009           invoke-interface  # CALL Lc/a/b/e/d/d;->a()Ljava/math/BigInteger;
+00038  090c                     move-result-object
+00039  1071 27f3 0009           invoke-static  # CALL Lc/a/b/e/d/b;->a(Ljava/math/BigInteger;)I
+0003c  090a                     move-result
+0003d  7059 1b32                iput  # FIELD Lc/a/b/e/d/c;->e:I
+0003f  7054 1b2f                iget-object  # FIELD Lc/a/b/e/d/c;->b:Ljava/lang/String;
+00041  051a 131d                const-string  # STR "Parameters not supported"
+00043  061a 129d                const-string  # STR "NoPadding"
+00045  6033 0015                if-ne
+00047  0b39 000d                if-nez
+00049  3071 2809 0a91           invoke-static  # CALL Lc/a/b/e/d/f;->a(I,I,Ljava/security/SecureRandom;)Lc/a/b/e/d/f;
+0004c  080c                     move-result-object
+0004d  785b 1b30                iput-object  # FIELD Lc/a/b/e/d/c;->c:Lc/a/b/e/d/f;
+0004f  9823 0720                new-array  # TYPE [B
+00051  785b 1b31                iput-object  # FIELD Lc/a/b/e/d/c;->d:[B
+00053  6828                     goto
+00054  0722 06b4                new-instance  # TYPE Ljava/security/InvalidAlgorithmParameterException;
+00056  2070 2db9 0057           invoke-direct  # CALL Ljava/security/InvalidAlgorithmParameterException;-><init>(Ljava/lang/String;)V
+00059  0727                     throw
+0005a  061a 1304                const-string  # STR "PKCS1Padding"
+0005c  6033 0026                if-ne
+0005e  0b39 001e                if-nez
+00060  7b52 1b2e                iget  # FIELD Lc/a/b/e/d/c;->a:I
+00062  2b36 0003                if-gt
+00064  0228                     goto
+00065  4201                     op_01
+00066  3071 2809 0a92           invoke-static  # CALL Lc/a/b/e/d/f;->a(I,I,Ljava/security/SecureRandom;)Lc/a/b/e/d/f;
+00069  0a0c                     move-result-object
+0006a  7a5b 1b30                iput-object  # FIELD Lc/a/b/e/d/c;->c:Lc/a/b/e/d/f;
+0006c  0838 000b                if-eqz
+0006e  106e 2808 000a           invoke-virtual  # CALL Lc/a/b/e/d/f;->a()I
+00071  080a                     move-result
+00072  8823 0720                new-array  # TYPE [B
+00074  785b 1b31                iput-object  # FIELD Lc/a/b/e/d/c;->d:[B
+00076  4528                     goto
+00077  9823 0720                new-array  # TYPE [B
+00079  785b 1b31                iput-object  # FIELD Lc/a/b/e/d/c;->d:[B
+0007b  4028                     goto
+0007c  0722 06b4                new-instance  # TYPE Ljava/security/InvalidAlgorithmParameterException;
+0007e  2070 2db9 0057           invoke-direct  # CALL Ljava/security/InvalidAlgorithmParameterException;-><init>(Ljava/lang/String;)V
+00081  0727                     throw
+00082  7052 1b2e                iget  # FIELD Lc/a/b/e/d/c;->a:I
+00084  1032 0038                if-eq
+00086  3032 0036                if-eq
+00088  0b38 0011                if-eqz
+0008a  b020 0705                instance-of  # TYPE Ljavax/crypto/spec/OAEPParameterSpec;
+0008c  0038 0005                if-eqz
+0008e  0b1f 0705                check-cast  # TYPE Ljavax/crypto/spec/OAEPParameterSpec;
+00090  1628                     goto
+00091  0722 06b4                new-instance  # TYPE Ljava/security/InvalidAlgorithmParameterException;
+00093  081a 16ba                const-string  # STR "Wrong Parameters for OAEP Padding"
+00095  2070 2db9 0087           invoke-direct  # CALL Ljava/security/InvalidAlgorithmParameterException;-><init>(Ljava/lang/String;)V
+00098  0727                     throw
+00099  0b22 0705                new-instance  # TYPE Ljavax/crypto/spec/OAEPParameterSpec;
+0009b  7054 1b34                iget-object  # FIELD Lc/a/b/e/d/c;->g:Ljava/lang/String;
+0009d  0162 1d70                sget-object  # FIELD Ljava/security/spec/MGF1ParameterSpec;->SHA1:Ljava/security/spec/MGF1ParameterSpec;
+0009f  0262 1d76                sget-object  # FIELD Ljavax/crypto/spec/PSource$PSpecified;->DEFAULT:Ljavax/crypto/spec/PSource$PSpecified;
+000a1  041a 11b8                const-string  # STR "MGF1"
+000a3  5270 2ed7 140b           invoke-direct  # CALL Ljavax/crypto/spec/OAEPParameterSpec;-><init>(Ljava/lang/String;,Ljava/lang/String;,Ljava/security/spec/AlgorithmParameterSpec;,Ljavax/crypto/spec/PSource;)V
+000a6  4071 280a ba93           invoke-static  # CALL Lc/a/b/e/d/f;->a(I,I,Ljava/security/SecureRandom;,Ljavax/crypto/spec/OAEPParameterSpec;)Lc/a/b/e/d/f;
+000a9  0a0c                     move-result-object
+000aa  7a5b 1b30                iput-object  # FIELD Lc/a/b/e/d/c;->c:Lc/a/b/e/d/f;
+000ac  0838 000b                if-eqz
+000ae  106e 2808 000a           invoke-virtual  # CALL Lc/a/b/e/d/f;->a()I
+000b1  080a                     move-result
+000b2  8823 0720                new-array  # TYPE [B
+000b4  785b 1b31                iput-object  # FIELD Lc/a/b/e/d/c;->d:[B
+000b6  0528                     goto
+000b7  9823 0720                new-array  # TYPE [B
+000b9  785b 1b31                iput-object  # FIELD Lc/a/b/e/d/c;->d:[B
+000bb  000e                     return-void
+000bc  0722 06b5                new-instance  # TYPE Ljava/security/InvalidKeyException;
+000be  081a 12a8                const-string  # STR "OAEP cannot be used to sign or verify signatures"
+000c0  2070 2dba 0087           invoke-direct  # CALL Ljava/security/InvalidKeyException;-><init>(Ljava/lang/String;)V
+000c3  0727                     throw
+000c4  0722 06b5                new-instance  # TYPE Ljava/security/InvalidKeyException;
+000c6  081a 22ea                const-string  # STR "only support helios key"
+000c8  2070 2dba 0087           invoke-direct  # CALL Ljava/security/InvalidKeyException;-><init>(Ljava/lang/String;)V
+000cb  0727                     throw
+
+### Lc/a/b/e/d/c;->a()[B  [access=0x2, regs=7, ins=1, outs=4, code_off=0xf9494]
+00000  6052 1b32                iget  # FIELD Lc/a/b/e/d/c;->e:I
+00002  6154 1b31                iget-object  # FIELD Lc/a/b/e/d/c;->d:[B
+00004  1221                     array-length
+00005  2036 004d                if-gt
+00007  0212                     const/4
+00008  6352 1b2e                iget  # FIELD Lc/a/b/e/d/c;->a:I
+0000a  1412                     const/4
+0000b  4332 0034                if-eq
+0000d  2412                     const/4
+0000e  051a 22eb                const-string  # STR "only verify supported"
+00010  4332 0029                if-eq
+00012  3412                     const/4
+00013  4332 0020                if-eq
+00015  4412                     const/4
+00016  4333 0015                if-ne
+00018  3071 27f6 0021           invoke-static  # CALL Lc/a/b/e/d/b;->a([B,I,I)[B
+0001b  000c                     move-result-object
+0001c  6154 1b33                iget-object  # FIELD Lc/a/b/e/d/c;->f:Lc/a/b/e/d/d;
+0001e  2071 27f7 0010           invoke-static  # CALL Lc/a/b/e/d/b;->a([B,Lc/a/b/e/d/d;)[B
+00021  000c                     move-result-object
+00022  6154 1b30                iget-object  # FIELD Lc/a/b/e/d/c;->c:Lc/a/b/e/d/f;
+00024  206e 280f 0001           invoke-virtual  # CALL Lc/a/b/e/d/f;->b([B)[B
+00027  000c                     move-result-object
+00028  6259 1b32                iput  # FIELD Lc/a/b/e/d/c;->e:I
+0002a  0011                     return-object
+0002b  0022 0656                new-instance  # TYPE Ljava/lang/AssertionError;
+0002d  011a 08de                const-string  # STR "Internal error"
+0002f  2070 2c64 0010           invoke-direct  # CALL Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+00032  0027                     throw
+00033  0022 068c                new-instance  # TYPE Ljava/lang/UnsupportedOperationException;
+00035  2070 2d66 0050           invoke-direct  # CALL Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+00038  0027                     throw
+00039  0022 068c                new-instance  # TYPE Ljava/lang/UnsupportedOperationException;
+0003b  2070 2d66 0050           invoke-direct  # CALL Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+0003e  0027                     throw
+0003f  6354 1b30                iget-object  # FIELD Lc/a/b/e/d/c;->c:Lc/a/b/e/d/f;
+00041  406e 280e 0213           invoke-virtual  # CALL Lc/a/b/e/d/f;->a([B,I,I)[B
+00044  000c                     move-result-object
+00045  6154 1b33                iget-object  # FIELD Lc/a/b/e/d/c;->f:Lc/a/b/e/d/d;
+00047  2071 27f7 0010           invoke-static  # CALL Lc/a/b/e/d/b;->a([B,Lc/a/b/e/d/d;)[B
+0004a  000c                     move-result-object
+0004b  6259 1b32                iput  # FIELD Lc/a/b/e/d/c;->e:I
+0004d  0011                     return-object
+0004e  000d                     op_0d
+0004f  6259 1b32                iput  # FIELD Lc/a/b/e/d/c;->e:I
+00051  0027                     throw
+00052  0022 0701                new-instance  # TYPE Ljavax/crypto/IllegalBlockSizeException;
+00054  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00056  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00059  021a 071a                const-string  # STR "Data must not be longer than "
+0005b  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0005e  6654 1b31                iget-object  # FIELD Lc/a/b/e/d/c;->d:[B
+00060  6621                     array-length
+00061  206e 2d3b 0061           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+00064  061a 0032                const-string  # STR " bytes"
+00066  206e 2d3f 0061           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00069  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0006c  060c                     move-result-object
+0006d  2070 2ed1 0060           invoke-direct  # CALL Ljavax/crypto/IllegalBlockSizeException;-><init>(Ljava/lang/String;)V
+00070  0027                     throw
+
+### Lc/a/b/e/d/c;->b([B,I,I)V  [access=0x2, regs=8, ins=4, outs=5, code_off=0xf98f0]
+00000  0738 001b                if-eqz
+00002  0539 0003                if-nez
+00004  1728                     goto
+00005  4052 1b32                iget  # FIELD Lc/a/b/e/d/c;->e:I
+00007  0190 0700                int-add
+00009  4254 1b31                iget-object  # FIELD Lc/a/b/e/d/c;->d:[B
+0000b  2321                     array-length
+0000c  3137 0008                if-le
+0000e  2521                     array-length
+0000f  05d8 0105                op_d8
+00011  4559 1b32                iput  # FIELD Lc/a/b/e/d/c;->e:I
+00013  000e                     return-void
+00014  5771 2d45 0265           invoke-static  # CALL Ljava/lang/System;->arraycopy(Ljava/lang/Object;,I,Ljava/lang/Object;,I,I)V
+00017  4552 1b32                iget  # FIELD Lc/a/b/e/d/c;->e:I
+00019  75b0                     op_b0
+0001a  f728                     goto
+0001b  000e                     return-void
+
+### Lc/a/b/e/d/c;->a(I,Lc/a/b/e/d/d;,Ljava/security/SecureRandom;)V  [access=0x1, regs=5, ins=4, outs=5, code_off=0xf9600]
+00000  0012                     const/4
+00001  5070 27fc 4321           invoke-direct  # CALL Lc/a/b/e/d/c;->a(I,Lc/a/b/e/d/d;,Ljava/security/SecureRandom;,Ljava/security/spec/AlgorithmParameterSpec;)V
+00004  000e                     return-void
+00005  010d                     op_0d
+00006  0222 06b5                new-instance  # TYPE Ljava/security/InvalidKeyException;
+00008  031a 16bb                const-string  # STR "Wrong parameters"
+0000a  2070 2dba 0032           invoke-direct  # CALL Ljava/security/InvalidKeyException;-><init>(Ljava/lang/String;)V
+0000d  206e 2dbc 0012           invoke-virtual  # CALL Ljava/security/InvalidKeyException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+00010  0227                     throw
+
+### Lc/a/b/e/d/c;->a(Ljava/lang/String;)V  [access=0x1, regs=5, ins=2, outs=3, code_off=0xf97ec]
+00000  001a 129d                const-string  # STR "NoPadding"
+00002  206e 2d04 0004           invoke-virtual  # CALL Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+00005  010a                     move-result
+00006  0138 0005                if-eqz
+00008  305b 1b2f                iput-object  # FIELD Lc/a/b/e/d/c;->b:Ljava/lang/String;
+0000a  1c28                     goto
+0000b  001a 1304                const-string  # STR "PKCS1Padding"
+0000d  206e 2d04 0004           invoke-virtual  # CALL Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+00010  010a                     move-result
+00011  0138 0003                if-eqz
+00013  f528                     goto
+00014  0062 1d73                sget-object  # FIELD Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
+00016  206e 2d1d 0004           invoke-virtual  # CALL Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
+00019  000c                     move-result-object
+0001a  011a 2213                const-string  # STR "oaeppadding"
+0001c  206e 2d03 0010           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+0001f  010a                     move-result
+00020  021a 12a7                const-string  # STR "OAEP"
+00022  0138 0005                if-eqz
+00024  325b 1b2f                iput-object  # FIELD Lc/a/b/e/d/c;->b:Ljava/lang/String;
+00026  000e                     return-void
+00027  011a 2214                const-string  # STR "oaepwith"
+00029  206e 2d18 0010           invoke-virtual  # CALL Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+0002c  010a                     move-result
+0002d  0138 0031                if-eqz
+0002f  011a 1902                const-string  # STR "andmgf1padding"
+00031  206e 2d02 0010           invoke-virtual  # CALL Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+00034  000a                     move-result
+00035  0038 0029                if-eqz
+00037  325b 1b2f                iput-object  # FIELD Lc/a/b/e/d/c;->b:Ljava/lang/String;
+00039  106e 2d12 0004           invoke-virtual  # CALL Ljava/lang/String;->length()I
+0003c  000a                     move-result
+0003d  00d8 f200                op_d8
+0003f  0113 0008                const/16
+00041  306e 2d1a 0014           invoke-virtual  # CALL Ljava/lang/String;->substring(I,I)Ljava/lang/String;
+00044  000c                     move-result-object
+00045  305b 1b34                iput-object  # FIELD Lc/a/b/e/d/c;->g:Ljava/lang/String;
+00047  0322 0702                new-instance  # TYPE Ljavax/crypto/NoSuchPaddingException;
+00049  0022 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0004b  1070 2d35 0000           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0004e  011a 1225                const-string  # STR "MessageDigest not available for "
+00050  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00053  206e 2d3f 0040           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00056  106e 2d44 0000           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00059  040c                     move-result-object
+0005a  2070 2ed3 0043           invoke-direct  # CALL Ljavax/crypto/NoSuchPaddingException;-><init>(Ljava/lang/String;)V
+0005d  0327                     throw
+0005e  0322 0702                new-instance  # TYPE Ljavax/crypto/NoSuchPaddingException;
+00060  0022 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00062  1070 2d35 0000           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00065  011a 1317                const-string  # STR "Padding "
+00067  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0006a  206e 2d3f 0040           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0006d  041a 0088                const-string  # STR " not supported"
+0006f  206e 2d3f 0040           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00072  106e 2d44 0000           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00075  040c                     move-result-object
+00076  2070 2ed3 0043           invoke-direct  # CALL Ljavax/crypto/NoSuchPaddingException;-><init>(Ljava/lang/String;)V
+00079  0327                     throw
+
+### Lc/a/b/e/d/c;->a([B,I,I)[B  [access=0x1, regs=4, ins=4, outs=4, code_off=0xf95a4]
+00000  4070 2800 3210           invoke-direct  # CALL Lc/a/b/e/d/c;->b([B,I,I)V
+00003  1070 27fe 0000           invoke-direct  # CALL Lc/a/b/e/d/c;->a()[B
+00006  000c                     move-result-object
+00007  0011                     return-object

@@ -1,0 +1,226 @@
+### La/a/a/b/b;-><init>()V  [access=0x10001, regs=1, ins=1, outs=1, code_off=0x44a18]
+00000  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  000e                     return-void
+
+### La/a/a/b/b;-><init>(La/a/a/b/b$a;)V  [access=0x11001, regs=2, ins=2, outs=1, code_off=0x44a30]
+00000  1070 001b 0000           invoke-direct  # CALL La/a/a/b/b;-><init>()V
+00003  000e                     return-void
+
+### La/a/a/b/b;->a()La/a/a/b/b;  [access=0x9, regs=1, ins=0, outs=0, code_off=0x44954]
+00000  0062 0025                sget-object  # FIELD La/a/a/b/b$b;->a:La/a/a/b/b;
+00002  0011                     return-object
+
+### La/a/a/b/b;->a(Landroid/content/Context;)V  [access=0x1, regs=7, ins=2, outs=4, code_off=0x44a48]
+00000  001a 1566                const-string  # STR "UrlConfigManger"
+00002  011a 2818                const-string  # STR "updateUrl"
+00004  2071 1c59 0010           invoke-static  # CALL Landroid/util/Log;->d(Ljava/lang/String;,Ljava/lang/String;)I
+00007  0639 0003                if-nez
+00009  000e                     return-void
+0000a  0022 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0000c  1070 2d35 0000           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0000f  0162 0555                sget-object  # FIELD Landroid/os/Environment;->DIRECTORY_MOVIES:Ljava/lang/String;
+00011  206e 0842 0016           invoke-virtual  # CALL Landroid/content/Context;->getExternalFilesDir(Ljava/lang/String;)Ljava/io/File;
+00014  060c                     move-result-object
+00015  206e 2d3e 0060           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+00018  0662 1d5b                sget-object  # FIELD Ljava/io/File;->separator:Ljava/lang/String;
+0001a  206e 2d3f 0060           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0001d  011a 19ae                const-string  # STR "baiduLocDev"
+0001f  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00022  206e 2d3f 0060           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00025  061a 20da                const-string  # STR "loc_local_config"
+00027  206e 2d3f 0060           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0002a  106e 2d44 0000           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0002d  060c                     move-result-object
+0002e  0022 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00030  1070 2d35 0000           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00033  0122 063e                new-instance  # TYPE Ljava/io/File;
+00035  2070 2c0c 0061           invoke-direct  # CALL Ljava/io/File;-><init>(Ljava/lang/String;)V
+00038  106e 2c11 0001           invoke-virtual  # CALL Ljava/io/File;->exists()Z
+0003b  010a                     move-result
+0003c  0139 000a                if-nez
+0003e  051a 19b0                const-string  # STR "baidu_location_dev"
+00040  061a 20db                const-string  # STR "loc_local_config not exit..."
+00042  2071 1c59 0065           invoke-static  # CALL Landroid/util/Log;->d(Ljava/lang/String;,Ljava/lang/String;)I
+00045  000e                     return-void
+00046  0122 0640                new-instance  # TYPE Ljava/io/FileInputStream;
+00048  2070 2c1f 0061           invoke-direct  # CALL Ljava/io/FileInputStream;-><init>(Ljava/lang/String;)V
+0004b  0613 0400                const/16
+0004d  6623 0720                new-array  # TYPE [B
+0004f  206e 2c22 0061           invoke-virtual  # CALL Ljava/io/FileInputStream;->read([B)I
+00052  020a                     move-result
+00053  023d 000c                if-lez
+00055  0322 0683                new-instance  # TYPE Ljava/lang/String;
+00057  0412                     const/4
+00058  4070 2cf9 2463           invoke-direct  # CALL Ljava/lang/String;-><init>([B,I,I)V
+0005b  206e 2d3f 0030           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0005e  f128                     goto
+0005f  106e 2c20 0001           invoke-virtual  # CALL Ljava/io/FileInputStream;->close()V
+00062  106e 2d44 0000           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00065  060c                     move-result-object
+00066  206e 0020 0065           invoke-virtual  # CALL La/a/a/b/b;->a(Ljava/lang/String;)Z
+00069  0a28                     goto
+0006a  050d                     op_0d
+0006b  106e 2c36 0005           invoke-virtual  # CALL Ljava/io/IOException;->printStackTrace()V
+0006e  0528                     goto
+0006f  050d                     op_0d
+00070  106e 2c25 0005           invoke-virtual  # CALL Ljava/io/FileNotFoundException;->printStackTrace()V
+00073  000e                     return-void
+00074  050d                     op_0d
+00075  106e 2c96 0005           invoke-virtual  # CALL Ljava/lang/Exception;->printStackTrace()V
+00078  000e                     return-void
+
+### La/a/a/b/b;->a(Ljava/lang/String;,Ljava/lang/String;,Ljava/lang/String;)V  [access=0x11, regs=5, ins=4, outs=2, code_off=0x44b68]
+00000  011a 1566                const-string  # STR "UrlConfigManger"
+00002  001a 2537                const-string  # STR "setConfig"
+00004  2071 1c59 0001           invoke-static  # CALL Landroid/util/Log;->d(Ljava/lang/String;,Ljava/lang/String;)I
+00007  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00009  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0000c  001a 27f5                const-string  # STR "type:"
+0000e  206e 2d3f 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00011  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00014  001a 01e0                const-string  # STR ", owner: "
+00016  206e 2d3f 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00019  206e 2d3f 0031           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0001c  001a 001e                const-string  # STR " ,url: "
+0001e  206e 2d3f 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00021  206e 2d3f 0041           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00024  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00027  010c                     move-result-object
+00028  001a 19b0                const-string  # STR "baidu_location_dev"
+0002a  2071 1c59 0010           invoke-static  # CALL Landroid/util/Log;->d(Ljava/lang/String;,Ljava/lang/String;)I
+0002d  011a 1b22                const-string  # STR "default_owner"
+0002f  206e 2d01 0013           invoke-virtual  # CALL Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+00032  010a                     move-result
+00033  0139 0094                if-nez
+00035  011a 1b23                const-string  # STR "default_url"
+00037  206e 2d03 0041           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+0003a  010a                     move-result
+0003b  0139 008c                if-nez
+0003d  011a 1f71                const-string  # STR "https"
+0003f  206e 2d01 0014           invoke-virtual  # CALL Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+00042  010a                     move-result
+00043  0139 0004                if-nez
+00045  0029 0082                goto/16
+00047  106e 2d0a 0002           invoke-virtual  # CALL Ljava/lang/String;->hashCode()I
+0004a  f112                     const/4
+0004b  106e 2d0a 0002           invoke-virtual  # CALL Ljava/lang/String;->hashCode()I
+0004e  030a                     move-result
+0004f  032c 007f 0000           sparse-switch
+00052  0029 0059                goto/16
+00054  031a 1fc7                const-string  # STR "indoor_rects"
+00056  206e 2d03 0032           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+00059  020a                     move-result
+0005a  0239 0003                if-nez
+0005c  4f28                     goto
+0005d  7112                     const/4
+0005e  4d28                     goto
+0005f  031a 1a2a                const-string  # STR "cfgs"
+00061  206e 2d03 0032           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+00064  020a                     move-result
+00065  0239 0003                if-nez
+00067  4428                     goto
+00068  6112                     const/4
+00069  4228                     goto
+0006a  031a 20d1                const-string  # STR "loc"
+0006c  206e 2d03 0032           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+0006f  020a                     move-result
+00070  0239 0003                if-nez
+00072  3928                     goto
+00073  5112                     const/4
+00074  3728                     goto
+00075  031a 1fc6                const-string  # STR "indoor_poi_data"
+00077  206e 2d03 0032           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+0007a  020a                     move-result
+0007b  0239 0003                if-nez
+0007d  2e28                     goto
+0007e  4112                     const/4
+0007f  2c28                     goto
+00080  031a 19b5                const-string  # STR "basement_inout"
+00082  206e 2d03 0032           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+00085  020a                     move-result
+00086  0239 0003                if-nez
+00088  2328                     goto
+00089  3112                     const/4
+0008a  2128                     goto
+0008b  031a 1f49                const-string  # STR "hdyawupdate"
+0008d  206e 2d03 0032           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+00090  020a                     move-result
+00091  0239 0003                if-nez
+00093  1828                     goto
+00094  2112                     const/4
+00095  1628                     goto
+00096  031a 2838                const-string  # STR "vdr_log_update"
+00098  206e 2d03 0032           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+0009b  020a                     move-result
+0009c  0239 0003                if-nez
+0009e  0d28                     goto
+0009f  1112                     const/4
+000a0  0b28                     goto
+000a1  031a 1fc8                const-string  # STR "indoor_roadnet"
+000a3  206e 2d03 0032           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+000a6  020a                     move-result
+000a7  0239 0003                if-nez
+000a9  0228                     goto
+000aa  0112                     const/4
+000ab  012b 0045 0000           packed-switch
+000ae  1828                     goto
+000af  0469 0420                sput-object  # FIELD La/a/a/i/d;->e:Ljava/lang/String;
+000b1  1528                     goto
+000b2  0469 041e                sput-object  # FIELD La/a/a/i/d;->c:Ljava/lang/String;
+000b4  1228                     goto
+000b5  0469 041d                sput-object  # FIELD La/a/a/i/d;->b:Ljava/lang/String;
+000b7  0f28                     goto
+000b8  0469 0421                sput-object  # FIELD La/a/a/i/d;->f:Ljava/lang/String;
+000ba  0c28                     goto
+000bb  0469 0424                sput-object  # FIELD La/a/a/i/d;->i:Ljava/lang/String;
+000bd  0928                     goto
+000be  0469 0423                sput-object  # FIELD La/a/a/i/d;->h:Ljava/lang/String;
+000c0  0628                     goto
+000c1  0469 0422                sput-object  # FIELD La/a/a/i/d;->g:Ljava/lang/String;
+000c3  0328                     goto
+000c4  0469 041f                sput-object  # FIELD La/a/a/i/d;->d:Ljava/lang/String;
+000c6  000e                     return-void
+000c7  011a 281d                const-string  # STR "url 不合法"
+000c9  2071 1c59 0010           invoke-static  # CALL Landroid/util/Log;->d(Ljava/lang/String;,Ljava/lang/String;)I
+000cc  000e                     return-void
+000cd  0000                     nop
+000ce  0200 0008 1091 812a 91bf 8914 0a7c bf49 4379 cf05 5ceb e1b1 a340 0001 8c8f 002e ... <payload; units=34>
+000f0  0100 0008 0000 0000 0019 0000 0016 0000 0013 0000 0010 0000 000d 0000 000a 0000 ... <payload; units=20>
+
+### La/a/a/b/b;->a(Ljava/lang/String;)Z  [access=0x11, regs=8, ins=2, outs=4, code_off=0x4496c]
+00000  001a 281f                const-string  # STR "url_config"
+00002  011a 1566                const-string  # STR "UrlConfigManger"
+00004  021a 2327                const-string  # STR "parseConfig"
+00006  2071 1c59 0021           invoke-static  # CALL Landroid/util/Log;->d(Ljava/lang/String;,Ljava/lang/String;)I
+00009  0112                     const/4
+0000a  0222 071a                new-instance  # TYPE Lorg/json/JSONObject;
+0000c  2070 2f14 0072           invoke-direct  # CALL Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+0000f  206e 2f1c 0002           invoke-virtual  # CALL Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
+00012  070a                     move-result
+00013  0738 002b                if-eqz
+00015  206e 2f23 0002           invoke-virtual  # CALL Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
+00018  070c                     move-result-object
+00019  0738 0025                if-eqz
+0001b  1001                     op_01
+0001c  106e 2f0d 0007           invoke-virtual  # CALL Lorg/json/JSONArray;->length()I
+0001f  020a                     move-result
+00020  2035 001e                if-ge
+00022  206e 2f0e 0007           invoke-virtual  # CALL Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
+00025  020c                     move-result-object
+00026  031a 27f4                const-string  # STR "type"
+00028  206e 2f26 0032           invoke-virtual  # CALL Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+0002b  030c                     move-result-object
+0002c  041a 230f                const-string  # STR "owner"
+0002e  206e 2f26 0042           invoke-virtual  # CALL Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+00031  040c                     move-result-object
+00032  051a 281c                const-string  # STR "url"
+00034  206e 2f26 0052           invoke-virtual  # CALL Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+00037  020c                     move-result-object
+00038  406e 001f 2436           invoke-virtual  # CALL La/a/a/b/b;->a(Ljava/lang/String;,Ljava/lang/String;,Ljava/lang/String;)V
+0003b  00d8 0100                op_d8
+0003d  df28                     goto
+0003e  1612                     const/4
+0003f  060f                     return
+00040  060d                     op_0d
+00041  106e 2f12 0006           invoke-virtual  # CALL Lorg/json/JSONException;->printStackTrace()V
+00044  010f                     return

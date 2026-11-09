@@ -1,0 +1,157 @@
+### Lb/b/c/g/e;-><clinit>()V  [access=0x10008, regs=0, ins=0, outs=0, code_off=0xbc4e8]
+00000  000e                     return-void
+
+### Lb/b/c/g/e;->a(Landroid/app/Dialog;)Landroid/content/DialogInterface$OnKeyListener;  [access=0xa, regs=4, ins=1, outs=2, code_off=0xbc244]
+00000  0063 13eb                sget-boolean  # FIELD Lb/b/c/g/e;->c:Z
+00002  0039 0012                if-nez
+00004  1012                     const/4
+00005  011c 0126                const-class  # TYPE Landroid/app/Dialog;
+00007  021a 210f                const-string  # STR "mOnKeyListener"
+00009  206e 2c79 0021           invoke-virtual  # CALL Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+0000c  010c                     move-result-object
+0000d  0169 13ec                sput-object  # FIELD Lb/b/c/g/e;->d:Ljava/lang/reflect/Field;
+0000f  206e 2d73 0001           invoke-virtual  # CALL Ljava/lang/reflect/Field;->setAccessible(Z)V
+00012  006a 13eb                sput-boolean  # FIELD Lb/b/c/g/e;->c:Z
+00014  0062 13ec                sget-object  # FIELD Lb/b/c/g/e;->d:Ljava/lang/reflect/Field;
+00016  0038 0009                if-eqz
+00018  206e 2d6f 0030           invoke-virtual  # CALL Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+0001b  030c                     move-result-object
+0001c  031f 0173                check-cast  # TYPE Landroid/content/DialogInterface$OnKeyListener;
+0001e  0311                     return-object
+0001f  0312                     const/4
+00020  0311                     return-object
+
+### Lb/b/c/g/e;->a(Landroid/app/ActionBar;,Landroid/view/KeyEvent;)Z  [access=0xa, regs=8, ins=2, outs=3, code_off=0xbc2b4]
+00000  0063 13e9                sget-boolean  # FIELD Lb/b/c/g/e;->a:Z
+00002  1112                     const/4
+00003  0212                     const/4
+00004  0039 0016                if-nez
+00006  106e 2ce3 0006           invoke-virtual  # CALL Ljava/lang/Object;->getClass()Ljava/lang/Class;
+00009  000c                     move-result-object
+0000a  031a 228c                const-string  # STR "onMenuKeyEvent"
+0000c  1423 075c                new-array  # TYPE [Ljava/lang/Class;
+0000e  051c 0431                const-class  # TYPE Landroid/view/KeyEvent;
+00010  054d 0204                aput-object
+00012  306e 2c7e 0430           invoke-virtual  # CALL Ljava/lang/Class;->getMethod(Ljava/lang/String;,[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+00015  000c                     move-result-object
+00016  0069 13ea                sput-object  # FIELD Lb/b/c/g/e;->b:Ljava/lang/reflect/Method;
+00018  016a 13e9                sput-boolean  # FIELD Lb/b/c/g/e;->a:Z
+0001a  0062 13ea                sget-object  # FIELD Lb/b/c/g/e;->b:Ljava/lang/reflect/Method;
+0001c  0038 0011                if-eqz
+0001e  1123 075d                new-array  # TYPE [Ljava/lang/Object;
+00020  074d 0201                aput-object
+00022  306e 2d7a 0160           invoke-virtual  # CALL Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;,[Ljava/lang/Object;)Ljava/lang/Object;
+00025  060c                     move-result-object
+00026  061f 0657                check-cast  # TYPE Ljava/lang/Boolean;
+00028  106e 2c65 0006           invoke-virtual  # CALL Ljava/lang/Boolean;->booleanValue()Z
+0002b  060a                     move-result
+0002c  060f                     return
+0002d  020f                     return
+
+### Lb/b/c/g/e;->a(Landroid/app/Activity;,Landroid/view/KeyEvent;)Z  [access=0xa, regs=7, ins=2, outs=4, code_off=0xbc33c]
+00000  106e 0726 0005           invoke-virtual  # CALL Landroid/app/Activity;->onUserInteraction()V
+00003  106e 0708 0005           invoke-virtual  # CALL Landroid/app/Activity;->getWindow()Landroid/view/Window;
+00006  000c                     move-result-object
+00007  0113 0008                const/16
+00009  206e 1e73 0010           invoke-virtual  # CALL Landroid/view/Window;->hasFeature(I)Z
+0000c  010a                     move-result
+0000d  1212                     const/4
+0000e  0138 0017                if-eqz
+00010  106e 06f9 0005           invoke-virtual  # CALL Landroid/app/Activity;->getActionBar()Landroid/app/ActionBar;
+00013  010c                     move-result-object
+00014  106e 1ca8 0006           invoke-virtual  # CALL Landroid/view/KeyEvent;->getKeyCode()I
+00017  030a                     move-result
+00018  0413 0052                const/16
+0001a  4333 000b                if-ne
+0001c  0138 0009                if-eqz
+0001e  2071 24ef 0061           invoke-static  # CALL Lb/b/c/g/e;->a(Landroid/app/ActionBar;,Landroid/view/KeyEvent;)Z
+00021  010a                     move-result
+00022  0138 0003                if-eqz
+00024  020f                     return
+00025  206e 1e7a 0060           invoke-virtual  # CALL Landroid/view/Window;->superDispatchKeyEvent(Landroid/view/KeyEvent;)Z
+00028  010a                     move-result
+00029  0138 0003                if-eqz
+0002b  020f                     return
+0002c  106e 1e72 0000           invoke-virtual  # CALL Landroid/view/Window;->getDecorView()Landroid/view/View;
+0002f  000c                     move-result-object
+00030  2071 253b 0060           invoke-static  # CALL Lb/b/c/g/q;->a(Landroid/view/View;,Landroid/view/KeyEvent;)Z
+00033  010a                     move-result
+00034  0138 0003                if-eqz
+00036  020f                     return
+00037  0038 0007                if-eqz
+00039  106e 1d58 0000           invoke-virtual  # CALL Landroid/view/View;->getKeyDispatcherState()Landroid/view/KeyEvent$DispatcherState;
+0003c  000c                     move-result-object
+0003d  0228                     goto
+0003e  0012                     const/4
+0003f  406e 1ca4 5056           invoke-virtual  # CALL Landroid/view/KeyEvent;->dispatch(Landroid/view/KeyEvent$Callback;,Landroid/view/KeyEvent$DispatcherState;,Ljava/lang/Object;)Z
+00042  050a                     move-result
+00043  050f                     return
+
+### Lb/b/c/g/e;->a(Landroid/app/Dialog;,Landroid/view/KeyEvent;)Z  [access=0xa, regs=5, ins=2, outs=4, code_off=0xbc3d4]
+00000  1071 24ee 0003           invoke-static  # CALL Lb/b/c/g/e;->a(Landroid/app/Dialog;)Landroid/content/DialogInterface$OnKeyListener;
+00003  000c                     move-result-object
+00004  1112                     const/4
+00005  0038 000d                if-eqz
+00007  106e 1ca8 0004           invoke-virtual  # CALL Landroid/view/KeyEvent;->getKeyCode()I
+0000a  020a                     move-result
+0000b  4072 0867 4230           invoke-interface  # CALL Landroid/content/DialogInterface$OnKeyListener;->onKey(Landroid/content/DialogInterface;,I,Landroid/view/KeyEvent;)Z
+0000e  000a                     move-result
+0000f  0038 0003                if-eqz
+00011  010f                     return
+00012  106e 0745 0003           invoke-virtual  # CALL Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+00015  000c                     move-result-object
+00016  206e 1e7a 0040           invoke-virtual  # CALL Landroid/view/Window;->superDispatchKeyEvent(Landroid/view/KeyEvent;)Z
+00019  020a                     move-result
+0001a  0238 0003                if-eqz
+0001c  010f                     return
+0001d  106e 1e72 0000           invoke-virtual  # CALL Landroid/view/Window;->getDecorView()Landroid/view/View;
+00020  000c                     move-result-object
+00021  2071 253b 0040           invoke-static  # CALL Lb/b/c/g/q;->a(Landroid/view/View;,Landroid/view/KeyEvent;)Z
+00024  020a                     move-result
+00025  0238 0003                if-eqz
+00027  010f                     return
+00028  0038 0007                if-eqz
+0002a  106e 1d58 0000           invoke-virtual  # CALL Landroid/view/View;->getKeyDispatcherState()Landroid/view/KeyEvent$DispatcherState;
+0002d  000c                     move-result-object
+0002e  0228                     goto
+0002f  0012                     const/4
+00030  406e 1ca4 3034           invoke-virtual  # CALL Landroid/view/KeyEvent;->dispatch(Landroid/view/KeyEvent$Callback;,Landroid/view/KeyEvent$DispatcherState;,Ljava/lang/Object;)Z
+00033  030a                     move-result
+00034  030f                     return
+
+### Lb/b/c/g/e;->a(Landroid/view/View;,Landroid/view/KeyEvent;)Z  [access=0x9, regs=2, ins=2, outs=2, code_off=0xbc450]
+00000  2071 253d 0010           invoke-static  # CALL Lb/b/c/g/q;->b(Landroid/view/View;,Landroid/view/KeyEvent;)Z
+00003  000a                     move-result
+00004  000f                     return
+
+### Lb/b/c/g/e;->a(Lb/b/c/g/e$a;,Landroid/view/View;,Landroid/view/Window$Callback;,Landroid/view/KeyEvent;)Z  [access=0x9, regs=7, ins=4, outs=2, code_off=0xbc46c]
+00000  0012                     const/4
+00001  0339 0003                if-nez
+00003  000f                     return
+00004  0160 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00006  0213 001c                const/16
+00008  2134 0007                if-lt
+0000a  2072 24ec 0063           invoke-interface  # CALL Lb/b/c/g/e$a;->a(Landroid/view/KeyEvent;)Z
+0000d  030a                     move-result
+0000e  030f                     return
+0000f  5120 011f                instance-of  # TYPE Landroid/app/Activity;
+00011  0138 0009                if-eqz
+00013  051f 011f                check-cast  # TYPE Landroid/app/Activity;
+00015  2071 24f0 0065           invoke-static  # CALL Lb/b/c/g/e;->a(Landroid/app/Activity;,Landroid/view/KeyEvent;)Z
+00018  030a                     move-result
+00019  030f                     return
+0001a  5120 0126                instance-of  # TYPE Landroid/app/Dialog;
+0001c  0138 0009                if-eqz
+0001e  051f 0126                check-cast  # TYPE Landroid/app/Dialog;
+00020  2071 24f1 0065           invoke-static  # CALL Lb/b/c/g/e;->a(Landroid/app/Dialog;,Landroid/view/KeyEvent;)Z
+00023  030a                     move-result
+00024  030f                     return
+00025  0438 0008                if-eqz
+00027  2071 253b 0064           invoke-static  # CALL Lb/b/c/g/q;->a(Landroid/view/View;,Landroid/view/KeyEvent;)Z
+0002a  040a                     move-result
+0002b  0439 0008                if-nez
+0002d  2072 24ec 0063           invoke-interface  # CALL Lb/b/c/g/e$a;->a(Landroid/view/KeyEvent;)Z
+00030  030a                     move-result
+00031  0338 0003                if-eqz
+00033  1012                     const/4
+00034  000f                     return

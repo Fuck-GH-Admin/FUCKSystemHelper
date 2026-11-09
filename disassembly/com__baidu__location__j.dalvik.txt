@@ -1,0 +1,51 @@
+### Lcom/baidu/location/j;-><clinit>()V  [access=0x10009, regs=1, ins=0, outs=1, code_off=0x106334]
+00000  0022 060c                new-instance  # TYPE Lcom/baidu/location/j$a;
+00002  1070 2af0 0000           invoke-direct  # CALL Lcom/baidu/location/j$a;-><init>()V
+00005  0069 1cbd                sput-object  # FIELD Lcom/baidu/location/j;->CREATOR:Landroid/os/Parcelable$Creator;
+00007  000e                     return-void
+
+### Lcom/baidu/location/j;-><init>(Ljava/lang/String;,Ljava/lang/String;,D,Ljava/lang/String;,Ljava/lang/String;)V  [access=0x10001, regs=7, ins=7, outs=1, code_off=0x106354]
+00000  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  015b 1cbf                iput-object  # FIELD Lcom/baidu/location/j;->c:Ljava/lang/String;
+00005  025b 1cc0                iput-object  # FIELD Lcom/baidu/location/j;->d:Ljava/lang/String;
+00007  035a 1cbe                iput-wide  # FIELD Lcom/baidu/location/j;->b:D
+00009  055b 1cc1                iput-object  # FIELD Lcom/baidu/location/j;->e:Ljava/lang/String;
+0000b  065b 1cc2                iput-object  # FIELD Lcom/baidu/location/j;->f:Ljava/lang/String;
+0000d  000e                     return-void
+
+### Lcom/baidu/location/j;->a()Ljava/lang/String;  [access=0x1, regs=1, ins=1, outs=0, code_off=0x1062d4]
+00000  0054 1cc2                iget-object  # FIELD Lcom/baidu/location/j;->f:Ljava/lang/String;
+00002  0011                     return-object
+
+### Lcom/baidu/location/j;->b()Ljava/lang/String;  [access=0x1, regs=1, ins=1, outs=0, code_off=0x1062ec]
+00000  0054 1cbf                iget-object  # FIELD Lcom/baidu/location/j;->c:Ljava/lang/String;
+00002  0011                     return-object
+
+### Lcom/baidu/location/j;->c()Ljava/lang/String;  [access=0x1, regs=1, ins=1, outs=0, code_off=0x106304]
+00000  0054 1cc0                iget-object  # FIELD Lcom/baidu/location/j;->d:Ljava/lang/String;
+00002  0011                     return-object
+
+### Lcom/baidu/location/j;->d()D  [access=0x1, regs=3, ins=1, outs=0, code_off=0x1062a8]
+00000  2053 1cbe                iget-wide  # FIELD Lcom/baidu/location/j;->b:D
+00002  0010                     return-wide
+
+### Lcom/baidu/location/j;->describeContents()I  [access=0x1, regs=1, ins=1, outs=0, code_off=0x1062c0]
+00000  0012                     const/4
+00001  000f                     return
+
+### Lcom/baidu/location/j;->e()Ljava/lang/String;  [access=0x1, regs=1, ins=1, outs=0, code_off=0x10631c]
+00000  0054 1cc1                iget-object  # FIELD Lcom/baidu/location/j;->e:Ljava/lang/String;
+00002  0011                     return-object
+
+### Lcom/baidu/location/j;->writeToParcel(Landroid/os/Parcel;,I)V  [access=0x1, regs=5, ins=3, outs=3, code_off=0x106380]
+00000  2454 1cbf                iget-object  # FIELD Lcom/baidu/location/j;->c:Ljava/lang/String;
+00002  206e 0af6 0043           invoke-virtual  # CALL Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+00005  2454 1cc0                iget-object  # FIELD Lcom/baidu/location/j;->d:Ljava/lang/String;
+00007  206e 0af6 0043           invoke-virtual  # CALL Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+0000a  2053 1cbe                iget-wide  # FIELD Lcom/baidu/location/j;->b:D
+0000c  306e 0aee 0103           invoke-virtual  # CALL Landroid/os/Parcel;->writeDouble(D)V
+0000f  2454 1cc1                iget-object  # FIELD Lcom/baidu/location/j;->e:Ljava/lang/String;
+00011  206e 0af6 0043           invoke-virtual  # CALL Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+00014  2254 1cc2                iget-object  # FIELD Lcom/baidu/location/j;->f:Ljava/lang/String;
+00016  206e 0af6 0023           invoke-virtual  # CALL Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+00019  000e                     return-void

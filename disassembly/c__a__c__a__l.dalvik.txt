@@ -1,0 +1,34 @@
+### Lc/a/c/a/l;-><init>(Lc/a/c/a/k;)V  [access=0x10000, regs=2, ins=2, outs=1, code_off=0xff980]
+00000  015b 1b87                iput-object  # FIELD Lc/a/c/a/l;->a:Lc/a/c/a/k;
+00002  1070 2d87 0000           invoke-direct  # CALL Ljava/net/Authenticator;-><init>()V
+00005  000e                     return-void
+
+### Lc/a/c/a/l;->getPasswordAuthentication()Ljava/net/PasswordAuthentication;  [access=0x4, regs=3, ins=1, outs=3, code_off=0xff904]
+00000  2054 1b87                iget-object  # FIELD Lc/a/c/a/l;->a:Lc/a/c/a/k;
+00002  1071 28bd 0000           invoke-static  # CALL Lc/a/c/a/k;->a(Lc/a/c/a/k;)Ljava/lang/String;
+00005  000c                     move-result-object
+00006  1071 1c37 0000           invoke-static  # CALL Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+00009  000a                     move-result
+0000a  0039 0025                if-nez
+0000c  2054 1b87                iget-object  # FIELD Lc/a/c/a/l;->a:Lc/a/c/a/k;
+0000e  1071 28c2 0000           invoke-static  # CALL Lc/a/c/a/k;->b(Lc/a/c/a/k;)Ljava/lang/String;
+00011  000c                     move-result-object
+00012  1071 1c37 0000           invoke-static  # CALL Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+00015  000a                     move-result
+00016  0038 0003                if-eqz
+00018  1728                     goto
+00019  0022 06a1                new-instance  # TYPE Ljava/net/PasswordAuthentication;
+0001b  2154 1b87                iget-object  # FIELD Lc/a/c/a/l;->a:Lc/a/c/a/k;
+0001d  1071 28bd 0001           invoke-static  # CALL Lc/a/c/a/k;->a(Lc/a/c/a/k;)Ljava/lang/String;
+00020  010c                     move-result-object
+00021  2254 1b87                iget-object  # FIELD Lc/a/c/a/l;->a:Lc/a/c/a/k;
+00023  1071 28c2 0002           invoke-static  # CALL Lc/a/c/a/k;->b(Lc/a/c/a/k;)Ljava/lang/String;
+00026  020c                     move-result-object
+00027  106e 2d1b 0002           invoke-virtual  # CALL Ljava/lang/String;->toCharArray()[C
+0002a  020c                     move-result-object
+0002b  3070 2d9a 0210           invoke-direct  # CALL Ljava/net/PasswordAuthentication;-><init>(Ljava/lang/String;,[C)V
+0002e  0011                     return-object
+0002f  021a 133c                const-string  # STR "Proxy Username or Password is null"
+00031  1071 2898 0002           invoke-static  # CALL Lc/a/c/a/d;->a(Ljava/lang/String;)V
+00034  0212                     const/4
+00035  0211                     return-object

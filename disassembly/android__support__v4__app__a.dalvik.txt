@@ -1,0 +1,40 @@
+### Landroid/support/v4/app/a;->a()Landroid/support/v4/app/a$c;  [access=0x9, regs=1, ins=0, outs=0, code_off=0xa4188]
+00000  0062 0c80                sget-object  # FIELD Landroid/support/v4/app/a;->c:Landroid/support/v4/app/a$c;
+00002  0011                     return-object
+
+### Landroid/support/v4/app/a;->a(Landroid/app/Activity;)V  [access=0x9, regs=3, ins=1, outs=1, code_off=0xa41a0]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0113 0010                const/16
+00004  1034 0006                if-lt
+00006  106e 06f8 0002           invoke-virtual  # CALL Landroid/app/Activity;->finishAffinity()V
+00009  0428                     goto
+0000a  106e 06f7 0002           invoke-virtual  # CALL Landroid/app/Activity;->finish()V
+0000d  000e                     return-void
+
+### Landroid/support/v4/app/a;->a(Landroid/app/Activity;,[Ljava/lang/String;,I)V  [access=0x9, regs=5, ins=3, outs=4, code_off=0xa41cc]
+00000  0062 0c80                sget-object  # FIELD Landroid/support/v4/app/a;->c:Landroid/support/v4/app/a$c;
+00002  0038 0009                if-eqz
+00004  4072 0e08 4320           invoke-interface  # CALL Landroid/support/v4/app/a$c;->a(Landroid/app/Activity;,[Ljava/lang/String;,I)Z
+00007  000a                     move-result
+00008  0038 0003                if-eqz
+0000a  000e                     return-void
+0000b  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+0000d  0113 0017                const/16
+0000f  1034 0010                if-lt
+00011  2020 026d                instance-of  # TYPE Landroid/support/v4/app/a$d;
+00013  0038 0008                if-eqz
+00015  2007                     op_07
+00016  001f 026d                check-cast  # TYPE Landroid/support/v4/app/a$d;
+00018  2072 0e09 0040           invoke-interface  # CALL Landroid/support/v4/app/a$d;->a(I)V
+0001b  306e 0729 0432           invoke-virtual  # CALL Landroid/app/Activity;->requestPermissions([Ljava/lang/String;,I)V
+0001e  1628                     goto
+0001f  2020 026b                instance-of  # TYPE Landroid/support/v4/app/a$b;
+00021  0038 0013                if-eqz
+00023  0022 01f6                new-instance  # TYPE Landroid/os/Handler;
+00025  0071 0ac8 0000           invoke-static  # CALL Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+00028  010c                     move-result-object
+00029  2070 0aac 0010           invoke-direct  # CALL Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+0002c  0122 026a                new-instance  # TYPE Landroid/support/v4/app/a$a;
+0002e  4070 0e04 4231           invoke-direct  # CALL Landroid/support/v4/app/a$a;-><init>([Ljava/lang/String;,Landroid/app/Activity;,I)V
+00031  206e 0ab5 0010           invoke-virtual  # CALL Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+00034  000e                     return-void

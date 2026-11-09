@@ -1,0 +1,23 @@
+### Landroid/support/v4/app/b;->a(Landroid/content/Context;,Ljava/lang/String;,Ljava/lang/String;)I  [access=0x9, regs=5, ins=3, outs=3, code_off=0xa4248]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0113 0017                const/16
+00004  1034 000f                if-lt
+00006  001c 0124                const-class  # TYPE Landroid/app/AppOpsManager;
+00008  206e 084b 0002           invoke-virtual  # CALL Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
+0000b  020c                     move-result-object
+0000c  021f 0124                check-cast  # TYPE Landroid/app/AppOpsManager;
+0000e  306e 073c 0432           invoke-virtual  # CALL Landroid/app/AppOpsManager;->noteProxyOpNoThrow(Ljava/lang/String;,Ljava/lang/String;)I
+00011  020a                     move-result
+00012  020f                     return
+00013  1212                     const/4
+00014  020f                     return
+
+### Landroid/support/v4/app/b;->a(Ljava/lang/String;)Ljava/lang/String;  [access=0x9, regs=3, ins=1, outs=1, code_off=0xa4284]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0113 0017                const/16
+00004  1034 0007                if-lt
+00006  1071 073d 0002           invoke-static  # CALL Landroid/app/AppOpsManager;->permissionToOp(Ljava/lang/String;)Ljava/lang/String;
+00009  020c                     move-result-object
+0000a  0211                     return-object
+0000b  0212                     const/4
+0000c  0211                     return-object

@@ -1,0 +1,185 @@
+### Lb/b/d/d/g;-><clinit>()V  [access=0x10008, regs=3, ins=0, outs=0, code_off=0xd0434]
+00000  1012                     const/4
+00001  0023 075c                new-array  # TYPE [Ljava/lang/Class;
+00003  0112                     const/4
+00004  021c 016e                const-class  # TYPE Landroid/content/Context;
+00006  024d 0100                aput-object
+00008  0069 1aa6                sput-object  # FIELD Lb/b/d/d/g;->e:[Ljava/lang/Class;
+0000a  0069 1aa7                sput-object  # FIELD Lb/b/d/d/g;->f:[Ljava/lang/Class;
+0000c  000e                     return-void
+
+### Lb/b/d/d/g;-><init>(Landroid/content/Context;)V  [access=0x10001, regs=4, ins=2, outs=2, code_off=0xd0460]
+00000  2070 1cd6 0032           invoke-direct  # CALL Landroid/view/MenuInflater;-><init>(Landroid/content/Context;)V
+00003  235b 1aa4                iput-object  # FIELD Lb/b/d/d/g;->c:Landroid/content/Context;
+00005  1012                     const/4
+00006  0023 075d                new-array  # TYPE [Ljava/lang/Object;
+00008  0112                     const/4
+00009  034d 0100                aput-object
+0000b  205b 1aa2                iput-object  # FIELD Lb/b/d/d/g;->a:[Ljava/lang/Object;
+0000d  205b 1aa3                iput-object  # FIELD Lb/b/d/d/g;->b:[Ljava/lang/Object;
+0000f  000e                     return-void
+
+### Lb/b/d/d/g;->a(Ljava/lang/Object;)Ljava/lang/Object;  [access=0x2, regs=3, ins=2, outs=2, code_off=0xd03c8]
+00000  2020 011f                instance-of  # TYPE Landroid/app/Activity;
+00002  0038 0003                if-eqz
+00004  0211                     return-object
+00005  2020 016f                instance-of  # TYPE Landroid/content/ContextWrapper;
+00007  0038 000d                if-eqz
+00009  021f 016f                check-cast  # TYPE Landroid/content/ContextWrapper;
+0000b  106e 0862 0002           invoke-virtual  # CALL Landroid/content/ContextWrapper;->getBaseContext()Landroid/content/Context;
+0000e  020c                     move-result-object
+0000f  2070 26c9 0021           invoke-direct  # CALL Lb/b/d/d/g;->a(Ljava/lang/Object;)Ljava/lang/Object;
+00012  010c                     move-result-object
+00013  0111                     return-object
+00014  0211                     return-object
+
+### Lb/b/d/d/g;->a(Lorg/xmlpull/v1/XmlPullParser;,Landroid/util/AttributeSet;,Landroid/view/Menu;)V  [access=0x2, regs=16, ins=4, outs=4, code_off=0xd052c]
+00000  0022 056b                new-instance  # TYPE Lb/b/d/d/g$b;
+00002  3070 26bc 0fc0           invoke-direct  # CALL Lb/b/d/d/g$b;-><init>(Lb/b/d/d/g;,Landroid/view/Menu;)V
+00005  1072 2f34 000d           invoke-interface  # CALL Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
+00008  0f0a                     move-result
+00009  2112                     const/4
+0000a  021a 2145                const-string  # STR "menu"
+0000c  1312                     const/4
+0000d  1f33 0028                if-ne
+0000f  1072 2f36 000d           invoke-interface  # CALL Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
+00012  0f0c                     move-result-object
+00013  206e 2d03 002f           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+00016  040a                     move-result
+00017  0438 0007                if-eqz
+00019  1072 2f38 000d           invoke-interface  # CALL Lorg/xmlpull/v1/XmlPullParser;->next()I
+0001c  0f0a                     move-result
+0001d  1e28                     goto
+0001e  0c22 0680                new-instance  # TYPE Ljava/lang/RuntimeException;
+00020  0d22 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00022  1070 2d35 000d           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00025  0e1a 078a                const-string  # STR "Expecting menu, got "
+00027  206e 2d3f 00ed           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0002a  206e 2d3f 00fd           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0002d  106e 2d44 000d           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00030  0d0c                     move-result-object
+00031  2070 2cee 00dc           invoke-direct  # CALL Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+00034  0c27                     throw
+00035  1072 2f38 000d           invoke-interface  # CALL Lorg/xmlpull/v1/XmlPullParser;->next()I
+00038  0f0a                     move-result
+00039  3f33 ffd0                if-ne
+0003b  0412                     const/4
+0003c  0512                     const/4
+0003d  4807                     op_07
+0003e  5601                     op_01
+0003f  6701                     op_01
+00040  0639 0086                if-nez
+00042  3f32 007c                if-eq
+00044  091a 206b                const-string  # STR "item"
+00046  0a1a 1f1d                const-string  # STR "group"
+00048  1f32 0046                if-eq
+0004a  3b12                     const/4
+0004b  bf32 0004                if-eq
+0004d  0029 006c                goto/16
+0004f  1072 2f36 000d           invoke-interface  # CALL Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
+00052  0f0c                     move-result-object
+00053  0738 000b                if-eqz
+00055  206e 2d03 008f           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+00058  0b0a                     move-result
+00059  0b38 0005                if-eqz
+0005b  4807                     op_07
+0005c  5701                     op_01
+0005d  5c28                     goto
+0005e  206e 2d03 00af           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+00061  0a0a                     move-result
+00062  0a38 0006                if-eqz
+00064  106e 26c5 0000           invoke-virtual  # CALL Lb/b/d/d/g$b;->d()V
+00067  5228                     goto
+00068  206e 2d03 009f           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+0006b  090a                     move-result
+0006c  0938 001a                if-eqz
+0006e  106e 26c4 0000           invoke-virtual  # CALL Lb/b/d/d/g$b;->c()Z
+00071  0f0a                     move-result
+00072  0f39 0047                if-nez
+00074  0f54 1a82                iget-object  # FIELD Lb/b/d/d/g$b;->A:Lb/b/c/g/c;
+00076  0f38 000c                if-eqz
+00078  106e 24e5 000f           invoke-virtual  # CALL Lb/b/c/g/c;->a()Z
+0007b  0f0a                     move-result
+0007c  0f38 0006                if-eqz
+0007e  106e 26c2 0000           invoke-virtual  # CALL Lb/b/d/d/g$b;->b()Landroid/view/SubMenu;
+00081  3828                     goto
+00082  106e 26bf 0000           invoke-virtual  # CALL Lb/b/d/d/g$b;->a()V
+00085  3428                     goto
+00086  206e 2d03 002f           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+00089  0f0a                     move-result
+0008a  0f38 002f                if-eqz
+0008c  3601                     op_01
+0008d  2c28                     goto
+0008e  0738 0003                if-eqz
+00090  2928                     goto
+00091  1072 2f36 000d           invoke-interface  # CALL Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
+00094  0f0c                     move-result-object
+00095  206e 2d03 00af           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+00098  0a0a                     move-result
+00099  0a38 0006                if-eqz
+0009b  206e 26c0 00e0           invoke-virtual  # CALL Lb/b/d/d/g$b;->a(Landroid/util/AttributeSet;)V
+0009e  1b28                     goto
+0009f  206e 2d03 009f           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+000a2  090a                     move-result
+000a3  0938 0006                if-eqz
+000a5  206e 26c3 00e0           invoke-virtual  # CALL Lb/b/d/d/g$b;->b(Landroid/util/AttributeSet;)V
+000a8  1128                     goto
+000a9  206e 2d03 002f           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+000ac  090a                     move-result
+000ad  0938 000a                if-eqz
+000af  106e 26c2 0000           invoke-virtual  # CALL Lb/b/d/d/g$b;->b()Landroid/view/SubMenu;
+000b2  0f0c                     move-result-object
+000b3  4070 26ca fedc           invoke-direct  # CALL Lb/b/d/d/g;->a(Lorg/xmlpull/v1/XmlPullParser;,Landroid/util/AttributeSet;,Landroid/view/Menu;)V
+000b6  0328                     goto
+000b7  f807                     op_07
+000b8  3701                     op_01
+000b9  1072 2f38 000d           invoke-interface  # CALL Lorg/xmlpull/v1/XmlPullParser;->next()I
+000bc  0f0a                     move-result
+000bd  8328                     goto
+000be  0c22 0680                new-instance  # TYPE Ljava/lang/RuntimeException;
+000c0  0d1a 1557                const-string  # STR "Unexpected end of document"
+000c2  2070 2cee 00dc           invoke-direct  # CALL Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+000c5  0c27                     throw
+000c6  000e                     return-void
+
+### Lb/b/d/d/g;->a()Ljava/lang/Object;  [access=0x0, regs=2, ins=1, outs=2, code_off=0xd0404]
+00000  1054 1aa5                iget-object  # FIELD Lb/b/d/d/g;->d:Ljava/lang/Object;
+00002  0039 000a                if-nez
+00004  1054 1aa4                iget-object  # FIELD Lb/b/d/d/g;->c:Landroid/content/Context;
+00006  2070 26c9 0001           invoke-direct  # CALL Lb/b/d/d/g;->a(Ljava/lang/Object;)Ljava/lang/Object;
+00009  000c                     move-result-object
+0000a  105b 1aa5                iput-object  # FIELD Lb/b/d/d/g;->d:Ljava/lang/Object;
+0000c  1154 1aa5                iget-object  # FIELD Lb/b/d/d/g;->d:Ljava/lang/Object;
+0000e  0111                     return-object
+
+### Lb/b/d/d/g;->inflate(I,Landroid/view/Menu;)V  [access=0x1, regs=6, ins=3, outs=4, code_off=0xd0490]
+00000  001a 077d                const-string  # STR "Error inflating menu XML"
+00002  5120 04f3                instance-of  # TYPE Lb/b/c/c/a/a;
+00004  0139 0006                if-nez
+00006  306f 1cd7 0543           invoke-super  # CALL Landroid/view/MenuInflater;->inflate(I,Landroid/view/Menu;)V
+00009  000e                     return-void
+0000a  0112                     const/4
+0000b  3254 1aa4                iget-object  # FIELD Lb/b/d/d/g;->c:Landroid/content/Context;
+0000d  106e 0848 0002           invoke-virtual  # CALL Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+00010  020c                     move-result-object
+00011  206e 08d4 0042           invoke-virtual  # CALL Landroid/content/res/Resources;->getLayout(I)Landroid/content/res/XmlResourceParser;
+00014  010c                     move-result-object
+00015  1071 1c84 0001           invoke-static  # CALL Landroid/util/Xml;->asAttributeSet(Lorg/xmlpull/v1/XmlPullParser;)Landroid/util/AttributeSet;
+00018  040c                     move-result-object
+00019  4070 26ca 5413           invoke-direct  # CALL Lb/b/d/d/g;->a(Lorg/xmlpull/v1/XmlPullParser;,Landroid/util/AttributeSet;,Landroid/view/Menu;)V
+0001c  0138 0005                if-eqz
+0001e  1072 090b 0001           invoke-interface  # CALL Landroid/content/res/XmlResourceParser;->close()V
+00021  000e                     return-void
+00022  030d                     op_0d
+00023  0f28                     goto
+00024  030d                     op_0d
+00025  0422 042c                new-instance  # TYPE Landroid/view/InflateException;
+00027  3070 1c9c 0304           invoke-direct  # CALL Landroid/view/InflateException;-><init>(Ljava/lang/String;,Ljava/lang/Throwable;)V
+0002a  0427                     throw
+0002b  030d                     op_0d
+0002c  0422 042c                new-instance  # TYPE Landroid/view/InflateException;
+0002e  3070 1c9c 0304           invoke-direct  # CALL Landroid/view/InflateException;-><init>(Ljava/lang/String;,Ljava/lang/Throwable;)V
+00031  0427                     throw
+00032  0138 0005                if-eqz
+00034  1072 090b 0001           invoke-interface  # CALL Landroid/content/res/XmlResourceParser;->close()V
+00037  0327                     throw

@@ -1,0 +1,13 @@
+### La/a/a/d/i$d;-><init>(La/a/a/d/i;,[F)V  [access=0x10001, regs=3, ins=3, outs=1, code_off=0x5c944]
+00000  025b 01d4                iput-object  # FIELD La/a/a/d/i$d;->b:[F
+00002  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00005  000e                     return-void
+
+### La/a/a/d/i$d;->run()V  [access=0x1, regs=3, ins=1, outs=3, code_off=0x5c960]
+00000  2254 01d4                iget-object  # FIELD La/a/a/d/i$d;->b:[F
+00002  0012                     const/4
+00003  0244 0002                aget
+00005  0071 2d46 0000           invoke-static  # CALL Ljava/lang/System;->currentTimeMillis()J
+00008  000b                     move-result-wide
+00009  3071 02a8 0102           invoke-static  # CALL La/a/a/d/h;->a(F,J)V
+0000c  000e                     return-void

@@ -1,0 +1,192 @@
+### La/a/a/b/z;-><clinit>()V  [access=0x10009, regs=1, ins=0, outs=1, code_off=0x55df4]
+00000  0022 067b                new-instance  # TYPE Ljava/lang/Object;
+00002  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00005  0069 0153                sput-object  # FIELD La/a/a/b/z;->d:Ljava/lang/Object;
+00007  000e                     return-void
+
+### La/a/a/b/z;-><init>()V  [access=0x10001, regs=2, ins=1, outs=1, code_off=0x55e14]
+00000  1070 2ce0 0001           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  0012                     const/4
+00004  105c 0152                iput-boolean  # FIELD La/a/a/b/z;->c:Z
+00006  000e                     return-void
+
+### La/a/a/b/z;->a(La/a/a/b/z;)Landroid/os/Handler;  [access=0x1009, regs=1, ins=1, outs=0, code_off=0x55ddc]
+00000  0054 0151                iget-object  # FIELD La/a/a/b/z;->b:Landroid/os/Handler;
+00002  0011                     return-object
+
+### La/a/a/b/z;->f()La/a/a/b/z;  [access=0x9, regs=2, ins=0, outs=1, code_off=0x55d94]
+00000  0062 0153                sget-object  # FIELD La/a/a/b/z;->d:Ljava/lang/Object;
+00002  001d                     monitor-enter
+00003  0162 0154                sget-object  # FIELD La/a/a/b/z;->e:La/a/a/b/z;
+00005  0139 0009                if-nez
+00007  0122 0050                new-instance  # TYPE La/a/a/b/z;
+00009  1070 01cd 0001           invoke-direct  # CALL La/a/a/b/z;-><init>()V
+0000c  0169 0154                sput-object  # FIELD La/a/a/b/z;->e:La/a/a/b/z;
+0000e  0162 0154                sget-object  # FIELD La/a/a/b/z;->e:La/a/a/b/z;
+00010  001e                     monitor-exit
+00011  0111                     return-object
+00012  010d                     op_0d
+00013  001e                     monitor-exit
+00014  0127                     throw
+
+### La/a/a/b/z;->a()V  [access=0x1, regs=4, ins=1, outs=4, code_off=0x55f34]
+00000  3055 0152                iget-boolean  # FIELD La/a/a/b/z;->c:Z
+00002  0038 0003                if-eqz
+00004  000e                     return-void
+00005  1012                     const/4
+00006  305c 0152                iput-boolean  # FIELD La/a/a/b/z;->c:Z
+00008  3054 0150                iget-object  # FIELD La/a/a/b/z;->a:Landroid/os/HandlerThread;
+0000a  0039 001f                if-nez
+0000c  0022 01f7                new-instance  # TYPE Landroid/os/HandlerThread;
+0000e  011a 1186                const-string  # STR "LocUploadThreadManager"
+00010  2070 0ac0 0010           invoke-direct  # CALL Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
+00013  305b 0150                iput-object  # FIELD La/a/a/b/z;->a:Landroid/os/HandlerThread;
+00015  106e 0ac5 0000           invoke-virtual  # CALL Landroid/os/HandlerThread;->start()V
+00018  3054 0150                iget-object  # FIELD La/a/a/b/z;->a:Landroid/os/HandlerThread;
+0001a  0038 000f                if-eqz
+0001c  0022 004f                new-instance  # TYPE La/a/a/b/z$a;
+0001e  3154 0150                iget-object  # FIELD La/a/a/b/z;->a:Landroid/os/HandlerThread;
+00020  106e 0ac2 0001           invoke-virtual  # CALL Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
+00023  010c                     move-result-object
+00024  3070 01ca 0130           invoke-direct  # CALL La/a/a/b/z$a;-><init>(La/a/a/b/z;,Landroid/os/Looper;)V
+00027  305b 0151                iput-object  # FIELD La/a/a/b/z;->b:Landroid/os/Handler;
+00029  3054 0151                iget-object  # FIELD La/a/a/b/z;->b:Landroid/os/Handler;
+0002b  0038 000f                if-eqz
+0002d  5112                     const/4
+0002e  206e 0ab3 0010           invoke-virtual  # CALL Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
+00031  000c                     move-result-object
+00032  106e 0ad2 0000           invoke-virtual  # CALL Landroid/os/Message;->sendToTarget()V
+00035  0528                     goto
+00036  000d                     op_0d
+00037  106e 2c96 0000           invoke-virtual  # CALL Ljava/lang/Exception;->printStackTrace()V
+0003a  3354 0151                iget-object  # FIELD La/a/a/b/z;->b:Landroid/os/Handler;
+0003c  0338 000e                if-eqz
+0003e  4012                     const/4
+0003f  0160 0465                sget  # FIELD La/a/a/i/i;->N:I
+00041  1181                     op_81
+00042  406e 0abd 2103           invoke-virtual  # CALL Landroid/os/Handler;->sendEmptyMessageDelayed(I,J)Z
+00045  0528                     goto
+00046  030d                     op_0d
+00047  106e 2c96 0003           invoke-virtual  # CALL Ljava/lang/Exception;->printStackTrace()V
+0004a  000e                     return-void
+
+### La/a/a/b/z;->a(Landroid/location/GnssNavigationMessage;,J)V  [access=0x1, regs=6, ins=4, outs=4, code_off=0x55e34]
+00000  2055 0152                iget-boolean  # FIELD La/a/a/b/z;->c:Z
+00002  0038 0029                if-eqz
+00004  0339 0003                if-nez
+00006  2528                     goto
+00007  2254 0151                iget-object  # FIELD La/a/a/b/z;->b:Landroid/os/Handler;
+00009  0238 0022                if-eqz
+0000b  0013 000b                const/16
+0000d  206e 0ab3 0002           invoke-virtual  # CALL Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
+00010  020c                     move-result-object
+00011  0022 01f1                new-instance  # TYPE Landroid/os/Bundle;
+00013  1070 0a86 0000           invoke-direct  # CALL Landroid/os/Bundle;-><init>()V
+00016  011a 1f08                const-string  # STR "gnss_navigation_message"
+00018  306e 0aa2 0310           invoke-virtual  # CALL Landroid/os/Bundle;->putParcelable(Ljava/lang/String;,Landroid/os/Parcelable;)V
+0001b  031a 1f14                const-string  # STR "gps_time"
+0001d  406e 0aa1 5430           invoke-virtual  # CALL Landroid/os/Bundle;->putLong(Ljava/lang/String;,J)V
+00020  206e 0ad3 0002           invoke-virtual  # CALL Landroid/os/Message;->setData(Landroid/os/Bundle;)V
+00023  106e 0ad2 0002           invoke-virtual  # CALL Landroid/os/Message;->sendToTarget()V
+00026  0528                     goto
+00027  020d                     op_0d
+00028  106e 2c96 0002           invoke-virtual  # CALL Ljava/lang/Exception;->printStackTrace()V
+0002b  000e                     return-void
+
+### La/a/a/b/z;->a(Landroid/location/Location;,I)V  [access=0x1, regs=6, ins=3, outs=3, code_off=0x55eac]
+00000  3055 0152                iget-boolean  # FIELD La/a/a/b/z;->c:Z
+00002  0038 002d                if-eqz
+00004  0439 0003                if-nez
+00006  2928                     goto
+00007  3354 0151                iget-object  # FIELD La/a/a/b/z;->b:Landroid/os/Handler;
+00009  0338 0026                if-eqz
+0000b  1012                     const/4
+0000c  206e 0ab3 0003           invoke-virtual  # CALL Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
+0000f  030c                     move-result-object
+00010  0022 01f1                new-instance  # TYPE Landroid/os/Bundle;
+00012  1070 0a86 0000           invoke-direct  # CALL Landroid/os/Bundle;-><init>()V
+00015  011a 20d1                const-string  # STR "loc"
+00017  0222 01dc                new-instance  # TYPE Landroid/location/Location;
+00019  2070 0a33 0042           invoke-direct  # CALL Landroid/location/Location;-><init>(Landroid/location/Location;)V
+0001c  306e 0aa2 0210           invoke-virtual  # CALL Landroid/os/Bundle;->putParcelable(Ljava/lang/String;,Landroid/os/Parcelable;)V
+0001f  041a 24a5                const-string  # STR "satnum"
+00021  306e 0a9f 0540           invoke-virtual  # CALL Landroid/os/Bundle;->putInt(Ljava/lang/String;,I)V
+00024  206e 0ad3 0003           invoke-virtual  # CALL Landroid/os/Message;->setData(Landroid/os/Bundle;)V
+00027  106e 0ad2 0003           invoke-virtual  # CALL Landroid/os/Message;->sendToTarget()V
+0002a  0528                     goto
+0002b  030d                     op_0d
+0002c  106e 2c96 0003           invoke-virtual  # CALL Ljava/lang/Exception;->printStackTrace()V
+0002f  000e                     return-void
+
+### La/a/a/b/z;->b()V  [access=0x1, regs=3, ins=1, outs=2, code_off=0x55ff8]
+00000  2055 0152                iget-boolean  # FIELD La/a/a/b/z;->c:Z
+00002  0039 0003                if-nez
+00004  000e                     return-void
+00005  0071 00dc 0000           invoke-static  # CALL La/a/a/b/j;->k()La/a/a/b/j;
+00008  000c                     move-result-object
+00009  106e 00da 0000           invoke-virtual  # CALL La/a/a/b/j;->i()V
+0000c  0012                     const/4
+0000d  2154 0151                iget-object  # FIELD La/a/a/b/z;->b:Landroid/os/Handler;
+0000f  0138 000a                if-eqz
+00011  206e 0aba 0001           invoke-virtual  # CALL Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
+00014  0528                     goto
+00015  010d                     op_0d
+00016  106e 2c96 0001           invoke-virtual  # CALL Ljava/lang/Exception;->printStackTrace()V
+00019  205b 0151                iput-object  # FIELD La/a/a/b/z;->b:Landroid/os/Handler;
+0001b  2154 0150                iget-object  # FIELD La/a/a/b/z;->a:Landroid/os/HandlerThread;
+0001d  0138 000f                if-eqz
+0001f  106e 0ac4 0001           invoke-virtual  # CALL Landroid/os/HandlerThread;->quit()Z
+00022  2154 0150                iget-object  # FIELD La/a/a/b/z;->a:Landroid/os/HandlerThread;
+00024  106e 0ac3 0001           invoke-virtual  # CALL Landroid/os/HandlerThread;->interrupt()V
+00027  0528                     goto
+00028  010d                     op_0d
+00029  106e 2c96 0001           invoke-virtual  # CALL Ljava/lang/Exception;->printStackTrace()V
+0002c  205b 0150                iput-object  # FIELD La/a/a/b/z;->a:Landroid/os/HandlerThread;
+0002e  0012                     const/4
+0002f  205c 0152                iput-boolean  # FIELD La/a/a/b/z;->c:Z
+00031  000e                     return-void
+
+### La/a/a/b/z;->c()V  [access=0x1, regs=2, ins=1, outs=2, code_off=0x56088]
+00000  1055 0152                iget-boolean  # FIELD La/a/a/b/z;->c:Z
+00002  0039 0003                if-nez
+00004  000e                     return-void
+00005  1154 0151                iget-object  # FIELD La/a/a/b/z;->b:Landroid/os/Handler;
+00007  0138 000f                if-eqz
+00009  7012                     const/4
+0000a  206e 0ab3 0001           invoke-virtual  # CALL Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
+0000d  010c                     move-result-object
+0000e  106e 0ad2 0001           invoke-virtual  # CALL Landroid/os/Message;->sendToTarget()V
+00011  0528                     goto
+00012  010d                     op_0d
+00013  106e 2c96 0001           invoke-virtual  # CALL Ljava/lang/Exception;->printStackTrace()V
+00016  000e                     return-void
+
+### La/a/a/b/z;->d()V  [access=0x1, regs=2, ins=1, outs=2, code_off=0x560d8]
+00000  1055 0152                iget-boolean  # FIELD La/a/a/b/z;->c:Z
+00002  0039 0003                if-nez
+00004  000e                     return-void
+00005  1154 0151                iget-object  # FIELD La/a/a/b/z;->b:Landroid/os/Handler;
+00007  0138 000f                if-eqz
+00009  3012                     const/4
+0000a  206e 0ab3 0001           invoke-virtual  # CALL Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
+0000d  010c                     move-result-object
+0000e  106e 0ad2 0001           invoke-virtual  # CALL Landroid/os/Message;->sendToTarget()V
+00011  0528                     goto
+00012  010d                     op_0d
+00013  106e 2c96 0001           invoke-virtual  # CALL Ljava/lang/Exception;->printStackTrace()V
+00016  000e                     return-void
+
+### La/a/a/b/z;->e()V  [access=0x1, regs=2, ins=1, outs=2, code_off=0x56128]
+00000  1055 0152                iget-boolean  # FIELD La/a/a/b/z;->c:Z
+00002  0039 0003                if-nez
+00004  000e                     return-void
+00005  1154 0151                iget-object  # FIELD La/a/a/b/z;->b:Landroid/os/Handler;
+00007  0138 000f                if-eqz
+00009  2012                     const/4
+0000a  206e 0ab3 0001           invoke-virtual  # CALL Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
+0000d  010c                     move-result-object
+0000e  106e 0ad2 0001           invoke-virtual  # CALL Landroid/os/Message;->sendToTarget()V
+00011  0528                     goto
+00012  010d                     op_0d
+00013  106e 2c96 0001           invoke-virtual  # CALL Ljava/lang/Exception;->printStackTrace()V
+00016  000e                     return-void

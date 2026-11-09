@@ -1,0 +1,144 @@
+### Landroid/support/v7/widget/q0;-><clinit>()V  [access=0x10008, regs=1, ins=0, outs=1, code_off=0xed3cc]
+00000  0022 067b                new-instance  # TYPE Ljava/lang/Object;
+00002  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00005  0069 11c8                sput-object  # FIELD Landroid/support/v7/widget/q0;->c:Ljava/lang/Object;
+00007  000e                     return-void
+
+### Landroid/support/v7/widget/q0;-><init>(Landroid/content/Context;)V  [access=0x10002, regs=4, ins=2, outs=3, code_off=0xed3ec]
+00000  2070 085f 0032           invoke-direct  # CALL Landroid/content/ContextWrapper;-><init>(Landroid/content/Context;)V
+00003  0071 1b34 0000           invoke-static  # CALL Landroid/support/v7/widget/y0;->b()Z
+00006  000a                     move-result
+00007  0038 001b                if-eqz
+00009  0022 03cc                new-instance  # TYPE Landroid/support/v7/widget/y0;
+0000b  106e 0848 0003           invoke-virtual  # CALL Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+0000e  010c                     move-result-object
+0000f  3070 1b31 0120           invoke-direct  # CALL Landroid/support/v7/widget/y0;-><init>(Landroid/content/Context;,Landroid/content/res/Resources;)V
+00012  205b 11c6                iput-object  # FIELD Landroid/support/v7/widget/q0;->a:Landroid/content/res/Resources;
+00014  106e 08e8 0000           invoke-virtual  # CALL Landroid/content/res/Resources;->newTheme()Landroid/content/res/Resources$Theme;
+00017  000c                     move-result-object
+00018  205b 11c7                iput-object  # FIELD Landroid/support/v7/widget/q0;->b:Landroid/content/res/Resources$Theme;
+0001a  106e 084e 0003           invoke-virtual  # CALL Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
+0001d  020c                     move-result-object
+0001e  206e 08c0 0020           invoke-virtual  # CALL Landroid/content/res/Resources$Theme;->setTo(Landroid/content/res/Resources$Theme;)V
+00021  0f28                     goto
+00022  0022 03b5                new-instance  # TYPE Landroid/support/v7/widget/s0;
+00024  106e 0848 0003           invoke-virtual  # CALL Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+00027  030c                     move-result-object
+00028  3070 1a60 0320           invoke-direct  # CALL Landroid/support/v7/widget/s0;-><init>(Landroid/content/Context;,Landroid/content/res/Resources;)V
+0002b  205b 11c6                iput-object  # FIELD Landroid/support/v7/widget/q0;->a:Landroid/content/res/Resources;
+0002d  0312                     const/4
+0002e  235b 11c7                iput-object  # FIELD Landroid/support/v7/widget/q0;->b:Landroid/content/res/Resources$Theme;
+00030  000e                     return-void
+
+### Landroid/support/v7/widget/q0;->a(Landroid/content/Context;)Z  [access=0xa, regs=3, ins=1, outs=1, code_off=0xed374]
+00000  2020 03b1                instance-of  # TYPE Landroid/support/v7/widget/q0;
+00002  0112                     const/4
+00003  0039 0020                if-nez
+00005  106e 0848 0002           invoke-virtual  # CALL Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+00008  000c                     move-result-object
+00009  0020 03b5                instance-of  # TYPE Landroid/support/v7/widget/s0;
+0000b  0039 0018                if-nez
+0000d  106e 0848 0002           invoke-virtual  # CALL Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+00010  020c                     move-result-object
+00011  2220 03cc                instance-of  # TYPE Landroid/support/v7/widget/y0;
+00013  0238 0003                if-eqz
+00015  0e28                     goto
+00016  0260 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00018  0013 0015                const/16
+0001a  0234 0008                if-lt
+0001c  0071 1b34 0000           invoke-static  # CALL Landroid/support/v7/widget/y0;->b()Z
+0001f  020a                     move-result
+00020  0238 0003                if-eqz
+00022  1112                     const/4
+00023  010f                     return
+
+### Landroid/support/v7/widget/q0;->b(Landroid/content/Context;)Landroid/content/Context;  [access=0x9, regs=5, ins=1, outs=2, code_off=0xed210]
+00000  1071 1a4a 0004           invoke-static  # CALL Landroid/support/v7/widget/q0;->a(Landroid/content/Context;)Z
+00003  000a                     move-result
+00004  0038 0070                if-eqz
+00006  0062 11c8                sget-object  # FIELD Landroid/support/v7/widget/q0;->c:Ljava/lang/Object;
+00008  001d                     monitor-enter
+00009  0162 11c9                sget-object  # FIELD Landroid/support/v7/widget/q0;->d:Ljava/util/ArrayList;
+0000b  0139 000a                if-nez
+0000d  0122 06c8                new-instance  # TYPE Ljava/util/ArrayList;
+0000f  1070 2de7 0001           invoke-direct  # CALL Ljava/util/ArrayList;-><init>()V
+00012  0169 11c9                sput-object  # FIELD Landroid/support/v7/widget/q0;->d:Ljava/util/ArrayList;
+00014  4c28                     goto
+00015  0162 11c9                sget-object  # FIELD Landroid/support/v7/widget/q0;->d:Ljava/util/ArrayList;
+00017  106e 2df8 0001           invoke-virtual  # CALL Ljava/util/ArrayList;->size()I
+0001a  010a                     move-result
+0001b  01d8 ff01                op_d8
+0001d  013a 001a                if-ltz
+0001f  0262 11c9                sget-object  # FIELD Landroid/support/v7/widget/q0;->d:Ljava/util/ArrayList;
+00021  206e 2df0 0012           invoke-virtual  # CALL Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+00024  020c                     move-result-object
+00025  021f 0692                check-cast  # TYPE Ljava/lang/ref/WeakReference;
+00027  0238 0008                if-eqz
+00029  106e 2d68 0002           invoke-virtual  # CALL Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+0002c  020c                     move-result-object
+0002d  0239 0007                if-nez
+0002f  0262 11c9                sget-object  # FIELD Landroid/support/v7/widget/q0;->d:Ljava/util/ArrayList;
+00031  206e 2df4 0012           invoke-virtual  # CALL Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+00034  01d8 ff01                op_d8
+00036  e728                     goto
+00037  0162 11c9                sget-object  # FIELD Landroid/support/v7/widget/q0;->d:Ljava/util/ArrayList;
+00039  106e 2df8 0001           invoke-virtual  # CALL Ljava/util/ArrayList;->size()I
+0003c  010a                     move-result
+0003d  01d8 ff01                op_d8
+0003f  013a 0021                if-ltz
+00041  0262 11c9                sget-object  # FIELD Landroid/support/v7/widget/q0;->d:Ljava/util/ArrayList;
+00043  206e 2df0 0012           invoke-virtual  # CALL Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+00046  020c                     move-result-object
+00047  021f 0692                check-cast  # TYPE Ljava/lang/ref/WeakReference;
+00049  0238 0009                if-eqz
+0004b  106e 2d68 0002           invoke-virtual  # CALL Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+0004e  020c                     move-result-object
+0004f  021f 03b1                check-cast  # TYPE Landroid/support/v7/widget/q0;
+00051  0228                     goto
+00052  0212                     const/4
+00053  0238 000a                if-eqz
+00055  106e 0862 0002           invoke-virtual  # CALL Landroid/content/ContextWrapper;->getBaseContext()Landroid/content/Context;
+00058  030c                     move-result-object
+00059  4333 0004                if-ne
+0005b  001e                     monitor-exit
+0005c  0211                     return-object
+0005d  01d8 ff01                op_d8
+0005f  e028                     goto
+00060  0122 03b1                new-instance  # TYPE Landroid/support/v7/widget/q0;
+00062  2070 1a49 0041           invoke-direct  # CALL Landroid/support/v7/widget/q0;-><init>(Landroid/content/Context;)V
+00065  0462 11c9                sget-object  # FIELD Landroid/support/v7/widget/q0;->d:Ljava/util/ArrayList;
+00067  0222 0692                new-instance  # TYPE Ljava/lang/ref/WeakReference;
+00069  2070 2d67 0012           invoke-direct  # CALL Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+0006c  206e 2deb 0024           invoke-virtual  # CALL Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+0006f  001e                     monitor-exit
+00070  0111                     return-object
+00071  040d                     op_0d
+00072  001e                     monitor-exit
+00073  0427                     throw
+00074  0411                     return-object
+
+### Landroid/support/v7/widget/q0;->getAssets()Landroid/content/res/AssetManager;  [access=0x1, regs=1, ins=1, outs=1, code_off=0xed318]
+00000  0054 11c6                iget-object  # FIELD Landroid/support/v7/widget/q0;->a:Landroid/content/res/Resources;
+00002  106e 08c3 0000           invoke-virtual  # CALL Landroid/content/res/Resources;->getAssets()Landroid/content/res/AssetManager;
+00005  000c                     move-result-object
+00006  0011                     return-object
+
+### Landroid/support/v7/widget/q0;->getResources()Landroid/content/res/Resources;  [access=0x1, regs=1, ins=1, outs=0, code_off=0xed338]
+00000  0054 11c6                iget-object  # FIELD Landroid/support/v7/widget/q0;->a:Landroid/content/res/Resources;
+00002  0011                     return-object
+
+### Landroid/support/v7/widget/q0;->getTheme()Landroid/content/res/Resources$Theme;  [access=0x1, regs=2, ins=1, outs=1, code_off=0xed350]
+00000  1054 11c7                iget-object  # FIELD Landroid/support/v7/widget/q0;->b:Landroid/content/res/Resources$Theme;
+00002  0039 0006                if-nez
+00004  106f 0864 0001           invoke-super  # CALL Landroid/content/ContextWrapper;->getTheme()Landroid/content/res/Resources$Theme;
+00007  000c                     move-result-object
+00008  0011                     return-object
+
+### Landroid/support/v7/widget/q0;->setTheme(I)V  [access=0x1, regs=3, ins=2, outs=3, code_off=0xed460]
+00000  1054 11c7                iget-object  # FIELD Landroid/support/v7/widget/q0;->b:Landroid/content/res/Resources$Theme;
+00002  0039 0006                if-nez
+00004  206f 0865 0021           invoke-super  # CALL Landroid/content/ContextWrapper;->setTheme(I)V
+00007  0528                     goto
+00008  1112                     const/4
+00009  306e 08bb 0120           invoke-virtual  # CALL Landroid/content/res/Resources$Theme;->applyStyle(I,Z)V
+0000c  000e                     return-void

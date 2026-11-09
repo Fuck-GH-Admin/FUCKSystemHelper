@@ -1,0 +1,32 @@
+### Lc/a/b/c/e$d;-><init>([B,B,[B)V  [access=0x10001, regs=4, ins=4, outs=1, code_off=0xf533c]
+00000  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  015b 1aec                iput-object  # FIELD Lc/a/b/c/e$d;->a:[B
+00005  025d 1aed                iput-byte  # FIELD Lc/a/b/c/e$d;->b:B
+00007  035b 1aee                iput-object  # FIELD Lc/a/b/c/e$d;->c:[B
+00009  000e                     return-void
+
+### Lc/a/b/c/e$d;->a()Lc/a/b/n$a;  [access=0x1, regs=8, ins=1, outs=3, code_off=0xf52c4]
+00000  001a 154c                const-string  # STR "UTF-8"
+00002  0112                     const/4
+00003  7254 1aec                iget-object  # FIELD Lc/a/b/c/e$d;->a:[B
+00005  031a 0000                const-string  # STR ""
+00007  1412                     const/4
+00008  3071 2820 0432           invoke-static  # CALL Lc/a/b/g/b;->a([B,Ljava/lang/String;,Z)Ljava/lang/String;
+0000b  020c                     move-result-object
+0000c  0322 0683                new-instance  # TYPE Ljava/lang/String;
+0000e  4423 0720                new-array  # TYPE [B
+00010  0512                     const/4
+00011  7656 1aed                iget-byte  # FIELD Lc/a/b/c/e$d;->b:B
+00013  064f 0504                aput-byte
+00015  3070 2cfb 0043           invoke-direct  # CALL Ljava/lang/String;-><init>([B,Ljava/lang/String;)V
+00018  7454 1aee                iget-object  # FIELD Lc/a/b/c/e$d;->c:[B
+0001a  0438 000a                if-eqz
+0001c  0422 0683                new-instance  # TYPE Ljava/lang/String;
+0001e  7754 1aee                iget-object  # FIELD Lc/a/b/c/e$d;->c:[B
+00020  3070 2cfb 0074           invoke-direct  # CALL Ljava/lang/String;-><init>([B,Ljava/lang/String;)V
+00023  0228                     goto
+00024  1407                     op_07
+00025  3071 2866 0432           invoke-static  # CALL Lc/a/b/n;->a(Ljava/lang/String;,Ljava/lang/String;,Ljava/lang/String;)Lc/a/b/n$a;
+00028  070c                     move-result-object
+00029  0711                     return-object
+0002a  0111                     return-object

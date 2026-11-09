@@ -1,0 +1,2226 @@
+### Landroid/support/v7/app/f;-><clinit>()V  [access=0x10008, regs=5, ins=0, outs=2, code_off=0xc82b0]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0112                     const/4
+00003  1212                     const/4
+00004  0313 0015                const/16
+00006  3035 0004                if-ge
+00008  2001                     op_01
+00009  0228                     goto
+0000a  1001                     op_01
+0000b  006a 0ec6                sput-boolean  # FIELD Landroid/support/v7/app/f;->T:Z
+0000d  2323 0724                new-array  # TYPE [I
+0000f  0414 0054 0101           const
+00012  044b 0103                aput
+00014  0369 0ec7                sput-object  # FIELD Landroid/support/v7/app/f;->U:[I
+00016  0038 0014                if-eqz
+00018  0063 0ec8                sget-boolean  # FIELD Landroid/support/v7/app/f;->V:Z
+0001a  0039 0010                if-nez
+0001c  0071 2d4e 0000           invoke-static  # CALL Ljava/lang/Thread;->getDefaultUncaughtExceptionHandler()Ljava/lang/Thread$UncaughtExceptionHandler;
+0001f  000c                     move-result-object
+00020  0122 02ef                new-instance  # TYPE Landroid/support/v7/app/f$a;
+00022  2070 126d 0001           invoke-direct  # CALL Landroid/support/v7/app/f$a;-><init>(Ljava/lang/Thread$UncaughtExceptionHandler;)V
+00025  1071 2d54 0001           invoke-static  # CALL Ljava/lang/Thread;->setDefaultUncaughtExceptionHandler(Ljava/lang/Thread$UncaughtExceptionHandler;)V
+00028  026a 0ec8                sput-boolean  # FIELD Landroid/support/v7/app/f;->V:Z
+0002a  000e                     return-void
+
+### Landroid/support/v7/app/f;-><init>(Landroid/content/Context;,Landroid/view/Window;,Landroid/support/v7/app/d;)V  [access=0x10000, regs=6, ins=4, outs=3, code_off=0xc8318]
+00000  1070 1255 0002           invoke-direct  # CALL Landroid/support/v7/app/e;-><init>()V
+00003  0012                     const/4
+00004  205b 0ed8                iput-object  # FIELD Landroid/support/v7/app/f;->r:Lb/b/c/g/u;
+00006  1112                     const/4
+00007  215c 0ed9                iput-boolean  # FIELD Landroid/support/v7/app/f;->s:Z
+00009  0113 ff9c                const/16
+0000b  2159 0ebc                iput  # FIELD Landroid/support/v7/app/f;->J:I
+0000d  0122 02f0                new-instance  # TYPE Landroid/support/v7/app/f$b;
+0000f  2070 1270 0021           invoke-direct  # CALL Landroid/support/v7/app/f$b;-><init>(Landroid/support/v7/app/f;)V
+00012  215b 0ec1                iput-object  # FIELD Landroid/support/v7/app/f;->O:Ljava/lang/Runnable;
+00014  235b 0ec9                iput-object  # FIELD Landroid/support/v7/app/f;->c:Landroid/content/Context;
+00016  245b 0eca                iput-object  # FIELD Landroid/support/v7/app/f;->d:Landroid/view/Window;
+00018  255b 0ecd                iput-object  # FIELD Landroid/support/v7/app/f;->g:Landroid/support/v7/app/d;
+0001a  106e 1e71 0004           invoke-virtual  # CALL Landroid/view/Window;->getCallback()Landroid/view/Window$Callback;
+0001d  040c                     move-result-object
+0001e  245b 0ecb                iput-object  # FIELD Landroid/support/v7/app/f;->e:Landroid/view/Window$Callback;
+00020  4520 02fa                instance-of  # TYPE Landroid/support/v7/app/f$j;
+00022  0539 0024                if-nez
+00024  0522 02fa                new-instance  # TYPE Landroid/support/v7/app/f$j;
+00026  3070 128b 0425           invoke-direct  # CALL Landroid/support/v7/app/f$j;-><init>(Landroid/support/v7/app/f;,Landroid/view/Window$Callback;)V
+00029  255b 0ecc                iput-object  # FIELD Landroid/support/v7/app/f;->f:Landroid/view/Window$Callback;
+0002b  2454 0eca                iget-object  # FIELD Landroid/support/v7/app/f;->d:Landroid/view/Window;
+0002d  206e 1e77 0054           invoke-virtual  # CALL Landroid/view/Window;->setCallback(Landroid/view/Window$Callback;)V
+00030  0462 0ec7                sget-object  # FIELD Landroid/support/v7/app/f;->U:[I
+00032  3071 1a71 0403           invoke-static  # CALL Landroid/support/v7/widget/t0;->a(Landroid/content/Context;,Landroid/util/AttributeSet;,[I)Landroid/support/v7/widget/t0;
+00035  030c                     move-result-object
+00036  0412                     const/4
+00037  206e 1a78 0043           invoke-virtual  # CALL Landroid/support/v7/widget/t0;->c(I)Landroid/graphics/drawable/Drawable;
+0003a  040c                     move-result-object
+0003b  0438 0007                if-eqz
+0003d  2254 0eca                iget-object  # FIELD Landroid/support/v7/app/f;->d:Landroid/view/Window;
+0003f  206e 1e76 0042           invoke-virtual  # CALL Landroid/view/Window;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+00042  106e 1a73 0003           invoke-virtual  # CALL Landroid/support/v7/widget/t0;->a()V
+00045  000e                     return-void
+00046  0222 066a                new-instance  # TYPE Ljava/lang/IllegalStateException;
+00048  031a 0366                const-string  # STR "AppCompat has already installed itself into the Window"
+0004a  2070 2ca3 0032           invoke-direct  # CALL Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+0004d  0227                     throw
+
+### Landroid/support/v7/app/f;->A()V  [access=0x2, regs=2, ins=1, outs=2, code_off=0xc90d0]
+00000  1155 0eda                iget-boolean  # FIELD Landroid/support/v7/app/f;->t:Z
+00002  0139 0003                if-nez
+00004  000e                     return-void
+00005  0122 0414                new-instance  # TYPE Landroid/util/AndroidRuntimeException;
+00007  001a 16b7                const-string  # STR "Window feature must be requested before adding content"
+00009  2070 1c4e 0001           invoke-direct  # CALL Landroid/util/AndroidRuntimeException;-><init>(Ljava/lang/String;)V
+0000c  0127                     throw
+
+### Landroid/support/v7/app/f;->a(Landroid/support/v7/app/f$m;,Landroid/view/KeyEvent;)V  [access=0x2, regs=16, ins=3, outs=8, code_off=0xc8c80]
+00000  e055 0ead                iget-boolean  # FIELD Landroid/support/v7/app/f$m;->o:Z
+00002  0039 00f0                if-nez
+00004  d055 0ebb                iget-boolean  # FIELD Landroid/support/v7/app/f;->I:Z
+00006  0038 0004                if-eqz
+00008  0029 00ea                goto/16
+0000a  e052 0e9f                iget  # FIELD Landroid/support/v7/app/f$m;->a:I
+0000c  0112                     const/4
+0000d  1212                     const/4
+0000e  0039 0019                if-nez
+00010  d054 0ec9                iget-object  # FIELD Landroid/support/v7/app/f;->c:Landroid/content/Context;
+00012  106e 0848 0000           invoke-virtual  # CALL Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+00015  000c                     move-result-object
+00016  106e 08c7 0000           invoke-virtual  # CALL Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+00019  000c                     move-result-object
+0001a  0052 0519                iget  # FIELD Landroid/content/res/Configuration;->screenLayout:I
+0001c  00dd 0f00                op_dd
+0001e  4312                     const/4
+0001f  3033 0004                if-ne
+00021  2001                     op_01
+00022  0228                     goto
+00023  1001                     op_01
+00024  0038 0003                if-eqz
+00026  000e                     return-void
+00027  106e 12e8 000d           invoke-virtual  # CALL Landroid/support/v7/app/f;->o()Landroid/view/Window$Callback;
+0002a  000c                     move-result-object
+0002b  0038 0010                if-eqz
+0002d  e352 0e9f                iget  # FIELD Landroid/support/v7/app/f$m;->a:I
+0002f  e454 0ea8                iget-object  # FIELD Landroid/support/v7/app/f$m;->j:Landroid/support/v7/view/menu/h;
+00031  3072 1e64 0430           invoke-interface  # CALL Landroid/view/Window$Callback;->onMenuOpened(I,Landroid/view/Menu;)Z
+00034  000a                     move-result
+00035  0039 0006                if-nez
+00037  306e 12b7 02ed           invoke-virtual  # CALL Landroid/support/v7/app/f;->a(Landroid/support/v7/app/f$m;,Z)V
+0003a  000e                     return-void
+0003b  d054 0ec9                iget-object  # FIELD Landroid/support/v7/app/f;->c:Landroid/content/Context;
+0003d  031a 2892                const-string  # STR "window"
+0003f  206e 084c 0030           invoke-virtual  # CALL Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+00042  000c                     move-result-object
+00043  001f 045d                check-cast  # TYPE Landroid/view/WindowManager;
+00045  0039 0003                if-nez
+00047  000e                     return-void
+00048  3070 12cd 0fed           invoke-direct  # CALL Landroid/support/v7/app/f;->b(Landroid/support/v7/app/f$m;,Landroid/view/KeyEvent;)Z
+0004b  0f0a                     move-result
+0004c  0f39 0003                if-nez
+0004e  000e                     return-void
+0004f  ef54 0ea5                iget-object  # FIELD Landroid/support/v7/app/f$m;->g:Landroid/view/ViewGroup;
+00051  f312                     const/4
+00052  e412                     const/4
+00053  0f38 0017                if-eqz
+00055  ef55 0eaf                iget-boolean  # FIELD Landroid/support/v7/app/f$m;->q:Z
+00057  0f38 0003                if-eqz
+00059  1128                     goto
+0005a  ed54 0ea7                iget-object  # FIELD Landroid/support/v7/app/f$m;->i:Landroid/view/View;
+0005c  0d38 0074                if-eqz
+0005e  106e 1d5b 000d           invoke-virtual  # CALL Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+00061  0d0c                     move-result-object
+00062  0d38 006e                if-eqz
+00064  dd52 1256                iget  # FIELD Landroid/view/ViewGroup$LayoutParams;->width:I
+00066  3d33 006a                if-ne
+00068  3601                     op_01
+00069  6828                     goto
+0006a  ef54 0ea5                iget-object  # FIELD Landroid/support/v7/app/f$m;->g:Landroid/view/ViewGroup;
+0006c  0f39 000d                if-nez
+0006e  2070 12cc 00ed           invoke-direct  # CALL Landroid/support/v7/app/f;->b(Landroid/support/v7/app/f$m;)Z
+00071  0f0a                     move-result
+00072  0f38 0006                if-eqz
+00074  ef54 0ea5                iget-object  # FIELD Landroid/support/v7/app/f$m;->g:Landroid/view/ViewGroup;
+00076  0f39 0012                if-nez
+00078  000e                     return-void
+00079  e355 0eaf                iget-boolean  # FIELD Landroid/support/v7/app/f$m;->q:Z
+0007b  0338 000d                if-eqz
+0007d  106e 1df6 000f           invoke-virtual  # CALL Landroid/view/ViewGroup;->getChildCount()I
+00080  0f0a                     move-result
+00081  0f3d 0007                if-lez
+00083  ef54 0ea5                iget-object  # FIELD Landroid/support/v7/app/f$m;->g:Landroid/view/ViewGroup;
+00085  106e 1e2a 000f           invoke-virtual  # CALL Landroid/view/ViewGroup;->removeAllViews()V
+00088  2070 12c0 00ed           invoke-direct  # CALL Landroid/support/v7/app/f;->a(Landroid/support/v7/app/f$m;)Z
+0008b  0d0a                     move-result
+0008c  0d38 0066                if-eqz
+0008e  106e 12a7 000e           invoke-virtual  # CALL Landroid/support/v7/app/f$m;->a()Z
+00091  0d0a                     move-result
+00092  0d39 0003                if-nez
+00094  5e28                     goto
+00095  ed54 0ea6                iget-object  # FIELD Landroid/support/v7/app/f$m;->h:Landroid/view/View;
+00097  106e 1d5b 000d           invoke-virtual  # CALL Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+0009a  0d0c                     move-result-object
+0009b  0d39 0007                if-nez
+0009d  0d22 0450                new-instance  # TYPE Landroid/view/ViewGroup$LayoutParams;
+0009f  3070 1dd8 044d           invoke-direct  # CALL Landroid/view/ViewGroup$LayoutParams;-><init>(I,I)V
+000a2  ef52 0ea0                iget  # FIELD Landroid/support/v7/app/f$m;->b:I
+000a4  e354 0ea5                iget-object  # FIELD Landroid/support/v7/app/f$m;->g:Landroid/view/ViewGroup;
+000a6  206e 1e34 00f3           invoke-virtual  # CALL Landroid/view/ViewGroup;->setBackgroundResource(I)V
+000a9  ef54 0ea6                iget-object  # FIELD Landroid/support/v7/app/f$m;->h:Landroid/view/View;
+000ab  106e 1d67 000f           invoke-virtual  # CALL Landroid/view/View;->getParent()Landroid/view/ViewParent;
+000ae  0f0c                     move-result-object
+000af  0f38 000d                if-eqz
+000b1  f320 0452                instance-of  # TYPE Landroid/view/ViewGroup;
+000b3  0338 0009                if-eqz
+000b5  0f1f 0452                check-cast  # TYPE Landroid/view/ViewGroup;
+000b7  e354 0ea6                iget-object  # FIELD Landroid/support/v7/app/f$m;->h:Landroid/view/View;
+000b9  206e 1e2c 003f           invoke-virtual  # CALL Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
+000bc  ef54 0ea5                iget-object  # FIELD Landroid/support/v7/app/f$m;->g:Landroid/view/ViewGroup;
+000be  e354 0ea6                iget-object  # FIELD Landroid/support/v7/app/f$m;->h:Landroid/view/View;
+000c0  306e 1dea 0d3f           invoke-virtual  # CALL Landroid/view/ViewGroup;->addView(Landroid/view/View;,Landroid/view/ViewGroup$LayoutParams;)V
+000c3  ed54 0ea6                iget-object  # FIELD Landroid/support/v7/app/f$m;->h:Landroid/view/View;
+000c5  106e 1d81 000d           invoke-virtual  # CALL Landroid/view/View;->hasFocus()Z
+000c8  0d0a                     move-result
+000c9  0d39 0007                if-nez
+000cb  ed54 0ea6                iget-object  # FIELD Landroid/support/v7/app/f$m;->h:Landroid/view/View;
+000cd  106e 1da0 000d           invoke-virtual  # CALL Landroid/view/View;->requestFocus()Z
+000d0  4601                     op_01
+000d1  e15c 0eac                iput-boolean  # FIELD Landroid/support/v7/app/f$m;->n:Z
+000d3  0d22 045c                new-instance  # TYPE Landroid/view/WindowManager$LayoutParams;
+000d5  e712                     const/4
+000d6  e852 0ea2                iget  # FIELD Landroid/support/v7/app/f$m;->d:I
+000d8  e952 0ea3                iget  # FIELD Landroid/support/v7/app/f$m;->e:I
+000da  0a13 03ea                const/16
+000dc  0b15 0082                const/high16
+000de  dc12                     const/4
+000df  d507                     op_07
+000e0  0876 1e82 0005           invoke-direct/range  # CALL Landroid/view/WindowManager$LayoutParams;-><init>(I,I,I,I,I,I,I)V
+000e3  ef52 0ea1                iget  # FIELD Landroid/support/v7/app/f$m;->c:I
+000e5  df59 1262                iput  # FIELD Landroid/view/WindowManager$LayoutParams;->gravity:I
+000e7  ef52 0ea4                iget  # FIELD Landroid/support/v7/app/f$m;->f:I
+000e9  df59 1268                iput  # FIELD Landroid/view/WindowManager$LayoutParams;->windowAnimations:I
+000eb  ef54 0ea5                iget-object  # FIELD Landroid/support/v7/app/f$m;->g:Landroid/view/ViewGroup;
+000ed  3072 1e84 0df0           invoke-interface  # CALL Landroid/view/WindowManager;->addView(Landroid/view/View;,Landroid/view/ViewGroup$LayoutParams;)V
+000f0  e25c 0ead                iput-boolean  # FIELD Landroid/support/v7/app/f$m;->o:Z
+000f2  000e                     return-void
+
+### Landroid/support/v7/app/f;->a(Landroid/support/v7/view/menu/h;,Z)V  [access=0x2, regs=7, ins=3, outs=4, code_off=0xc8e78]
+00000  4554 0ed1                iget-object  # FIELD Landroid/support/v7/app/f;->k:Landroid/support/v7/widget/a0;
+00002  1012                     const/4
+00003  0112                     const/4
+00004  0538 007e                if-eqz
+00006  1072 17e0 0005           invoke-interface  # CALL Landroid/support/v7/widget/a0;->e()Z
+00009  050a                     move-result
+0000a  0538 0078                if-eqz
+0000c  4554 0ec9                iget-object  # FIELD Landroid/support/v7/app/f;->c:Landroid/content/Context;
+0000e  1071 1dcf 0005           invoke-static  # CALL Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
+00011  050c                     move-result-object
+00012  106e 1dd6 0005           invoke-virtual  # CALL Landroid/view/ViewConfiguration;->hasPermanentMenuKey()Z
+00015  050a                     move-result
+00016  0538 000a                if-eqz
+00018  4554 0ed1                iget-object  # FIELD Landroid/support/v7/app/f;->k:Landroid/support/v7/widget/a0;
+0001a  1072 17dd 0005           invoke-interface  # CALL Landroid/support/v7/widget/a0;->b()Z
+0001d  050a                     move-result
+0001e  0538 0064                if-eqz
+00020  106e 12e8 0004           invoke-virtual  # CALL Landroid/support/v7/app/f;->o()Landroid/view/Window$Callback;
+00023  050c                     move-result-object
+00024  4254 0ed1                iget-object  # FIELD Landroid/support/v7/app/f;->k:Landroid/support/v7/widget/a0;
+00026  1072 17df 0002           invoke-interface  # CALL Landroid/support/v7/widget/a0;->d()Z
+00029  020a                     move-result
+0002a  0313 006c                const/16
+0002c  0238 0018                if-eqz
+0002e  0639 0003                if-nez
+00030  1428                     goto
+00031  4654 0ed1                iget-object  # FIELD Landroid/support/v7/app/f;->k:Landroid/support/v7/widget/a0;
+00033  1072 17e1 0006           invoke-interface  # CALL Landroid/support/v7/widget/a0;->f()Z
+00036  4655 0ebb                iget-boolean  # FIELD Landroid/support/v7/app/f;->I:Z
+00038  0639 0049                if-nez
+0003a  306e 12ae 0014           invoke-virtual  # CALL Landroid/support/v7/app/f;->a(I,Z)Landroid/support/v7/app/f$m;
+0003d  040c                     move-result-object
+0003e  4454 0ea8                iget-object  # FIELD Landroid/support/v7/app/f$m;->j:Landroid/support/v7/view/menu/h;
+00040  3072 1e65 0435           invoke-interface  # CALL Landroid/view/Window$Callback;->onPanelClosed(I,Landroid/view/Menu;)V
+00043  3e28                     goto
+00044  0538 003d                if-eqz
+00046  4655 0ebb                iget-boolean  # FIELD Landroid/support/v7/app/f;->I:Z
+00048  0639 0039                if-nez
+0004a  4655 0ebf                iget-boolean  # FIELD Landroid/support/v7/app/f;->M:Z
+0004c  0638 0017                if-eqz
+0004e  4652 0ec0                iget  # FIELD Landroid/support/v7/app/f;->N:I
+00050  06b5                     op_b5
+00051  0638 0012                if-eqz
+00053  4654 0eca                iget-object  # FIELD Landroid/support/v7/app/f;->d:Landroid/view/Window;
+00055  106e 1e72 0006           invoke-virtual  # CALL Landroid/view/Window;->getDecorView()Landroid/view/View;
+00058  060c                     move-result-object
+00059  4254 0ec1                iget-object  # FIELD Landroid/support/v7/app/f;->O:Ljava/lang/Runnable;
+0005b  206e 1d9c 0026           invoke-virtual  # CALL Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
+0005e  4654 0ec1                iget-object  # FIELD Landroid/support/v7/app/f;->O:Ljava/lang/Runnable;
+00060  1072 2ceb 0006           invoke-interface  # CALL Ljava/lang/Runnable;->run()V
+00063  306e 12ae 0014           invoke-virtual  # CALL Landroid/support/v7/app/f;->a(I,Z)Landroid/support/v7/app/f$m;
+00066  060c                     move-result-object
+00067  6054 0ea8                iget-object  # FIELD Landroid/support/v7/app/f$m;->j:Landroid/support/v7/view/menu/h;
+00069  0038 0018                if-eqz
+0006b  6255 0eb0                iget-boolean  # FIELD Landroid/support/v7/app/f$m;->r:Z
+0006d  0239 0014                if-nez
+0006f  6254 0ea7                iget-object  # FIELD Landroid/support/v7/app/f$m;->i:Landroid/view/View;
+00071  4072 1e67 0215           invoke-interface  # CALL Landroid/view/Window$Callback;->onPreparePanel(I,Landroid/view/View;,Landroid/view/Menu;)Z
+00074  000a                     move-result
+00075  0038 000c                if-eqz
+00077  6654 0ea8                iget-object  # FIELD Landroid/support/v7/app/f$m;->j:Landroid/support/v7/view/menu/h;
+00079  3072 1e64 0635           invoke-interface  # CALL Landroid/view/Window$Callback;->onMenuOpened(I,Landroid/view/Menu;)Z
+0007c  4454 0ed1                iget-object  # FIELD Landroid/support/v7/app/f;->k:Landroid/support/v7/widget/a0;
+0007e  1072 17dc 0004           invoke-interface  # CALL Landroid/support/v7/widget/a0;->a()Z
+00081  000e                     return-void
+00082  306e 12ae 0014           invoke-virtual  # CALL Landroid/support/v7/app/f;->a(I,Z)Landroid/support/v7/app/f$m;
+00085  050c                     move-result-object
+00086  505c 0eaf                iput-boolean  # FIELD Landroid/support/v7/app/f$m;->q:Z
+00088  306e 12b7 0154           invoke-virtual  # CALL Landroid/support/v7/app/f;->a(Landroid/support/v7/app/f$m;,Z)V
+0008b  0612                     const/4
+0008c  3070 12b6 0654           invoke-direct  # CALL Landroid/support/v7/app/f;->a(Landroid/support/v7/app/f$m;,Landroid/view/KeyEvent;)V
+0008f  000e                     return-void
+
+### Landroid/support/v7/app/f;->a(Landroid/support/v7/app/f$m;)Z  [access=0x2, regs=5, ins=2, outs=2, code_off=0xc76cc]
+00000  4054 0ea7                iget-object  # FIELD Landroid/support/v7/app/f$m;->i:Landroid/view/View;
+00002  1112                     const/4
+00003  0038 0005                if-eqz
+00005  405b 0ea6                iput-object  # FIELD Landroid/support/v7/app/f$m;->h:Landroid/view/View;
+00007  010f                     return
+00008  4054 0ea8                iget-object  # FIELD Landroid/support/v7/app/f$m;->j:Landroid/support/v7/view/menu/h;
+0000a  0212                     const/4
+0000b  0039 0003                if-nez
+0000d  020f                     return
+0000e  3054 0ed3                iget-object  # FIELD Landroid/support/v7/app/f;->m:Landroid/support/v7/app/f$n;
+00010  0039 0009                if-nez
+00012  0022 02ff                new-instance  # TYPE Landroid/support/v7/app/f$n;
+00014  2070 12a8 0030           invoke-direct  # CALL Landroid/support/v7/app/f$n;-><init>(Landroid/support/v7/app/f;)V
+00017  305b 0ed3                iput-object  # FIELD Landroid/support/v7/app/f;->m:Landroid/support/v7/app/f$n;
+00019  3354 0ed3                iget-object  # FIELD Landroid/support/v7/app/f;->m:Landroid/support/v7/app/f$n;
+0001b  206e 12a4 0034           invoke-virtual  # CALL Landroid/support/v7/app/f$m;->a(Landroid/support/v7/view/menu/o$a;)Landroid/support/v7/view/menu/p;
+0001e  030c                     move-result-object
+0001f  031f 044c                check-cast  # TYPE Landroid/view/View;
+00021  435b 0ea6                iput-object  # FIELD Landroid/support/v7/app/f$m;->h:Landroid/view/View;
+00023  0338 0003                if-eqz
+00025  0228                     goto
+00026  2101                     op_01
+00027  010f                     return
+
+### Landroid/support/v7/app/f;->a(Landroid/support/v7/app/f$m;,I,Landroid/view/KeyEvent;,I)Z  [access=0x2, regs=7, ins=5, outs=4, code_off=0xc7b88]
+00000  106e 1cb3 0005           invoke-virtual  # CALL Landroid/view/KeyEvent;->isSystem()Z
+00003  000a                     move-result
+00004  0112                     const/4
+00005  0038 0003                if-eqz
+00007  010f                     return
+00008  3055 0eab                iget-boolean  # FIELD Landroid/support/v7/app/f$m;->m:Z
+0000a  0039 0008                if-nez
+0000c  3070 12cd 0532           invoke-direct  # CALL Landroid/support/v7/app/f;->b(Landroid/support/v7/app/f$m;,Landroid/view/KeyEvent;)Z
+0000f  000a                     move-result
+00010  0038 000a                if-eqz
+00012  3054 0ea8                iget-object  # FIELD Landroid/support/v7/app/f$m;->j:Landroid/support/v7/view/menu/h;
+00014  0038 0006                if-eqz
+00016  406e 147d 6540           invoke-virtual  # CALL Landroid/support/v7/view/menu/h;->performShortcut(I,Landroid/view/KeyEvent;,I)Z
+00019  010a                     move-result
+0001a  0138 000e                if-eqz
+0001c  1412                     const/4
+0001d  05dd 0106                op_dd
+0001f  0539 0009                if-nez
+00021  2554 0ed1                iget-object  # FIELD Landroid/support/v7/app/f;->k:Landroid/support/v7/widget/a0;
+00023  0539 0005                if-nez
+00025  306e 12b7 0432           invoke-virtual  # CALL Landroid/support/v7/app/f;->a(Landroid/support/v7/app/f$m;,Z)V
+00028  010f                     return
+
+### Landroid/support/v7/app/f;->a(Landroid/view/ViewParent;)Z  [access=0x2, regs=4, ins=2, outs=1, code_off=0xc7eb4]
+00000  0012                     const/4
+00001  0339 0003                if-nez
+00003  000f                     return
+00004  2254 0eca                iget-object  # FIELD Landroid/support/v7/app/f;->d:Landroid/view/Window;
+00006  106e 1e72 0002           invoke-virtual  # CALL Landroid/view/Window;->getDecorView()Landroid/view/View;
+00009  020c                     move-result-object
+0000a  0339 0004                if-nez
+0000c  1212                     const/4
+0000d  020f                     return
+0000e  2332 0015                if-eq
+00010  3120 044c                instance-of  # TYPE Landroid/view/View;
+00012  0138 0011                if-eqz
+00014  3107                     op_07
+00015  011f 044c                check-cast  # TYPE Landroid/view/View;
+00017  1071 2545 0001           invoke-static  # CALL Lb/b/c/g/q;->j(Landroid/view/View;)Z
+0001a  010a                     move-result
+0001b  0138 0003                if-eqz
+0001d  0628                     goto
+0001e  1072 1e3d 0003           invoke-interface  # CALL Landroid/view/ViewParent;->getParent()Landroid/view/ViewParent;
+00021  030c                     move-result-object
+00022  e828                     goto
+00023  000f                     return
+
+### Landroid/support/v7/app/f;->b(Landroid/support/v7/app/f$m;)Z  [access=0x2, regs=4, ins=2, outs=3, code_off=0xc772c]
+00000  106e 12e6 0002           invoke-virtual  # CALL Landroid/support/v7/app/f;->m()Landroid/content/Context;
+00003  000c                     move-result-object
+00004  206e 12a5 0003           invoke-virtual  # CALL Landroid/support/v7/app/f$m;->a(Landroid/content/Context;)V
+00007  0022 02fd                new-instance  # TYPE Landroid/support/v7/app/f$l;
+00009  3154 0eaa                iget-object  # FIELD Landroid/support/v7/app/f$m;->l:Landroid/content/Context;
+0000b  3070 129e 0120           invoke-direct  # CALL Landroid/support/v7/app/f$l;-><init>(Landroid/support/v7/app/f;,Landroid/content/Context;)V
+0000e  305b 0ea5                iput-object  # FIELD Landroid/support/v7/app/f$m;->g:Landroid/view/ViewGroup;
+00010  0213 0051                const/16
+00012  3259 0ea1                iput  # FIELD Landroid/support/v7/app/f$m;->c:I
+00014  1212                     const/4
+00015  020f                     return
+
+### Landroid/support/v7/app/f;->b(Landroid/support/v7/app/f$m;,Landroid/view/KeyEvent;)Z  [access=0x2, regs=11, ins=3, outs=4, code_off=0xc7bec]
+00000  8055 0ebb                iget-boolean  # FIELD Landroid/support/v7/app/f;->I:Z
+00002  0112                     const/4
+00003  0038 0003                if-eqz
+00005  010f                     return
+00006  9055 0eab                iget-boolean  # FIELD Landroid/support/v7/app/f$m;->m:Z
+00008  1212                     const/4
+00009  0038 0003                if-eqz
+0000b  020f                     return
+0000c  8054 0eb9                iget-object  # FIELD Landroid/support/v7/app/f;->G:Landroid/support/v7/app/f$m;
+0000e  0038 0007                if-eqz
+00010  9032 0005                if-eq
+00012  306e 12b7 0108           invoke-virtual  # CALL Landroid/support/v7/app/f;->a(Landroid/support/v7/app/f$m;,Z)V
+00015  106e 12e8 0008           invoke-virtual  # CALL Landroid/support/v7/app/f;->o()Landroid/view/Window$Callback;
+00018  000c                     move-result-object
+00019  0038 000a                if-eqz
+0001b  9352 0e9f                iget  # FIELD Landroid/support/v7/app/f$m;->a:I
+0001d  2072 1e61 0030           invoke-interface  # CALL Landroid/view/Window$Callback;->onCreatePanelView(I)Landroid/view/View;
+00020  030c                     move-result-object
+00021  935b 0ea7                iput-object  # FIELD Landroid/support/v7/app/f$m;->i:Landroid/view/View;
+00023  9352 0e9f                iget  # FIELD Landroid/support/v7/app/f$m;->a:I
+00025  0338 0009                if-eqz
+00027  0413 006c                const/16
+00029  4333 0003                if-ne
+0002b  0328                     goto
+0002c  1301                     op_01
+0002d  0228                     goto
+0002e  2301                     op_01
+0002f  0338 0009                if-eqz
+00031  8454 0ed1                iget-object  # FIELD Landroid/support/v7/app/f;->k:Landroid/support/v7/widget/a0;
+00033  0438 0005                if-eqz
+00035  1072 17de 0004           invoke-interface  # CALL Landroid/support/v7/widget/a0;->c()V
+00038  9454 0ea7                iget-object  # FIELD Landroid/support/v7/app/f$m;->i:Landroid/view/View;
+0003a  0439 00a5                if-nez
+0003c  0338 0005                if-eqz
+0003e  106e 12ed 0008           invoke-virtual  # CALL Landroid/support/v7/app/f;->r()Landroid/support/v7/app/a;
+00041  9454 0ea8                iget-object  # FIELD Landroid/support/v7/app/f$m;->j:Landroid/support/v7/view/menu/h;
+00043  0512                     const/4
+00044  0438 0006                if-eqz
+00046  9455 0eb0                iget-boolean  # FIELD Landroid/support/v7/app/f$m;->r:Z
+00048  0438 004b                if-eqz
+0004a  9454 0ea8                iget-object  # FIELD Landroid/support/v7/app/f$m;->j:Landroid/support/v7/view/menu/h;
+0004c  0439 000d                if-nez
+0004e  2070 12d2 0098           invoke-direct  # CALL Landroid/support/v7/app/f;->c(Landroid/support/v7/app/f$m;)Z
+00051  040a                     move-result
+00052  0438 0006                if-eqz
+00054  9454 0ea8                iget-object  # FIELD Landroid/support/v7/app/f$m;->j:Landroid/support/v7/view/menu/h;
+00056  0439 0003                if-nez
+00058  010f                     return
+00059  0338 001a                if-eqz
+0005b  8454 0ed1                iget-object  # FIELD Landroid/support/v7/app/f;->k:Landroid/support/v7/widget/a0;
+0005d  0438 0016                if-eqz
+0005f  8454 0ed2                iget-object  # FIELD Landroid/support/v7/app/f;->l:Landroid/support/v7/app/f$h;
+00061  0439 0009                if-nez
+00063  0422 02f7                new-instance  # TYPE Landroid/support/v7/app/f$h;
+00065  2070 1281 0084           invoke-direct  # CALL Landroid/support/v7/app/f$h;-><init>(Landroid/support/v7/app/f;)V
+00068  845b 0ed2                iput-object  # FIELD Landroid/support/v7/app/f;->l:Landroid/support/v7/app/f$h;
+0006a  8454 0ed1                iget-object  # FIELD Landroid/support/v7/app/f;->k:Landroid/support/v7/widget/a0;
+0006c  9654 0ea8                iget-object  # FIELD Landroid/support/v7/app/f$m;->j:Landroid/support/v7/view/menu/h;
+0006e  8754 0ed2                iget-object  # FIELD Landroid/support/v7/app/f;->l:Landroid/support/v7/app/f$h;
+00070  3072 17db 0764           invoke-interface  # CALL Landroid/support/v7/widget/a0;->a(Landroid/view/Menu;,Landroid/support/v7/view/menu/o$a;)V
+00073  9454 0ea8                iget-object  # FIELD Landroid/support/v7/app/f$m;->j:Landroid/support/v7/view/menu/h;
+00075  106e 1482 0004           invoke-virtual  # CALL Landroid/support/v7/view/menu/h;->s()V
+00078  9452 0e9f                iget  # FIELD Landroid/support/v7/app/f$m;->a:I
+0007a  9654 0ea8                iget-object  # FIELD Landroid/support/v7/app/f$m;->j:Landroid/support/v7/view/menu/h;
+0007c  3072 1e60 0640           invoke-interface  # CALL Landroid/view/Window$Callback;->onCreatePanelMenu(I,Landroid/view/Menu;)Z
+0007f  040a                     move-result
+00080  0439 0011                if-nez
+00082  206e 12a6 0059           invoke-virtual  # CALL Landroid/support/v7/app/f$m;->a(Landroid/support/v7/view/menu/h;)V
+00085  0338 000b                if-eqz
+00087  8954 0ed1                iget-object  # FIELD Landroid/support/v7/app/f;->k:Landroid/support/v7/widget/a0;
+00089  0938 0007                if-eqz
+0008b  8854 0ed2                iget-object  # FIELD Landroid/support/v7/app/f;->l:Landroid/support/v7/app/f$h;
+0008d  3072 17db 0859           invoke-interface  # CALL Landroid/support/v7/widget/a0;->a(Landroid/view/Menu;,Landroid/support/v7/view/menu/o$a;)V
+00090  010f                     return
+00091  915c 0eb0                iput-boolean  # FIELD Landroid/support/v7/app/f$m;->r:Z
+00093  9454 0ea8                iget-object  # FIELD Landroid/support/v7/app/f$m;->j:Landroid/support/v7/view/menu/h;
+00095  106e 1482 0004           invoke-virtual  # CALL Landroid/support/v7/view/menu/h;->s()V
+00098  9454 0eb1                iget-object  # FIELD Landroid/support/v7/app/f$m;->s:Landroid/os/Bundle;
+0009a  0438 0009                if-eqz
+0009c  9654 0ea8                iget-object  # FIELD Landroid/support/v7/app/f$m;->j:Landroid/support/v7/view/menu/h;
+0009e  206e 1443 0046           invoke-virtual  # CALL Landroid/support/v7/view/menu/h;->a(Landroid/os/Bundle;)V
+000a1  955b 0eb1                iput-object  # FIELD Landroid/support/v7/app/f$m;->s:Landroid/os/Bundle;
+000a3  9454 0ea7                iget-object  # FIELD Landroid/support/v7/app/f$m;->i:Landroid/view/View;
+000a5  9654 0ea8                iget-object  # FIELD Landroid/support/v7/app/f$m;->j:Landroid/support/v7/view/menu/h;
+000a7  4072 1e67 6410           invoke-interface  # CALL Landroid/view/Window$Callback;->onPreparePanel(I,Landroid/view/View;,Landroid/view/Menu;)Z
+000aa  000a                     move-result
+000ab  0039 0013                if-nez
+000ad  0338 000b                if-eqz
+000af  8a54 0ed1                iget-object  # FIELD Landroid/support/v7/app/f;->k:Landroid/support/v7/widget/a0;
+000b1  0a38 0007                if-eqz
+000b3  8854 0ed2                iget-object  # FIELD Landroid/support/v7/app/f;->l:Landroid/support/v7/app/f$h;
+000b5  3072 17db 085a           invoke-interface  # CALL Landroid/support/v7/widget/a0;->a(Landroid/view/Menu;,Landroid/support/v7/view/menu/o$a;)V
+000b8  9854 0ea8                iget-object  # FIELD Landroid/support/v7/app/f$m;->j:Landroid/support/v7/view/menu/h;
+000ba  106e 147f 0008           invoke-virtual  # CALL Landroid/support/v7/view/menu/h;->r()V
+000bd  010f                     return
+000be  0a38 0007                if-eqz
+000c0  106e 1ca6 000a           invoke-virtual  # CALL Landroid/view/KeyEvent;->getDeviceId()I
+000c3  0a0a                     move-result
+000c4  0228                     goto
+000c5  fa12                     const/4
+000c6  1071 1ca0 000a           invoke-static  # CALL Landroid/view/KeyCharacterMap;->load(I)Landroid/view/KeyCharacterMap;
+000c9  0a0c                     move-result-object
+000ca  106e 1c9f 000a           invoke-virtual  # CALL Landroid/view/KeyCharacterMap;->getKeyboardType()I
+000cd  0a0a                     move-result
+000ce  2a32 0004                if-eq
+000d0  2a01                     op_01
+000d1  0228                     goto
+000d2  1a01                     op_01
+000d3  9a5c 0eae                iput-boolean  # FIELD Landroid/support/v7/app/f$m;->p:Z
+000d5  9054 0ea8                iget-object  # FIELD Landroid/support/v7/app/f$m;->j:Landroid/support/v7/view/menu/h;
+000d7  206e 1487 00a0           invoke-virtual  # CALL Landroid/support/v7/view/menu/h;->setQwertyMode(Z)V
+000da  9a54 0ea8                iget-object  # FIELD Landroid/support/v7/app/f$m;->j:Landroid/support/v7/view/menu/h;
+000dc  106e 147f 000a           invoke-virtual  # CALL Landroid/support/v7/view/menu/h;->r()V
+000df  925c 0eab                iput-boolean  # FIELD Landroid/support/v7/app/f$m;->m:Z
+000e1  915c 0eac                iput-boolean  # FIELD Landroid/support/v7/app/f$m;->n:Z
+000e3  895b 0eb9                iput-object  # FIELD Landroid/support/v7/app/f;->G:Landroid/support/v7/app/f$m;
+000e5  020f                     return
+
+### Landroid/support/v7/app/f;->c(Landroid/support/v7/app/f$m;)Z  [access=0x2, regs=8, ins=2, outs=4, code_off=0xc7768]
+00000  6054 0ec9                iget-object  # FIELD Landroid/support/v7/app/f;->c:Landroid/content/Context;
+00002  7152 0e9f                iget  # FIELD Landroid/support/v7/app/f$m;->a:I
+00004  1212                     const/4
+00005  0138 0006                if-eqz
+00007  0313 006c                const/16
+00009  3133 005a                if-ne
+0000b  6154 0ed1                iget-object  # FIELD Landroid/support/v7/app/f;->k:Landroid/support/v7/widget/a0;
+0000d  0138 0056                if-eqz
+0000f  0122 041f                new-instance  # TYPE Landroid/util/TypedValue;
+00011  1070 1c7e 0001           invoke-direct  # CALL Landroid/util/TypedValue;-><init>()V
+00014  106e 084e 0000           invoke-virtual  # CALL Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
+00017  030c                     move-result-object
+00018  0460 1414                sget  # FIELD Lb/b/d/a/a;->actionBarTheme:I
+0001a  406e 08bf 2143           invoke-virtual  # CALL Landroid/content/res/Resources$Theme;->resolveAttribute(I,Landroid/util/TypedValue;,Z)Z
+0001d  0412                     const/4
+0001e  1552 1251                iget  # FIELD Landroid/util/TypedValue;->resourceId:I
+00020  0538 0018                if-eqz
+00022  106e 0848 0000           invoke-virtual  # CALL Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+00025  040c                     move-result-object
+00026  106e 08e8 0004           invoke-virtual  # CALL Landroid/content/res/Resources;->newTheme()Landroid/content/res/Resources$Theme;
+00029  040c                     move-result-object
+0002a  206e 08c0 0034           invoke-virtual  # CALL Landroid/content/res/Resources$Theme;->setTo(Landroid/content/res/Resources$Theme;)V
+0002d  1552 1251                iget  # FIELD Landroid/util/TypedValue;->resourceId:I
+0002f  306e 08bb 0254           invoke-virtual  # CALL Landroid/content/res/Resources$Theme;->applyStyle(I,Z)V
+00032  0560 1415                sget  # FIELD Lb/b/d/a/a;->actionBarWidgetTheme:I
+00034  406e 08bf 2154           invoke-virtual  # CALL Landroid/content/res/Resources$Theme;->resolveAttribute(I,Landroid/util/TypedValue;,Z)Z
+00037  0628                     goto
+00038  0560 1415                sget  # FIELD Lb/b/d/a/a;->actionBarWidgetTheme:I
+0003a  406e 08bf 2153           invoke-virtual  # CALL Landroid/content/res/Resources$Theme;->resolveAttribute(I,Landroid/util/TypedValue;,Z)Z
+0003d  1552 1251                iget  # FIELD Landroid/util/TypedValue;->resourceId:I
+0003f  0538 0014                if-eqz
+00041  0439 000d                if-nez
+00043  106e 0848 0000           invoke-virtual  # CALL Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+00046  040c                     move-result-object
+00047  106e 08e8 0004           invoke-virtual  # CALL Landroid/content/res/Resources;->newTheme()Landroid/content/res/Resources$Theme;
+0004a  040c                     move-result-object
+0004b  206e 08c0 0034           invoke-virtual  # CALL Landroid/content/res/Resources$Theme;->setTo(Landroid/content/res/Resources$Theme;)V
+0004e  1152 1251                iget  # FIELD Landroid/util/TypedValue;->resourceId:I
+00050  306e 08bb 0214           invoke-virtual  # CALL Landroid/content/res/Resources$Theme;->applyStyle(I,Z)V
+00053  0438 0010                if-eqz
+00055  0122 0566                new-instance  # TYPE Lb/b/d/d/d;
+00057  0312                     const/4
+00058  3070 2683 0301           invoke-direct  # CALL Lb/b/d/d/d;-><init>(Landroid/content/Context;,I)V
+0005b  106e 268d 0001           invoke-virtual  # CALL Lb/b/d/d/d;->getTheme()Landroid/content/res/Resources$Theme;
+0005e  000c                     move-result-object
+0005f  206e 08c0 0040           invoke-virtual  # CALL Landroid/content/res/Resources$Theme;->setTo(Landroid/content/res/Resources$Theme;)V
+00062  1007                     op_07
+00063  0122 0320                new-instance  # TYPE Landroid/support/v7/view/menu/h;
+00065  2070 1436 0001           invoke-direct  # CALL Landroid/support/v7/view/menu/h;-><init>(Landroid/content/Context;)V
+00068  206e 1444 0061           invoke-virtual  # CALL Landroid/support/v7/view/menu/h;->a(Landroid/support/v7/view/menu/h$a;)V
+0006b  206e 12a6 0017           invoke-virtual  # CALL Landroid/support/v7/app/f$m;->a(Landroid/support/v7/view/menu/h;)V
+0006e  020f                     return
+
+### Landroid/support/v7/app/f;->d(I,Landroid/view/KeyEvent;)Z  [access=0x2, regs=4, ins=3, outs=3, code_off=0xc78f8]
+00000  106e 1cac 0003           invoke-virtual  # CALL Landroid/view/KeyEvent;->getRepeatCount()I
+00003  000a                     move-result
+00004  0039 0010                if-nez
+00006  1012                     const/4
+00007  306e 12ae 0021           invoke-virtual  # CALL Landroid/support/v7/app/f;->a(I,Z)Landroid/support/v7/app/f$m;
+0000a  020c                     move-result-object
+0000b  2055 0ead                iget-boolean  # FIELD Landroid/support/v7/app/f$m;->o:Z
+0000d  0039 0007                if-nez
+0000f  3070 12cd 0321           invoke-direct  # CALL Landroid/support/v7/app/f;->b(Landroid/support/v7/app/f$m;,Landroid/view/KeyEvent;)Z
+00012  010a                     move-result
+00013  010f                     return
+00014  0112                     const/4
+00015  010f                     return
+
+### Landroid/support/v7/app/f;->e(I,Landroid/view/KeyEvent;)Z  [access=0x2, regs=6, ins=3, outs=3, code_off=0xc7a24]
+00000  3054 0ed4                iget-object  # FIELD Landroid/support/v7/app/f;->n:Lb/b/d/d/b;
+00002  0112                     const/4
+00003  0038 0003                if-eqz
+00005  010f                     return
+00006  1012                     const/4
+00007  306e 12ae 0043           invoke-virtual  # CALL Landroid/support/v7/app/f;->a(I,Z)Landroid/support/v7/app/f$m;
+0000a  020c                     move-result-object
+0000b  0439 0038                if-nez
+0000d  3454 0ed1                iget-object  # FIELD Landroid/support/v7/app/f;->k:Landroid/support/v7/widget/a0;
+0000f  0438 0034                if-eqz
+00011  1072 17e0 0004           invoke-interface  # CALL Landroid/support/v7/widget/a0;->e()Z
+00014  040a                     move-result
+00015  0438 002e                if-eqz
+00017  3454 0ec9                iget-object  # FIELD Landroid/support/v7/app/f;->c:Landroid/content/Context;
+00019  1071 1dcf 0004           invoke-static  # CALL Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
+0001c  040c                     move-result-object
+0001d  106e 1dd6 0004           invoke-virtual  # CALL Landroid/view/ViewConfiguration;->hasPermanentMenuKey()Z
+00020  040a                     move-result
+00021  0439 0022                if-nez
+00023  3454 0ed1                iget-object  # FIELD Landroid/support/v7/app/f;->k:Landroid/support/v7/widget/a0;
+00025  1072 17df 0004           invoke-interface  # CALL Landroid/support/v7/widget/a0;->d()Z
+00028  040a                     move-result
+00029  0439 0013                if-nez
+0002b  3455 0ebb                iget-boolean  # FIELD Landroid/support/v7/app/f;->I:Z
+0002d  0439 0035                if-nez
+0002f  3070 12cd 0523           invoke-direct  # CALL Landroid/support/v7/app/f;->b(Landroid/support/v7/app/f$m;,Landroid/view/KeyEvent;)Z
+00032  040a                     move-result
+00033  0438 002f                if-eqz
+00035  3454 0ed1                iget-object  # FIELD Landroid/support/v7/app/f;->k:Landroid/support/v7/widget/a0;
+00037  1072 17dc 0004           invoke-interface  # CALL Landroid/support/v7/widget/a0;->a()Z
+0003a  000a                     move-result
+0003b  2f28                     goto
+0003c  3454 0ed1                iget-object  # FIELD Landroid/support/v7/app/f;->k:Landroid/support/v7/widget/a0;
+0003e  1072 17e1 0004           invoke-interface  # CALL Landroid/support/v7/widget/a0;->f()Z
+00041  000a                     move-result
+00042  2828                     goto
+00043  2455 0ead                iget-boolean  # FIELD Landroid/support/v7/app/f$m;->o:Z
+00045  0439 001f                if-nez
+00047  2455 0eac                iget-boolean  # FIELD Landroid/support/v7/app/f$m;->n:Z
+00049  0438 0003                if-eqz
+0004b  1928                     goto
+0004c  2455 0eab                iget-boolean  # FIELD Landroid/support/v7/app/f$m;->m:Z
+0004e  0438 0014                if-eqz
+00050  2455 0eb0                iget-boolean  # FIELD Landroid/support/v7/app/f$m;->r:Z
+00052  0438 0009                if-eqz
+00054  215c 0eab                iput-boolean  # FIELD Landroid/support/v7/app/f$m;->m:Z
+00056  3070 12cd 0523           invoke-direct  # CALL Landroid/support/v7/app/f;->b(Landroid/support/v7/app/f$m;,Landroid/view/KeyEvent;)Z
+00059  040a                     move-result
+0005a  0228                     goto
+0005b  0401                     op_01
+0005c  0438 0006                if-eqz
+0005e  3070 12b6 0523           invoke-direct  # CALL Landroid/support/v7/app/f;->a(Landroid/support/v7/app/f$m;,Landroid/view/KeyEvent;)V
+00061  0928                     goto
+00062  1001                     op_01
+00063  0728                     goto
+00064  2455 0ead                iget-boolean  # FIELD Landroid/support/v7/app/f$m;->o:Z
+00066  306e 12b7 0023           invoke-virtual  # CALL Landroid/support/v7/app/f;->a(Landroid/support/v7/app/f$m;,Z)V
+00069  4001                     op_01
+0006a  0038 0019                if-eqz
+0006c  3354 0ec9                iget-object  # FIELD Landroid/support/v7/app/f;->c:Landroid/content/Context;
+0006e  041a 1982                const-string  # STR "audio"
+00070  206e 084c 0043           invoke-virtual  # CALL Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+00073  030c                     move-result-object
+00074  031f 01e0                check-cast  # TYPE Landroid/media/AudioManager;
+00076  0338 0006                if-eqz
+00078  206e 0a59 0013           invoke-virtual  # CALL Landroid/media/AudioManager;->playSoundEffect(I)V
+0007b  0828                     goto
+0007c  031a 0367                const-string  # STR "AppCompatDelegate"
+0007e  041a 06ce                const-string  # STR "Couldn't get audio manager"
+00080  2071 1c61 0043           invoke-static  # CALL Landroid/util/Log;->w(Ljava/lang/String;,Ljava/lang/String;)I
+00083  000f                     return
+
+### Landroid/support/v7/app/f;->j(I)V  [access=0x2, regs=4, ins=2, outs=2, code_off=0xc89c0]
+00000  2052 0ec0                iget  # FIELD Landroid/support/v7/app/f;->N:I
+00002  1112                     const/4
+00003  0398 0301                int-shl
+00005  03b6                     op_b6
+00006  2359 0ec0                iput  # FIELD Landroid/support/v7/app/f;->N:I
+00008  2355 0ebf                iget-boolean  # FIELD Landroid/support/v7/app/f;->M:Z
+0000a  0339 000f                if-nez
+0000c  2354 0eca                iget-object  # FIELD Landroid/support/v7/app/f;->d:Landroid/view/Window;
+0000e  106e 1e72 0003           invoke-virtual  # CALL Landroid/view/Window;->getDecorView()Landroid/view/View;
+00011  030c                     move-result-object
+00012  2054 0ec1                iget-object  # FIELD Landroid/support/v7/app/f;->O:Ljava/lang/Runnable;
+00014  2071 2538 0003           invoke-static  # CALL Lb/b/c/g/q;->a(Landroid/view/View;,Ljava/lang/Runnable;)V
+00017  215c 0ebf                iput-boolean  # FIELD Landroid/support/v7/app/f;->M:Z
+00019  000e                     return-void
+
+### Landroid/support/v7/app/f;->k(I)I  [access=0x2, regs=3, ins=2, outs=2, code_off=0xc80bc]
+00000  011a 0367                const-string  # STR "AppCompatDelegate"
+00002  0013 0008                const/16
+00004  0233 000a                if-ne
+00006  021a 16c4                const-string  # STR "You should now use the AppCompatDelegate.FEATURE_SUPPORT_ACTION_BAR id when requesting this feature."
+00008  2071 1c5e 0021           invoke-static  # CALL Landroid/util/Log;->i(Ljava/lang/String;,Ljava/lang/String;)I
+0000b  0113 006c                const/16
+0000d  010f                     return
+0000e  0013 0009                const/16
+00010  0233 000a                if-ne
+00012  021a 16c5                const-string  # STR "You should now use the AppCompatDelegate.FEATURE_SUPPORT_ACTION_BAR_OVERLAY id when requesting this feature."
+00014  2071 1c5e 0021           invoke-static  # CALL Landroid/util/Log;->i(Ljava/lang/String;,Ljava/lang/String;)I
+00017  0113 006d                const/16
+00019  010f                     return
+0001a  020f                     return
+
+### Landroid/support/v7/app/f;->l(I)Z  [access=0x2, regs=6, ins=2, outs=3, code_off=0xc7f94]
+00000  4054 0ec9                iget-object  # FIELD Landroid/support/v7/app/f;->c:Landroid/content/Context;
+00002  106e 0848 0000           invoke-virtual  # CALL Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+00005  000c                     move-result-object
+00006  106e 08c7 0000           invoke-virtual  # CALL Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+00009  010c                     move-result-object
+0000a  1252 051c                iget  # FIELD Landroid/content/res/Configuration;->uiMode:I
+0000c  02dd 3002                op_dd
+0000e  2312                     const/4
+0000f  3533 0005                if-ne
+00011  0513 0020                const/16
+00013  0328                     goto
+00014  0513 0010                const/16
+00016  5232 002e                if-eq
+00018  1070 12f5 0004           invoke-direct  # CALL Landroid/support/v7/app/f;->z()Z
+0001b  020a                     move-result
+0001c  0238 000a                if-eqz
+0001e  4454 0ec9                iget-object  # FIELD Landroid/support/v7/app/f;->c:Landroid/content/Context;
+00020  041f 011f                check-cast  # TYPE Landroid/app/Activity;
+00022  106e 0728 0004           invoke-virtual  # CALL Landroid/app/Activity;->recreate()V
+00025  1d28                     goto
+00026  0422 0188                new-instance  # TYPE Landroid/content/res/Configuration;
+00028  2070 08b6 0014           invoke-direct  # CALL Landroid/content/res/Configuration;-><init>(Landroid/content/res/Configuration;)V
+0002b  106e 08cb 0000           invoke-virtual  # CALL Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+0002e  010c                     move-result-object
+0002f  4252 051c                iget  # FIELD Landroid/content/res/Configuration;->uiMode:I
+00031  02dd cf02                op_dd
+00033  25b6                     op_b6
+00034  4559 051c                iput  # FIELD Landroid/content/res/Configuration;->uiMode:I
+00036  306e 08f0 0140           invoke-virtual  # CALL Landroid/content/res/Resources;->updateConfiguration(Landroid/content/res/Configuration;,Landroid/util/DisplayMetrics;)V
+00039  0460 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+0003b  0513 001a                const/16
+0003d  5435 0005                if-ge
+0003f  1071 130b 0000           invoke-static  # CALL Landroid/support/v7/app/h;->a(Landroid/content/res/Resources;)V
+00042  1412                     const/4
+00043  040f                     return
+00044  0412                     const/4
+00045  040f                     return
+
+### Landroid/support/v7/app/f;->t()V  [access=0x2, regs=6, ins=1, outs=5, code_off=0xc8404]
+00000  5054 0edb                iget-object  # FIELD Landroid/support/v7/app/f;->u:Landroid/view/ViewGroup;
+00002  0114 0002 0102           const
+00005  206e 1df0 0010           invoke-virtual  # CALL Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
+00008  000c                     move-result-object
+00009  001f 034d                check-cast  # TYPE Landroid/support/v7/widget/ContentFrameLayout;
+0000b  5154 0eca                iget-object  # FIELD Landroid/support/v7/app/f;->d:Landroid/view/Window;
+0000d  106e 1e72 0001           invoke-virtual  # CALL Landroid/view/Window;->getDecorView()Landroid/view/View;
+00010  010c                     move-result-object
+00011  106e 1d64 0001           invoke-virtual  # CALL Landroid/view/View;->getPaddingLeft()I
+00014  020a                     move-result
+00015  106e 1d66 0001           invoke-virtual  # CALL Landroid/view/View;->getPaddingTop()I
+00018  030a                     move-result
+00019  106e 1d65 0001           invoke-virtual  # CALL Landroid/view/View;->getPaddingRight()I
+0001c  040a                     move-result
+0001d  106e 1d63 0001           invoke-virtual  # CALL Landroid/view/View;->getPaddingBottom()I
+00020  010a                     move-result
+00021  516e 1691 4320           invoke-virtual  # CALL Landroid/support/v7/widget/ContentFrameLayout;->a(I,I,I,I)V
+00024  5554 0ec9                iget-object  # FIELD Landroid/support/v7/app/f;->c:Landroid/content/Context;
+00026  0162 18bb                sget-object  # FIELD Lb/b/d/a/j;->AppCompatTheme:[I
+00028  206e 0853 0015           invoke-virtual  # CALL Landroid/content/Context;->obtainStyledAttributes([I)Landroid/content/res/TypedArray;
+0002b  050c                     move-result-object
+0002c  0160 1932                sget  # FIELD Lb/b/d/a/j;->AppCompatTheme_windowMinWidthMajor:I
+0002e  106e 1697 0000           invoke-virtual  # CALL Landroid/support/v7/widget/ContentFrameLayout;->getMinWidthMajor()Landroid/util/TypedValue;
+00031  020c                     move-result-object
+00032  306e 0906 0215           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getValue(I,Landroid/util/TypedValue;)Z
+00035  0160 1933                sget  # FIELD Lb/b/d/a/j;->AppCompatTheme_windowMinWidthMinor:I
+00037  106e 1698 0000           invoke-virtual  # CALL Landroid/support/v7/widget/ContentFrameLayout;->getMinWidthMinor()Landroid/util/TypedValue;
+0003a  020c                     move-result-object
+0003b  306e 0906 0215           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getValue(I,Landroid/util/TypedValue;)Z
+0003e  0160 1930                sget  # FIELD Lb/b/d/a/j;->AppCompatTheme_windowFixedWidthMajor:I
+00040  206e 0907 0015           invoke-virtual  # CALL Landroid/content/res/TypedArray;->hasValue(I)Z
+00043  010a                     move-result
+00044  0138 000b                if-eqz
+00046  0160 1930                sget  # FIELD Lb/b/d/a/j;->AppCompatTheme_windowFixedWidthMajor:I
+00048  106e 1695 0000           invoke-virtual  # CALL Landroid/support/v7/widget/ContentFrameLayout;->getFixedWidthMajor()Landroid/util/TypedValue;
+0004b  020c                     move-result-object
+0004c  306e 0906 0215           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getValue(I,Landroid/util/TypedValue;)Z
+0004f  0160 1931                sget  # FIELD Lb/b/d/a/j;->AppCompatTheme_windowFixedWidthMinor:I
+00051  206e 0907 0015           invoke-virtual  # CALL Landroid/content/res/TypedArray;->hasValue(I)Z
+00054  010a                     move-result
+00055  0138 000b                if-eqz
+00057  0160 1931                sget  # FIELD Lb/b/d/a/j;->AppCompatTheme_windowFixedWidthMinor:I
+00059  106e 1696 0000           invoke-virtual  # CALL Landroid/support/v7/widget/ContentFrameLayout;->getFixedWidthMinor()Landroid/util/TypedValue;
+0005c  020c                     move-result-object
+0005d  306e 0906 0215           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getValue(I,Landroid/util/TypedValue;)Z
+00060  0160 192e                sget  # FIELD Lb/b/d/a/j;->AppCompatTheme_windowFixedHeightMajor:I
+00062  206e 0907 0015           invoke-virtual  # CALL Landroid/content/res/TypedArray;->hasValue(I)Z
+00065  010a                     move-result
+00066  0138 000b                if-eqz
+00068  0160 192e                sget  # FIELD Lb/b/d/a/j;->AppCompatTheme_windowFixedHeightMajor:I
+0006a  106e 1693 0000           invoke-virtual  # CALL Landroid/support/v7/widget/ContentFrameLayout;->getFixedHeightMajor()Landroid/util/TypedValue;
+0006d  020c                     move-result-object
+0006e  306e 0906 0215           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getValue(I,Landroid/util/TypedValue;)Z
+00071  0160 192f                sget  # FIELD Lb/b/d/a/j;->AppCompatTheme_windowFixedHeightMinor:I
+00073  206e 0907 0015           invoke-virtual  # CALL Landroid/content/res/TypedArray;->hasValue(I)Z
+00076  010a                     move-result
+00077  0138 000b                if-eqz
+00079  0160 192f                sget  # FIELD Lb/b/d/a/j;->AppCompatTheme_windowFixedHeightMinor:I
+0007b  106e 1694 0000           invoke-virtual  # CALL Landroid/support/v7/widget/ContentFrameLayout;->getFixedHeightMinor()Landroid/util/TypedValue;
+0007e  020c                     move-result-object
+0007f  306e 0906 0215           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getValue(I,Landroid/util/TypedValue;)Z
+00082  106e 090a 0005           invoke-virtual  # CALL Landroid/content/res/TypedArray;->recycle()V
+00085  106e 1f98 0000           invoke-virtual  # CALL Landroid/widget/FrameLayout;->requestLayout()V
+00088  000e                     return-void
+
+### Landroid/support/v7/app/f;->u()Landroid/view/ViewGroup;  [access=0x2, regs=8, ins=1, outs=4, code_off=0xc726c]
+00000  7054 0ec9                iget-object  # FIELD Landroid/support/v7/app/f;->c:Landroid/content/Context;
+00002  0162 18bb                sget-object  # FIELD Lb/b/d/a/j;->AppCompatTheme:[I
+00004  206e 0853 0010           invoke-virtual  # CALL Landroid/content/Context;->obtainStyledAttributes([I)Landroid/content/res/TypedArray;
+00007  000c                     move-result-object
+00008  0160 192b                sget  # FIELD Lb/b/d/a/j;->AppCompatTheme_windowActionBar:I
+0000a  206e 0907 0010           invoke-virtual  # CALL Landroid/content/res/TypedArray;->hasValue(I)Z
+0000d  010a                     move-result
+0000e  0138 018b                if-eqz
+00010  0160 1934                sget  # FIELD Lb/b/d/a/j;->AppCompatTheme_windowNoTitle:I
+00012  0212                     const/4
+00013  306e 08f1 0210           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getBoolean(I,Z)Z
+00016  010a                     move-result
+00017  1312                     const/4
+00018  0138 0006                if-eqz
+0001a  206e 12ca 0037           invoke-virtual  # CALL Landroid/support/v7/app/f;->b(I)Z
+0001d  0e28                     goto
+0001e  0160 192b                sget  # FIELD Lb/b/d/a/j;->AppCompatTheme_windowActionBar:I
+00020  306e 08f1 0210           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getBoolean(I,Z)Z
+00023  010a                     move-result
+00024  0138 0007                if-eqz
+00026  0113 006c                const/16
+00028  206e 12ca 0017           invoke-virtual  # CALL Landroid/support/v7/app/f;->b(I)Z
+0002b  0160 192c                sget  # FIELD Lb/b/d/a/j;->AppCompatTheme_windowActionBarOverlay:I
+0002d  306e 08f1 0210           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getBoolean(I,Z)Z
+00030  010a                     move-result
+00031  0413 006d                const/16
+00033  0138 0005                if-eqz
+00035  206e 12ca 0047           invoke-virtual  # CALL Landroid/support/v7/app/f;->b(I)Z
+00038  0160 192d                sget  # FIELD Lb/b/d/a/j;->AppCompatTheme_windowActionModeOverlay:I
+0003a  306e 08f1 0210           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getBoolean(I,Z)Z
+0003d  010a                     move-result
+0003e  0138 0007                if-eqz
+00040  0113 000a                const/16
+00042  206e 12ca 0017           invoke-virtual  # CALL Landroid/support/v7/app/f;->b(I)Z
+00045  0160 18e0                sget  # FIELD Lb/b/d/a/j;->AppCompatTheme_android_windowIsFloating:I
+00047  306e 08f1 0210           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getBoolean(I,Z)Z
+0004a  010a                     move-result
+0004b  715c 0eb5                iput-boolean  # FIELD Landroid/support/v7/app/f;->C:Z
+0004d  106e 090a 0000           invoke-virtual  # CALL Landroid/content/res/TypedArray;->recycle()V
+00050  7054 0eca                iget-object  # FIELD Landroid/support/v7/app/f;->d:Landroid/view/Window;
+00052  106e 1e72 0000           invoke-virtual  # CALL Landroid/view/Window;->getDecorView()Landroid/view/View;
+00055  7054 0ec9                iget-object  # FIELD Landroid/support/v7/app/f;->c:Landroid/content/Context;
+00057  1071 1cb8 0000           invoke-static  # CALL Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+0005a  000c                     move-result-object
+0005b  7155 0eb6                iget-boolean  # FIELD Landroid/support/v7/app/f;->D:Z
+0005d  0512                     const/4
+0005e  0139 0075                if-nez
+00060  7155 0eb5                iget-boolean  # FIELD Landroid/support/v7/app/f;->C:Z
+00062  0138 0010                if-eqz
+00064  0160 16bb                sget  # FIELD Lb/b/d/a/g;->abc_dialog_title_material:I
+00066  306e 1cbb 0510           invoke-virtual  # CALL Landroid/view/LayoutInflater;->inflate(I,Landroid/view/ViewGroup;)Landroid/view/View;
+00069  000c                     move-result-object
+0006a  001f 0452                check-cast  # TYPE Landroid/view/ViewGroup;
+0006c  725c 0eb3                iput-boolean  # FIELD Landroid/support/v7/app/f;->A:Z
+0006e  725c 0ee0                iput-boolean  # FIELD Landroid/support/v7/app/f;->z:Z
+00070  0029 008c                goto/16
+00072  7055 0ee0                iget-boolean  # FIELD Landroid/support/v7/app/f;->z:Z
+00074  0038 005d                if-eqz
+00076  0022 041f                new-instance  # TYPE Landroid/util/TypedValue;
+00078  1070 1c7e 0000           invoke-direct  # CALL Landroid/util/TypedValue;-><init>()V
+0007b  7154 0ec9                iget-object  # FIELD Landroid/support/v7/app/f;->c:Landroid/content/Context;
+0007d  106e 084e 0001           invoke-virtual  # CALL Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
+00080  010c                     move-result-object
+00081  0660 1414                sget  # FIELD Lb/b/d/a/a;->actionBarTheme:I
+00083  406e 08bf 3061           invoke-virtual  # CALL Landroid/content/res/Resources$Theme;->resolveAttribute(I,Landroid/util/TypedValue;,Z)Z
+00086  0152 1251                iget  # FIELD Landroid/util/TypedValue;->resourceId:I
+00088  0138 000c                if-eqz
+0008a  0122 0566                new-instance  # TYPE Lb/b/d/d/d;
+0008c  7354 0ec9                iget-object  # FIELD Landroid/support/v7/app/f;->c:Landroid/content/Context;
+0008e  0052 1251                iget  # FIELD Landroid/util/TypedValue;->resourceId:I
+00090  3070 2683 0031           invoke-direct  # CALL Lb/b/d/d/d;-><init>(Landroid/content/Context;,I)V
+00093  0328                     goto
+00094  7154 0ec9                iget-object  # FIELD Landroid/support/v7/app/f;->c:Landroid/content/Context;
+00096  1071 1cb8 0001           invoke-static  # CALL Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+00099  000c                     move-result-object
+0009a  0160 16c6                sget  # FIELD Lb/b/d/a/g;->abc_screen_toolbar:I
+0009c  306e 1cbb 0510           invoke-virtual  # CALL Landroid/view/LayoutInflater;->inflate(I,Landroid/view/ViewGroup;)Landroid/view/View;
+0009f  000c                     move-result-object
+000a0  001f 0452                check-cast  # TYPE Landroid/view/ViewGroup;
+000a2  0160 1665                sget  # FIELD Lb/b/d/a/f;->decor_content_parent:I
+000a4  206e 1df0 0010           invoke-virtual  # CALL Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
+000a7  010c                     move-result-object
+000a8  011f 0371                check-cast  # TYPE Landroid/support/v7/widget/a0;
+000aa  715b 0ed1                iput-object  # FIELD Landroid/support/v7/app/f;->k:Landroid/support/v7/widget/a0;
+000ac  106e 12e8 0007           invoke-virtual  # CALL Landroid/support/v7/app/f;->o()Landroid/view/Window$Callback;
+000af  030c                     move-result-object
+000b0  2072 17e3 0031           invoke-interface  # CALL Landroid/support/v7/widget/a0;->setWindowCallback(Landroid/view/Window$Callback;)V
+000b3  7155 0eb3                iget-boolean  # FIELD Landroid/support/v7/app/f;->A:Z
+000b5  0138 0007                if-eqz
+000b7  7154 0ed1                iget-object  # FIELD Landroid/support/v7/app/f;->k:Landroid/support/v7/widget/a0;
+000b9  2072 17da 0041           invoke-interface  # CALL Landroid/support/v7/widget/a0;->a(I)V
+000bc  7155 0ede                iget-boolean  # FIELD Landroid/support/v7/app/f;->x:Z
+000be  0138 0008                if-eqz
+000c0  7154 0ed1                iget-object  # FIELD Landroid/support/v7/app/f;->k:Landroid/support/v7/widget/a0;
+000c2  2312                     const/4
+000c3  2072 17da 0031           invoke-interface  # CALL Landroid/support/v7/widget/a0;->a(I)V
+000c6  7155 0edf                iget-boolean  # FIELD Landroid/support/v7/app/f;->y:Z
+000c8  0138 0034                if-eqz
+000ca  7154 0ed1                iget-object  # FIELD Landroid/support/v7/app/f;->k:Landroid/support/v7/widget/a0;
+000cc  5312                     const/4
+000cd  2072 17da 0031           invoke-interface  # CALL Landroid/support/v7/widget/a0;->a(I)V
+000d0  2c28                     goto
+000d1  5007                     op_07
+000d2  2a28                     goto
+000d3  7155 0eb4                iget-boolean  # FIELD Landroid/support/v7/app/f;->B:Z
+000d5  0138 0005                if-eqz
+000d7  0160 16c5                sget  # FIELD Lb/b/d/a/g;->abc_screen_simple_overlay_action_mode:I
+000d9  0328                     goto
+000da  0160 16c4                sget  # FIELD Lb/b/d/a/g;->abc_screen_simple:I
+000dc  306e 1cbb 0510           invoke-virtual  # CALL Landroid/view/LayoutInflater;->inflate(I,Landroid/view/ViewGroup;)Landroid/view/View;
+000df  000c                     move-result-object
+000e0  001f 0452                check-cast  # TYPE Landroid/view/ViewGroup;
+000e2  0160 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+000e4  0313 0015                const/16
+000e6  3134 000b                if-lt
+000e8  0122 02f1                new-instance  # TYPE Landroid/support/v7/app/f$c;
+000ea  2070 1272 0071           invoke-direct  # CALL Landroid/support/v7/app/f$c;-><init>(Landroid/support/v7/app/f;)V
+000ed  2071 2537 0010           invoke-static  # CALL Lb/b/c/g/q;->a(Landroid/view/View;,Lb/b/c/g/o;)V
+000f0  0c28                     goto
+000f1  0107                     op_07
+000f2  011f 0384                check-cast  # TYPE Landroid/support/v7/widget/e0;
+000f4  0322 02f2                new-instance  # TYPE Landroid/support/v7/app/f$d;
+000f6  2070 1274 0073           invoke-direct  # CALL Landroid/support/v7/app/f$d;-><init>(Landroid/support/v7/app/f;)V
+000f9  2072 1882 0031           invoke-interface  # CALL Landroid/support/v7/widget/e0;->setOnFitSystemWindowsListener(Landroid/support/v7/widget/e0$a;)V
+000fc  0038 0057                if-eqz
+000fe  7154 0ed1                iget-object  # FIELD Landroid/support/v7/app/f;->k:Landroid/support/v7/widget/a0;
+00100  0139 000c                if-nez
+00102  0160 16a7                sget  # FIELD Lb/b/d/a/f;->title:I
+00104  206e 1df0 0010           invoke-virtual  # CALL Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
+00107  010c                     move-result-object
+00108  011f 04a3                check-cast  # TYPE Landroid/widget/TextView;
+0010a  715b 0edc                iput-object  # FIELD Landroid/support/v7/app/f;->v:Landroid/widget/TextView;
+0010c  1071 1b5d 0000           invoke-static  # CALL Landroid/support/v7/widget/z0;->b(Landroid/view/View;)V
+0010f  0160 1647                sget  # FIELD Lb/b/d/a/f;->action_bar_activity_content:I
+00111  206e 1df0 0010           invoke-virtual  # CALL Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
+00114  010c                     move-result-object
+00115  011f 034d                check-cast  # TYPE Landroid/support/v7/widget/ContentFrameLayout;
+00117  7354 0eca                iget-object  # FIELD Landroid/support/v7/app/f;->d:Landroid/view/Window;
+00119  0414 0002 0102           const
+0011c  206e 1e6f 0043           invoke-virtual  # CALL Landroid/view/Window;->findViewById(I)Landroid/view/View;
+0011f  030c                     move-result-object
+00120  031f 0452                check-cast  # TYPE Landroid/view/ViewGroup;
+00122  0338 0023                if-eqz
+00124  106e 1df6 0003           invoke-virtual  # CALL Landroid/view/ViewGroup;->getChildCount()I
+00127  060a                     move-result
+00128  063d 000d                if-lez
+0012a  206e 1df5 0023           invoke-virtual  # CALL Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+0012d  060c                     move-result-object
+0012e  206e 1e2d 0023           invoke-virtual  # CALL Landroid/view/ViewGroup;->removeViewAt(I)V
+00131  206e 1f56 0061           invoke-virtual  # CALL Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
+00134  f028                     goto
+00135  f212                     const/4
+00136  206e 1e36 0023           invoke-virtual  # CALL Landroid/view/ViewGroup;->setId(I)V
+00139  206e 1fa2 0041           invoke-virtual  # CALL Landroid/widget/FrameLayout;->setId(I)V
+0013c  3220 048d                instance-of  # TYPE Landroid/widget/FrameLayout;
+0013e  0238 0007                if-eqz
+00140  031f 048d                check-cast  # TYPE Landroid/widget/FrameLayout;
+00142  206e 1fa1 0053           invoke-virtual  # CALL Landroid/widget/FrameLayout;->setForeground(Landroid/graphics/drawable/Drawable;)V
+00145  7254 0eca                iget-object  # FIELD Landroid/support/v7/app/f;->d:Landroid/view/Window;
+00147  206e 1e78 0002           invoke-virtual  # CALL Landroid/view/Window;->setContentView(Landroid/view/View;)V
+0014a  0222 02f3                new-instance  # TYPE Landroid/support/v7/app/f$e;
+0014c  2070 1276 0072           invoke-direct  # CALL Landroid/support/v7/app/f$e;-><init>(Landroid/support/v7/app/f;)V
+0014f  206e 169c 0021           invoke-virtual  # CALL Landroid/support/v7/widget/ContentFrameLayout;->setAttachListener(Landroid/support/v7/widget/ContentFrameLayout$a;)V
+00152  0011                     return-object
+00153  0022 0669                new-instance  # TYPE Ljava/lang/IllegalArgumentException;
+00155  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00157  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0015a  021a 0365                const-string  # STR "AppCompat does not support the current theme features: { windowActionBar: "
+0015c  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0015f  7255 0ee0                iget-boolean  # FIELD Landroid/support/v7/app/f;->z:Z
+00161  206e 2d40 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+00164  021a 01ec                const-string  # STR ", windowActionBarOverlay: "
+00166  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00169  7255 0eb3                iget-boolean  # FIELD Landroid/support/v7/app/f;->A:Z
+0016b  206e 2d40 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+0016e  021a 01cd                const-string  # STR ", android:windowIsFloating: "
+00170  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00173  7255 0eb5                iget-boolean  # FIELD Landroid/support/v7/app/f;->C:Z
+00175  206e 2d40 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+00178  021a 01ed                const-string  # STR ", windowActionModeOverlay: "
+0017a  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0017d  7255 0eb4                iget-boolean  # FIELD Landroid/support/v7/app/f;->B:Z
+0017f  206e 2d40 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+00182  021a 01ee                const-string  # STR ", windowNoTitle: "
+00184  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00187  7755 0eb6                iget-boolean  # FIELD Landroid/support/v7/app/f;->D:Z
+00189  206e 2d40 0071           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+0018c  071a 00a6                const-string  # STR " }"
+0018e  206e 2d3f 0071           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00191  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00194  070c                     move-result-object
+00195  2070 2c9f 0070           invoke-direct  # CALL Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+00198  0027                     throw
+00199  106e 090a 0000           invoke-virtual  # CALL Landroid/content/res/TypedArray;->recycle()V
+0019c  0722 066a                new-instance  # TYPE Ljava/lang/IllegalStateException;
+0019e  001a 16c3                const-string  # STR "You need to use a Theme.AppCompat theme (or descendant) with this activity."
+001a0  2070 2ca3 0007           invoke-direct  # CALL Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+001a3  0727                     throw
+
+### Landroid/support/v7/app/f;->v()V  [access=0x2, regs=3, ins=1, outs=3, code_off=0xc87d4]
+00000  2054 0ebe                iget-object  # FIELD Landroid/support/v7/app/f;->L:Landroid/support/v7/app/f$k;
+00002  0039 000f                if-nez
+00004  0022 02fc                new-instance  # TYPE Landroid/support/v7/app/f$k;
+00006  2154 0ec9                iget-object  # FIELD Landroid/support/v7/app/f;->c:Landroid/content/Context;
+00008  1071 1316 0001           invoke-static  # CALL Landroid/support/v7/app/j;->a(Landroid/content/Context;)Landroid/support/v7/app/j;
+0000b  010c                     move-result-object
+0000c  3070 1299 0120           invoke-direct  # CALL Landroid/support/v7/app/f$k;-><init>(Landroid/support/v7/app/f;,Landroid/support/v7/app/j;)V
+0000f  205b 0ebe                iput-object  # FIELD Landroid/support/v7/app/f;->L:Landroid/support/v7/app/f$k;
+00011  000e                     return-void
+
+### Landroid/support/v7/app/f;->w()V  [access=0x2, regs=3, ins=1, outs=3, code_off=0xc8808]
+00000  2055 0eda                iget-boolean  # FIELD Landroid/support/v7/app/f;->t:Z
+00002  0039 004e                if-nez
+00004  1070 12f0 0002           invoke-direct  # CALL Landroid/support/v7/app/f;->u()Landroid/view/ViewGroup;
+00007  000c                     move-result-object
+00008  205b 0edb                iput-object  # FIELD Landroid/support/v7/app/f;->u:Landroid/view/ViewGroup;
+0000a  106e 12e7 0002           invoke-virtual  # CALL Landroid/support/v7/app/f;->n()Ljava/lang/CharSequence;
+0000d  000c                     move-result-object
+0000e  1071 1c37 0000           invoke-static  # CALL Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+00011  010a                     move-result
+00012  0139 001f                if-nez
+00014  2154 0ed1                iget-object  # FIELD Landroid/support/v7/app/f;->k:Landroid/support/v7/widget/a0;
+00016  0138 0006                if-eqz
+00018  2072 17e4 0001           invoke-interface  # CALL Landroid/support/v7/widget/a0;->setWindowTitle(Ljava/lang/CharSequence;)V
+0001b  1628                     goto
+0001c  106e 12ed 0002           invoke-virtual  # CALL Landroid/support/v7/app/f;->r()Landroid/support/v7/app/a;
+0001f  010c                     move-result-object
+00020  0138 000a                if-eqz
+00022  106e 12ed 0002           invoke-virtual  # CALL Landroid/support/v7/app/f;->r()Landroid/support/v7/app/a;
+00025  010c                     move-result-object
+00026  206e 120c 0001           invoke-virtual  # CALL Landroid/support/v7/app/a;->a(Ljava/lang/CharSequence;)V
+00029  0828                     goto
+0002a  2154 0edc                iget-object  # FIELD Landroid/support/v7/app/f;->v:Landroid/widget/TextView;
+0002c  0138 0005                if-eqz
+0002e  206e 2146 0001           invoke-virtual  # CALL Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+00031  1070 12ef 0002           invoke-direct  # CALL Landroid/support/v7/app/f;->t()V
+00034  2054 0edb                iget-object  # FIELD Landroid/support/v7/app/f;->u:Landroid/view/ViewGroup;
+00036  206e 12bc 0002           invoke-virtual  # CALL Landroid/support/v7/app/f;->a(Landroid/view/ViewGroup;)V
+00039  1012                     const/4
+0003a  205c 0eda                iput-boolean  # FIELD Landroid/support/v7/app/f;->t:Z
+0003c  0012                     const/4
+0003d  306e 12ae 0002           invoke-virtual  # CALL Landroid/support/v7/app/f;->a(I,Z)Landroid/support/v7/app/f$m;
+00040  000c                     move-result-object
+00041  2155 0ebb                iget-boolean  # FIELD Landroid/support/v7/app/f;->I:Z
+00043  0139 000d                if-nez
+00045  0038 0006                if-eqz
+00047  0054 0ea8                iget-object  # FIELD Landroid/support/v7/app/f$m;->j:Landroid/support/v7/view/menu/h;
+00049  0039 0007                if-nez
+0004b  0013 006c                const/16
+0004d  2070 12e1 0002           invoke-direct  # CALL Landroid/support/v7/app/f;->j(I)V
+00050  000e                     return-void
+
+### Landroid/support/v7/app/f;->x()I  [access=0x2, regs=2, ins=1, outs=0, code_off=0xc8030]
+00000  1152 0ebc                iget  # FIELD Landroid/support/v7/app/f;->J:I
+00002  0013 ff9c                const/16
+00004  0132 0003                if-eq
+00006  0528                     goto
+00007  0071 126c 0000           invoke-static  # CALL Landroid/support/v7/app/e;->j()I
+0000a  010a                     move-result
+0000b  010f                     return
+
+### Landroid/support/v7/app/f;->y()V  [access=0x2, regs=4, ins=1, outs=3, code_off=0xc88bc]
+00000  1070 12f2 0003           invoke-direct  # CALL Landroid/support/v7/app/f;->w()V
+00003  3055 0ee0                iget-boolean  # FIELD Landroid/support/v7/app/f;->z:Z
+00005  0038 0032                if-eqz
+00007  3054 0ece                iget-object  # FIELD Landroid/support/v7/app/f;->h:Landroid/support/v7/app/a;
+00009  0038 0003                if-eqz
+0000b  2c28                     goto
+0000c  3054 0ecb                iget-object  # FIELD Landroid/support/v7/app/f;->e:Landroid/view/Window$Callback;
+0000e  0120 011f                instance-of  # TYPE Landroid/app/Activity;
+00010  0138 0010                if-eqz
+00012  0022 030b                new-instance  # TYPE Landroid/support/v7/app/k;
+00014  3154 0ecb                iget-object  # FIELD Landroid/support/v7/app/f;->e:Landroid/view/Window$Callback;
+00016  011f 011f                check-cast  # TYPE Landroid/app/Activity;
+00018  3255 0eb3                iget-boolean  # FIELD Landroid/support/v7/app/f;->A:Z
+0001a  3070 1334 0210           invoke-direct  # CALL Landroid/support/v7/app/k;-><init>(Landroid/app/Activity;,Z)V
+0001d  305b 0ece                iput-object  # FIELD Landroid/support/v7/app/f;->h:Landroid/support/v7/app/a;
+0001f  0f28                     goto
+00020  0020 0126                instance-of  # TYPE Landroid/app/Dialog;
+00022  0038 000c                if-eqz
+00024  0022 030b                new-instance  # TYPE Landroid/support/v7/app/k;
+00026  3154 0ecb                iget-object  # FIELD Landroid/support/v7/app/f;->e:Landroid/view/Window$Callback;
+00028  011f 0126                check-cast  # TYPE Landroid/app/Dialog;
+0002a  2070 1335 0010           invoke-direct  # CALL Landroid/support/v7/app/k;-><init>(Landroid/app/Dialog;)V
+0002d  f028                     goto
+0002e  3054 0ece                iget-object  # FIELD Landroid/support/v7/app/f;->h:Landroid/support/v7/app/a;
+00030  0038 0007                if-eqz
+00032  3355 0ec2                iget-boolean  # FIELD Landroid/support/v7/app/f;->P:Z
+00034  206e 1210 0030           invoke-virtual  # CALL Landroid/support/v7/app/a;->c(Z)V
+00037  000e                     return-void
+
+### Landroid/support/v7/app/f;->z()Z  [access=0x2, regs=6, ins=1, outs=3, code_off=0xc7f0c]
+00000  5055 0ebd                iget-boolean  # FIELD Landroid/support/v7/app/f;->K:Z
+00002  0112                     const/4
+00003  0038 002f                if-eqz
+00005  5054 0ec9                iget-object  # FIELD Landroid/support/v7/app/f;->c:Landroid/content/Context;
+00007  0220 011f                instance-of  # TYPE Landroid/app/Activity;
+00009  0238 0029                if-eqz
+0000b  106e 0846 0000           invoke-virtual  # CALL Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+0000e  000c                     move-result-object
+0000f  1212                     const/4
+00010  0322 0169                new-instance  # TYPE Landroid/content/ComponentName;
+00012  5454 0ec9                iget-object  # FIELD Landroid/support/v7/app/f;->c:Landroid/content/Context;
+00014  5554 0ec9                iget-object  # FIELD Landroid/support/v7/app/f;->c:Landroid/content/Context;
+00016  106e 2ce3 0005           invoke-virtual  # CALL Ljava/lang/Object;->getClass()Ljava/lang/Class;
+00019  050c                     move-result-object
+0001a  3070 0827 0543           invoke-direct  # CALL Landroid/content/ComponentName;-><init>(Landroid/content/Context;,Ljava/lang/Class;)V
+0001d  306e 089a 0130           invoke-virtual  # CALL Landroid/content/pm/PackageManager;->getActivityInfo(Landroid/content/ComponentName;,I)Landroid/content/pm/ActivityInfo;
+00020  050c                     move-result-object
+00021  5552 0500                iget  # FIELD Landroid/content/pm/ActivityInfo;->configChanges:I
+00023  55d5 0200                op_d5
+00025  0539 0003                if-nez
+00027  2101                     op_01
+00028  010f                     return
+00029  050d                     op_0d
+0002a  001a 0367                const-string  # STR "AppCompatDelegate"
+0002c  011a 0780                const-string  # STR "Exception while getting ActivityInfo"
+0002e  3071 1c5a 0510           invoke-static  # CALL Landroid/util/Log;->d(Ljava/lang/String;,Ljava/lang/String;,Ljava/lang/Throwable;)I
+00031  020f                     return
+00032  010f                     return
+
+### Landroid/support/v7/app/f;->a(I,Z)Landroid/support/v7/app/f$m;  [access=0x4, regs=6, ins=3, outs=5, code_off=0xc6cb8]
+00000  3554 0eb8                iget-object  # FIELD Landroid/support/v7/app/f;->F:[Landroid/support/v7/app/f$m;
+00002  0538 0005                if-eqz
+00004  5021                     array-length
+00005  4036 0010                if-gt
+00007  00d8 0104                op_d8
+00009  0023 0748                new-array  # TYPE [Landroid/support/v7/app/f$m;
+0000b  0538 0007                if-eqz
+0000d  5121                     array-length
+0000e  0212                     const/4
+0000f  5171 2d45 2025           invoke-static  # CALL Ljava/lang/System;->arraycopy(Ljava/lang/Object;,I,Ljava/lang/Object;,I,I)V
+00012  305b 0eb8                iput-object  # FIELD Landroid/support/v7/app/f;->F:[Landroid/support/v7/app/f$m;
+00014  0507                     op_07
+00015  0346 0405                aget-object
+00017  0339 0009                if-nez
+00019  0322 02fe                new-instance  # TYPE Landroid/support/v7/app/f$m;
+0001b  2070 12a3 0043           invoke-direct  # CALL Landroid/support/v7/app/f$m;-><init>(I)V
+0001e  034d 0405                aput-object
+00020  0311                     return-object
+
+### Landroid/support/v7/app/f;->a(Landroid/view/Menu;)Landroid/support/v7/app/f$m;  [access=0x0, regs=6, ins=2, outs=0, code_off=0xc6c78]
+00000  4454 0eb8                iget-object  # FIELD Landroid/support/v7/app/f;->F:[Landroid/support/v7/app/f$m;
+00002  0012                     const/4
+00003  0438 0004                if-eqz
+00005  4121                     array-length
+00006  0228                     goto
+00007  0101                     op_01
+00008  1035 000e                if-ge
+0000a  0246 0004                aget-object
+0000c  0238 0007                if-eqz
+0000e  2354 0ea8                iget-object  # FIELD Landroid/support/v7/app/f$m;->j:Landroid/support/v7/view/menu/h;
+00010  5333 0003                if-ne
+00012  0211                     return-object
+00013  00d8 0100                op_d8
+00015  f328                     goto
+00016  0412                     const/4
+00017  0411                     return-object
+
+### Landroid/support/v7/app/f;->a(I)Landroid/view/View;  [access=0x1, regs=2, ins=2, outs=2, code_off=0xc7210]
+00000  1070 12f2 0000           invoke-direct  # CALL Landroid/support/v7/app/f;->w()V
+00003  0054 0eca                iget-object  # FIELD Landroid/support/v7/app/f;->d:Landroid/view/Window;
+00005  206e 1e6f 0010           invoke-virtual  # CALL Landroid/view/Window;->findViewById(I)Landroid/view/View;
+00008  000c                     move-result-object
+00009  0011                     return-object
+
+### Landroid/support/v7/app/f;->a(Landroid/view/View;,Ljava/lang/String;,Landroid/content/Context;,Landroid/util/AttributeSet;)Landroid/view/View;  [access=0x1, regs=16, ins=5, outs=9, code_off=0xc70d4]
+00000  b054 0ec5                iget-object  # FIELD Landroid/support/v7/app/f;->S:Landroid/support/v7/app/AppCompatViewInflater;
+00002  0112                     const/4
+00003  0039 005d                if-nez
+00005  b054 0ec9                iget-object  # FIELD Landroid/support/v7/app/f;->c:Landroid/content/Context;
+00007  0262 18bb                sget-object  # FIELD Lb/b/d/a/j;->AppCompatTheme:[I
+00009  206e 0853 0020           invoke-virtual  # CALL Landroid/content/Context;->obtainStyledAttributes([I)Landroid/content/res/TypedArray;
+0000c  000c                     move-result-object
+0000d  0260 192a                sget  # FIELD Lb/b/d/a/j;->AppCompatTheme_viewInflaterClass:I
+0000f  206e 0902 0020           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
+00012  000c                     move-result-object
+00013  0038 0046                if-eqz
+00015  021c 02e5                const-class  # TYPE Landroid/support/v7/app/AppCompatViewInflater;
+00017  106e 2c7f 0002           invoke-virtual  # CALL Ljava/lang/Class;->getName()Ljava/lang/String;
+0001a  020c                     move-result-object
+0001b  206e 2d03 0002           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+0001e  020a                     move-result
+0001f  0238 0003                if-eqz
+00021  3828                     goto
+00022  1071 2c72 0000           invoke-static  # CALL Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+00025  020c                     move-result-object
+00026  1323 075c                new-array  # TYPE [Ljava/lang/Class;
+00028  206e 2c78 0032           invoke-virtual  # CALL Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+0002b  020c                     move-result-object
+0002c  1323 075d                new-array  # TYPE [Ljava/lang/Object;
+0002e  206e 2d6d 0032           invoke-virtual  # CALL Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+00031  020c                     move-result-object
+00032  021f 02e5                check-cast  # TYPE Landroid/support/v7/app/AppCompatViewInflater;
+00034  b25b 0ec5                iput-object  # FIELD Landroid/support/v7/app/f;->S:Landroid/support/v7/app/AppCompatViewInflater;
+00036  2a28                     goto
+00037  020d                     op_0d
+00038  0322 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0003a  1070 2d35 0003           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0003d  041a 07b3                const-string  # STR "Failed to instantiate custom view inflater "
+0003f  206e 2d3f 0043           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00042  206e 2d3f 0003           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00045  001a 0205                const-string  # STR ". Falling back to default."
+00047  206e 2d3f 0003           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0004a  106e 2d44 0003           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0004d  000c                     move-result-object
+0004e  031a 0367                const-string  # STR "AppCompatDelegate"
+00050  3071 1c5f 0203           invoke-static  # CALL Landroid/util/Log;->i(Ljava/lang/String;,Ljava/lang/String;,Ljava/lang/Throwable;)I
+00053  0022 02e5                new-instance  # TYPE Landroid/support/v7/app/AppCompatViewInflater;
+00055  1070 11e9 0000           invoke-direct  # CALL Landroid/support/v7/app/AppCompatViewInflater;-><init>()V
+00058  0628                     goto
+00059  0022 02e5                new-instance  # TYPE Landroid/support/v7/app/AppCompatViewInflater;
+0005b  1070 11e9 0000           invoke-direct  # CALL Landroid/support/v7/app/AppCompatViewInflater;-><init>()V
+0005e  b05b 0ec5                iput-object  # FIELD Landroid/support/v7/app/f;->S:Landroid/support/v7/app/AppCompatViewInflater;
+00060  0063 0ec6                sget-boolean  # FIELD Landroid/support/v7/app/f;->T:Z
+00062  0038 001a                if-eqz
+00064  f020 071b                instance-of  # TYPE Lorg/xmlpull/v1/XmlPullParser;
+00066  1212                     const/4
+00067  0038 000d                if-eqz
+00069  f007                     op_07
+0006a  001f 071b                check-cast  # TYPE Lorg/xmlpull/v1/XmlPullParser;
+0006c  1072 2f33 0000           invoke-interface  # CALL Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
+0006f  000a                     move-result
+00070  2037 000c                if-le
+00072  2101                     op_01
+00073  0928                     goto
+00074  c007                     op_07
+00075  001f 0453                check-cast  # TYPE Landroid/view/ViewParent;
+00077  2070 12c4 000b           invoke-direct  # CALL Landroid/support/v7/app/f;->a(Landroid/view/ViewParent;)Z
+0007a  000a                     move-result
+0007b  0101                     op_01
+0007c  1701                     op_01
+0007d  b254 0ec5                iget-object  # FIELD Landroid/support/v7/app/f;->S:Landroid/support/v7/app/AppCompatViewInflater;
+0007f  0863 0ec6                sget-boolean  # FIELD Landroid/support/v7/app/f;->T:Z
+00081  1912                     const/4
+00082  0071 1b34 0000           invoke-static  # CALL Landroid/support/v7/widget/y0;->b()Z
+00085  0a0a                     move-result
+00086  c307                     op_07
+00087  d407                     op_07
+00088  e507                     op_07
+00089  f607                     op_07
+0008a  0974 11ee 0002           invoke-virtual/range  # CALL Landroid/support/v7/app/AppCompatViewInflater;->a(Landroid/view/View;,Ljava/lang/String;,Landroid/content/Context;,Landroid/util/AttributeSet;,Z,Z,Z,Z)Landroid/view/View;
+0008d  0b0c                     move-result-object
+0008e  0b11                     return-object
+
+### Landroid/support/v7/app/f;->a(Lb/b/d/d/b$a;)Lb/b/d/d/b;  [access=0x1, regs=4, ins=2, outs=3, code_off=0xc6d0c]
+00000  0338 0030                if-eqz
+00002  2054 0ed4                iget-object  # FIELD Landroid/support/v7/app/f;->n:Lb/b/d/d/b;
+00004  0038 0005                if-eqz
+00006  106e 266f 0000           invoke-virtual  # CALL Lb/b/d/d/b;->a()V
+00009  0022 02f9                new-instance  # TYPE Landroid/support/v7/app/f$i;
+0000b  3070 1286 0320           invoke-direct  # CALL Landroid/support/v7/app/f$i;-><init>(Landroid/support/v7/app/f;,Lb/b/d/d/b$a;)V
+0000e  106e 12ce 0002           invoke-virtual  # CALL Landroid/support/v7/app/f;->c()Landroid/support/v7/app/a;
+00011  030c                     move-result-object
+00012  0338 0011                if-eqz
+00014  206e 120a 0003           invoke-virtual  # CALL Landroid/support/v7/app/a;->a(Lb/b/d/d/b$a;)Lb/b/d/d/b;
+00017  030c                     move-result-object
+00018  235b 0ed4                iput-object  # FIELD Landroid/support/v7/app/f;->n:Lb/b/d/d/b;
+0001a  0338 0009                if-eqz
+0001c  2154 0ecd                iget-object  # FIELD Landroid/support/v7/app/f;->g:Landroid/support/v7/app/d;
+0001e  0138 0005                if-eqz
+00020  2072 1252 0031           invoke-interface  # CALL Landroid/support/v7/app/d;->a(Lb/b/d/d/b;)V
+00023  2354 0ed4                iget-object  # FIELD Landroid/support/v7/app/f;->n:Lb/b/d/d/b;
+00025  0339 0008                if-nez
+00027  206e 12c6 0002           invoke-virtual  # CALL Landroid/support/v7/app/f;->b(Lb/b/d/d/b$a;)Lb/b/d/d/b;
+0002a  030c                     move-result-object
+0002b  235b 0ed4                iput-object  # FIELD Landroid/support/v7/app/f;->n:Lb/b/d/d/b;
+0002d  2254 0ed4                iget-object  # FIELD Landroid/support/v7/app/f;->n:Lb/b/d/d/b;
+0002f  0211                     return-object
+00030  0222 0669                new-instance  # TYPE Ljava/lang/IllegalArgumentException;
+00032  031a 032c                const-string  # STR "ActionMode callback can not be null."
+00034  2070 2c9f 0032           invoke-direct  # CALL Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+00037  0227                     throw
+
+### Landroid/support/v7/app/f;->a(I,Landroid/support/v7/app/f$m;,Landroid/view/Menu;)V  [access=0x0, regs=6, ins=4, outs=3, code_off=0xc8528]
+00000  0539 0011                if-nez
+00002  0439 000b                if-nez
+00004  033a 0009                if-ltz
+00006  2054 0eb8                iget-object  # FIELD Landroid/support/v7/app/f;->F:[Landroid/support/v7/app/f$m;
+00008  0121                     array-length
+00009  1335 0004                if-ge
+0000b  0446 0300                aget-object
+0000d  0438 0004                if-eqz
+0000f  4554 0ea8                iget-object  # FIELD Landroid/support/v7/app/f$m;->j:Landroid/support/v7/view/menu/h;
+00011  0438 0007                if-eqz
+00013  4455 0ead                iget-boolean  # FIELD Landroid/support/v7/app/f$m;->o:Z
+00015  0439 0003                if-nez
+00017  000e                     return-void
+00018  2455 0ebb                iget-boolean  # FIELD Landroid/support/v7/app/f;->I:Z
+0001a  0439 0007                if-nez
+0001c  2254 0ecb                iget-object  # FIELD Landroid/support/v7/app/f;->e:Landroid/view/Window$Callback;
+0001e  3072 1e65 0532           invoke-interface  # CALL Landroid/view/Window$Callback;->onPanelClosed(I,Landroid/view/Menu;)V
+00021  000e                     return-void
+
+### Landroid/support/v7/app/f;->a(Landroid/content/res/Configuration;)V  [access=0x1, regs=3, ins=2, outs=2, code_off=0xc8a04]
+00000  1055 0ee0                iget-boolean  # FIELD Landroid/support/v7/app/f;->z:Z
+00002  0038 000f                if-eqz
+00004  1055 0eda                iget-boolean  # FIELD Landroid/support/v7/app/f;->t:Z
+00006  0038 000b                if-eqz
+00008  106e 12ce 0001           invoke-virtual  # CALL Landroid/support/v7/app/f;->c()Landroid/support/v7/app/a;
+0000b  000c                     move-result-object
+0000c  0038 0005                if-eqz
+0000e  206e 120b 0020           invoke-virtual  # CALL Landroid/support/v7/app/a;->a(Landroid/content/res/Configuration;)V
+00011  0071 196a 0000           invoke-static  # CALL Landroid/support/v7/widget/j;->a()Landroid/support/v7/widget/j;
+00014  020c                     move-result-object
+00015  1054 0ec9                iget-object  # FIELD Landroid/support/v7/app/f;->c:Landroid/content/Context;
+00017  206e 196b 0002           invoke-virtual  # CALL Landroid/support/v7/widget/j;->a(Landroid/content/Context;)V
+0001a  106e 12be 0001           invoke-virtual  # CALL Landroid/support/v7/app/f;->a()Z
+0001d  000e                     return-void
+
+### Landroid/support/v7/app/f;->a(Landroid/os/Bundle;)V  [access=0x1, regs=4, ins=2, outs=3, code_off=0xc8a50]
+00000  2054 0ecb                iget-object  # FIELD Landroid/support/v7/app/f;->e:Landroid/view/Window$Callback;
+00002  0120 011f                instance-of  # TYPE Landroid/app/Activity;
+00004  0138 0018                if-eqz
+00006  0112                     const/4
+00007  001f 011f                check-cast  # TYPE Landroid/app/Activity;
+00009  1071 1042 0000           invoke-static  # CALL Landroid/support/v4/app/t;->b(Landroid/app/Activity;)Ljava/lang/String;
+0000c  010c                     move-result-object
+0000d  0138 000f                if-eqz
+0000f  106e 12ed 0002           invoke-virtual  # CALL Landroid/support/v7/app/f;->r()Landroid/support/v7/app/a;
+00012  000c                     move-result-object
+00013  1112                     const/4
+00014  0039 0005                if-nez
+00016  215c 0ec2                iput-boolean  # FIELD Landroid/support/v7/app/f;->P:Z
+00018  0428                     goto
+00019  206e 1210 0010           invoke-virtual  # CALL Landroid/support/v7/app/a;->c(Z)V
+0001c  0338 0010                if-eqz
+0001e  2052 0ebc                iget  # FIELD Landroid/support/v7/app/f;->J:I
+00020  0113 ff9c                const/16
+00022  1033 000a                if-ne
+00024  001a 1956                const-string  # STR "appcompat:local_night_mode"
+00026  306e 0a91 0103           invoke-virtual  # CALL Landroid/os/Bundle;->getInt(Ljava/lang/String;,I)I
+00029  030a                     move-result
+0002a  2359 0ebc                iput  # FIELD Landroid/support/v7/app/f;->J:I
+0002c  000e                     return-void
+
+### Landroid/support/v7/app/f;->a(Landroid/support/v7/app/f$m;,Z)V  [access=0x0, regs=6, ins=3, outs=4, code_off=0xc85cc]
+00000  0538 0016                if-eqz
+00002  4052 0e9f                iget  # FIELD Landroid/support/v7/app/f$m;->a:I
+00004  0039 0012                if-nez
+00006  3054 0ed1                iget-object  # FIELD Landroid/support/v7/app/f;->k:Landroid/support/v7/widget/a0;
+00008  0038 000e                if-eqz
+0000a  1072 17df 0000           invoke-interface  # CALL Landroid/support/v7/widget/a0;->d()Z
+0000d  000a                     move-result
+0000e  0038 0008                if-eqz
+00010  4454 0ea8                iget-object  # FIELD Landroid/support/v7/app/f$m;->j:Landroid/support/v7/view/menu/h;
+00012  206e 12c8 0043           invoke-virtual  # CALL Landroid/support/v7/app/f;->b(Landroid/support/v7/view/menu/h;)V
+00015  000e                     return-void
+00016  3054 0ec9                iget-object  # FIELD Landroid/support/v7/app/f;->c:Landroid/content/Context;
+00018  011a 2892                const-string  # STR "window"
+0001a  206e 084c 0010           invoke-virtual  # CALL Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+0001d  000c                     move-result-object
+0001e  001f 045d                check-cast  # TYPE Landroid/view/WindowManager;
+00020  0112                     const/4
+00021  0038 0014                if-eqz
+00023  4255 0ead                iget-boolean  # FIELD Landroid/support/v7/app/f$m;->o:Z
+00025  0238 0010                if-eqz
+00027  4254 0ea5                iget-object  # FIELD Landroid/support/v7/app/f$m;->g:Landroid/view/ViewGroup;
+00029  0238 000c                if-eqz
+0002b  2072 1e86 0020           invoke-interface  # CALL Landroid/view/WindowManager;->removeView(Landroid/view/View;)V
+0002e  0538 0007                if-eqz
+00030  4552 0e9f                iget  # FIELD Landroid/support/v7/app/f$m;->a:I
+00032  406e 12b3 1453           invoke-virtual  # CALL Landroid/support/v7/app/f;->a(I,Landroid/support/v7/app/f$m;,Landroid/view/Menu;)V
+00035  0512                     const/4
+00036  455c 0eab                iput-boolean  # FIELD Landroid/support/v7/app/f$m;->m:Z
+00038  455c 0eac                iput-boolean  # FIELD Landroid/support/v7/app/f$m;->n:Z
+0003a  455c 0ead                iput-boolean  # FIELD Landroid/support/v7/app/f$m;->o:Z
+0003c  415b 0ea6                iput-object  # FIELD Landroid/support/v7/app/f$m;->h:Landroid/view/View;
+0003e  1512                     const/4
+0003f  455c 0eaf                iput-boolean  # FIELD Landroid/support/v7/app/f$m;->q:Z
+00041  3554 0eb9                iget-object  # FIELD Landroid/support/v7/app/f;->G:Landroid/support/v7/app/f$m;
+00043  4533 0004                if-ne
+00045  315b 0eb9                iput-object  # FIELD Landroid/support/v7/app/f;->G:Landroid/support/v7/app/f$m;
+00047  000e                     return-void
+
+### Landroid/support/v7/app/f;->a(Landroid/support/v7/view/menu/h;)V  [access=0x1, regs=3, ins=2, outs=3, code_off=0xc8b20]
+00000  1012                     const/4
+00001  3070 12b9 0021           invoke-direct  # CALL Landroid/support/v7/app/f;->a(Landroid/support/v7/view/menu/h;,Z)V
+00004  000e                     return-void
+
+### Landroid/support/v7/app/f;->a(Landroid/view/View;)V  [access=0x1, regs=4, ins=2, outs=2, code_off=0xc8fa8]
+00000  1070 12f2 0002           invoke-direct  # CALL Landroid/support/v7/app/f;->w()V
+00003  2054 0edb                iget-object  # FIELD Landroid/support/v7/app/f;->u:Landroid/view/ViewGroup;
+00005  0114 0002 0102           const
+00008  206e 1df0 0010           invoke-virtual  # CALL Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
+0000b  000c                     move-result-object
+0000c  001f 0452                check-cast  # TYPE Landroid/view/ViewGroup;
+0000e  106e 1e2a 0000           invoke-virtual  # CALL Landroid/view/ViewGroup;->removeAllViews()V
+00011  206e 1de7 0030           invoke-virtual  # CALL Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+00014  2254 0ecb                iget-object  # FIELD Landroid/support/v7/app/f;->e:Landroid/view/Window$Callback;
+00016  1072 1e5f 0002           invoke-interface  # CALL Landroid/view/Window$Callback;->onContentChanged()V
+00019  000e                     return-void
+
+### Landroid/support/v7/app/f;->a(Landroid/view/View;,Landroid/view/ViewGroup$LayoutParams;)V  [access=0x1, regs=5, ins=3, outs=3, code_off=0xc83c4]
+00000  1070 12f2 0002           invoke-direct  # CALL Landroid/support/v7/app/f;->w()V
+00003  2054 0edb                iget-object  # FIELD Landroid/support/v7/app/f;->u:Landroid/view/ViewGroup;
+00005  0114 0002 0102           const
+00008  206e 1df0 0010           invoke-virtual  # CALL Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
+0000b  000c                     move-result-object
+0000c  001f 0452                check-cast  # TYPE Landroid/view/ViewGroup;
+0000e  306e 1dea 0430           invoke-virtual  # CALL Landroid/view/ViewGroup;->addView(Landroid/view/View;,Landroid/view/ViewGroup$LayoutParams;)V
+00011  2254 0ecb                iget-object  # FIELD Landroid/support/v7/app/f;->e:Landroid/view/Window$Callback;
+00013  1072 1e5f 0002           invoke-interface  # CALL Landroid/view/Window$Callback;->onContentChanged()V
+00016  000e                     return-void
+
+### Landroid/support/v7/app/f;->a(Landroid/view/ViewGroup;)V  [access=0x0, regs=2, ins=2, outs=0, code_off=0xc8c6c]
+00000  000e                     return-void
+
+### Landroid/support/v7/app/f;->a(Ljava/lang/CharSequence;)V  [access=0x11, regs=3, ins=2, outs=2, code_off=0xc9080]
+00000  125b 0ed0                iput-object  # FIELD Landroid/support/v7/app/f;->j:Ljava/lang/CharSequence;
+00002  1054 0ed1                iget-object  # FIELD Landroid/support/v7/app/f;->k:Landroid/support/v7/widget/a0;
+00004  0038 0006                if-eqz
+00006  2072 17e4 0020           invoke-interface  # CALL Landroid/support/v7/widget/a0;->setWindowTitle(Ljava/lang/CharSequence;)V
+00009  1628                     goto
+0000a  106e 12ed 0001           invoke-virtual  # CALL Landroid/support/v7/app/f;->r()Landroid/support/v7/app/a;
+0000d  000c                     move-result-object
+0000e  0038 000a                if-eqz
+00010  106e 12ed 0001           invoke-virtual  # CALL Landroid/support/v7/app/f;->r()Landroid/support/v7/app/a;
+00013  010c                     move-result-object
+00014  206e 120c 0021           invoke-virtual  # CALL Landroid/support/v7/app/a;->a(Ljava/lang/CharSequence;)V
+00017  0828                     goto
+00018  1154 0edc                iget-object  # FIELD Landroid/support/v7/app/f;->v:Landroid/widget/TextView;
+0001a  0138 0005                if-eqz
+0001c  206e 2146 0021           invoke-virtual  # CALL Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+0001f  000e                     return-void
+
+### Landroid/support/v7/app/f;->a()Z  [access=0x1, regs=4, ins=1, outs=2, code_off=0xc75e4]
+00000  1070 12f3 0003           invoke-direct  # CALL Landroid/support/v7/app/f;->x()I
+00003  000a                     move-result
+00004  206e 12d9 0003           invoke-virtual  # CALL Landroid/support/v7/app/f;->f(I)I
+00007  010a                     move-result
+00008  f212                     const/4
+00009  2132 0007                if-eq
+0000b  2070 12e5 0013           invoke-direct  # CALL Landroid/support/v7/app/f;->l(I)Z
+0000e  010a                     move-result
+0000f  0228                     goto
+00010  0112                     const/4
+00011  0039 000a                if-nez
+00013  1070 12f1 0003           invoke-direct  # CALL Landroid/support/v7/app/f;->v()V
+00016  3054 0ebe                iget-object  # FIELD Landroid/support/v7/app/f;->L:Landroid/support/v7/app/f$k;
+00018  106e 129d 0000           invoke-virtual  # CALL Landroid/support/v7/app/f$k;->d()V
+0001b  1012                     const/4
+0001c  305c 0ebd                iput-boolean  # FIELD Landroid/support/v7/app/f;->K:Z
+0001e  010f                     return
+
+### Landroid/support/v7/app/f;->a(I,Landroid/view/KeyEvent;)Z  [access=0x0, regs=6, ins=3, outs=3, code_off=0xc78b0]
+00000  4012                     const/4
+00001  1112                     const/4
+00002  0212                     const/4
+00003  0432 000b                if-eq
+00005  0013 0052                const/16
+00007  0432 0003                if-eq
+00009  1128                     goto
+0000a  3070 12d5 0523           invoke-direct  # CALL Landroid/support/v7/app/f;->d(I,Landroid/view/KeyEvent;)Z
+0000d  010f                     return
+0000e  106e 1ca7 0005           invoke-virtual  # CALL Landroid/view/KeyEvent;->getFlags()I
+00011  040a                     move-result
+00012  44d5 0080                op_d5
+00014  0438 0003                if-eqz
+00016  0228                     goto
+00017  2101                     op_01
+00018  315c 0eba                iput-boolean  # FIELD Landroid/support/v7/app/f;->H:Z
+0001a  020f                     return
+
+### Landroid/support/v7/app/f;->a(Landroid/support/v7/view/menu/h;,Landroid/view/MenuItem;)Z  [access=0x1, regs=5, ins=3, outs=3, code_off=0xc7b3c]
+00000  106e 12e8 0002           invoke-virtual  # CALL Landroid/support/v7/app/f;->o()Landroid/view/Window$Callback;
+00003  000c                     move-result-object
+00004  0038 0017                if-eqz
+00006  2155 0ebb                iget-boolean  # FIELD Landroid/support/v7/app/f;->I:Z
+00008  0139 0013                if-nez
+0000a  106e 1478 0003           invoke-virtual  # CALL Landroid/support/v7/view/menu/h;->m()Landroid/support/v7/view/menu/h;
+0000d  030c                     move-result-object
+0000e  206e 12af 0032           invoke-virtual  # CALL Landroid/support/v7/app/f;->a(Landroid/view/Menu;)Landroid/support/v7/app/f$m;
+00011  020c                     move-result-object
+00012  0238 0009                if-eqz
+00014  2252 0e9f                iget  # FIELD Landroid/support/v7/app/f$m;->a:I
+00016  3072 1e63 0420           invoke-interface  # CALL Landroid/view/Window$Callback;->onMenuItemSelected(I,Landroid/view/MenuItem;)Z
+00019  020a                     move-result
+0001a  020f                     return
+0001b  0212                     const/4
+0001c  020f                     return
+
+### Landroid/support/v7/app/f;->a(Landroid/view/KeyEvent;)Z  [access=0x0, regs=5, ins=2, outs=3, code_off=0xc7634]
+00000  3054 0ecb                iget-object  # FIELD Landroid/support/v7/app/f;->e:Landroid/view/Window$Callback;
+00002  0120 0528                instance-of  # TYPE Lb/b/c/g/e$a;
+00004  1212                     const/4
+00005  0139 0006                if-nez
+00007  0020 0302                instance-of  # TYPE Landroid/support/v7/app/g;
+00009  0038 0011                if-eqz
+0000b  3054 0eca                iget-object  # FIELD Landroid/support/v7/app/f;->d:Landroid/view/Window;
+0000d  106e 1e72 0000           invoke-virtual  # CALL Landroid/view/Window;->getDecorView()Landroid/view/View;
+00010  000c                     move-result-object
+00011  0038 0009                if-eqz
+00013  2071 24f2 0040           invoke-static  # CALL Lb/b/c/g/e;->a(Landroid/view/View;,Landroid/view/KeyEvent;)Z
+00016  000a                     move-result
+00017  0038 0003                if-eqz
+00019  020f                     return
+0001a  106e 1ca8 0004           invoke-virtual  # CALL Landroid/view/KeyEvent;->getKeyCode()I
+0001d  000a                     move-result
+0001e  0113 0052                const/16
+00020  1033 000b                if-ne
+00022  3054 0ecb                iget-object  # FIELD Landroid/support/v7/app/f;->e:Landroid/view/Window$Callback;
+00024  2072 1e57 0040           invoke-interface  # CALL Landroid/view/Window$Callback;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
+00027  000a                     move-result
+00028  0038 0003                if-eqz
+0002a  020f                     return
+0002b  106e 1ca8 0004           invoke-virtual  # CALL Landroid/view/KeyEvent;->getKeyCode()I
+0002e  000a                     move-result
+0002f  106e 1ca5 0004           invoke-virtual  # CALL Landroid/view/KeyEvent;->getAction()I
+00032  010a                     move-result
+00033  0139 0003                if-nez
+00035  0228                     goto
+00036  0212                     const/4
+00037  0238 0007                if-eqz
+00039  306e 12bf 0403           invoke-virtual  # CALL Landroid/support/v7/app/f;->a(I,Landroid/view/KeyEvent;)Z
+0003c  030a                     move-result
+0003d  0528                     goto
+0003e  306e 12d1 0403           invoke-virtual  # CALL Landroid/support/v7/app/f;->c(I,Landroid/view/KeyEvent;)Z
+00041  030a                     move-result
+00042  030f                     return
+
+### Landroid/support/v7/app/f;->b()Landroid/view/MenuInflater;  [access=0x1, regs=3, ins=1, outs=2, code_off=0xc708c]
+00000  2054 0ecf                iget-object  # FIELD Landroid/support/v7/app/f;->i:Landroid/view/MenuInflater;
+00002  0039 0017                if-nez
+00004  1070 12f4 0002           invoke-direct  # CALL Landroid/support/v7/app/f;->y()V
+00007  0022 056c                new-instance  # TYPE Lb/b/d/d/g;
+00009  2154 0ece                iget-object  # FIELD Landroid/support/v7/app/f;->h:Landroid/support/v7/app/a;
+0000b  0138 0007                if-eqz
+0000d  106e 1215 0001           invoke-virtual  # CALL Landroid/support/v7/app/a;->h()Landroid/content/Context;
+00010  010c                     move-result-object
+00011  0328                     goto
+00012  2154 0ec9                iget-object  # FIELD Landroid/support/v7/app/f;->c:Landroid/content/Context;
+00014  2070 26c7 0010           invoke-direct  # CALL Lb/b/d/d/g;-><init>(Landroid/content/Context;)V
+00017  205b 0ecf                iput-object  # FIELD Landroid/support/v7/app/f;->i:Landroid/view/MenuInflater;
+00019  2254 0ecf                iget-object  # FIELD Landroid/support/v7/app/f;->i:Landroid/view/MenuInflater;
+0001b  0211                     return-object
+
+### Landroid/support/v7/app/f;->b(Lb/b/d/d/b$a;)Lb/b/d/d/b;  [access=0x0, regs=9, ins=2, outs=5, code_off=0xc6d8c]
+00000  106e 12e4 0007           invoke-virtual  # CALL Landroid/support/v7/app/f;->l()V
+00003  7054 0ed4                iget-object  # FIELD Landroid/support/v7/app/f;->n:Lb/b/d/d/b;
+00005  0038 0005                if-eqz
+00007  106e 266f 0000           invoke-virtual  # CALL Lb/b/d/d/b;->a()V
+0000a  8020 02f9                instance-of  # TYPE Landroid/support/v7/app/f$i;
+0000c  0039 0008                if-nez
+0000e  0022 02f9                new-instance  # TYPE Landroid/support/v7/app/f$i;
+00010  3070 1286 0870           invoke-direct  # CALL Landroid/support/v7/app/f$i;-><init>(Landroid/support/v7/app/f;,Lb/b/d/d/b$a;)V
+00013  0807                     op_07
+00014  7054 0ecd                iget-object  # FIELD Landroid/support/v7/app/f;->g:Landroid/support/v7/app/d;
+00016  0112                     const/4
+00017  0038 000b                if-eqz
+00019  7255 0ebb                iget-boolean  # FIELD Landroid/support/v7/app/f;->I:Z
+0001b  0239 0007                if-nez
+0001d  2072 1251 0080           invoke-interface  # CALL Landroid/support/v7/app/d;->a(Lb/b/d/d/b$a;)Lb/b/d/d/b;
+00020  000c                     move-result-object
+00021  0228                     goto
+00022  1007                     op_07
+00023  0038 0006                if-eqz
+00025  705b 0ed4                iput-object  # FIELD Landroid/support/v7/app/f;->n:Lb/b/d/d/b;
+00027  0029 013a                goto/16
+00029  7054 0ed5                iget-object  # FIELD Landroid/support/v7/app/f;->o:Landroid/support/v7/widget/ActionBarContextView;
+0002b  0212                     const/4
+0002c  1312                     const/4
+0002d  0039 00a7                if-nez
+0002f  7055 0eb5                iget-boolean  # FIELD Landroid/support/v7/app/f;->C:Z
+00031  0038 0084                if-eqz
+00033  0022 041f                new-instance  # TYPE Landroid/util/TypedValue;
+00035  1070 1c7e 0000           invoke-direct  # CALL Landroid/util/TypedValue;-><init>()V
+00038  7454 0ec9                iget-object  # FIELD Landroid/support/v7/app/f;->c:Landroid/content/Context;
+0003a  106e 084e 0004           invoke-virtual  # CALL Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
+0003d  040c                     move-result-object
+0003e  0560 1414                sget  # FIELD Lb/b/d/a/a;->actionBarTheme:I
+00040  406e 08bf 3054           invoke-virtual  # CALL Landroid/content/res/Resources$Theme;->resolveAttribute(I,Landroid/util/TypedValue;,Z)Z
+00043  0552 1251                iget  # FIELD Landroid/util/TypedValue;->resourceId:I
+00045  0538 0023                if-eqz
+00047  7554 0ec9                iget-object  # FIELD Landroid/support/v7/app/f;->c:Landroid/content/Context;
+00049  106e 0848 0005           invoke-virtual  # CALL Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+0004c  050c                     move-result-object
+0004d  106e 08e8 0005           invoke-virtual  # CALL Landroid/content/res/Resources;->newTheme()Landroid/content/res/Resources$Theme;
+00050  050c                     move-result-object
+00051  206e 08c0 0045           invoke-virtual  # CALL Landroid/content/res/Resources$Theme;->setTo(Landroid/content/res/Resources$Theme;)V
+00054  0452 1251                iget  # FIELD Landroid/util/TypedValue;->resourceId:I
+00056  306e 08bb 0345           invoke-virtual  # CALL Landroid/content/res/Resources$Theme;->applyStyle(I,Z)V
+00059  0422 0566                new-instance  # TYPE Lb/b/d/d/d;
+0005b  7654 0ec9                iget-object  # FIELD Landroid/support/v7/app/f;->c:Landroid/content/Context;
+0005d  3070 2683 0264           invoke-direct  # CALL Lb/b/d/d/d;-><init>(Landroid/content/Context;,I)V
+00060  106e 268d 0004           invoke-virtual  # CALL Lb/b/d/d/d;->getTheme()Landroid/content/res/Resources$Theme;
+00063  060c                     move-result-object
+00064  206e 08c0 0056           invoke-virtual  # CALL Landroid/content/res/Resources$Theme;->setTo(Landroid/content/res/Resources$Theme;)V
+00067  0328                     goto
+00068  7454 0ec9                iget-object  # FIELD Landroid/support/v7/app/f;->c:Landroid/content/Context;
+0006a  0522 033c                new-instance  # TYPE Landroid/support/v7/widget/ActionBarContextView;
+0006c  2070 15de 0045           invoke-direct  # CALL Landroid/support/v7/widget/ActionBarContextView;-><init>(Landroid/content/Context;)V
+0006f  755b 0ed5                iput-object  # FIELD Landroid/support/v7/app/f;->o:Landroid/support/v7/widget/ActionBarContextView;
+00071  0522 0499                new-instance  # TYPE Landroid/widget/PopupWindow;
+00073  0660 1422                sget  # FIELD Lb/b/d/a/a;->actionModePopupWindowStyle:I
+00075  4070 208c 6145           invoke-direct  # CALL Landroid/widget/PopupWindow;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;,I)V
+00078  755b 0ed6                iput-object  # FIELD Landroid/support/v7/app/f;->p:Landroid/widget/PopupWindow;
+0007a  2612                     const/4
+0007b  2071 1189 0065           invoke-static  # CALL Landroid/support/v4/widget/j;->a(Landroid/widget/PopupWindow;,I)V
+0007e  7554 0ed6                iget-object  # FIELD Landroid/support/v7/app/f;->p:Landroid/widget/PopupWindow;
+00080  7654 0ed5                iget-object  # FIELD Landroid/support/v7/app/f;->o:Landroid/support/v7/widget/ActionBarContextView;
+00082  206e 2098 0065           invoke-virtual  # CALL Landroid/widget/PopupWindow;->setContentView(Landroid/view/View;)V
+00085  7554 0ed6                iget-object  # FIELD Landroid/support/v7/app/f;->p:Landroid/widget/PopupWindow;
+00087  f612                     const/4
+00088  206e 20a2 0065           invoke-virtual  # CALL Landroid/widget/PopupWindow;->setWidth(I)V
+0008b  106e 084e 0004           invoke-virtual  # CALL Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
+0008e  050c                     move-result-object
+0008f  0660 140e                sget  # FIELD Lb/b/d/a/a;->actionBarSize:I
+00091  406e 08bf 3065           invoke-virtual  # CALL Landroid/content/res/Resources$Theme;->resolveAttribute(I,Landroid/util/TypedValue;,Z)Z
+00094  0052 1250                iget  # FIELD Landroid/util/TypedValue;->data:I
+00096  106e 0848 0004           invoke-virtual  # CALL Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+00099  040c                     move-result-object
+0009a  106e 08cb 0004           invoke-virtual  # CALL Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+0009d  040c                     move-result-object
+0009e  2071 1c80 0040           invoke-static  # CALL Landroid/util/TypedValue;->complexToDimensionPixelSize(I,Landroid/util/DisplayMetrics;)I
+000a1  000a                     move-result
+000a2  7454 0ed5                iget-object  # FIELD Landroid/support/v7/app/f;->o:Landroid/support/v7/widget/ActionBarContextView;
+000a4  206e 15f2 0004           invoke-virtual  # CALL Landroid/support/v7/widget/ActionBarContextView;->setContentHeight(I)V
+000a7  7054 0ed6                iget-object  # FIELD Landroid/support/v7/app/f;->p:Landroid/widget/PopupWindow;
+000a9  e412                     const/4
+000aa  206e 209c 0040           invoke-virtual  # CALL Landroid/widget/PopupWindow;->setHeight(I)V
+000ad  0022 02f5                new-instance  # TYPE Landroid/support/v7/app/f$f;
+000af  2070 127c 0070           invoke-direct  # CALL Landroid/support/v7/app/f$f;-><init>(Landroid/support/v7/app/f;)V
+000b2  705b 0ed7                iput-object  # FIELD Landroid/support/v7/app/f;->q:Ljava/lang/Runnable;
+000b4  2028                     goto
+000b5  7054 0edb                iget-object  # FIELD Landroid/support/v7/app/f;->u:Landroid/view/ViewGroup;
+000b7  0460 1654                sget  # FIELD Lb/b/d/a/f;->action_mode_bar_stub:I
+000b9  206e 1df0 0040           invoke-virtual  # CALL Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
+000bc  000c                     move-result-object
+000bd  001f 036f                check-cast  # TYPE Landroid/support/v7/widget/ViewStubCompat;
+000bf  0038 0015                if-eqz
+000c1  106e 12e6 0007           invoke-virtual  # CALL Landroid/support/v7/app/f;->m()Landroid/content/Context;
+000c4  040c                     move-result-object
+000c5  1071 1cb8 0004           invoke-static  # CALL Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+000c8  040c                     move-result-object
+000c9  206e 17d1 0040           invoke-virtual  # CALL Landroid/support/v7/widget/ViewStubCompat;->setLayoutInflater(Landroid/view/LayoutInflater;)V
+000cc  106e 17c9 0000           invoke-virtual  # CALL Landroid/support/v7/widget/ViewStubCompat;->a()Landroid/view/View;
+000cf  000c                     move-result-object
+000d0  001f 033c                check-cast  # TYPE Landroid/support/v7/widget/ActionBarContextView;
+000d2  705b 0ed5                iput-object  # FIELD Landroid/support/v7/app/f;->o:Landroid/support/v7/widget/ActionBarContextView;
+000d4  7054 0ed5                iget-object  # FIELD Landroid/support/v7/app/f;->o:Landroid/support/v7/widget/ActionBarContextView;
+000d6  0038 008b                if-eqz
+000d8  106e 12e4 0007           invoke-virtual  # CALL Landroid/support/v7/app/f;->l()V
+000db  7054 0ed5                iget-object  # FIELD Landroid/support/v7/app/f;->o:Landroid/support/v7/widget/ActionBarContextView;
+000dd  106e 15e5 0000           invoke-virtual  # CALL Landroid/support/v7/widget/ActionBarContextView;->c()V
+000e0  0022 0567                new-instance  # TYPE Lb/b/d/d/e;
+000e2  7454 0ed5                iget-object  # FIELD Landroid/support/v7/app/f;->o:Landroid/support/v7/widget/ActionBarContextView;
+000e4  106e 1df8 0004           invoke-virtual  # CALL Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
+000e7  040c                     move-result-object
+000e8  7554 0ed5                iget-object  # FIELD Landroid/support/v7/app/f;->o:Landroid/support/v7/widget/ActionBarContextView;
+000ea  7654 0ed6                iget-object  # FIELD Landroid/support/v7/app/f;->p:Landroid/widget/PopupWindow;
+000ec  0639 0003                if-nez
+000ee  0228                     goto
+000ef  2301                     op_01
+000f0  5370 268f 8540           invoke-direct  # CALL Lb/b/d/d/e;-><init>(Landroid/content/Context;,Landroid/support/v7/widget/ActionBarContextView;,Lb/b/d/d/b$a;,Z)V
+000f3  106e 269a 0000           invoke-virtual  # CALL Lb/b/d/d/e;->c()Landroid/view/Menu;
+000f6  030c                     move-result-object
+000f7  3072 266d 0308           invoke-interface  # CALL Lb/b/d/d/b$a;->b(Lb/b/d/d/b;,Landroid/view/Menu;)Z
+000fa  080a                     move-result
+000fb  0838 0064                if-eqz
+000fd  106e 269e 0000           invoke-virtual  # CALL Lb/b/d/d/e;->i()V
+00100  7854 0ed5                iget-object  # FIELD Landroid/support/v7/app/f;->o:Landroid/support/v7/widget/ActionBarContextView;
+00102  206e 15e3 0008           invoke-virtual  # CALL Landroid/support/v7/widget/ActionBarContextView;->a(Lb/b/d/d/b;)V
+00105  705b 0ed4                iput-object  # FIELD Landroid/support/v7/app/f;->n:Lb/b/d/d/b;
+00107  106e 12ee 0007           invoke-virtual  # CALL Landroid/support/v7/app/f;->s()Z
+0010a  080a                     move-result
+0010b  0015 3f80                const/high16
+0010d  0838 001c                if-eqz
+0010f  7854 0ed5                iget-object  # FIELD Landroid/support/v7/app/f;->o:Landroid/support/v7/widget/ActionBarContextView;
+00111  0112                     const/4
+00112  206e 1e33 0018           invoke-virtual  # CALL Landroid/view/ViewGroup;->setAlpha(F)V
+00115  7854 0ed5                iget-object  # FIELD Landroid/support/v7/app/f;->o:Landroid/support/v7/widget/ActionBarContextView;
+00117  1071 252f 0008           invoke-static  # CALL Lb/b/c/g/q;->a(Landroid/view/View;)Lb/b/c/g/u;
+0011a  080c                     move-result-object
+0011b  206e 2560 0008           invoke-virtual  # CALL Lb/b/c/g/u;->a(F)Lb/b/c/g/u;
+0011e  785b 0ed8                iput-object  # FIELD Landroid/support/v7/app/f;->r:Lb/b/c/g/u;
+00120  0022 02f6                new-instance  # TYPE Landroid/support/v7/app/f$g;
+00122  2070 127e 0070           invoke-direct  # CALL Landroid/support/v7/app/f$g;-><init>(Landroid/support/v7/app/f;)V
+00125  206e 2563 0008           invoke-virtual  # CALL Lb/b/c/g/u;->a(Lb/b/c/g/v;)Lb/b/c/g/u;
+00128  2728                     goto
+00129  7854 0ed5                iget-object  # FIELD Landroid/support/v7/app/f;->o:Landroid/support/v7/widget/ActionBarContextView;
+0012b  206e 1e33 0008           invoke-virtual  # CALL Landroid/view/ViewGroup;->setAlpha(F)V
+0012e  7854 0ed5                iget-object  # FIELD Landroid/support/v7/app/f;->o:Landroid/support/v7/widget/ActionBarContextView;
+00130  206e 15f7 0028           invoke-virtual  # CALL Landroid/support/v7/widget/ActionBarContextView;->setVisibility(I)V
+00133  7854 0ed5                iget-object  # FIELD Landroid/support/v7/app/f;->o:Landroid/support/v7/widget/ActionBarContextView;
+00135  0013 0020                const/16
+00137  206e 1e32 0008           invoke-virtual  # CALL Landroid/view/ViewGroup;->sendAccessibilityEvent(I)V
+0013a  7854 0ed5                iget-object  # FIELD Landroid/support/v7/app/f;->o:Landroid/support/v7/widget/ActionBarContextView;
+0013c  106e 1e07 0008           invoke-virtual  # CALL Landroid/view/ViewGroup;->getParent()Landroid/view/ViewParent;
+0013f  080c                     move-result-object
+00140  8820 044c                instance-of  # TYPE Landroid/view/View;
+00142  0838 000d                if-eqz
+00144  7854 0ed5                iget-object  # FIELD Landroid/support/v7/app/f;->o:Landroid/support/v7/widget/ActionBarContextView;
+00146  106e 1e07 0008           invoke-virtual  # CALL Landroid/view/ViewGroup;->getParent()Landroid/view/ViewParent;
+00149  080c                     move-result-object
+0014a  081f 044c                check-cast  # TYPE Landroid/view/View;
+0014c  1071 2548 0008           invoke-static  # CALL Lb/b/c/g/q;->m(Landroid/view/View;)V
+0014f  7854 0ed6                iget-object  # FIELD Landroid/support/v7/app/f;->p:Landroid/widget/PopupWindow;
+00151  0838 0010                if-eqz
+00153  7854 0eca                iget-object  # FIELD Landroid/support/v7/app/f;->d:Landroid/view/Window;
+00155  106e 1e72 0008           invoke-virtual  # CALL Landroid/view/Window;->getDecorView()Landroid/view/View;
+00158  080c                     move-result-object
+00159  7054 0ed7                iget-object  # FIELD Landroid/support/v7/app/f;->q:Ljava/lang/Runnable;
+0015b  206e 1d96 0008           invoke-virtual  # CALL Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+0015e  0328                     goto
+0015f  715b 0ed4                iput-object  # FIELD Landroid/support/v7/app/f;->n:Lb/b/d/d/b;
+00161  7854 0ed4                iget-object  # FIELD Landroid/support/v7/app/f;->n:Lb/b/d/d/b;
+00163  0838 0009                if-eqz
+00165  7054 0ecd                iget-object  # FIELD Landroid/support/v7/app/f;->g:Landroid/support/v7/app/d;
+00167  0038 0005                if-eqz
+00169  2072 1252 0080           invoke-interface  # CALL Landroid/support/v7/app/d;->a(Lb/b/d/d/b;)V
+0016c  7754 0ed4                iget-object  # FIELD Landroid/support/v7/app/f;->n:Lb/b/d/d/b;
+0016e  0711                     return-object
+
+### Landroid/support/v7/app/f;->b(Landroid/os/Bundle;)V  [access=0x1, regs=2, ins=2, outs=1, code_off=0xc8bb8]
+00000  1070 12f2 0000           invoke-direct  # CALL Landroid/support/v7/app/f;->w()V
+00003  000e                     return-void
+
+### Landroid/support/v7/app/f;->b(Landroid/support/v7/view/menu/h;)V  [access=0x0, regs=4, ins=2, outs=3, code_off=0xc857c]
+00000  2055 0eb7                iget-boolean  # FIELD Landroid/support/v7/app/f;->E:Z
+00002  0038 0003                if-eqz
+00004  000e                     return-void
+00005  1012                     const/4
+00006  205c 0eb7                iput-boolean  # FIELD Landroid/support/v7/app/f;->E:Z
+00008  2054 0ed1                iget-object  # FIELD Landroid/support/v7/app/f;->k:Landroid/support/v7/widget/a0;
+0000a  1072 17e2 0000           invoke-interface  # CALL Landroid/support/v7/widget/a0;->g()V
+0000d  106e 12e8 0002           invoke-virtual  # CALL Landroid/support/v7/app/f;->o()Landroid/view/Window$Callback;
+00010  000c                     move-result-object
+00011  0038 000b                if-eqz
+00013  2155 0ebb                iget-boolean  # FIELD Landroid/support/v7/app/f;->I:Z
+00015  0139 0007                if-nez
+00017  0113 006c                const/16
+00019  3072 1e65 0310           invoke-interface  # CALL Landroid/view/Window$Callback;->onPanelClosed(I,Landroid/view/Menu;)V
+0001c  0312                     const/4
+0001d  235c 0eb7                iput-boolean  # FIELD Landroid/support/v7/app/f;->E:Z
+0001f  000e                     return-void
+
+### Landroid/support/v7/app/f;->b(Landroid/view/View;,Landroid/view/ViewGroup$LayoutParams;)V  [access=0x1, regs=5, ins=3, outs=3, code_off=0xc8fec]
+00000  1070 12f2 0002           invoke-direct  # CALL Landroid/support/v7/app/f;->w()V
+00003  2054 0edb                iget-object  # FIELD Landroid/support/v7/app/f;->u:Landroid/view/ViewGroup;
+00005  0114 0002 0102           const
+00008  206e 1df0 0010           invoke-virtual  # CALL Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
+0000b  000c                     move-result-object
+0000c  001f 0452                check-cast  # TYPE Landroid/view/ViewGroup;
+0000e  106e 1e2a 0000           invoke-virtual  # CALL Landroid/view/ViewGroup;->removeAllViews()V
+00011  306e 1dea 0430           invoke-virtual  # CALL Landroid/view/ViewGroup;->addView(Landroid/view/View;,Landroid/view/ViewGroup$LayoutParams;)V
+00014  2254 0ecb                iget-object  # FIELD Landroid/support/v7/app/f;->e:Landroid/view/Window$Callback;
+00016  1072 1e5f 0002           invoke-interface  # CALL Landroid/view/Window$Callback;->onContentChanged()V
+00019  000e                     return-void
+
+### Landroid/support/v7/app/f;->b(I)Z  [access=0x1, regs=6, ins=2, outs=2, code_off=0xc7dc8]
+00000  2070 12e2 0054           invoke-direct  # CALL Landroid/support/v7/app/f;->k(I)I
+00003  050a                     move-result
+00004  4055 0eb6                iget-boolean  # FIELD Landroid/support/v7/app/f;->D:Z
+00006  0112                     const/4
+00007  0213 006c                const/16
+00009  0038 0005                if-eqz
+0000b  2533 0003                if-ne
+0000d  010f                     return
+0000e  4055 0ee0                iget-boolean  # FIELD Landroid/support/v7/app/f;->z:Z
+00010  1312                     const/4
+00011  0038 0006                if-eqz
+00013  3533 0004                if-ne
+00015  415c 0ee0                iput-boolean  # FIELD Landroid/support/v7/app/f;->z:Z
+00017  3532 0037                if-eq
+00019  2012                     const/4
+0001a  0532 002e                if-eq
+0001c  5012                     const/4
+0001d  0532 0025                if-eq
+0001f  0013 000a                const/16
+00021  0532 001b                if-eq
+00023  2532 0013                if-eq
+00025  0013 006d                const/16
+00027  0532 0009                if-eq
+00029  4454 0eca                iget-object  # FIELD Landroid/support/v7/app/f;->d:Landroid/view/Window;
+0002b  206e 1e75 0054           invoke-virtual  # CALL Landroid/view/Window;->requestFeature(I)Z
+0002e  040a                     move-result
+0002f  040f                     return
+00030  1070 12ad 0004           invoke-direct  # CALL Landroid/support/v7/app/f;->A()V
+00033  435c 0eb3                iput-boolean  # FIELD Landroid/support/v7/app/f;->A:Z
+00035  030f                     return
+00036  1070 12ad 0004           invoke-direct  # CALL Landroid/support/v7/app/f;->A()V
+00039  435c 0ee0                iput-boolean  # FIELD Landroid/support/v7/app/f;->z:Z
+0003b  030f                     return
+0003c  1070 12ad 0004           invoke-direct  # CALL Landroid/support/v7/app/f;->A()V
+0003f  435c 0eb4                iput-boolean  # FIELD Landroid/support/v7/app/f;->B:Z
+00041  030f                     return
+00042  1070 12ad 0004           invoke-direct  # CALL Landroid/support/v7/app/f;->A()V
+00045  435c 0edf                iput-boolean  # FIELD Landroid/support/v7/app/f;->y:Z
+00047  030f                     return
+00048  1070 12ad 0004           invoke-direct  # CALL Landroid/support/v7/app/f;->A()V
+0004b  435c 0ede                iput-boolean  # FIELD Landroid/support/v7/app/f;->x:Z
+0004d  030f                     return
+0004e  1070 12ad 0004           invoke-direct  # CALL Landroid/support/v7/app/f;->A()V
+00051  435c 0eb6                iput-boolean  # FIELD Landroid/support/v7/app/f;->D:Z
+00053  030f                     return
+
+### Landroid/support/v7/app/f;->b(I,Landroid/view/KeyEvent;)Z  [access=0x0, regs=6, ins=3, outs=5, code_off=0xc7934]
+00000  106e 12ce 0003           invoke-virtual  # CALL Landroid/support/v7/app/f;->c()Landroid/support/v7/app/a;
+00003  000c                     move-result-object
+00004  1112                     const/4
+00005  0038 0009                if-eqz
+00007  306e 120d 0540           invoke-virtual  # CALL Landroid/support/v7/app/a;->a(I,Landroid/view/KeyEvent;)Z
+0000a  040a                     move-result
+0000b  0438 0003                if-eqz
+0000d  010f                     return
+0000e  3454 0eb9                iget-object  # FIELD Landroid/support/v7/app/f;->G:Landroid/support/v7/app/f$m;
+00010  0438 0013                if-eqz
+00012  106e 1ca8 0005           invoke-virtual  # CALL Landroid/view/KeyEvent;->getKeyCode()I
+00015  000a                     move-result
+00016  5170 12c1 5043           invoke-direct  # CALL Landroid/support/v7/app/f;->a(Landroid/support/v7/app/f$m;,I,Landroid/view/KeyEvent;,I)Z
+00019  040a                     move-result
+0001a  0438 0009                if-eqz
+0001c  3354 0eb9                iget-object  # FIELD Landroid/support/v7/app/f;->G:Landroid/support/v7/app/f$m;
+0001e  0338 0004                if-eqz
+00020  315c 0eac                iput-boolean  # FIELD Landroid/support/v7/app/f$m;->n:Z
+00022  010f                     return
+00023  3454 0eb9                iget-object  # FIELD Landroid/support/v7/app/f;->G:Landroid/support/v7/app/f$m;
+00025  0012                     const/4
+00026  0439 0016                if-nez
+00028  306e 12ae 0103           invoke-virtual  # CALL Landroid/support/v7/app/f;->a(I,Z)Landroid/support/v7/app/f$m;
+0002b  040c                     move-result-object
+0002c  3070 12cd 0543           invoke-direct  # CALL Landroid/support/v7/app/f;->b(Landroid/support/v7/app/f$m;,Landroid/view/KeyEvent;)Z
+0002f  106e 1ca8 0005           invoke-virtual  # CALL Landroid/view/KeyEvent;->getKeyCode()I
+00032  020a                     move-result
+00033  5170 12c1 5243           invoke-direct  # CALL Landroid/support/v7/app/f;->a(Landroid/support/v7/app/f$m;,I,Landroid/view/KeyEvent;,I)Z
+00036  030a                     move-result
+00037  405c 0eab                iput-boolean  # FIELD Landroid/support/v7/app/f$m;->m:Z
+00039  0338 0003                if-eqz
+0003b  010f                     return
+0003c  000f                     return
+
+### Landroid/support/v7/app/f;->c()Landroid/support/v7/app/a;  [access=0x1, regs=1, ins=1, outs=1, code_off=0xc6c44]
+00000  1070 12f4 0000           invoke-direct  # CALL Landroid/support/v7/app/f;->y()V
+00003  0054 0ece                iget-object  # FIELD Landroid/support/v7/app/f;->h:Landroid/support/v7/app/a;
+00005  0011                     return-object
+
+### Landroid/support/v7/app/f;->c(I)V  [access=0x1, regs=4, ins=2, outs=3, code_off=0xc9030]
+00000  1070 12f2 0002           invoke-direct  # CALL Landroid/support/v7/app/f;->w()V
+00003  2054 0edb                iget-object  # FIELD Landroid/support/v7/app/f;->u:Landroid/view/ViewGroup;
+00005  0114 0002 0102           const
+00008  206e 1df0 0010           invoke-virtual  # CALL Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
+0000b  000c                     move-result-object
+0000c  001f 0452                check-cast  # TYPE Landroid/view/ViewGroup;
+0000e  106e 1e2a 0000           invoke-virtual  # CALL Landroid/view/ViewGroup;->removeAllViews()V
+00011  2154 0ec9                iget-object  # FIELD Landroid/support/v7/app/f;->c:Landroid/content/Context;
+00013  1071 1cb8 0001           invoke-static  # CALL Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+00016  010c                     move-result-object
+00017  306e 1cbb 0031           invoke-virtual  # CALL Landroid/view/LayoutInflater;->inflate(I,Landroid/view/ViewGroup;)Landroid/view/View;
+0001a  2254 0ecb                iget-object  # FIELD Landroid/support/v7/app/f;->e:Landroid/view/Window$Callback;
+0001c  1072 1e5f 0002           invoke-interface  # CALL Landroid/view/Window$Callback;->onContentChanged()V
+0001f  000e                     return-void
+
+### Landroid/support/v7/app/f;->c(Landroid/os/Bundle;)V  [access=0x1, regs=3, ins=2, outs=3, code_off=0xc8bf8]
+00000  1152 0ebc                iget  # FIELD Landroid/support/v7/app/f;->J:I
+00002  0013 ff9c                const/16
+00004  0132 0007                if-eq
+00006  001a 1956                const-string  # STR "appcompat:local_night_mode"
+00008  306e 0a9f 0102           invoke-virtual  # CALL Landroid/os/Bundle;->putInt(Ljava/lang/String;,I)V
+0000b  000e                     return-void
+
+### Landroid/support/v7/app/f;->c(I,Landroid/view/KeyEvent;)Z  [access=0x0, regs=6, ins=3, outs=3, code_off=0xc79c0]
+00000  4012                     const/4
+00001  1112                     const/4
+00002  0212                     const/4
+00003  0432 000b                if-eq
+00005  0013 0052                const/16
+00007  0432 0003                if-eq
+00009  2028                     goto
+0000a  3070 12d8 0523           invoke-direct  # CALL Landroid/support/v7/app/f;->e(I,Landroid/view/KeyEvent;)Z
+0000d  010f                     return
+0000e  3455 0eba                iget-boolean  # FIELD Landroid/support/v7/app/f;->H:Z
+00010  325c 0eba                iput-boolean  # FIELD Landroid/support/v7/app/f;->H:Z
+00012  306e 12ae 0223           invoke-virtual  # CALL Landroid/support/v7/app/f;->a(I,Z)Landroid/support/v7/app/f$m;
+00015  050c                     move-result-object
+00016  0538 000c                if-eqz
+00018  5055 0ead                iget-boolean  # FIELD Landroid/support/v7/app/f$m;->o:Z
+0001a  0038 0008                if-eqz
+0001c  0439 0005                if-nez
+0001e  306e 12b7 0153           invoke-virtual  # CALL Landroid/support/v7/app/f;->a(Landroid/support/v7/app/f$m;,Z)V
+00021  010f                     return
+00022  106e 12ec 0003           invoke-virtual  # CALL Landroid/support/v7/app/f;->q()Z
+00025  030a                     move-result
+00026  0338 0003                if-eqz
+00028  010f                     return
+00029  020f                     return
+
+### Landroid/support/v7/app/f;->d()V  [access=0x1, regs=3, ins=1, outs=2, code_off=0xc893c]
+00000  2054 0ec9                iget-object  # FIELD Landroid/support/v7/app/f;->c:Landroid/content/Context;
+00002  1071 1cb8 0000           invoke-static  # CALL Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+00005  000c                     move-result-object
+00006  106e 1cb9 0000           invoke-virtual  # CALL Landroid/view/LayoutInflater;->getFactory()Landroid/view/LayoutInflater$Factory;
+00009  010c                     move-result-object
+0000a  0139 0006                if-nez
+0000c  2071 24f5 0020           invoke-static  # CALL Lb/b/c/g/f;->b(Landroid/view/LayoutInflater;,Landroid/view/LayoutInflater$Factory2;)V
+0000f  1028                     goto
+00010  106e 1cba 0000           invoke-virtual  # CALL Landroid/view/LayoutInflater;->getFactory2()Landroid/view/LayoutInflater$Factory2;
+00013  020c                     move-result-object
+00014  2220 0300                instance-of  # TYPE Landroid/support/v7/app/f;
+00016  0239 0009                if-nez
+00018  021a 0367                const-string  # STR "AppCompatDelegate"
+0001a  001a 14c0                const-string  # STR "The Activity's LayoutInflater already has a Factory installed so we can not install AppCompat's"
+0001c  2071 1c5e 0002           invoke-static  # CALL Landroid/util/Log;->i(Ljava/lang/String;,Ljava/lang/String;)I
+0001f  000e                     return-void
+
+### Landroid/support/v7/app/f;->d(I)V  [access=0x0, regs=3, ins=2, outs=3, code_off=0xc866c]
+00000  1012                     const/4
+00001  306e 12ae 0021           invoke-virtual  # CALL Landroid/support/v7/app/f;->a(I,Z)Landroid/support/v7/app/f$m;
+00004  020c                     move-result-object
+00005  306e 12b7 0021           invoke-virtual  # CALL Landroid/support/v7/app/f;->a(Landroid/support/v7/app/f$m;,Z)V
+00008  000e                     return-void
+
+### Landroid/support/v7/app/f;->e()V  [access=0x1, regs=2, ins=1, outs=2, code_off=0xc898c]
+00000  106e 12ce 0001           invoke-virtual  # CALL Landroid/support/v7/app/f;->c()Landroid/support/v7/app/a;
+00003  000c                     move-result-object
+00004  0038 0009                if-eqz
+00006  106e 1216 0000           invoke-virtual  # CALL Landroid/support/v7/app/a;->i()Z
+00009  000a                     move-result
+0000a  0038 0003                if-eqz
+0000c  000e                     return-void
+0000d  0012                     const/4
+0000e  2070 12e1 0001           invoke-direct  # CALL Landroid/support/v7/app/f;->j(I)V
+00011  000e                     return-void
+
+### Landroid/support/v7/app/f;->e(I)V  [access=0x0, regs=6, ins=2, outs=3, code_off=0xc8720]
+00000  1012                     const/4
+00001  306e 12ae 0054           invoke-virtual  # CALL Landroid/support/v7/app/f;->a(I,Z)Landroid/support/v7/app/f$m;
+00004  010c                     move-result-object
+00005  1254 0ea8                iget-object  # FIELD Landroid/support/v7/app/f$m;->j:Landroid/support/v7/view/menu/h;
+00007  0238 001e                if-eqz
+00009  0222 01f1                new-instance  # TYPE Landroid/os/Bundle;
+0000b  1070 0a86 0002           invoke-direct  # CALL Landroid/os/Bundle;-><init>()V
+0000e  1354 0ea8                iget-object  # FIELD Landroid/support/v7/app/f$m;->j:Landroid/support/v7/view/menu/h;
+00010  206e 145a 0023           invoke-virtual  # CALL Landroid/support/v7/view/menu/h;->b(Landroid/os/Bundle;)V
+00013  106e 0aa7 0002           invoke-virtual  # CALL Landroid/os/Bundle;->size()I
+00016  030a                     move-result
+00017  033d 0004                if-lez
+00019  125b 0eb1                iput-object  # FIELD Landroid/support/v7/app/f$m;->s:Landroid/os/Bundle;
+0001b  1254 0ea8                iget-object  # FIELD Landroid/support/v7/app/f$m;->j:Landroid/support/v7/view/menu/h;
+0001d  106e 1482 0002           invoke-virtual  # CALL Landroid/support/v7/view/menu/h;->s()V
+00020  1254 0ea8                iget-object  # FIELD Landroid/support/v7/app/f$m;->j:Landroid/support/v7/view/menu/h;
+00022  106e 1462 0002           invoke-virtual  # CALL Landroid/support/v7/view/menu/h;->clear()V
+00025  105c 0eb0                iput-boolean  # FIELD Landroid/support/v7/app/f$m;->r:Z
+00027  105c 0eaf                iput-boolean  # FIELD Landroid/support/v7/app/f$m;->q:Z
+00029  0013 006c                const/16
+0002b  0532 0004                if-eq
+0002d  0539 0013                if-nez
+0002f  4554 0ed1                iget-object  # FIELD Landroid/support/v7/app/f;->k:Landroid/support/v7/widget/a0;
+00031  0538 000f                if-eqz
+00033  0512                     const/4
+00034  306e 12ae 0554           invoke-virtual  # CALL Landroid/support/v7/app/f;->a(I,Z)Landroid/support/v7/app/f$m;
+00037  000c                     move-result-object
+00038  0038 0008                if-eqz
+0003a  055c 0eab                iput-boolean  # FIELD Landroid/support/v7/app/f$m;->m:Z
+0003c  0512                     const/4
+0003d  3070 12cd 0504           invoke-direct  # CALL Landroid/support/v7/app/f;->b(Landroid/support/v7/app/f$m;,Landroid/view/KeyEvent;)Z
+00040  000e                     return-void
+
+### Landroid/support/v7/app/f;->f(I)I  [access=0x0, regs=4, ins=2, outs=2, code_off=0xc8058]
+00000  0013 ff9c                const/16
+00002  f112                     const/4
+00003  0332 0026                if-eq
+00005  0338 0003                if-eqz
+00007  030f                     return
+00008  0360 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+0000a  0013 0017                const/16
+0000c  0334 0013                if-lt
+0000e  2354 0ec9                iget-object  # FIELD Landroid/support/v7/app/f;->c:Landroid/content/Context;
+00010  001c 0130                const-class  # TYPE Landroid/app/UiModeManager;
+00012  206e 084b 0003           invoke-virtual  # CALL Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
+00015  030c                     move-result-object
+00016  031f 0130                check-cast  # TYPE Landroid/app/UiModeManager;
+00018  106e 077e 0003           invoke-virtual  # CALL Landroid/app/UiModeManager;->getNightMode()I
+0001b  030a                     move-result
+0001c  0339 0003                if-nez
+0001e  010f                     return
+0001f  1070 12f1 0002           invoke-direct  # CALL Landroid/support/v7/app/f;->v()V
+00022  2254 0ebe                iget-object  # FIELD Landroid/support/v7/app/f;->L:Landroid/support/v7/app/f$k;
+00024  106e 129c 0002           invoke-virtual  # CALL Landroid/support/v7/app/f$k;->c()I
+00027  020a                     move-result
+00028  020f                     return
+00029  010f                     return
+
+### Landroid/support/v7/app/f;->f()V  [access=0x1, regs=3, ins=1, outs=2, code_off=0xc8acc]
+00000  2055 0ebf                iget-boolean  # FIELD Landroid/support/v7/app/f;->M:Z
+00002  0038 000d                if-eqz
+00004  2054 0eca                iget-object  # FIELD Landroid/support/v7/app/f;->d:Landroid/view/Window;
+00006  106e 1e72 0000           invoke-virtual  # CALL Landroid/view/Window;->getDecorView()Landroid/view/View;
+00009  000c                     move-result-object
+0000a  2154 0ec1                iget-object  # FIELD Landroid/support/v7/app/f;->O:Ljava/lang/Runnable;
+0000c  206e 1d9c 0010           invoke-virtual  # CALL Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
+0000f  1012                     const/4
+00010  205c 0ebb                iput-boolean  # FIELD Landroid/support/v7/app/f;->I:Z
+00012  2054 0ece                iget-object  # FIELD Landroid/support/v7/app/f;->h:Landroid/support/v7/app/a;
+00014  0038 0005                if-eqz
+00016  106e 1217 0000           invoke-virtual  # CALL Landroid/support/v7/app/a;->j()V
+00019  2254 0ebe                iget-object  # FIELD Landroid/support/v7/app/f;->L:Landroid/support/v7/app/f$k;
+0001b  0238 0005                if-eqz
+0001d  106e 129a 0002           invoke-virtual  # CALL Landroid/support/v7/app/f$k;->a()V
+00020  000e                     return-void
+
+### Landroid/support/v7/app/f;->g()V  [access=0x1, regs=2, ins=1, outs=2, code_off=0xc8bd0]
+00000  106e 12ce 0001           invoke-virtual  # CALL Landroid/support/v7/app/f;->c()Landroid/support/v7/app/a;
+00003  010c                     move-result-object
+00004  0138 0006                if-eqz
+00006  1012                     const/4
+00007  206e 1211 0001           invoke-virtual  # CALL Landroid/support/v7/app/a;->d(Z)V
+0000a  000e                     return-void
+
+### Landroid/support/v7/app/f;->g(I)V  [access=0x0, regs=3, ins=2, outs=2, code_off=0xc8b3c]
+00000  0013 006c                const/16
+00002  0233 000c                if-ne
+00004  106e 12ce 0001           invoke-virtual  # CALL Landroid/support/v7/app/f;->c()Landroid/support/v7/app/a;
+00007  010c                     move-result-object
+00008  0138 0006                if-eqz
+0000a  1212                     const/4
+0000b  206e 120f 0021           invoke-virtual  # CALL Landroid/support/v7/app/a;->b(Z)V
+0000e  000e                     return-void
+
+### Landroid/support/v7/app/f;->h()V  [access=0x1, regs=1, ins=1, outs=1, code_off=0xc8c20]
+00000  106e 12be 0000           invoke-virtual  # CALL Landroid/support/v7/app/f;->a()Z
+00003  000e                     return-void
+
+### Landroid/support/v7/app/f;->h(I)V  [access=0x0, regs=4, ins=2, outs=3, code_off=0xc8b6c]
+00000  0012                     const/4
+00001  0113 006c                const/16
+00003  1333 000c                if-ne
+00005  106e 12ce 0002           invoke-virtual  # CALL Landroid/support/v7/app/f;->c()Landroid/support/v7/app/a;
+00008  020c                     move-result-object
+00009  0238 0014                if-eqz
+0000b  206e 120f 0002           invoke-virtual  # CALL Landroid/support/v7/app/a;->b(Z)V
+0000e  0f28                     goto
+0000f  0339 000e                if-nez
+00011  1112                     const/4
+00012  306e 12ae 0132           invoke-virtual  # CALL Landroid/support/v7/app/f;->a(I,Z)Landroid/support/v7/app/f$m;
+00015  030c                     move-result-object
+00016  3155 0ead                iget-boolean  # FIELD Landroid/support/v7/app/f$m;->o:Z
+00018  0138 0005                if-eqz
+0001a  306e 12b7 0032           invoke-virtual  # CALL Landroid/support/v7/app/f;->a(Landroid/support/v7/app/f$m;,Z)V
+0001d  000e                     return-void
+
+### Landroid/support/v7/app/f;->i(I)I  [access=0x0, regs=10, ins=2, outs=5, code_off=0xc8104]
+00000  8054 0ed5                iget-object  # FIELD Landroid/support/v7/app/f;->o:Landroid/support/v7/widget/ActionBarContextView;
+00002  0112                     const/4
+00003  0038 00a5                if-eqz
+00005  106e 1dfc 0000           invoke-virtual  # CALL Landroid/view/ViewGroup;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+00008  000c                     move-result-object
+00009  0020 0451                instance-of  # TYPE Landroid/view/ViewGroup$MarginLayoutParams;
+0000b  0038 009d                if-eqz
+0000d  8054 0ed5                iget-object  # FIELD Landroid/support/v7/app/f;->o:Landroid/support/v7/widget/ActionBarContextView;
+0000f  106e 1dfc 0000           invoke-virtual  # CALL Landroid/view/ViewGroup;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+00012  000c                     move-result-object
+00013  001f 0451                check-cast  # TYPE Landroid/view/ViewGroup$MarginLayoutParams;
+00015  8254 0ed5                iget-object  # FIELD Landroid/support/v7/app/f;->o:Landroid/support/v7/widget/ActionBarContextView;
+00017  106e 1e16 0002           invoke-virtual  # CALL Landroid/view/ViewGroup;->isShown()Z
+0001a  020a                     move-result
+0001b  1312                     const/4
+0001c  0238 007a                if-eqz
+0001e  8254 0ec3                iget-object  # FIELD Landroid/support/v7/app/f;->Q:Landroid/graphics/Rect;
+00020  0239 0010                if-nez
+00022  0222 01b0                new-instance  # TYPE Landroid/graphics/Rect;
+00024  1070 0994 0002           invoke-direct  # CALL Landroid/graphics/Rect;-><init>()V
+00027  825b 0ec3                iput-object  # FIELD Landroid/support/v7/app/f;->Q:Landroid/graphics/Rect;
+00029  0222 01b0                new-instance  # TYPE Landroid/graphics/Rect;
+0002b  1070 0994 0002           invoke-direct  # CALL Landroid/graphics/Rect;-><init>()V
+0002e  825b 0ec4                iput-object  # FIELD Landroid/support/v7/app/f;->R:Landroid/graphics/Rect;
+00030  8254 0ec3                iget-object  # FIELD Landroid/support/v7/app/f;->Q:Landroid/graphics/Rect;
+00032  8454 0ec4                iget-object  # FIELD Landroid/support/v7/app/f;->R:Landroid/graphics/Rect;
+00034  516e 09a0 1912           invoke-virtual  # CALL Landroid/graphics/Rect;->set(I,I,I,I)V
+00037  8554 0edb                iget-object  # FIELD Landroid/support/v7/app/f;->u:Landroid/view/ViewGroup;
+00039  3071 1b5b 0425           invoke-static  # CALL Landroid/support/v7/widget/z0;->a(Landroid/view/View;,Landroid/graphics/Rect;,Landroid/graphics/Rect;)V
+0003c  4252 053a                iget  # FIELD Landroid/graphics/Rect;->top:I
+0003e  0239 0004                if-nez
+00040  9201                     op_01
+00041  0228                     goto
+00042  1201                     op_01
+00043  0452 125b                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+00045  2432 003f                if-eq
+00047  0959 125b                iput  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+00049  8254 0edd                iget-object  # FIELD Landroid/support/v7/app/f;->w:Landroid/view/View;
+0004b  0239 0028                if-nez
+0004d  0222 044c                new-instance  # TYPE Landroid/view/View;
+0004f  8454 0ec9                iget-object  # FIELD Landroid/support/v7/app/f;->c:Landroid/content/Context;
+00051  2070 1d3b 0042           invoke-direct  # CALL Landroid/view/View;-><init>(Landroid/content/Context;)V
+00054  825b 0edd                iput-object  # FIELD Landroid/support/v7/app/f;->w:Landroid/view/View;
+00056  8454 0ec9                iget-object  # FIELD Landroid/support/v7/app/f;->c:Landroid/content/Context;
+00058  106e 0848 0004           invoke-virtual  # CALL Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+0005b  040c                     move-result-object
+0005c  0560 1525                sget  # FIELD Lb/b/d/a/c;->abc_input_method_navigation_guard:I
+0005e  206e 08c5 0054           invoke-virtual  # CALL Landroid/content/res/Resources;->getColor(I)I
+00061  040a                     move-result
+00062  206e 1daa 0042           invoke-virtual  # CALL Landroid/view/View;->setBackgroundColor(I)V
+00065  8254 0edb                iget-object  # FIELD Landroid/support/v7/app/f;->u:Landroid/view/ViewGroup;
+00067  8454 0edd                iget-object  # FIELD Landroid/support/v7/app/f;->w:Landroid/view/View;
+00069  0522 0450                new-instance  # TYPE Landroid/view/ViewGroup$LayoutParams;
+0006b  f612                     const/4
+0006c  3070 1dd8 0965           invoke-direct  # CALL Landroid/view/ViewGroup$LayoutParams;-><init>(I,I)V
+0006f  406e 1de9 5642           invoke-virtual  # CALL Landroid/view/ViewGroup;->addView(Landroid/view/View;,I,Landroid/view/ViewGroup$LayoutParams;)V
+00072  1028                     goto
+00073  106e 1d5b 0002           invoke-virtual  # CALL Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+00076  020c                     move-result-object
+00077  2452 1255                iget  # FIELD Landroid/view/ViewGroup$LayoutParams;->height:I
+00079  9432 0009                if-eq
+0007b  2959 1255                iput  # FIELD Landroid/view/ViewGroup$LayoutParams;->height:I
+0007d  8454 0edd                iget-object  # FIELD Landroid/support/v7/app/f;->w:Landroid/view/View;
+0007f  206e 1db1 0024           invoke-virtual  # CALL Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+00082  3201                     op_01
+00083  0228                     goto
+00084  1201                     op_01
+00085  8454 0edd                iget-object  # FIELD Landroid/support/v7/app/f;->w:Landroid/view/View;
+00087  0438 0003                if-eqz
+00089  0228                     goto
+0008a  1301                     op_01
+0008b  8455 0eb4                iget-boolean  # FIELD Landroid/support/v7/app/f;->B:Z
+0008d  0439 0005                if-nez
+0008f  0338 0003                if-eqz
+00091  1901                     op_01
+00092  3701                     op_01
+00093  2301                     op_01
+00094  7201                     op_01
+00095  0b28                     goto
+00096  0252 125b                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+00098  0238 0006                if-eqz
+0009a  0159 125b                iput  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+0009c  1201                     op_01
+0009d  0328                     goto
+0009e  1201                     op_01
+0009f  2301                     op_01
+000a0  0338 0009                if-eqz
+000a2  8354 0ed5                iget-object  # FIELD Landroid/support/v7/app/f;->o:Landroid/support/v7/widget/ActionBarContextView;
+000a4  206e 1e37 0003           invoke-virtual  # CALL Landroid/view/ViewGroup;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+000a7  0228                     goto
+000a8  1201                     op_01
+000a9  8854 0edd                iget-object  # FIELD Landroid/support/v7/app/f;->w:Landroid/view/View;
+000ab  0838 000a                if-eqz
+000ad  0238 0003                if-eqz
+000af  0328                     goto
+000b0  0113 0008                const/16
+000b2  206e 1dcb 0018           invoke-virtual  # CALL Landroid/view/View;->setVisibility(I)V
+000b5  090f                     return
+
+### Landroid/support/v7/app/f;->i()V  [access=0x1, regs=3, ins=1, outs=2, code_off=0xc8c38]
+00000  106e 12ce 0002           invoke-virtual  # CALL Landroid/support/v7/app/f;->c()Landroid/support/v7/app/a;
+00003  000c                     move-result-object
+00004  0038 0006                if-eqz
+00006  0112                     const/4
+00007  206e 1211 0010           invoke-virtual  # CALL Landroid/support/v7/app/a;->d(Z)V
+0000a  2254 0ebe                iget-object  # FIELD Landroid/support/v7/app/f;->L:Landroid/support/v7/app/f$k;
+0000c  0238 0005                if-eqz
+0000e  106e 129a 0002           invoke-virtual  # CALL Landroid/support/v7/app/f$k;->a()V
+00011  000e                     return-void
+
+### Landroid/support/v7/app/f;->k()V  [access=0x0, regs=3, ins=1, outs=3, code_off=0xc8690]
+00000  2054 0ed1                iget-object  # FIELD Landroid/support/v7/app/f;->k:Landroid/support/v7/widget/a0;
+00002  0038 0005                if-eqz
+00004  1072 17e2 0000           invoke-interface  # CALL Landroid/support/v7/widget/a0;->g()V
+00007  2054 0ed6                iget-object  # FIELD Landroid/support/v7/app/f;->p:Landroid/widget/PopupWindow;
+00009  0038 001d                if-eqz
+0000b  2054 0eca                iget-object  # FIELD Landroid/support/v7/app/f;->d:Landroid/view/Window;
+0000d  106e 1e72 0000           invoke-virtual  # CALL Landroid/view/Window;->getDecorView()Landroid/view/View;
+00010  000c                     move-result-object
+00011  2154 0ed7                iget-object  # FIELD Landroid/support/v7/app/f;->q:Ljava/lang/Runnable;
+00013  206e 1d9c 0010           invoke-virtual  # CALL Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
+00016  2054 0ed6                iget-object  # FIELD Landroid/support/v7/app/f;->p:Landroid/widget/PopupWindow;
+00018  106e 2095 0000           invoke-virtual  # CALL Landroid/widget/PopupWindow;->isShowing()Z
+0001b  000a                     move-result
+0001c  0038 0007                if-eqz
+0001e  2054 0ed6                iget-object  # FIELD Landroid/support/v7/app/f;->p:Landroid/widget/PopupWindow;
+00020  106e 208e 0000           invoke-virtual  # CALL Landroid/widget/PopupWindow;->dismiss()V
+00023  0012                     const/4
+00024  205b 0ed6                iput-object  # FIELD Landroid/support/v7/app/f;->p:Landroid/widget/PopupWindow;
+00026  106e 12e4 0002           invoke-virtual  # CALL Landroid/support/v7/app/f;->l()V
+00029  0012                     const/4
+0002a  306e 12ae 0002           invoke-virtual  # CALL Landroid/support/v7/app/f;->a(I,Z)Landroid/support/v7/app/f$m;
+0002d  020c                     move-result-object
+0002e  0238 0009                if-eqz
+00030  2254 0ea8                iget-object  # FIELD Landroid/support/v7/app/f$m;->j:Landroid/support/v7/view/menu/h;
+00032  0238 0005                if-eqz
+00034  106e 1464 0002           invoke-virtual  # CALL Landroid/support/v7/view/menu/h;->close()V
+00037  000e                     return-void
+
+### Landroid/support/v7/app/f;->l()V  [access=0x0, regs=1, ins=1, outs=1, code_off=0xc87b4]
+00000  0054 0ed8                iget-object  # FIELD Landroid/support/v7/app/f;->r:Lb/b/c/g/u;
+00002  0038 0005                if-eqz
+00004  106e 2565 0000           invoke-virtual  # CALL Lb/b/c/g/u;->a()V
+00007  000e                     return-void
+
+### Landroid/support/v7/app/f;->m()Landroid/content/Context;  [access=0x10, regs=2, ins=1, outs=1, code_off=0xc6c10]
+00000  106e 12ce 0001           invoke-virtual  # CALL Landroid/support/v7/app/f;->c()Landroid/support/v7/app/a;
+00003  000c                     move-result-object
+00004  0038 0007                if-eqz
+00006  106e 1215 0000           invoke-virtual  # CALL Landroid/support/v7/app/a;->h()Landroid/content/Context;
+00009  000c                     move-result-object
+0000a  0228                     goto
+0000b  0012                     const/4
+0000c  0039 0004                if-nez
+0000e  1054 0ec9                iget-object  # FIELD Landroid/support/v7/app/f;->c:Landroid/content/Context;
+00010  0011                     return-object
+
+### Landroid/support/v7/app/f;->n()Ljava/lang/CharSequence;  [access=0x10, regs=3, ins=1, outs=1, code_off=0xc8280]
+00000  2054 0ecb                iget-object  # FIELD Landroid/support/v7/app/f;->e:Landroid/view/Window$Callback;
+00002  0120 011f                instance-of  # TYPE Landroid/app/Activity;
+00004  0138 0009                if-eqz
+00006  001f 011f                check-cast  # TYPE Landroid/app/Activity;
+00008  106e 0707 0000           invoke-virtual  # CALL Landroid/app/Activity;->getTitle()Ljava/lang/CharSequence;
+0000b  020c                     move-result-object
+0000c  0211                     return-object
+0000d  2254 0ed0                iget-object  # FIELD Landroid/support/v7/app/f;->j:Ljava/lang/CharSequence;
+0000f  0211                     return-object
+
+### Landroid/support/v7/app/f;->o()Landroid/view/Window$Callback;  [access=0x10, regs=1, ins=1, outs=1, code_off=0xc75c4]
+00000  0054 0eca                iget-object  # FIELD Landroid/support/v7/app/f;->d:Landroid/view/Window;
+00002  106e 1e71 0000           invoke-virtual  # CALL Landroid/view/Window;->getCallback()Landroid/view/Window$Callback;
+00005  000c                     move-result-object
+00006  0011                     return-object
+
+### Landroid/support/v7/app/f;->onCreateView(Landroid/view/View;,Ljava/lang/String;,Landroid/content/Context;,Landroid/util/AttributeSet;)Landroid/view/View;  [access=0x11, regs=5, ins=5, outs=5, code_off=0xc7234]
+00000  546e 12b1 3210           invoke-virtual  # CALL Landroid/support/v7/app/f;->a(Landroid/view/View;,Ljava/lang/String;,Landroid/content/Context;,Landroid/util/AttributeSet;)Landroid/view/View;
+00003  000c                     move-result-object
+00004  0011                     return-object
+
+### Landroid/support/v7/app/f;->onCreateView(Ljava/lang/String;,Landroid/content/Context;,Landroid/util/AttributeSet;)Landroid/view/View;  [access=0x1, regs=5, ins=4, outs=5, code_off=0xc7250]
+00000  0012                     const/4
+00001  546e 12e9 3201           invoke-virtual  # CALL Landroid/support/v7/app/f;->onCreateView(Landroid/view/View;,Ljava/lang/String;,Landroid/content/Context;,Landroid/util/AttributeSet;)Landroid/view/View;
+00004  010c                     move-result-object
+00005  0111                     return-object
+
+### Landroid/support/v7/app/f;->p()Z  [access=0x1, regs=1, ins=1, outs=0, code_off=0xc7858]
+00000  0055 0ed9                iget-boolean  # FIELD Landroid/support/v7/app/f;->s:Z
+00002  000f                     return
+
+### Landroid/support/v7/app/f;->q()Z  [access=0x0, regs=3, ins=1, outs=1, code_off=0xc7870]
+00000  2054 0ed4                iget-object  # FIELD Landroid/support/v7/app/f;->n:Lb/b/d/d/b;
+00002  1112                     const/4
+00003  0038 0006                if-eqz
+00005  106e 266f 0000           invoke-virtual  # CALL Lb/b/d/d/b;->a()V
+00008  010f                     return
+00009  106e 12ce 0002           invoke-virtual  # CALL Landroid/support/v7/app/f;->c()Landroid/support/v7/app/a;
+0000c  020c                     move-result-object
+0000d  0238 0009                if-eqz
+0000f  106e 1213 0002           invoke-virtual  # CALL Landroid/support/v7/app/a;->f()Z
+00012  020a                     move-result
+00013  0238 0003                if-eqz
+00015  010f                     return
+00016  0212                     const/4
+00017  020f                     return
+
+### Landroid/support/v7/app/f;->r()Landroid/support/v7/app/a;  [access=0x10, regs=1, ins=1, outs=0, code_off=0xc6c60]
+00000  0054 0ece                iget-object  # FIELD Landroid/support/v7/app/f;->h:Landroid/support/v7/app/a;
+00002  0011                     return-object
+
+### Landroid/support/v7/app/f;->s()Z  [access=0x10, regs=2, ins=1, outs=1, code_off=0xc7e80]
+00000  1055 0eda                iget-boolean  # FIELD Landroid/support/v7/app/f;->t:Z
+00002  0038 000e                if-eqz
+00004  1154 0edb                iget-object  # FIELD Landroid/support/v7/app/f;->u:Landroid/view/ViewGroup;
+00006  0138 000a                if-eqz
+00008  1071 2546 0001           invoke-static  # CALL Lb/b/c/g/q;->k(Landroid/view/View;)Z
+0000b  010a                     move-result
+0000c  0138 0004                if-eqz
+0000e  1112                     const/4
+0000f  0228                     goto
+00010  0112                     const/4
+00011  010f                     return

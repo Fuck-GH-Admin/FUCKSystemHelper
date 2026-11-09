@@ -1,0 +1,33 @@
+### Lb/b/c/f/d;->a(Ljava/lang/Object;,Ljava/lang/StringBuilder;)V  [access=0x9, regs=4, ins=2, outs=2, code_off=0xb9260]
+00000  0239 0008                if-nez
+00002  021a 2204                const-string  # STR "null"
+00004  206e 2d3f 0023           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00007  3828                     goto
+00008  106e 2ce3 0002           invoke-virtual  # CALL Ljava/lang/Object;->getClass()Ljava/lang/Class;
+0000b  000c                     move-result-object
+0000c  106e 2c81 0000           invoke-virtual  # CALL Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+0000f  000c                     move-result-object
+00010  0038 0008                if-eqz
+00012  106e 2d12 0000           invoke-virtual  # CALL Ljava/lang/String;->length()I
+00015  010a                     move-result
+00016  013c 0018                if-gtz
+00018  106e 2ce3 0002           invoke-virtual  # CALL Ljava/lang/Object;->getClass()Ljava/lang/Class;
+0001b  000c                     move-result-object
+0001c  106e 2c7f 0000           invoke-virtual  # CALL Ljava/lang/Class;->getName()Ljava/lang/String;
+0001f  000c                     move-result-object
+00020  0113 002e                const/16
+00022  206e 2d10 0010           invoke-virtual  # CALL Ljava/lang/String;->lastIndexOf(I)I
+00025  010a                     move-result
+00026  013d 0008                if-lez
+00028  01d8 0101                op_d8
+0002a  206e 2d19 0010           invoke-virtual  # CALL Ljava/lang/String;->substring(I)Ljava/lang/String;
+0002d  000c                     move-result-object
+0002e  206e 2d3f 0003           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00031  0013 007b                const/16
+00033  206e 2d38 0003           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+00036  1071 2d47 0002           invoke-static  # CALL Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+00039  020a                     move-result
+0003a  1071 2cac 0002           invoke-static  # CALL Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+0003d  020c                     move-result-object
+0003e  c628                     goto
+0003f  000e                     return-void

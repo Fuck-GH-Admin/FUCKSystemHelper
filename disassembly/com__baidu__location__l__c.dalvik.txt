@@ -1,0 +1,69 @@
+### Lcom/baidu/location/l/c;-><init>()V  [access=0x10001, regs=2, ins=1, outs=1, code_off=0x106b80]
+00000  1070 2905 0001           invoke-direct  # CALL Lc/b/a/a/c;-><init>()V
+00003  0071 2e14 0000           invoke-static  # CALL Ljava/util/Collections;->emptyList()Ljava/util/List;
+00006  000c                     move-result-object
+00007  105b 1cdb                iput-object  # FIELD Lcom/baidu/location/l/c;->a:Ljava/util/List;
+00009  f012                     const/4
+0000a  1059 1cdc                iput  # FIELD Lcom/baidu/location/l/c;->b:I
+0000c  000e                     return-void
+
+### Lcom/baidu/location/l/c;->a()I  [access=0x1, regs=2, ins=1, outs=1, code_off=0x106af4]
+00000  1052 1cdc                iget  # FIELD Lcom/baidu/location/l/c;->b:I
+00002  003b 0005                if-gez
+00004  106e 2b35 0001           invoke-virtual  # CALL Lcom/baidu/location/l/c;->b()I
+00007  1152 1cdc                iget  # FIELD Lcom/baidu/location/l/c;->b:I
+00009  010f                     return
+
+### Lcom/baidu/location/l/c;->a(Lcom/baidu/location/l/b;)Lcom/baidu/location/l/c;  [access=0x1, regs=3, ins=2, outs=2, code_off=0x106ab4]
+00000  0239 0003                if-nez
+00002  0111                     return-object
+00003  1054 1cdb                iget-object  # FIELD Lcom/baidu/location/l/c;->a:Ljava/util/List;
+00005  1072 2e58 0000           invoke-interface  # CALL Ljava/util/List;->isEmpty()Z
+00008  000a                     move-result
+00009  0038 0009                if-eqz
+0000b  0022 06c8                new-instance  # TYPE Ljava/util/ArrayList;
+0000d  1070 2de7 0000           invoke-direct  # CALL Ljava/util/ArrayList;-><init>()V
+00010  105b 1cdb                iput-object  # FIELD Lcom/baidu/location/l/c;->a:Ljava/util/List;
+00012  1054 1cdb                iget-object  # FIELD Lcom/baidu/location/l/c;->a:Ljava/util/List;
+00014  2072 2e52 0020           invoke-interface  # CALL Ljava/util/List;->add(Ljava/lang/Object;)Z
+00017  0111                     return-object
+
+### Lcom/baidu/location/l/c;->a(Lc/b/a/a/b;)V  [access=0x1, regs=4, ins=2, outs=3, code_off=0x106bac]
+00000  106e 2b36 0002           invoke-virtual  # CALL Lcom/baidu/location/l/c;->d()Ljava/util/List;
+00003  020c                     move-result-object
+00004  1072 2e59 0002           invoke-interface  # CALL Ljava/util/List;->iterator()Ljava/util/Iterator;
+00007  020c                     move-result-object
+00008  1072 2e43 0002           invoke-interface  # CALL Ljava/util/Iterator;->hasNext()Z
+0000b  000a                     move-result
+0000c  0038 000d                if-eqz
+0000e  1072 2e44 0002           invoke-interface  # CALL Ljava/util/Iterator;->next()Ljava/lang/Object;
+00011  000c                     move-result-object
+00012  001f 0611                check-cast  # TYPE Lcom/baidu/location/l/b;
+00014  1112                     const/4
+00015  306e 28ed 0013           invoke-virtual  # CALL Lc/b/a/a/b;->a(I,Lc/b/a/a/c;)V
+00018  f028                     goto
+00019  000e                     return-void
+
+### Lcom/baidu/location/l/c;->b()I  [access=0x1, regs=5, ins=1, outs=2, code_off=0x106b18]
+00000  106e 2b36 0004           invoke-virtual  # CALL Lcom/baidu/location/l/c;->d()Ljava/util/List;
+00003  000c                     move-result-object
+00004  1072 2e59 0000           invoke-interface  # CALL Ljava/util/List;->iterator()Ljava/util/Iterator;
+00007  000c                     move-result-object
+00008  0112                     const/4
+00009  1072 2e43 0000           invoke-interface  # CALL Ljava/util/Iterator;->hasNext()Z
+0000c  020a                     move-result
+0000d  0238 000f                if-eqz
+0000f  1072 2e44 0000           invoke-interface  # CALL Ljava/util/Iterator;->next()Ljava/lang/Object;
+00012  020c                     move-result-object
+00013  021f 0611                check-cast  # TYPE Lcom/baidu/location/l/b;
+00015  1312                     const/4
+00016  2071 28f6 0023           invoke-static  # CALL Lc/b/a/a/b;->b(I,Lc/b/a/a/c;)I
+00019  020a                     move-result
+0001a  21b0                     op_b0
+0001b  ee28                     goto
+0001c  4159 1cdc                iput  # FIELD Lcom/baidu/location/l/c;->b:I
+0001e  010f                     return
+
+### Lcom/baidu/location/l/c;->d()Ljava/util/List;  [access=0x1, regs=1, ins=1, outs=0, code_off=0x106b68]
+00000  0054 1cdb                iget-object  # FIELD Lcom/baidu/location/l/c;->a:Ljava/util/List;
+00002  0011                     return-object

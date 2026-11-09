@@ -1,0 +1,49 @@
+### Lb/a/a/a/a;-><clinit>()V  [access=0x10008, regs=1, ins=0, outs=1, code_off=0x7f034]
+00000  0022 04ac                new-instance  # TYPE Lb/a/a/a/a$a;
+00002  1070 218b 0000           invoke-direct  # CALL Lb/a/a/a/a$a;-><init>()V
+00005  0022 04ad                new-instance  # TYPE Lb/a/a/a/a$b;
+00007  1070 218d 0000           invoke-direct  # CALL Lb/a/a/a/a$b;-><init>()V
+0000a  000e                     return-void
+
+### Lb/a/a/a/a;-><init>()V  [access=0x10002, regs=2, ins=1, outs=1, code_off=0x7f05c]
+00000  1070 2199 0001           invoke-direct  # CALL Lb/a/a/a/c;-><init>()V
+00003  0022 04af                new-instance  # TYPE Lb/a/a/a/b;
+00005  1070 2195 0000           invoke-direct  # CALL Lb/a/a/a/b;-><init>()V
+00008  105b 1282                iput-object  # FIELD Lb/a/a/a/a;->b:Lb/a/a/a/c;
+0000a  105b 1281                iput-object  # FIELD Lb/a/a/a/a;->a:Lb/a/a/a/c;
+0000c  000e                     return-void
+
+### Lb/a/a/a/a;->b()Lb/a/a/a/a;  [access=0x9, regs=2, ins=0, outs=1, code_off=0x7efb8]
+00000  0062 1283                sget-object  # FIELD Lb/a/a/a/a;->c:Lb/a/a/a/a;
+00002  0038 0005                if-eqz
+00004  0062 1283                sget-object  # FIELD Lb/a/a/a/a;->c:Lb/a/a/a/a;
+00006  0011                     return-object
+00007  001c 04ae                const-class  # TYPE Lb/a/a/a/a;
+00009  001d                     monitor-enter
+0000a  0162 1283                sget-object  # FIELD Lb/a/a/a/a;->c:Lb/a/a/a/a;
+0000c  0139 0009                if-nez
+0000e  0122 04ae                new-instance  # TYPE Lb/a/a/a/a;
+00010  1070 2190 0001           invoke-direct  # CALL Lb/a/a/a/a;-><init>()V
+00013  0169 1283                sput-object  # FIELD Lb/a/a/a/a;->c:Lb/a/a/a/a;
+00015  001e                     monitor-exit
+00016  0062 1283                sget-object  # FIELD Lb/a/a/a/a;->c:Lb/a/a/a/a;
+00018  0011                     return-object
+00019  010d                     op_0d
+0001a  001e                     monitor-exit
+0001b  0127                     throw
+
+### Lb/a/a/a/a;->a(Ljava/lang/Runnable;)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0x7f088]
+00000  0054 1281                iget-object  # FIELD Lb/a/a/a/a;->a:Lb/a/a/a/c;
+00002  206e 219a 0010           invoke-virtual  # CALL Lb/a/a/a/c;->a(Ljava/lang/Runnable;)V
+00005  000e                     return-void
+
+### Lb/a/a/a/a;->a()Z  [access=0x1, regs=1, ins=1, outs=1, code_off=0x7f014]
+00000  0054 1281                iget-object  # FIELD Lb/a/a/a/a;->a:Lb/a/a/a/c;
+00002  106e 219b 0000           invoke-virtual  # CALL Lb/a/a/a/c;->a()Z
+00005  000a                     move-result
+00006  000f                     return
+
+### Lb/a/a/a/a;->b(Ljava/lang/Runnable;)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0x7f0a4]
+00000  0054 1281                iget-object  # FIELD Lb/a/a/a/a;->a:Lb/a/a/a/c;
+00002  206e 219c 0010           invoke-virtual  # CALL Lb/a/a/a/c;->b(Ljava/lang/Runnable;)V
+00005  000e                     return-void

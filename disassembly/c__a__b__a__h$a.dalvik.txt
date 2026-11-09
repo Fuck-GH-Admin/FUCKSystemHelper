@@ -1,0 +1,108 @@
+### Lc/a/b/a/h$a;-><init>()V  [access=0x10002, regs=1, ins=1, outs=1, code_off=0xf3f3c]
+00000  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  1070 273a 0000           invoke-direct  # CALL Lc/a/b/a/h$a;->a()V
+00006  000e                     return-void
+
+### Lc/a/b/a/h$a;-><init>(Lc/a/b/a/i;)V  [access=0x11000, regs=2, ins=2, outs=1, code_off=0xf3f5c]
+00000  1070 2735 0000           invoke-direct  # CALL Lc/a/b/a/h$a;-><init>()V
+00003  000e                     return-void
+
+### Lc/a/b/a/h$a;->a(Lc/a/b/a/h$a;,Ljava/lang/Object;)J  [access=0x1008, regs=2, ins=2, outs=2, code_off=0xf3ed0]
+00000  2070 2738 0010           invoke-direct  # CALL Lc/a/b/a/h$a;->a(Ljava/lang/Object;)J
+00003  000b                     move-result-wide
+00004  0010                     return-wide
+
+### Lc/a/b/a/h$a;->a(Ljava/lang/Object;)J  [access=0x2, regs=3, ins=2, outs=3, code_off=0xf3eec]
+00000  1154 1ac7                iget-object  # FIELD Lc/a/b/a/h$a;->c:Ljava/lang/reflect/Method;
+00002  0012                     const/4
+00003  0023 075d                new-array  # TYPE [Ljava/lang/Object;
+00005  306e 2d7a 0021           invoke-virtual  # CALL Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;,[Ljava/lang/Object;)Ljava/lang/Object;
+00008  010c                     move-result-object
+00009  011f 0671                check-cast  # TYPE Ljava/lang/Long;
+0000b  106e 2cb6 0001           invoke-virtual  # CALL Ljava/lang/Long;->longValue()J
+0000e  010b                     move-result-wide
+0000f  0110                     return-wide
+00010  0122 0575                new-instance  # TYPE Lc/a/b/a/e$a;
+00012  021a 0000                const-string  # STR ""
+00014  2070 2729 0021           invoke-direct  # CALL Lc/a/b/a/e$a;-><init>(Ljava/lang/String;)V
+00017  0127                     throw
+
+### Lc/a/b/a/h$a;->a(Lc/a/b/a/h$a;)Ljava/lang/Object;  [access=0x1008, regs=1, ins=1, outs=1, code_off=0xf3e94]
+00000  1070 273d 0000           invoke-direct  # CALL Lc/a/b/a/h$a;->b()Ljava/lang/Object;
+00003  000c                     move-result-object
+00004  0011                     return-object
+
+### Lc/a/b/a/h$a;->a()V  [access=0x2, regs=7, ins=1, outs=3, code_off=0xf3f74]
+00000  0071 2721 0000           invoke-static  # CALL Lc/a/b/a/d;->a()[B
+00003  000c                     move-result-object
+00004  1071 272b 0000           invoke-static  # CALL Lc/a/b/a/e;->a([B)Ljava/lang/String;
+00007  000c                     move-result-object
+00008  011c 067b                const-class  # TYPE Ljava/lang/Object;
+0000a  106e 2c75 0001           invoke-virtual  # CALL Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+0000d  010c                     move-result-object
+0000e  1212                     const/4
+0000f  3071 2c73 0120           invoke-static  # CALL Ljava/lang/Class;->forName(Ljava/lang/String;,Z,Ljava/lang/ClassLoader;)Ljava/lang/Class;
+00012  000c                     move-result-object
+00013  605b 1ac5                iput-object  # FIELD Lc/a/b/a/h$a;->a:Ljava/lang/Class;
+00015  0071 2722 0000           invoke-static  # CALL Lc/a/b/a/d;->b()[B
+00018  000c                     move-result-object
+00019  1071 272b 0000           invoke-static  # CALL Lc/a/b/a/e;->a([B)Ljava/lang/String;
+0001c  000c                     move-result-object
+0001d  6154 1ac5                iget-object  # FIELD Lc/a/b/a/h$a;->a:Ljava/lang/Class;
+0001f  3312                     const/4
+00020  3323 075c                new-array  # TYPE [Ljava/lang/Class;
+00022  0412                     const/4
+00023  051c 0720                const-class  # TYPE [B
+00025  054d 0403                aput-object
+00027  0462 1d60                sget-object  # FIELD Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+00029  044d 0203                aput-object
+0002b  2212                     const/4
+0002c  0462 1d60                sget-object  # FIELD Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+0002e  044d 0203                aput-object
+00030  3071 272c 0301           invoke-static  # CALL Lc/a/b/a/e;->a(Ljava/lang/Class;,Ljava/lang/String;,[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+00033  000c                     move-result-object
+00034  605b 1ac6                iput-object  # FIELD Lc/a/b/a/h$a;->b:Ljava/lang/reflect/Method;
+00036  0071 2723 0000           invoke-static  # CALL Lc/a/b/a/d;->c()[B
+00039  000c                     move-result-object
+0003a  1071 272b 0000           invoke-static  # CALL Lc/a/b/a/e;->a([B)Ljava/lang/String;
+0003d  000c                     move-result-object
+0003e  6154 1ac5                iget-object  # FIELD Lc/a/b/a/h$a;->a:Ljava/lang/Class;
+00040  0212                     const/4
+00041  3071 272c 0201           invoke-static  # CALL Lc/a/b/a/e;->a(Ljava/lang/Class;,Ljava/lang/String;,[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+00044  000c                     move-result-object
+00045  605b 1ac7                iput-object  # FIELD Lc/a/b/a/h$a;->c:Ljava/lang/reflect/Method;
+00047  0528                     goto
+00048  060d                     op_0d
+00049  106e 2c96 0006           invoke-virtual  # CALL Ljava/lang/Exception;->printStackTrace()V
+0004c  000e                     return-void
+
+### Lc/a/b/a/h$a;->a(Lc/a/b/a/h$a;,Ljava/lang/Object;,[B,I,I)V  [access=0x1008, regs=5, ins=5, outs=5, code_off=0xf4030]
+00000  5470 273c 3210           invoke-direct  # CALL Lc/a/b/a/h$a;->a(Ljava/lang/Object;,[B,I,I)V
+00003  000e                     return-void
+
+### Lc/a/b/a/h$a;->a(Ljava/lang/Object;,[B,I,I)V  [access=0x2, regs=7, ins=5, outs=3, code_off=0xf4048]
+00000  2254 1ac6                iget-object  # FIELD Lc/a/b/a/h$a;->b:Ljava/lang/reflect/Method;
+00002  3012                     const/4
+00003  0023 075d                new-array  # TYPE [Ljava/lang/Object;
+00005  0112                     const/4
+00006  044d 0100                aput-object
+00008  1412                     const/4
+00009  1071 2cae 0005           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+0000c  050c                     move-result-object
+0000d  054d 0400                aput-object
+0000f  2412                     const/4
+00010  1071 2cae 0006           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+00013  050c                     move-result-object
+00014  054d 0400                aput-object
+00016  306e 2d7a 0032           invoke-virtual  # CALL Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;,[Ljava/lang/Object;)Ljava/lang/Object;
+00019  000e                     return-void
+0001a  0222 0575                new-instance  # TYPE Lc/a/b/a/e$a;
+0001c  031a 0000                const-string  # STR ""
+0001e  2070 2729 0032           invoke-direct  # CALL Lc/a/b/a/e$a;-><init>(Ljava/lang/String;)V
+00021  0227                     throw
+
+### Lc/a/b/a/h$a;->b()Ljava/lang/Object;  [access=0x2, regs=1, ins=1, outs=1, code_off=0xf3eb0]
+00000  0054 1ac5                iget-object  # FIELD Lc/a/b/a/h$a;->a:Ljava/lang/Class;
+00002  106e 2c85 0000           invoke-virtual  # CALL Ljava/lang/Class;->newInstance()Ljava/lang/Object;
+00005  000c                     move-result-object
+00006  0011                     return-object

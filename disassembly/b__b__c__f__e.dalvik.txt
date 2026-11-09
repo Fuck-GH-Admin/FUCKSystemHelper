@@ -1,0 +1,48 @@
+### Lb/b/c/f/e;-><init>(Ljava/lang/String;)V  [access=0x10001, regs=4, ins=2, outs=2, code_off=0xb92f0]
+00000  1070 2c61 0002           invoke-direct  # CALL Ljava/io/Writer;-><init>()V
+00003  0022 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00005  0113 0080                const/16
+00007  2070 2d36 0010           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>(I)V
+0000a  205b 13b4                iput-object  # FIELD Lb/b/c/f/e;->c:Ljava/lang/StringBuilder;
+0000c  235b 13b3                iput-object  # FIELD Lb/b/c/f/e;->b:Ljava/lang/String;
+0000e  000e                     return-void
+
+### Lb/b/c/f/e;->a()V  [access=0x2, regs=3, ins=1, outs=3, code_off=0xb9350]
+00000  2054 13b4                iget-object  # FIELD Lb/b/c/f/e;->c:Ljava/lang/StringBuilder;
+00002  106e 2d43 0000           invoke-virtual  # CALL Ljava/lang/StringBuilder;->length()I
+00005  000a                     move-result
+00006  003d 0017                if-lez
+00008  2054 13b3                iget-object  # FIELD Lb/b/c/f/e;->b:Ljava/lang/String;
+0000a  2154 13b4                iget-object  # FIELD Lb/b/c/f/e;->c:Ljava/lang/StringBuilder;
+0000c  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0000f  010c                     move-result-object
+00010  2071 1c59 0010           invoke-static  # CALL Landroid/util/Log;->d(Ljava/lang/String;,Ljava/lang/String;)I
+00013  2254 13b4                iget-object  # FIELD Lb/b/c/f/e;->c:Ljava/lang/StringBuilder;
+00015  0012                     const/4
+00016  106e 2d43 0002           invoke-virtual  # CALL Ljava/lang/StringBuilder;->length()I
+00019  010a                     move-result
+0001a  306e 2d41 0102           invoke-virtual  # CALL Ljava/lang/StringBuilder;->delete(I,I)Ljava/lang/StringBuilder;
+0001d  000e                     return-void
+
+### Lb/b/c/f/e;->close()V  [access=0x1, regs=1, ins=1, outs=1, code_off=0xb9320]
+00000  1070 2415 0000           invoke-direct  # CALL Lb/b/c/f/e;->a()V
+00003  000e                     return-void
+
+### Lb/b/c/f/e;->flush()V  [access=0x1, regs=1, ins=1, outs=1, code_off=0xb9338]
+00000  1070 2415 0000           invoke-direct  # CALL Lb/b/c/f/e;->a()V
+00003  000e                     return-void
+
+### Lb/b/c/f/e;->write([C,I,I)V  [access=0x1, regs=7, ins=4, outs=2, code_off=0xb939c]
+00000  0012                     const/4
+00001  6035 0016                if-ge
+00003  0190 0005                int-add
+00005  0149 0104                aget-char
+00007  0213 000a                const/16
+00009  2133 0006                if-ne
+0000b  1070 2415 0003           invoke-direct  # CALL Lb/b/c/f/e;->a()V
+0000e  0628                     goto
+0000f  3254 13b4                iget-object  # FIELD Lb/b/c/f/e;->c:Ljava/lang/StringBuilder;
+00011  206e 2d38 0012           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+00014  00d8 0100                op_d8
+00016  eb28                     goto
+00017  000e                     return-void

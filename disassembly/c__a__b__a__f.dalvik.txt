@@ -1,0 +1,45 @@
+### Lc/a/b/a/f;-><init>()V  [access=0x10001, regs=4, ins=1, outs=4, code_off=0xf3d88]
+00000  1070 2ce0 0003           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  0022 0572                new-instance  # TYPE Lc/a/b/a/b;
+00005  0160 1ac1                sget  # FIELD Lc/a/b/a/f;->c:I
+00007  2070 26ff 0010           invoke-direct  # CALL Lc/a/b/a/b;-><init>(I)V
+0000a  305b 1abf                iput-object  # FIELD Lc/a/b/a/f;->a:Lc/a/b/a/b;
+0000c  0360 1ac1                sget  # FIELD Lc/a/b/a/f;->c:I
+0000e  0112                     const/4
+0000f  1212                     const/4
+00010  406e 2704 2310           invoke-virtual  # CALL Lc/a/b/a/b;->a(I,I,Z)V
+00013  000e                     return-void
+
+### Lc/a/b/a/f;->a(Lc/a/b/a/b;,I,I,I)V  [access=0x1, regs=8, ins=5, outs=3, code_off=0xf3dc0]
+00000  3054 1abf                iget-object  # FIELD Lc/a/b/a/f;->a:Lc/a/b/a/b;
+00002  0190 0605                int-add
+00004  306e 270d 0150           invoke-virtual  # CALL Lc/a/b/a/b;->c(I,I)Lc/a/b/a/b;
+00007  000c                     move-result-object
+00008  0738 0014                if-eqz
+0000a  2112                     const/4
+0000b  1732 000d                if-eq
+0000d  3112                     const/4
+0000e  1732 0006                if-eq
+00010  206e 270e 0040           invoke-virtual  # CALL Lc/a/b/a/b;->c(Lc/a/b/a/b;)V
+00013  0c28                     goto
+00014  206e 270b 0040           invoke-virtual  # CALL Lc/a/b/a/b;->b(Lc/a/b/a/b;)V
+00017  0828                     goto
+00018  206e 2714 0040           invoke-virtual  # CALL Lc/a/b/a/b;->d(Lc/a/b/a/b;)V
+0001b  0428                     goto
+0001c  206e 2706 0040           invoke-virtual  # CALL Lc/a/b/a/b;->a(Lc/a/b/a/b;)V
+0001f  0412                     const/4
+00020  6435 0010                if-ge
+00022  3754 1abf                iget-object  # FIELD Lc/a/b/a/f;->a:Lc/a/b/a/b;
+00024  0190 0405                int-add
+00026  206e 270f 0040           invoke-virtual  # CALL Lc/a/b/a/b;->c(I)Z
+00029  020a                     move-result
+0002a  306e 2705 0217           invoke-virtual  # CALL Lc/a/b/a/b;->a(I,Z)V
+0002d  04d8 0104                op_d8
+0002f  f128                     goto
+00030  000e                     return-void
+
+### Lc/a/b/a/f;->a()[B  [access=0x1, regs=1, ins=1, outs=1, code_off=0xf3d68]
+00000  0054 1abf                iget-object  # FIELD Lc/a/b/a/f;->a:Lc/a/b/a/b;
+00002  106e 2707 0000           invoke-virtual  # CALL Lc/a/b/a/b;->a()[B
+00005  000c                     move-result-object
+00006  0011                     return-object

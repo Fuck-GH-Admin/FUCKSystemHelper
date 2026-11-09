@@ -1,0 +1,30 @@
+### Lc/a/b/c/a;-><clinit>()V  [access=0x10008, regs=1, ins=0, outs=1, code_off=0xf47dc]
+00000  0022 0585                new-instance  # TYPE Lc/a/b/c/b;
+00002  1070 2761 0000           invoke-direct  # CALL Lc/a/b/c/b;-><init>()V
+00005  0069 1ada                sput-object  # FIELD Lc/a/b/c/a;->e:Ljava/util/Comparator;
+00007  000e                     return-void
+
+### Lc/a/b/c/a;-><init>(Ljava/lang/String;,J)V  [access=0x10001, regs=4, ins=4, outs=1, code_off=0xf47fc]
+00000  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  015b 1ad8                iput-object  # FIELD Lc/a/b/c/a;->c:Ljava/lang/String;
+00005  025a 1ad9                iput-wide  # FIELD Lc/a/b/c/a;->d:J
+00007  000e                     return-void
+
+### Lc/a/b/c/a;->a()Ljava/lang/String;  [access=0x1, regs=1, ins=1, outs=0, code_off=0xf47ac]
+00000  0054 1ad8                iget-object  # FIELD Lc/a/b/c/a;->c:Ljava/lang/String;
+00002  0011                     return-object
+
+### Lc/a/b/c/a;->a(Lc/a/b/c/a$a;)V  [access=0x11, regs=3, ins=2, outs=2, code_off=0xf481c]
+00000  125b 1ad6                iput-object  # FIELD Lc/a/b/c/a;->a:Lc/a/b/c/a$a;
+00002  2254 1acf                iget-object  # FIELD Lc/a/b/c/a$a;->b:Lc/a/b/i/a;
+00004  106e 2835 0002           invoke-virtual  # CALL Lc/a/b/i/a;->b()Lc/a/b/i/a$a;
+00007  020c                     move-result-object
+00008  001a 1aee                const-string  # STR "cs"
+0000a  206e 2829 0002           invoke-virtual  # CALL Lc/a/b/i/a$a;->a(Ljava/lang/String;)Lc/a/b/i/a$a;
+0000d  020c                     move-result-object
+0000e  125b 1ad7                iput-object  # FIELD Lc/a/b/c/a;->b:Lc/a/b/i/a$a;
+00010  000e                     return-void
+
+### Lc/a/b/c/a;->b()J  [access=0x1, regs=3, ins=1, outs=0, code_off=0xf47c4]
+00000  2053 1ad9                iget-wide  # FIELD Lc/a/b/c/a;->d:J
+00002  0010                     return-wide

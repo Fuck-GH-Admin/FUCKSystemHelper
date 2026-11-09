@@ -1,0 +1,77 @@
+### Landroid/support/v7/widget/j0;-><clinit>()V  [access=0x10008, regs=5, ins=0, outs=3, code_off=0xe8784]
+00000  001c 0499                const-class  # TYPE Landroid/widget/PopupWindow;
+00002  011a 266e                const-string  # STR "setTouchModal"
+00004  1212                     const/4
+00005  2223 075c                new-array  # TYPE [Ljava/lang/Class;
+00007  0312                     const/4
+00008  0462 1d5e                sget-object  # FIELD Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
+0000a  044d 0302                aput-object
+0000c  306e 2c7a 0210           invoke-virtual  # CALL Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;,[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+0000f  000c                     move-result-object
+00010  0069 1173                sput-object  # FIELD Landroid/support/v7/widget/j0;->K:Ljava/lang/reflect/Method;
+00012  0828                     goto
+00013  001a 1219                const-string  # STR "MenuPopupWindow"
+00015  011a 06bd                const-string  # STR "Could not find method setTouchModal() on PopupWindow. Oh well."
+00017  2071 1c5e 0010           invoke-static  # CALL Landroid/util/Log;->i(Ljava/lang/String;,Ljava/lang/String;)I
+0001a  000e                     return-void
+
+### Landroid/support/v7/widget/j0;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;,I,I)V  [access=0x10001, regs=5, ins=5, outs=5, code_off=0xe87dc]
+00000  5470 1910 3210           invoke-direct  # CALL Landroid/support/v7/widget/h0;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;,I,I)V
+00003  000e                     return-void
+
+### Landroid/support/v7/widget/j0;->a(Landroid/content/Context;,Z)Landroid/support/v7/widget/d0;  [access=0x0, regs=4, ins=3, outs=3, code_off=0xe8760]
+00000  0022 039d                new-instance  # TYPE Landroid/support/v7/widget/j0$a;
+00002  3070 1951 0320           invoke-direct  # CALL Landroid/support/v7/widget/j0$a;-><init>(Landroid/content/Context;,Z)V
+00005  206e 1954 0010           invoke-virtual  # CALL Landroid/support/v7/widget/j0$a;->setHoverListener(Landroid/support/v7/widget/i0;)V
+00008  0011                     return-object
+
+### Landroid/support/v7/widget/j0;->a(Landroid/support/v7/view/menu/h;,Landroid/view/MenuItem;)V  [access=0x1, regs=3, ins=3, outs=3, code_off=0xe87f4]
+00000  0054 1172                iget-object  # FIELD Landroid/support/v7/widget/j0;->J:Landroid/support/v7/widget/i0;
+00002  0038 0005                if-eqz
+00004  3072 193b 0210           invoke-interface  # CALL Landroid/support/v7/widget/i0;->a(Landroid/support/v7/view/menu/h;,Landroid/view/MenuItem;)V
+00007  000e                     return-void
+
+### Landroid/support/v7/widget/j0;->a(Landroid/support/v7/widget/i0;)V  [access=0x1, regs=2, ins=2, outs=0, code_off=0xe888c]
+00000  015b 1172                iput-object  # FIELD Landroid/support/v7/widget/j0;->J:Landroid/support/v7/widget/i0;
+00002  000e                     return-void
+
+### Landroid/support/v7/widget/j0;->a(Ljava/lang/Object;)V  [access=0x1, regs=4, ins=2, outs=2, code_off=0xe8834]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0113 0017                const/16
+00004  1034 0009                if-lt
+00006  2254 1149                iget-object  # FIELD Landroid/support/v7/widget/h0;->F:Landroid/widget/PopupWindow;
+00008  031f 0411                check-cast  # TYPE Landroid/transition/Transition;
+0000a  206e 2099 0032           invoke-virtual  # CALL Landroid/widget/PopupWindow;->setEnterTransition(Landroid/transition/Transition;)V
+0000d  000e                     return-void
+
+### Landroid/support/v7/widget/j0;->b(Landroid/support/v7/view/menu/h;,Landroid/view/MenuItem;)V  [access=0x1, regs=3, ins=3, outs=3, code_off=0xe8814]
+00000  0054 1172                iget-object  # FIELD Landroid/support/v7/widget/j0;->J:Landroid/support/v7/widget/i0;
+00002  0038 0005                if-eqz
+00004  3072 193c 0210           invoke-interface  # CALL Landroid/support/v7/widget/i0;->b(Landroid/support/v7/view/menu/h;,Landroid/view/MenuItem;)V
+00007  000e                     return-void
+
+### Landroid/support/v7/widget/j0;->b(Ljava/lang/Object;)V  [access=0x1, regs=4, ins=2, outs=2, code_off=0xe8860]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0113 0017                const/16
+00004  1034 0009                if-lt
+00006  2254 1149                iget-object  # FIELD Landroid/support/v7/widget/h0;->F:Landroid/widget/PopupWindow;
+00008  031f 0411                check-cast  # TYPE Landroid/transition/Transition;
+0000a  206e 209a 0032           invoke-virtual  # CALL Landroid/widget/PopupWindow;->setExitTransition(Landroid/transition/Transition;)V
+0000d  000e                     return-void
+
+### Landroid/support/v7/widget/j0;->c(Z)V  [access=0x1, regs=5, ins=2, outs=3, code_off=0xe88a4]
+00000  0062 1173                sget-object  # FIELD Landroid/support/v7/widget/j0;->K:Ljava/lang/reflect/Method;
+00002  0038 0019                if-eqz
+00004  3354 1149                iget-object  # FIELD Landroid/support/v7/widget/h0;->F:Landroid/widget/PopupWindow;
+00006  1112                     const/4
+00007  1123 075d                new-array  # TYPE [Ljava/lang/Object;
+00009  0212                     const/4
+0000a  1071 2c67 0004           invoke-static  # CALL Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+0000d  040c                     move-result-object
+0000e  044d 0201                aput-object
+00010  306e 2d7a 0130           invoke-virtual  # CALL Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;,[Ljava/lang/Object;)Ljava/lang/Object;
+00013  0828                     goto
+00014  031a 1219                const-string  # STR "MenuPopupWindow"
+00016  041a 06c3                const-string  # STR "Could not invoke setTouchModal() on PopupWindow. Oh well."
+00018  2071 1c5e 0043           invoke-static  # CALL Landroid/util/Log;->i(Ljava/lang/String;,Ljava/lang/String;)I
+0001b  000e                     return-void

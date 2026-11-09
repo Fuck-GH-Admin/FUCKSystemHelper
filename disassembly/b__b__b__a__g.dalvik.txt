@@ -1,0 +1,297 @@
+### Lb/b/b/a/g;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;,Lorg/xmlpull/v1/XmlPullParser;)V  [access=0x10001, regs=5, ins=4, outs=5, code_off=0xa140c]
+00000  106e 0848 0002           invoke-virtual  # CALL Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+00003  000c                     move-result-object
+00004  106e 084e 0002           invoke-virtual  # CALL Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
+00007  020c                     move-result-object
+00008  5470 221b 3201           invoke-direct  # CALL Lb/b/b/a/g;-><init>(Landroid/content/res/Resources;,Landroid/content/res/Resources$Theme;,Landroid/util/AttributeSet;,Lorg/xmlpull/v1/XmlPullParser;)V
+0000b  000e                     return-void
+
+### Lb/b/b/a/g;-><init>(Landroid/content/res/Resources;,Landroid/content/res/Resources$Theme;,Landroid/util/AttributeSet;,Lorg/xmlpull/v1/XmlPullParser;)V  [access=0x10001, regs=6, ins=5, outs=4, code_off=0xa1434]
+00000  1070 2ce0 0001           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  0062 12ee                sget-object  # FIELD Lb/b/b/a/a;->l:[I
+00005  4071 230a 0432           invoke-static  # CALL Lb/b/c/a/d/g;->a(Landroid/content/res/Resources;,Landroid/content/res/Resources$Theme;,Landroid/util/AttributeSet;,[I)Landroid/content/res/TypedArray;
+00008  020c                     move-result-object
+00009  3070 221e 0521           invoke-direct  # CALL Lb/b/b/a/g;->a(Landroid/content/res/TypedArray;,Lorg/xmlpull/v1/XmlPullParser;)V
+0000c  106e 090a 0002           invoke-virtual  # CALL Landroid/content/res/TypedArray;->recycle()V
+0000f  000e                     return-void
+
+### Lb/b/b/a/g;->a(F,F)V  [access=0x2, regs=5, ins=3, outs=5, code_off=0xa16d8]
+00000  0022 01aa                new-instance  # TYPE Landroid/graphics/Path;
+00002  1070 0979 0000           invoke-direct  # CALL Landroid/graphics/Path;-><init>()V
+00005  0112                     const/4
+00006  306e 097f 0110           invoke-virtual  # CALL Landroid/graphics/Path;->moveTo(F,F)V
+00009  0115 3f80                const/high16
+0000b  516e 0980 1430           invoke-virtual  # CALL Landroid/graphics/Path;->quadTo(F,F,F,F)V
+0000e  2070 221f 0002           invoke-direct  # CALL Lb/b/b/a/g;->a(Landroid/graphics/Path;)V
+00011  000e                     return-void
+
+### Lb/b/b/a/g;->a(F,F,F,F)V  [access=0x2, regs=13, ins=5, outs=7, code_off=0xa1464]
+00000  0722 01aa                new-instance  # TYPE Landroid/graphics/Path;
+00002  1070 0979 0007           invoke-direct  # CALL Landroid/graphics/Path;-><init>()V
+00005  0012                     const/4
+00006  306e 097f 0007           invoke-virtual  # CALL Landroid/graphics/Path;->moveTo(F,F)V
+00009  0515 3f80                const/high16
+0000b  0615 3f80                const/high16
+0000d  7007                     op_07
+0000e  9101                     op_01
+0000f  a201                     op_01
+00010  b301                     op_01
+00011  c401                     op_01
+00012  0774 097d 0000           invoke-virtual/range  # CALL Landroid/graphics/Path;->cubicTo(F,F,F,F,F,F)V
+00015  2070 221f 0078           invoke-direct  # CALL Lb/b/b/a/g;->a(Landroid/graphics/Path;)V
+00018  000e                     return-void
+
+### Lb/b/b/a/g;->a(Landroid/content/res/TypedArray;,Lorg/xmlpull/v1/XmlPullParser;)V  [access=0x2, regs=10, ins=3, outs=5, code_off=0xa170c]
+00000  001a 2331                const-string  # STR "pathData"
+00002  2071 230e 0009           invoke-static  # CALL Lb/b/c/a/d/g;->a(Lorg/xmlpull/v1/XmlPullParser;,Ljava/lang/String;)Z
+00005  010a                     move-result
+00006  0138 0028                if-eqz
+00008  4112                     const/4
+00009  4071 230c 1098           invoke-static  # CALL Lb/b/c/a/d/g;->a(Landroid/content/res/TypedArray;,Lorg/xmlpull/v1/XmlPullParser;,Ljava/lang/String;,I)Ljava/lang/String;
+0000c  080c                     move-result-object
+0000d  1071 2326 0008           invoke-static  # CALL Lb/b/c/b/b;->b(Ljava/lang/String;)Landroid/graphics/Path;
+00010  090c                     move-result-object
+00011  0938 0006                if-eqz
+00013  2070 221f 0097           invoke-direct  # CALL Lb/b/b/a/g;->a(Landroid/graphics/Path;)V
+00016  5428                     goto
+00017  0722 042c                new-instance  # TYPE Landroid/view/InflateException;
+00019  0922 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0001b  1070 2d35 0009           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0001e  001a 14ca                const-string  # STR "The path is null, which is created from "
+00020  206e 2d3f 0009           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00023  206e 2d3f 0089           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00026  106e 2d44 0009           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00029  080c                     move-result-object
+0002a  2070 1c9b 0087           invoke-direct  # CALL Landroid/view/InflateException;-><init>(Ljava/lang/String;)V
+0002d  0727                     throw
+0002e  001a 1acd                const-string  # STR "controlX1"
+00030  2071 230e 0009           invoke-static  # CALL Lb/b/c/a/d/g;->a(Lorg/xmlpull/v1/XmlPullParser;,Ljava/lang/String;)Z
+00033  010a                     move-result
+00034  0138 0047                if-eqz
+00036  011a 1acf                const-string  # STR "controlY1"
+00038  2071 230e 0019           invoke-static  # CALL Lb/b/c/a/d/g;->a(Lorg/xmlpull/v1/XmlPullParser;,Ljava/lang/String;)Z
+0003b  020a                     move-result
+0003c  0238 0037                if-eqz
+0003e  0212                     const/4
+0003f  0312                     const/4
+00040  5371 2308 2098           invoke-static  # CALL Lb/b/c/a/d/g;->a(Landroid/content/res/TypedArray;,Lorg/xmlpull/v1/XmlPullParser;,Ljava/lang/String;,I,F)F
+00043  000a                     move-result
+00044  1212                     const/4
+00045  5371 2308 2198           invoke-static  # CALL Lb/b/c/a/d/g;->a(Landroid/content/res/TypedArray;,Lorg/xmlpull/v1/XmlPullParser;,Ljava/lang/String;,I,F)F
+00048  010a                     move-result
+00049  021a 1ace                const-string  # STR "controlX2"
+0004b  2071 230e 0029           invoke-static  # CALL Lb/b/c/a/d/g;->a(Lorg/xmlpull/v1/XmlPullParser;,Ljava/lang/String;)Z
+0004e  040a                     move-result
+0004f  051a 1ad0                const-string  # STR "controlY2"
+00051  2071 230e 0059           invoke-static  # CALL Lb/b/c/a/d/g;->a(Lorg/xmlpull/v1/XmlPullParser;,Ljava/lang/String;)Z
+00054  060a                     move-result
+00055  6433 0016                if-ne
+00057  0439 0006                if-nez
+00059  3070 221c 0107           invoke-direct  # CALL Lb/b/b/a/g;->a(F,F)V
+0005c  0e28                     goto
+0005d  2412                     const/4
+0005e  5371 2308 4298           invoke-static  # CALL Lb/b/c/a/d/g;->a(Landroid/content/res/TypedArray;,Lorg/xmlpull/v1/XmlPullParser;,Ljava/lang/String;,I,F)F
+00061  020a                     move-result
+00062  3412                     const/4
+00063  5371 2308 4598           invoke-static  # CALL Lb/b/c/a/d/g;->a(Landroid/content/res/TypedArray;,Lorg/xmlpull/v1/XmlPullParser;,Ljava/lang/String;,I,F)F
+00066  080a                     move-result
+00067  5870 221d 2107           invoke-direct  # CALL Lb/b/b/a/g;->a(F,F,F,F)V
+0006a  000e                     return-void
+0006b  0722 042c                new-instance  # TYPE Landroid/view/InflateException;
+0006d  081a 2333                const-string  # STR "pathInterpolator requires both controlX2 and controlY2 for cubic Beziers."
+0006f  2070 1c9b 0087           invoke-direct  # CALL Landroid/view/InflateException;-><init>(Ljava/lang/String;)V
+00072  0727                     throw
+00073  0722 042c                new-instance  # TYPE Landroid/view/InflateException;
+00075  081a 2335                const-string  # STR "pathInterpolator requires the controlY1 attribute"
+00077  2070 1c9b 0087           invoke-direct  # CALL Landroid/view/InflateException;-><init>(Ljava/lang/String;)V
+0007a  0727                     throw
+0007b  0722 042c                new-instance  # TYPE Landroid/view/InflateException;
+0007d  081a 2334                const-string  # STR "pathInterpolator requires the controlX1 attribute"
+0007f  2070 1c9b 0087           invoke-direct  # CALL Landroid/view/InflateException;-><init>(Ljava/lang/String;)V
+00082  0727                     throw
+
+### Lb/b/b/a/g;->a(Landroid/graphics/Path;)V  [access=0x2, regs=12, ins=2, outs=4, code_off=0xa14a8]
+00000  0022 01ab                new-instance  # TYPE Landroid/graphics/PathMeasure;
+00002  0112                     const/4
+00003  3070 0988 01b0           invoke-direct  # CALL Landroid/graphics/PathMeasure;-><init>(Landroid/graphics/Path;,Z)V
+00006  106e 0989 0000           invoke-virtual  # CALL Landroid/graphics/PathMeasure;->getLength()F
+00009  0b0a                     move-result
+0000a  0214 126f 3b03           const
+0000d  02a9 020b                op_a9
+0000f  2287                     op_87
+00010  1312                     const/4
+00011  32b0                     op_b0
+00012  0413 0bb8                const/16
+00014  2071 2ccf 0024           invoke-static  # CALL Ljava/lang/Math;->min(I,I)I
+00017  020a                     move-result
+00018  023d 00e1                if-lez
+0001a  2423 0723                new-array  # TYPE [F
+0001c  a45b 12fc                iput-object  # FIELD Lb/b/b/a/g;->a:[F
+0001e  2423 0723                new-array  # TYPE [F
+00020  a45b 12fd                iput-object  # FIELD Lb/b/b/a/g;->b:[F
+00022  2412                     const/4
+00023  4423 0723                new-array  # TYPE [F
+00025  1501                     op_01
+00026  2535 001b                if-ge
+00028  5682                     op_82
+00029  b6c8                     op_c8
+0002a  07d8 ff02                op_d8
+0002c  7782                     op_82
+0002d  76c9                     op_c9
+0002e  0712                     const/4
+0002f  406e 098a 7460           invoke-virtual  # CALL Landroid/graphics/PathMeasure;->getPosTan(F,[F,[F)Z
+00032  a654 12fc                iget-object  # FIELD Lb/b/b/a/g;->a:[F
+00034  0744 0104                aget
+00036  074b 0506                aput
+00038  a654 12fd                iget-object  # FIELD Lb/b/b/a/g;->b:[F
+0003a  0744 0304                aget
+0003c  074b 0506                aput
+0003e  05d8 0105                op_d8
+00040  e628                     goto
+00041  ab54 12fc                iget-object  # FIELD Lb/b/b/a/g;->a:[F
+00043  0b44 010b                aget
+00045  1071 2cbe 000b           invoke-static  # CALL Ljava/lang/Math;->abs(F)F
+00048  0b0a                     move-result
+00049  b489                     op_89
+0004a  0618 68f1 88e3 f8b5 3ee4 const-wide
+0004f  0b2f 0604                op_2f
+00051  0b3c 006a                if-gtz
+00053  ab54 12fd                iget-object  # FIELD Lb/b/b/a/g;->b:[F
+00055  0b44 010b                aget
+00057  1071 2cbe 000b           invoke-static  # CALL Ljava/lang/Math;->abs(F)F
+0005a  0b0a                     move-result
+0005b  b489                     op_89
+0005c  0b2f 0604                op_2f
+0005e  0b3c 005d                if-gtz
+00060  ab54 12fc                iget-object  # FIELD Lb/b/b/a/g;->a:[F
+00062  04d8 ff02                op_d8
+00064  0b44 040b                aget
+00066  0515 3f80                const/high16
+00068  5bc7                     op_c7
+00069  1071 2cbe 000b           invoke-static  # CALL Ljava/lang/Math;->abs(F)F
+0006c  0b0a                     move-result
+0006d  b889                     op_89
+0006e  0b2f 0608                op_2f
+00070  0b3c 004b                if-gtz
+00072  ab54 12fd                iget-object  # FIELD Lb/b/b/a/g;->b:[F
+00074  0b44 040b                aget
+00076  5bc7                     op_c7
+00077  1071 2cbe 000b           invoke-static  # CALL Ljava/lang/Math;->abs(F)F
+0007a  0b0a                     move-result
+0007b  b489                     op_89
+0007c  0b2f 0604                op_2f
+0007e  0b3c 003d                if-gtz
+00080  0b12                     const/4
+00081  1301                     op_01
+00082  2135 002a                if-ge
+00084  a454 12fc                iget-object  # FIELD Lb/b/b/a/g;->a:[F
+00086  05d8 0103                op_d8
+00088  0344 0304                aget
+0008a  0b2e 0b03                op_2e
+0008c  0b3a 0009                if-ltz
+0008e  034b 0104                aput
+00090  01d8 0101                op_d8
+00092  3b01                     op_01
+00093  5301                     op_01
+00094  ee28                     goto
+00095  0a22 0669                new-instance  # TYPE Ljava/lang/IllegalArgumentException;
+00097  0b22 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00099  1070 2d35 000b           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0009c  001a 14c1                const-string  # STR "The Path cannot loop back on itself, x :"
+0009e  206e 2d3f 000b           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000a1  206e 2d3a 003b           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+000a4  106e 2d44 000b           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+000a7  0b0c                     move-result-object
+000a8  2070 2c9f 00ba           invoke-direct  # CALL Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+000ab  0a27                     throw
+000ac  106e 098c 0000           invoke-virtual  # CALL Landroid/graphics/PathMeasure;->nextContour()Z
+000af  0a0a                     move-result
+000b0  0a39 0003                if-nez
+000b2  000e                     return-void
+000b3  0a22 0669                new-instance  # TYPE Ljava/lang/IllegalArgumentException;
+000b5  0b1a 14c4                const-string  # STR "The Path should be continuous, can't have 2+ contours"
+000b7  2070 2c9f 00ba           invoke-direct  # CALL Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+000ba  0a27                     throw
+000bb  0b22 0669                new-instance  # TYPE Ljava/lang/IllegalArgumentException;
+000bd  0022 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+000bf  1070 2d35 0000           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+000c2  041a 14c3                const-string  # STR "The Path must start at (0,0) and end at (1,1) start: "
+000c4  206e 2d3f 0040           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000c7  a454 12fc                iget-object  # FIELD Lb/b/b/a/g;->a:[F
+000c9  0444 0104                aget
+000cb  206e 2d3a 0040           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+000ce  041a 01c9                const-string  # STR ","
+000d0  206e 2d3f 0040           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000d3  a554 12fd                iget-object  # FIELD Lb/b/b/a/g;->b:[F
+000d5  0144 0105                aget
+000d7  206e 2d3a 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+000da  011a 004a                const-string  # STR " end:"
+000dc  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000df  a154 12fc                iget-object  # FIELD Lb/b/b/a/g;->a:[F
+000e1  32b1                     op_b1
+000e2  0144 0201                aget
+000e4  206e 2d3a 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+000e7  206e 2d3f 0040           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000ea  aa54 12fd                iget-object  # FIELD Lb/b/b/a/g;->b:[F
+000ec  0a44 020a                aget
+000ee  206e 2d3a 00a0           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+000f1  106e 2d44 0000           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+000f4  0a0c                     move-result-object
+000f5  2070 2c9f 00ab           invoke-direct  # CALL Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+000f8  0b27                     throw
+000f9  0a22 0669                new-instance  # TYPE Ljava/lang/IllegalArgumentException;
+000fb  0022 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+000fd  1070 2d35 0000           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00100  011a 14c2                const-string  # STR "The Path has a invalid length "
+00102  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00105  206e 2d3a 00b0           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+00108  106e 2d44 0000           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0010b  0b0c                     move-result-object
+0010c  2070 2c9f 00ba           invoke-direct  # CALL Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+0010f  0a27                     throw
+
+### Lb/b/b/a/g;->getInterpolation(F)F  [access=0x1, regs=8, ins=2, outs=0, code_off=0xa1370]
+00000  0012                     const/4
+00001  012e 0007                op_2e
+00003  013c 0003                if-gtz
+00005  000f                     return
+00006  0115 3f80                const/high16
+00008  022d 0107                op_2d
+0000a  023a 0003                if-ltz
+0000c  010f                     return
+0000d  0112                     const/4
+0000e  6254 12fc                iget-object  # FIELD Lb/b/b/a/g;->a:[F
+00010  2221                     array-length
+00011  1312                     const/4
+00012  32b1                     op_b1
+00013  0491 0102                int-sub
+00015  3437 0012                if-le
+00017  0490 0201                int-add
+00019  04db 0204                op_db
+0001b  6554 12fc                iget-object  # FIELD Lb/b/b/a/g;->a:[F
+0001d  0544 0405                aget
+0001f  052e 0507                op_2e
+00021  053b 0004                if-gez
+00023  4201                     op_01
+00024  ef28                     goto
+00025  4101                     op_01
+00026  ed28                     goto
+00027  6354 12fc                iget-object  # FIELD Lb/b/b/a/g;->a:[F
+00029  0444 0203                aget
+0002b  0544 0103                aget
+0002d  54c7                     op_c7
+0002e  002d 0004                op_2d
+00030  0039 0007                if-nez
+00032  6654 12fd                iget-object  # FIELD Lb/b/b/a/g;->b:[F
+00034  0644 0106                aget
+00036  060f                     return
+00037  0044 0103                aget
+00039  07c7                     op_c7
+0003a  47c9                     op_c9
+0003b  6654 12fd                iget-object  # FIELD Lb/b/b/a/g;->b:[F
+0003d  0044 0106                aget
+0003f  0644 0206                aget
+00041  06c7                     op_c7
+00042  67c8                     op_c8
+00043  70c6                     op_c6
+00044  000f                     return

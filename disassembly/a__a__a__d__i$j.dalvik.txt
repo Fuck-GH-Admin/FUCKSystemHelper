@@ -1,0 +1,122 @@
+### La/a/a/d/i$j;-><init>(La/a/a/d/i;)V  [access=0x10001, regs=2, ins=2, outs=1, code_off=0x5db08]
+00000  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  0113 000a                const/16
+00005  0159 01f5                iput  # FIELD La/a/a/d/i$j;->a:I
+00007  0122 06c8                new-instance  # TYPE Ljava/util/ArrayList;
+00009  1070 2de7 0001           invoke-direct  # CALL Ljava/util/ArrayList;-><init>()V
+0000c  1071 2e17 0001           invoke-static  # CALL Ljava/util/Collections;->synchronizedList(Ljava/util/List;)Ljava/util/List;
+0000f  010c                     move-result-object
+00010  015b 01f6                iput-object  # FIELD La/a/a/d/i$j;->b:Ljava/util/List;
+00012  000e                     return-void
+
+### La/a/a/d/i$j;->a(La/a/a/d/i$j;)Ljava/util/List;  [access=0x1009, regs=1, ins=1, outs=0, code_off=0x5daf0]
+00000  0054 01f6                iget-object  # FIELD La/a/a/d/i$j;->b:Ljava/util/List;
+00002  0011                     return-object
+
+### La/a/a/d/i$j;->toString()Ljava/lang/String;  [access=0x1, regs=20, ins=1, outs=2, code_off=0x5d934]
+00000  0008 0013                op_08
+00002  0154 01f6                iget-object  # FIELD La/a/a/d/i$j;->b:Ljava/util/List;
+00004  1072 2e5d 0001           invoke-interface  # CALL Ljava/util/List;->size()I
+00007  010a                     move-result
+00008  021a 0000                const-string  # STR ""
+0000a  0139 0003                if-nez
+0000c  0211                     return-object
+0000d  0122 0684                new-instance  # TYPE Ljava/lang/StringBuffer;
+0000f  1070 2d25 0001           invoke-direct  # CALL Ljava/lang/StringBuffer;-><init>()V
+00012  0354 01f6                iget-object  # FIELD La/a/a/d/i$j;->b:Ljava/util/List;
+00014  0412                     const/4
+00015  2072 2e57 0043           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+00018  030c                     move-result-object
+00019  031f 0080                check-cast  # TYPE La/a/a/d/i$j$a;
+0001b  3553 01f2                iget-wide  # FIELD La/a/a/d/i$j$a;->a:D
+0001d  0354 01f6                iget-object  # FIELD La/a/a/d/i$j;->b:Ljava/util/List;
+0001f  2072 2e57 0043           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+00022  030c                     move-result-object
+00023  031f 0080                check-cast  # TYPE La/a/a/d/i$j$a;
+00025  3753 01f3                iget-wide  # FIELD La/a/a/d/i$j$a;->b:D
+00027  0354 01f6                iget-object  # FIELD La/a/a/d/i$j;->b:Ljava/util/List;
+00029  2072 2e57 0043           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+0002c  030c                     move-result-object
+0002d  031f 0080                check-cast  # TYPE La/a/a/d/i$j$a;
+0002f  3953 01f4                iget-wide  # FIELD La/a/a/d/i$j$a;->c:D
+00031  031a 00be                const-string  # STR "%.6f:%.6f:%.1f"
+00033  3b12                     const/4
+00034  bc23 075d                new-array  # TYPE [Ljava/lang/Object;
+00036  2071 2c8a 0065           invoke-static  # CALL Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+00039  0d0c                     move-result-object
+0003a  0d4d 040c                aput-object
+0003c  2071 2c8a 0087           invoke-static  # CALL Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+0003f  0d0c                     move-result-object
+00040  1e12                     const/4
+00041  0d4d 0e0c                aput-object
+00043  2071 2c8a 00a9           invoke-static  # CALL Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+00046  090c                     move-result-object
+00047  2a12                     const/4
+00048  094d 0a0c                aput-object
+0004a  2071 2d05 00c3           invoke-static  # CALL Ljava/lang/String;->format(Ljava/lang/String;,[Ljava/lang/Object;)Ljava/lang/String;
+0004d  030c                     move-result-object
+0004e  206e 2d2e 0031           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+00051  0354 01f6                iget-object  # FIELD La/a/a/d/i$j;->b:Ljava/util/List;
+00053  1072 2e5d 0003           invoke-interface  # CALL Ljava/util/List;->size()I
+00056  030a                     move-result
+00057  0952 01f5                iget  # FIELD La/a/a/d/i$j;->a:I
+00059  9337 000c                if-le
+0005b  0354 01f6                iget-object  # FIELD La/a/a/d/i$j;->b:Ljava/util/List;
+0005d  1072 2e5d 0003           invoke-interface  # CALL Ljava/util/List;->size()I
+00060  030a                     move-result
+00061  0952 01f5                iget  # FIELD La/a/a/d/i$j;->a:I
+00063  93b1                     op_b1
+00064  0228                     goto
+00065  4301                     op_01
+00066  e3b0                     op_b0
+00067  0954 01f6                iget-object  # FIELD La/a/a/d/i$j;->b:Ljava/util/List;
+00069  1072 2e5d 0009           invoke-interface  # CALL Ljava/util/List;->size()I
+0006c  090a                     move-result
+0006d  9335 004f                if-ge
+0006f  0954 01f6                iget-object  # FIELD La/a/a/d/i$j;->b:Ljava/util/List;
+00071  2072 2e57 0039           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+00074  090c                     move-result-object
+00075  091f 0080                check-cast  # TYPE La/a/a/d/i$j$a;
+00077  9c53 01f2                iget-wide  # FIELD La/a/a/d/i$j$a;->a:D
+00079  5ccc                     op_cc
+0007a  0f18 0000 0000 8480 412e const-wide
+0007f  fccd                     op_cd
+00080  0954 01f6                iget-object  # FIELD La/a/a/d/i$j;->b:Ljava/util/List;
+00082  2072 2e57 0039           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+00085  090c                     move-result-object
+00086  091f 0080                check-cast  # TYPE La/a/a/d/i$j$a;
+00088  1105 0005                op_05
+0008a  9453 01f3                iget-wide  # FIELD La/a/a/d/i$j$a;->b:D
+0008c  74cc                     op_cc
+0008d  f4cd                     op_cd
+0008e  0654 01f6                iget-object  # FIELD La/a/a/d/i$j;->b:Ljava/util/List;
+00090  2072 2e57 0036           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+00093  060c                     move-result-object
+00094  061f 0080                check-cast  # TYPE La/a/a/d/i$j$a;
+00096  6e53 01f4                iget-wide  # FIELD La/a/a/d/i$j$a;->c:D
+00098  061a 0280                const-string  # STR ";%.0f:%.0f:%.1f"
+0009a  b923 075d                new-array  # TYPE [Ljava/lang/Object;
+0009c  2071 2c8a 00dc           invoke-static  # CALL Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+0009f  0c0c                     move-result-object
+000a0  0d12                     const/4
+000a1  0c4d 0d09                aput-object
+000a3  2071 2c8a 0054           invoke-static  # CALL Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+000a6  040c                     move-result-object
+000a7  1512                     const/4
+000a8  044d 0509                aput-object
+000aa  2071 2c8a 00fe           invoke-static  # CALL Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+000ad  040c                     move-result-object
+000ae  044d 0a09                aput-object
+000b0  2071 2d05 0096           invoke-static  # CALL Ljava/lang/String;->format(Ljava/lang/String;,[Ljava/lang/Object;)Ljava/lang/String;
+000b3  040c                     move-result-object
+000b4  206e 2d2e 0041           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+000b7  5e01                     op_01
+000b8  d401                     op_01
+000b9  0505 0011                op_05
+000bb  ab28                     goto
+000bc  106e 2d34 0001           invoke-virtual  # CALL Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+000bf  000c                     move-result-object
+000c0  0011                     return-object
+000c1  000d                     op_0d
+000c2  106e 2c96 0000           invoke-virtual  # CALL Ljava/lang/Exception;->printStackTrace()V
+000c5  0211                     return-object

@@ -1,0 +1,130 @@
+### La/a/a/b/k;-><clinit>()V  [access=0x10009, regs=3, ins=0, outs=3, code_off=0x4e954]
+00000  0022 063e                new-instance  # TYPE Ljava/io/File;
+00002  0162 044a                sget-object  # FIELD La/a/a/i/h;->a:Ljava/lang/String;
+00004  0262 00ad                sget-object  # FIELD La/a/a/b/k;->a:Ljava/lang/String;
+00006  3070 2c0d 0210           invoke-direct  # CALL Ljava/io/File;-><init>(Ljava/lang/String;,Ljava/lang/String;)V
+00009  0069 00ae                sput-object  # FIELD La/a/a/b/k;->b:Ljava/io/File;
+0000b  000e                     return-void
+
+### La/a/a/b/k;->a()Z  [access=0x9, regs=4, ins=0, outs=3, code_off=0x4e744]
+00000  0062 00ae                sget-object  # FIELD La/a/a/b/k;->b:Ljava/io/File;
+00002  106e 2c11 0000           invoke-virtual  # CALL Ljava/io/File;->exists()Z
+00005  000a                     move-result
+00006  0038 0007                if-eqz
+00008  0062 00ae                sget-object  # FIELD La/a/a/b/k;->b:Ljava/io/File;
+0000a  106e 2c10 0000           invoke-virtual  # CALL Ljava/io/File;->delete()Z
+0000d  0062 00ae                sget-object  # FIELD La/a/a/b/k;->b:Ljava/io/File;
+0000f  106e 2c14 0000           invoke-virtual  # CALL Ljava/io/File;->getParentFile()Ljava/io/File;
+00012  000c                     move-result-object
+00013  106e 2c11 0000           invoke-virtual  # CALL Ljava/io/File;->exists()Z
+00016  000a                     move-result
+00017  0039 000b                if-nez
+00019  0062 00ae                sget-object  # FIELD La/a/a/b/k;->b:Ljava/io/File;
+0001b  106e 2c14 0000           invoke-virtual  # CALL Ljava/io/File;->getParentFile()Ljava/io/File;
+0001e  000c                     move-result-object
+0001f  106e 2c1c 0000           invoke-virtual  # CALL Ljava/io/File;->mkdirs()Z
+00022  0012                     const/4
+00023  0162 00ae                sget-object  # FIELD La/a/a/b/k;->b:Ljava/io/File;
+00025  106e 2c0f 0001           invoke-virtual  # CALL Ljava/io/File;->createNewFile()Z
+00028  0122 064e                new-instance  # TYPE Ljava/io/RandomAccessFile;
+0002a  0262 00ae                sget-object  # FIELD La/a/a/b/k;->b:Ljava/io/File;
+0002c  031a 249b                const-string  # STR "rw"
+0002e  3070 2c4d 0321           invoke-direct  # CALL Ljava/io/RandomAccessFile;-><init>(Ljava/io/File;,Ljava/lang/String;)V
+00031  0216 0000                const-wide/16
+00033  306e 2c58 0321           invoke-virtual  # CALL Ljava/io/RandomAccessFile;->seek(J)V
+00036  206e 2c5d 0001           invoke-virtual  # CALL Ljava/io/RandomAccessFile;->writeInt(I)V
+00039  206e 2c5d 0001           invoke-virtual  # CALL Ljava/io/RandomAccessFile;->writeInt(I)V
+0003c  1212                     const/4
+0003d  206e 2c5d 0021           invoke-virtual  # CALL Ljava/io/RandomAccessFile;->writeInt(I)V
+00040  106e 2c4f 0001           invoke-virtual  # CALL Ljava/io/RandomAccessFile;->close()V
+00043  0071 00e1 0000           invoke-static  # CALL La/a/a/b/k;->c()V
+00046  0062 00ae                sget-object  # FIELD La/a/a/b/k;->b:Ljava/io/File;
+00048  106e 2c11 0000           invoke-virtual  # CALL Ljava/io/File;->exists()Z
+0004b  000a                     move-result
+0004c  000f                     return
+
+### La/a/a/b/k;->a(I,I,I)Z  [access=0x9, regs=6, ins=3, outs=0, code_off=0x4e800]
+00000  0012                     const/4
+00001  033a 0016                if-ltz
+00003  0160 0478                sget  # FIELD La/a/a/i/i;->Z:I
+00005  1337 0003                if-le
+00007  1028                     goto
+00008  043a 000f                if-ltz
+0000a  1212                     const/4
+0000b  23b0                     op_b0
+0000c  3437 0003                if-le
+0000e  0928                     goto
+0000f  2534 0008                if-lt
+00011  3536 0006                if-gt
+00013  1537 0003                if-le
+00015  0228                     goto
+00016  020f                     return
+00017  000f                     return
+
+### La/a/a/b/k;->b()Ljava/lang/String;  [access=0x9, regs=10, ins=0, outs=3, code_off=0x4e840]
+00000  0062 00ae                sget-object  # FIELD La/a/a/b/k;->b:Ljava/io/File;
+00002  0112                     const/4
+00003  0039 0003                if-nez
+00005  0111                     return-object
+00006  106e 2c11 0000           invoke-virtual  # CALL Ljava/io/File;->exists()Z
+00009  000a                     move-result
+0000a  0039 0003                if-nez
+0000c  0111                     return-object
+0000d  0022 064e                new-instance  # TYPE Ljava/io/RandomAccessFile;
+0000f  0262 00ae                sget-object  # FIELD La/a/a/b/k;->b:Ljava/io/File;
+00011  031a 249b                const-string  # STR "rw"
+00013  3070 2c4d 0320           invoke-direct  # CALL Ljava/io/RandomAccessFile;-><init>(Ljava/io/File;,Ljava/lang/String;)V
+00016  0216 0000                const-wide/16
+00018  306e 2c58 0320           invoke-virtual  # CALL Ljava/io/RandomAccessFile;->seek(J)V
+0001b  106e 2c56 0000           invoke-virtual  # CALL Ljava/io/RandomAccessFile;->readInt()I
+0001e  040a                     move-result
+0001f  106e 2c56 0000           invoke-virtual  # CALL Ljava/io/RandomAccessFile;->readInt()I
+00022  050a                     move-result
+00023  106e 2c56 0000           invoke-virtual  # CALL Ljava/io/RandomAccessFile;->readInt()I
+00026  060a                     move-result
+00027  3071 00df 0654           invoke-static  # CALL La/a/a/b/k;->a(I,I,I)Z
+0002a  070a                     move-result
+0002b  0739 0009                if-nez
+0002d  106e 2c4f 0000           invoke-virtual  # CALL Ljava/io/RandomAccessFile;->close()V
+00030  0071 00de 0000           invoke-static  # CALL La/a/a/b/k;->a()Z
+00033  0111                     return-object
+00034  0538 0041                if-eqz
+00036  6533 0003                if-ne
+00038  3d28                     goto
+00039  06d8 ff05                op_d8
+0003b  66d2 0400                op_d2
+0003d  06d8 0c06                op_d8
+0003f  6681                     op_81
+00040  26bb                     op_bb
+00041  306e 2c58 0760           invoke-virtual  # CALL Ljava/io/RandomAccessFile;->seek(J)V
+00044  106e 2c56 0000           invoke-virtual  # CALL Ljava/io/RandomAccessFile;->readInt()I
+00047  020a                     move-result
+00048  2323 0720                new-array  # TYPE [B
+0004a  0816 0004                const-wide/16
+0004c  86bb                     op_bb
+0004d  306e 2c58 0760           invoke-virtual  # CALL Ljava/io/RandomAccessFile;->seek(J)V
+00050  0612                     const/4
+00051  2635 000b                if-ge
+00053  106e 2c54 0000           invoke-virtual  # CALL Ljava/io/RandomAccessFile;->readByte()B
+00056  070a                     move-result
+00057  074f 0603                aput-byte
+00059  06d8 0106                op_d8
+0005b  f628                     goto
+0005c  0222 0683                new-instance  # TYPE Ljava/lang/String;
+0005e  2070 2cf8 0032           invoke-direct  # CALL Ljava/lang/String;-><init>([B)V
+00061  0360 0478                sget  # FIELD La/a/a/i/i;->Z:I
+00063  1612                     const/4
+00064  3435 0003                if-ge
+00066  0428                     goto
+00067  3533 0003                if-ne
+00069  0228                     goto
+0006a  56b0                     op_b0
+0006b  306e 2c58 0980           invoke-virtual  # CALL Ljava/io/RandomAccessFile;->seek(J)V
+0006e  206e 2c5d 0060           invoke-virtual  # CALL Ljava/io/RandomAccessFile;->writeInt(I)V
+00071  106e 2c4f 0000           invoke-virtual  # CALL Ljava/io/RandomAccessFile;->close()V
+00074  0211                     return-object
+00075  106e 2c4f 0000           invoke-virtual  # CALL Ljava/io/RandomAccessFile;->close()V
+00078  0111                     return-object
+
+### La/a/a/b/k;->c()V  [access=0x9, regs=0, ins=0, outs=0, code_off=0x4e97c]
+00000  000e                     return-void

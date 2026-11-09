@@ -1,0 +1,39 @@
+### Lc/a/b/e/c/b;->a()[B  [access=0x9, regs=4, ins=0, outs=3, code_off=0xf91d4]
+00000  0062 1b2a                sget-object  # FIELD Lc/a/b/e/c/b;->a:[B
+00002  0038 0003                if-eqz
+00004  0011                     return-object
+00005  0022 0699                new-instance  # TYPE Ljava/math/BigInteger;
+00007  0162 1b25                sget-object  # FIELD Lc/a/b/e/c/a;->a:[B
+00009  2070 2d81 0010           invoke-direct  # CALL Ljava/math/BigInteger;-><init>([B)V
+0000c  0122 0699                new-instance  # TYPE Ljava/math/BigInteger;
+0000e  0262 1b26                sget-object  # FIELD Lc/a/b/e/c/a;->b:[B
+00010  2070 2d81 0021           invoke-direct  # CALL Ljava/math/BigInteger;-><init>([B)V
+00013  0222 0699                new-instance  # TYPE Ljava/math/BigInteger;
+00015  0362 1b29                sget-object  # FIELD Lc/a/b/e/c/a;->e:[B
+00017  2070 2d81 0032           invoke-direct  # CALL Ljava/math/BigInteger;-><init>([B)V
+0001a  306e 2d84 0210           invoke-virtual  # CALL Ljava/math/BigInteger;->modPow(Ljava/math/BigInteger;,Ljava/math/BigInteger;)Ljava/math/BigInteger;
+0001d  000c                     move-result-object
+0001e  106e 2d85 0000           invoke-virtual  # CALL Ljava/math/BigInteger;->toByteArray()[B
+00021  000c                     move-result-object
+00022  0069 1b2a                sput-object  # FIELD Lc/a/b/e/c/b;->a:[B
+00024  0011                     return-object
+
+### Lc/a/b/e/c/b;->b()[B  [access=0x9, regs=4, ins=0, outs=3, code_off=0xf9230]
+00000  0062 1b2b                sget-object  # FIELD Lc/a/b/e/c/b;->b:[B
+00002  0038 0003                if-eqz
+00004  0011                     return-object
+00005  0022 0699                new-instance  # TYPE Ljava/math/BigInteger;
+00007  0162 1b27                sget-object  # FIELD Lc/a/b/e/c/a;->c:[B
+00009  2070 2d81 0010           invoke-direct  # CALL Ljava/math/BigInteger;-><init>([B)V
+0000c  0122 0699                new-instance  # TYPE Ljava/math/BigInteger;
+0000e  0262 1b28                sget-object  # FIELD Lc/a/b/e/c/a;->d:[B
+00010  2070 2d81 0021           invoke-direct  # CALL Ljava/math/BigInteger;-><init>([B)V
+00013  0222 0699                new-instance  # TYPE Ljava/math/BigInteger;
+00015  0362 1b29                sget-object  # FIELD Lc/a/b/e/c/a;->e:[B
+00017  2070 2d81 0032           invoke-direct  # CALL Ljava/math/BigInteger;-><init>([B)V
+0001a  306e 2d84 0210           invoke-virtual  # CALL Ljava/math/BigInteger;->modPow(Ljava/math/BigInteger;,Ljava/math/BigInteger;)Ljava/math/BigInteger;
+0001d  000c                     move-result-object
+0001e  106e 2d85 0000           invoke-virtual  # CALL Ljava/math/BigInteger;->toByteArray()[B
+00021  000c                     move-result-object
+00022  0069 1b2b                sput-object  # FIELD Lc/a/b/e/c/b;->b:[B
+00024  0011                     return-object

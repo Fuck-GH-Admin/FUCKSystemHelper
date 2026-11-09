@@ -1,0 +1,21 @@
+### Lc/a/b/a/j;-><init>(I,I)V  [access=0x10001, regs=4, ins=3, outs=1, code_off=0xf4188]
+00000  1070 2730 0001           invoke-direct  # CALL Lc/a/b/a/g;-><init>()V
+00003  0013 0020                const/16
+00005  1059 1ac2                iput  # FIELD Lc/a/b/a/g;->a:I
+00007  1259 1ac3                iput  # FIELD Lc/a/b/a/g;->b:I
+00009  1359 1ac4                iput  # FIELD Lc/a/b/a/g;->c:I
+0000b  000e                     return-void
+
+### Lc/a/b/a/j;->a([B,I,I)Lc/a/b/a/b;  [access=0x1, regs=4, ins=4, outs=4, code_off=0xf4148]
+00000  0022 057d                new-instance  # TYPE Lc/a/b/a/k;
+00002  1070 2742 0000           invoke-direct  # CALL Lc/a/b/a/k;-><init>()V
+00005  406e 2746 3210           invoke-virtual  # CALL Lc/a/b/a/k;->a([B,I,I)V
+00008  106e 2745 0000           invoke-virtual  # CALL Lc/a/b/a/k;->a()J
+0000b  000b                     move-result-wide
+0000c  1212                     const/4
+0000d  2223 0725                new-array  # TYPE [J
+0000f  0312                     const/4
+00010  004c 0302                aput-wide
+00012  1071 2701 0002           invoke-static  # CALL Lc/a/b/a/b;->a([J)Lc/a/b/a/b;
+00015  000c                     move-result-object
+00016  0011                     return-object

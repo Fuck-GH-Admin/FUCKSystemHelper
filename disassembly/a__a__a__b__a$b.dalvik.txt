@@ -1,0 +1,83 @@
+### La/a/a/b/a$b;-><init>(La/a/a/b/a;)V  [access=0x10001, regs=2, ins=2, outs=1, code_off=0x44788]
+00000  015b 0007                iput-object  # FIELD La/a/a/b/a$b;->k:La/a/a/b/a;
+00002  1070 0671 0000           invoke-direct  # CALL La/a/a/i/g;-><init>()V
+00005  0112                     const/4
+00006  015b 0005                iput-object  # FIELD La/a/a/b/a$b;->i:Ljava/lang/String;
+00008  0112                     const/4
+00009  015c 0006                iput-boolean  # FIELD La/a/a/b/a$b;->j:Z
+0000b  0122 06d4                new-instance  # TYPE Ljava/util/HashMap;
+0000d  1070 2e29 0001           invoke-direct  # CALL Ljava/util/HashMap;-><init>()V
+00010  015b 0445                iput-object  # FIELD La/a/a/i/g;->d:Ljava/util/Map;
+00012  000e                     return-void
+
+### La/a/a/b/a$b;->a()V  [access=0x1, regs=5, ins=1, outs=3, code_off=0x447c0]
+00000  2012                     const/4
+00001  4059 0443                iput  # FIELD La/a/a/i/g;->b:I
+00003  4054 0005                iget-object  # FIELD La/a/a/b/a$b;->i:Ljava/lang/String;
+00005  1071 29c6 0000           invoke-static  # CALL Lcom/baidu/location/Jni;->b(Ljava/lang/String;)Ljava/lang/String;
+00008  000c                     move-result-object
+00009  0112                     const/4
+0000a  415b 0005                iput-object  # FIELD La/a/a/b/a$b;->i:Ljava/lang/String;
+0000c  4154 0445                iget-object  # FIELD La/a/a/i/g;->d:Ljava/util/Map;
+0000e  021a 23c1                const-string  # STR "qt"
+00010  031a 1ab1                const-string  # STR "conf"
+00012  3072 2e6b 0321           invoke-interface  # CALL Ljava/util/Map;->put(Ljava/lang/Object;,Ljava/lang/Object;)Ljava/lang/Object;
+00015  4454 0445                iget-object  # FIELD La/a/a/i/g;->d:Ljava/util/Map;
+00017  011a 2438                const-string  # STR "req"
+00019  3072 2e6b 0014           invoke-interface  # CALL Ljava/util/Map;->put(Ljava/lang/Object;,Ljava/lang/Object;)Ljava/lang/Object;
+0001c  000e                     return-void
+
+### La/a/a/b/a$b;->a(Z)V  [access=0x1, regs=6, ins=2, outs=3, code_off=0x4480c]
+00000  0012                     const/4
+00001  0538 004d                if-eqz
+00003  4554 0444                iget-object  # FIELD La/a/a/i/g;->c:Ljava/lang/String;
+00005  0538 0049                if-eqz
+00007  0522 071a                new-instance  # TYPE Lorg/json/JSONObject;
+00009  4154 0444                iget-object  # FIELD La/a/a/i/g;->c:Ljava/lang/String;
+0000b  2070 2f14 0015           invoke-direct  # CALL Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+0000e  4554 0007                iget-object  # FIELD La/a/a/b/a$b;->k:La/a/a/b/a;
+00010  1071 0011 0005           invoke-static  # CALL La/a/a/b/a;->a(La/a/a/b/a;)Landroid/content/SharedPreferences;
+00013  050c                     move-result-object
+00014  0538 003a                if-eqz
+00016  4554 0007                iget-object  # FIELD La/a/a/b/a$b;->k:La/a/a/b/a;
+00018  1071 0011 0005           invoke-static  # CALL La/a/a/b/a;->a(La/a/a/b/a;)Landroid/content/SharedPreferences;
+0001b  050c                     move-result-object
+0001c  1072 088f 0005           invoke-interface  # CALL Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+0001f  050c                     move-result-object
+00020  4154 0444                iget-object  # FIELD La/a/a/i/g;->c:Ljava/lang/String;
+00022  106e 2d07 0001           invoke-virtual  # CALL Ljava/lang/String;->getBytes()[B
+00025  010c                     move-result-object
+00026  1071 0690 0001           invoke-static  # CALL La/a/a/i/i;->a([B)[B
+00029  010c                     move-result-object
+0002a  2071 1c57 0001           invoke-static  # CALL Landroid/util/Base64;->encodeToString([B,I)Ljava/lang/String;
+0002d  010c                     move-result-object
+0002e  0222 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00030  1070 2d35 0002           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00033  0071 0018 0000           invoke-static  # CALL La/a/a/b/a;->b()Ljava/lang/String;
+00036  030c                     move-result-object
+00037  206e 2d3f 0032           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0003a  031a 1775                const-string  # STR "_newConfig"
+0003c  206e 2d3f 0032           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0003f  106e 2d44 0002           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00042  020c                     move-result-object
+00043  3072 088c 0125           invoke-interface  # CALL Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;,Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+00046  1072 0887 0005           invoke-interface  # CALL Landroid/content/SharedPreferences$Editor;->apply()V
+00049  0528                     goto
+0004a  050d                     op_0d
+0004b  106e 2c96 0005           invoke-virtual  # CALL Ljava/lang/Exception;->printStackTrace()V
+0004e  4554 0445                iget-object  # FIELD La/a/a/i/g;->d:Ljava/util/Map;
+00050  0538 0005                if-eqz
+00052  1072 2e66 0005           invoke-interface  # CALL Ljava/util/Map;->clear()V
+00055  405c 0006                iput-boolean  # FIELD La/a/a/b/a$b;->j:Z
+00057  000e                     return-void
+
+### La/a/a/b/a$b;->c(Ljava/lang/String;)V  [access=0x1, regs=3, ins=2, outs=2, code_off=0x448dc]
+00000  1055 0006                iget-boolean  # FIELD La/a/a/b/a$b;->j:Z
+00002  0038 0003                if-eqz
+00004  000e                     return-void
+00005  1012                     const/4
+00006  105c 0006                iput-boolean  # FIELD La/a/a/b/a$b;->j:Z
+00008  125b 0005                iput-object  # FIELD La/a/a/b/a$b;->i:Ljava/lang/String;
+0000a  0262 041e                sget-object  # FIELD La/a/a/i/d;->c:Ljava/lang/String;
+0000c  206e 0674 0021           invoke-virtual  # CALL La/a/a/i/g;->a(Ljava/lang/String;)V
+0000f  000e                     return-void

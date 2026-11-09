@@ -1,0 +1,53 @@
+### Landroid/support/v4/app/m;-><clinit>()V  [access=0x10008, regs=1, ins=0, outs=1, code_off=0xabdd8]
+00000  0022 0296                new-instance  # TYPE Landroid/support/v4/app/m$a;
+00002  1070 0fba 0000           invoke-direct  # CALL Landroid/support/v4/app/m$a;-><init>()V
+00005  0069 0d46                sput-object  # FIELD Landroid/support/v4/app/m;->CREATOR:Landroid/os/Parcelable$Creator;
+00007  000e                     return-void
+
+### Landroid/support/v4/app/m;-><init>()V  [access=0x10001, regs=2, ins=1, outs=1, code_off=0xabdf8]
+00000  1070 2ce0 0001           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  f012                     const/4
+00004  1059 0d4a                iput  # FIELD Landroid/support/v4/app/m;->e:I
+00006  000e                     return-void
+
+### Landroid/support/v4/app/m;-><init>(Landroid/os/Parcel;)V  [access=0x10001, regs=3, ins=2, outs=2, code_off=0xabe18]
+00000  1070 2ce0 0001           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  f012                     const/4
+00004  1059 0d4a                iput  # FIELD Landroid/support/v4/app/m;->e:I
+00006  0062 0d4c                sget-object  # FIELD Landroid/support/v4/app/n;->CREATOR:Landroid/os/Parcelable$Creator;
+00008  206e 0adb 0002           invoke-virtual  # CALL Landroid/os/Parcel;->createTypedArray(Landroid/os/Parcelable$Creator;)[Ljava/lang/Object;
+0000b  000c                     move-result-object
+0000c  001f 0746                check-cast  # TYPE [Landroid/support/v4/app/n;
+0000e  105b 0d47                iput-object  # FIELD Landroid/support/v4/app/m;->b:[Landroid/support/v4/app/n;
+00010  106e 0ad9 0002           invoke-virtual  # CALL Landroid/os/Parcel;->createIntArray()[I
+00013  000c                     move-result-object
+00014  105b 0d48                iput-object  # FIELD Landroid/support/v4/app/m;->c:[I
+00016  0062 0c9b                sget-object  # FIELD Landroid/support/v4/app/d;->CREATOR:Landroid/os/Parcelable$Creator;
+00018  206e 0adb 0002           invoke-virtual  # CALL Landroid/os/Parcel;->createTypedArray(Landroid/os/Parcelable$Creator;)[Ljava/lang/Object;
+0001b  000c                     move-result-object
+0001c  001f 0744                check-cast  # TYPE [Landroid/support/v4/app/d;
+0001e  105b 0d49                iput-object  # FIELD Landroid/support/v4/app/m;->d:[Landroid/support/v4/app/d;
+00020  106e 0ae4 0002           invoke-virtual  # CALL Landroid/os/Parcel;->readInt()I
+00023  000a                     move-result
+00024  1059 0d4a                iput  # FIELD Landroid/support/v4/app/m;->e:I
+00026  106e 0ae4 0002           invoke-virtual  # CALL Landroid/os/Parcel;->readInt()I
+00029  020a                     move-result
+0002a  1259 0d4b                iput  # FIELD Landroid/support/v4/app/m;->f:I
+0002c  000e                     return-void
+
+### Landroid/support/v4/app/m;->describeContents()I  [access=0x1, regs=1, ins=1, outs=0, code_off=0xabdc4]
+00000  0012                     const/4
+00001  000f                     return
+
+### Landroid/support/v4/app/m;->writeToParcel(Landroid/os/Parcel;,I)V  [access=0x1, regs=4, ins=3, outs=3, code_off=0xabe84]
+00000  1054 0d47                iget-object  # FIELD Landroid/support/v4/app/m;->b:[Landroid/support/v4/app/n;
+00002  306e 0af8 0302           invoke-virtual  # CALL Landroid/os/Parcel;->writeTypedArray([Landroid/os/Parcelable;,I)V
+00005  1054 0d48                iget-object  # FIELD Landroid/support/v4/app/m;->c:[I
+00007  206e 0af1 0002           invoke-virtual  # CALL Landroid/os/Parcel;->writeIntArray([I)V
+0000a  1054 0d49                iget-object  # FIELD Landroid/support/v4/app/m;->d:[Landroid/support/v4/app/d;
+0000c  306e 0af8 0302           invoke-virtual  # CALL Landroid/os/Parcel;->writeTypedArray([Landroid/os/Parcelable;,I)V
+0000f  1352 0d4a                iget  # FIELD Landroid/support/v4/app/m;->e:I
+00011  206e 0af0 0032           invoke-virtual  # CALL Landroid/os/Parcel;->writeInt(I)V
+00014  1152 0d4b                iget  # FIELD Landroid/support/v4/app/m;->f:I
+00016  206e 0af0 0012           invoke-virtual  # CALL Landroid/os/Parcel;->writeInt(I)V
+00019  000e                     return-void

@@ -1,0 +1,483 @@
+### Landroid/support/v7/widget/w;-><clinit>()V  [access=0x10008, regs=3, ins=0, outs=0, code_off=0xe1658]
+00000  1012                     const/4
+00001  0023 0724                new-array  # TYPE [I
+00003  0112                     const/4
+00004  0214 02f1 0101           const
+00007  024b 0100                aput
+00009  0069 1218                sput-object  # FIELD Landroid/support/v7/widget/w;->j:[I
+0000b  000e                     return-void
+
+### Landroid/support/v7/widget/w;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;)V  [access=0x10001, regs=4, ins=3, outs=4, code_off=0xe1680]
+00000  0060 14d7                sget  # FIELD Lb/b/d/a/a;->spinnerStyle:I
+00002  4070 1af4 0321           invoke-direct  # CALL Landroid/support/v7/widget/w;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;,I)V
+00005  000e                     return-void
+
+### Landroid/support/v7/widget/w;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;,I)V  [access=0x10001, regs=5, ins=4, outs=5, code_off=0xe169c]
+00000  f012                     const/4
+00001  5070 1af5 4321           invoke-direct  # CALL Landroid/support/v7/widget/w;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;,I,I)V
+00004  000e                     return-void
+
+### Landroid/support/v7/widget/w;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;,I,I)V  [access=0x10001, regs=11, ins=5, outs=6, code_off=0xe16b8]
+00000  0512                     const/4
+00001  6007                     op_07
+00002  7107                     op_07
+00003  8207                     op_07
+00004  9301                     op_01
+00005  a401                     op_01
+00006  0676 1af6 0000           invoke-direct/range  # CALL Landroid/support/v7/widget/w;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;,I,I,Landroid/content/res/Resources$Theme;)V
+00009  000e                     return-void
+
+### Landroid/support/v7/widget/w;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;,I,I,Landroid/content/res/Resources$Theme;)V  [access=0x10001, regs=13, ins=6, outs=5, code_off=0xe16dc]
+00000  4070 20c4 a987           invoke-direct  # CALL Landroid/widget/Spinner;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;,I)V
+00003  0022 01b0                new-instance  # TYPE Landroid/graphics/Rect;
+00005  1070 0994 0000           invoke-direct  # CALL Landroid/graphics/Rect;-><init>()V
+00008  705b 1217                iput-object  # FIELD Landroid/support/v7/widget/w;->i:Landroid/graphics/Rect;
+0000a  0062 19cb                sget-object  # FIELD Lb/b/d/a/j;->Spinner:[I
+0000c  0112                     const/4
+0000d  5171 1a72 a098           invoke-static  # CALL Landroid/support/v7/widget/t0;->a(Landroid/content/Context;,Landroid/util/AttributeSet;,[I,I,I)Landroid/support/v7/widget/t0;
+00010  000c                     move-result-object
+00011  0222 0385                new-instance  # TYPE Landroid/support/v7/widget/e;
+00013  2070 1883 0072           invoke-direct  # CALL Landroid/support/v7/widget/e;-><init>(Landroid/view/View;)V
+00016  725b 1210                iput-object  # FIELD Landroid/support/v7/widget/w;->b:Landroid/support/v7/widget/e;
+00018  0212                     const/4
+00019  0c38 000a                if-eqz
+0001b  0322 0566                new-instance  # TYPE Lb/b/d/d/d;
+0001d  3070 2684 0c83           invoke-direct  # CALL Lb/b/d/d/d;-><init>(Landroid/content/Context;,Landroid/content/res/Resources$Theme;)V
+00020  735b 1211                iput-object  # FIELD Landroid/support/v7/widget/w;->c:Landroid/content/Context;
+00022  1a28                     goto
+00023  0c60 19d0                sget  # FIELD Lb/b/d/a/j;->Spinner_popupTheme:I
+00025  306e 1a7f 01c0           invoke-virtual  # CALL Landroid/support/v7/widget/t0;->g(I,I)I
+00028  0c0a                     move-result
+00029  0c38 0008                if-eqz
+0002b  0322 0566                new-instance  # TYPE Lb/b/d/d/d;
+0002d  3070 2683 0c83           invoke-direct  # CALL Lb/b/d/d/d;-><init>(Landroid/content/Context;,I)V
+00030  f028                     goto
+00031  0c60 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00033  0313 0017                const/16
+00035  3c35 0004                if-ge
+00037  8c07                     op_07
+00038  0228                     goto
+00039  2c07                     op_07
+0003a  7c5b 1211                iput-object  # FIELD Landroid/support/v7/widget/w;->c:Landroid/content/Context;
+0003c  7c54 1211                iget-object  # FIELD Landroid/support/v7/widget/w;->c:Landroid/content/Context;
+0003e  1312                     const/4
+0003f  0c38 006b                if-eqz
+00041  fc12                     const/4
+00042  cb33 0030                if-ne
+00044  0c62 1218                sget-object  # FIELD Landroid/support/v7/widget/w;->j:[I
+00046  516e 0852 ac98           invoke-virtual  # CALL Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;,[I,I,I)Landroid/content/res/TypedArray;
+00049  0c0c                     move-result-object
+0004a  206e 0907 001c           invoke-virtual  # CALL Landroid/content/res/TypedArray;->hasValue(I)Z
+0004d  040a                     move-result
+0004e  0438 0006                if-eqz
+00050  306e 08fc 011c           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getInt(I,I)I
+00053  0b0a                     move-result
+00054  0c38 001e                if-eqz
+00056  106e 090a 000c           invoke-virtual  # CALL Landroid/content/res/TypedArray;->recycle()V
+00059  1928                     goto
+0005a  040d                     op_0d
+0005b  0528                     goto
+0005c  070d                     op_0d
+0005d  0f28                     goto
+0005e  040d                     op_0d
+0005f  2c07                     op_07
+00060  051a 0374                const-string  # STR "AppCompatSpinner"
+00062  061a 06c4                const-string  # STR "Could not read android:spinnerMode"
+00064  3071 1c5f 0465           invoke-static  # CALL Landroid/util/Log;->i(Ljava/lang/String;,Ljava/lang/String;,Ljava/lang/Throwable;)I
+00067  0c38 000b                if-eqz
+00069  ed28                     goto
+0006a  070d                     op_0d
+0006b  c207                     op_07
+0006c  0238 0005                if-eqz
+0006e  106e 090a 0002           invoke-virtual  # CALL Landroid/content/res/TypedArray;->recycle()V
+00071  0727                     throw
+00072  3b33 0038                if-ne
+00074  0b22 03c4                new-instance  # TYPE Landroid/support/v7/widget/w$c;
+00076  7c54 1211                iget-object  # FIELD Landroid/support/v7/widget/w;->c:Landroid/content/Context;
+00078  5a70 1ad9 9c7b           invoke-direct  # CALL Landroid/support/v7/widget/w$c;-><init>(Landroid/support/v7/widget/w;,Landroid/content/Context;,Landroid/util/AttributeSet;,I)V
+0007b  7c54 1211                iget-object  # FIELD Landroid/support/v7/widget/w;->c:Landroid/content/Context;
+0007d  0462 19cb                sget-object  # FIELD Lb/b/d/a/j;->Spinner:[I
+0007f  5171 1a72 a49c           invoke-static  # CALL Landroid/support/v7/widget/t0;->a(Landroid/content/Context;,Landroid/util/AttributeSet;,[I,I,I)Landroid/support/v7/widget/t0;
+00082  0c0c                     move-result-object
+00083  0160 19cc                sget  # FIELD Lb/b/d/a/j;->Spinner_android_dropDownWidth:I
+00085  e412                     const/4
+00086  306e 1a7d 041c           invoke-virtual  # CALL Landroid/support/v7/widget/t0;->f(I,I)I
+00089  010a                     move-result
+0008a  7159 1216                iput  # FIELD Landroid/support/v7/widget/w;->h:I
+0008c  0160 19ce                sget  # FIELD Lb/b/d/a/j;->Spinner_android_popupBackground:I
+0008e  206e 1a76 001c           invoke-virtual  # CALL Landroid/support/v7/widget/t0;->b(I)Landroid/graphics/drawable/Drawable;
+00091  010c                     move-result-object
+00092  206e 1915 001b           invoke-virtual  # CALL Landroid/support/v7/widget/h0;->a(Landroid/graphics/drawable/Drawable;)V
+00095  0160 19cf                sget  # FIELD Lb/b/d/a/j;->Spinner_android_prompt:I
+00097  206e 1a7a 0010           invoke-virtual  # CALL Landroid/support/v7/widget/t0;->d(I)Ljava/lang/String;
+0009a  010c                     move-result-object
+0009b  206e 1adc 001b           invoke-virtual  # CALL Landroid/support/v7/widget/w$c;->a(Ljava/lang/CharSequence;)V
+0009e  106e 1a73 000c           invoke-virtual  # CALL Landroid/support/v7/widget/t0;->a()V
+000a1  7b5b 1215                iput-object  # FIELD Landroid/support/v7/widget/w;->g:Landroid/support/v7/widget/w$c;
+000a3  0c22 03bf                new-instance  # TYPE Landroid/support/v7/widget/w$a;
+000a5  4070 1ac2 b77c           invoke-direct  # CALL Landroid/support/v7/widget/w$a;-><init>(Landroid/support/v7/widget/w;,Landroid/view/View;,Landroid/support/v7/widget/w$c;)V
+000a8  7c5b 1212                iput-object  # FIELD Landroid/support/v7/widget/w;->d:Landroid/support/v7/widget/f0;
+000aa  0b60 19cd                sget  # FIELD Lb/b/d/a/j;->Spinner_android_entries:I
+000ac  206e 1a7e 00b0           invoke-virtual  # CALL Landroid/support/v7/widget/t0;->f(I)[Ljava/lang/CharSequence;
+000af  0b0c                     move-result-object
+000b0  0b38 0012                if-eqz
+000b2  0c22 047f                new-instance  # TYPE Landroid/widget/ArrayAdapter;
+000b4  0114 0008 0109           const
+000b7  4070 1ed2 b18c           invoke-direct  # CALL Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;,I,[Ljava/lang/Object;)V
+000ba  0860 16d4                sget  # FIELD Lb/b/d/a/g;->support_simple_spinner_dropdown_item:I
+000bc  206e 1ed4 008c           invoke-virtual  # CALL Landroid/widget/ArrayAdapter;->setDropDownViewResource(I)V
+000bf  206e 1b06 00c7           invoke-virtual  # CALL Landroid/support/v7/widget/w;->setAdapter(Landroid/widget/SpinnerAdapter;)V
+000c2  106e 1a73 0000           invoke-virtual  # CALL Landroid/support/v7/widget/t0;->a()V
+000c5  735c 1214                iput-boolean  # FIELD Landroid/support/v7/widget/w;->f:Z
+000c7  7854 1213                iget-object  # FIELD Landroid/support/v7/widget/w;->e:Landroid/widget/SpinnerAdapter;
+000c9  0838 0007                if-eqz
+000cb  206e 1b06 0087           invoke-virtual  # CALL Landroid/support/v7/widget/w;->setAdapter(Landroid/widget/SpinnerAdapter;)V
+000ce  725b 1213                iput-object  # FIELD Landroid/support/v7/widget/w;->e:Landroid/widget/SpinnerAdapter;
+000d0  7754 1210                iget-object  # FIELD Landroid/support/v7/widget/w;->b:Landroid/support/v7/widget/e;
+000d2  306e 1889 0a97           invoke-virtual  # CALL Landroid/support/v7/widget/e;->a(Landroid/util/AttributeSet;,I)V
+000d5  000e                     return-void
+
+### Landroid/support/v7/widget/w;->a(Landroid/widget/SpinnerAdapter;,Landroid/graphics/drawable/Drawable;)I  [access=0x0, regs=13, ins=3, outs=4, code_off=0xe1490]
+00000  0012                     const/4
+00001  0b39 0003                if-nez
+00003  000f                     return
+00004  106e 20cd 000a           invoke-virtual  # CALL Landroid/widget/Spinner;->getMeasuredWidth()I
+00007  010a                     move-result
+00008  2071 1d38 0001           invoke-static  # CALL Landroid/view/View$MeasureSpec;->makeMeasureSpec(I,I)I
+0000b  010a                     move-result
+0000c  106e 20cc 000a           invoke-virtual  # CALL Landroid/widget/Spinner;->getMeasuredHeight()I
+0000f  020a                     move-result
+00010  2071 1d38 0002           invoke-static  # CALL Landroid/view/View$MeasureSpec;->makeMeasureSpec(I,I)I
+00013  020a                     move-result
+00014  106e 20d5 000a           invoke-virtual  # CALL Landroid/widget/Spinner;->getSelectedItemPosition()I
+00017  030a                     move-result
+00018  2071 2ccb 0030           invoke-static  # CALL Ljava/lang/Math;->max(I,I)I
+0001b  030a                     move-result
+0001c  1072 20e9 000b           invoke-interface  # CALL Landroid/widget/SpinnerAdapter;->getCount()I
+0001f  040a                     move-result
+00020  05d8 0f03                op_d8
+00022  2071 2ccf 0054           invoke-static  # CALL Ljava/lang/Math;->min(I,I)I
+00025  040a                     move-result
+00026  0591 0304                int-sub
+00028  05d9 0f05                op_d9
+0002a  53b1                     op_b1
+0002b  2071 2ccb 0030           invoke-static  # CALL Ljava/lang/Math;->max(I,I)I
+0002e  030a                     move-result
+0002f  0512                     const/4
+00030  3601                     op_01
+00031  5707                     op_07
+00032  0301                     op_01
+00033  4635 002b                if-ge
+00035  2072 20ed 006b           invoke-interface  # CALL Landroid/widget/SpinnerAdapter;->getItemViewType(I)I
+00038  080a                     move-result
+00039  0832 0004                if-eq
+0003b  5707                     op_07
+0003c  8001                     op_01
+0003d  4072 20ee a76b           invoke-interface  # CALL Landroid/widget/SpinnerAdapter;->getView(I,Landroid/view/View;,Landroid/view/ViewGroup;)Landroid/view/View;
+00040  070c                     move-result-object
+00041  106e 1d5b 0007           invoke-virtual  # CALL Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+00044  080c                     move-result-object
+00045  0839 000b                if-nez
+00047  0822 0450                new-instance  # TYPE Landroid/view/ViewGroup$LayoutParams;
+00049  e912                     const/4
+0004a  3070 1dd8 0998           invoke-direct  # CALL Landroid/view/ViewGroup$LayoutParams;-><init>(I,I)V
+0004d  206e 1db1 0087           invoke-virtual  # CALL Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+00050  306e 1d90 0217           invoke-virtual  # CALL Landroid/view/View;->measure(I,I)V
+00053  106e 1d61 0007           invoke-virtual  # CALL Landroid/view/View;->getMeasuredWidth()I
+00056  080a                     move-result
+00057  2071 2ccb 0083           invoke-static  # CALL Ljava/lang/Math;->max(I,I)I
+0005a  030a                     move-result
+0005b  06d8 0106                op_d8
+0005d  d628                     goto
+0005e  0c38 000f                if-eqz
+00060  ab54 1217                iget-object  # FIELD Landroid/support/v7/widget/w;->i:Landroid/graphics/Rect;
+00062  206e 09e7 00bc           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->getPadding(Landroid/graphics/Rect;)Z
+00065  aa54 1217                iget-object  # FIELD Landroid/support/v7/widget/w;->i:Landroid/graphics/Rect;
+00067  ab52 0538                iget  # FIELD Landroid/graphics/Rect;->left:I
+00069  aa52 0539                iget  # FIELD Landroid/graphics/Rect;->right:I
+0006b  abb0                     op_b0
+0006c  b3b0                     op_b0
+0006d  030f                     return
+
+### Landroid/support/v7/widget/w;->drawableStateChanged()V  [access=0x4, regs=1, ins=1, outs=1, code_off=0xe18c0]
+00000  106f 20c5 0000           invoke-super  # CALL Landroid/widget/Spinner;->drawableStateChanged()V
+00003  0054 1210                iget-object  # FIELD Landroid/support/v7/widget/w;->b:Landroid/support/v7/widget/e;
+00005  0038 0005                if-eqz
+00007  106e 1884 0000           invoke-virtual  # CALL Landroid/support/v7/widget/e;->a()V
+0000a  000e                     return-void
+
+### Landroid/support/v7/widget/w;->getDropDownHorizontalOffset()I  [access=0x1, regs=3, ins=1, outs=1, code_off=0xe157c]
+00000  2054 1215                iget-object  # FIELD Landroid/support/v7/widget/w;->g:Landroid/support/v7/widget/w$c;
+00002  0038 0007                if-eqz
+00004  106e 1929 0000           invoke-virtual  # CALL Landroid/support/v7/widget/h0;->g()I
+00007  020a                     move-result
+00008  020f                     return
+00009  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+0000b  0113 0010                const/16
+0000d  1034 0007                if-lt
+0000f  106f 20c9 0002           invoke-super  # CALL Landroid/widget/Spinner;->getDropDownHorizontalOffset()I
+00012  020a                     move-result
+00013  020f                     return
+00014  0212                     const/4
+00015  020f                     return
+
+### Landroid/support/v7/widget/w;->getDropDownVerticalOffset()I  [access=0x1, regs=3, ins=1, outs=1, code_off=0xe15b8]
+00000  2054 1215                iget-object  # FIELD Landroid/support/v7/widget/w;->g:Landroid/support/v7/widget/w$c;
+00002  0038 0007                if-eqz
+00004  106e 192b 0000           invoke-virtual  # CALL Landroid/support/v7/widget/h0;->h()I
+00007  020a                     move-result
+00008  020f                     return
+00009  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+0000b  0113 0010                const/16
+0000d  1034 0007                if-lt
+0000f  106f 20ca 0002           invoke-super  # CALL Landroid/widget/Spinner;->getDropDownVerticalOffset()I
+00012  020a                     move-result
+00013  020f                     return
+00014  0212                     const/4
+00015  020f                     return
+
+### Landroid/support/v7/widget/w;->getDropDownWidth()I  [access=0x1, regs=3, ins=1, outs=1, code_off=0xe15f4]
+00000  2054 1215                iget-object  # FIELD Landroid/support/v7/widget/w;->g:Landroid/support/v7/widget/w$c;
+00002  0038 0005                if-eqz
+00004  2252 1216                iget  # FIELD Landroid/support/v7/widget/w;->h:I
+00006  020f                     return
+00007  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00009  0113 0010                const/16
+0000b  1034 0007                if-lt
+0000d  106f 20cb 0002           invoke-super  # CALL Landroid/widget/Spinner;->getDropDownWidth()I
+00010  020a                     move-result
+00011  020f                     return
+00012  0212                     const/4
+00013  020f                     return
+
+### Landroid/support/v7/widget/w;->getPopupBackground()Landroid/graphics/drawable/Drawable;  [access=0x1, regs=3, ins=1, outs=1, code_off=0xe13e4]
+00000  2054 1215                iget-object  # FIELD Landroid/support/v7/widget/w;->g:Landroid/support/v7/widget/w$c;
+00002  0038 0007                if-eqz
+00004  106e 1927 0000           invoke-virtual  # CALL Landroid/support/v7/widget/h0;->f()Landroid/graphics/drawable/Drawable;
+00007  020c                     move-result-object
+00008  0211                     return-object
+00009  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+0000b  0113 0010                const/16
+0000d  1034 0007                if-lt
+0000f  106f 20d2 0002           invoke-super  # CALL Landroid/widget/Spinner;->getPopupBackground()Landroid/graphics/drawable/Drawable;
+00012  020c                     move-result-object
+00013  0211                     return-object
+00014  0212                     const/4
+00015  0211                     return-object
+
+### Landroid/support/v7/widget/w;->getPopupContext()Landroid/content/Context;  [access=0x1, regs=3, ins=1, outs=1, code_off=0xe135c]
+00000  2054 1215                iget-object  # FIELD Landroid/support/v7/widget/w;->g:Landroid/support/v7/widget/w$c;
+00002  0038 0005                if-eqz
+00004  2254 1211                iget-object  # FIELD Landroid/support/v7/widget/w;->c:Landroid/content/Context;
+00006  0211                     return-object
+00007  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00009  0113 0017                const/16
+0000b  1034 0007                if-lt
+0000d  106f 20d3 0002           invoke-super  # CALL Landroid/widget/Spinner;->getPopupContext()Landroid/content/Context;
+00010  020c                     move-result-object
+00011  0211                     return-object
+00012  0212                     const/4
+00013  0211                     return-object
+
+### Landroid/support/v7/widget/w;->getPrompt()Ljava/lang/CharSequence;  [access=0x1, regs=2, ins=1, outs=1, code_off=0xe162c]
+00000  1054 1215                iget-object  # FIELD Landroid/support/v7/widget/w;->g:Landroid/support/v7/widget/w$c;
+00002  0038 0007                if-eqz
+00004  106e 1ae0 0000           invoke-virtual  # CALL Landroid/support/v7/widget/w$c;->m()Ljava/lang/CharSequence;
+00007  010c                     move-result-object
+00008  0528                     goto
+00009  106f 20d4 0001           invoke-super  # CALL Landroid/widget/Spinner;->getPrompt()Ljava/lang/CharSequence;
+0000c  010c                     move-result-object
+0000d  0111                     return-object
+
+### Landroid/support/v7/widget/w;->getSupportBackgroundTintList()Landroid/content/res/ColorStateList;  [access=0x1, regs=1, ins=1, outs=1, code_off=0xe1394]
+00000  0054 1210                iget-object  # FIELD Landroid/support/v7/widget/w;->b:Landroid/support/v7/widget/e;
+00002  0038 0007                if-eqz
+00004  106e 188a 0000           invoke-virtual  # CALL Landroid/support/v7/widget/e;->b()Landroid/content/res/ColorStateList;
+00007  000c                     move-result-object
+00008  0228                     goto
+00009  0012                     const/4
+0000a  0011                     return-object
+
+### Landroid/support/v7/widget/w;->getSupportBackgroundTintMode()Landroid/graphics/PorterDuff$Mode;  [access=0x1, regs=1, ins=1, outs=1, code_off=0xe13bc]
+00000  0054 1210                iget-object  # FIELD Landroid/support/v7/widget/w;->b:Landroid/support/v7/widget/e;
+00002  0038 0007                if-eqz
+00004  106e 188d 0000           invoke-virtual  # CALL Landroid/support/v7/widget/e;->c()Landroid/graphics/PorterDuff$Mode;
+00007  000c                     move-result-object
+00008  0228                     goto
+00009  0012                     const/4
+0000a  0011                     return-object
+
+### Landroid/support/v7/widget/w;->onDetachedFromWindow()V  [access=0x4, regs=2, ins=1, outs=1, code_off=0xe18e8]
+00000  106f 20d8 0001           invoke-super  # CALL Landroid/widget/Spinner;->onDetachedFromWindow()V
+00003  1054 1215                iget-object  # FIELD Landroid/support/v7/widget/w;->g:Landroid/support/v7/widget/w$c;
+00005  0038 000d                if-eqz
+00007  106e 191b 0000           invoke-virtual  # CALL Landroid/support/v7/widget/h0;->a()Z
+0000a  000a                     move-result
+0000b  0038 0007                if-eqz
+0000d  1154 1215                iget-object  # FIELD Landroid/support/v7/widget/w;->g:Landroid/support/v7/widget/w$c;
+0000f  106e 1924 0001           invoke-virtual  # CALL Landroid/support/v7/widget/h0;->dismiss()V
+00012  000e                     return-void
+
+### Landroid/support/v7/widget/w;->onMeasure(I,I)V  [access=0x4, regs=5, ins=3, outs=3, code_off=0xe1920]
+00000  306f 20d9 0432           invoke-super  # CALL Landroid/widget/Spinner;->onMeasure(I,I)V
+00003  2454 1215                iget-object  # FIELD Landroid/support/v7/widget/w;->g:Landroid/support/v7/widget/w$c;
+00005  0438 002d                if-eqz
+00007  1071 1d36 0003           invoke-static  # CALL Landroid/view/View$MeasureSpec;->getMode(I)I
+0000a  040a                     move-result
+0000b  0015 8000                const/high16
+0000d  0433 0025                if-ne
+0000f  106e 20cd 0002           invoke-virtual  # CALL Landroid/widget/Spinner;->getMeasuredWidth()I
+00012  040a                     move-result
+00013  106e 20c6 0002           invoke-virtual  # CALL Landroid/widget/Spinner;->getAdapter()Landroid/widget/SpinnerAdapter;
+00016  000c                     move-result-object
+00017  106e 20c7 0002           invoke-virtual  # CALL Landroid/widget/Spinner;->getBackground()Landroid/graphics/drawable/Drawable;
+0001a  010c                     move-result-object
+0001b  306e 1af7 0102           invoke-virtual  # CALL Landroid/support/v7/widget/w;->a(Landroid/widget/SpinnerAdapter;,Landroid/graphics/drawable/Drawable;)I
+0001e  000a                     move-result
+0001f  2071 2ccb 0004           invoke-static  # CALL Ljava/lang/Math;->max(I,I)I
+00022  040a                     move-result
+00023  1071 1d37 0003           invoke-static  # CALL Landroid/view/View$MeasureSpec;->getSize(I)I
+00026  030a                     move-result
+00027  2071 2ccf 0034           invoke-static  # CALL Ljava/lang/Math;->min(I,I)I
+0002a  030a                     move-result
+0002b  106e 20cc 0002           invoke-virtual  # CALL Landroid/widget/Spinner;->getMeasuredHeight()I
+0002e  040a                     move-result
+0002f  306e 20e4 0432           invoke-virtual  # CALL Landroid/widget/Spinner;->setMeasuredDimension(I,I)V
+00032  000e                     return-void
+
+### Landroid/support/v7/widget/w;->onTouchEvent(Landroid/view/MotionEvent;)Z  [access=0x1, regs=3, ins=2, outs=3, code_off=0xe1420]
+00000  1054 1212                iget-object  # FIELD Landroid/support/v7/widget/w;->d:Landroid/support/v7/widget/f0;
+00002  0038 000a                if-eqz
+00004  306e 189e 0210           invoke-virtual  # CALL Landroid/support/v7/widget/f0;->onTouch(Landroid/view/View;,Landroid/view/MotionEvent;)Z
+00007  000a                     move-result
+00008  0038 0004                if-eqz
+0000a  1112                     const/4
+0000b  010f                     return
+0000c  206f 20da 0021           invoke-super  # CALL Landroid/widget/Spinner;->onTouchEvent(Landroid/view/MotionEvent;)Z
+0000f  010a                     move-result
+00010  010f                     return
+
+### Landroid/support/v7/widget/w;->performClick()Z  [access=0x1, regs=2, ins=1, outs=1, code_off=0xe1454]
+00000  1054 1215                iget-object  # FIELD Landroid/support/v7/widget/w;->g:Landroid/support/v7/widget/w$c;
+00002  0038 000f                if-eqz
+00004  106e 191b 0000           invoke-virtual  # CALL Landroid/support/v7/widget/h0;->a()Z
+00007  000a                     move-result
+00008  0039 0007                if-nez
+0000a  1154 1215                iget-object  # FIELD Landroid/support/v7/widget/w;->g:Landroid/support/v7/widget/w$c;
+0000c  106e 1ade 0001           invoke-virtual  # CALL Landroid/support/v7/widget/w$c;->c()V
+0000f  1112                     const/4
+00010  010f                     return
+00011  106f 20db 0001           invoke-super  # CALL Landroid/widget/Spinner;->performClick()Z
+00014  010a                     move-result
+00015  010f                     return
+
+### Landroid/support/v7/widget/w;->setAdapter(Landroid/widget/Adapter;)V  [access=0x1041, regs=2, ins=2, outs=2, code_off=0xe1998]
+00000  011f 04a1                check-cast  # TYPE Landroid/widget/SpinnerAdapter;
+00002  206e 1b06 0010           invoke-virtual  # CALL Landroid/support/v7/widget/w;->setAdapter(Landroid/widget/SpinnerAdapter;)V
+00005  000e                     return-void
+
+### Landroid/support/v7/widget/w;->setAdapter(Landroid/widget/SpinnerAdapter;)V  [access=0x1, regs=4, ins=2, outs=3, code_off=0xe19b4]
+00000  2055 1214                iget-boolean  # FIELD Landroid/support/v7/widget/w;->f:Z
+00002  0039 0005                if-nez
+00004  235b 1213                iput-object  # FIELD Landroid/support/v7/widget/w;->e:Landroid/widget/SpinnerAdapter;
+00006  000e                     return-void
+00007  206f 20dd 0032           invoke-super  # CALL Landroid/widget/Spinner;->setAdapter(Landroid/widget/SpinnerAdapter;)V
+0000a  2054 1215                iget-object  # FIELD Landroid/support/v7/widget/w;->g:Landroid/support/v7/widget/w$c;
+0000c  0038 0018                if-eqz
+0000e  2054 1211                iget-object  # FIELD Landroid/support/v7/widget/w;->c:Landroid/content/Context;
+00010  0039 0006                if-nez
+00012  106e 20c8 0002           invoke-virtual  # CALL Landroid/widget/Spinner;->getContext()Landroid/content/Context;
+00015  000c                     move-result-object
+00016  2254 1215                iget-object  # FIELD Landroid/support/v7/widget/w;->g:Landroid/support/v7/widget/w$c;
+00018  0122 03c0                new-instance  # TYPE Landroid/support/v7/widget/w$b;
+0001a  106e 084e 0000           invoke-virtual  # CALL Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
+0001d  000c                     move-result-object
+0001e  3070 1ac5 0031           invoke-direct  # CALL Landroid/support/v7/widget/w$b;-><init>(Landroid/widget/SpinnerAdapter;,Landroid/content/res/Resources$Theme;)V
+00021  206e 1adb 0012           invoke-virtual  # CALL Landroid/support/v7/widget/w$c;->a(Landroid/widget/ListAdapter;)V
+00024  000e                     return-void
+
+### Landroid/support/v7/widget/w;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0xe1a10]
+00000  206f 20de 0010           invoke-super  # CALL Landroid/widget/Spinner;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+00003  0054 1210                iget-object  # FIELD Landroid/support/v7/widget/w;->b:Landroid/support/v7/widget/e;
+00005  0038 0005                if-eqz
+00007  206e 1888 0010           invoke-virtual  # CALL Landroid/support/v7/widget/e;->a(Landroid/graphics/drawable/Drawable;)V
+0000a  000e                     return-void
+
+### Landroid/support/v7/widget/w;->setBackgroundResource(I)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0xe1a38]
+00000  206f 20df 0010           invoke-super  # CALL Landroid/widget/Spinner;->setBackgroundResource(I)V
+00003  0054 1210                iget-object  # FIELD Landroid/support/v7/widget/w;->b:Landroid/support/v7/widget/e;
+00005  0038 0005                if-eqz
+00007  206e 1885 0010           invoke-virtual  # CALL Landroid/support/v7/widget/e;->a(I)V
+0000a  000e                     return-void
+
+### Landroid/support/v7/widget/w;->setDropDownHorizontalOffset(I)V  [access=0x1, regs=4, ins=2, outs=2, code_off=0xe1a60]
+00000  2054 1215                iget-object  # FIELD Landroid/support/v7/widget/w;->g:Landroid/support/v7/widget/w$c;
+00002  0038 0006                if-eqz
+00004  206e 1923 0030           invoke-virtual  # CALL Landroid/support/v7/widget/h0;->d(I)V
+00007  0a28                     goto
+00008  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+0000a  0113 0010                const/16
+0000c  1034 0005                if-lt
+0000e  206f 20e0 0032           invoke-super  # CALL Landroid/widget/Spinner;->setDropDownHorizontalOffset(I)V
+00011  000e                     return-void
+
+### Landroid/support/v7/widget/w;->setDropDownVerticalOffset(I)V  [access=0x1, regs=4, ins=2, outs=2, code_off=0xe1a94]
+00000  2054 1215                iget-object  # FIELD Landroid/support/v7/widget/w;->g:Landroid/support/v7/widget/w$c;
+00002  0038 0006                if-eqz
+00004  206e 192c 0030           invoke-virtual  # CALL Landroid/support/v7/widget/h0;->h(I)V
+00007  0a28                     goto
+00008  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+0000a  0113 0010                const/16
+0000c  1034 0005                if-lt
+0000e  206f 20e1 0032           invoke-super  # CALL Landroid/widget/Spinner;->setDropDownVerticalOffset(I)V
+00011  000e                     return-void
+
+### Landroid/support/v7/widget/w;->setDropDownWidth(I)V  [access=0x1, regs=4, ins=2, outs=2, code_off=0xe1ac8]
+00000  2054 1215                iget-object  # FIELD Landroid/support/v7/widget/w;->g:Landroid/support/v7/widget/w$c;
+00002  0038 0005                if-eqz
+00004  2359 1216                iput  # FIELD Landroid/support/v7/widget/w;->h:I
+00006  0a28                     goto
+00007  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00009  0113 0010                const/16
+0000b  1034 0005                if-lt
+0000d  206f 20e2 0032           invoke-super  # CALL Landroid/widget/Spinner;->setDropDownWidth(I)V
+00010  000e                     return-void
+
+### Landroid/support/v7/widget/w;->setPopupBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V  [access=0x1, regs=4, ins=2, outs=2, code_off=0xe1afc]
+00000  2054 1215                iget-object  # FIELD Landroid/support/v7/widget/w;->g:Landroid/support/v7/widget/w$c;
+00002  0038 0006                if-eqz
+00004  206e 1915 0030           invoke-virtual  # CALL Landroid/support/v7/widget/h0;->a(Landroid/graphics/drawable/Drawable;)V
+00007  0a28                     goto
+00008  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+0000a  0113 0010                const/16
+0000c  1034 0005                if-lt
+0000e  206f 20e6 0032           invoke-super  # CALL Landroid/widget/Spinner;->setPopupBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+00011  000e                     return-void
+
+### Landroid/support/v7/widget/w;->setPopupBackgroundResource(I)V  [access=0x1, regs=3, ins=2, outs=2, code_off=0xe1b30]
+00000  106e 1afd 0001           invoke-virtual  # CALL Landroid/support/v7/widget/w;->getPopupContext()Landroid/content/Context;
+00003  000c                     move-result-object
+00004  2071 25a3 0020           invoke-static  # CALL Lb/b/d/b/a/a;->c(Landroid/content/Context;,I)Landroid/graphics/drawable/Drawable;
+00007  020c                     move-result-object
+00008  206e 1b0c 0021           invoke-virtual  # CALL Landroid/support/v7/widget/w;->setPopupBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+0000b  000e                     return-void
+
+### Landroid/support/v7/widget/w;->setPrompt(Ljava/lang/CharSequence;)V  [access=0x1, regs=3, ins=2, outs=2, code_off=0xe1b58]
+00000  1054 1215                iget-object  # FIELD Landroid/support/v7/widget/w;->g:Landroid/support/v7/widget/w$c;
+00002  0038 0006                if-eqz
+00004  206e 1adc 0020           invoke-virtual  # CALL Landroid/support/v7/widget/w$c;->a(Ljava/lang/CharSequence;)V
+00007  0428                     goto
+00008  206f 20e7 0021           invoke-super  # CALL Landroid/widget/Spinner;->setPrompt(Ljava/lang/CharSequence;)V
+0000b  000e                     return-void
+
+### Landroid/support/v7/widget/w;->setSupportBackgroundTintList(Landroid/content/res/ColorStateList;)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0xe1b80]
+00000  0054 1210                iget-object  # FIELD Landroid/support/v7/widget/w;->b:Landroid/support/v7/widget/e;
+00002  0038 0005                if-eqz
+00004  206e 188b 0010           invoke-virtual  # CALL Landroid/support/v7/widget/e;->b(Landroid/content/res/ColorStateList;)V
+00007  000e                     return-void
+
+### Landroid/support/v7/widget/w;->setSupportBackgroundTintMode(Landroid/graphics/PorterDuff$Mode;)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0xe1ba0]
+00000  0054 1210                iget-object  # FIELD Landroid/support/v7/widget/w;->b:Landroid/support/v7/widget/e;
+00002  0038 0005                if-eqz
+00004  206e 1887 0010           invoke-virtual  # CALL Landroid/support/v7/widget/e;->a(Landroid/graphics/PorterDuff$Mode;)V
+00007  000e                     return-void

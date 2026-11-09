@@ -1,0 +1,30 @@
+### Lc/a/b/a/h;-><init>(I,I)V  [access=0x10001, regs=4, ins=3, outs=2, code_off=0xf4110]
+00000  1070 2730 0001           invoke-direct  # CALL Lc/a/b/a/g;-><init>()V
+00003  0013 0020                const/16
+00005  1059 1ac2                iput  # FIELD Lc/a/b/a/g;->a:I
+00007  1259 1ac3                iput  # FIELD Lc/a/b/a/g;->b:I
+00009  1359 1ac4                iput  # FIELD Lc/a/b/a/g;->c:I
+0000b  0222 0579                new-instance  # TYPE Lc/a/b/a/h$a;
+0000d  0312                     const/4
+0000e  2070 2736 0032           invoke-direct  # CALL Lc/a/b/a/h$a;-><init>(Lc/a/b/a/i;)V
+00011  125b 1ac8                iput-object  # FIELD Lc/a/b/a/h;->d:Lc/a/b/a/h$a;
+00013  000e                     return-void
+
+### Lc/a/b/a/h;->a([B,I,I)Lc/a/b/a/b;  [access=0x1, regs=6, ins=4, outs=5, code_off=0xf40ac]
+00000  2054 1ac8                iget-object  # FIELD Lc/a/b/a/h;->d:Lc/a/b/a/h$a;
+00002  1071 2739 0000           invoke-static  # CALL Lc/a/b/a/h$a;->a(Lc/a/b/a/h$a;)Ljava/lang/Object;
+00005  000c                     move-result-object
+00006  2154 1ac8                iget-object  # FIELD Lc/a/b/a/h;->d:Lc/a/b/a/h$a;
+00008  5571 273b 4301           invoke-static  # CALL Lc/a/b/a/h$a;->a(Lc/a/b/a/h$a;,Ljava/lang/Object;,[B,I,I)V
+0000b  2254 1ac8                iget-object  # FIELD Lc/a/b/a/h;->d:Lc/a/b/a/h$a;
+0000d  2071 2737 0002           invoke-static  # CALL Lc/a/b/a/h$a;->a(Lc/a/b/a/h$a;,Ljava/lang/Object;)J
+00010  020b                     move-result-wide
+00011  0628                     goto
+00012  0218 ffff ffff 0000 0000 const-wide
+00017  1412                     const/4
+00018  4423 0725                new-array  # TYPE [J
+0001a  0512                     const/4
+0001b  024c 0504                aput-wide
+0001d  1071 2701 0004           invoke-static  # CALL Lc/a/b/a/b;->a([J)Lc/a/b/a/b;
+00020  020c                     move-result-object
+00021  0211                     return-object

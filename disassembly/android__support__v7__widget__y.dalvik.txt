@@ -1,0 +1,309 @@
+### Landroid/support/v7/widget/y;-><init>(Landroid/content/Context;)V  [access=0x10001, regs=3, ins=2, outs=3, code_off=0xe3620]
+00000  0012                     const/4
+00001  3070 1b37 0021           invoke-direct  # CALL Landroid/support/v7/widget/y;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;)V
+00004  000e                     return-void
+
+### Landroid/support/v7/widget/y;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;)V  [access=0x10001, regs=4, ins=3, outs=4, code_off=0xe363c]
+00000  0014 0084 0101           const
+00003  4070 1b38 0321           invoke-direct  # CALL Landroid/support/v7/widget/y;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;,I)V
+00006  000e                     return-void
+
+### Landroid/support/v7/widget/y;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;,I)V  [access=0x10001, regs=4, ins=4, outs=4, code_off=0xe365c]
+00000  1071 1a4b 0001           invoke-static  # CALL Landroid/support/v7/widget/q0;->b(Landroid/content/Context;)Landroid/content/Context;
+00003  010c                     move-result-object
+00004  4070 20f4 3210           invoke-direct  # CALL Landroid/widget/TextView;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;,I)V
+00007  0122 0385                new-instance  # TYPE Landroid/support/v7/widget/e;
+00009  2070 1883 0001           invoke-direct  # CALL Landroid/support/v7/widget/e;-><init>(Landroid/view/View;)V
+0000c  015b 122f                iput-object  # FIELD Landroid/support/v7/widget/y;->b:Landroid/support/v7/widget/e;
+0000e  306e 1889 0321           invoke-virtual  # CALL Landroid/support/v7/widget/e;->a(Landroid/util/AttributeSet;,I)V
+00011  0122 03cb                new-instance  # TYPE Landroid/support/v7/widget/x;
+00013  2070 1b1a 0001           invoke-direct  # CALL Landroid/support/v7/widget/x;-><init>(Landroid/widget/TextView;)V
+00016  015b 1230                iput-object  # FIELD Landroid/support/v7/widget/y;->c:Landroid/support/v7/widget/x;
+00018  306e 1b23 0321           invoke-virtual  # CALL Landroid/support/v7/widget/x;->a(Landroid/util/AttributeSet;,I)V
+0001b  0054 1230                iget-object  # FIELD Landroid/support/v7/widget/y;->c:Landroid/support/v7/widget/x;
+0001d  106e 1b1c 0000           invoke-virtual  # CALL Landroid/support/v7/widget/x;->a()V
+00020  000e                     return-void
+
+### Landroid/support/v7/widget/y;->d()V  [access=0x2, regs=3, ins=1, outs=2, code_off=0xe36b0]
+00000  2054 1231                iget-object  # FIELD Landroid/support/v7/widget/y;->d:Ljava/util/concurrent/Future;
+00002  0038 000e                if-eqz
+00004  0112                     const/4
+00005  215b 1231                iput-object  # FIELD Landroid/support/v7/widget/y;->d:Ljava/util/concurrent/Future;
+00007  1072 2ea3 0000           invoke-interface  # CALL Ljava/util/concurrent/Future;->get()Ljava/lang/Object;
+0000a  000c                     move-result-object
+0000b  001f 0507                check-cast  # TYPE Lb/b/c/e/a;
+0000d  2071 119f 0002           invoke-static  # CALL Landroid/support/v4/widget/l;->a(Landroid/widget/TextView;,Lb/b/c/e/a;)V
+00010  000e                     return-void
+
+### Landroid/support/v7/widget/y;->drawableStateChanged()V  [access=0x4, regs=2, ins=1, outs=1, code_off=0xe36f4]
+00000  106f 20f5 0001           invoke-super  # CALL Landroid/widget/TextView;->drawableStateChanged()V
+00003  1054 122f                iget-object  # FIELD Landroid/support/v7/widget/y;->b:Landroid/support/v7/widget/e;
+00005  0038 0005                if-eqz
+00007  106e 1884 0000           invoke-virtual  # CALL Landroid/support/v7/widget/e;->a()V
+0000a  1154 1230                iget-object  # FIELD Landroid/support/v7/widget/y;->c:Landroid/support/v7/widget/x;
+0000c  0138 0005                if-eqz
+0000e  106e 1b1c 0001           invoke-virtual  # CALL Landroid/support/v7/widget/x;->a()V
+00011  000e                     return-void
+
+### Landroid/support/v7/widget/y;->getAutoSizeMaxTextSize()I  [access=0x1, regs=2, ins=1, outs=1, code_off=0xe34a4]
+00000  0063 0dee                sget-boolean  # FIELD Landroid/support/v4/widget/b;->a:Z
+00002  0038 0007                if-eqz
+00004  106f 20f7 0001           invoke-super  # CALL Landroid/widget/TextView;->getAutoSizeMaxTextSize()I
+00007  010a                     move-result
+00008  010f                     return
+00009  1154 1230                iget-object  # FIELD Landroid/support/v7/widget/y;->c:Landroid/support/v7/widget/x;
+0000b  0138 0007                if-eqz
+0000d  106e 1b2a 0001           invoke-virtual  # CALL Landroid/support/v7/widget/x;->c()I
+00010  010a                     move-result
+00011  010f                     return
+00012  f112                     const/4
+00013  010f                     return
+
+### Landroid/support/v7/widget/y;->getAutoSizeMinTextSize()I  [access=0x1, regs=2, ins=1, outs=1, code_off=0xe34dc]
+00000  0063 0dee                sget-boolean  # FIELD Landroid/support/v4/widget/b;->a:Z
+00002  0038 0007                if-eqz
+00004  106f 20f8 0001           invoke-super  # CALL Landroid/widget/TextView;->getAutoSizeMinTextSize()I
+00007  010a                     move-result
+00008  010f                     return
+00009  1154 1230                iget-object  # FIELD Landroid/support/v7/widget/y;->c:Landroid/support/v7/widget/x;
+0000b  0138 0007                if-eqz
+0000d  106e 1b2b 0001           invoke-virtual  # CALL Landroid/support/v7/widget/x;->d()I
+00010  010a                     move-result
+00011  010f                     return
+00012  f112                     const/4
+00013  010f                     return
+
+### Landroid/support/v7/widget/y;->getAutoSizeStepGranularity()I  [access=0x1, regs=2, ins=1, outs=1, code_off=0xe3514]
+00000  0063 0dee                sget-boolean  # FIELD Landroid/support/v4/widget/b;->a:Z
+00002  0038 0007                if-eqz
+00004  106f 20f9 0001           invoke-super  # CALL Landroid/widget/TextView;->getAutoSizeStepGranularity()I
+00007  010a                     move-result
+00008  010f                     return
+00009  1154 1230                iget-object  # FIELD Landroid/support/v7/widget/y;->c:Landroid/support/v7/widget/x;
+0000b  0138 0007                if-eqz
+0000d  106e 1b2c 0001           invoke-virtual  # CALL Landroid/support/v7/widget/x;->e()I
+00010  010a                     move-result
+00011  010f                     return
+00012  f112                     const/4
+00013  010f                     return
+
+### Landroid/support/v7/widget/y;->getAutoSizeTextAvailableSizes()[I  [access=0x1, regs=2, ins=1, outs=1, code_off=0xe35c4]
+00000  0063 0dee                sget-boolean  # FIELD Landroid/support/v4/widget/b;->a:Z
+00002  0038 0007                if-eqz
+00004  106f 20fa 0001           invoke-super  # CALL Landroid/widget/TextView;->getAutoSizeTextAvailableSizes()[I
+00007  010c                     move-result-object
+00008  0111                     return-object
+00009  1154 1230                iget-object  # FIELD Landroid/support/v7/widget/y;->c:Landroid/support/v7/widget/x;
+0000b  0138 0007                if-eqz
+0000d  106e 1b2d 0001           invoke-virtual  # CALL Landroid/support/v7/widget/x;->f()[I
+00010  010c                     move-result-object
+00011  0111                     return-object
+00012  0112                     const/4
+00013  1123 0724                new-array  # TYPE [I
+00015  0111                     return-object
+
+### Landroid/support/v7/widget/y;->getAutoSizeTextType()I  [access=0x1, regs=3, ins=1, outs=1, code_off=0xe354c]
+00000  0063 0dee                sget-boolean  # FIELD Landroid/support/v4/widget/b;->a:Z
+00002  0112                     const/4
+00003  0038 000b                if-eqz
+00005  106f 20fb 0002           invoke-super  # CALL Landroid/widget/TextView;->getAutoSizeTextType()I
+00008  020a                     move-result
+00009  1012                     const/4
+0000a  0233 0003                if-ne
+0000c  0101                     op_01
+0000d  010f                     return
+0000e  2254 1230                iget-object  # FIELD Landroid/support/v7/widget/y;->c:Landroid/support/v7/widget/x;
+00010  0238 0007                if-eqz
+00012  106e 1b2e 0002           invoke-virtual  # CALL Landroid/support/v7/widget/x;->g()I
+00015  020a                     move-result
+00016  020f                     return
+00017  010f                     return
+
+### Landroid/support/v7/widget/y;->getFirstBaselineToTopHeight()I  [access=0x1, regs=1, ins=1, outs=1, code_off=0xe358c]
+00000  1071 119b 0000           invoke-static  # CALL Landroid/support/v4/widget/l;->a(Landroid/widget/TextView;)I
+00003  000a                     move-result
+00004  000f                     return
+
+### Landroid/support/v7/widget/y;->getLastBaselineToBottomHeight()I  [access=0x1, regs=1, ins=1, outs=1, code_off=0xe35a8]
+00000  1071 11a0 0000           invoke-static  # CALL Landroid/support/v4/widget/l;->b(Landroid/widget/TextView;)I
+00003  000a                     move-result
+00004  000f                     return
+
+### Landroid/support/v7/widget/y;->getSupportBackgroundTintList()Landroid/content/res/ColorStateList;  [access=0x1, regs=1, ins=1, outs=1, code_off=0xe3418]
+00000  0054 122f                iget-object  # FIELD Landroid/support/v7/widget/y;->b:Landroid/support/v7/widget/e;
+00002  0038 0007                if-eqz
+00004  106e 188a 0000           invoke-virtual  # CALL Landroid/support/v7/widget/e;->b()Landroid/content/res/ColorStateList;
+00007  000c                     move-result-object
+00008  0228                     goto
+00009  0012                     const/4
+0000a  0011                     return-object
+
+### Landroid/support/v7/widget/y;->getSupportBackgroundTintMode()Landroid/graphics/PorterDuff$Mode;  [access=0x1, regs=1, ins=1, outs=1, code_off=0xe3440]
+00000  0054 122f                iget-object  # FIELD Landroid/support/v7/widget/y;->b:Landroid/support/v7/widget/e;
+00002  0038 0007                if-eqz
+00004  106e 188d 0000           invoke-virtual  # CALL Landroid/support/v7/widget/e;->c()Landroid/graphics/PorterDuff$Mode;
+00007  000c                     move-result-object
+00008  0228                     goto
+00009  0012                     const/4
+0000a  0011                     return-object
+
+### Landroid/support/v7/widget/y;->getText()Ljava/lang/CharSequence;  [access=0x1, regs=1, ins=1, outs=1, code_off=0xe3600]
+00000  1070 1b39 0000           invoke-direct  # CALL Landroid/support/v7/widget/y;->d()V
+00003  106f 2115 0000           invoke-super  # CALL Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
+00006  000c                     move-result-object
+00007  0011                     return-object
+
+### Landroid/support/v7/widget/y;->getTextMetricsParamsCompat()Lb/b/c/e/a$a;  [access=0x1, regs=1, ins=1, outs=1, code_off=0xe3468]
+00000  1071 11a4 0000           invoke-static  # CALL Landroid/support/v4/widget/l;->d(Landroid/widget/TextView;)Lb/b/c/e/a$a;
+00003  000c                     move-result-object
+00004  0011                     return-object
+
+### Landroid/support/v7/widget/y;->onCreateInputConnection(Landroid/view/inputmethod/EditorInfo;)Landroid/view/inputmethod/InputConnection;  [access=0x1, regs=3, ins=2, outs=3, code_off=0xe3484]
+00000  206f 2125 0021           invoke-super  # CALL Landroid/widget/TextView;->onCreateInputConnection(Landroid/view/inputmethod/EditorInfo;)Landroid/view/inputmethod/InputConnection;
+00003  000c                     move-result-object
+00004  3071 19c2 0120           invoke-static  # CALL Landroid/support/v7/widget/l;->a(Landroid/view/inputmethod/InputConnection;,Landroid/view/inputmethod/EditorInfo;,Landroid/view/View;)Landroid/view/inputmethod/InputConnection;
+00007  0011                     return-object
+
+### Landroid/support/v7/widget/y;->onLayout(Z,I,I,I,I)V  [access=0x4, regs=12, ins=6, outs=6, code_off=0xe3728]
+00000  0675 2126 0006           invoke-super/range  # CALL Landroid/widget/TextView;->onLayout(Z,I,I,I,I)V
+00003  6054 1230                iget-object  # FIELD Landroid/support/v7/widget/y;->c:Landroid/support/v7/widget/x;
+00005  0038 000a                if-eqz
+00007  7101                     op_01
+00008  8201                     op_01
+00009  9301                     op_01
+0000a  a401                     op_01
+0000b  b501                     op_01
+0000c  0674 1b26 0000           invoke-virtual/range  # CALL Landroid/support/v7/widget/x;->a(Z,I,I,I,I)V
+0000f  000e                     return-void
+
+### Landroid/support/v7/widget/y;->onMeasure(I,I)V  [access=0x4, regs=3, ins=3, outs=3, code_off=0xe3758]
+00000  1070 1b39 0000           invoke-direct  # CALL Landroid/support/v7/widget/y;->d()V
+00003  306f 2127 0210           invoke-super  # CALL Landroid/widget/TextView;->onMeasure(I,I)V
+00006  000e                     return-void
+
+### Landroid/support/v7/widget/y;->onTextChanged(Ljava/lang/CharSequence;,I,I,I)V  [access=0x4, regs=5, ins=5, outs=5, code_off=0xe3778]
+00000  546f 2129 3210           invoke-super  # CALL Landroid/widget/TextView;->onTextChanged(Ljava/lang/CharSequence;,I,I,I)V
+00003  0154 1230                iget-object  # FIELD Landroid/support/v7/widget/y;->c:Landroid/support/v7/widget/x;
+00005  0138 0011                if-eqz
+00007  0263 0dee                sget-boolean  # FIELD Landroid/support/v4/widget/b;->a:Z
+00009  0239 000d                if-nez
+0000b  106e 1b2f 0001           invoke-virtual  # CALL Landroid/support/v7/widget/x;->h()Z
+0000e  010a                     move-result
+0000f  0138 0007                if-eqz
+00011  0054 1230                iget-object  # FIELD Landroid/support/v7/widget/y;->c:Landroid/support/v7/widget/x;
+00013  106e 1b28 0000           invoke-virtual  # CALL Landroid/support/v7/widget/x;->b()V
+00016  000e                     return-void
+
+### Landroid/support/v7/widget/y;->setAutoSizeTextTypeUniformWithConfiguration(I,I,I,I)V  [access=0x1, regs=6, ins=5, outs=5, code_off=0xe37b8]
+00000  0063 0dee                sget-boolean  # FIELD Landroid/support/v4/widget/b;->a:Z
+00002  0038 0006                if-eqz
+00004  556f 212d 4321           invoke-super  # CALL Landroid/widget/TextView;->setAutoSizeTextTypeUniformWithConfiguration(I,I,I,I)V
+00007  0828                     goto
+00008  1154 1230                iget-object  # FIELD Landroid/support/v7/widget/y;->c:Landroid/support/v7/widget/x;
+0000a  0138 0005                if-eqz
+0000c  556e 1b1f 4321           invoke-virtual  # CALL Landroid/support/v7/widget/x;->a(I,I,I,I)V
+0000f  000e                     return-void
+
+### Landroid/support/v7/widget/y;->setAutoSizeTextTypeUniformWithPresetSizes([I,I)V  [access=0x1, regs=4, ins=3, outs=3, code_off=0xe37e8]
+00000  0063 0dee                sget-boolean  # FIELD Landroid/support/v4/widget/b;->a:Z
+00002  0038 0006                if-eqz
+00004  306f 212e 0321           invoke-super  # CALL Landroid/widget/TextView;->setAutoSizeTextTypeUniformWithPresetSizes([I,I)V
+00007  0828                     goto
+00008  1154 1230                iget-object  # FIELD Landroid/support/v7/widget/y;->c:Landroid/support/v7/widget/x;
+0000a  0138 0005                if-eqz
+0000c  306e 1b27 0321           invoke-virtual  # CALL Landroid/support/v7/widget/x;->a([I,I)V
+0000f  000e                     return-void
+
+### Landroid/support/v7/widget/y;->setAutoSizeTextTypeWithDefaults(I)V  [access=0x1, regs=3, ins=2, outs=2, code_off=0xe3818]
+00000  0063 0dee                sget-boolean  # FIELD Landroid/support/v4/widget/b;->a:Z
+00002  0038 0006                if-eqz
+00004  206f 212f 0021           invoke-super  # CALL Landroid/widget/TextView;->setAutoSizeTextTypeWithDefaults(I)V
+00007  0828                     goto
+00008  1154 1230                iget-object  # FIELD Landroid/support/v7/widget/y;->c:Landroid/support/v7/widget/x;
+0000a  0138 0005                if-eqz
+0000c  206e 1b1d 0021           invoke-virtual  # CALL Landroid/support/v7/widget/x;->a(I)V
+0000f  000e                     return-void
+
+### Landroid/support/v7/widget/y;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0xe3848]
+00000  206f 2130 0010           invoke-super  # CALL Landroid/widget/TextView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+00003  0054 122f                iget-object  # FIELD Landroid/support/v7/widget/y;->b:Landroid/support/v7/widget/e;
+00005  0038 0005                if-eqz
+00007  206e 1888 0010           invoke-virtual  # CALL Landroid/support/v7/widget/e;->a(Landroid/graphics/drawable/Drawable;)V
+0000a  000e                     return-void
+
+### Landroid/support/v7/widget/y;->setBackgroundResource(I)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0xe3870]
+00000  206f 2131 0010           invoke-super  # CALL Landroid/widget/TextView;->setBackgroundResource(I)V
+00003  0054 122f                iget-object  # FIELD Landroid/support/v7/widget/y;->b:Landroid/support/v7/widget/e;
+00005  0038 0005                if-eqz
+00007  206e 1885 0010           invoke-virtual  # CALL Landroid/support/v7/widget/e;->a(I)V
+0000a  000e                     return-void
+
+### Landroid/support/v7/widget/y;->setCustomSelectionActionModeCallback(Landroid/view/ActionMode$Callback;)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0xe3898]
+00000  2071 119c 0010           invoke-static  # CALL Landroid/support/v4/widget/l;->a(Landroid/widget/TextView;,Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode$Callback;
+00003  010c                     move-result-object
+00004  206f 2135 0010           invoke-super  # CALL Landroid/widget/TextView;->setCustomSelectionActionModeCallback(Landroid/view/ActionMode$Callback;)V
+00007  000e                     return-void
+
+### Landroid/support/v7/widget/y;->setFirstBaselineToTopHeight(I)V  [access=0x1, regs=4, ins=2, outs=2, code_off=0xe38b8]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0113 001c                const/16
+00004  1034 0006                if-lt
+00006  206f 2138 0032           invoke-super  # CALL Landroid/widget/TextView;->setFirstBaselineToTopHeight(I)V
+00009  0428                     goto
+0000a  2071 119d 0032           invoke-static  # CALL Landroid/support/v4/widget/l;->a(Landroid/widget/TextView;,I)V
+0000d  000e                     return-void
+
+### Landroid/support/v7/widget/y;->setLastBaselineToBottomHeight(I)V  [access=0x1, regs=4, ins=2, outs=2, code_off=0xe38e4]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0113 001c                const/16
+00004  1034 0006                if-lt
+00006  206f 213c 0032           invoke-super  # CALL Landroid/widget/TextView;->setLastBaselineToBottomHeight(I)V
+00009  0428                     goto
+0000a  2071 11a1 0032           invoke-static  # CALL Landroid/support/v4/widget/l;->b(Landroid/widget/TextView;,I)V
+0000d  000e                     return-void
+
+### Landroid/support/v7/widget/y;->setLineHeight(I)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0xe3910]
+00000  2071 11a3 0010           invoke-static  # CALL Landroid/support/v4/widget/l;->c(Landroid/widget/TextView;,I)V
+00003  000e                     return-void
+
+### Landroid/support/v7/widget/y;->setPrecomputedText(Lb/b/c/e/a;)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0xe3928]
+00000  2071 119f 0010           invoke-static  # CALL Landroid/support/v4/widget/l;->a(Landroid/widget/TextView;,Lb/b/c/e/a;)V
+00003  000e                     return-void
+
+### Landroid/support/v7/widget/y;->setSupportBackgroundTintList(Landroid/content/res/ColorStateList;)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0xe3940]
+00000  0054 122f                iget-object  # FIELD Landroid/support/v7/widget/y;->b:Landroid/support/v7/widget/e;
+00002  0038 0005                if-eqz
+00004  206e 188b 0010           invoke-virtual  # CALL Landroid/support/v7/widget/e;->b(Landroid/content/res/ColorStateList;)V
+00007  000e                     return-void
+
+### Landroid/support/v7/widget/y;->setSupportBackgroundTintMode(Landroid/graphics/PorterDuff$Mode;)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0xe3960]
+00000  0054 122f                iget-object  # FIELD Landroid/support/v7/widget/y;->b:Landroid/support/v7/widget/e;
+00002  0038 0005                if-eqz
+00004  206e 1887 0010           invoke-virtual  # CALL Landroid/support/v7/widget/e;->a(Landroid/graphics/PorterDuff$Mode;)V
+00007  000e                     return-void
+
+### Landroid/support/v7/widget/y;->setTextAppearance(Landroid/content/Context;,I)V  [access=0x1, regs=3, ins=3, outs=3, code_off=0xe3980]
+00000  306f 2147 0210           invoke-super  # CALL Landroid/widget/TextView;->setTextAppearance(Landroid/content/Context;,I)V
+00003  0054 1230                iget-object  # FIELD Landroid/support/v7/widget/y;->c:Landroid/support/v7/widget/x;
+00005  0038 0005                if-eqz
+00007  306e 1b20 0210           invoke-virtual  # CALL Landroid/support/v7/widget/x;->a(Landroid/content/Context;,I)V
+0000a  000e                     return-void
+
+### Landroid/support/v7/widget/y;->setTextFuture(Ljava/util/concurrent/Future;)V  [access=0x1, regs=2, ins=2, outs=1, code_off=0xe39a8]
+00000  015b 1231                iput-object  # FIELD Landroid/support/v7/widget/y;->d:Ljava/util/concurrent/Future;
+00002  106e 212b 0000           invoke-virtual  # CALL Landroid/widget/TextView;->requestLayout()V
+00005  000e                     return-void
+
+### Landroid/support/v7/widget/y;->setTextMetricsParamsCompat(Lb/b/c/e/a$a;)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0xe39c4]
+00000  2071 119e 0010           invoke-static  # CALL Landroid/support/v4/widget/l;->a(Landroid/widget/TextView;,Lb/b/c/e/a$a;)V
+00003  000e                     return-void
+
+### Landroid/support/v7/widget/y;->setTextSize(I,F)V  [access=0x1, regs=4, ins=3, outs=3, code_off=0xe39dc]
+00000  0063 0dee                sget-boolean  # FIELD Landroid/support/v4/widget/b;->a:Z
+00002  0038 0006                if-eqz
+00004  306f 214c 0321           invoke-super  # CALL Landroid/widget/TextView;->setTextSize(I,F)V
+00007  0828                     goto
+00008  1154 1230                iget-object  # FIELD Landroid/support/v7/widget/y;->c:Landroid/support/v7/widget/x;
+0000a  0138 0005                if-eqz
+0000c  306e 1b1e 0321           invoke-virtual  # CALL Landroid/support/v7/widget/x;->a(I,F)V
+0000f  000e                     return-void

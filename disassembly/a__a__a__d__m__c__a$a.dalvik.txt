@@ -1,0 +1,24 @@
+### La/a/a/d/m/c/a$a;-><init>(La/a/a/d/m/c/a;,Ljava/lang/String;)V  [access=0x10001, regs=3, ins=3, outs=1, code_off=0x61b6c]
+00000  015b 0257                iput-object  # FIELD La/a/a/d/m/c/a$a;->b:La/a/a/d/m/c/a;
+00002  025b 0256                iput-object  # FIELD La/a/a/d/m/c/a$a;->a:Ljava/lang/String;
+00004  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00007  000e                     return-void
+
+### La/a/a/d/m/c/a$a;->accept(Ljava/io/File;,Ljava/lang/String;)Z  [access=0x1, regs=4, ins=3, outs=2, code_off=0x61b18]
+00000  0222 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00002  1070 2d35 0002           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00005  1054 0257                iget-object  # FIELD La/a/a/d/m/c/a$a;->b:La/a/a/d/m/c/a;
+00007  1154 0256                iget-object  # FIELD La/a/a/d/m/c/a$a;->a:Ljava/lang/String;
+00009  2071 037f 0010           invoke-static  # CALL La/a/a/d/m/c/a;->a(La/a/a/d/m/c/a;,Ljava/lang/String;)Ljava/lang/String;
+0000c  206e 2d3f 0012           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0000f  011a 176e                const-string  # STR "_"
+00011  206e 2d3f 0012           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00014  106e 2d44 0002           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00017  010c                     move-result-object
+00018  206e 2d18 0013           invoke-virtual  # CALL Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+0001b  010a                     move-result
+0001c  0138 0004                if-eqz
+0001e  1112                     const/4
+0001f  010f                     return
+00020  0112                     const/4
+00021  010f                     return

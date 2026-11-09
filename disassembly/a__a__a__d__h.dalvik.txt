@@ -1,0 +1,134 @@
+### La/a/a/d/h;-><clinit>()V  [access=0x10009, regs=1, ins=0, outs=1, code_off=0x5c43c]
+00000  0022 06f8                new-instance  # TYPE Ljava/util/concurrent/locks/ReentrantLock;
+00002  1070 2eb5 0000           invoke-direct  # CALL Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
+00005  0069 01d0                sput-object  # FIELD La/a/a/d/h;->a:Ljava/util/concurrent/locks/Lock;
+00007  000e                     return-void
+
+### La/a/a/d/h;->a(I)Ljava/lang/String;  [access=0x9, regs=5, ins=1, outs=3, code_off=0x5c3c0]
+00000  0071 02a9 0000           invoke-static  # CALL La/a/a/d/h;->a()Z
+00003  000a                     move-result
+00004  011a 0000                const-string  # STR ""
+00006  0038 0022                if-eqz
+00008  0071 2d46 0000           invoke-static  # CALL Ljava/lang/System;->currentTimeMillis()J
+0000b  020b                     move-result-wide
+0000c  0062 01d0                sget-object  # FIELD La/a/a/d/h;->a:Ljava/util/concurrent/locks/Lock;
+0000e  1072 2eb3 0000           invoke-interface  # CALL Ljava/util/concurrent/locks/Lock;->lock()V
+00011  3071 2ade 0432           invoke-static  # CALL Lcom/baidu/location/indoor/mapversion/IndoorJni;->getFloor(J,I)Ljava/lang/String;
+00014  040c                     move-result-object
+00015  4107                     op_07
+00016  0528                     goto
+00017  040d                     op_0d
+00018  106e 2d60 0004           invoke-virtual  # CALL Ljava/lang/Throwable;->printStackTrace()V
+0001b  0462 01d0                sget-object  # FIELD La/a/a/d/h;->a:Ljava/util/concurrent/locks/Lock;
+0001d  1072 2eb4 0004           invoke-interface  # CALL Ljava/util/concurrent/locks/Lock;->unlock()V
+00020  0828                     goto
+00021  040d                     op_0d
+00022  0062 01d0                sget-object  # FIELD La/a/a/d/h;->a:Ljava/util/concurrent/locks/Lock;
+00024  1072 2eb4 0000           invoke-interface  # CALL Ljava/util/concurrent/locks/Lock;->unlock()V
+00027  0427                     throw
+00028  0111                     return-object
+
+### La/a/a/d/h;->a(D,D,F,F,F,D,I,J)V  [access=0x9, regs=13, ins=12, outs=12, code_off=0x5c45c]
+00000  0071 02a9 0000           invoke-static  # CALL La/a/a/d/h;->a()Z
+00003  000a                     move-result
+00004  0038 001c                if-eqz
+00006  0062 01d0                sget-object  # FIELD La/a/a/d/h;->a:Ljava/util/concurrent/locks/Lock;
+00008  1072 2eb3 0000           invoke-interface  # CALL Ljava/util/concurrent/locks/Lock;->lock()V
+0000b  0c77 2ae8 0001           invoke-static/range  # CALL Lcom/baidu/location/indoor/mapversion/IndoorJni;->setGps(D,D,F,F,F,D,I,J)V
+0000e  0528                     goto
+0000f  010d                     op_0d
+00010  106e 2d60 0001           invoke-virtual  # CALL Ljava/lang/Throwable;->printStackTrace()V
+00013  0162 01d0                sget-object  # FIELD La/a/a/d/h;->a:Ljava/util/concurrent/locks/Lock;
+00015  1072 2eb4 0001           invoke-interface  # CALL Ljava/util/concurrent/locks/Lock;->unlock()V
+00018  0828                     goto
+00019  010d                     op_0d
+0001a  0262 01d0                sget-object  # FIELD La/a/a/d/h;->a:Ljava/util/concurrent/locks/Lock;
+0001c  1072 2eb4 0002           invoke-interface  # CALL Ljava/util/concurrent/locks/Lock;->unlock()V
+0001f  0127                     throw
+00020  000e                     return-void
+
+### La/a/a/d/h;->a(D,D,Ljava/lang/String;,I,J,I)V  [access=0x9, regs=19, ins=9, outs=9, code_off=0x5c4c8]
+00000  e007                     op_07
+00001  0071 02a9 0000           invoke-static  # CALL La/a/a/d/h;->a()Z
+00004  010a                     move-result
+00005  0138 0032                if-eqz
+00007  0038 000a                if-eqz
+00009  011a 0000                const-string  # STR ""
+0000b  206e 2d03 00e1           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+0000e  010a                     move-result
+0000f  0138 0004                if-eqz
+00011  001a 2801                const-string  # STR "unknow"
+00013  0507                     op_07
+00014  0062 01d0                sget-object  # FIELD La/a/a/d/h;->a:Ljava/util/concurrent/locks/Lock;
+00016  1072 2eb3 0000           invoke-interface  # CALL Ljava/util/concurrent/locks/Lock;->lock()V
+00019  a104                     op_04
+0001a  c304                     op_04
+0001b  f601                     op_01
+0001c  0705 0010                op_05
+0001e  0902 0012                op_02
+00020  0977 2ae7 0001           invoke-static/range  # CALL Lcom/baidu/location/indoor/mapversion/IndoorJni;->setBleLoc4Scenario(D,D,Ljava/lang/String;,I,J,I)V
+00023  0628                     goto
+00024  000d                     op_0d
+00025  0107                     op_07
+00026  106e 2d60 0001           invoke-virtual  # CALL Ljava/lang/Throwable;->printStackTrace()V
+00029  0062 01d0                sget-object  # FIELD La/a/a/d/h;->a:Ljava/util/concurrent/locks/Lock;
+0002b  1072 2eb4 0000           invoke-interface  # CALL Ljava/util/concurrent/locks/Lock;->unlock()V
+0002e  0928                     goto
+0002f  000d                     op_0d
+00030  0107                     op_07
+00031  0062 01d0                sget-object  # FIELD La/a/a/d/h;->a:Ljava/util/concurrent/locks/Lock;
+00033  1072 2eb4 0000           invoke-interface  # CALL Ljava/util/concurrent/locks/Lock;->unlock()V
+00036  0127                     throw
+00037  000e                     return-void
+
+### La/a/a/d/h;->a(F,J)V  [access=0x9, regs=4, ins=3, outs=3, code_off=0x5c560]
+00000  0071 02a9 0000           invoke-static  # CALL La/a/a/d/h;->a()Z
+00003  000a                     move-result
+00004  0038 001c                if-eqz
+00006  0062 01d0                sget-object  # FIELD La/a/a/d/h;->a:Ljava/util/concurrent/locks/Lock;
+00008  1072 2eb3 0000           invoke-interface  # CALL Ljava/util/concurrent/locks/Lock;->lock()V
+0000b  3071 2ae6 0321           invoke-static  # CALL Lcom/baidu/location/indoor/mapversion/IndoorJni;->setBarometers(F,J)V
+0000e  0528                     goto
+0000f  010d                     op_0d
+00010  106e 2d60 0001           invoke-virtual  # CALL Ljava/lang/Throwable;->printStackTrace()V
+00013  0162 01d0                sget-object  # FIELD La/a/a/d/h;->a:Ljava/util/concurrent/locks/Lock;
+00015  1072 2eb4 0001           invoke-interface  # CALL Ljava/util/concurrent/locks/Lock;->unlock()V
+00018  0828                     goto
+00019  010d                     op_0d
+0001a  0262 01d0                sget-object  # FIELD La/a/a/d/h;->a:Ljava/util/concurrent/locks/Lock;
+0001c  1072 2eb4 0002           invoke-interface  # CALL Ljava/util/concurrent/locks/Lock;->unlock()V
+0001f  0127                     throw
+00020  000e                     return-void
+
+### La/a/a/d/h;->a()Z  [access=0x9, regs=2, ins=0, outs=0, code_off=0x5c320]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0113 0013                const/16
+00004  1035 0004                if-ge
+00006  0012                     const/4
+00007  000f                     return
+00008  0063 1cbc                sget-boolean  # FIELD Lcom/baidu/location/indoor/mapversion/IndoorJni;->a:Z
+0000a  000f                     return
+
+### La/a/a/d/h;->b(I)I  [access=0x9, regs=5, ins=1, outs=3, code_off=0x5c348]
+00000  0071 02a9 0000           invoke-static  # CALL La/a/a/d/h;->a()Z
+00003  000a                     move-result
+00004  f112                     const/4
+00005  0038 0022                if-eqz
+00007  0071 2d46 0000           invoke-static  # CALL Ljava/lang/System;->currentTimeMillis()J
+0000a  020b                     move-result-wide
+0000b  0062 01d0                sget-object  # FIELD La/a/a/d/h;->a:Ljava/util/concurrent/locks/Lock;
+0000d  1072 2eb3 0000           invoke-interface  # CALL Ljava/util/concurrent/locks/Lock;->lock()V
+00010  3071 2ae0 0432           invoke-static  # CALL Lcom/baidu/location/indoor/mapversion/IndoorJni;->getInout(J,I)I
+00013  040a                     move-result
+00014  4101                     op_01
+00015  0528                     goto
+00016  040d                     op_0d
+00017  106e 2d60 0004           invoke-virtual  # CALL Ljava/lang/Throwable;->printStackTrace()V
+0001a  0462 01d0                sget-object  # FIELD La/a/a/d/h;->a:Ljava/util/concurrent/locks/Lock;
+0001c  1072 2eb4 0004           invoke-interface  # CALL Ljava/util/concurrent/locks/Lock;->unlock()V
+0001f  0828                     goto
+00020  040d                     op_0d
+00021  0062 01d0                sget-object  # FIELD La/a/a/d/h;->a:Ljava/util/concurrent/locks/Lock;
+00023  1072 2eb4 0000           invoke-interface  # CALL Ljava/util/concurrent/locks/Lock;->unlock()V
+00026  0427                     throw
+00027  010f                     return

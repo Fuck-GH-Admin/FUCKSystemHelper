@@ -1,0 +1,19 @@
+### Landroid/support/v7/widget/s0;-><init>(Landroid/content/Context;,Landroid/content/res/Resources;)V  [access=0x10001, regs=3, ins=3, outs=2, code_off=0xed50c]
+00000  2070 197f 0020           invoke-direct  # CALL Landroid/support/v7/widget/k0;-><init>(Landroid/content/res/Resources;)V
+00003  0222 0692                new-instance  # TYPE Ljava/lang/ref/WeakReference;
+00005  2070 2d67 0012           invoke-direct  # CALL Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+00008  025b 11d3                iput-object  # FIELD Landroid/support/v7/widget/s0;->b:Ljava/lang/ref/WeakReference;
+0000a  000e                     return-void
+
+### Landroid/support/v7/widget/s0;->getDrawable(I)Landroid/graphics/drawable/Drawable;  [access=0x1, regs=3, ins=2, outs=3, code_off=0xed4cc]
+00000  206f 1989 0021           invoke-super  # CALL Landroid/support/v7/widget/k0;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+00003  000c                     move-result-object
+00004  1154 11d3                iget-object  # FIELD Landroid/support/v7/widget/s0;->b:Ljava/lang/ref/WeakReference;
+00006  106e 2d68 0001           invoke-virtual  # CALL Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+00009  010c                     move-result-object
+0000a  011f 016e                check-cast  # TYPE Landroid/content/Context;
+0000c  0038 000a                if-eqz
+0000e  0138 0008                if-eqz
+00010  0071 196a 0000           invoke-static  # CALL Landroid/support/v7/widget/j;->a()Landroid/support/v7/widget/j;
+00013  3071 1971 0021           invoke-static  # CALL Landroid/support/v7/widget/j;->a(Landroid/content/Context;,I,Landroid/graphics/drawable/Drawable;)Z
+00016  0011                     return-object

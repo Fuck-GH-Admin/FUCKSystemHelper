@@ -1,0 +1,41 @@
+### Landroid/support/v4/app/LoaderManagerImpl;-><clinit>()V  [access=0x10008, regs=0, ins=0, outs=0, code_off=0xb05ac]
+00000  000e                     return-void
+
+### Landroid/support/v4/app/LoaderManagerImpl;-><init>(Landroid/arch/lifecycle/e;,Landroid/arch/lifecycle/p;)V  [access=0x10000, regs=3, ins=3, outs=1, code_off=0xb05c0]
+00000  1070 103b 0000           invoke-direct  # CALL Landroid/support/v4/app/s;-><init>()V
+00003  015b 0c7a                iput-object  # FIELD Landroid/support/v4/app/LoaderManagerImpl;->a:Landroid/arch/lifecycle/e;
+00005  1071 0df3 0002           invoke-static  # CALL Landroid/support/v4/app/LoaderManagerImpl$LoaderViewModel;->a(Landroid/arch/lifecycle/p;)Landroid/support/v4/app/LoaderManagerImpl$LoaderViewModel;
+00008  010c                     move-result-object
+00009  015b 0c7b                iput-object  # FIELD Landroid/support/v4/app/LoaderManagerImpl;->b:Landroid/support/v4/app/LoaderManagerImpl$LoaderViewModel;
+0000b  000e                     return-void
+
+### Landroid/support/v4/app/LoaderManagerImpl;->a()V  [access=0x1, regs=1, ins=1, outs=1, code_off=0xb0604]
+00000  0054 0c7b                iget-object  # FIELD Landroid/support/v4/app/LoaderManagerImpl;->b:Landroid/support/v4/app/LoaderManagerImpl$LoaderViewModel;
+00002  106e 0df6 0000           invoke-virtual  # CALL Landroid/support/v4/app/LoaderManagerImpl$LoaderViewModel;->b()V
+00005  000e                     return-void
+
+### Landroid/support/v4/app/LoaderManagerImpl;->a(Ljava/lang/String;,Ljava/io/FileDescriptor;,Ljava/io/PrintWriter;,[Ljava/lang/String;)V  [access=0x1, regs=5, ins=5, outs=5, code_off=0xb05e8]
+00000  0054 0c7b                iget-object  # FIELD Landroid/support/v4/app/LoaderManagerImpl;->b:Landroid/support/v4/app/LoaderManagerImpl$LoaderViewModel;
+00002  546e 0df5 3210           invoke-virtual  # CALL Landroid/support/v4/app/LoaderManagerImpl$LoaderViewModel;->a(Ljava/lang/String;,Ljava/io/FileDescriptor;,Ljava/io/PrintWriter;,[Ljava/lang/String;)V
+00005  000e                     return-void
+
+### Landroid/support/v4/app/LoaderManagerImpl;->toString()Ljava/lang/String;  [access=0x1, regs=3, ins=1, outs=2, code_off=0xb0544]
+00000  0022 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00002  0113 0080                const/16
+00004  2070 2d36 0010           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>(I)V
+00007  011a 1182                const-string  # STR "LoaderManager{"
+00009  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0000c  1071 2d47 0002           invoke-static  # CALL Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+0000f  010a                     move-result
+00010  1071 2cac 0001           invoke-static  # CALL Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+00013  010c                     move-result-object
+00014  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00017  011a 005c                const-string  # STR " in "
+00019  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0001c  2254 0c7a                iget-object  # FIELD Landroid/support/v4/app/LoaderManagerImpl;->a:Landroid/arch/lifecycle/e;
+0001e  2071 2413 0002           invoke-static  # CALL Lb/b/c/f/d;->a(Ljava/lang/Object;,Ljava/lang/StringBuilder;)V
+00021  021a 28e0                const-string  # STR "}}"
+00023  206e 2d3f 0020           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00026  106e 2d44 0000           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00029  020c                     move-result-object
+0002a  0211                     return-object

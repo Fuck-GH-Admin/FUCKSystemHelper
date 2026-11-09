@@ -1,0 +1,60 @@
+### Lb/b/c/a/d/d$a;-><init>(I,I)V  [access=0x10000, regs=6, ins=3, outs=1, code_off=0xb1b04]
+00000  1070 2ce0 0003           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  2012                     const/4
+00004  0123 0724                new-array  # TYPE [I
+00006  0212                     const/4
+00007  044b 0201                aput
+00009  1412                     const/4
+0000a  054b 0401                aput
+0000c  315b 1352                iput-object  # FIELD Lb/b/c/a/d/d$a;->a:[I
+0000e  0423 0723                new-array  # TYPE [F
+00010  0426 0006 0000           fill-array-data
+00013  345b 1353                iput-object  # FIELD Lb/b/c/a/d/d$a;->b:[F
+00015  000e                     return-void
+00016  0300 0004 0002 0000 0000 0000 0000 3f80 ... <payload; units=8>
+
+### Lb/b/c/a/d/d$a;-><init>(I,I,I)V  [access=0x10000, regs=7, ins=4, outs=1, code_off=0xb1b50]
+00000  1070 2ce0 0003           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  3012                     const/4
+00004  0123 0724                new-array  # TYPE [I
+00006  0212                     const/4
+00007  044b 0201                aput
+00009  1412                     const/4
+0000a  054b 0401                aput
+0000c  2412                     const/4
+0000d  064b 0401                aput
+0000f  315b 1352                iput-object  # FIELD Lb/b/c/a/d/d$a;->a:[I
+00011  0423 0723                new-array  # TYPE [F
+00013  0426 0007 0000           fill-array-data
+00016  345b 1353                iput-object  # FIELD Lb/b/c/a/d/d$a;->b:[F
+00018  000e                     return-void
+00019  0000                     nop
+0001a  0300 0004 0003 0000 0000 0000 0000 3f00 0000 3f80 ... <payload; units=10>
+
+### Lb/b/c/a/d/d$a;-><init>(Ljava/util/List;,Ljava/util/List;)V  [access=0x10000, regs=7, ins=3, outs=2, code_off=0xb1ba8]
+00000  1070 2ce0 0004           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  1072 2e5d 0005           invoke-interface  # CALL Ljava/util/List;->size()I
+00006  000a                     move-result
+00007  0123 0724                new-array  # TYPE [I
+00009  415b 1352                iput-object  # FIELD Lb/b/c/a/d/d$a;->a:[I
+0000b  0123 0723                new-array  # TYPE [F
+0000d  415b 1353                iput-object  # FIELD Lb/b/c/a/d/d$a;->b:[F
+0000f  0112                     const/4
+00010  0135 0021                if-ge
+00012  4254 1352                iget-object  # FIELD Lb/b/c/a/d/d$a;->a:[I
+00014  2072 2e57 0015           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+00017  030c                     move-result-object
+00018  031f 066d                check-cast  # TYPE Ljava/lang/Integer;
+0001a  106e 2ca6 0003           invoke-virtual  # CALL Ljava/lang/Integer;->intValue()I
+0001d  030a                     move-result
+0001e  034b 0102                aput
+00020  4254 1353                iget-object  # FIELD Lb/b/c/a/d/d$a;->b:[F
+00022  2072 2e57 0016           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+00025  030c                     move-result-object
+00026  031f 0667                check-cast  # TYPE Ljava/lang/Float;
+00028  106e 2c98 0003           invoke-virtual  # CALL Ljava/lang/Float;->floatValue()F
+0002b  030a                     move-result
+0002c  034b 0102                aput
+0002e  01d8 0101                op_d8
+00030  e028                     goto
+00031  000e                     return-void

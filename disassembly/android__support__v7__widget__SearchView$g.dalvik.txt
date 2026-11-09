@@ -1,0 +1,50 @@
+### Landroid/support/v7/widget/SearchView$g;-><init>(Landroid/support/v7/widget/SearchView;)V  [access=0x10000, regs=2, ins=2, outs=1, code_off=0xe9c9c]
+00000  015b 1062                iput-object  # FIELD Landroid/support/v7/widget/SearchView$g;->b:Landroid/support/v7/widget/SearchView;
+00002  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00005  000e                     return-void
+
+### Landroid/support/v7/widget/SearchView$g;->onKey(Landroid/view/View;,I,Landroid/view/KeyEvent;)Z  [access=0x1, regs=7, ins=4, outs=4, code_off=0xe9be8]
+00000  3054 1062                iget-object  # FIELD Landroid/support/v7/widget/SearchView$g;->b:Landroid/support/v7/widget/SearchView;
+00002  0154 108e                iget-object  # FIELD Landroid/support/v7/widget/SearchView;->g0:Landroid/app/SearchableInfo;
+00004  0212                     const/4
+00005  0139 0003                if-nez
+00007  020f                     return
+00008  0054 1098                iget-object  # FIELD Landroid/support/v7/widget/SearchView;->q:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+0000a  106e 1eea 0000           invoke-virtual  # CALL Landroid/widget/AutoCompleteTextView;->isPopupShowing()Z
+0000d  000a                     move-result
+0000e  0038 0014                if-eqz
+00010  3054 1062                iget-object  # FIELD Landroid/support/v7/widget/SearchView$g;->b:Landroid/support/v7/widget/SearchView;
+00012  0054 1098                iget-object  # FIELD Landroid/support/v7/widget/SearchView;->q:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+00014  106e 1ee2 0000           invoke-virtual  # CALL Landroid/widget/AutoCompleteTextView;->getListSelection()I
+00017  000a                     move-result
+00018  f112                     const/4
+00019  1032 0009                if-eq
+0001b  3354 1062                iget-object  # FIELD Landroid/support/v7/widget/SearchView$g;->b:Landroid/support/v7/widget/SearchView;
+0001d  406e 16fc 6543           invoke-virtual  # CALL Landroid/support/v7/widget/SearchView;->a(Landroid/view/View;,I,Landroid/view/KeyEvent;)Z
+00020  030a                     move-result
+00021  030f                     return
+00022  3054 1062                iget-object  # FIELD Landroid/support/v7/widget/SearchView$g;->b:Landroid/support/v7/widget/SearchView;
+00024  0054 1098                iget-object  # FIELD Landroid/support/v7/widget/SearchView;->q:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+00026  106e 16af 0000           invoke-virtual  # CALL Landroid/support/v7/widget/SearchView$SearchAutoComplete;->a()Z
+00029  000a                     move-result
+0002a  0039 0027                if-nez
+0002c  106e 1cad 0006           invoke-virtual  # CALL Landroid/view/KeyEvent;->hasNoModifiers()Z
+0002f  000a                     move-result
+00030  0038 0021                if-eqz
+00032  106e 1ca5 0006           invoke-virtual  # CALL Landroid/view/KeyEvent;->getAction()I
+00035  060a                     move-result
+00036  1012                     const/4
+00037  0633 001a                if-ne
+00039  0613 0042                const/16
+0003b  6533 0016                if-ne
+0003d  106e 1d41 0004           invoke-virtual  # CALL Landroid/view/View;->cancelLongPress()V
+00040  3354 1062                iget-object  # FIELD Landroid/support/v7/widget/SearchView$g;->b:Landroid/support/v7/widget/SearchView;
+00042  0412                     const/4
+00043  3554 1098                iget-object  # FIELD Landroid/support/v7/widget/SearchView;->q:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+00045  106e 1ee4 0005           invoke-virtual  # CALL Landroid/widget/AutoCompleteTextView;->getText()Landroid/text/Editable;
+00048  050c                     move-result-object
+00049  106e 2ce6 0005           invoke-virtual  # CALL Ljava/lang/Object;->toString()Ljava/lang/String;
+0004c  050c                     move-result-object
+0004d  406e 16f4 5423           invoke-virtual  # CALL Landroid/support/v7/widget/SearchView;->a(I,Ljava/lang/String;,Ljava/lang/String;)V
+00050  000f                     return
+00051  020f                     return

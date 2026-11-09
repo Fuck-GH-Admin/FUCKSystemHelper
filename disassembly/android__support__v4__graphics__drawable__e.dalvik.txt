@@ -1,0 +1,130 @@
+### Landroid/support/v4/graphics/drawable/e;-><init>(Landroid/graphics/drawable/Drawable;)V  [access=0x10000, regs=2, ins=2, outs=2, code_off=0xb633c]
+00000  2070 1089 0010           invoke-direct  # CALL Landroid/support/v4/graphics/drawable/d;-><init>(Landroid/graphics/drawable/Drawable;)V
+00003  1070 10b7 0000           invoke-direct  # CALL Landroid/support/v4/graphics/drawable/e;->d()V
+00006  000e                     return-void
+
+### Landroid/support/v4/graphics/drawable/e;-><init>(Landroid/support/v4/graphics/drawable/d$a;,Landroid/content/res/Resources;)V  [access=0x10000, regs=3, ins=3, outs=3, code_off=0xb635c]
+00000  3070 108a 0210           invoke-direct  # CALL Landroid/support/v4/graphics/drawable/d;-><init>(Landroid/support/v4/graphics/drawable/d$a;,Landroid/content/res/Resources;)V
+00003  1070 10b7 0000           invoke-direct  # CALL Landroid/support/v4/graphics/drawable/e;->d()V
+00006  000e                     return-void
+
+### Landroid/support/v4/graphics/drawable/e;->d()V  [access=0x2, regs=3, ins=1, outs=3, code_off=0xb637c]
+00000  0262 0db1                sget-object  # FIELD Landroid/support/v4/graphics/drawable/e;->i:Ljava/lang/reflect/Method;
+00002  0239 0018                if-nez
+00004  021c 01c0                const-class  # TYPE Landroid/graphics/drawable/Drawable;
+00006  001a 203b                const-string  # STR "isProjected"
+00008  0112                     const/4
+00009  1123 075c                new-array  # TYPE [Ljava/lang/Class;
+0000b  306e 2c7a 0102           invoke-virtual  # CALL Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;,[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+0000e  020c                     move-result-object
+0000f  0269 0db1                sput-object  # FIELD Landroid/support/v4/graphics/drawable/e;->i:Ljava/lang/reflect/Method;
+00011  0928                     goto
+00012  020d                     op_0d
+00013  001a 16b9                const-string  # STR "WrappedDrawableApi21"
+00015  011a 07bb                const-string  # STR "Failed to retrieve Drawable#isProjected() method"
+00017  3071 1c62 0210           invoke-static  # CALL Landroid/util/Log;->w(Ljava/lang/String;,Ljava/lang/String;,Ljava/lang/Throwable;)I
+0001a  000e                     return-void
+
+### Landroid/support/v4/graphics/drawable/e;->b()Z  [access=0x4, regs=4, ins=1, outs=0, code_off=0xb6268]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0112                     const/4
+00003  0213 0015                const/16
+00005  2033 0015                if-ne
+00007  3354 0daf                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d;->g:Landroid/graphics/drawable/Drawable;
+00009  3020 01c3                instance-of  # TYPE Landroid/graphics/drawable/GradientDrawable;
+0000b  0039 000e                if-nez
+0000d  3020 01c2                instance-of  # TYPE Landroid/graphics/drawable/DrawableContainer;
+0000f  0039 000a                if-nez
+00011  3020 01c5                instance-of  # TYPE Landroid/graphics/drawable/InsetDrawable;
+00013  0039 0006                if-nez
+00015  3320 01c7                instance-of  # TYPE Landroid/graphics/drawable/RippleDrawable;
+00017  0338 0003                if-eqz
+00019  1112                     const/4
+0001a  010f                     return
+
+### Landroid/support/v4/graphics/drawable/e;->c()Landroid/support/v4/graphics/drawable/d$a;  [access=0x0, regs=3, ins=1, outs=3, code_off=0xb6244]
+00000  0022 02ba                new-instance  # TYPE Landroid/support/v4/graphics/drawable/e$a;
+00002  2254 0dad                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d;->e:Landroid/support/v4/graphics/drawable/d$a;
+00004  0112                     const/4
+00005  3070 10b1 0120           invoke-direct  # CALL Landroid/support/v4/graphics/drawable/e$a;-><init>(Landroid/support/v4/graphics/drawable/d$a;,Landroid/content/res/Resources;)V
+00008  0011                     return-object
+
+### Landroid/support/v4/graphics/drawable/e;->getDirtyBounds()Landroid/graphics/Rect;  [access=0x1, regs=1, ins=1, outs=1, code_off=0xb6224]
+00000  0054 0daf                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d;->g:Landroid/graphics/drawable/Drawable;
+00002  106e 09dd 0000           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->getDirtyBounds()Landroid/graphics/Rect;
+00005  000c                     move-result-object
+00006  0011                     return-object
+
+### Landroid/support/v4/graphics/drawable/e;->getOutline(Landroid/graphics/Outline;)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0xb63d4]
+00000  0054 0daf                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d;->g:Landroid/graphics/drawable/Drawable;
+00002  206e 09e6 0010           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->getOutline(Landroid/graphics/Outline;)V
+00005  000e                     return-void
+
+### Landroid/support/v4/graphics/drawable/e;->isProjected()Z  [access=0x1, regs=4, ins=1, outs=3, code_off=0xb62b0]
+00000  3354 0daf                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d;->g:Landroid/graphics/drawable/Drawable;
+00002  0012                     const/4
+00003  0338 001b                if-eqz
+00005  0162 0db1                sget-object  # FIELD Landroid/support/v4/graphics/drawable/e;->i:Ljava/lang/reflect/Method;
+00007  0138 0017                if-eqz
+00009  0223 075d                new-array  # TYPE [Ljava/lang/Object;
+0000b  306e 2d7a 0231           invoke-virtual  # CALL Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;,[Ljava/lang/Object;)Ljava/lang/Object;
+0000e  030c                     move-result-object
+0000f  031f 0657                check-cast  # TYPE Ljava/lang/Boolean;
+00011  106e 2c65 0003           invoke-virtual  # CALL Ljava/lang/Boolean;->booleanValue()Z
+00014  030a                     move-result
+00015  030f                     return
+00016  030d                     op_0d
+00017  011a 16b9                const-string  # STR "WrappedDrawableApi21"
+00019  021a 0779                const-string  # STR "Error calling Drawable#isProjected() method"
+0001b  3071 1c62 0321           invoke-static  # CALL Landroid/util/Log;->w(Ljava/lang/String;,Ljava/lang/String;,Ljava/lang/Throwable;)I
+0001e  000f                     return
+
+### Landroid/support/v4/graphics/drawable/e;->setHotspot(F,F)V  [access=0x1, regs=3, ins=3, outs=3, code_off=0xb63f0]
+00000  0054 0daf                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d;->g:Landroid/graphics/drawable/Drawable;
+00002  306e 09ff 0210           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setHotspot(F,F)V
+00005  000e                     return-void
+
+### Landroid/support/v4/graphics/drawable/e;->setHotspotBounds(I,I,I,I)V  [access=0x1, regs=5, ins=5, outs=5, code_off=0xb640c]
+00000  0054 0daf                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d;->g:Landroid/graphics/drawable/Drawable;
+00002  546e 0a00 3210           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setHotspotBounds(I,I,I,I)V
+00005  000e                     return-void
+
+### Landroid/support/v4/graphics/drawable/e;->setState([I)Z  [access=0x1, regs=2, ins=2, outs=2, code_off=0xb6310]
+00000  206f 10ab 0010           invoke-super  # CALL Landroid/support/v4/graphics/drawable/d;->setState([I)Z
+00003  010a                     move-result
+00004  0138 0007                if-eqz
+00006  106e 09ec 0000           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+00009  1012                     const/4
+0000a  000f                     return
+0000b  0012                     const/4
+0000c  000f                     return
+
+### Landroid/support/v4/graphics/drawable/e;->setTint(I)V  [access=0x1, regs=3, ins=2, outs=2, code_off=0xb6428]
+00000  106e 10b5 0001           invoke-virtual  # CALL Landroid/support/v4/graphics/drawable/e;->b()Z
+00003  000a                     move-result
+00004  0038 0006                if-eqz
+00006  206f 10ac 0021           invoke-super  # CALL Landroid/support/v4/graphics/drawable/d;->setTint(I)V
+00009  0628                     goto
+0000a  1154 0daf                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d;->g:Landroid/graphics/drawable/Drawable;
+0000c  206e 0a04 0021           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setTint(I)V
+0000f  000e                     return-void
+
+### Landroid/support/v4/graphics/drawable/e;->setTintList(Landroid/content/res/ColorStateList;)V  [access=0x1, regs=3, ins=2, outs=2, code_off=0xb6458]
+00000  106e 10b5 0001           invoke-virtual  # CALL Landroid/support/v4/graphics/drawable/e;->b()Z
+00003  000a                     move-result
+00004  0038 0006                if-eqz
+00006  206f 10ad 0021           invoke-super  # CALL Landroid/support/v4/graphics/drawable/d;->setTintList(Landroid/content/res/ColorStateList;)V
+00009  0628                     goto
+0000a  1154 0daf                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d;->g:Landroid/graphics/drawable/Drawable;
+0000c  206e 0a05 0021           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setTintList(Landroid/content/res/ColorStateList;)V
+0000f  000e                     return-void
+
+### Landroid/support/v4/graphics/drawable/e;->setTintMode(Landroid/graphics/PorterDuff$Mode;)V  [access=0x1, regs=3, ins=2, outs=2, code_off=0xb6488]
+00000  106e 10b5 0001           invoke-virtual  # CALL Landroid/support/v4/graphics/drawable/e;->b()Z
+00003  000a                     move-result
+00004  0038 0006                if-eqz
+00006  206f 10ae 0021           invoke-super  # CALL Landroid/support/v4/graphics/drawable/d;->setTintMode(Landroid/graphics/PorterDuff$Mode;)V
+00009  0628                     goto
+0000a  1154 0daf                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d;->g:Landroid/graphics/drawable/Drawable;
+0000c  206e 0a06 0021           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setTintMode(Landroid/graphics/PorterDuff$Mode;)V
+0000f  000e                     return-void

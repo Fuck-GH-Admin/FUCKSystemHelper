@@ -1,0 +1,285 @@
+### La/a/a/i/g$c;-><init>(La/a/a/i/g;,Ljava/lang/String;,Z)V  [access=0x10001, regs=4, ins=4, outs=1, code_off=0x7c33c]
+00000  015b 043a                iput-object  # FIELD La/a/a/i/g$c;->d:La/a/a/i/g;
+00002  025b 0438                iput-object  # FIELD La/a/a/i/g$c;->b:Ljava/lang/String;
+00004  035c 0439                iput-boolean  # FIELD La/a/a/i/g$c;->c:Z
+00006  1070 2d4a 0000           invoke-direct  # CALL Ljava/lang/Thread;-><init>()V
+00009  000e                     return-void
+
+### La/a/a/i/g$c;->run()V  [access=0x1, regs=17, ins=1, outs=4, code_off=0x7c360]
+00000  0008 0010                op_08
+00002  011a 1f22                const-string  # STR "gzip"
+00004  021a 1a68                const-string  # STR "close baos IOException!"
+00006  031a 1a69                const-string  # STR "close is IOException!"
+00008  041a 1a6a                const-string  # STR "close os IOException!"
+0000a  051a 19b1                const-string  # STR "baidu_location_service"
+0000c  0654 043a                iget-object  # FIELD La/a/a/i/g$c;->d:La/a/a/i/g;
+0000e  0762 041d                sget-object  # FIELD La/a/a/i/d;->b:Ljava/lang/String;
+00010  675b 0442                iput-object  # FIELD La/a/a/i/g;->a:Ljava/lang/String;
+00012  106e 0672 0006           invoke-virtual  # CALL La/a/a/i/g;->a()V
+00015  0654 043a                iget-object  # FIELD La/a/a/i/g$c;->d:La/a/a/i/g;
+00017  6652 0443                iget  # FIELD La/a/a/i/g;->b:I
+00019  0812                     const/4
+0001a  0912                     const/4
+0001b  1a12                     const/4
+0001c  063d 01df                if-lez
+0001e  0071 06a0 0000           invoke-static  # CALL La/a/a/i/i;->g()Ljavax/net/ssl/SSLSocketFactory;
+00021  0b0c                     move-result-object
+00022  1071 2eea 000b           invoke-static  # CALL Ljavax/net/ssl/HttpsURLConnection;->setDefaultSSLSocketFactory(Ljavax/net/ssl/SSLSocketFactory;)V
+00025  0b22 06a6                new-instance  # TYPE Ljava/net/URL;
+00027  0c54 043a                iget-object  # FIELD La/a/a/i/g$c;->d:La/a/a/i/g;
+00029  cc54 0442                iget-object  # FIELD La/a/a/i/g;->a:Ljava/lang/String;
+0002b  2070 2d9d 00cb           invoke-direct  # CALL Ljava/net/URL;-><init>(Ljava/lang/String;)V
+0002e  0c22 0684                new-instance  # TYPE Ljava/lang/StringBuffer;
+00030  1070 2d25 000c           invoke-direct  # CALL Ljava/lang/StringBuffer;-><init>()V
+00033  0d54 043a                iget-object  # FIELD La/a/a/i/g$c;->d:La/a/a/i/g;
+00035  dd54 0445                iget-object  # FIELD La/a/a/i/g;->d:Ljava/util/Map;
+00037  1072 2e68 000d           invoke-interface  # CALL Ljava/util/Map;->entrySet()Ljava/util/Set;
+0003a  0d0c                     move-result-object
+0003b  1072 2e7c 000d           invoke-interface  # CALL Ljava/util/Set;->iterator()Ljava/util/Iterator;
+0003e  0d0c                     move-result-object
+0003f  1072 2e43 000d           invoke-interface  # CALL Ljava/util/Iterator;->hasNext()Z
+00042  0e0a                     move-result
+00043  0e38 0023                if-eqz
+00045  1072 2e44 000d           invoke-interface  # CALL Ljava/util/Iterator;->next()Ljava/lang/Object;
+00048  0e0c                     move-result-object
+00049  0e1f 06dc                check-cast  # TYPE Ljava/util/Map$Entry;
+0004b  1072 2e64 000e           invoke-interface  # CALL Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+0004e  0f0c                     move-result-object
+0004f  0f1f 0683                check-cast  # TYPE Ljava/lang/String;
+00051  206e 2d2e 00fc           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+00054  0f1a 0293                const-string  # STR "="
+00056  206e 2d2e 00fc           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+00059  1072 2e65 000e           invoke-interface  # CALL Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+0005c  0e0c                     move-result-object
+0005d  206e 2d2d 00ec           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/Object;)Ljava/lang/StringBuffer;
+00060  0e1a 00d2                const-string  # STR "&"
+00062  206e 2d2e 00ec           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+00065  da28                     goto
+00066  106e 2d31 000c           invoke-virtual  # CALL Ljava/lang/StringBuffer;->length()I
+00069  0d0a                     move-result
+0006a  0d3d 000a                if-lez
+0006c  106e 2d31 000c           invoke-virtual  # CALL Ljava/lang/StringBuffer;->length()I
+0006f  0d0a                     move-result
+00070  adb1                     op_b1
+00071  206e 2d30 00dc           invoke-virtual  # CALL Ljava/lang/StringBuffer;->deleteCharAt(I)Ljava/lang/StringBuffer;
+00074  106e 2d9f 000b           invoke-virtual  # CALL Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
+00077  0d0c                     move-result-object
+00078  0d1f 070a                check-cast  # TYPE Ljavax/net/ssl/HttpsURLConnection;
+0007a  081a 1308                const-string  # STR "POST"
+0007c  206e 2ef0 008d           invoke-virtual  # CALL Ljavax/net/ssl/HttpsURLConnection;->setRequestMethod(Ljava/lang/String;)V
+0007f  206e 2eeb 00ad           invoke-virtual  # CALL Ljavax/net/ssl/HttpsURLConnection;->setDoInput(Z)V
+00082  206e 2eec 00ad           invoke-virtual  # CALL Ljavax/net/ssl/HttpsURLConnection;->setDoOutput(Z)V
+00085  206e 2ef2 009d           invoke-virtual  # CALL Ljavax/net/ssl/HttpsURLConnection;->setUseCaches(Z)V
+00088  0860 040d                sget  # FIELD La/a/a/i/a;->a:I
+0008a  206e 2ee9 008d           invoke-virtual  # CALL Ljavax/net/ssl/HttpsURLConnection;->setConnectTimeout(I)V
+0008d  0860 040d                sget  # FIELD La/a/a/i/a;->a:I
+0008f  206e 2eef 008d           invoke-virtual  # CALL Ljavax/net/ssl/HttpsURLConnection;->setReadTimeout(I)V
+00092  0822 00ff                new-instance  # TYPE La/a/a/i/g$g;
+00094  2070 066e 00b8           invoke-direct  # CALL La/a/a/i/g$g;-><init>(Ljava/net/URL;)V
+00097  206e 2eed 008d           invoke-virtual  # CALL Ljavax/net/ssl/HttpsURLConnection;->setHostnameVerifier(Ljavax/net/ssl/HostnameVerifier;)V
+0009a  081a 069f                const-string  # STR "Content-Type"
+0009c  0b1a 195e                const-string  # STR "application/x-www-form-urlencoded; charset=utf-8"
+0009e  306e 2ef1 0b8d           invoke-virtual  # CALL Ljavax/net/ssl/HttpsURLConnection;->setRequestProperty(Ljava/lang/String;,Ljava/lang/String;)V
+000a1  081a 0304                const-string  # STR "Accept-Charset"
+000a3  0b1a 154c                const-string  # STR "UTF-8"
+000a5  306e 2ef1 0b8d           invoke-virtual  # CALL Ljavax/net/ssl/HttpsURLConnection;->setRequestProperty(Ljava/lang/String;,Ljava/lang/String;)V
+000a8  081a 0305                const-string  # STR "Accept-Encoding"
+000aa  306e 2ef1 018d           invoke-virtual  # CALL Ljavax/net/ssl/HttpsURLConnection;->setRequestProperty(Ljava/lang/String;,Ljava/lang/String;)V
+000ad  0862 0496                sget-object  # FIELD La/a/a/i/i;->o0:Ljava/lang/String;
+000af  0838 0007                if-eqz
+000b1  0b1a 19b9                const-string  # STR "bd-loc-android"
+000b3  306e 2ef1 08bd           invoke-virtual  # CALL Ljavax/net/ssl/HttpsURLConnection;->setRequestProperty(Ljava/lang/String;,Ljava/lang/String;)V
+000b6  0854 0438                iget-object  # FIELD La/a/a/i/g$c;->b:Ljava/lang/String;
+000b8  1071 1c37 0008           invoke-static  # CALL Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+000bb  080a                     move-result
+000bc  0839 0009                if-nez
+000be  081a 0831                const-string  # STR "Host"
+000c0  0b54 0438                iget-object  # FIELD La/a/a/i/g$c;->b:Ljava/lang/String;
+000c2  306e 2ef1 0b8d           invoke-virtual  # CALL Ljavax/net/ssl/HttpsURLConnection;->setRequestProperty(Ljava/lang/String;,Ljava/lang/String;)V
+000c5  106e 2ee7 000d           invoke-virtual  # CALL Ljavax/net/ssl/HttpsURLConnection;->getOutputStream()Ljava/io/OutputStream;
+000c8  080c                     move-result-object
+000c9  106e 2d34 000c           invoke-virtual  # CALL Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+000cc  0b0c                     move-result-object
+000cd  106e 2d07 000b           invoke-virtual  # CALL Ljava/lang/String;->getBytes()[B
+000d0  0b0c                     move-result-object
+000d1  206e 2c3f 00b8           invoke-virtual  # CALL Ljava/io/OutputStream;->write([B)V
+000d4  106e 2c3e 0008           invoke-virtual  # CALL Ljava/io/OutputStream;->flush()V
+000d7  106e 2ee8 000d           invoke-virtual  # CALL Ljavax/net/ssl/HttpsURLConnection;->getResponseCode()I
+000da  0b0a                     move-result
+000db  0c13 00c8                const/16
+000dd  cb33 0067                if-ne
+000df  106e 2ee6 000d           invoke-virtual  # CALL Ljavax/net/ssl/HttpsURLConnection;->getInputStream()Ljava/io/InputStream;
+000e2  0b0c                     move-result-object
+000e3  106e 2ee3 000d           invoke-virtual  # CALL Ljavax/net/ssl/HttpsURLConnection;->getContentEncoding()Ljava/lang/String;
+000e6  0c0c                     move-result-object
+000e7  0c38 0013                if-eqz
+000e9  206e 2d01 001c           invoke-virtual  # CALL Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+000ec  0c0a                     move-result
+000ed  0c38 000d                if-eqz
+000ef  0c22 06fb                new-instance  # TYPE Ljava/util/zip/GZIPInputStream;
+000f1  0e22 0635                new-instance  # TYPE Ljava/io/BufferedInputStream;
+000f3  2070 2bea 00be           invoke-direct  # CALL Ljava/io/BufferedInputStream;-><init>(Ljava/io/InputStream;)V
+000f6  2070 2ec0 00ec           invoke-direct  # CALL Ljava/util/zip/GZIPInputStream;-><init>(Ljava/io/InputStream;)V
+000f9  cb07                     op_07
+000fa  0c22 063a                new-instance  # TYPE Ljava/io/ByteArrayOutputStream;
+000fc  1070 2bfd 000c           invoke-direct  # CALL Ljava/io/ByteArrayOutputStream;-><init>()V
+000ff  0e13 0400                const/16
+00101  ee23 0720                new-array  # TYPE [B
+00103  206e 2c38 00eb           invoke-virtual  # CALL Ljava/io/InputStream;->read([B)I
+00106  0f0a                     move-result
+00107  f712                     const/4
+00108  7f32 0006                if-eq
+0010a  406e 2c01 f9ec           invoke-virtual  # CALL Ljava/io/ByteArrayOutputStream;->write([B,I,I)V
+0010d  f628                     goto
+0010e  0754 043a                iget-object  # FIELD La/a/a/i/g$c;->d:La/a/a/i/g;
+00110  0e22 0683                new-instance  # TYPE Ljava/lang/String;
+00112  106e 2bff 000c           invoke-virtual  # CALL Ljava/io/ByteArrayOutputStream;->toByteArray()[B
+00115  0f0c                     move-result-object
+00116  091a 2824                const-string  # STR "utf-8"
+00118  3070 2cfb 09fe           invoke-direct  # CALL Ljava/lang/String;-><init>([B,Ljava/lang/String;)V
+0011b  7e5b 0444                iput-object  # FIELD La/a/a/i/g;->c:Ljava/lang/String;
+0011d  0755 0439                iget-boolean  # FIELD La/a/a/i/g$c;->c:Z
+0011f  0738 000a                if-eqz
+00121  0754 043a                iget-object  # FIELD La/a/a/i/g$c;->d:La/a/a/i/g;
+00123  106e 2bff 000c           invoke-virtual  # CALL Ljava/io/ByteArrayOutputStream;->toByteArray()[B
+00126  090c                     move-result-object
+00127  795b 0446                iput-object  # FIELD La/a/a/i/g;->e:[B
+00129  0754 043a                iget-object  # FIELD La/a/a/i/g$c;->d:La/a/a/i/g;
+0012b  206e 0677 00a7           invoke-virtual  # CALL La/a/a/i/g;->a(Z)V
+0012e  a701                     op_01
+0012f  1828                     goto
+00130  000d                     op_0d
+00131  0029 004a                goto/16
+00133  0c12                     const/4
+00134  0029 004f                goto/16
+00136  0c12                     const/4
+00137  0029 0070                goto/16
+00139  000d                     op_0d
+0013a  8707                     op_07
+0013b  d807                     op_07
+0013c  3d28                     goto
+0013d  8707                     op_07
+0013e  d807                     op_07
+0013f  4128                     goto
+00140  8707                     op_07
+00141  d807                     op_07
+00142  0029 0062                goto/16
+00144  0712                     const/4
+00145  0b12                     const/4
+00146  0c12                     const/4
+00147  0d38 0005                if-eqz
+00149  106e 2ee2 000d           invoke-virtual  # CALL Ljavax/net/ssl/HttpsURLConnection;->disconnect()V
+0014c  0838 0009                if-eqz
+0014e  106e 2c3d 0008           invoke-virtual  # CALL Ljava/io/OutputStream;->close()V
+00151  0428                     goto
+00152  2071 1c59 0045           invoke-static  # CALL Landroid/util/Log;->d(Ljava/lang/String;,Ljava/lang/String;)I
+00155  0b38 0009                if-eqz
+00157  106e 2c37 000b           invoke-virtual  # CALL Ljava/io/InputStream;->close()V
+0015a  0428                     goto
+0015b  2071 1c59 0035           invoke-static  # CALL Landroid/util/Log;->d(Ljava/lang/String;,Ljava/lang/String;)I
+0015e  0c38 006f                if-eqz
+00160  106e 2bfe 000c           invoke-virtual  # CALL Ljava/io/ByteArrayOutputStream;->close()V
+00163  0029 006a                goto/16
+00165  000d                     op_0d
+00166  8707                     op_07
+00167  d807                     op_07
+00168  1028                     goto
+00169  8707                     op_07
+0016a  d807                     op_07
+0016b  1428                     goto
+0016c  8707                     op_07
+0016d  d807                     op_07
+0016e  3528                     goto
+0016f  000d                     op_0d
+00170  d807                     op_07
+00171  0628                     goto
+00172  d807                     op_07
+00173  0b28                     goto
+00174  d807                     op_07
+00175  2d28                     goto
+00176  000d                     op_0d
+00177  0712                     const/4
+00178  0b12                     const/4
+00179  8d07                     op_07
+0017a  7807                     op_07
+0017b  0712                     const/4
+0017c  0029 005e                goto/16
+0017e  0712                     const/4
+0017f  0b12                     const/4
+00180  8d07                     op_07
+00181  0c12                     const/4
+00182  7807                     op_07
+00183  071a 1288                const-string  # STR "NetworkCommunicationError!"
+00185  2071 1c59 0075           invoke-static  # CALL Landroid/util/Log;->d(Ljava/lang/String;,Ljava/lang/String;)I
+00188  0d38 0005                if-eqz
+0018a  106e 2ee2 000d           invoke-virtual  # CALL Ljavax/net/ssl/HttpsURLConnection;->disconnect()V
+0018d  0838 0009                if-eqz
+0018f  106e 2c3d 0008           invoke-virtual  # CALL Ljava/io/OutputStream;->close()V
+00192  0428                     goto
+00193  2071 1c59 0045           invoke-static  # CALL Landroid/util/Log;->d(Ljava/lang/String;,Ljava/lang/String;)I
+00196  0b38 0009                if-eqz
+00198  106e 2c37 000b           invoke-virtual  # CALL Ljava/io/InputStream;->close()V
+0019b  0428                     goto
+0019c  2071 1c59 0035           invoke-static  # CALL Landroid/util/Log;->d(Ljava/lang/String;,Ljava/lang/String;)I
+0019f  0c38 0030                if-eqz
+001a1  2428                     goto
+001a2  0712                     const/4
+001a3  0b12                     const/4
+001a4  8d07                     op_07
+001a5  0c12                     const/4
+001a6  7807                     op_07
+001a7  071a 1289                const-string  # STR "NetworkCommunicationException!"
+001a9  2071 1c59 0075           invoke-static  # CALL Landroid/util/Log;->d(Ljava/lang/String;,Ljava/lang/String;)I
+001ac  0d38 0005                if-eqz
+001ae  106e 2ee2 000d           invoke-virtual  # CALL Ljavax/net/ssl/HttpsURLConnection;->disconnect()V
+001b1  0838 0009                if-eqz
+001b3  106e 2c3d 0008           invoke-virtual  # CALL Ljava/io/OutputStream;->close()V
+001b6  0428                     goto
+001b7  2071 1c59 0045           invoke-static  # CALL Landroid/util/Log;->d(Ljava/lang/String;,Ljava/lang/String;)I
+001ba  0b38 0009                if-eqz
+001bc  106e 2c37 000b           invoke-virtual  # CALL Ljava/io/InputStream;->close()V
+001bf  0428                     goto
+001c0  2071 1c59 0035           invoke-static  # CALL Landroid/util/Log;->d(Ljava/lang/String;,Ljava/lang/String;)I
+001c3  0c38 000c                if-eqz
+001c5  106e 2bfe 000c           invoke-virtual  # CALL Ljava/io/ByteArrayOutputStream;->close()V
+001c8  0728                     goto
+001c9  0712                     const/4
+001ca  2071 1c59 0025           invoke-static  # CALL Landroid/util/Log;->d(Ljava/lang/String;,Ljava/lang/String;)I
+001cd  d807                     op_07
+001ce  0328                     goto
+001cf  d807                     op_07
+001d0  0712                     const/4
+001d1  0738 0003                if-eqz
+001d3  2828                     goto
+001d4  06d8 ff06                op_d8
+001d6  0029 fe44                goto/16
+001d8  000d                     op_0d
+001d9  c707                     op_07
+001da  0d38 0005                if-eqz
+001dc  106e 2ee2 000d           invoke-virtual  # CALL Ljavax/net/ssl/HttpsURLConnection;->disconnect()V
+001df  0838 0009                if-eqz
+001e1  106e 2c3d 0008           invoke-virtual  # CALL Ljava/io/OutputStream;->close()V
+001e4  0428                     goto
+001e5  2071 1c59 0045           invoke-static  # CALL Landroid/util/Log;->d(Ljava/lang/String;,Ljava/lang/String;)I
+001e8  0b38 0009                if-eqz
+001ea  106e 2c37 000b           invoke-virtual  # CALL Ljava/io/InputStream;->close()V
+001ed  0428                     goto
+001ee  2071 1c59 0035           invoke-static  # CALL Landroid/util/Log;->d(Ljava/lang/String;,Ljava/lang/String;)I
+001f1  0738 0009                if-eqz
+001f3  106e 2bfe 0007           invoke-virtual  # CALL Ljava/io/ByteArrayOutputStream;->close()V
+001f6  0428                     goto
+001f7  2071 1c59 0025           invoke-static  # CALL Landroid/util/Log;->d(Ljava/lang/String;,Ljava/lang/String;)I
+001fa  0027                     throw
+001fb  063c 0011                if-gtz
+001fd  0160 0449                sget  # FIELD La/a/a/i/g;->h:I
+001ff  a1b0                     op_b0
+00200  0167 0449                sput  # FIELD La/a/a/i/g;->h:I
+00202  0054 043a                iget-object  # FIELD La/a/a/i/g$c;->d:La/a/a/i/g;
+00204  0112                     const/4
+00205  015b 0444                iput-object  # FIELD La/a/a/i/g;->c:Ljava/lang/String;
+00207  0112                     const/4
+00208  206e 0677 0010           invoke-virtual  # CALL La/a/a/i/g;->a(Z)V
+0020b  0428                     goto
+0020c  0112                     const/4
+0020d  0167 0449                sput  # FIELD La/a/a/i/g;->h:I
+0020f  000e                     return-void

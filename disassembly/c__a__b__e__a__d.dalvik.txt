@@ -1,0 +1,125 @@
+### Lc/a/b/e/a/d;-><init>(Lc/a/b/e/a/b;)V  [access=0x10000, regs=3, ins=2, outs=2, code_off=0xf7ca0]
+00000  2070 27c5 0021           invoke-direct  # CALL Lc/a/b/e/a/f;-><init>(Lc/a/b/e/a/b;)V
+00003  0212                     const/4
+00004  125b 1b13                iput-object  # FIELD Lc/a/b/e/a/d;->f:[B
+00006  1252 1b1e                iget  # FIELD Lc/a/b/e/a/f;->b:I
+00008  2023 0720                new-array  # TYPE [B
+0000a  105b 1b12                iput-object  # FIELD Lc/a/b/e/a/d;->e:[B
+0000c  2223 0720                new-array  # TYPE [B
+0000e  125b 1b11                iput-object  # FIELD Lc/a/b/e/a/d;->d:[B
+00010  000e                     return-void
+
+### Lc/a/b/e/a/d;->a()V  [access=0x0, regs=4, ins=1, outs=5, code_off=0xf7cd4]
+00000  3054 1b1f                iget-object  # FIELD Lc/a/b/e/a/f;->c:[B
+00002  3154 1b11                iget-object  # FIELD Lc/a/b/e/a/d;->d:[B
+00004  3352 1b1e                iget  # FIELD Lc/a/b/e/a/f;->b:I
+00006  0212                     const/4
+00007  5371 2d45 2120           invoke-static  # CALL Ljava/lang/System;->arraycopy(Ljava/lang/Object;,I,Ljava/lang/Object;,I,I)V
+0000a  000e                     return-void
+
+### Lc/a/b/e/a/d;->a(Z,Ljava/lang/String;,[B,[B)V  [access=0x0, regs=7, ins=5, outs=4, code_off=0xf7cfc]
+00000  0538 0014                if-eqz
+00002  0638 0012                if-eqz
+00004  6021                     array-length
+00005  2152 1b1e                iget  # FIELD Lc/a/b/e/a/f;->b:I
+00007  1033 000d                if-ne
+00009  265b 1b1f                iput-object  # FIELD Lc/a/b/e/a/f;->c:[B
+0000b  106e 27b9 0002           invoke-virtual  # CALL Lc/a/b/e/a/d;->a()V
+0000e  2254 1b1d                iget-object  # FIELD Lc/a/b/e/a/f;->a:Lc/a/b/e/a/b;
+00010  406e 27ad 5432           invoke-virtual  # CALL Lc/a/b/e/a/b;->a(Z,Ljava/lang/String;,[B)V
+00013  000e                     return-void
+00014  0222 06b5                new-instance  # TYPE Ljava/security/InvalidKeyException;
+00016  031a 08de                const-string  # STR "Internal error"
+00018  2070 2dba 0032           invoke-direct  # CALL Ljava/security/InvalidKeyException;-><init>(Ljava/lang/String;)V
+0001b  0227                     throw
+
+### Lc/a/b/e/a/d;->a([B,I,I,[B,I)V  [access=0x0, regs=11, ins=6, outs=5, code_off=0xf7d44]
+00000  78b0                     op_b0
+00001  8735 002c                if-ge
+00003  0012                     const/4
+00004  0101                     op_01
+00005  5252 1b1e                iget  # FIELD Lc/a/b/e/a/f;->b:I
+00007  2135 0013                if-ge
+00009  5254 1b12                iget-object  # FIELD Lc/a/b/e/a/d;->e:[B
+0000b  0390 0701                int-add
+0000d  0348 0306                aget-byte
+0000f  5454 1b11                iget-object  # FIELD Lc/a/b/e/a/d;->d:[B
+00011  0448 0104                aget-byte
+00013  43b7                     op_b7
+00014  338d                     op_8d
+00015  034f 0102                aput-byte
+00017  01d8 0101                op_d8
+00019  ec28                     goto
+0001a  5154 1b1d                iget-object  # FIELD Lc/a/b/e/a/f;->a:Lc/a/b/e/a/b;
+0001c  5254 1b12                iget-object  # FIELD Lc/a/b/e/a/d;->e:[B
+0001e  5a6e 27ae 9021           invoke-virtual  # CALL Lc/a/b/e/a/b;->a([B,I,[B,I)V
+00021  5154 1b11                iget-object  # FIELD Lc/a/b/e/a/d;->d:[B
+00023  5252 1b1e                iget  # FIELD Lc/a/b/e/a/f;->b:I
+00025  5271 2d45 01a9           invoke-static  # CALL Ljava/lang/System;->arraycopy(Ljava/lang/Object;,I,Ljava/lang/Object;,I,I)V
+00028  5052 1b1e                iget  # FIELD Lc/a/b/e/a/f;->b:I
+0002a  07b0                     op_b0
+0002b  0ab0                     op_b0
+0002c  d528                     goto
+0002d  000e                     return-void
+
+### Lc/a/b/e/a/d;->b()V  [access=0x0, regs=4, ins=1, outs=5, code_off=0xf7db0]
+00000  3054 1b13                iget-object  # FIELD Lc/a/b/e/a/d;->f:[B
+00002  0039 0008                if-nez
+00004  3052 1b1e                iget  # FIELD Lc/a/b/e/a/f;->b:I
+00006  0023 0720                new-array  # TYPE [B
+00008  305b 1b13                iput-object  # FIELD Lc/a/b/e/a/d;->f:[B
+0000a  3054 1b11                iget-object  # FIELD Lc/a/b/e/a/d;->d:[B
+0000c  3154 1b13                iget-object  # FIELD Lc/a/b/e/a/d;->f:[B
+0000e  3352 1b1e                iget  # FIELD Lc/a/b/e/a/f;->b:I
+00010  0212                     const/4
+00011  5371 2d45 2120           invoke-static  # CALL Ljava/lang/System;->arraycopy(Ljava/lang/Object;,I,Ljava/lang/Object;,I,I)V
+00014  000e                     return-void
+
+### Lc/a/b/e/a/d;->b([B,I,I,[B,I)V  [access=0x0, regs=12, ins=6, outs=5, code_off=0xf7dec]
+00000  89b0                     op_b0
+00001  a733 0011                if-ne
+00003  b834 000f                if-lt
+00005  0091 0b08                int-sub
+00007  6152 1b1e                iget  # FIELD Lc/a/b/e/a/f;->b:I
+00009  1035 0009                if-ge
+0000b  106e 2f3c 0007           invoke-virtual  # CALL [B->clone()Ljava/lang/Object;
+0000e  000c                     move-result-object
+0000f  001f 0720                check-cast  # TYPE [B
+00011  0228                     goto
+00012  0012                     const/4
+00013  9835 0030                if-ge
+00015  6154 1b1d                iget-object  # FIELD Lc/a/b/e/a/f;->a:Lc/a/b/e/a/b;
+00017  6254 1b12                iget-object  # FIELD Lc/a/b/e/a/d;->e:[B
+00019  0312                     const/4
+0001a  536e 27b2 2871           invoke-virtual  # CALL Lc/a/b/e/a/b;->b([B,I,[B,I)V
+0001d  3101                     op_01
+0001e  6252 1b1e                iget  # FIELD Lc/a/b/e/a/f;->b:I
+00020  2135 0013                if-ge
+00022  0290 0b01                int-add
+00024  6454 1b12                iget-object  # FIELD Lc/a/b/e/a/d;->e:[B
+00026  0448 0104                aget-byte
+00028  6554 1b11                iget-object  # FIELD Lc/a/b/e/a/d;->d:[B
+0002a  0548 0105                aget-byte
+0002c  54b7                     op_b7
+0002d  448d                     op_8d
+0002e  044f 020a                aput-byte
+00030  01d8 0101                op_d8
+00032  ec28                     goto
+00033  6154 1b11                iget-object  # FIELD Lc/a/b/e/a/d;->d:[B
+00035  0039 0006                if-nez
+00037  5271 2d45 3187           invoke-static  # CALL Ljava/lang/System;->arraycopy(Ljava/lang/Object;,I,Ljava/lang/Object;,I,I)V
+0003a  0428                     goto
+0003b  5271 2d45 3180           invoke-static  # CALL Ljava/lang/System;->arraycopy(Ljava/lang/Object;,I,Ljava/lang/Object;,I,I)V
+0003e  6152 1b1e                iget  # FIELD Lc/a/b/e/a/f;->b:I
+00040  18b0                     op_b0
+00041  1bb0                     op_b0
+00042  d128                     goto
+00043  000e                     return-void
+
+### Lc/a/b/e/a/d;->c()V  [access=0x0, regs=4, ins=1, outs=5, code_off=0xf7e84]
+00000  3054 1b13                iget-object  # FIELD Lc/a/b/e/a/d;->f:[B
+00002  3154 1b11                iget-object  # FIELD Lc/a/b/e/a/d;->d:[B
+00004  3352 1b1e                iget  # FIELD Lc/a/b/e/a/f;->b:I
+00006  0212                     const/4
+00007  5371 2d45 2120           invoke-static  # CALL Ljava/lang/System;->arraycopy(Ljava/lang/Object;,I,Ljava/lang/Object;,I,I)V
+0000a  000e                     return-void

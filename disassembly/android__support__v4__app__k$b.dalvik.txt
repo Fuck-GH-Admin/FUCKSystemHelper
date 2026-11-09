@@ -1,0 +1,14 @@
+### Landroid/support/v4/app/k$b;-><init>(Landroid/support/v4/app/k;,Landroid/view/animation/Animation$AnimationListener;,Landroid/view/ViewGroup;,Landroid/support/v4/app/e;)V  [access=0x10000, regs=5, ins=5, outs=2, code_off=0xa6a50]
+00000  015b 0d08                iput-object  # FIELD Landroid/support/v4/app/k$b;->d:Landroid/support/v4/app/k;
+00002  035b 0d06                iput-object  # FIELD Landroid/support/v4/app/k$b;->b:Landroid/view/ViewGroup;
+00004  045b 0d07                iput-object  # FIELD Landroid/support/v4/app/k$b;->c:Landroid/support/v4/app/e;
+00006  2070 0f31 0020           invoke-direct  # CALL Landroid/support/v4/app/k$f;-><init>(Landroid/view/animation/Animation$AnimationListener;)V
+00009  000e                     return-void
+
+### Landroid/support/v4/app/k$b;->onAnimationEnd(Landroid/view/animation/Animation;)V  [access=0x1, regs=3, ins=2, outs=2, code_off=0xa6a74]
+00000  206f 0f32 0021           invoke-super  # CALL Landroid/support/v4/app/k$f;->onAnimationEnd(Landroid/view/animation/Animation;)V
+00003  1254 0d06                iget-object  # FIELD Landroid/support/v4/app/k$b;->b:Landroid/view/ViewGroup;
+00005  0022 0286                new-instance  # TYPE Landroid/support/v4/app/k$b$a;
+00007  2070 0f25 0010           invoke-direct  # CALL Landroid/support/v4/app/k$b$a;-><init>(Landroid/support/v4/app/k$b;)V
+0000a  206e 1e28 0002           invoke-virtual  # CALL Landroid/view/ViewGroup;->post(Ljava/lang/Runnable;)Z
+0000d  000e                     return-void

@@ -1,0 +1,177 @@
+### Lb/b/c/f/h$d;-><init>(Lb/b/c/f/h;)V  [access=0x10000, regs=3, ins=2, outs=1, code_off=0xba5d4]
+00000  125b 13cc                iput-object  # FIELD Lb/b/c/f/h$d;->e:Lb/b/c/f/h;
+00002  1070 2ce0 0001           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00005  0012                     const/4
+00006  105c 13cb                iput-boolean  # FIELD Lb/b/c/f/h$d;->d:Z
+00008  106e 247e 0002           invoke-virtual  # CALL Lb/b/c/f/h;->c()I
+0000b  020a                     move-result
+0000c  02d8 ff02                op_d8
+0000e  1259 13c9                iput  # FIELD Lb/b/c/f/h$d;->b:I
+00010  f212                     const/4
+00011  1259 13ca                iput  # FIELD Lb/b/c/f/h$d;->c:I
+00013  000e                     return-void
+
+### Lb/b/c/f/h$d;->equals(Ljava/lang/Object;)Z  [access=0x1, regs=6, ins=2, outs=3, code_off=0xba364]
+00000  4055 13cb                iget-boolean  # FIELD Lb/b/c/f/h$d;->d:Z
+00002  0038 0031                if-eqz
+00004  5020 06dc                instance-of  # TYPE Ljava/util/Map$Entry;
+00006  0112                     const/4
+00007  0039 0003                if-nez
+00009  010f                     return
+0000a  051f 06dc                check-cast  # TYPE Ljava/util/Map$Entry;
+0000c  1072 2e64 0005           invoke-interface  # CALL Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+0000f  000c                     move-result-object
+00010  4254 13cc                iget-object  # FIELD Lb/b/c/f/h$d;->e:Lb/b/c/f/h;
+00012  4352 13ca                iget  # FIELD Lb/b/c/f/h$d;->c:I
+00014  306e 2472 0132           invoke-virtual  # CALL Lb/b/c/f/h;->a(I,I)Ljava/lang/Object;
+00017  020c                     move-result-object
+00018  2071 2410 0020           invoke-static  # CALL Lb/b/c/f/c;->a(Ljava/lang/Object;,Ljava/lang/Object;)Z
+0001b  000a                     move-result
+0001c  1212                     const/4
+0001d  0038 0015                if-eqz
+0001f  1072 2e65 0005           invoke-interface  # CALL Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+00022  050c                     move-result-object
+00023  4054 13cc                iget-object  # FIELD Lb/b/c/f/h$d;->e:Lb/b/c/f/h;
+00025  4452 13ca                iget  # FIELD Lb/b/c/f/h$d;->c:I
+00027  306e 2472 0240           invoke-virtual  # CALL Lb/b/c/f/h;->a(I,I)Ljava/lang/Object;
+0002a  040c                     move-result-object
+0002b  2071 2410 0045           invoke-static  # CALL Lb/b/c/f/c;->a(Ljava/lang/Object;,Ljava/lang/Object;)Z
+0002e  040a                     move-result
+0002f  0438 0003                if-eqz
+00031  2101                     op_01
+00032  010f                     return
+00033  0422 066a                new-instance  # TYPE Ljava/lang/IllegalStateException;
+00035  051a 14e8                const-string  # STR "This container does not support retaining Map.Entry objects"
+00037  2070 2ca3 0054           invoke-direct  # CALL Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+0003a  0427                     throw
+
+### Lb/b/c/f/h$d;->getKey()Ljava/lang/Object;  [access=0x1, regs=3, ins=1, outs=3, code_off=0xba480]
+00000  2055 13cb                iget-boolean  # FIELD Lb/b/c/f/h$d;->d:Z
+00002  0038 000c                if-eqz
+00004  2054 13cc                iget-object  # FIELD Lb/b/c/f/h$d;->e:Lb/b/c/f/h;
+00006  2252 13ca                iget  # FIELD Lb/b/c/f/h$d;->c:I
+00008  0112                     const/4
+00009  306e 2472 0120           invoke-virtual  # CALL Lb/b/c/f/h;->a(I,I)Ljava/lang/Object;
+0000c  020c                     move-result-object
+0000d  0211                     return-object
+0000e  0222 066a                new-instance  # TYPE Ljava/lang/IllegalStateException;
+00010  001a 14e8                const-string  # STR "This container does not support retaining Map.Entry objects"
+00012  2070 2ca3 0002           invoke-direct  # CALL Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+00015  0227                     throw
+
+### Lb/b/c/f/h$d;->getValue()Ljava/lang/Object;  [access=0x1, regs=3, ins=1, outs=3, code_off=0xba4bc]
+00000  2055 13cb                iget-boolean  # FIELD Lb/b/c/f/h$d;->d:Z
+00002  0038 000c                if-eqz
+00004  2054 13cc                iget-object  # FIELD Lb/b/c/f/h$d;->e:Lb/b/c/f/h;
+00006  2252 13ca                iget  # FIELD Lb/b/c/f/h$d;->c:I
+00008  1112                     const/4
+00009  306e 2472 0120           invoke-virtual  # CALL Lb/b/c/f/h;->a(I,I)Ljava/lang/Object;
+0000c  020c                     move-result-object
+0000d  0211                     return-object
+0000e  0222 066a                new-instance  # TYPE Ljava/lang/IllegalStateException;
+00010  001a 14e8                const-string  # STR "This container does not support retaining Map.Entry objects"
+00012  2070 2ca3 0002           invoke-direct  # CALL Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+00015  0227                     throw
+
+### Lb/b/c/f/h$d;->hasNext()Z  [access=0x1, regs=2, ins=1, outs=0, code_off=0xba3ec]
+00000  1052 13ca                iget  # FIELD Lb/b/c/f/h$d;->c:I
+00002  1152 13c9                iget  # FIELD Lb/b/c/f/h$d;->b:I
+00004  1035 0004                if-ge
+00006  1112                     const/4
+00007  0228                     goto
+00008  0112                     const/4
+00009  010f                     return
+
+### Lb/b/c/f/h$d;->hashCode()I  [access=0x1, regs=5, ins=1, outs=3, code_off=0xba410]
+00000  4055 13cb                iget-boolean  # FIELD Lb/b/c/f/h$d;->d:Z
+00002  0038 0026                if-eqz
+00004  4054 13cc                iget-object  # FIELD Lb/b/c/f/h$d;->e:Lb/b/c/f/h;
+00006  4152 13ca                iget  # FIELD Lb/b/c/f/h$d;->c:I
+00008  0212                     const/4
+00009  306e 2472 0210           invoke-virtual  # CALL Lb/b/c/f/h;->a(I,I)Ljava/lang/Object;
+0000c  000c                     move-result-object
+0000d  4154 13cc                iget-object  # FIELD Lb/b/c/f/h$d;->e:Lb/b/c/f/h;
+0000f  4452 13ca                iget  # FIELD Lb/b/c/f/h$d;->c:I
+00011  1312                     const/4
+00012  306e 2472 0341           invoke-virtual  # CALL Lb/b/c/f/h;->a(I,I)Ljava/lang/Object;
+00015  040c                     move-result-object
+00016  0039 0004                if-nez
+00018  2001                     op_01
+00019  0528                     goto
+0001a  106e 2ce4 0000           invoke-virtual  # CALL Ljava/lang/Object;->hashCode()I
+0001d  000a                     move-result
+0001e  0439 0003                if-nez
+00020  0528                     goto
+00021  106e 2ce4 0004           invoke-virtual  # CALL Ljava/lang/Object;->hashCode()I
+00024  020a                     move-result
+00025  0497 0200                int-xor
+00027  040f                     return
+00028  0422 066a                new-instance  # TYPE Ljava/lang/IllegalStateException;
+0002a  001a 14e8                const-string  # STR "This container does not support retaining Map.Entry objects"
+0002c  2070 2ca3 0004           invoke-direct  # CALL Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+0002f  0427                     throw
+
+### Lb/b/c/f/h$d;->next()Ljava/lang/Object;  [access=0x1041, regs=1, ins=1, outs=1, code_off=0xba4f8]
+00000  106e 245e 0000           invoke-virtual  # CALL Lb/b/c/f/h$d;->next()Ljava/util/Map$Entry;
+00003  0011                     return-object
+
+### Lb/b/c/f/h$d;->next()Ljava/util/Map$Entry;  [access=0x1, regs=3, ins=1, outs=1, code_off=0xba598]
+00000  106e 245b 0002           invoke-virtual  # CALL Lb/b/c/f/h$d;->hasNext()Z
+00003  000a                     move-result
+00004  0038 000b                if-eqz
+00006  2052 13ca                iget  # FIELD Lb/b/c/f/h$d;->c:I
+00008  1112                     const/4
+00009  10b0                     op_b0
+0000a  2059 13ca                iput  # FIELD Lb/b/c/f/h$d;->c:I
+0000c  215c 13cb                iput-boolean  # FIELD Lb/b/c/f/h$d;->d:Z
+0000e  0211                     return-object
+0000f  0222 06de                new-instance  # TYPE Ljava/util/NoSuchElementException;
+00011  1070 2e70 0002           invoke-direct  # CALL Ljava/util/NoSuchElementException;-><init>()V
+00014  0227                     throw
+
+### Lb/b/c/f/h$d;->remove()V  [access=0x1, regs=3, ins=1, outs=2, code_off=0xba60c]
+00000  2055 13cb                iget-boolean  # FIELD Lb/b/c/f/h$d;->d:Z
+00002  0038 0019                if-eqz
+00004  2054 13cc                iget-object  # FIELD Lb/b/c/f/h$d;->e:Lb/b/c/f/h;
+00006  2152 13ca                iget  # FIELD Lb/b/c/f/h$d;->c:I
+00008  206e 2475 0010           invoke-virtual  # CALL Lb/b/c/f/h;->a(I)V
+0000b  2052 13ca                iget  # FIELD Lb/b/c/f/h$d;->c:I
+0000d  00d8 ff00                op_d8
+0000f  2059 13ca                iput  # FIELD Lb/b/c/f/h$d;->c:I
+00011  2052 13c9                iget  # FIELD Lb/b/c/f/h$d;->b:I
+00013  00d8 ff00                op_d8
+00015  2059 13c9                iput  # FIELD Lb/b/c/f/h$d;->b:I
+00017  0012                     const/4
+00018  205c 13cb                iput-boolean  # FIELD Lb/b/c/f/h$d;->d:Z
+0001a  000e                     return-void
+0001b  0222 066a                new-instance  # TYPE Ljava/lang/IllegalStateException;
+0001d  1070 2ca2 0002           invoke-direct  # CALL Ljava/lang/IllegalStateException;-><init>()V
+00020  0227                     throw
+
+### Lb/b/c/f/h$d;->setValue(Ljava/lang/Object;)Ljava/lang/Object;  [access=0x1, regs=3, ins=2, outs=3, code_off=0xba510]
+00000  1055 13cb                iget-boolean  # FIELD Lb/b/c/f/h$d;->d:Z
+00002  0038 000b                if-eqz
+00004  1054 13cc                iget-object  # FIELD Lb/b/c/f/h$d;->e:Lb/b/c/f/h;
+00006  1152 13ca                iget  # FIELD Lb/b/c/f/h$d;->c:I
+00008  306e 2473 0210           invoke-virtual  # CALL Lb/b/c/f/h;->a(I,Ljava/lang/Object;)Ljava/lang/Object;
+0000b  010c                     move-result-object
+0000c  0111                     return-object
+0000d  0122 066a                new-instance  # TYPE Ljava/lang/IllegalStateException;
+0000f  021a 14e8                const-string  # STR "This container does not support retaining Map.Entry objects"
+00011  2070 2ca3 0021           invoke-direct  # CALL Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+00014  0127                     throw
+
+### Lb/b/c/f/h$d;->toString()Ljava/lang/String;  [access=0x1, regs=3, ins=1, outs=2, code_off=0xba54c]
+00000  0022 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00002  1070 2d35 0000           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00005  106e 2459 0002           invoke-virtual  # CALL Lb/b/c/f/h$d;->getKey()Ljava/lang/Object;
+00008  010c                     move-result-object
+00009  206e 2d3e 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+0000c  011a 0293                const-string  # STR "="
+0000e  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00011  106e 245a 0002           invoke-virtual  # CALL Lb/b/c/f/h$d;->getValue()Ljava/lang/Object;
+00014  020c                     move-result-object
+00015  206e 2d3e 0020           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+00018  106e 2d44 0000           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0001b  020c                     move-result-object
+0001c  0211                     return-object

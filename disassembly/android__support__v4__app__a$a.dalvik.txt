@@ -1,0 +1,34 @@
+### Landroid/support/v4/app/a$a;-><init>([Ljava/lang/String;,Landroid/app/Activity;,I)V  [access=0x10000, regs=4, ins=4, outs=1, code_off=0xa40f4]
+00000  015b 0c7d                iput-object  # FIELD Landroid/support/v4/app/a$a;->b:[Ljava/lang/String;
+00002  025b 0c7e                iput-object  # FIELD Landroid/support/v4/app/a$a;->c:Landroid/app/Activity;
+00004  0359 0c7f                iput  # FIELD Landroid/support/v4/app/a$a;->d:I
+00006  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00009  000e                     return-void
+
+### Landroid/support/v4/app/a$a;->run()V  [access=0x1, regs=7, ins=1, outs=4, code_off=0xa4118]
+00000  6054 0c7d                iget-object  # FIELD Landroid/support/v4/app/a$a;->b:[Ljava/lang/String;
+00002  0021                     array-length
+00003  0023 0724                new-array  # TYPE [I
+00005  6154 0c7e                iget-object  # FIELD Landroid/support/v4/app/a$a;->c:Landroid/app/Activity;
+00007  106e 0702 0001           invoke-virtual  # CALL Landroid/app/Activity;->getPackageManager()Landroid/content/pm/PackageManager;
+0000a  010c                     move-result-object
+0000b  6254 0c7e                iget-object  # FIELD Landroid/support/v4/app/a$a;->c:Landroid/app/Activity;
+0000d  106e 0703 0002           invoke-virtual  # CALL Landroid/app/Activity;->getPackageName()Ljava/lang/String;
+00010  020c                     move-result-object
+00011  6354 0c7d                iget-object  # FIELD Landroid/support/v4/app/a$a;->b:[Ljava/lang/String;
+00013  3321                     array-length
+00014  0412                     const/4
+00015  3435 000f                if-ge
+00017  6554 0c7d                iget-object  # FIELD Landroid/support/v4/app/a$a;->b:[Ljava/lang/String;
+00019  0546 0405                aget-object
+0001b  306e 0899 0251           invoke-virtual  # CALL Landroid/content/pm/PackageManager;->checkPermission(Ljava/lang/String;,Ljava/lang/String;)I
+0001e  050a                     move-result
+0001f  054b 0400                aput
+00021  04d8 0104                op_d8
+00023  f228                     goto
+00024  6154 0c7e                iget-object  # FIELD Landroid/support/v4/app/a$a;->c:Landroid/app/Activity;
+00026  011f 026b                check-cast  # TYPE Landroid/support/v4/app/a$b;
+00028  6252 0c7f                iget  # FIELD Landroid/support/v4/app/a$a;->d:I
+0002a  6654 0c7d                iget-object  # FIELD Landroid/support/v4/app/a$a;->b:[Ljava/lang/String;
+0002c  4072 0e06 0621           invoke-interface  # CALL Landroid/support/v4/app/a$b;->onRequestPermissionsResult(I,[Ljava/lang/String;,[I)V
+0002f  000e                     return-void

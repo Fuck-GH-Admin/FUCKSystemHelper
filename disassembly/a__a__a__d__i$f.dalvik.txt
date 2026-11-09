@@ -1,0 +1,27 @@
+### La/a/a/d/i$f;-><init>(La/a/a/d/i;)V  [access=0x10001, regs=2, ins=2, outs=1, code_off=0x5d17c]
+00000  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  000e                     return-void
+
+### La/a/a/d/i$f;->a(D,D,D,D)D  [access=0x1, regs=9, ins=9, outs=5, code_off=0x5d118]
+00000  566e 02bd 5430           invoke-virtual  # CALL La/a/a/d/i$f;->a(D,D)[D
+00003  000c                     move-result-object
+00004  0312                     const/4
+00005  0345 0300                aget-wide
+00007  37cc                     op_cc
+00008  2071 2cbd 0087           invoke-static  # CALL Ljava/lang/Math;->abs(D)D
+0000b  030b                     move-result-wide
+0000c  1512                     const/4
+0000d  0545 0500                aget-wide
+0000f  0719 4000                const-wide/high16
+00011  75cd                     op_cd
+00012  002f 0503                op_2f
+00014  003d 0003                if-lez
+00016  31cb                     op_cb
+00017  0110                     return-wide
+
+### La/a/a/d/i$f;->a(D,D)[D  [access=0x1, regs=5, ins=5, outs=5, code_off=0x5d158]
+00000  0071 01e6 0000           invoke-static  # CALL La/a/a/c/a;->d()La/a/a/c/a;
+00003  000c                     move-result-object
+00004  546e 01e2 3210           invoke-virtual  # CALL La/a/a/c/a;->a(D,D)[D
+00007  000c                     move-result-object
+00008  0011                     return-object

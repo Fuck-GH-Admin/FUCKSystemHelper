@@ -1,0 +1,289 @@
+### Lc/d/a/b/a;->a(Landroid/content/Context;,J)V  [access=0x9, regs=6, ins=3, outs=5, code_off=0x111ccc]
+00000  0022 0176                new-instance  # TYPE Landroid/content/Intent;
+00002  011c 061b                const-class  # TYPE Lcom/mobiletools/systemhelper/control/OnBootReceiver;
+00004  3070 086b 0130           invoke-direct  # CALL Landroid/content/Intent;-><init>(Landroid/content/Context;,Ljava/lang/Class;)V
+00007  0112                     const/4
+00008  0215 0c00                const/high16
+0000a  4071 0764 2013           invoke-static  # CALL Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;,I,Landroid/content/Intent;,I)Landroid/app/PendingIntent;
+0000d  000c                     move-result-object
+0000e  011a 18f0                const-string  # STR "alarm"
+00010  206e 084c 0013           invoke-virtual  # CALL Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+00013  030c                     move-result-object
+00014  031f 0122                check-cast  # TYPE Landroid/app/AlarmManager;
+00016  0071 0b09 0000           invoke-static  # CALL Landroid/os/SystemClock;->elapsedRealtime()J
+00019  010b                     move-result-wide
+0001a  41bb                     op_bb
+0001b  2412                     const/4
+0001c  506e 0735 2143           invoke-virtual  # CALL Landroid/app/AlarmManager;->setExactAndAllowWhileIdle(I,J,Landroid/app/PendingIntent;)V
+0001f  000e                     return-void
+
+### Lc/d/a/b/a;->a(Landroid/content/Context;,J,J)V  [access=0x9, regs=12, ins=5, outs=5, code_off=0x111b44]
+00000  001a 0406                const-string  # STR "AppInfoAlarmAfter--->"
+00002  011a 033e                const-string  # STR "AlarmHelper"
+00004  2071 2987 0001           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+00007  0222 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00009  1070 2d35 0002           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0000c  031a 0803                const-string  # STR "GlobalSetting.count_app = "
+0000e  206e 2d3f 0032           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00011  0360 1bc1                sget  # FIELD Lc/d/a/b/d;->q:I
+00013  206e 2d3b 0032           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+00016  106e 2d44 0002           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00019  020c                     move-result-object
+0001a  2071 2987 0021           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+0001d  0260 1bc1                sget  # FIELD Lc/d/a/b/d;->q:I
+0001f  2312                     const/4
+00020  041a 18f0                const-string  # STR "alarm"
+00022  0515 0c00                const/high16
+00024  0612                     const/4
+00025  2071 2987 0001           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+00028  0239 004d                if-nez
+0002a  0022 0176                new-instance  # TYPE Landroid/content/Intent;
+0002c  021c 0616                const-class  # TYPE Lcom/mobiletools/systemhelper/control/AppInfoRegisterReceiver;
+0002e  3070 086b 0270           invoke-direct  # CALL Landroid/content/Intent;-><init>(Landroid/content/Context;,Ljava/lang/Class;)V
+00031  4071 0764 5067           invoke-static  # CALL Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;,I,Landroid/content/Intent;,I)Landroid/app/PendingIntent;
+00034  000c                     move-result-object
+00035  206e 084c 0047           invoke-virtual  # CALL Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+00038  070c                     move-result-object
+00039  071f 0122                check-cast  # TYPE Landroid/app/AlarmManager;
+0003b  0071 0b09 0000           invoke-static  # CALL Landroid/os/SystemClock;->elapsedRealtime()J
+0003e  040b                     move-result-wide
+0003f  84bb                     op_bb
+00040  a4bb                     op_bb
+00041  506e 0735 5437           invoke-virtual  # CALL Landroid/app/AlarmManager;->setExactAndAllowWhileIdle(I,J,Landroid/app/PendingIntent;)V
+00044  0722 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00046  1070 2d35 0007           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00049  0a1a 07fd                const-string  # STR "GlobalSetting.DEFAULT_RANDOM AppInfoAlarmAfter test: "
+0004b  206e 2d3f 00a7           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0004e  0a61 1bbd                sget-wide  # FIELD Lc/d/a/b/d;->m:J
+00050  306e 2d3c 0ba7           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+00053  106e 2d44 0007           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00056  070c                     move-result-object
+00057  2071 2987 0071           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+0005a  0722 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0005c  1070 2d35 0007           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0005f  0a1a 28e6                const-string  # STR "测试助手修改后的app info rand ： "
+00061  206e 2d3f 00a7           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00064  306e 2d3c 0987           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+00067  106e 2d44 0007           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0006a  070c                     move-result-object
+0006b  2071 2987 0071           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+0006e  0760 1bc1                sget  # FIELD Lc/d/a/b/d;->q:I
+00070  07d8 0107                op_d8
+00072  0767 1bc1                sput  # FIELD Lc/d/a/b/d;->q:I
+00074  4628                     goto
+00075  0822 0176                new-instance  # TYPE Landroid/content/Intent;
+00077  091c 0616                const-class  # TYPE Lcom/mobiletools/systemhelper/control/AppInfoRegisterReceiver;
+00079  3070 086b 0978           invoke-direct  # CALL Landroid/content/Intent;-><init>(Landroid/content/Context;,Ljava/lang/Class;)V
+0007c  4071 0764 5867           invoke-static  # CALL Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;,I,Landroid/content/Intent;,I)Landroid/app/PendingIntent;
+0007f  080c                     move-result-object
+00080  206e 084c 0047           invoke-virtual  # CALL Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+00083  070c                     move-result-object
+00084  071f 0122                check-cast  # TYPE Landroid/app/AlarmManager;
+00086  0071 0b09 0000           invoke-static  # CALL Landroid/os/SystemClock;->elapsedRealtime()J
+00089  040b                     move-result-wide
+0008a  a4bb                     op_bb
+0008b  586e 0735 5437           invoke-virtual  # CALL Landroid/app/AlarmManager;->setExactAndAllowWhileIdle(I,J,Landroid/app/PendingIntent;)V
+0008e  0722 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00090  1070 2d35 0007           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00093  081a 07fe                const-string  # STR "GlobalSetting.DEFAULT_RANDOM AppInfoAlarmAfter: "
+00095  206e 2d3f 0087           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00098  0861 1bbd                sget-wide  # FIELD Lc/d/a/b/d;->m:J
+0009a  306e 2d3c 0987           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+0009d  106e 2d44 0007           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+000a0  070c                     move-result-object
+000a1  2071 2987 0071           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+000a4  0722 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+000a6  1070 2d35 0007           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+000a9  081a 0405                const-string  # STR "AppInfoAlarmAfter  SystemClock.elapsedRealtime() + ms: "
+000ab  206e 2d3f 0087           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000ae  0861 1bbd                sget-wide  # FIELD Lc/d/a/b/d;->m:J
+000b0  306e 2d3c 0987           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+000b3  106e 2d44 0007           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+000b6  070c                     move-result-object
+000b7  2071 2987 0071           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+000ba  000e                     return-void
+
+### Lc/d/a/b/a;->b(Landroid/content/Context;,J)V  [access=0x9, regs=7, ins=3, outs=5, code_off=0x111d1c]
+00000  001a 033e                const-string  # STR "AlarmHelper"
+00002  011a 07f6                const-string  # STR "GetSignalInfoAlarmAfter====>"
+00004  2071 2987 0010           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+00007  0122 0176                new-instance  # TYPE Landroid/content/Intent;
+00009  021c 061a                const-class  # TYPE Lcom/mobiletools/systemhelper/control/GetSignalInfoReceiver;
+0000b  3070 086b 0241           invoke-direct  # CALL Landroid/content/Intent;-><init>(Landroid/content/Context;,Ljava/lang/Class;)V
+0000e  0222 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00010  1070 2d35 0002           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00013  031a 1fde                const-string  # STR "intent: "
+00015  206e 2d3f 0032           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00018  206e 2d3e 0012           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+0001b  106e 2d44 0002           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0001e  020c                     move-result-object
+0001f  2071 2987 0020           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+00022  0012                     const/4
+00023  0215 0c00                const/high16
+00025  4071 0764 2104           invoke-static  # CALL Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;,I,Landroid/content/Intent;,I)Landroid/app/PendingIntent;
+00028  000c                     move-result-object
+00029  011a 18f0                const-string  # STR "alarm"
+0002b  206e 084c 0014           invoke-virtual  # CALL Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+0002e  040c                     move-result-object
+0002f  041f 0122                check-cast  # TYPE Landroid/app/AlarmManager;
+00031  0071 0b09 0000           invoke-static  # CALL Landroid/os/SystemClock;->elapsedRealtime()J
+00034  010b                     move-result-wide
+00035  51bb                     op_bb
+00036  2512                     const/4
+00037  506e 0735 2154           invoke-virtual  # CALL Landroid/app/AlarmManager;->setExactAndAllowWhileIdle(I,J,Landroid/app/PendingIntent;)V
+0003a  000e                     return-void
+
+### Lc/d/a/b/a;->b(Landroid/content/Context;,J,J)V  [access=0x9, regs=12, ins=5, outs=5, code_off=0x111df4]
+00000  001a 033e                const-string  # STR "AlarmHelper"
+00002  011a 13ee                const-string  # STR "ScheduleAlarmAfter--->"
+00004  2071 2987 0010           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+00007  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00009  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0000c  021a 0802                const-string  # STR "GlobalSetting.count = "
+0000e  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00011  0260 1bc0                sget  # FIELD Lc/d/a/b/d;->p:I
+00013  206e 2d3b 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+00016  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00019  010c                     move-result-object
+0001a  2071 2987 0010           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+0001d  0160 1bc0                sget  # FIELD Lc/d/a/b/d;->p:I
+0001f  2212                     const/4
+00020  031a 18f0                const-string  # STR "alarm"
+00022  0415 0c00                const/high16
+00024  0512                     const/4
+00025  0139 004d                if-nez
+00027  0122 0176                new-instance  # TYPE Landroid/content/Intent;
+00029  061c 061d                const-class  # TYPE Lcom/mobiletools/systemhelper/control/ScheduleRegisterReceiver;
+0002b  3070 086b 0671           invoke-direct  # CALL Landroid/content/Intent;-><init>(Landroid/content/Context;,Ljava/lang/Class;)V
+0002e  4071 0764 4157           invoke-static  # CALL Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;,I,Landroid/content/Intent;,I)Landroid/app/PendingIntent;
+00031  010c                     move-result-object
+00032  206e 084c 0037           invoke-virtual  # CALL Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+00035  070c                     move-result-object
+00036  071f 0122                check-cast  # TYPE Landroid/app/AlarmManager;
+00038  0071 0b09 0000           invoke-static  # CALL Landroid/os/SystemClock;->elapsedRealtime()J
+0003b  030b                     move-result-wide
+0003c  83bb                     op_bb
+0003d  a3bb                     op_bb
+0003e  516e 0735 4327           invoke-virtual  # CALL Landroid/app/AlarmManager;->setExactAndAllowWhileIdle(I,J,Landroid/app/PendingIntent;)V
+00041  0722 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00043  1070 2d35 0007           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00046  0a1a 07ff                const-string  # STR "GlobalSetting.DEFAULT_RANDOM_SCHEGULE ScheduleAlarmAfter test: "
+00048  206e 2d3f 00a7           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0004b  0a61 1bbe                sget-wide  # FIELD Lc/d/a/b/d;->n:J
+0004d  306e 2d3c 0ba7           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+00050  106e 2d44 0007           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00053  070c                     move-result-object
+00054  2071 2987 0070           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+00057  0722 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00059  1070 2d35 0007           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0005c  0a1a 28e7                const-string  # STR "测试助手修改后的rand ： "
+0005e  206e 2d3f 00a7           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00061  306e 2d3c 0987           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+00064  106e 2d44 0007           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00067  070c                     move-result-object
+00068  2071 2987 0070           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+0006b  0760 1bc0                sget  # FIELD Lc/d/a/b/d;->p:I
+0006d  07d8 0107                op_d8
+0006f  0767 1bc0                sput  # FIELD Lc/d/a/b/d;->p:I
+00071  3028                     goto
+00072  0822 0176                new-instance  # TYPE Landroid/content/Intent;
+00074  091c 061d                const-class  # TYPE Lcom/mobiletools/systemhelper/control/ScheduleRegisterReceiver;
+00076  3070 086b 0978           invoke-direct  # CALL Landroid/content/Intent;-><init>(Landroid/content/Context;,Ljava/lang/Class;)V
+00079  4071 0764 4857           invoke-static  # CALL Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;,I,Landroid/content/Intent;,I)Landroid/app/PendingIntent;
+0007c  080c                     move-result-object
+0007d  206e 084c 0037           invoke-virtual  # CALL Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+00080  070c                     move-result-object
+00081  071f 0122                check-cast  # TYPE Landroid/app/AlarmManager;
+00083  0071 0b09 0000           invoke-static  # CALL Landroid/os/SystemClock;->elapsedRealtime()J
+00086  030b                     move-result-wide
+00087  a3bb                     op_bb
+00088  586e 0735 4327           invoke-virtual  # CALL Landroid/app/AlarmManager;->setExactAndAllowWhileIdle(I,J,Landroid/app/PendingIntent;)V
+0008b  0722 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0008d  1070 2d35 0007           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00090  081a 0800                const-string  # STR "GlobalSetting.DEFAULT_RANDOM_SCHEGULE ScheduleAlarmAfter: "
+00092  206e 2d3f 0087           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00095  0861 1bbe                sget-wide  # FIELD Lc/d/a/b/d;->n:J
+00097  306e 2d3c 0987           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+0009a  106e 2d44 0007           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0009d  070c                     move-result-object
+0009e  2071 2987 0070           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+000a1  000e                     return-void
+
+### Lc/d/a/b/a;->c(Landroid/content/Context;,J)V  [access=0x9, regs=6, ins=3, outs=5, code_off=0x111da4]
+00000  0022 0176                new-instance  # TYPE Landroid/content/Intent;
+00002  011c 061c                const-class  # TYPE Lcom/mobiletools/systemhelper/control/SIMStateReceiver;
+00004  3070 086b 0130           invoke-direct  # CALL Landroid/content/Intent;-><init>(Landroid/content/Context;,Ljava/lang/Class;)V
+00007  0112                     const/4
+00008  0215 0c00                const/high16
+0000a  4071 0764 2013           invoke-static  # CALL Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;,I,Landroid/content/Intent;,I)Landroid/app/PendingIntent;
+0000d  000c                     move-result-object
+0000e  011a 18f0                const-string  # STR "alarm"
+00010  206e 084c 0013           invoke-virtual  # CALL Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+00013  030c                     move-result-object
+00014  031f 0122                check-cast  # TYPE Landroid/app/AlarmManager;
+00016  0071 0b09 0000           invoke-static  # CALL Landroid/os/SystemClock;->elapsedRealtime()J
+00019  010b                     move-result-wide
+0001a  41bb                     op_bb
+0001b  2412                     const/4
+0001c  506e 0735 2143           invoke-virtual  # CALL Landroid/app/AlarmManager;->setExactAndAllowWhileIdle(I,J,Landroid/app/PendingIntent;)V
+0001f  000e                     return-void
+
+### Lc/d/a/b/a;->c(Landroid/content/Context;,J,J)V  [access=0x9, regs=12, ins=5, outs=5, code_off=0x111f48]
+00000  001a 033e                const-string  # STR "AlarmHelper"
+00002  011a 1414                const-string  # STR "SignalInfoAlarmAfter--->"
+00004  2071 2987 0010           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+00007  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00009  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0000c  021a 0804                const-string  # STR "GlobalSetting.count_sig = "
+0000e  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00011  0260 1bc2                sget  # FIELD Lc/d/a/b/d;->r:I
+00013  206e 2d3b 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+00016  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00019  010c                     move-result-object
+0001a  2071 2987 0010           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+0001d  0160 1bc2                sget  # FIELD Lc/d/a/b/d;->r:I
+0001f  2212                     const/4
+00020  031a 18f0                const-string  # STR "alarm"
+00022  0415 0c00                const/high16
+00024  0512                     const/4
+00025  0139 0037                if-nez
+00027  0122 0176                new-instance  # TYPE Landroid/content/Intent;
+00029  061c 061e                const-class  # TYPE Lcom/mobiletools/systemhelper/control/SignalInfoRegisterReceiver;
+0002b  3070 086b 0671           invoke-direct  # CALL Landroid/content/Intent;-><init>(Landroid/content/Context;,Ljava/lang/Class;)V
+0002e  4071 0764 4157           invoke-static  # CALL Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;,I,Landroid/content/Intent;,I)Landroid/app/PendingIntent;
+00031  010c                     move-result-object
+00032  206e 084c 0037           invoke-virtual  # CALL Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+00035  070c                     move-result-object
+00036  071f 0122                check-cast  # TYPE Landroid/app/AlarmManager;
+00038  0071 0b09 0000           invoke-static  # CALL Landroid/os/SystemClock;->elapsedRealtime()J
+0003b  030b                     move-result-wide
+0003c  83bb                     op_bb
+0003d  a3bb                     op_bb
+0003e  516e 0735 4327           invoke-virtual  # CALL Landroid/app/AlarmManager;->setExactAndAllowWhileIdle(I,J,Landroid/app/PendingIntent;)V
+00041  0722 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00043  1070 2d35 0007           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00046  0a1a 28e7                const-string  # STR "测试助手修改后的rand ： "
+00048  206e 2d3f 00a7           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0004b  306e 2d3c 0987           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+0004e  106e 2d44 0007           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00051  070c                     move-result-object
+00052  2071 2987 0070           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+00055  0760 1bc2                sget  # FIELD Lc/d/a/b/d;->r:I
+00057  07d8 0107                op_d8
+00059  0767 1bc2                sput  # FIELD Lc/d/a/b/d;->r:I
+0005b  1f28                     goto
+0005c  081a 0805                const-string  # STR "GlobalSetting.count_sig > 0"
+0005e  2071 2987 0080           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+00061  0822 0176                new-instance  # TYPE Landroid/content/Intent;
+00063  091c 061e                const-class  # TYPE Lcom/mobiletools/systemhelper/control/SignalInfoRegisterReceiver;
+00065  3070 086b 0978           invoke-direct  # CALL Landroid/content/Intent;-><init>(Landroid/content/Context;,Ljava/lang/Class;)V
+00068  4071 0764 4857           invoke-static  # CALL Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;,I,Landroid/content/Intent;,I)Landroid/app/PendingIntent;
+0006b  080c                     move-result-object
+0006c  206e 084c 0037           invoke-virtual  # CALL Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+0006f  070c                     move-result-object
+00070  071f 0122                check-cast  # TYPE Landroid/app/AlarmManager;
+00072  0071 0b09 0000           invoke-static  # CALL Landroid/os/SystemClock;->elapsedRealtime()J
+00075  000b                     move-result-wide
+00076  a0bb                     op_bb
+00077  586e 0735 1027           invoke-virtual  # CALL Landroid/app/AlarmManager;->setExactAndAllowWhileIdle(I,J,Landroid/app/PendingIntent;)V
+0007a  000e                     return-void

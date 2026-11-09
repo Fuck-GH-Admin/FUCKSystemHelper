@@ -1,0 +1,310 @@
+### Landroid/support/v4/widget/l;->a(Landroid/text/TextDirectionHeuristic;)I  [access=0xa, regs=3, ins=1, outs=0, code_off=0xc3aac]
+00000  0062 1243                sget-object  # FIELD Landroid/text/TextDirectionHeuristics;->FIRSTSTRONG_RTL:Landroid/text/TextDirectionHeuristic;
+00002  1112                     const/4
+00003  0233 0003                if-ne
+00005  010f                     return
+00006  0062 1242                sget-object  # FIELD Landroid/text/TextDirectionHeuristics;->FIRSTSTRONG_LTR:Landroid/text/TextDirectionHeuristic;
+00008  0233 0003                if-ne
+0000a  010f                     return
+0000b  0062 1241                sget-object  # FIELD Landroid/text/TextDirectionHeuristics;->ANYRTL_LTR:Landroid/text/TextDirectionHeuristic;
+0000d  0233 0004                if-ne
+0000f  2212                     const/4
+00010  020f                     return
+00011  0062 1245                sget-object  # FIELD Landroid/text/TextDirectionHeuristics;->LTR:Landroid/text/TextDirectionHeuristic;
+00013  0233 0004                if-ne
+00015  3212                     const/4
+00016  020f                     return
+00017  0062 1246                sget-object  # FIELD Landroid/text/TextDirectionHeuristics;->RTL:Landroid/text/TextDirectionHeuristic;
+00019  0233 0004                if-ne
+0001b  4212                     const/4
+0001c  020f                     return
+0001d  0062 1244                sget-object  # FIELD Landroid/text/TextDirectionHeuristics;->LOCALE:Landroid/text/TextDirectionHeuristic;
+0001f  0233 0004                if-ne
+00021  5212                     const/4
+00022  020f                     return
+00023  0062 1242                sget-object  # FIELD Landroid/text/TextDirectionHeuristics;->FIRSTSTRONG_LTR:Landroid/text/TextDirectionHeuristic;
+00025  0233 0004                if-ne
+00027  6212                     const/4
+00028  020f                     return
+00029  0062 1243                sget-object  # FIELD Landroid/text/TextDirectionHeuristics;->FIRSTSTRONG_RTL:Landroid/text/TextDirectionHeuristic;
+0002b  0233 0004                if-ne
+0002d  7212                     const/4
+0002e  020f                     return
+0002f  010f                     return
+
+### Landroid/support/v4/widget/l;->a(Landroid/widget/TextView;)I  [access=0x9, regs=2, ins=1, outs=1, code_off=0xc3a4c]
+00000  106e 2113 0001           invoke-virtual  # CALL Landroid/widget/TextView;->getPaddingTop()I
+00003  000a                     move-result
+00004  106e 2114 0001           invoke-virtual  # CALL Landroid/widget/TextView;->getPaint()Landroid/text/TextPaint;
+00007  010c                     move-result-object
+00008  106e 1c28 0001           invoke-virtual  # CALL Landroid/text/TextPaint;->getFontMetricsInt()Landroid/graphics/Paint$FontMetricsInt;
+0000b  010c                     move-result-object
+0000c  1152 0527                iget  # FIELD Landroid/graphics/Paint$FontMetricsInt;->top:I
+0000e  10b1                     op_b1
+0000f  000f                     return
+
+### Landroid/support/v4/widget/l;->a(Landroid/widget/TextView;,Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode$Callback;  [access=0x9, regs=4, ins=2, outs=3, code_off=0xc3a10]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0113 001a                const/16
+00004  1034 0011                if-lt
+00006  0113 001b                const/16
+00008  1036 000d                if-gt
+0000a  3020 02d1                instance-of  # TYPE Landroid/support/v4/widget/l$a;
+0000c  0038 0003                if-eqz
+0000e  0728                     goto
+0000f  0022 02d1                new-instance  # TYPE Landroid/support/v4/widget/l$a;
+00011  3070 118f 0230           invoke-direct  # CALL Landroid/support/v4/widget/l$a;-><init>(Landroid/view/ActionMode$Callback;,Landroid/widget/TextView;)V
+00014  0011                     return-object
+00015  0311                     return-object
+
+### Landroid/support/v4/widget/l;->a(Landroid/widget/TextView;,I)V  [access=0x9, regs=5, ins=2, outs=5, code_off=0xc3b1c]
+00000  1071 2484 0004           invoke-static  # CALL Lb/b/c/f/j;->a(I)I
+00003  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00005  0113 001c                const/16
+00007  1034 0006                if-lt
+00009  206e 2138 0043           invoke-virtual  # CALL Landroid/widget/TextView;->setFirstBaselineToTopHeight(I)V
+0000c  000e                     return-void
+0000d  106e 2114 0003           invoke-virtual  # CALL Landroid/widget/TextView;->getPaint()Landroid/text/TextPaint;
+00010  000c                     move-result-object
+00011  106e 1c28 0000           invoke-virtual  # CALL Landroid/text/TextPaint;->getFontMetricsInt()Landroid/graphics/Paint$FontMetricsInt;
+00014  000c                     move-result-object
+00015  0160 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00017  0213 0010                const/16
+00019  2134 000c                if-lt
+0001b  106e 2105 0003           invoke-virtual  # CALL Landroid/widget/TextView;->getIncludeFontPadding()Z
+0001e  010a                     move-result
+0001f  0138 0003                if-eqz
+00021  0428                     goto
+00022  0052 0524                iget  # FIELD Landroid/graphics/Paint$FontMetricsInt;->ascent:I
+00024  0328                     goto
+00025  0052 0527                iget  # FIELD Landroid/graphics/Paint$FontMetricsInt;->top:I
+00027  1071 2cbf 0000           invoke-static  # CALL Ljava/lang/Math;->abs(I)I
+0002a  010a                     move-result
+0002b  1437 0013                if-le
+0002d  007b                     op_7b
+0002e  04b1                     op_b1
+0002f  106e 2111 0003           invoke-virtual  # CALL Landroid/widget/TextView;->getPaddingLeft()I
+00032  000a                     move-result
+00033  106e 2112 0003           invoke-virtual  # CALL Landroid/widget/TextView;->getPaddingRight()I
+00036  010a                     move-result
+00037  106e 2110 0003           invoke-virtual  # CALL Landroid/widget/TextView;->getPaddingBottom()I
+0003a  020a                     move-result
+0003b  526e 2142 1403           invoke-virtual  # CALL Landroid/widget/TextView;->setPadding(I,I,I,I)V
+0003e  000e                     return-void
+
+### Landroid/support/v4/widget/l;->a(Landroid/widget/TextView;,Lb/b/c/e/a$a;)V  [access=0x9, regs=4, ins=2, outs=2, code_off=0xc3cbc]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0113 0012                const/16
+00004  1034 000d                if-lt
+00006  106e 23c1 0003           invoke-virtual  # CALL Lb/b/c/e/a$a;->c()Landroid/text/TextDirectionHeuristic;
+00009  000c                     move-result-object
+0000a  1071 119a 0000           invoke-static  # CALL Landroid/support/v4/widget/l;->a(Landroid/text/TextDirectionHeuristic;)I
+0000d  000a                     move-result
+0000e  206e 214a 0002           invoke-virtual  # CALL Landroid/widget/TextView;->setTextDirection(I)V
+00011  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00013  0113 0017                const/16
+00015  1035 002b                if-ge
+00017  106e 23c2 0003           invoke-virtual  # CALL Lb/b/c/e/a$a;->d()Landroid/text/TextPaint;
+0001a  000c                     move-result-object
+0001b  106e 1c2d 0000           invoke-virtual  # CALL Landroid/text/TextPaint;->getTextScaleX()F
+0001e  000a                     move-result
+0001f  106e 2114 0002           invoke-virtual  # CALL Landroid/widget/TextView;->getPaint()Landroid/text/TextPaint;
+00022  010c                     move-result-object
+00023  106e 23c2 0003           invoke-virtual  # CALL Lb/b/c/e/a$a;->d()Landroid/text/TextPaint;
+00026  030c                     move-result-object
+00027  206e 1c33 0031           invoke-virtual  # CALL Landroid/text/TextPaint;->set(Landroid/text/TextPaint;)V
+0002a  106e 2119 0002           invoke-virtual  # CALL Landroid/widget/TextView;->getTextScaleX()F
+0002d  030a                     move-result
+0002e  032d 0300                op_2d
+00030  0339 000c                if-nez
+00032  0315 4000                const/high16
+00034  03a9 0300                op_a9
+00036  0115 3f80                const/high16
+00038  13c6                     op_c6
+00039  206e 214b 0032           invoke-virtual  # CALL Landroid/widget/TextView;->setTextScaleX(F)V
+0003c  206e 214b 0002           invoke-virtual  # CALL Landroid/widget/TextView;->setTextScaleX(F)V
+0003f  1a28                     goto
+00040  106e 2114 0002           invoke-virtual  # CALL Landroid/widget/TextView;->getPaint()Landroid/text/TextPaint;
+00043  000c                     move-result-object
+00044  106e 23c2 0003           invoke-virtual  # CALL Lb/b/c/e/a$a;->d()Landroid/text/TextPaint;
+00047  010c                     move-result-object
+00048  206e 1c33 0010           invoke-virtual  # CALL Landroid/text/TextPaint;->set(Landroid/text/TextPaint;)V
+0004b  106e 23bf 0003           invoke-virtual  # CALL Lb/b/c/e/a$a;->a()I
+0004e  000a                     move-result
+0004f  206e 2132 0002           invoke-virtual  # CALL Landroid/widget/TextView;->setBreakStrategy(I)V
+00052  106e 23c0 0003           invoke-virtual  # CALL Lb/b/c/e/a$a;->b()I
+00055  030a                     move-result
+00056  206e 213a 0032           invoke-virtual  # CALL Landroid/widget/TextView;->setHyphenationFrequency(I)V
+00059  000e                     return-void
+
+### Landroid/support/v4/widget/l;->a(Landroid/widget/TextView;,Lb/b/c/e/a;)V  [access=0x9, regs=4, ins=2, outs=2, code_off=0xc3c60]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0113 001c                const/16
+00004  1034 000a                if-lt
+00006  106e 23c8 0003           invoke-virtual  # CALL Lb/b/c/e/a;->b()Landroid/text/PrecomputedText;
+00009  030c                     move-result-object
+0000a  206e 2146 0032           invoke-virtual  # CALL Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+0000d  1028                     goto
+0000e  1071 11a4 0002           invoke-static  # CALL Landroid/support/v4/widget/l;->d(Landroid/widget/TextView;)Lb/b/c/e/a$a;
+00011  000c                     move-result-object
+00012  106e 23c7 0003           invoke-virtual  # CALL Lb/b/c/e/a;->a()Lb/b/c/e/a$a;
+00015  010c                     move-result-object
+00016  206e 23c3 0010           invoke-virtual  # CALL Lb/b/c/e/a$a;->equals(Ljava/lang/Object;)Z
+00019  000a                     move-result
+0001a  0038 0004                if-eqz
+0001c  ee28                     goto
+0001d  000e                     return-void
+0001e  0222 0669                new-instance  # TYPE Ljava/lang/IllegalArgumentException;
+00020  031a 07fc                const-string  # STR "Given text can not be applied to TextView."
+00022  2070 2c9f 0032           invoke-direct  # CALL Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+00025  0227                     throw
+
+### Landroid/support/v4/widget/l;->b(Landroid/widget/TextView;)I  [access=0x9, regs=2, ins=1, outs=1, code_off=0xc3a7c]
+00000  106e 2110 0001           invoke-virtual  # CALL Landroid/widget/TextView;->getPaddingBottom()I
+00003  000a                     move-result
+00004  106e 2114 0001           invoke-virtual  # CALL Landroid/widget/TextView;->getPaint()Landroid/text/TextPaint;
+00007  010c                     move-result-object
+00008  106e 1c28 0001           invoke-virtual  # CALL Landroid/text/TextPaint;->getFontMetricsInt()Landroid/graphics/Paint$FontMetricsInt;
+0000b  010c                     move-result-object
+0000c  1152 0525                iget  # FIELD Landroid/graphics/Paint$FontMetricsInt;->bottom:I
+0000e  10b0                     op_b0
+0000f  000f                     return
+
+### Landroid/support/v4/widget/l;->b(Landroid/widget/TextView;,I)V  [access=0x9, regs=5, ins=2, outs=5, code_off=0xc3bac]
+00000  1071 2484 0004           invoke-static  # CALL Lb/b/c/f/j;->a(I)I
+00003  106e 2114 0003           invoke-virtual  # CALL Landroid/widget/TextView;->getPaint()Landroid/text/TextPaint;
+00006  000c                     move-result-object
+00007  106e 1c28 0000           invoke-virtual  # CALL Landroid/text/TextPaint;->getFontMetricsInt()Landroid/graphics/Paint$FontMetricsInt;
+0000a  000c                     move-result-object
+0000b  0160 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+0000d  0213 0010                const/16
+0000f  2134 000c                if-lt
+00011  106e 2105 0003           invoke-virtual  # CALL Landroid/widget/TextView;->getIncludeFontPadding()Z
+00014  010a                     move-result
+00015  0138 0003                if-eqz
+00017  0428                     goto
+00018  0052 0526                iget  # FIELD Landroid/graphics/Paint$FontMetricsInt;->descent:I
+0001a  0328                     goto
+0001b  0052 0525                iget  # FIELD Landroid/graphics/Paint$FontMetricsInt;->bottom:I
+0001d  1071 2cbf 0000           invoke-static  # CALL Ljava/lang/Math;->abs(I)I
+00020  010a                     move-result
+00021  1437 0012                if-le
+00023  04b1                     op_b1
+00024  106e 2111 0003           invoke-virtual  # CALL Landroid/widget/TextView;->getPaddingLeft()I
+00027  000a                     move-result
+00028  106e 2113 0003           invoke-virtual  # CALL Landroid/widget/TextView;->getPaddingTop()I
+0002b  010a                     move-result
+0002c  106e 2112 0003           invoke-virtual  # CALL Landroid/widget/TextView;->getPaddingRight()I
+0002f  020a                     move-result
+00030  546e 2142 2103           invoke-virtual  # CALL Landroid/widget/TextView;->setPadding(I,I,I,I)V
+00033  000e                     return-void
+
+### Landroid/support/v4/widget/l;->c(Landroid/widget/TextView;)Landroid/text/TextDirectionHeuristic;  [access=0xa, regs=5, ins=1, outs=2, code_off=0xc3914]
+00000  106e 211d 0004           invoke-virtual  # CALL Landroid/widget/TextView;->getTransformationMethod()Landroid/text/method/TransformationMethod;
+00003  000c                     move-result-object
+00004  0020 040a                instance-of  # TYPE Landroid/text/method/PasswordTransformationMethod;
+00006  0038 0005                if-eqz
+00008  0462 1245                sget-object  # FIELD Landroid/text/TextDirectionHeuristics;->LTR:Landroid/text/TextDirectionHeuristic;
+0000a  0411                     return-object
+0000b  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+0000d  0113 001c                const/16
+0000f  0212                     const/4
+00010  1312                     const/4
+00011  1034 002d                if-lt
+00013  106e 2106 0004           invoke-virtual  # CALL Landroid/widget/TextView;->getInputType()I
+00016  000a                     move-result
+00017  00dd 0f00                op_dd
+00019  3112                     const/4
+0001a  1033 0024                if-ne
+0001c  106e 2117 0004           invoke-virtual  # CALL Landroid/widget/TextView;->getTextLocale()Ljava/util/Locale;
+0001f  040c                     move-result-object
+00020  1071 0a1f 0004           invoke-static  # CALL Landroid/icu/text/DecimalFormatSymbols;->getInstance(Ljava/util/Locale;)Landroid/icu/text/DecimalFormatSymbols;
+00023  040c                     move-result-object
+00024  106e 0a1e 0004           invoke-virtual  # CALL Landroid/icu/text/DecimalFormatSymbols;->getDigitStrings()[Ljava/lang/String;
+00027  040c                     move-result-object
+00028  0446 0204                aget-object
+0002a  206e 2cff 0024           invoke-virtual  # CALL Ljava/lang/String;->codePointAt(I)I
+0002d  040a                     move-result
+0002e  1071 2c6c 0004           invoke-static  # CALL Ljava/lang/Character;->getDirectionality(I)B
+00031  040a                     move-result
+00032  3432 0009                if-eq
+00034  2012                     const/4
+00035  0433 0003                if-ne
+00037  0428                     goto
+00038  0462 1245                sget-object  # FIELD Landroid/text/TextDirectionHeuristics;->LTR:Landroid/text/TextDirectionHeuristic;
+0003a  0411                     return-object
+0003b  0462 1246                sget-object  # FIELD Landroid/text/TextDirectionHeuristics;->RTL:Landroid/text/TextDirectionHeuristic;
+0003d  0411                     return-object
+0003e  106e 2108 0004           invoke-virtual  # CALL Landroid/widget/TextView;->getLayoutDirection()I
+00041  000a                     move-result
+00042  3033 0003                if-ne
+00044  3201                     op_01
+00045  106e 2116 0004           invoke-virtual  # CALL Landroid/widget/TextView;->getTextDirection()I
+00048  040a                     move-result
+00049  042b 001d 0000           packed-switch
+0004c  0238 0017                if-eqz
+0004e  0462 1243                sget-object  # FIELD Landroid/text/TextDirectionHeuristics;->FIRSTSTRONG_RTL:Landroid/text/TextDirectionHeuristic;
+00050  1528                     goto
+00051  0462 1243                sget-object  # FIELD Landroid/text/TextDirectionHeuristics;->FIRSTSTRONG_RTL:Landroid/text/TextDirectionHeuristic;
+00053  0411                     return-object
+00054  0462 1242                sget-object  # FIELD Landroid/text/TextDirectionHeuristics;->FIRSTSTRONG_LTR:Landroid/text/TextDirectionHeuristic;
+00056  0411                     return-object
+00057  0462 1244                sget-object  # FIELD Landroid/text/TextDirectionHeuristics;->LOCALE:Landroid/text/TextDirectionHeuristic;
+00059  0411                     return-object
+0005a  0462 1246                sget-object  # FIELD Landroid/text/TextDirectionHeuristics;->RTL:Landroid/text/TextDirectionHeuristic;
+0005c  0411                     return-object
+0005d  0462 1245                sget-object  # FIELD Landroid/text/TextDirectionHeuristics;->LTR:Landroid/text/TextDirectionHeuristic;
+0005f  0411                     return-object
+00060  0462 1241                sget-object  # FIELD Landroid/text/TextDirectionHeuristics;->ANYRTL_LTR:Landroid/text/TextDirectionHeuristic;
+00062  0411                     return-object
+00063  0462 1242                sget-object  # FIELD Landroid/text/TextDirectionHeuristics;->FIRSTSTRONG_LTR:Landroid/text/TextDirectionHeuristic;
+00065  0411                     return-object
+00066  0100 0006 0002 0000 0017 0000 0014 0000 0011 0000 000e 0000 000b 0000 0008 0000 ... <payload; units=16>
+
+### Landroid/support/v4/widget/l;->c(Landroid/widget/TextView;,I)V  [access=0x9, regs=4, ins=2, outs=3, code_off=0xc3c24]
+00000  1071 2484 0003           invoke-static  # CALL Lb/b/c/f/j;->a(I)I
+00003  106e 2114 0002           invoke-virtual  # CALL Landroid/widget/TextView;->getPaint()Landroid/text/TextPaint;
+00006  000c                     move-result-object
+00007  0112                     const/4
+00008  206e 1c27 0010           invoke-virtual  # CALL Landroid/text/TextPaint;->getFontMetricsInt(Landroid/graphics/Paint$FontMetricsInt;)I
+0000b  000a                     move-result
+0000c  0332 0009                if-eq
+0000e  03b1                     op_b1
+0000f  3382                     op_82
+00010  0015 3f80                const/high16
+00012  306e 213e 0032           invoke-virtual  # CALL Landroid/widget/TextView;->setLineSpacing(F,F)V
+00015  000e                     return-void
+
+### Landroid/support/v4/widget/l;->d(Landroid/widget/TextView;)Lb/b/c/e/a$a;  [access=0x9, regs=4, ins=1, outs=2, code_off=0xc387c]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0113 001c                const/16
+00004  1034 000c                if-lt
+00006  0022 0506                new-instance  # TYPE Lb/b/c/e/a$a;
+00008  106e 2118 0003           invoke-virtual  # CALL Landroid/widget/TextView;->getTextMetricsParams()Landroid/text/PrecomputedText$Params;
+0000b  030c                     move-result-object
+0000c  2070 23bd 0030           invoke-direct  # CALL Lb/b/c/e/a$a;-><init>(Landroid/text/PrecomputedText$Params;)V
+0000f  0011                     return-object
+00010  0022 0505                new-instance  # TYPE Lb/b/c/e/a$a$a;
+00012  0122 0406                new-instance  # TYPE Landroid/text/TextPaint;
+00014  106e 2114 0003           invoke-virtual  # CALL Landroid/widget/TextView;->getPaint()Landroid/text/TextPaint;
+00017  020c                     move-result-object
+00018  2070 1c24 0021           invoke-direct  # CALL Landroid/text/TextPaint;-><init>(Landroid/graphics/Paint;)V
+0001b  2070 23b8 0010           invoke-direct  # CALL Lb/b/c/e/a$a$a;-><init>(Landroid/text/TextPaint;)V
+0001e  0160 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00020  0213 0017                const/16
+00022  2134 0010                if-lt
+00024  106e 20fc 0003           invoke-virtual  # CALL Landroid/widget/TextView;->getBreakStrategy()I
+00027  010a                     move-result
+00028  206e 23b9 0010           invoke-virtual  # CALL Lb/b/c/e/a$a$a;->a(I)Lb/b/c/e/a$a$a;
+0002b  106e 2104 0003           invoke-virtual  # CALL Landroid/widget/TextView;->getHyphenationFrequency()I
+0002e  010a                     move-result
+0002f  206e 23bc 0010           invoke-virtual  # CALL Lb/b/c/e/a$a$a;->b(I)Lb/b/c/e/a$a$a;
+00032  0160 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00034  0213 0012                const/16
+00036  2134 0009                if-lt
+00038  1071 11a2 0003           invoke-static  # CALL Landroid/support/v4/widget/l;->c(Landroid/widget/TextView;)Landroid/text/TextDirectionHeuristic;
+0003b  030c                     move-result-object
+0003c  206e 23ba 0030           invoke-virtual  # CALL Lb/b/c/e/a$a$a;->a(Landroid/text/TextDirectionHeuristic;)Lb/b/c/e/a$a$a;
+0003f  106e 23bb 0000           invoke-virtual  # CALL Lb/b/c/e/a$a$a;->a()Lb/b/c/e/a$a;
+00042  030c                     move-result-object
+00043  0311                     return-object

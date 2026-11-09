@@ -1,0 +1,116 @@
+### Lc/a/c/a/o;-><init>(Lc/a/c/a/b;,I,Z,Ljava/lang/String;,Ljava/lang/String;,Ljava/util/Hashtable;)V  [access=0x10000, regs=7, ins=7, outs=1, code_off=0xffaa8]
+00000  015b 1b8e                iput-object  # FIELD Lc/a/c/a/o;->g:Lc/a/c/a/b;
+00002  0259 1b89                iput  # FIELD Lc/a/c/a/o;->b:I
+00004  035c 1b8a                iput-boolean  # FIELD Lc/a/c/a/o;->c:Z
+00006  045b 1b8b                iput-object  # FIELD Lc/a/c/a/o;->d:Ljava/lang/String;
+00008  055b 1b8c                iput-object  # FIELD Lc/a/c/a/o;->e:Ljava/lang/String;
+0000a  065b 1b8d                iput-object  # FIELD Lc/a/c/a/o;->f:Ljava/util/Hashtable;
+0000c  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+0000f  000e                     return-void
+
+### Lc/a/c/a/o;->run()V  [access=0x1, regs=22, ins=1, outs=10, code_off=0xffad8]
+00000  0008 0015                op_08
+00002  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00004  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00007  021a 270b                const-string  # STR "status = "
+00009  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0000c  0252 1b89                iget  # FIELD Lc/a/c/a/o;->b:I
+0000e  206e 2d3b 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+00011  021a 0276                const-string  # STR "; forced = "
+00013  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00016  0255 1b8a                iget-boolean  # FIELD Lc/a/c/a/o;->c:Z
+00018  206e 2d40 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+0001b  021a 1a37                const-string  # STR "checkAK = "
+0001d  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00020  0254 1b8e                iget-object  # FIELD Lc/a/c/a/o;->g:Lc/a/c/a/b;
+00022  0354 1b8b                iget-object  # FIELD Lc/a/c/a/o;->d:Ljava/lang/String;
+00024  2071 2882 0032           invoke-static  # CALL Lc/a/c/a/b;->a(Lc/a/c/a/b;,Ljava/lang/String;)Z
+00027  020a                     move-result
+00028  206e 2d40 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+0002b  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0002e  010c                     move-result-object
+0002f  1071 2898 0001           invoke-static  # CALL Lc/a/c/a/d;->a(Ljava/lang/String;)V
+00032  0152 1b89                iget  # FIELD Lc/a/c/a/o;->b:I
+00034  0213 0259                const/16
+00036  2132 003b                if-eq
+00038  0255 1b8a                iget-boolean  # FIELD Lc/a/c/a/o;->c:Z
+0003a  0239 0037                if-nez
+0003c  f212                     const/4
+0003d  2132 0034                if-eq
+0003f  0154 1b8e                iget-object  # FIELD Lc/a/c/a/o;->g:Lc/a/c/a/b;
+00041  0254 1b8b                iget-object  # FIELD Lc/a/c/a/o;->d:Ljava/lang/String;
+00043  2071 2882 0021           invoke-static  # CALL Lc/a/c/a/b;->a(Lc/a/c/a/b;,Ljava/lang/String;)Z
+00046  010a                     move-result
+00047  0138 0003                if-eqz
+00049  2828                     goto
+0004a  0113 025a                const/16
+0004c  0252 1b89                iget  # FIELD Lc/a/c/a/o;->b:I
+0004e  0312                     const/4
+0004f  2133 0015                if-ne
+00051  011a 198a                const-string  # STR "authenticate wait "
+00053  1071 2898 0001           invoke-static  # CALL Lc/a/c/a/d;->a(Ljava/lang/String;)V
+00056  0071 2891 0000           invoke-static  # CALL Lc/a/c/a/b;->i()Lc/a/c/a/r;
+00059  010c                     move-result-object
+0005a  0138 000f                if-eqz
+0005c  0071 2891 0000           invoke-static  # CALL Lc/a/c/a/b;->i()Lc/a/c/a/r;
+0005f  010c                     move-result-object
+00060  106e 28d5 0001           invoke-virtual  # CALL Lc/a/c/a/r;->b()V
+00063  0628                     goto
+00064  011a 1988                const-string  # STR "authenticate else"
+00066  1071 2898 0001           invoke-static  # CALL Lc/a/c/a/d;->a(Ljava/lang/String;)V
+00069  0154 1b8e                iget-object  # FIELD Lc/a/c/a/o;->g:Lc/a/c/a/b;
+0006b  0054 1b8b                iget-object  # FIELD Lc/a/c/a/o;->d:Ljava/lang/String;
+0006d  3071 2875 0031           invoke-static  # CALL Lc/a/c/a/b;->a(Lc/a/c/a/b;,Ljava/lang/String;,Ljava/lang/String;)V
+00070  6b28                     goto
+00071  011a 1989                const-string  # STR "authenticate sendAuthRequest"
+00073  1071 2898 0001           invoke-static  # CALL Lc/a/c/a/d;->a(Ljava/lang/String;)V
+00076  0071 288b 0000           invoke-static  # CALL Lc/a/c/a/b;->d()Landroid/content/Context;
+00079  010c                     move-result-object
+0007a  1071 28a5 0001           invoke-static  # CALL Lc/a/c/a/f;->b(Landroid/content/Context;)[Ljava/lang/String;
+0007d  060c                     move-result-object
+0007e  0638 003e                if-eqz
+00080  6121                     array-length
+00081  1212                     const/4
+00082  2137 003a                if-le
+00084  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00086  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00089  021a 1986                const-string  # STR "authStrings.length:"
+0008b  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0008e  6221                     array-length
+0008f  206e 2d3b 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+00092  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00095  010c                     move-result-object
+00096  1071 2898 0001           invoke-static  # CALL Lc/a/c/a/d;->a(Ljava/lang/String;)V
+00099  011a 216d                const-string  # STR "more sha1 auth"
+0009b  1071 2898 0001           invoke-static  # CALL Lc/a/c/a/d;->a(Ljava/lang/String;)V
+0009e  0254 1b8e                iget-object  # FIELD Lc/a/c/a/o;->g:Lc/a/c/a/b;
+000a0  0355 1b8a                iget-boolean  # FIELD Lc/a/c/a/o;->c:Z
+000a2  0454 1b8c                iget-object  # FIELD Lc/a/c/a/o;->e:Ljava/lang/String;
+000a4  0554 1b8d                iget-object  # FIELD Lc/a/c/a/o;->f:Ljava/util/Hashtable;
+000a6  0754 1b8b                iget-object  # FIELD Lc/a/c/a/o;->d:Ljava/lang/String;
+000a8  0071 288d 0000           invoke-static  # CALL Lc/a/c/a/b;->e()Ljava/lang/String;
+000ab  080c                     move-result-object
+000ac  0071 288e 0000           invoke-static  # CALL Lc/a/c/a/b;->f()I
+000af  090a                     move-result
+000b0  0071 288f 0000           invoke-static  # CALL Lc/a/c/a/b;->g()Ljava/lang/String;
+000b3  0a0c                     move-result-object
+000b4  0071 2890 0000           invoke-static  # CALL Lc/a/c/a/b;->h()Ljava/lang/String;
+000b7  0b0c                     move-result-object
+000b8  0a77 2878 0002           invoke-static/range  # CALL Lc/a/c/a/b;->a(Lc/a/c/a/b;,Z,Ljava/lang/String;,Ljava/util/Hashtable;,[Ljava/lang/String;,Ljava/lang/String;,Ljava/lang/String;,I,Ljava/lang/String;,Ljava/lang/String;)V
+000bb  2028                     goto
+000bc  0c54 1b8e                iget-object  # FIELD Lc/a/c/a/o;->g:Lc/a/c/a/b;
+000be  0d55 1b8a                iget-boolean  # FIELD Lc/a/c/a/o;->c:Z
+000c0  0e54 1b8c                iget-object  # FIELD Lc/a/c/a/o;->e:Ljava/lang/String;
+000c2  0f54 1b8d                iget-object  # FIELD Lc/a/c/a/o;->f:Ljava/util/Hashtable;
+000c4  0054 1b8b                iget-object  # FIELD Lc/a/c/a/o;->d:Ljava/lang/String;
+000c6  0071 288d 0000           invoke-static  # CALL Lc/a/c/a/b;->e()Ljava/lang/String;
+000c9  110c                     move-result-object
+000ca  0071 288e 0000           invoke-static  # CALL Lc/a/c/a/b;->f()I
+000cd  120a                     move-result
+000ce  0071 288f 0000           invoke-static  # CALL Lc/a/c/a/b;->g()Ljava/lang/String;
+000d1  130c                     move-result-object
+000d2  0071 2890 0000           invoke-static  # CALL Lc/a/c/a/b;->h()Ljava/lang/String;
+000d5  140c                     move-result-object
+000d6  1008 0000                op_08
+000d8  0977 2877 000c           invoke-static/range  # CALL Lc/a/c/a/b;->a(Lc/a/c/a/b;,Z,Ljava/lang/String;,Ljava/util/Hashtable;,Ljava/lang/String;,Ljava/lang/String;,I,Ljava/lang/String;,Ljava/lang/String;)V
+000db  000e                     return-void

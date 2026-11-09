@@ -1,0 +1,19 @@
+### Landroid/support/v7/widget/FitWindowsLinearLayout;-><init>(Landroid/content/Context;)V  [access=0x10001, regs=2, ins=2, outs=2, code_off=0xe4ec8]
+00000  2070 1ffb 0010           invoke-direct  # CALL Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
+00003  000e                     return-void
+
+### Landroid/support/v7/widget/FitWindowsLinearLayout;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;)V  [access=0x10001, regs=3, ins=3, outs=3, code_off=0xe4ee0]
+00000  3070 1ffc 0210           invoke-direct  # CALL Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;)V
+00003  000e                     return-void
+
+### Landroid/support/v7/widget/FitWindowsLinearLayout;->fitSystemWindows(Landroid/graphics/Rect;)Z  [access=0x4, regs=3, ins=2, outs=2, code_off=0xe4ea0]
+00000  1054 1056                iget-object  # FIELD Landroid/support/v7/widget/FitWindowsLinearLayout;->b:Landroid/support/v7/widget/e0$a;
+00002  0038 0005                if-eqz
+00004  2072 1881 0020           invoke-interface  # CALL Landroid/support/v7/widget/e0$a;->a(Landroid/graphics/Rect;)V
+00007  206f 2003 0021           invoke-super  # CALL Landroid/widget/LinearLayout;->fitSystemWindows(Landroid/graphics/Rect;)Z
+0000a  010a                     move-result
+0000b  010f                     return
+
+### Landroid/support/v7/widget/FitWindowsLinearLayout;->setOnFitSystemWindowsListener(Landroid/support/v7/widget/e0$a;)V  [access=0x1, regs=2, ins=2, outs=0, code_off=0xe4ef8]
+00000  015b 1056                iput-object  # FIELD Landroid/support/v7/widget/FitWindowsLinearLayout;->b:Landroid/support/v7/widget/e0$a;
+00002  000e                     return-void

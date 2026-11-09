@@ -1,0 +1,67 @@
+### Landroid/support/v7/app/f$k;-><init>(Landroid/support/v7/app/f;,Landroid/support/v7/app/j;)V  [access=0x10000, regs=3, ins=3, outs=1, code_off=0xc6754]
+00000  015b 0e9d                iput-object  # FIELD Landroid/support/v7/app/f$k;->e:Landroid/support/v7/app/f;
+00002  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00005  025b 0e99                iput-object  # FIELD Landroid/support/v7/app/f$k;->a:Landroid/support/v7/app/j;
+00007  106e 1318 0002           invoke-virtual  # CALL Landroid/support/v7/app/j;->a()Z
+0000a  010a                     move-result
+0000b  015c 0e9a                iput-boolean  # FIELD Landroid/support/v7/app/f$k;->b:Z
+0000d  000e                     return-void
+
+### Landroid/support/v7/app/f$k;->a()V  [access=0x0, regs=3, ins=1, outs=2, code_off=0xc6780]
+00000  2054 0e9b                iget-object  # FIELD Landroid/support/v7/app/f$k;->c:Landroid/content/BroadcastReceiver;
+00002  0038 000c                if-eqz
+00004  2154 0e9d                iget-object  # FIELD Landroid/support/v7/app/f$k;->e:Landroid/support/v7/app/f;
+00006  1154 0ec9                iget-object  # FIELD Landroid/support/v7/app/f;->c:Landroid/content/Context;
+00008  206e 085e 0001           invoke-virtual  # CALL Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+0000b  0012                     const/4
+0000c  205b 0e9b                iput-object  # FIELD Landroid/support/v7/app/f$k;->c:Landroid/content/BroadcastReceiver;
+0000e  000e                     return-void
+
+### Landroid/support/v7/app/f$k;->b()V  [access=0x0, regs=3, ins=1, outs=1, code_off=0xc67b0]
+00000  2054 0e99                iget-object  # FIELD Landroid/support/v7/app/f$k;->a:Landroid/support/v7/app/j;
+00002  106e 1318 0000           invoke-virtual  # CALL Landroid/support/v7/app/j;->a()Z
+00005  000a                     move-result
+00006  2155 0e9a                iget-boolean  # FIELD Landroid/support/v7/app/f$k;->b:Z
+00008  1032 0009                if-eq
+0000a  205c 0e9a                iput-boolean  # FIELD Landroid/support/v7/app/f$k;->b:Z
+0000c  2254 0e9d                iget-object  # FIELD Landroid/support/v7/app/f$k;->e:Landroid/support/v7/app/f;
+0000e  106e 12be 0002           invoke-virtual  # CALL Landroid/support/v7/app/f;->a()Z
+00011  000e                     return-void
+
+### Landroid/support/v7/app/f$k;->c()I  [access=0x0, regs=2, ins=1, outs=1, code_off=0xc6728]
+00000  1054 0e99                iget-object  # FIELD Landroid/support/v7/app/f$k;->a:Landroid/support/v7/app/j;
+00002  106e 1318 0000           invoke-virtual  # CALL Landroid/support/v7/app/j;->a()Z
+00005  000a                     move-result
+00006  105c 0e9a                iput-boolean  # FIELD Landroid/support/v7/app/f$k;->b:Z
+00008  0038 0004                if-eqz
+0000a  2112                     const/4
+0000b  0228                     goto
+0000c  1112                     const/4
+0000d  010f                     return
+
+### Landroid/support/v7/app/f$k;->d()V  [access=0x0, regs=3, ins=1, outs=3, code_off=0xc67e4]
+00000  106e 129a 0002           invoke-virtual  # CALL Landroid/support/v7/app/f$k;->a()V
+00003  2054 0e9b                iget-object  # FIELD Landroid/support/v7/app/f$k;->c:Landroid/content/BroadcastReceiver;
+00005  0039 0009                if-nez
+00007  0022 02fb                new-instance  # TYPE Landroid/support/v7/app/f$k$a;
+00009  2070 1297 0020           invoke-direct  # CALL Landroid/support/v7/app/f$k$a;-><init>(Landroid/support/v7/app/f$k;)V
+0000c  205b 0e9b                iput-object  # FIELD Landroid/support/v7/app/f$k;->c:Landroid/content/BroadcastReceiver;
+0000e  2054 0e9c                iget-object  # FIELD Landroid/support/v7/app/f$k;->d:Landroid/content/IntentFilter;
+00010  0039 001c                if-nez
+00012  0022 0177                new-instance  # TYPE Landroid/content/IntentFilter;
+00014  1070 0884 0000           invoke-direct  # CALL Landroid/content/IntentFilter;-><init>()V
+00017  205b 0e9c                iput-object  # FIELD Landroid/support/v7/app/f$k;->d:Landroid/content/IntentFilter;
+00019  011a 1916                const-string  # STR "android.intent.action.TIME_SET"
+0001b  206e 0886 0010           invoke-virtual  # CALL Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+0001e  2054 0e9c                iget-object  # FIELD Landroid/support/v7/app/f$k;->d:Landroid/content/IntentFilter;
+00020  011a 1915                const-string  # STR "android.intent.action.TIMEZONE_CHANGED"
+00022  206e 0886 0010           invoke-virtual  # CALL Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+00025  2054 0e9c                iget-object  # FIELD Landroid/support/v7/app/f$k;->d:Landroid/content/IntentFilter;
+00027  011a 1917                const-string  # STR "android.intent.action.TIME_TICK"
+00029  206e 0886 0010           invoke-virtual  # CALL Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+0002c  2054 0e9d                iget-object  # FIELD Landroid/support/v7/app/f$k;->e:Landroid/support/v7/app/f;
+0002e  0054 0ec9                iget-object  # FIELD Landroid/support/v7/app/f;->c:Landroid/content/Context;
+00030  2154 0e9b                iget-object  # FIELD Landroid/support/v7/app/f$k;->c:Landroid/content/BroadcastReceiver;
+00032  2254 0e9c                iget-object  # FIELD Landroid/support/v7/app/f$k;->d:Landroid/content/IntentFilter;
+00034  306e 0854 0210           invoke-virtual  # CALL Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;,Landroid/content/IntentFilter;)Landroid/content/Intent;
+00037  000e                     return-void

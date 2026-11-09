@@ -1,0 +1,26 @@
+### La/a/a/d/g$a;-><init>(La/a/a/d/g;,Ljava/lang/String;,I,J)V  [access=0x10001, regs=6, ins=6, outs=1, code_off=0x5b770]
+00000  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  025b 01ba                iput-object  # FIELD La/a/a/d/g$a;->a:Ljava/lang/String;
+00005  0359 01bb                iput  # FIELD La/a/a/d/g$a;->b:I
+00007  0117 4240 000f           const-wide/32
+0000a  14be                     op_be
+0000b  045a 01bc                iput-wide  # FIELD La/a/a/d/g$a;->c:J
+0000d  000e                     return-void
+
+### La/a/a/d/g$a;->toString()Ljava/lang/String;  [access=0x1, regs=4, ins=1, outs=3, code_off=0x5b714]
+00000  0022 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00002  1070 2d35 0000           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00005  3154 01ba                iget-object  # FIELD La/a/a/d/g$a;->a:Ljava/lang/String;
+00007  106e 2d1f 0001           invoke-virtual  # CALL Ljava/lang/String;->toUpperCase()Ljava/lang/String;
+0000a  010c                     move-result-object
+0000b  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0000e  011a 0269                const-string  # STR ";"
+00010  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00013  3252 01bb                iget  # FIELD La/a/a/d/g$a;->b:I
+00015  206e 2d3b 0020           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+00018  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0001b  3153 01bc                iget-wide  # FIELD La/a/a/d/g$a;->c:J
+0001d  306e 2d3c 0210           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+00020  106e 2d44 0000           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00023  030c                     move-result-object
+00024  0311                     return-object

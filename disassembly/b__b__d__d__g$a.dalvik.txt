@@ -1,0 +1,65 @@
+### Lb/b/d/d/g$a;-><clinit>()V  [access=0x10008, regs=3, ins=0, outs=0, code_off=0xcfcbc]
+00000  1012                     const/4
+00001  0023 075c                new-array  # TYPE [Ljava/lang/Class;
+00003  0112                     const/4
+00004  021c 0439                const-class  # TYPE Landroid/view/MenuItem;
+00006  024d 0100                aput-object
+00008  0069 1a81                sput-object  # FIELD Lb/b/d/d/g$a;->c:[Ljava/lang/Class;
+0000a  000e                     return-void
+
+### Lb/b/d/d/g$a;-><init>(Ljava/lang/Object;,Ljava/lang/String;)V  [access=0x10001, regs=6, ins=3, outs=3, code_off=0xcfce4]
+00000  1070 2ce0 0003           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  345b 1a7f                iput-object  # FIELD Lb/b/d/d/g$a;->a:Ljava/lang/Object;
+00005  106e 2ce3 0004           invoke-virtual  # CALL Ljava/lang/Object;->getClass()Ljava/lang/Class;
+00008  040c                     move-result-object
+00009  0062 1a81                sget-object  # FIELD Lb/b/d/d/g$a;->c:[Ljava/lang/Class;
+0000b  306e 2c7e 0054           invoke-virtual  # CALL Ljava/lang/Class;->getMethod(Ljava/lang/String;,[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+0000e  000c                     move-result-object
+0000f  305b 1a80                iput-object  # FIELD Lb/b/d/d/g$a;->b:Ljava/lang/reflect/Method;
+00011  000e                     return-void
+00012  030d                     op_0d
+00013  0022 042c                new-instance  # TYPE Landroid/view/InflateException;
+00015  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00017  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0001a  021a 06cf                const-string  # STR "Couldn't resolve menu item onClick handler "
+0001c  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0001f  206e 2d3f 0051           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00022  051a 005d                const-string  # STR " in class "
+00024  206e 2d3f 0051           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00027  106e 2c7f 0004           invoke-virtual  # CALL Ljava/lang/Class;->getName()Ljava/lang/String;
+0002a  040c                     move-result-object
+0002b  206e 2d3f 0041           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0002e  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00031  040c                     move-result-object
+00032  2070 1c9b 0040           invoke-direct  # CALL Landroid/view/InflateException;-><init>(Ljava/lang/String;)V
+00035  206e 1c9d 0030           invoke-virtual  # CALL Landroid/view/InflateException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+00038  0027                     throw
+
+### Lb/b/d/d/g$a;->onMenuItemClick(Landroid/view/MenuItem;)Z  [access=0x1, regs=6, ins=2, outs=3, code_off=0xcfc38]
+00000  4054 1a80                iget-object  # FIELD Lb/b/d/d/g$a;->b:Ljava/lang/reflect/Method;
+00002  106e 2d79 0000           invoke-virtual  # CALL Ljava/lang/reflect/Method;->getReturnType()Ljava/lang/Class;
+00005  000c                     move-result-object
+00006  0162 1d5e                sget-object  # FIELD Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
+00008  0212                     const/4
+00009  1312                     const/4
+0000a  1033 0015                if-ne
+0000c  4054 1a80                iget-object  # FIELD Lb/b/d/d/g$a;->b:Ljava/lang/reflect/Method;
+0000e  4454 1a7f                iget-object  # FIELD Lb/b/d/d/g$a;->a:Ljava/lang/Object;
+00010  3123 075d                new-array  # TYPE [Ljava/lang/Object;
+00012  054d 0201                aput-object
+00014  306e 2d7a 0140           invoke-virtual  # CALL Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;,[Ljava/lang/Object;)Ljava/lang/Object;
+00017  040c                     move-result-object
+00018  041f 0657                check-cast  # TYPE Ljava/lang/Boolean;
+0001a  106e 2c65 0004           invoke-virtual  # CALL Ljava/lang/Boolean;->booleanValue()Z
+0001d  040a                     move-result
+0001e  040f                     return
+0001f  4054 1a80                iget-object  # FIELD Lb/b/d/d/g$a;->b:Ljava/lang/reflect/Method;
+00021  4454 1a7f                iget-object  # FIELD Lb/b/d/d/g$a;->a:Ljava/lang/Object;
+00023  3123 075d                new-array  # TYPE [Ljava/lang/Object;
+00025  054d 0201                aput-object
+00027  306e 2d7a 0140           invoke-virtual  # CALL Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;,[Ljava/lang/Object;)Ljava/lang/Object;
+0002a  030f                     return
+0002b  040d                     op_0d
+0002c  0522 0680                new-instance  # TYPE Ljava/lang/RuntimeException;
+0002e  2070 2cf0 0045           invoke-direct  # CALL Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+00031  0527                     throw

@@ -1,0 +1,1167 @@
+### La/a/a/f/g;-><clinit>()V  [access=0x10009, regs=1, ins=0, outs=0, code_off=0x6d7d4]
+00000  4012                     const/4
+00001  0023 0722                new-array  # TYPE [D
+00003  0026 0007 0000           fill-array-data
+00006  0069 0327                sput-object  # FIELD La/a/a/f/g;->f:[D
+00008  000e                     return-void
+00009  0000                     nop
+0000a  0300 0008 0004 0000 0000 0000 8000 4046 0000 0000 e000 4060 0000 0000 2000 406c ... <payload; units=20>
+
+### La/a/a/f/g;-><init>(La/a/a/f/d;,Landroid/database/sqlite/SQLiteDatabase;,I)V  [access=0x10001, regs=4, ins=4, outs=2, code_off=0x6d820]
+00000  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  015b 0322                iput-object  # FIELD La/a/a/f/g;->a:La/a/a/f/d;
+00005  f112                     const/4
+00006  0159 0325                iput  # FIELD La/a/a/f/g;->d:I
+00008  0159 0326                iput  # FIELD La/a/a/f/g;->e:I
+0000a  025b 0324                iput-object  # FIELD La/a/a/f/g;->c:Landroid/database/sqlite/SQLiteDatabase;
+0000c  0359 0323                iput  # FIELD La/a/a/f/g;->b:I
+0000e  0238 0026                if-eqz
+00010  106e 0936 0002           invoke-virtual  # CALL Landroid/database/sqlite/SQLiteDatabase;->isOpen()Z
+00013  000a                     move-result
+00014  0038 0020                if-eqz
+00016  001a 0510                const-string  # STR "CREATE TABLE IF NOT EXISTS RGCAREA(gridkey VARCHAR(10) PRIMARY KEY, country VARCHAR(100),countrycode VARCHAR(100), province VARCHAR(100), city VARCHAR(100), citycode VARCHAR(100), district VARCHAR(100), timestamp INTEGER, version VARCHAR(50))"
+00018  206e 0934 0002           invoke-virtual  # CALL Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+0001b  001a 0512                const-string  # STR "CREATE TABLE IF NOT EXISTS RGCROAD(_id INTEGER PRIMARY KEY AUTOINCREMENT, gridkey VARCHAR(10), street VARCHAR(100), x1 DOUBLE, y1 DOUBLE, x2 DOUBLE, y2 DOUBLE)"
+0001d  206e 0934 0002           invoke-virtual  # CALL Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+00020  001a 0513                const-string  # STR "CREATE TABLE IF NOT EXISTS RGCSITE(_id INTEGER PRIMARY KEY AUTOINCREMENT, gridkey VARCHAR(10), street VARCHAR(100), streetnumber VARCHAR(100), x DOUBLE, y DOUBLE)"
+00022  206e 0934 0002           invoke-virtual  # CALL Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+00025  001a 0511                const-string  # STR "CREATE TABLE IF NOT EXISTS RGCPOI(pid VARCHAR(50) PRIMARY KEY , gridkey VARCHAR(10), name VARCHAR(100), type VARCHAR(50), x DOUBLE, y DOUBLE, rank INTEGER)"
+00027  206e 0934 0002           invoke-virtual  # CALL Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+0002a  001a 0514                const-string  # STR "CREATE TABLE IF NOT EXISTS RGCUPDATE(gridkey VARCHAR(10), version VARCHAR(50), type INTEGER, timestamp INTEGER, PRIMARY KEY(gridkey, type))"
+0002c  206e 0934 0002           invoke-virtual  # CALL Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+0002f  0528                     goto
+00030  000d                     op_0d
+00031  106e 2c96 0000           invoke-virtual  # CALL Ljava/lang/Exception;->printStackTrace()V
+00034  000e                     return-void
+
+### La/a/a/f/g;->a(I,I)I  [access=0x9, regs=7, ins=2, outs=0, code_off=0x6cf98]
+00000  0013 0064                const/16
+00002  6037 000b                if-le
+00004  0018 999a 9999 9999 bfb9 const-wide
+00009  0214 ea60 0000           const
+0000c  0e28                     goto
+0000d  0013 01f4                const/16
+0000f  6037 0008                if-le
+00011  0019 bfe8                const-wide/high16
+00013  0214 d8cc 0000           const
+00016  0428                     goto
+00017  0019 bfe0                const-wide/high16
+00019  0212                     const/4
+0001a  6383                     op_83
+0001b  30cd                     op_cd
+0001c  2283                     op_83
+0001d  20cb                     op_cb
+0001e  068a                     op_8a
+0001f  56b0                     op_b0
+00020  060f                     return
+
+### La/a/a/f/g;->a(I,D,D)Ljava/lang/String;  [access=0x1009, regs=5, ins=5, outs=5, code_off=0x6cfec]
+00000  5471 04b1 3210           invoke-static  # CALL La/a/a/f/g;->b(I,D,D)Ljava/lang/String;
+00003  000c                     move-result-object
+00004  0011                     return-object
+
+### La/a/a/f/g;->b(I,D,D)Ljava/lang/String;  [access=0x9, regs=22, ins=5, outs=6, code_off=0x6d008]
+00000  0002 0011                op_02
+00002  01da 0500                op_da
+00004  02d8 0100                op_d8
+00006  2223 0721                new-array  # TYPE [C
+00008  0922 00b7                new-instance  # TYPE La/a/a/f/g$b;
+0000a  0418 0000 0000 8000 4056 const-wide
+0000f  0618 0000 0000 8000 c056 const-wide
+00014  0812                     const/4
+00015  9307                     op_07
+00016  0676 048b 0003           invoke-direct/range  # CALL La/a/a/f/g$b;-><init>(D,D,La/a/a/f/g$a;)V
+00019  0322 00b7                new-instance  # TYPE La/a/a/f/g$b;
+0001b  0b18 0000 0000 8000 4066 const-wide
+00020  0d18 0000 0000 8000 c066 const-wide
+00025  0f12                     const/4
+00026  3a07                     op_07
+00027  0676 048b 000a           invoke-direct/range  # CALL La/a/a/f/g$b;-><init>(D,D,La/a/a/f/g$a;)V
+0002a  1512                     const/4
+0002b  5601                     op_01
+0002c  6701                     op_01
+0002d  0812                     const/4
+0002e  1636 0045                if-gt
+00030  0738 0006                if-eqz
+00032  0a05 0012                op_05
+00034  3c07                     op_07
+00035  0428                     goto
+00036  0a05 0014                op_05
+00038  9c07                     op_07
+00039  1071 048c 000c           invoke-static  # CALL La/a/a/f/g$b;->a(La/a/a/f/g$b;)D
+0003c  0d0b                     move-result-wide
+0003d  1071 048e 000c           invoke-static  # CALL La/a/a/f/g$b;->b(La/a/a/f/g$b;)D
+00040  0f0b                     move-result-wide
+00041  fdcb                     op_cb
+00042  0f19 4000                const-wide/high16
+00044  fdce                     op_ce
+00045  58b8                     op_b8
+00046  0f18 0000 0000 8480 412e const-wide
+0004b  facd                     op_cd
+0004c  aa8a                     op_8a
+0004d  04ad 0f0d                op_ad
+0004f  448a                     op_8a
+00050  4a37 0008                if-le
+00052  3071 048d 0edc           invoke-static  # CALL La/a/a/f/g$b;->a(La/a/a/f/g$b;,D)D
+00055  08de 0108                op_de
+00057  0428                     goto
+00058  3071 048f 0edc           invoke-static  # CALL La/a/a/f/g$b;->b(La/a/a/f/g$b;,D)D
+0005b  04dc 0506                op_dc
+0005d  0439 0010                if-nez
+0005f  04db 0506                op_db
+00061  1512                     const/4
+00062  54b1                     op_b1
+00063  0a1a 022a                const-string  # STR "0123456789bcdefghjkmnpqrstuvwxyz"
+00065  206e 2cfe 008a           invoke-virtual  # CALL Ljava/lang/String;->charAt(I)C
+00068  080a                     move-result
+00069  0850 0402                aput-char
+0006b  0812                     const/4
+0006c  0228                     goto
+0006d  1512                     const/4
+0006e  07df 0107                op_df
+00070  06d8 0106                op_d8
+00072  bc28                     goto
+00073  0412                     const/4
+00074  0450 0002                aput-char
+00076  0122 0684                new-instance  # TYPE Ljava/lang/StringBuffer;
+00078  1070 2d25 0001           invoke-direct  # CALL Ljava/lang/StringBuffer;-><init>()V
+0007b  0435 000a                if-ge
+0007d  0349 0402                aget-char
+0007f  206e 2d28 0031           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
+00082  04d8 0104                op_d8
+00084  f728                     goto
+00085  106e 2d34 0001           invoke-virtual  # CALL Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+00088  000c                     move-result-object
+00089  0011                     return-object
+
+### La/a/a/f/g;->b(D,D,D,D)[D  [access=0x1009, regs=8, ins=8, outs=8, code_off=0x6cea8]
+00000  0877 04b6 0000           invoke-static/range  # CALL La/a/a/f/g;->c(D,D,D,D)[D
+00003  000c                     move-result-object
+00004  0011                     return-object
+
+### La/a/a/f/g;->c()[D  [access=0x1009, regs=1, ins=0, outs=0, code_off=0x6ce90]
+00000  0062 0327                sget-object  # FIELD La/a/a/f/g;->f:[D
+00002  0011                     return-object
+
+### La/a/a/f/g;->c(D,D,D,D)[D  [access=0x9, regs=15, ins=8, outs=4, code_off=0x6cec4]
+00000  2012                     const/4
+00001  0023 0722                new-array  # TYPE [D
+00003  2071 2cd9 0087           invoke-static  # CALL Ljava/lang/Math;->toRadians(D)D
+00006  070b                     move-result-wide
+00007  2071 2cd9 00a9           invoke-static  # CALL Ljava/lang/Math;->toRadians(D)D
+0000a  090b                     move-result-wide
+0000b  2071 2cd9 00ed           invoke-static  # CALL Ljava/lang/Math;->toRadians(D)D
+0000e  0d0b                     move-result-wide
+0000f  2071 2cd5 0087           invoke-static  # CALL Ljava/lang/Math;->sin(D)D
+00012  010b                     move-result-wide
+00013  0318 0000 4000 54a6 4158 const-wide
+00018  3bce                     op_ce
+00019  2071 2cc5 00cb           invoke-static  # CALL Ljava/lang/Math;->cos(D)D
+0001c  030b                     move-result-wide
+0001d  31cd                     op_cd
+0001e  2071 2cc5 0087           invoke-static  # CALL Ljava/lang/Math;->cos(D)D
+00021  030b                     move-result-wide
+00022  2071 2cd5 00cb           invoke-static  # CALL Ljava/lang/Math;->sin(D)D
+00025  050b                     move-result-wide
+00026  53cd                     op_cd
+00027  2071 2cc5 00ed           invoke-static  # CALL Ljava/lang/Math;->cos(D)D
+0002a  050b                     move-result-wide
+0002b  53cd                     op_cd
+0002c  31cb                     op_cb
+0002d  2071 2cc2 0021           invoke-static  # CALL Ljava/lang/Math;->asin(D)D
+00030  010b                     move-result-wide
+00031  2071 2cd5 00ed           invoke-static  # CALL Ljava/lang/Math;->sin(D)D
+00034  0d0b                     move-result-wide
+00035  2071 2cd5 00cb           invoke-static  # CALL Ljava/lang/Math;->sin(D)D
+00038  030b                     move-result-wide
+00039  3dcd                     op_cd
+0003a  2071 2cc5 0087           invoke-static  # CALL Ljava/lang/Math;->cos(D)D
+0003d  030b                     move-result-wide
+0003e  3dcd                     op_cd
+0003f  2071 2cc5 00cb           invoke-static  # CALL Ljava/lang/Math;->cos(D)D
+00042  0b0b                     move-result-wide
+00043  2071 2cd5 0087           invoke-static  # CALL Ljava/lang/Math;->sin(D)D
+00046  070b                     move-result-wide
+00047  2071 2cd5 0021           invoke-static  # CALL Ljava/lang/Math;->sin(D)D
+0004a  030b                     move-result-wide
+0004b  37cd                     op_cd
+0004c  7bcc                     op_cc
+0004d  4071 2cc3 cbed           invoke-static  # CALL Ljava/lang/Math;->atan2(D,D)D
+00050  070b                     move-result-wide
+00051  79cb                     op_cb
+00052  2071 2cd8 0021           invoke-static  # CALL Ljava/lang/Math;->toDegrees(D)D
+00055  070b                     move-result-wide
+00056  0b12                     const/4
+00057  074c 0b00                aput-wide
+00059  2071 2cd8 00a9           invoke-static  # CALL Ljava/lang/Math;->toDegrees(D)D
+0005c  070b                     move-result-wide
+0005d  1912                     const/4
+0005e  074c 0900                aput-wide
+00060  0011                     return-object
+
+### La/a/a/f/g;->a(D,D,D,D)D  [access=0x11, regs=13, ins=9, outs=4, code_off=0x6cddc]
+00000  00ac 070b                op_ac
+00002  02ac 0509                op_ac
+00004  2071 2cd9 0065           invoke-static  # CALL Ljava/lang/Math;->toRadians(D)D
+00007  040b                     move-result-wide
+00008  2071 2cd9 0087           invoke-static  # CALL Ljava/lang/Math;->toRadians(D)D
+0000b  2071 2cd9 00a9           invoke-static  # CALL Ljava/lang/Math;->toRadians(D)D
+0000e  060b                     move-result-wide
+0000f  2071 2cd9 00cb           invoke-static  # CALL Ljava/lang/Math;->toRadians(D)D
+00012  2071 2cd9 0010           invoke-static  # CALL Ljava/lang/Math;->toRadians(D)D
+00015  080b                     move-result-wide
+00016  2071 2cd9 0032           invoke-static  # CALL Ljava/lang/Math;->toRadians(D)D
+00019  0a0b                     move-result-wide
+0001a  0019 4000                const-wide/high16
+0001c  0ace                     op_ce
+0001d  2071 2cd5 00ba           invoke-static  # CALL Ljava/lang/Math;->sin(D)D
+00020  020b                     move-result-wide
+00021  2071 2cd5 00ba           invoke-static  # CALL Ljava/lang/Math;->sin(D)D
+00024  0a0b                     move-result-wide
+00025  a2cd                     op_cd
+00026  2071 2cc5 0054           invoke-static  # CALL Ljava/lang/Math;->cos(D)D
+00029  040b                     move-result-wide
+0002a  2071 2cc5 0076           invoke-static  # CALL Ljava/lang/Math;->cos(D)D
+0002d  060b                     move-result-wide
+0002e  64cd                     op_cd
+0002f  08ce                     op_ce
+00030  2071 2cd5 0098           invoke-static  # CALL Ljava/lang/Math;->sin(D)D
+00033  060b                     move-result-wide
+00034  64cd                     op_cd
+00035  2071 2cd5 0098           invoke-static  # CALL Ljava/lang/Math;->sin(D)D
+00038  060b                     move-result-wide
+00039  64cd                     op_cd
+0003a  42cb                     op_cb
+0003b  2071 2cd6 0032           invoke-static  # CALL Ljava/lang/Math;->sqrt(D)D
+0003e  040b                     move-result-wide
+0003f  0619 3ff0                const-wide/high16
+00041  26cc                     op_cc
+00042  2071 2cd6 0076           invoke-static  # CALL Ljava/lang/Math;->sqrt(D)D
+00045  060b                     move-result-wide
+00046  4071 2cc3 7654           invoke-static  # CALL Ljava/lang/Math;->atan2(D,D)D
+00049  040b                     move-result-wide
+0004a  04cd                     op_cd
+0004b  0618 0000 4000 54a6 4158 const-wide
+00050  64cd                     op_cd
+00051  0410                     return-wide
+
+### La/a/a/f/g;->a(D,D,D,D,D,D)D  [access=0x11, regs=25, ins=13, outs=2, code_off=0x6cd48]
+00000  00ac 1115                op_ac
+00002  02ac 110d                op_ac
+00004  04ad 0200                op_ad
+00006  06ac 1317                op_ac
+00008  08ac 130f                op_ac
+0000a  0aad 0806                op_ad
+0000c  a4cb                     op_cb
+0000d  0a16 0000                const-wide/16
+0000f  0a30 0a04                op_30
+00011  0a3c 000a                if-gtz
+00013  22cd                     op_cd
+00014  88cd                     op_cd
+00015  82cb                     op_cb
+00016  2071 2cd6 0032           invoke-static  # CALL Ljava/lang/Math;->sqrt(D)D
+00019  000b                     move-result-wide
+0001a  0010                     return-wide
+0001b  02ad 0000                op_ad
+0001d  08ad 0606                op_ad
+0001f  82cb                     op_cb
+00020  082f 0204                op_2f
+00022  083a 000e                if-ltz
+00024  00ac 150d                op_ac
+00026  00cd                     op_cd
+00027  02ac 170f                op_ac
+00029  22cd                     op_cd
+0002a  20cb                     op_cb
+0002b  2071 2cd6 0010           invoke-static  # CALL Ljava/lang/Math;->sqrt(D)D
+0002e  000b                     move-result-wide
+0002f  0010                     return-wide
+00030  24ce                     op_ce
+00031  40cd                     op_cd
+00032  00ab 0011                op_ab
+00034  46cd                     op_cd
+00035  02ab 0613                op_ab
+00037  00ac 000d                op_ac
+00039  00cd                     op_cd
+0003a  f2cc                     op_cc
+0003b  22cd                     op_cd
+0003c  20cb                     op_cb
+0003d  2071 2cd6 0010           invoke-static  # CALL Ljava/lang/Math;->sqrt(D)D
+00040  000b                     move-result-wide
+00041  0010                     return-wide
+
+### La/a/a/f/g;->a(D,D)Lcom/baidu/location/a;  [access=0x1, regs=39, ins=5, outs=13, code_off=0x6c6d0]
+00000  0008 0022                op_08
+00002  0e1a 2880                const-string  # STR "wgs842mc"
+00004  4f12                     const/4
+00005  5c12                     const/4
+00006  3d12                     const/4
+00007  2a12                     const/4
+00008  1018 ffff ffff ffff 7fef const-wide
+0000d  0b12                     const/4
+0000e  0162 031f                sget-object  # FIELD La/a/a/f/g$c;->i:La/a/a/f/g$c;
+00010  0252 0323                iget  # FIELD La/a/a/f/g;->b:I
+00012  0305 0023                op_05
+00014  0505 0025                op_05
+00016  0677 049d 0001           invoke-static/range  # CALL La/a/a/f/g$c;->a(La/a/a/f/g$c;,I,D,D)Ljava/lang/String;
+00019  010c                     move-result-object
+0001a  0254 0324                iget-object  # FIELD La/a/a/f/g;->c:Landroid/database/sqlite/SQLiteDatabase;
+0001c  306e 093b 0b12           invoke-virtual  # CALL Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;,[Ljava/lang/String;)Landroid/database/Cursor;
+0001f  080c                     move-result-object
+00020  1072 0921 0008           invoke-interface  # CALL Landroid/database/Cursor;->moveToFirst()Z
+00023  010a                     move-result
+00024  0138 0052                if-eqz
+00026  1208 000b                op_08
+00028  1508 0012                op_08
+0002a  1305 0010                op_05
+0002c  1072 091f 0008           invoke-interface  # CALL Landroid/database/Cursor;->isAfterLast()Z
+0002f  010a                     move-result
+00030  0139 0040                if-nez
+00032  2072 091e 00a8           invoke-interface  # CALL Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+00035  160c                     move-result-object
+00036  2072 091e 00d8           invoke-interface  # CALL Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+00039  170c                     move-result-object
+0003a  2072 0918 00c8           invoke-interface  # CALL Landroid/database/Cursor;->getDouble(I)D
+0003d  060b                     move-result-wide
+0003e  2072 0918 00f8           invoke-interface  # CALL Landroid/database/Cursor;->getDouble(I)D
+00041  180b                     move-result-wide
+00042  0108 0022                op_08
+00044  0205 0025                op_05
+00046  0405 0023                op_05
+00048  1a08 0008                op_08
+0004a  0805 0018                op_05
+0004c  0974 04aa 0001           invoke-virtual/range  # CALL La/a/a/f/g;->a(D,D,D,D)D
+0004f  010b                     move-result-wide
+00050  0330 1301                op_30
+00052  033b 0013                if-gez
+00054  0362 031f                sget-object  # FIELD La/a/a/f/g$c;->i:La/a/a/f/g$c;
+00056  1071 04a5 0003           invoke-static  # CALL La/a/a/f/g$c;->d(La/a/a/f/g$c;)I
+00059  030a                     move-result
+0005a  3383                     op_83
+0005b  0330 0301                op_30
+0005d  033c 0008                if-gtz
+0005f  1305 0001                op_05
+00061  1508 0016                op_08
+00063  1208 0017                op_08
+00065  0178 0922 001a           invoke-interface/range  # CALL Landroid/database/Cursor;->moveToNext()Z
+00068  0808 001a                op_08
+0006a  c228                     goto
+0006b  0808 001a                op_08
+0006d  2b28                     goto
+0006e  000d                     op_0d
+0006f  1528                     goto
+00070  1a08 0008                op_08
+00072  0a28                     goto
+00073  1a08 0008                op_08
+00075  f628                     goto
+00076  1a08 0008                op_08
+00078  1208 000b                op_08
+0007a  1508 0012                op_08
+0007c  1a38 0021                if-eqz
+0007e  0808 001a                op_08
+00080  1a28                     goto
+00081  000d                     op_0d
+00082  1a08 0008                op_08
+00084  0b08 001a                op_08
+00086  0728                     goto
+00087  1a08 0008                op_08
+00089  1208 000b                op_08
+0008b  0b28                     goto
+0008c  000d                     op_0d
+0008d  0b38 0005                if-eqz
+0008f  1072 0914 000b           invoke-interface  # CALL Landroid/database/Cursor;->close()V
+00092  0027                     throw
+00093  b807                     op_07
+00094  1208 0008                op_08
+00096  1508 0012                op_08
+00098  0838 0005                if-eqz
+0009a  1072 0914 0008           invoke-interface  # CALL Landroid/database/Cursor;->close()V
+0009d  0812                     const/4
+0009e  1239 00c1                if-nez
+000a0  0162 031e                sget-object  # FIELD La/a/a/f/g$c;->h:La/a/a/f/g$c;
+000a2  0252 0323                iget  # FIELD La/a/a/f/g;->b:I
+000a4  0305 0023                op_05
+000a6  0505 0025                op_05
+000a8  0677 049d 0001           invoke-static/range  # CALL La/a/a/f/g$c;->a(La/a/a/f/g$c;,I,D,D)Ljava/lang/String;
+000ab  010c                     move-result-object
+000ac  0254 0324                iget-object  # FIELD La/a/a/f/g;->c:Landroid/database/sqlite/SQLiteDatabase;
+000ae  306e 093b 0b12           invoke-virtual  # CALL Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;,[Ljava/lang/String;)Landroid/database/Cursor;
+000b1  090c                     move-result-object
+000b2  1072 0921 0009           invoke-interface  # CALL Landroid/database/Cursor;->moveToFirst()Z
+000b5  010a                     move-result
+000b6  0138 0084                if-eqz
+000b8  0605 0023                op_05
+000ba  0405 0025                op_05
+000bc  5e71 29c4 5476           invoke-static  # CALL Lcom/baidu/location/Jni;->a(D,D,Ljava/lang/String;)[D
+000bf  130c                     move-result-object
+000c0  1072 091f 0009           invoke-interface  # CALL Landroid/database/Cursor;->isAfterLast()Z
+000c3  010a                     move-result
+000c4  0139 0076                if-nez
+000c6  2072 091e 00a9           invoke-interface  # CALL Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+000c9  140c                     move-result-object
+000ca  2072 0918 00d9           invoke-interface  # CALL Landroid/database/Cursor;->getDouble(I)D
+000cd  010b                     move-result-wide
+000ce  2072 0918 00f9           invoke-interface  # CALL Landroid/database/Cursor;->getDouble(I)D
+000d1  0a0b                     move-result-wide
+000d2  5e71 29c4 ba21           invoke-static  # CALL Lcom/baidu/location/Jni;->a(D,D,Ljava/lang/String;)[D
+000d5  010c                     move-result-object
+000d6  2072 0918 00c9           invoke-interface  # CALL Landroid/database/Cursor;->getDouble(I)D
+000d9  020b                     move-result-wide
+000da  6a12                     const/4
+000db  2072 0918 00a9           invoke-interface  # CALL Landroid/database/Cursor;->getDouble(I)D
+000de  0a0b                     move-result-wide
+000df  5e71 29c4 ba32           invoke-static  # CALL Lcom/baidu/location/Jni;->a(D,D,Ljava/lang/String;)[D
+000e2  020c                     move-result-object
+000e3  0a45 0813                aget-wide
+000e5  1312                     const/4
+000e6  1845 0313                aget-wide
+000e8  1a45 0801                aget-wide
+000ea  1c45 0301                aget-wide
+000ec  1e45 0802                aget-wide
+000ee  2045 0302                aget-wide
+000f0  0108 0022                op_08
+000f2  a204                     op_04
+000f3  0405 0018                op_05
+000f5  0605 001a                op_05
+000f7  8a01                     op_01
+000f8  1808 0009                op_08
+000fa  0805 001c                op_05
+000fc  0f12                     const/4
+000fd  1613 0002                const/16
+000ff  0a05 001e                op_05
+00101  1702 000c                op_02
+00103  1a02 000d                op_02
+00105  0c05 0020                op_05
+00107  0d74 04ab 0001           invoke-virtual/range  # CALL La/a/a/f/g;->a(D,D,D,D,D,D)D
+0010a  010b                     move-result-wide
+0010b  0330 1001                op_30
+0010d  033b 0011                if-gez
+0010f  0362 031e                sget-object  # FIELD La/a/a/f/g$c;->h:La/a/a/f/g$c;
+00111  1071 04a5 0003           invoke-static  # CALL La/a/a/f/g$c;->d(La/a/a/f/g$c;)I
+00114  030a                     move-result
+00115  3383                     op_83
+00116  0330 0301                op_30
+00118  033c 0006                if-gtz
+0011a  1005 0001                op_05
+0011c  1508 0014                op_08
+0011e  0178 0922 0018           invoke-interface/range  # CALL Landroid/database/Cursor;->moveToNext()Z
+00121  0605 0023                op_05
+00123  0405 0025                op_05
+00125  fb07                     op_07
+00126  0a02 0016                op_02
+00128  0c02 0017                op_02
+0012a  0908 0018                op_08
+0012c  0d02 001a                op_02
+0012e  0812                     const/4
+0012f  4f12                     const/4
+00130  9028                     goto
+00131  0908 0018                op_08
+00133  2628                     goto
+00134  000d                     op_0d
+00135  1028                     goto
+00136  1808 0009                op_08
+00138  0f12                     const/4
+00139  1228                     goto
+0013a  1808 0009                op_08
+0013c  bf07                     op_07
+0013d  1838 0023                if-eqz
+0013f  0908 0018                op_08
+00141  1a28                     goto
+00142  000d                     op_0d
+00143  1808 0009                op_08
+00145  0b08 0018                op_08
+00147  0928                     goto
+00148  1808 0009                op_08
+0014a  bf07                     op_07
+0014b  0b08 0018                op_08
+0014d  0b28                     goto
+0014e  000d                     op_0d
+0014f  bf07                     op_07
+00150  0b38 0005                if-eqz
+00152  1072 0914 000b           invoke-interface  # CALL Landroid/database/Cursor;->close()V
+00155  0027                     throw
+00156  bf07                     op_07
+00157  fb07                     op_07
+00158  b907                     op_07
+00159  0938 0007                if-eqz
+0015b  1072 0914 0009           invoke-interface  # CALL Landroid/database/Cursor;->close()V
+0015e  0228                     goto
+0015f  bf07                     op_07
+00160  0262 031d                sget-object  # FIELD La/a/a/f/g$c;->g:La/a/a/f/g$c;
+00162  0352 0323                iget  # FIELD La/a/a/f/g;->b:I
+00164  0405 0023                op_05
+00166  0605 0025                op_05
+00168  0677 049d 0002           invoke-static/range  # CALL La/a/a/f/g$c;->a(La/a/a/f/g$c;,I,D,D)Ljava/lang/String;
+0016b  010c                     move-result-object
+0016c  0054 0324                iget-object  # FIELD La/a/a/f/g;->c:Landroid/database/sqlite/SQLiteDatabase;
+0016e  306e 093b 0f10           invoke-virtual  # CALL Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;,[Ljava/lang/String;)Landroid/database/Cursor;
+00171  0b0c                     move-result-object
+00172  1072 0921 000b           invoke-interface  # CALL Landroid/database/Cursor;->moveToFirst()Z
+00175  000a                     move-result
+00176  0038 004e                if-eqz
+00178  1072 091f 000b           invoke-interface  # CALL Landroid/database/Cursor;->isAfterLast()Z
+0017b  000a                     move-result
+0017c  0039 0048                if-nez
+0017e  001a 1ada                const-string  # STR "country"
+00180  2072 0915 000b           invoke-interface  # CALL Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+00183  000a                     move-result
+00184  2072 091e 000b           invoke-interface  # CALL Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+00187  000c                     move-result-object
+00188  011a 1adc                const-string  # STR "countrycode"
+0018a  2072 0915 001b           invoke-interface  # CALL Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+0018d  010a                     move-result
+0018e  2072 091e 001b           invoke-interface  # CALL Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+00191  010c                     move-result-object
+00192  021a 23a3                const-string  # STR "province"
+00194  2072 0915 002b           invoke-interface  # CALL Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+00197  020a                     move-result
+00198  2072 091e 002b           invoke-interface  # CALL Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+0019b  020c                     move-result-object
+0019c  031a 1a48                const-string  # STR "city"
+0019e  2072 0915 003b           invoke-interface  # CALL Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+001a1  030a                     move-result
+001a2  2072 091e 003b           invoke-interface  # CALL Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+001a5  030c                     move-result-object
+001a6  041a 1a4a                const-string  # STR "citycode"
+001a8  2072 0915 004b           invoke-interface  # CALL Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+001ab  040a                     move-result
+001ac  2072 091e 004b           invoke-interface  # CALL Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+001af  040c                     move-result-object
+001b0  051a 1b5a                const-string  # STR "district"
+001b2  2072 0915 005b           invoke-interface  # CALL Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+001b5  050a                     move-result
+001b6  2072 091e 005b           invoke-interface  # CALL Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+001b9  050c                     move-result-object
+001ba  0f07                     op_07
+001bb  0e28                     goto
+001bc  f407                     op_07
+001bd  2928                     goto
+001be  f307                     op_07
+001bf  1728                     goto
+001c0  f207                     op_07
+001c1  1428                     goto
+001c2  f107                     op_07
+001c3  1128                     goto
+001c4  f107                     op_07
+001c5  1207                     op_07
+001c6  2307                     op_07
+001c7  3407                     op_07
+001c8  4507                     op_07
+001c9  0b38 0005                if-eqz
+001cb  f007                     op_07
+001cc  5f07                     op_07
+001cd  1b28                     goto
+001ce  5b07                     op_07
+001cf  1e28                     goto
+001d0  000d                     op_0d
+001d1  0928                     goto
+001d2  f007                     op_07
+001d3  0107                     op_07
+001d4  1207                     op_07
+001d5  2307                     op_07
+001d6  3407                     op_07
+001d7  0f28                     goto
+001d8  000d                     op_0d
+001d9  fb07                     op_07
+001da  0b38 0005                if-eqz
+001dc  1072 0914 000b           invoke-interface  # CALL Landroid/database/Cursor;->close()V
+001df  0027                     throw
+001e0  f007                     op_07
+001e1  0107                     op_07
+001e2  1207                     op_07
+001e3  2307                     op_07
+001e4  3407                     op_07
+001e5  4b07                     op_07
+001e6  0b38 0005                if-eqz
+001e8  1072 0914 000b           invoke-interface  # CALL Landroid/database/Cursor;->close()V
+001eb  fb07                     op_07
+001ec  0f07                     op_07
+001ed  0f38 0012                if-eqz
+001ef  0022 0683                new-instance  # TYPE Ljava/lang/String;
+001f1  106e 2d07 000f           invoke-virtual  # CALL Ljava/lang/String;->getBytes()[B
+001f4  050c                     move-result-object
+001f5  0612                     const/4
+001f6  2071 1c55 0065           invoke-static  # CALL Landroid/util/Base64;->decode([B,I)[B
+001f9  050c                     move-result-object
+001fa  2070 2cf8 0050           invoke-direct  # CALL Ljava/lang/String;-><init>([B)V
+001fd  0f07                     op_07
+001fe  0228                     goto
+001ff  0612                     const/4
+00200  0138 0010                if-eqz
+00202  0022 0683                new-instance  # TYPE Ljava/lang/String;
+00204  106e 2d07 0001           invoke-virtual  # CALL Ljava/lang/String;->getBytes()[B
+00207  010c                     move-result-object
+00208  2071 1c55 0061           invoke-static  # CALL Landroid/util/Base64;->decode([B,I)[B
+0020b  010c                     move-result-object
+0020c  2070 2cf8 0010           invoke-direct  # CALL Ljava/lang/String;-><init>([B)V
+0020f  0107                     op_07
+00210  0238 0010                if-eqz
+00212  0022 0683                new-instance  # TYPE Ljava/lang/String;
+00214  106e 2d07 0002           invoke-virtual  # CALL Ljava/lang/String;->getBytes()[B
+00217  020c                     move-result-object
+00218  2071 1c55 0062           invoke-static  # CALL Landroid/util/Base64;->decode([B,I)[B
+0021b  020c                     move-result-object
+0021c  2070 2cf8 0020           invoke-direct  # CALL Ljava/lang/String;-><init>([B)V
+0021f  0207                     op_07
+00220  0338 0010                if-eqz
+00222  0022 0683                new-instance  # TYPE Ljava/lang/String;
+00224  106e 2d07 0003           invoke-virtual  # CALL Ljava/lang/String;->getBytes()[B
+00227  030c                     move-result-object
+00228  2071 1c55 0063           invoke-static  # CALL Landroid/util/Base64;->decode([B,I)[B
+0022b  030c                     move-result-object
+0022c  2070 2cf8 0030           invoke-direct  # CALL Ljava/lang/String;-><init>([B)V
+0022f  0307                     op_07
+00230  0438 0010                if-eqz
+00232  0022 0683                new-instance  # TYPE Ljava/lang/String;
+00234  106e 2d07 0004           invoke-virtual  # CALL Ljava/lang/String;->getBytes()[B
+00237  040c                     move-result-object
+00238  2071 1c55 0064           invoke-static  # CALL Landroid/util/Base64;->decode([B,I)[B
+0023b  040c                     move-result-object
+0023c  2070 2cf8 0040           invoke-direct  # CALL Ljava/lang/String;-><init>([B)V
+0023f  0407                     op_07
+00240  0b38 0010                if-eqz
+00242  0022 0683                new-instance  # TYPE Ljava/lang/String;
+00244  106e 2d07 000b           invoke-virtual  # CALL Ljava/lang/String;->getBytes()[B
+00247  050c                     move-result-object
+00248  2071 1c55 0065           invoke-static  # CALL Landroid/util/Base64;->decode([B,I)[B
+0024b  050c                     move-result-object
+0024c  2070 2cf8 0050           invoke-direct  # CALL Ljava/lang/String;-><init>([B)V
+0024f  0b07                     op_07
+00250  1538 0010                if-eqz
+00252  0022 0683                new-instance  # TYPE Ljava/lang/String;
+00254  0174 2d07 0015           invoke-virtual/range  # CALL Ljava/lang/String;->getBytes()[B
+00257  050c                     move-result-object
+00258  2071 1c55 0065           invoke-static  # CALL Landroid/util/Base64;->decode([B,I)[B
+0025b  050c                     move-result-object
+0025c  2070 2cf8 0050           invoke-direct  # CALL Ljava/lang/String;-><init>([B)V
+0025f  0328                     goto
+00260  0008 0015                op_08
+00262  1238 0010                if-eqz
+00264  0522 0683                new-instance  # TYPE Ljava/lang/String;
+00266  0174 2d07 0012           invoke-virtual/range  # CALL Ljava/lang/String;->getBytes()[B
+00269  070c                     move-result-object
+0026a  2071 1c55 0067           invoke-static  # CALL Landroid/util/Base64;->decode([B,I)[B
+0026d  060c                     move-result-object
+0026e  2070 2cf8 0065           invoke-direct  # CALL Ljava/lang/String;-><init>([B)V
+00271  0328                     goto
+00272  0508 0012                op_08
+00274  0622 05f7                new-instance  # TYPE Lcom/baidu/location/a$a;
+00276  1070 29d1 0006           invoke-direct  # CALL Lcom/baidu/location/a$a;-><init>()V
+00279  206e 29d9 00f6           invoke-virtual  # CALL Lcom/baidu/location/a$a;->d(Ljava/lang/String;)Lcom/baidu/location/a$a;
+0027c  206e 29db 0016           invoke-virtual  # CALL Lcom/baidu/location/a$a;->e(Ljava/lang/String;)Lcom/baidu/location/a$a;
+0027f  206e 29df 0026           invoke-virtual  # CALL Lcom/baidu/location/a$a;->g(Ljava/lang/String;)Lcom/baidu/location/a$a;
+00282  206e 29d5 0036           invoke-virtual  # CALL Lcom/baidu/location/a$a;->b(Ljava/lang/String;)Lcom/baidu/location/a$a;
+00285  206e 29d7 0046           invoke-virtual  # CALL Lcom/baidu/location/a$a;->c(Ljava/lang/String;)Lcom/baidu/location/a$a;
+00288  206e 29dd 00b6           invoke-virtual  # CALL Lcom/baidu/location/a$a;->f(Ljava/lang/String;)Lcom/baidu/location/a$a;
+0028b  206e 29e1 0006           invoke-virtual  # CALL Lcom/baidu/location/a$a;->h(Ljava/lang/String;)Lcom/baidu/location/a$a;
+0028e  206e 29e3 0056           invoke-virtual  # CALL Lcom/baidu/location/a$a;->i(Ljava/lang/String;)Lcom/baidu/location/a$a;
+00291  106e 29d3 0006           invoke-virtual  # CALL Lcom/baidu/location/a$a;->a()Lcom/baidu/location/a;
+00294  000c                     move-result-object
+00295  0011                     return-object
+
+### La/a/a/f/g;->a()Lorg/json/JSONObject;  [access=0x1, regs=22, ins=1, outs=3, code_off=0x6d300]
+00000  0008 0015                op_08
+00002  011a 18e5                const-string  # STR "addr"
+00004  021a 235d                const-string  # STR "poi"
+00006  0322 071a                new-instance  # TYPE Lorg/json/JSONObject;
+00008  1070 2f13 0003           invoke-direct  # CALL Lorg/json/JSONObject;-><init>()V
+0000b  0422 0684                new-instance  # TYPE Ljava/lang/StringBuffer;
+0000d  1070 2d25 0004           invoke-direct  # CALL Ljava/lang/StringBuffer;-><init>()V
+00010  0522 0684                new-instance  # TYPE Ljava/lang/StringBuffer;
+00012  1070 2d25 0005           invoke-direct  # CALL Ljava/lang/StringBuffer;-><init>()V
+00015  0071 2d46 0000           invoke-static  # CALL Ljava/lang/System;->currentTimeMillis()J
+00018  060b                     move-result-wide
+00019  0817 5c00 0526           const-wide/32
+0001c  86be                     op_be
+0001d  6684                     op_84
+0001e  071a 13ba                const-string  # STR "SELECT * FROM RGCUPDATE WHERE type=%d AND %d > timestamp+%d ORDER BY gridkey"
+00020  0954 0324                iget-object  # FIELD La/a/a/f/g;->c:Landroid/database/sqlite/SQLiteDatabase;
+00022  0c12                     const/4
+00023  0938 015e                if-eqz
+00025  106e 0936 0009           invoke-virtual  # CALL Landroid/database/sqlite/SQLiteDatabase;->isOpen()Z
+00028  090a                     move-result
+00029  0938 0158                if-eqz
+0002b  0922 0718                new-instance  # TYPE Lorg/json/JSONArray;
+0002d  1070 2f09 0009           invoke-direct  # CALL Lorg/json/JSONArray;-><init>()V
+00030  0d22 0718                new-instance  # TYPE Lorg/json/JSONArray;
+00032  1070 2f09 000d           invoke-direct  # CALL Lorg/json/JSONArray;-><init>()V
+00035  0e22 0718                new-instance  # TYPE Lorg/json/JSONArray;
+00037  1070 2f09 000e           invoke-direct  # CALL Lorg/json/JSONArray;-><init>()V
+0003a  0f22 0718                new-instance  # TYPE Lorg/json/JSONArray;
+0003c  1070 2f09 000f           invoke-direct  # CALL Lorg/json/JSONArray;-><init>()V
+0003f  0854 0324                iget-object  # FIELD La/a/a/f/g;->c:Landroid/database/sqlite/SQLiteDatabase;
+00041  3a12                     const/4
+00042  ab23 075d                new-array  # TYPE [Ljava/lang/Object;
+00044  1071 2cae 000c           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+00047  130c                     move-result-object
+00048  134d 0c0b                aput-object
+0004a  1071 2cae 0006           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+0004d  130c                     move-result-object
+0004e  1213 0001                const/16
+00050  134d 120b                aput-object
+00052  0c54 0322                iget-object  # FIELD La/a/a/f/g;->a:La/a/a/f/d;
+00054  106e 0465 000c           invoke-virtual  # CALL La/a/a/f/d;->c()La/a/a/f/c;
+00057  0c0c                     move-result-object
+00058  106e 0416 000c           invoke-virtual  # CALL La/a/a/f/c;->b()I
+0005b  0c0a                     move-result
+0005c  1071 2cae 000c           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+0005f  0c0c                     move-result-object
+00060  1113 0002                const/16
+00062  0c4d 110b                aput-object
+00064  2071 2d05 00b7           invoke-static  # CALL Ljava/lang/String;->format(Ljava/lang/String;,[Ljava/lang/Object;)Ljava/lang/String;
+00067  0b0c                     move-result-object
+00068  0c12                     const/4
+00069  306e 093b 0cb8           invoke-virtual  # CALL Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;,[Ljava/lang/String;)Landroid/database/Cursor;
+0006c  080c                     move-result-object
+0006d  0b54 0324                iget-object  # FIELD La/a/a/f/g;->c:Landroid/database/sqlite/SQLiteDatabase;
+0006f  aa23 075d                new-array  # TYPE [Ljava/lang/Object;
+00071  1c12                     const/4
+00072  1071 2cae 000c           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+00075  120c                     move-result-object
+00076  1313 0000                const/16
+00078  124d 130a                aput-object
+0007a  1071 2cae 0006           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+0007d  060c                     move-result-object
+0007e  064d 0c0a                aput-object
+00080  0654 0322                iget-object  # FIELD La/a/a/f/g;->a:La/a/a/f/d;
+00082  106e 0465 0006           invoke-virtual  # CALL La/a/a/f/d;->c()La/a/a/f/c;
+00085  060c                     move-result-object
+00086  106e 0429 0006           invoke-virtual  # CALL La/a/a/f/c;->e()I
+00089  060a                     move-result
+0008a  1071 2cae 0006           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+0008d  060c                     move-result-object
+0008e  2c12                     const/4
+0008f  064d 0c0a                aput-object
+00091  2071 2d05 00a7           invoke-static  # CALL Ljava/lang/String;->format(Ljava/lang/String;,[Ljava/lang/Object;)Ljava/lang/String;
+00094  060c                     move-result-object
+00095  0c12                     const/4
+00096  306e 093b 0c6b           invoke-virtual  # CALL Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;,[Ljava/lang/String;)Landroid/database/Cursor;
+00099  060c                     move-result-object
+0009a  1072 0921 0008           invoke-interface  # CALL Landroid/database/Cursor;->moveToFirst()Z
+0009d  070a                     move-result
+0009e  0a1a 01c9                const-string  # STR ","
+000a0  0b1a 00a7                const-string  # STR "\""
+000a2  0738 0050                if-eqz
+000a4  0722 06d5                new-instance  # TYPE Ljava/util/HashSet;
+000a6  1070 2e33 0007           invoke-direct  # CALL Ljava/util/HashSet;-><init>()V
+000a9  1072 091f 0008           invoke-interface  # CALL Landroid/database/Cursor;->isAfterLast()Z
+000ac  100a                     move-result
+000ad  1039 002f                if-nez
+000af  0c12                     const/4
+000b0  2072 091e 00c8           invoke-interface  # CALL Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+000b3  000c                     move-result-object
+000b4  1408 0002                op_08
+000b6  1c12                     const/4
+000b7  2072 091e 00c8           invoke-interface  # CALL Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+000ba  020c                     move-result-object
+000bb  206e 2f0f 000e           invoke-virtual  # CALL Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
+000be  206e 2e35 0027           invoke-virtual  # CALL Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+000c1  106e 2d31 0005           invoke-virtual  # CALL Ljava/lang/StringBuffer;->length()I
+000c4  020a                     move-result
+000c5  023d 0005                if-lez
+000c7  206e 2d2e 00a5           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+000ca  206e 2d2e 00b5           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+000cd  206e 2d2e 0005           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+000d0  206e 2d2e 00b5           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+000d3  1072 0922 0008           invoke-interface  # CALL Landroid/database/Cursor;->moveToNext()Z
+000d6  0c12                     const/4
+000d7  0008 0015                op_08
+000d9  0208 0014                op_08
+000db  ce28                     goto
+000dc  1408 0002                op_08
+000de  106e 2e3c 0007           invoke-virtual  # CALL Ljava/util/HashSet;->size()I
+000e1  000a                     move-result
+000e2  0223 075f                new-array  # TYPE [Ljava/lang/String;
+000e4  206e 2e3d 0027           invoke-virtual  # CALL Ljava/util/HashSet;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+000e7  0712                     const/4
+000e8  0735 000c                if-ge
+000ea  0c46 0702                aget-object
+000ec  206e 2f0f 00cf           invoke-virtual  # CALL Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
+000ef  07d8 0107                op_d8
+000f1  f728                     goto
+000f2  1408 0002                op_08
+000f4  1072 0921 0006           invoke-interface  # CALL Landroid/database/Cursor;->moveToFirst()Z
+000f7  000a                     move-result
+000f8  0038 0047                if-eqz
+000fa  0022 06d5                new-instance  # TYPE Ljava/util/HashSet;
+000fc  1070 2e33 0000           invoke-direct  # CALL Ljava/util/HashSet;-><init>()V
+000ff  1072 091f 0006           invoke-interface  # CALL Landroid/database/Cursor;->isAfterLast()Z
+00102  020a                     move-result
+00103  0239 0028                if-nez
+00105  0212                     const/4
+00106  2072 091e 0026           invoke-interface  # CALL Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+00109  070c                     move-result-object
+0010a  1212                     const/4
+0010b  2072 091e 0026           invoke-interface  # CALL Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+0010e  0c0c                     move-result-object
+0010f  206e 2f0f 0079           invoke-virtual  # CALL Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
+00112  206e 2e35 00c0           invoke-virtual  # CALL Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+00115  106e 2d31 0004           invoke-virtual  # CALL Ljava/lang/StringBuffer;->length()I
+00118  020a                     move-result
+00119  023d 0005                if-lez
+0011b  206e 2d2e 00a4           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+0011e  206e 2d2e 00b4           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+00121  206e 2d2e 0074           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+00124  206e 2d2e 00b4           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+00127  1072 0922 0006           invoke-interface  # CALL Landroid/database/Cursor;->moveToNext()Z
+0012a  d528                     goto
+0012b  106e 2e3c 0000           invoke-virtual  # CALL Ljava/util/HashSet;->size()I
+0012e  020a                     move-result
+0012f  2723 075f                new-array  # TYPE [Ljava/lang/String;
+00131  206e 2e3d 0070           invoke-virtual  # CALL Ljava/util/HashSet;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+00134  0012                     const/4
+00135  2035 000a                if-ge
+00137  0a46 0007                aget-object
+00139  206e 2f0f 00ad           invoke-virtual  # CALL Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
+0013c  00d8 0100                op_d8
+0013e  f728                     goto
+0013f  106e 2f0d 000e           invoke-virtual  # CALL Lorg/json/JSONArray;->length()I
+00142  000a                     move-result
+00143  021a 2840                const-string  # STR "ver"
+00145  071a 1f05                const-string  # STR "gk"
+00147  0038 0010                if-eqz
+00149  0022 071a                new-instance  # TYPE Lorg/json/JSONObject;
+0014b  1070 2f13 0000           invoke-direct  # CALL Lorg/json/JSONObject;-><init>()V
+0014e  306e 2f2b 0e70           invoke-virtual  # CALL Lorg/json/JSONObject;->put(Ljava/lang/String;,Ljava/lang/Object;)Lorg/json/JSONObject;
+00151  306e 2f2b 0f20           invoke-virtual  # CALL Lorg/json/JSONObject;->put(Ljava/lang/String;,Ljava/lang/Object;)Lorg/json/JSONObject;
+00154  306e 2f2b 0013           invoke-virtual  # CALL Lorg/json/JSONObject;->put(Ljava/lang/String;,Ljava/lang/Object;)Lorg/json/JSONObject;
+00157  106e 2f0d 0009           invoke-virtual  # CALL Lorg/json/JSONArray;->length()I
+0015a  000a                     move-result
+0015b  0038 0013                if-eqz
+0015d  0022 071a                new-instance  # TYPE Lorg/json/JSONObject;
+0015f  1070 2f13 0000           invoke-direct  # CALL Lorg/json/JSONObject;-><init>()V
+00162  306e 2f2b 0970           invoke-virtual  # CALL Lorg/json/JSONObject;->put(Ljava/lang/String;,Ljava/lang/Object;)Lorg/json/JSONObject;
+00165  306e 2f2b 0d20           invoke-virtual  # CALL Lorg/json/JSONObject;->put(Ljava/lang/String;,Ljava/lang/Object;)Lorg/json/JSONObject;
+00168  0208 0014                op_08
+0016a  306e 2f2b 0023           invoke-virtual  # CALL Lorg/json/JSONObject;->put(Ljava/lang/String;,Ljava/lang/Object;)Lorg/json/JSONObject;
+0016d  0328                     goto
+0016e  0208 0014                op_08
+00170  6c07                     op_07
+00171  1228                     goto
+00172  0208 0014                op_08
+00174  0029 006a                goto/16
+00176  000d                     op_0d
+00177  0029 006c                goto/16
+00179  000d                     op_0d
+0017a  0612                     const/4
+0017b  0029 0068                goto/16
+0017d  8c07                     op_07
+0017e  0612                     const/4
+0017f  0029 0071                goto/16
+00181  0812                     const/4
+00182  0c12                     const/4
+00183  106e 2d31 0005           invoke-virtual  # CALL Ljava/lang/StringBuffer;->length()I
+00186  000a                     move-result
+00187  061a 1547                const-string  # STR "UPDATE RGCUPDATE SET timestamp=timestamp+1 WHERE type = %d AND gridkey IN (%s)"
+00189  003d 0023                if-lez
+0018b  0062 1d74                sget-object  # FIELD Ljava/util/Locale;->US:Ljava/util/Locale;
+0018d  2712                     const/4
+0018e  7923 075d                new-array  # TYPE [Ljava/lang/Object;
+00190  0712                     const/4
+00191  1071 2cae 0007           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+00194  0a0c                     move-result-object
+00195  0a4d 0709                aput-object
+00197  106e 2d34 0005           invoke-virtual  # CALL Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+0019a  050c                     move-result-object
+0019b  1712                     const/4
+0019c  054d 0709                aput-object
+0019e  3071 2d06 0960           invoke-static  # CALL Ljava/lang/String;->format(Ljava/util/Locale;,Ljava/lang/String;,[Ljava/lang/Object;)Ljava/lang/String;
+001a1  000c                     move-result-object
+001a2  0508 0015                op_08
+001a4  5754 0324                iget-object  # FIELD La/a/a/f/g;->c:Landroid/database/sqlite/SQLiteDatabase;
+001a6  0738 0008                if-eqz
+001a8  206e 0934 0007           invoke-virtual  # CALL Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+001ab  0328                     goto
+001ac  0508 0015                op_08
+001ae  106e 2d31 0004           invoke-virtual  # CALL Ljava/lang/StringBuffer;->length()I
+001b1  000a                     move-result
+001b2  003d 0020                if-lez
+001b4  0062 1d74                sget-object  # FIELD Ljava/util/Locale;->US:Ljava/util/Locale;
+001b6  2712                     const/4
+001b7  7723 075d                new-array  # TYPE [Ljava/lang/Object;
+001b9  1912                     const/4
+001ba  1071 2cae 0009           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+001bd  0a0c                     move-result-object
+001be  0b12                     const/4
+001bf  0a4d 0b07                aput-object
+001c1  106e 2d34 0004           invoke-virtual  # CALL Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+001c4  040c                     move-result-object
+001c5  044d 0907                aput-object
+001c7  3071 2d06 0760           invoke-static  # CALL Ljava/lang/String;->format(Ljava/util/Locale;,Ljava/lang/String;,[Ljava/lang/Object;)Ljava/lang/String;
+001ca  000c                     move-result-object
+001cb  5454 0324                iget-object  # FIELD La/a/a/f/g;->c:Landroid/database/sqlite/SQLiteDatabase;
+001cd  0438 0005                if-eqz
+001cf  206e 0934 0004           invoke-virtual  # CALL Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+001d2  0838 0005                if-eqz
+001d4  1072 0914 0008           invoke-interface  # CALL Landroid/database/Cursor;->close()V
+001d7  0c38 0024                if-eqz
+001d9  1f28                     goto
+001da  000d                     op_0d
+001db  c607                     op_07
+001dc  0728                     goto
+001dd  c607                     op_07
+001de  8c07                     op_07
+001df  1128                     goto
+001e0  000d                     op_0d
+001e1  0612                     const/4
+001e2  0812                     const/4
+001e3  0838 0005                if-eqz
+001e5  1072 0914 0008           invoke-interface  # CALL Landroid/database/Cursor;->close()V
+001e8  0638 0005                if-eqz
+001ea  1072 0914 0006           invoke-interface  # CALL Landroid/database/Cursor;->close()V
+001ed  0027                     throw
+001ee  0612                     const/4
+001ef  0c12                     const/4
+001f0  0c38 0005                if-eqz
+001f2  1072 0914 000c           invoke-interface  # CALL Landroid/database/Cursor;->close()V
+001f5  0638 0006                if-eqz
+001f7  6c07                     op_07
+001f8  1072 0914 000c           invoke-interface  # CALL Landroid/database/Cursor;->close()V
+001fb  206e 2f1c 0023           invoke-virtual  # CALL Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
+001fe  000a                     move-result
+001ff  0039 0009                if-nez
+00201  206e 2f1c 0013           invoke-virtual  # CALL Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
+00204  000a                     move-result
+00205  0039 0003                if-nez
+00207  0312                     const/4
+00208  0311                     return-object
+
+### La/a/a/f/g;->a(Lorg/json/JSONObject;)V  [access=0x1, regs=10, ins=2, outs=4, code_off=0x6d8ac]
+00000  8054 0324                iget-object  # FIELD La/a/a/f/g;->c:Landroid/database/sqlite/SQLiteDatabase;
+00002  0038 0085                if-eqz
+00004  106e 0936 0000           invoke-virtual  # CALL Landroid/database/sqlite/SQLiteDatabase;->isOpen()Z
+00007  000a                     move-result
+00008  0038 007f                if-eqz
+0000a  8054 0324                iget-object  # FIELD La/a/a/f/g;->c:Landroid/database/sqlite/SQLiteDatabase;
+0000c  106e 0930 0000           invoke-virtual  # CALL Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
+0000f  0071 04a7 0000           invoke-static  # CALL La/a/a/f/g$c;->values()[La/a/a/f/g$c;
+00012  000c                     move-result-object
+00013  0121                     array-length
+00014  0212                     const/4
+00015  1235 005b                if-ge
+00017  0346 0200                aget-object
+00019  1071 049c 0003           invoke-static  # CALL La/a/a/f/g$c;->a(La/a/a/f/g$c;)Ljava/lang/String;
+0001c  040c                     move-result-object
+0001d  206e 2f1c 0049           invoke-virtual  # CALL Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
+00020  040a                     move-result
+00021  0438 004c                if-eqz
+00023  1071 04a2 0003           invoke-static  # CALL La/a/a/f/g$c;->b(La/a/a/f/g$c;)Ljava/lang/String;
+00026  040c                     move-result-object
+00027  206e 2f1c 0049           invoke-virtual  # CALL Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
+0002a  040a                     move-result
+0002b  0438 000b                if-eqz
+0002d  1071 04a2 0003           invoke-static  # CALL La/a/a/f/g$c;->b(La/a/a/f/g$c;)Ljava/lang/String;
+00030  040c                     move-result-object
+00031  206e 2f1b 0049           invoke-virtual  # CALL Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+00034  040c                     move-result-object
+00035  0328                     goto
+00036  041a 0000                const-string  # STR ""
+00038  0522 06c8                new-instance  # TYPE Ljava/util/ArrayList;
+0003a  1070 2de7 0005           invoke-direct  # CALL Ljava/util/ArrayList;-><init>()V
+0003d  1071 049c 0003           invoke-static  # CALL La/a/a/f/g$c;->a(La/a/a/f/g$c;)Ljava/lang/String;
+00040  060c                     move-result-object
+00041  206e 2f19 0069           invoke-virtual  # CALL Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+00044  060c                     move-result-object
+00045  2071 049e 0063           invoke-static  # CALL La/a/a/f/g$c;->a(La/a/a/f/g$c;,Lorg/json/JSONObject;)Ljava/lang/String;
+00048  070c                     move-result-object
+00049  2072 2e52 0075           invoke-interface  # CALL Ljava/util/List;->add(Ljava/lang/Object;)Z
+0004c  1071 04a4 0003           invoke-static  # CALL La/a/a/f/g$c;->c(La/a/a/f/g$c;)I
+0004f  070a                     move-result
+00050  406e 04a0 7463           invoke-virtual  # CALL La/a/a/f/g$c;->a(Lorg/json/JSONObject;,Ljava/lang/String;,I)Ljava/util/List;
+00053  030c                     move-result-object
+00054  2072 2e53 0035           invoke-interface  # CALL Ljava/util/List;->addAll(Ljava/util/Collection;)Z
+00057  1072 2e59 0005           invoke-interface  # CALL Ljava/util/List;->iterator()Ljava/util/Iterator;
+0005a  030c                     move-result-object
+0005b  1072 2e43 0003           invoke-interface  # CALL Ljava/util/Iterator;->hasNext()Z
+0005e  040a                     move-result
+0005f  0438 000e                if-eqz
+00061  1072 2e44 0003           invoke-interface  # CALL Ljava/util/Iterator;->next()Ljava/lang/Object;
+00064  040c                     move-result-object
+00065  041f 0683                check-cast  # TYPE Ljava/lang/String;
+00067  8554 0324                iget-object  # FIELD La/a/a/f/g;->c:Landroid/database/sqlite/SQLiteDatabase;
+00069  206e 0934 0045           invoke-virtual  # CALL Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+0006c  ef28                     goto
+0006d  02d8 0102                op_d8
+0006f  a628                     goto
+00070  8954 0324                iget-object  # FIELD La/a/a/f/g;->c:Landroid/database/sqlite/SQLiteDatabase;
+00072  106e 093c 0009           invoke-virtual  # CALL Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
+00075  f912                     const/4
+00076  8959 0325                iput  # FIELD La/a/a/f/g;->d:I
+00078  8959 0326                iput  # FIELD La/a/a/f/g;->e:I
+0007a  8854 0324                iget-object  # FIELD La/a/a/f/g;->c:Landroid/database/sqlite/SQLiteDatabase;
+0007c  0828                     goto
+0007d  090d                     op_0d
+0007e  8854 0324                iget-object  # FIELD La/a/a/f/g;->c:Landroid/database/sqlite/SQLiteDatabase;
+00080  106e 0933 0008           invoke-virtual  # CALL Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
+00083  0927                     throw
+00084  106e 0933 0008           invoke-virtual  # CALL Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
+00087  000e                     return-void
+
+### La/a/a/f/g;->b(D,D)Ljava/util/List;  [access=0x1, regs=30, ins=5, outs=9, code_off=0x6d12c]
+00000  0008 0019                op_08
+00002  0a22 06c8                new-instance  # TYPE Ljava/util/ArrayList;
+00004  1070 2de7 000a           invoke-direct  # CALL Ljava/util/ArrayList;-><init>()V
+00007  0162 0320                sget-object  # FIELD La/a/a/f/g$c;->j:La/a/a/f/g$c;
+00009  0252 0323                iget  # FIELD La/a/a/f/g;->b:I
+0000b  0305 001a                op_05
+0000d  0505 001c                op_05
+0000f  0677 049d 0001           invoke-static/range  # CALL La/a/a/f/g$c;->a(La/a/a/f/g$c;,I,D,D)Ljava/lang/String;
+00012  010c                     move-result-object
+00013  0212                     const/4
+00014  0354 0324                iget-object  # FIELD La/a/a/f/g;->c:Landroid/database/sqlite/SQLiteDatabase;
+00016  306e 093b 0213           invoke-virtual  # CALL Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;,[Ljava/lang/String;)Landroid/database/Cursor;
+00019  0b0c                     move-result-object
+0001a  1072 0921 000b           invoke-interface  # CALL Landroid/database/Cursor;->moveToFirst()Z
+0001d  010a                     move-result
+0001e  0138 0079                if-eqz
+00020  0c12                     const/4
+00021  2d07                     op_07
+00022  ce01                     op_01
+00023  1072 091f 000b           invoke-interface  # CALL Landroid/database/Cursor;->isAfterLast()Z
+00026  010a                     move-result
+00027  0139 006f                if-nez
+00029  2072 091e 00cb           invoke-interface  # CALL Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+0002c  0f0c                     move-result-object
+0002d  2112                     const/4
+0002e  2072 091e 001b           invoke-interface  # CALL Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+00031  100c                     move-result-object
+00032  4112                     const/4
+00033  2072 0918 001b           invoke-interface  # CALL Landroid/database/Cursor;->getDouble(I)D
+00036  080b                     move-result-wide
+00037  5112                     const/4
+00038  2072 0918 001b           invoke-interface  # CALL Landroid/database/Cursor;->getDouble(I)D
+0003b  060b                     move-result-wide
+0003c  6112                     const/4
+0003d  2072 091b 001b           invoke-interface  # CALL Landroid/database/Cursor;->getInt(I)I
+00040  040a                     move-result
+00041  0108 0019                op_08
+00043  0205 001c                op_05
+00045  1102 0004                op_02
+00047  0405 001a                op_05
+00049  0974 04aa 0001           invoke-virtual/range  # CALL La/a/a/f/g;->a(D,D,D,D)D
+0004c  010b                     move-result-wide
+0004d  0362 0320                sget-object  # FIELD La/a/a/f/g$c;->j:La/a/a/f/g$c;
+0004f  1071 04a5 0003           invoke-static  # CALL La/a/a/f/g$c;->d(La/a/a/f/g$c;)I
+00052  030a                     move-result
+00053  3383                     op_83
+00054  0330 0301                op_30
+00056  033b 003c                if-gez
+00058  0322 060d                new-instance  # TYPE Lcom/baidu/location/j;
+0005a  0422 0683                new-instance  # TYPE Ljava/lang/String;
+0005c  106e 2d07 000f           invoke-virtual  # CALL Ljava/lang/String;->getBytes()[B
+0005f  050c                     move-result-object
+00060  2071 1c55 00c5           invoke-static  # CALL Landroid/util/Base64;->decode([B,I)[B
+00063  050c                     move-result-object
+00064  2070 2cf8 0054           invoke-direct  # CALL Ljava/lang/String;-><init>([B)V
+00067  0522 0683                new-instance  # TYPE Ljava/lang/String;
+00069  0174 2d07 0010           invoke-virtual/range  # CALL Ljava/lang/String;->getBytes()[B
+0006c  060c                     move-result-object
+0006d  2071 1c55 00c6           invoke-static  # CALL Landroid/util/Base64;->decode([B,I)[B
+00070  060c                     move-result-object
+00071  2070 2cf8 0065           invoke-direct  # CALL Ljava/lang/String;-><init>([B)V
+00074  1519 3ff0                const-wide/high16
+00076  171a 0000                const-string  # STR ""
+00078  181a 0000                const-string  # STR ""
+0007a  1208 0003                op_08
+0007c  1308 0004                op_08
+0007e  1408 0005                op_08
+00080  0776 2af6 0012           invoke-direct/range  # CALL Lcom/baidu/location/j;-><init>(Ljava/lang/String;,Ljava/lang/String;,D,Ljava/lang/String;,Ljava/lang/String;)V
+00083  118c                     op_8c
+00084  1071 2cd3 0001           invoke-static  # CALL Ljava/lang/Math;->round(F)I
+00087  010a                     move-result
+00088  0202 0011                op_02
+0008a  2071 04ac 0012           invoke-static  # CALL La/a/a/f/g;->a(I,I)I
+0008d  010a                     move-result
+0008e  e137 0004                if-le
+00090  1e01                     op_01
+00091  3d07                     op_07
+00092  1072 0922 000b           invoke-interface  # CALL Landroid/database/Cursor;->moveToNext()Z
+00095  8e28                     goto
+00096  d207                     op_07
+00097  0b38 0018                if-eqz
+00099  1328                     goto
+0009a  000d                     op_0d
+0009b  b207                     op_07
+0009c  0528                     goto
+0009d  2d07                     op_07
+0009e  b207                     op_07
+0009f  0928                     goto
+000a0  000d                     op_0d
+000a1  0238 0005                if-eqz
+000a3  1072 0914 0002           invoke-interface  # CALL Landroid/database/Cursor;->close()V
+000a6  0027                     throw
+000a7  2d07                     op_07
+000a8  2b07                     op_07
+000a9  d207                     op_07
+000aa  0b38 0005                if-eqz
+000ac  1072 0914 000b           invoke-interface  # CALL Landroid/database/Cursor;->close()V
+000af  0238 0005                if-eqz
+000b1  2072 2e52 002a           invoke-interface  # CALL Ljava/util/List;->add(Ljava/lang/Object;)Z
+000b4  0a11                     return-object
+
+### La/a/a/f/g;->b()Z  [access=0x1, regs=7, ins=1, outs=3, code_off=0x6c578]
+00000  6054 0322                iget-object  # FIELD La/a/a/f/g;->a:La/a/a/f/d;
+00002  106e 0465 0000           invoke-virtual  # CALL La/a/a/f/d;->c()La/a/a/f/c;
+00005  000c                     move-result-object
+00006  106e 043f 0000           invoke-virtual  # CALL La/a/a/f/c;->n()Z
+00009  000a                     move-result
+0000a  0112                     const/4
+0000b  0038 0061                if-eqz
+0000d  6052 0326                iget  # FIELD La/a/a/f/g;->e:I
+0000f  f212                     const/4
+00010  2033 005c                if-ne
+00012  6052 0325                iget  # FIELD La/a/a/f/g;->d:I
+00014  2033 0058                if-ne
+00016  6054 0324                iget-object  # FIELD La/a/a/f/g;->c:Landroid/database/sqlite/SQLiteDatabase;
+00018  0038 0054                if-eqz
+0001a  106e 0936 0000           invoke-virtual  # CALL Landroid/database/sqlite/SQLiteDatabase;->isOpen()Z
+0001d  000a                     move-result
+0001e  0038 004e                if-eqz
+00020  0012                     const/4
+00021  6254 0324                iget-object  # FIELD La/a/a/f/g;->c:Landroid/database/sqlite/SQLiteDatabase;
+00023  031a 13be                const-string  # STR "SELECT COUNT(*) FROM RGCSITE;"
+00025  306e 093b 0032           invoke-virtual  # CALL Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;,[Ljava/lang/String;)Landroid/database/Cursor;
+00028  020c                     move-result-object
+00029  1072 0921 0002           invoke-interface  # CALL Landroid/database/Cursor;->moveToFirst()Z
+0002c  2072 091b 0012           invoke-interface  # CALL Landroid/database/Cursor;->getInt(I)I
+0002f  030a                     move-result
+00030  6359 0326                iput  # FIELD La/a/a/f/g;->e:I
+00032  6354 0324                iget-object  # FIELD La/a/a/f/g;->c:Landroid/database/sqlite/SQLiteDatabase;
+00034  041a 13bd                const-string  # STR "SELECT COUNT(*) FROM RGCAREA;"
+00036  306e 093b 0043           invoke-virtual  # CALL Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;,[Ljava/lang/String;)Landroid/database/Cursor;
+00039  000c                     move-result-object
+0003a  1072 0921 0000           invoke-interface  # CALL Landroid/database/Cursor;->moveToFirst()Z
+0003d  2072 091b 0010           invoke-interface  # CALL Landroid/database/Cursor;->getInt(I)I
+00040  030a                     move-result
+00041  6359 0325                iput  # FIELD La/a/a/f/g;->d:I
+00043  0238 0005                if-eqz
+00045  1072 0914 0002           invoke-interface  # CALL Landroid/database/Cursor;->close()V
+00048  0038 0024                if-eqz
+0004a  1f28                     goto
+0004b  060d                     op_0d
+0004c  0107                     op_07
+0004d  2007                     op_07
+0004e  0728                     goto
+0004f  2507                     op_07
+00050  0207                     op_07
+00051  5007                     op_07
+00052  0f28                     goto
+00053  060d                     op_0d
+00054  0107                     op_07
+00055  0038 0005                if-eqz
+00057  1072 0914 0000           invoke-interface  # CALL Landroid/database/Cursor;->close()V
+0005a  0138 0005                if-eqz
+0005c  1072 0914 0001           invoke-interface  # CALL Landroid/database/Cursor;->close()V
+0005f  0627                     throw
+00060  0207                     op_07
+00061  0038 0005                if-eqz
+00063  1072 0914 0000           invoke-interface  # CALL Landroid/database/Cursor;->close()V
+00066  0238 0006                if-eqz
+00068  2007                     op_07
+00069  1072 0914 0000           invoke-interface  # CALL Landroid/database/Cursor;->close()V
+0006c  6052 0326                iget  # FIELD La/a/a/f/g;->e:I
+0006e  0039 0008                if-nez
+00070  6652 0325                iget  # FIELD La/a/a/f/g;->d:I
+00072  0639 0004                if-nez
+00074  1612                     const/4
+00075  060f                     return
+00076  010f                     return

@@ -1,0 +1,452 @@
+### Lb/b/c/d/b;-><clinit>()V  [access=0x10008, regs=4, ins=0, outs=4, code_off=0xb7184]
+00000  0022 0510                new-instance  # TYPE Lb/b/c/f/g;
+00002  0113 0010                const/16
+00004  2070 2429 0010           invoke-direct  # CALL Lb/b/c/f/g;-><init>(I)V
+00007  0069 137f                sput-object  # FIELD Lb/b/c/d/b;->a:Lb/b/c/f/g;
+00009  0022 0504                new-instance  # TYPE Lb/b/c/d/c;
+0000b  011a 1c0b                const-string  # STR "fonts"
+0000d  0213 000a                const/16
+0000f  0313 2710                const/16
+00011  4070 23b2 3210           invoke-direct  # CALL Lb/b/c/d/c;-><init>(Ljava/lang/String;,I,I)V
+00014  0069 1380                sput-object  # FIELD Lb/b/c/d/b;->b:Lb/b/c/d/c;
+00016  0022 067b                new-instance  # TYPE Ljava/lang/Object;
+00018  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+0001b  0069 1381                sput-object  # FIELD Lb/b/c/d/b;->c:Ljava/lang/Object;
+0001d  0022 0519                new-instance  # TYPE Lb/b/c/f/k;
+0001f  1070 2487 0000           invoke-direct  # CALL Lb/b/c/f/k;-><init>()V
+00022  0069 1382                sput-object  # FIELD Lb/b/c/d/b;->d:Lb/b/c/f/k;
+00024  0022 04fa                new-instance  # TYPE Lb/b/c/d/b$d;
+00026  1070 2392 0000           invoke-direct  # CALL Lb/b/c/d/b$d;-><init>()V
+00029  0069 1383                sput-object  # FIELD Lb/b/c/d/b;->e:Ljava/util/Comparator;
+0002b  000e                     return-void
+
+### Lb/b/c/d/b;->a(Landroid/content/pm/PackageManager;,Lb/b/c/d/a;,Landroid/content/res/Resources;)Landroid/content/pm/ProviderInfo;  [access=0x9, regs=8, ins=3, outs=3, code_off=0xb6a7c]
+00000  106e 2385 0006           invoke-virtual  # CALL Lb/b/c/d/a;->d()Ljava/lang/String;
+00003  000c                     move-result-object
+00004  0112                     const/4
+00005  306e 08a9 0105           invoke-virtual  # CALL Landroid/content/pm/PackageManager;->resolveContentProvider(Ljava/lang/String;,I)Landroid/content/pm/ProviderInfo;
+00008  020c                     move-result-object
+00009  0238 006a                if-eqz
+0000b  2354 0513                iget-object  # FIELD Landroid/content/pm/ProviderInfo;->packageName:Ljava/lang/String;
+0000d  106e 2386 0006           invoke-virtual  # CALL Lb/b/c/d/a;->e()Ljava/lang/String;
+00010  040c                     move-result-object
+00011  206e 2d03 0043           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+00014  030a                     move-result
+00015  0338 003b                if-eqz
+00017  2054 0513                iget-object  # FIELD Landroid/content/pm/ProviderInfo;->packageName:Ljava/lang/String;
+00019  0313 0040                const/16
+0001b  306e 089f 0305           invoke-virtual  # CALL Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;,I)Landroid/content/pm/PackageInfo;
+0001e  050c                     move-result-object
+0001f  5554 050f                iget-object  # FIELD Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
+00021  1071 23a5 0005           invoke-static  # CALL Lb/b/c/d/b;->a([Landroid/content/pm/Signature;)Ljava/util/List;
+00024  050c                     move-result-object
+00025  0062 1383                sget-object  # FIELD Lb/b/c/d/b;->e:Ljava/util/Comparator;
+00027  2071 2e16 0005           invoke-static  # CALL Ljava/util/Collections;->sort(Ljava/util/List;,Ljava/util/Comparator;)V
+0002a  2071 23a4 0076           invoke-static  # CALL Lb/b/c/d/b;->a(Lb/b/c/d/a;,Landroid/content/res/Resources;)Ljava/util/List;
+0002d  060c                     move-result-object
+0002e  1072 2e5d 0006           invoke-interface  # CALL Ljava/util/List;->size()I
+00031  070a                     move-result
+00032  7135 001c                if-ge
+00034  0722 06c8                new-instance  # TYPE Ljava/util/ArrayList;
+00036  2072 2e57 0016           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+00039  000c                     move-result-object
+0003a  001f 06cd                check-cast  # TYPE Ljava/util/Collection;
+0003c  2070 2de9 0007           invoke-direct  # CALL Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+0003f  0062 1383                sget-object  # FIELD Lb/b/c/d/b;->e:Ljava/util/Comparator;
+00041  2071 2e16 0007           invoke-static  # CALL Ljava/util/Collections;->sort(Ljava/util/List;,Ljava/util/Comparator;)V
+00044  2071 23a7 0075           invoke-static  # CALL Lb/b/c/d/b;->a(Ljava/util/List;,Ljava/util/List;)Z
+00047  070a                     move-result
+00048  0738 0003                if-eqz
+0004a  0211                     return-object
+0004b  01d8 0101                op_d8
+0004d  e128                     goto
+0004e  0512                     const/4
+0004f  0511                     return-object
+00050  0522 017f                new-instance  # TYPE Landroid/content/pm/PackageManager$NameNotFoundException;
+00052  0722 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00054  1070 2d35 0007           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00057  011a 07d8                const-string  # STR "Found content provider "
+00059  206e 2d3f 0017           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0005c  206e 2d3f 0007           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0005f  001a 01cf                const-string  # STR ", but package was not "
+00061  206e 2d3f 0007           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00064  106e 2386 0006           invoke-virtual  # CALL Lb/b/c/d/a;->e()Ljava/lang/String;
+00067  060c                     move-result-object
+00068  206e 2d3f 0067           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0006b  106e 2d44 0007           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0006e  060c                     move-result-object
+0006f  2070 0896 0065           invoke-direct  # CALL Landroid/content/pm/PackageManager$NameNotFoundException;-><init>(Ljava/lang/String;)V
+00072  0527                     throw
+00073  0522 017f                new-instance  # TYPE Landroid/content/pm/PackageManager$NameNotFoundException;
+00075  0622 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00077  1070 2d35 0006           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0007a  071a 1297                const-string  # STR "No package found for authority: "
+0007c  206e 2d3f 0076           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0007f  206e 2d3f 0006           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00082  106e 2d44 0006           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00085  060c                     move-result-object
+00086  2070 0896 0065           invoke-direct  # CALL Landroid/content/pm/PackageManager$NameNotFoundException;-><init>(Ljava/lang/String;)V
+00089  0527                     throw
+
+### Lb/b/c/d/b;->a(Landroid/content/Context;,Lb/b/c/d/a;,Lb/b/c/a/d/f$a;,Landroid/os/Handler;,Z,I,I)Landroid/graphics/Typeface;  [access=0x9, regs=9, ins=7, outs=5, code_off=0xb6ba0]
+00000  0022 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00002  1070 2d35 0000           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00005  106e 2384 0003           invoke-virtual  # CALL Lb/b/c/d/a;->c()Ljava/lang/String;
+00008  010c                     move-result-object
+00009  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0000c  011a 01f4                const-string  # STR "-"
+0000e  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00011  206e 2d3b 0080           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+00014  106e 2d44 0000           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00017  000c                     move-result-object
+00018  0162 137f                sget-object  # FIELD Lb/b/c/d/b;->a:Lb/b/c/f/g;
+0001a  206e 242f 0001           invoke-virtual  # CALL Lb/b/c/f/g;->b(Ljava/lang/Object;)Ljava/lang/Object;
+0001d  010c                     move-result-object
+0001e  011f 01b7                check-cast  # TYPE Landroid/graphics/Typeface;
+00020  0138 0008                if-eqz
+00022  0438 0005                if-eqz
+00024  206e 2302 0014           invoke-virtual  # CALL Lb/b/c/a/d/f$a;->a(Landroid/graphics/Typeface;)V
+00027  0111                     return-object
+00028  0638 001b                if-eqz
+0002a  f112                     const/4
+0002b  1733 0018                if-ne
+0002d  3071 23a3 0832           invoke-static  # CALL Lb/b/c/d/b;->a(Landroid/content/Context;,Lb/b/c/d/a;,I)Lb/b/c/d/b$g;
+00030  020c                     move-result-object
+00031  0438 000f                if-eqz
+00033  2352 137e                iget  # FIELD Lb/b/c/d/b$g;->b:I
+00035  0339 0008                if-nez
+00037  2354 137d                iget-object  # FIELD Lb/b/c/d/b$g;->a:Landroid/graphics/Typeface;
+00039  306e 2303 0534           invoke-virtual  # CALL Lb/b/c/a/d/f$a;->a(Landroid/graphics/Typeface;,Landroid/os/Handler;)V
+0003c  0428                     goto
+0003d  306e 2301 0534           invoke-virtual  # CALL Lb/b/c/a/d/f$a;->a(I,Landroid/os/Handler;)V
+00040  2254 137d                iget-object  # FIELD Lb/b/c/d/b$g;->a:Landroid/graphics/Typeface;
+00042  0211                     return-object
+00043  0122 04f7                new-instance  # TYPE Lb/b/c/d/b$a;
+00045  5070 2389 8321           invoke-direct  # CALL Lb/b/c/d/b$a;-><init>(Landroid/content/Context;,Lb/b/c/d/a;,I,Ljava/lang/String;)V
+00048  0212                     const/4
+00049  0638 000d                if-eqz
+0004b  0362 1380                sget-object  # FIELD Lb/b/c/d/b;->b:Lb/b/c/d/c;
+0004d  306e 23b3 0713           invoke-virtual  # CALL Lb/b/c/d/c;->a(Ljava/util/concurrent/Callable;,I)Ljava/lang/Object;
+00050  030c                     move-result-object
+00051  031f 04fd                check-cast  # TYPE Lb/b/c/d/b$g;
+00053  3254 137d                iget-object  # FIELD Lb/b/c/d/b$g;->a:Landroid/graphics/Typeface;
+00055  0211                     return-object
+00056  0439 0004                if-nez
+00058  2307                     op_07
+00059  0628                     goto
+0005a  0322 04f8                new-instance  # TYPE Lb/b/c/d/b$b;
+0005c  3070 238c 0543           invoke-direct  # CALL Lb/b/c/d/b$b;-><init>(Lb/b/c/a/d/f$a;,Landroid/os/Handler;)V
+0005f  0462 1381                sget-object  # FIELD Lb/b/c/d/b;->c:Ljava/lang/Object;
+00061  041d                     monitor-enter
+00062  0562 1382                sget-object  # FIELD Lb/b/c/d/b;->d:Lb/b/c/f/k;
+00064  206e 2494 0005           invoke-virtual  # CALL Lb/b/c/f/k;->containsKey(Ljava/lang/Object;)Z
+00067  050a                     move-result
+00068  0538 0011                if-eqz
+0006a  0338 000d                if-eqz
+0006c  0562 1382                sget-object  # FIELD Lb/b/c/d/b;->d:Lb/b/c/f/k;
+0006e  206e 2499 0005           invoke-virtual  # CALL Lb/b/c/f/k;->get(Ljava/lang/Object;)Ljava/lang/Object;
+00071  050c                     move-result-object
+00072  051f 06c8                check-cast  # TYPE Ljava/util/ArrayList;
+00074  206e 2deb 0035           invoke-virtual  # CALL Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+00077  041e                     monitor-exit
+00078  0211                     return-object
+00079  0338 000f                if-eqz
+0007b  0522 06c8                new-instance  # TYPE Ljava/util/ArrayList;
+0007d  1070 2de7 0005           invoke-direct  # CALL Ljava/util/ArrayList;-><init>()V
+00080  206e 2deb 0035           invoke-virtual  # CALL Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+00083  0362 1382                sget-object  # FIELD Lb/b/c/d/b;->d:Lb/b/c/f/k;
+00085  306e 249c 0503           invoke-virtual  # CALL Lb/b/c/f/k;->put(Ljava/lang/Object;,Ljava/lang/Object;)Ljava/lang/Object;
+00088  041e                     monitor-exit
+00089  0362 1380                sget-object  # FIELD Lb/b/c/d/b;->b:Lb/b/c/d/c;
+0008b  0422 04f9                new-instance  # TYPE Lb/b/c/d/b$c;
+0008d  2070 238f 0004           invoke-direct  # CALL Lb/b/c/d/b$c;-><init>(Ljava/lang/String;)V
+00090  306e 23b6 0413           invoke-virtual  # CALL Lb/b/c/d/c;->a(Ljava/util/concurrent/Callable;,Lb/b/c/d/c$d;)V
+00093  0211                     return-object
+00094  020d                     op_0d
+00095  041e                     monitor-exit
+00096  0227                     throw
+
+### Lb/b/c/d/b;->a(Landroid/content/Context;,Landroid/os/CancellationSignal;,Lb/b/c/d/a;)Lb/b/c/d/b$e;  [access=0x9, regs=5, ins=3, outs=4, code_off=0xb6d00]
+00000  106e 0846 0002           invoke-virtual  # CALL Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+00003  000c                     move-result-object
+00004  106e 0848 0002           invoke-virtual  # CALL Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+00007  010c                     move-result-object
+00008  3071 23a0 0140           invoke-static  # CALL Lb/b/c/d/b;->a(Landroid/content/pm/PackageManager;,Lb/b/c/d/a;,Landroid/content/res/Resources;)Landroid/content/pm/ProviderInfo;
+0000b  000c                     move-result-object
+0000c  0039 000a                if-nez
+0000e  0222 04fb                new-instance  # TYPE Lb/b/c/d/b$e;
+00010  1312                     const/4
+00011  0412                     const/4
+00012  3070 2395 0432           invoke-direct  # CALL Lb/b/c/d/b$e;-><init>(I,[Lb/b/c/d/b$f;)V
+00015  0211                     return-object
+00016  0054 0512                iget-object  # FIELD Landroid/content/pm/ProviderInfo;->authority:Ljava/lang/String;
+00018  4071 23a8 3042           invoke-static  # CALL Lb/b/c/d/b;->a(Landroid/content/Context;,Lb/b/c/d/a;,Ljava/lang/String;,Landroid/os/CancellationSignal;)[Lb/b/c/d/b$f;
+0001b  020c                     move-result-object
+0001c  0322 04fb                new-instance  # TYPE Lb/b/c/d/b$e;
+0001e  0412                     const/4
+0001f  3070 2395 0243           invoke-direct  # CALL Lb/b/c/d/b$e;-><init>(I,[Lb/b/c/d/b$f;)V
+00022  0311                     return-object
+
+### Lb/b/c/d/b;->a(Landroid/content/Context;,Lb/b/c/d/a;,I)Lb/b/c/d/b$g;  [access=0x8, regs=6, ins=3, outs=4, code_off=0xb6fbc]
+00000  0012                     const/4
+00001  3071 23a2 0403           invoke-static  # CALL Lb/b/c/d/b;->a(Landroid/content/Context;,Landroid/os/CancellationSignal;,Lb/b/c/d/a;)Lb/b/c/d/b$e;
+00004  040c                     move-result-object
+00005  106e 2397 0004           invoke-virtual  # CALL Lb/b/c/d/b$e;->b()I
+00008  010a                     move-result
+00009  d212                     const/4
+0000a  0139 0013                if-nez
+0000c  106e 2396 0004           invoke-virtual  # CALL Lb/b/c/d/b$e;->a()[Lb/b/c/d/b$f;
+0000f  040c                     move-result-object
+00010  4071 232b 5403           invoke-static  # CALL Lb/b/c/b/c;->a(Landroid/content/Context;,Landroid/os/CancellationSignal;,[Lb/b/c/d/b$f;,I)Landroid/graphics/Typeface;
+00013  030c                     move-result-object
+00014  0422 04fd                new-instance  # TYPE Lb/b/c/d/b$g;
+00016  0338 0003                if-eqz
+00018  0212                     const/4
+00019  3070 239e 0234           invoke-direct  # CALL Lb/b/c/d/b$g;-><init>(Landroid/graphics/Typeface;,I)V
+0001c  0411                     return-object
+0001d  106e 2397 0004           invoke-virtual  # CALL Lb/b/c/d/b$e;->b()I
+00020  030a                     move-result
+00021  1412                     const/4
+00022  4333 0003                if-ne
+00024  e212                     const/4
+00025  0322 04fd                new-instance  # TYPE Lb/b/c/d/b$g;
+00027  3070 239e 0203           invoke-direct  # CALL Lb/b/c/d/b$g;-><init>(Landroid/graphics/Typeface;,I)V
+0002a  0311                     return-object
+0002b  0322 04fd                new-instance  # TYPE Lb/b/c/d/b$g;
+0002d  f412                     const/4
+0002e  3070 239e 0403           invoke-direct  # CALL Lb/b/c/d/b$g;-><init>(Landroid/graphics/Typeface;,I)V
+00031  0311                     return-object
+
+### Lb/b/c/d/b;->a(Lb/b/c/d/a;,Landroid/content/res/Resources;)Ljava/util/List;  [access=0xa, regs=3, ins=2, outs=2, code_off=0xb70e4]
+00000  106e 2382 0001           invoke-virtual  # CALL Lb/b/c/d/a;->a()Ljava/util/List;
+00003  000c                     move-result-object
+00004  0038 0007                if-eqz
+00006  106e 2382 0001           invoke-virtual  # CALL Lb/b/c/d/a;->a()Ljava/util/List;
+00009  010c                     move-result-object
+0000a  0111                     return-object
+0000b  106e 2383 0001           invoke-virtual  # CALL Lb/b/c/d/a;->b()I
+0000e  010a                     move-result
+0000f  2071 22ea 0012           invoke-static  # CALL Lb/b/c/a/d/c;->a(Landroid/content/res/Resources;,I)Ljava/util/List;
+00012  010c                     move-result-object
+00013  0111                     return-object
+
+### Lb/b/c/d/b;->a([Landroid/content/pm/Signature;)Ljava/util/List;  [access=0xa, regs=4, ins=1, outs=2, code_off=0xb70a8]
+00000  0022 06c8                new-instance  # TYPE Ljava/util/ArrayList;
+00002  1070 2de7 0000           invoke-direct  # CALL Ljava/util/ArrayList;-><init>()V
+00005  0112                     const/4
+00006  3221                     array-length
+00007  2135 000e                if-ge
+00009  0246 0103                aget-object
+0000b  106e 08ac 0002           invoke-virtual  # CALL Landroid/content/pm/Signature;->toByteArray()[B
+0000e  020c                     move-result-object
+0000f  2072 2e52 0020           invoke-interface  # CALL Ljava/util/List;->add(Ljava/lang/Object;)Z
+00012  01d8 0101                op_d8
+00014  f228                     goto
+00015  0011                     return-object
+
+### Lb/b/c/d/b;->a(Landroid/content/Context;,[Lb/b/c/d/b$f;,Landroid/os/CancellationSignal;)Ljava/util/Map;  [access=0x9, regs=8, ins=3, outs=3, code_off=0xb711c]
+00000  0022 06d4                new-instance  # TYPE Ljava/util/HashMap;
+00002  1070 2e29 0000           invoke-direct  # CALL Ljava/util/HashMap;-><init>()V
+00005  6121                     array-length
+00006  0212                     const/4
+00007  1235 0020                if-ge
+00009  0346 0206                aget-object
+0000b  106e 2399 0003           invoke-virtual  # CALL Lb/b/c/d/b$f;->a()I
+0000e  040a                     move-result
+0000f  0438 0003                if-eqz
+00011  1328                     goto
+00012  106e 239b 0003           invoke-virtual  # CALL Lb/b/c/d/b$f;->c()Landroid/net/Uri;
+00015  030c                     move-result-object
+00016  206e 2e2b 0030           invoke-virtual  # CALL Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
+00019  040a                     move-result
+0001a  0438 0003                if-eqz
+0001c  0828                     goto
+0001d  3071 2365 0375           invoke-static  # CALL Lb/b/c/b/i;->a(Landroid/content/Context;,Landroid/os/CancellationSignal;,Landroid/net/Uri;)Ljava/nio/ByteBuffer;
+00020  040c                     move-result-object
+00021  306e 2e2f 0430           invoke-virtual  # CALL Ljava/util/HashMap;->put(Ljava/lang/Object;,Ljava/lang/Object;)Ljava/lang/Object;
+00024  02d8 0102                op_d8
+00026  e128                     goto
+00027  1071 2e1a 0000           invoke-static  # CALL Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
+0002a  050c                     move-result-object
+0002b  0511                     return-object
+
+### Lb/b/c/d/b;->a(Ljava/util/List;,Ljava/util/List;)Z  [access=0xa, regs=6, ins=2, outs=2, code_off=0xb7040]
+00000  1072 2e5d 0004           invoke-interface  # CALL Ljava/util/List;->size()I
+00003  000a                     move-result
+00004  1072 2e5d 0005           invoke-interface  # CALL Ljava/util/List;->size()I
+00007  010a                     move-result
+00008  0212                     const/4
+00009  1032 0003                if-eq
+0000b  020f                     return
+0000c  2001                     op_01
+0000d  1072 2e5d 0004           invoke-interface  # CALL Ljava/util/List;->size()I
+00010  010a                     move-result
+00011  1035 0018                if-ge
+00013  2072 2e57 0004           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+00016  010c                     move-result-object
+00017  011f 0720                check-cast  # TYPE [B
+00019  2072 2e57 0005           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+0001c  030c                     move-result-object
+0001d  031f 0720                check-cast  # TYPE [B
+0001f  2071 2e02 0031           invoke-static  # CALL Ljava/util/Arrays;->equals([B,[B)Z
+00022  010a                     move-result
+00023  0139 0003                if-nez
+00025  020f                     return
+00026  00d8 0100                op_d8
+00028  e528                     goto
+00029  1412                     const/4
+0002a  040f                     return
+
+### Lb/b/c/d/b;->a(Landroid/content/Context;,Lb/b/c/d/a;,Ljava/lang/String;,Landroid/os/CancellationSignal;)[Lb/b/c/d/b$f;  [access=0x8, regs=24, ins=4, outs=7, code_off=0xb6d58]
+00000  0008 0016                op_08
+00002  0122 06c8                new-instance  # TYPE Ljava/util/ArrayList;
+00004  1070 2de7 0001           invoke-direct  # CALL Ljava/util/ArrayList;-><init>()V
+00007  0222 01e7                new-instance  # TYPE Landroid/net/Uri$Builder;
+00009  1070 0a68 0002           invoke-direct  # CALL Landroid/net/Uri$Builder;-><init>()V
+0000c  031a 1abd                const-string  # STR "content"
+0000e  206e 0a70 0032           invoke-virtual  # CALL Landroid/net/Uri$Builder;->scheme(Ljava/lang/String;)Landroid/net/Uri$Builder;
+00011  020c                     move-result-object
+00012  206e 0a6c 0002           invoke-virtual  # CALL Landroid/net/Uri$Builder;->authority(Ljava/lang/String;)Landroid/net/Uri$Builder;
+00015  020c                     move-result-object
+00016  106e 0a6d 0002           invoke-virtual  # CALL Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
+00019  020c                     move-result-object
+0001a  0422 01e7                new-instance  # TYPE Landroid/net/Uri$Builder;
+0001c  1070 0a68 0004           invoke-direct  # CALL Landroid/net/Uri$Builder;-><init>()V
+0001f  206e 0a70 0034           invoke-virtual  # CALL Landroid/net/Uri$Builder;->scheme(Ljava/lang/String;)Landroid/net/Uri$Builder;
+00022  030c                     move-result-object
+00023  206e 0a6c 0003           invoke-virtual  # CALL Landroid/net/Uri$Builder;->authority(Ljava/lang/String;)Landroid/net/Uri$Builder;
+00026  000c                     move-result-object
+00027  031a 1bdc                const-string  # STR "file"
+00029  206e 0a6a 0030           invoke-virtual  # CALL Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
+0002c  000c                     move-result-object
+0002d  106e 0a6d 0000           invoke-virtual  # CALL Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
+00030  000c                     move-result-object
+00031  0312                     const/4
+00032  0460 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00034  0513 0010                const/16
+00036  1b12                     const/4
+00037  0c12                     const/4
+00038  5437 002b                if-le
+0003a  0174 0840 0014           invoke-virtual/range  # CALL Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+0003d  040c                     move-result-object
+0003e  0d1a 1772                const-string  # STR "_id"
+00040  0e1a 1bdd                const-string  # STR "file_id"
+00042  0f1a 1c08                const-string  # STR "font_ttc_index"
+00044  101a 1c09                const-string  # STR "font_variation_settings"
+00046  111a 1c0a                const-string  # STR "font_weight"
+00048  121a 1c07                const-string  # STR "font_italic"
+0004a  131a 245f                const-string  # STR "result_code"
+0004c  0725 075f 000d           filled-new-array/range  # TYPE [Ljava/lang/String;
+0004f  060c                     move-result-object
+00050  071a 23c4                const-string  # STR "query = ?"
+00052  b823 075f                new-array  # TYPE [Ljava/lang/String;
+00054  0174 2387 0015           invoke-virtual/range  # CALL Lb/b/c/d/a;->f()Ljava/lang/String;
+00057  050c                     move-result-object
+00058  054d 0c08                aput-object
+0005a  0912                     const/4
+0005b  2507                     op_07
+0005c  0a08 0017                op_08
+0005e  0774 082f 0004           invoke-virtual/range  # CALL Landroid/content/ContentResolver;->query(Landroid/net/Uri;,[Ljava/lang/String;,Ljava/lang/String;,[Ljava/lang/String;,Ljava/lang/String;,Landroid/os/CancellationSignal;)Landroid/database/Cursor;
+00061  030c                     move-result-object
+00062  2728                     goto
+00063  0174 0840 0014           invoke-virtual/range  # CALL Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+00066  040c                     move-result-object
+00067  0d1a 1772                const-string  # STR "_id"
+00069  0e1a 1bdd                const-string  # STR "file_id"
+0006b  0f1a 1c08                const-string  # STR "font_ttc_index"
+0006d  101a 1c09                const-string  # STR "font_variation_settings"
+0006f  111a 1c0a                const-string  # STR "font_weight"
+00071  121a 1c07                const-string  # STR "font_italic"
+00073  131a 245f                const-string  # STR "result_code"
+00075  0725 075f 000d           filled-new-array/range  # TYPE [Ljava/lang/String;
+00078  060c                     move-result-object
+00079  071a 23c4                const-string  # STR "query = ?"
+0007b  b823 075f                new-array  # TYPE [Ljava/lang/String;
+0007d  0174 2387 0015           invoke-virtual/range  # CALL Lb/b/c/d/a;->f()Ljava/lang/String;
+00080  050c                     move-result-object
+00081  054d 0c08                aput-object
+00083  0912                     const/4
+00084  2507                     op_07
+00085  0674 082e 0004           invoke-virtual/range  # CALL Landroid/content/ContentResolver;->query(Landroid/net/Uri;,[Ljava/lang/String;,Ljava/lang/String;,[Ljava/lang/String;,Ljava/lang/String;)Landroid/database/Cursor;
+00088  030c                     move-result-object
+00089  0338 0085                if-eqz
+0008b  1072 0917 0003           invoke-interface  # CALL Landroid/database/Cursor;->getCount()I
+0008e  040a                     move-result
+0008f  043d 007f                if-lez
+00091  011a 245f                const-string  # STR "result_code"
+00093  2072 0915 0013           invoke-interface  # CALL Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+00096  010a                     move-result
+00097  0422 06c8                new-instance  # TYPE Ljava/util/ArrayList;
+00099  1070 2de7 0004           invoke-direct  # CALL Ljava/util/ArrayList;-><init>()V
+0009c  051a 1772                const-string  # STR "_id"
+0009e  2072 0915 0053           invoke-interface  # CALL Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+000a1  050a                     move-result
+000a2  061a 1bdd                const-string  # STR "file_id"
+000a4  2072 0915 0063           invoke-interface  # CALL Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+000a7  060a                     move-result
+000a8  071a 1c08                const-string  # STR "font_ttc_index"
+000aa  2072 0915 0073           invoke-interface  # CALL Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+000ad  070a                     move-result
+000ae  081a 1c0a                const-string  # STR "font_weight"
+000b0  2072 0915 0083           invoke-interface  # CALL Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+000b3  080a                     move-result
+000b4  091a 1c07                const-string  # STR "font_italic"
+000b6  2072 0915 0093           invoke-interface  # CALL Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+000b9  090a                     move-result
+000ba  1072 0922 0003           invoke-interface  # CALL Landroid/database/Cursor;->moveToNext()Z
+000bd  0a0a                     move-result
+000be  0a38 004f                if-eqz
+000c0  fa12                     const/4
+000c1  a132 0009                if-eq
+000c3  2072 091b 0013           invoke-interface  # CALL Landroid/database/Cursor;->getInt(I)I
+000c6  0d0a                     move-result
+000c7  1302 000d                op_02
+000c9  0328                     goto
+000ca  1302 000c                op_02
+000cc  a732 0009                if-eq
+000ce  2072 091b 0073           invoke-interface  # CALL Landroid/database/Cursor;->getInt(I)I
+000d1  0d0a                     move-result
+000d2  1002 000d                op_02
+000d4  0328                     goto
+000d5  1002 000c                op_02
+000d7  a633 000b                if-ne
+000d9  2072 091c 0053           invoke-interface  # CALL Landroid/database/Cursor;->getLong(I)J
+000dc  0d0b                     move-result-wide
+000dd  3071 0830 0ed2           invoke-static  # CALL Landroid/content/ContentUris;->withAppendedId(Landroid/net/Uri;,J)Landroid/net/Uri;
+000e0  0d0c                     move-result-object
+000e1  0928                     goto
+000e2  2072 091c 0063           invoke-interface  # CALL Landroid/database/Cursor;->getLong(I)J
+000e5  0d0b                     move-result-wide
+000e6  3071 0830 0ed0           invoke-static  # CALL Landroid/content/ContentUris;->withAppendedId(Landroid/net/Uri;,J)Landroid/net/Uri;
+000e9  0d0c                     move-result-object
+000ea  df07                     op_07
+000eb  a832 0007                if-eq
+000ed  2072 091b 0083           invoke-interface  # CALL Landroid/database/Cursor;->getInt(I)I
+000f0  0d0a                     move-result
+000f1  0328                     goto
+000f2  0d13 0190                const/16
+000f4  1102 000d                op_02
+000f6  a932 000b                if-eq
+000f8  2072 091b 0093           invoke-interface  # CALL Landroid/database/Cursor;->getInt(I)I
+000fb  0a0a                     move-result
+000fc  ba33 0005                if-ne
+000fe  1202 000b                op_02
+00100  0328                     goto
+00101  1202 000c                op_02
+00103  0a22 04fc                new-instance  # TYPE Lb/b/c/d/b$f;
+00105  ae07                     op_07
+00106  0676 2398 000e           invoke-direct/range  # CALL Lb/b/c/d/b$f;-><init>(Landroid/net/Uri;,I,I,Z,I)V
+00109  206e 2deb 00a4           invoke-virtual  # CALL Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+0010c  ae28                     goto
+0010d  4107                     op_07
+0010e  0338 0005                if-eqz
+00110  1072 0914 0003           invoke-interface  # CALL Landroid/database/Cursor;->close()V
+00113  c023 0750                new-array  # TYPE [Lb/b/c/d/b$f;
+00115  206e 2dfa 0001           invoke-virtual  # CALL Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+00118  000c                     move-result-object
+00119  001f 0750                check-cast  # TYPE [Lb/b/c/d/b$f;
+0011b  0011                     return-object
+0011c  000d                     op_0d
+0011d  0338 0005                if-eqz
+0011f  1072 0914 0003           invoke-interface  # CALL Landroid/database/Cursor;->close()V
+00122  0027                     throw

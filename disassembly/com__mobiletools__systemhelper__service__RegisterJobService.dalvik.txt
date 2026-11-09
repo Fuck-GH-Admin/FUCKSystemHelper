@@ -1,0 +1,61 @@
+### Lcom/mobiletools/systemhelper/service/RegisterJobService;-><clinit>()V  [access=0x10008, regs=1, ins=0, outs=1, code_off=0x111ab8]
+00000  001c 062d                const-class  # TYPE Lcom/mobiletools/systemhelper/service/RegisterJobService;
+00002  106e 2c81 0000           invoke-virtual  # CALL Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+00005  000c                     move-result-object
+00006  0069 1d5a                sput-object  # FIELD Lcom/mobiletools/systemhelper/service/RegisterJobService;->b:Ljava/lang/String;
+00008  000e                     return-void
+
+### Lcom/mobiletools/systemhelper/service/RegisterJobService;-><init>()V  [access=0x10001, regs=1, ins=1, outs=1, code_off=0x111adc]
+00000  1070 0780 0000           invoke-direct  # CALL Landroid/app/job/JobService;-><init>()V
+00003  000e                     return-void
+
+### Lcom/mobiletools/systemhelper/service/RegisterJobService;->onCreate()V  [access=0x1, regs=2, ins=1, outs=2, code_off=0x111af4]
+00000  106f 0781 0001           invoke-super  # CALL Landroid/app/job/JobService;->onCreate()V
+00003  0162 1d5a                sget-object  # FIELD Lcom/mobiletools/systemhelper/service/RegisterJobService;->b:Ljava/lang/String;
+00005  001a 140c                const-string  # STR "Service created"
+00007  2071 2987 0001           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+0000a  000e                     return-void
+
+### Lcom/mobiletools/systemhelper/service/RegisterJobService;->onDestroy()V  [access=0x1, regs=2, ins=1, outs=2, code_off=0x111b1c]
+00000  106f 0782 0001           invoke-super  # CALL Landroid/app/job/JobService;->onDestroy()V
+00003  0162 1d5a                sget-object  # FIELD Lcom/mobiletools/systemhelper/service/RegisterJobService;->b:Ljava/lang/String;
+00005  001a 140d                const-string  # STR "Service destroyed"
+00007  2071 2987 0001           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+0000a  000e                     return-void
+
+### Lcom/mobiletools/systemhelper/service/RegisterJobService;->onStartCommand(Landroid/content/Intent;,I,I)I  [access=0x1, regs=4, ins=4, outs=2, code_off=0x111a94]
+00000  0062 1d5a                sget-object  # FIELD Lcom/mobiletools/systemhelper/service/RegisterJobService;->b:Ljava/lang/String;
+00002  011a 22c4                const-string  # STR "onStartCommand"
+00004  2071 2987 0010           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+00007  2012                     const/4
+00008  000f                     return
+
+### Lcom/mobiletools/systemhelper/service/RegisterJobService;->onStartJob(Landroid/app/job/JobParameters;)Z  [access=0x1, regs=4, ins=2, outs=2, code_off=0x111a04]
+00000  0262 1d5a                sget-object  # FIELD Lcom/mobiletools/systemhelper/service/RegisterJobService;->b:Ljava/lang/String;
+00002  0022 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00004  1070 2d35 0000           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00007  011a 2235                const-string  # STR "on start jobId: "
+00009  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0000c  106e 077f 0003           invoke-virtual  # CALL Landroid/app/job/JobParameters;->getJobId()I
+0000f  030a                     move-result
+00010  206e 2d3b 0030           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+00013  106e 2d44 0000           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00016  030c                     move-result-object
+00017  2071 2987 0032           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+0001a  1212                     const/4
+0001b  020f                     return
+
+### Lcom/mobiletools/systemhelper/service/RegisterJobService;->onStopJob(Landroid/app/job/JobParameters;)Z  [access=0x1, regs=4, ins=2, outs=2, code_off=0x111a4c]
+00000  0262 1d5a                sget-object  # FIELD Lcom/mobiletools/systemhelper/service/RegisterJobService;->b:Ljava/lang/String;
+00002  0022 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00004  1070 2d35 0000           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00007  011a 2236                const-string  # STR "on stop job: "
+00009  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0000c  106e 077f 0003           invoke-virtual  # CALL Landroid/app/job/JobParameters;->getJobId()I
+0000f  030a                     move-result
+00010  206e 2d3b 0030           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+00013  106e 2d44 0000           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00016  030c                     move-result-object
+00017  2071 1c5e 0032           invoke-static  # CALL Landroid/util/Log;->i(Ljava/lang/String;,Ljava/lang/String;)I
+0001a  0212                     const/4
+0001b  020f                     return

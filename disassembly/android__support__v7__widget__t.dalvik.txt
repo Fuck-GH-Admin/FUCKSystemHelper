@@ -1,0 +1,36 @@
+### Landroid/support/v7/widget/t;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;)V  [access=0x10001, regs=4, ins=3, outs=4, code_off=0xe0810]
+00000  0060 14c7                sget  # FIELD Lb/b/d/a/a;->ratingBarStyle:I
+00002  4070 1a82 0321           invoke-direct  # CALL Landroid/support/v7/widget/t;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;,I)V
+00005  000e                     return-void
+
+### Landroid/support/v7/widget/t;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;,I)V  [access=0x10001, regs=4, ins=4, outs=4, code_off=0xe082c]
+00000  4070 20b0 3210           invoke-direct  # CALL Landroid/widget/RatingBar;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;,I)V
+00003  0122 03b4                new-instance  # TYPE Landroid/support/v7/widget/r;
+00005  2070 1a5a 0001           invoke-direct  # CALL Landroid/support/v7/widget/r;-><init>(Landroid/widget/ProgressBar;)V
+00008  015b 11d9                iput-object  # FIELD Landroid/support/v7/widget/t;->b:Landroid/support/v7/widget/r;
+0000a  306e 1a5e 0321           invoke-virtual  # CALL Landroid/support/v7/widget/r;->a(Landroid/util/AttributeSet;,I)V
+0000d  000e                     return-void
+
+### Landroid/support/v7/widget/t;->onMeasure(I,I)V  [access=0x20004, regs=4, ins=3, outs=3, code_off=0xe0858]
+00000  011d                     monitor-enter
+00001  306f 20b3 0321           invoke-super  # CALL Landroid/widget/RatingBar;->onMeasure(I,I)V
+00004  1354 11d9                iget-object  # FIELD Landroid/support/v7/widget/t;->b:Landroid/support/v7/widget/r;
+00006  106e 1a5b 0003           invoke-virtual  # CALL Landroid/support/v7/widget/r;->a()Landroid/graphics/Bitmap;
+00009  030c                     move-result-object
+0000a  0338 0017                if-eqz
+0000c  106e 0946 0003           invoke-virtual  # CALL Landroid/graphics/Bitmap;->getWidth()I
+0000f  030a                     move-result
+00010  106e 20b2 0001           invoke-virtual  # CALL Landroid/widget/RatingBar;->getNumStars()I
+00013  000a                     move-result
+00014  03b2                     op_b2
+00015  0012                     const/4
+00016  3071 1da4 0023           invoke-static  # CALL Landroid/view/View;->resolveSizeAndState(I,I,I)I
+00019  020a                     move-result
+0001a  106e 20b1 0001           invoke-virtual  # CALL Landroid/widget/RatingBar;->getMeasuredHeight()I
+0001d  030a                     move-result
+0001e  306e 20b4 0321           invoke-virtual  # CALL Landroid/widget/RatingBar;->setMeasuredDimension(I,I)V
+00021  011e                     monitor-exit
+00022  000e                     return-void
+00023  020d                     op_0d
+00024  011e                     monitor-exit
+00025  0227                     throw

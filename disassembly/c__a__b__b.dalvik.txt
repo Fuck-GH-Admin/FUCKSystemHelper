@@ -1,0 +1,14 @@
+### Lc/a/b/b;-><init>()V  [access=0x10001, regs=1, ins=1, outs=1, code_off=0xf4580]
+00000  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  000e                     return-void
+
+### Lc/a/b/b;->a()Ljava/util/List;  [access=0x1, regs=2, ins=1, outs=2, code_off=0xf4544]
+00000  0122 06c8                new-instance  # TYPE Ljava/util/ArrayList;
+00002  1070 2de7 0001           invoke-direct  # CALL Ljava/util/ArrayList;-><init>()V
+00005  0022 0592                new-instance  # TYPE Lc/a/b/c/e;
+00007  1070 2799 0000           invoke-direct  # CALL Lc/a/b/c/e;-><init>()V
+0000a  2072 2e52 0001           invoke-interface  # CALL Ljava/util/List;->add(Ljava/lang/Object;)Z
+0000d  0022 058a                new-instance  # TYPE Lc/a/b/c/d;
+0000f  1070 2778 0000           invoke-direct  # CALL Lc/a/b/c/d;-><init>()V
+00012  2072 2e52 0001           invoke-interface  # CALL Ljava/util/List;->add(Ljava/lang/Object;)Z
+00015  0111                     return-object

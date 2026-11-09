@@ -1,0 +1,522 @@
+### Lcom/mobiletools/systemhelper/control/d;-><init>()V  [access=0x10001, regs=2, ins=1, outs=1, code_off=0x10c2f0]
+00000  1070 2ce0 0001           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  0012                     const/4
+00004  105b 1d4c                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/d;->a:Landroid/content/Context;
+00006  000e                     return-void
+
+### Lcom/mobiletools/systemhelper/control/d;->a(Landroid/content/Context;,I,Lc/d/a/b/n;)V  [access=0x0, regs=13, ins=4, outs=3, code_off=0x10c310]
+00000  0012                     const/4
+00001  106e 0846 000a           invoke-virtual  # CALL Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+00004  010c                     move-result-object
+00005  106e 0847 000a           invoke-virtual  # CALL Landroid/content/Context;->getPackageName()Ljava/lang/String;
+00008  020c                     move-result-object
+00009  306e 089f 0021           invoke-virtual  # CALL Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;,I)Landroid/content/pm/PackageInfo;
+0000c  010c                     move-result-object
+0000d  1154 0511                iget-object  # FIELD Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
+0000f  c15b 1be0                iput-object  # FIELD Lc/d/a/b/n;->d:Ljava/lang/String;
+00011  0528                     goto
+00012  010d                     op_0d
+00013  106e 0897 0001           invoke-virtual  # CALL Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
+00016  0122 061f                new-instance  # TYPE Lcom/mobiletools/systemhelper/control/a;
+00018  3070 2ba6 0ba1           invoke-direct  # CALL Lcom/mobiletools/systemhelper/control/a;-><init>(Landroid/content/Context;,I)V
+0001b  0162 1d19                sget-object  # FIELD Lcom/mobiletools/systemhelper/control/a;->b:Ljava/lang/String;
+0001d  c15b 1bf5                iput-object  # FIELD Lc/d/a/b/n;->y:Ljava/lang/String;
+0001f  0162 1d1a                sget-object  # FIELD Lcom/mobiletools/systemhelper/control/a;->c:Ljava/lang/String;
+00021  c15b 1bf6                iput-object  # FIELD Lc/d/a/b/n;->z:Ljava/lang/String;
+00023  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00025  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00028  021a 26a9                const-string  # STR "signalInfo.callDisconnectCause: "
+0002a  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0002d  c254 1bf5                iget-object  # FIELD Lc/d/a/b/n;->y:Ljava/lang/String;
+0002f  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00032  021a 01ca                const-string  # STR ", "
+00034  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00037  c254 1bf6                iget-object  # FIELD Lc/d/a/b/n;->z:Ljava/lang/String;
+00039  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0003c  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0003f  010c                     move-result-object
+00040  021a 07f8                const-string  # STR "GetSignalStrengthInfo"
+00042  2071 2987 0012           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+00045  1071 2912 000b           invoke-static  # CALL Lc/d/a/a/a;->a(I)I
+00048  010a                     move-result
+00049  0322 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0004b  1070 2d35 0003           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0004e  041a 1e60                const-string  # STR "getSignal====> slot: "
+00050  206e 2d3f 0043           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00053  206e 2d3b 00b3           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+00056  041a 0097                const-string  # STR " subId: "
+00058  206e 2d3f 0043           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0005b  206e 2d3b 0013           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+0005e  106e 2d44 0003           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00061  030c                     move-result-object
+00062  2071 2987 0032           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+00065  031a 234e                const-string  # STR "phone"
+00067  206e 084c 003a           invoke-virtual  # CALL Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+0006a  030c                     move-result-object
+0006b  031f 03f4                check-cast  # TYPE Landroid/telephony/TelephonyManager;
+0006d  206e 1bdf 0013           invoke-virtual  # CALL Landroid/telephony/TelephonyManager;->createForSubscriptionId(I)Landroid/telephony/TelephonyManager;
+00070  010c                     move-result-object
+00071  031a 2484                const-string  # STR "ro.product.manufacturer"
+00073  1071 2997 0003           invoke-static  # CALL Lc/d/a/b/l;->a(Ljava/lang/String;)Ljava/lang/String;
+00076  030c                     move-result-object
+00077  0338 0018                if-eqz
+00079  106e 2d0f 0003           invoke-virtual  # CALL Ljava/lang/String;->isEmpty()Z
+0007c  040a                     move-result
+0007d  0439 0012                if-nez
+0007f  041a 2850                const-string  # STR "vivo"
+00081  206e 2d04 0043           invoke-virtual  # CALL Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+00084  040a                     move-result
+00085  0438 000a                if-eqz
+00087  9954 1d4c                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/d;->a:Landroid/content/Context;
+00089  1071 299b 0009           invoke-static  # CALL Lc/d/a/b/l;->a(Landroid/content/Context;)Z
+0008c  090a                     move-result
+0008d  096a 1bb5                sput-boolean  # FIELD Lc/d/a/b/d;->e:Z
+0008f  0963 1bb5                sget-boolean  # FIELD Lc/d/a/b/d;->e:Z
+00091  0939 0003                if-nez
+00093  000e                     return-void
+00094  106e 1be8 0001           invoke-virtual  # CALL Landroid/telephony/TelephonyManager;->getSimSerialNumber()Ljava/lang/String;
+00097  090c                     move-result-object
+00098  c95b 1bdf                iput-object  # FIELD Lc/d/a/b/n;->c:Ljava/lang/String;
+0009a  041a 1bc6                const-string  # STR "ex01"
+0009c  0938 0008                if-eqz
+0009e  106e 2d0f 0009           invoke-virtual  # CALL Ljava/lang/String;->isEmpty()Z
+000a1  090a                     move-result
+000a2  0938 0004                if-eqz
+000a4  c45b 1bdf                iput-object  # FIELD Lc/d/a/b/n;->c:Ljava/lang/String;
+000a6  0922 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+000a8  1070 2d35 0009           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+000ab  051a 083e                const-string  # STR "ICCID:"
+000ad  206e 2d3f 0059           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000b0  c554 1bdf                iget-object  # FIELD Lc/d/a/b/n;->c:Ljava/lang/String;
+000b2  206e 2d3f 0059           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000b5  106e 2d44 0009           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+000b8  090c                     move-result-object
+000b9  2071 2987 0092           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+000bc  106e 1bea 0001           invoke-virtual  # CALL Landroid/telephony/TelephonyManager;->getSubscriberId()Ljava/lang/String;
+000bf  090c                     move-result-object
+000c0  c95b 1be3                iput-object  # FIELD Lc/d/a/b/n;->g:Ljava/lang/String;
+000c2  0938 0008                if-eqz
+000c4  106e 2d0f 0009           invoke-virtual  # CALL Ljava/lang/String;->isEmpty()Z
+000c7  090a                     move-result
+000c8  0938 0004                if-eqz
+000ca  c45b 1be3                iput-object  # FIELD Lc/d/a/b/n;->g:Ljava/lang/String;
+000cc  106e 1be7 0001           invoke-virtual  # CALL Landroid/telephony/TelephonyManager;->getSimOperator()Ljava/lang/String;
+000cf  090c                     move-result-object
+000d0  c95b 1be1                iput-object  # FIELD Lc/d/a/b/n;->e:Ljava/lang/String;
+000d2  106e 1be4 0001           invoke-virtual  # CALL Landroid/telephony/TelephonyManager;->getNetworkOperator()Ljava/lang/String;
+000d5  090c                     move-result-object
+000d6  c95b 1be2                iput-object  # FIELD Lc/d/a/b/n;->f:Ljava/lang/String;
+000d8  0922 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+000da  1070 2d35 0009           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+000dd  051a 215e                const-string  # STR "mncch :  "
+000df  206e 2d3f 0059           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000e2  c554 1be2                iget-object  # FIELD Lc/d/a/b/n;->f:Ljava/lang/String;
+000e4  206e 2d3f 0059           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000e7  106e 2d44 0009           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+000ea  090c                     move-result-object
+000eb  2071 2987 0092           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+000ee  c954 1be1                iget-object  # FIELD Lc/d/a/b/n;->e:Ljava/lang/String;
+000f0  0938 0008                if-eqz
+000f2  106e 2d0f 0009           invoke-virtual  # CALL Ljava/lang/String;->isEmpty()Z
+000f5  090a                     move-result
+000f6  0938 0004                if-eqz
+000f8  c45b 1be1                iput-object  # FIELD Lc/d/a/b/n;->e:Ljava/lang/String;
+000fa  c954 1be2                iget-object  # FIELD Lc/d/a/b/n;->f:Ljava/lang/String;
+000fc  0938 0008                if-eqz
+000fe  106e 2d0f 0009           invoke-virtual  # CALL Ljava/lang/String;->isEmpty()Z
+00101  090a                     move-result
+00102  0938 001a                if-eqz
+00104  0922 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00106  1070 2d35 0009           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00109  051a 2160                const-string  # STR "mncch==> null "
+0010b  206e 2d3f 0059           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0010e  c554 1be2                iget-object  # FIELD Lc/d/a/b/n;->f:Ljava/lang/String;
+00110  206e 2d3f 0059           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00113  106e 2d44 0009           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00116  090c                     move-result-object
+00117  2071 2987 0092           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+0011a  c45b 1be2                iput-object  # FIELD Lc/d/a/b/n;->f:Ljava/lang/String;
+0011c  c954 1be3                iget-object  # FIELD Lc/d/a/b/n;->g:Ljava/lang/String;
+0011e  041a 0000                const-string  # STR ""
+00120  0938 009f                if-eqz
+00122  c554 1bdf                iget-object  # FIELD Lc/d/a/b/n;->c:Ljava/lang/String;
+00124  0538 009b                if-eqz
+00126  206e 2d03 0049           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+00129  090a                     move-result
+0012a  0939 0095                if-nez
+0012c  c954 1be3                iget-object  # FIELD Lc/d/a/b/n;->g:Ljava/lang/String;
+0012e  106e 2d12 0009           invoke-virtual  # CALL Ljava/lang/String;->length()I
+00131  090a                     move-result
+00132  5512                     const/4
+00133  5934 008c                if-lt
+00135  c954 1bdf                iget-object  # FIELD Lc/d/a/b/n;->c:Ljava/lang/String;
+00137  106e 2d12 0009           invoke-virtual  # CALL Ljava/lang/String;->length()I
+0013a  090a                     move-result
+0013b  6512                     const/4
+0013c  5934 0083                if-lt
+0013e  c954 1be3                iget-object  # FIELD Lc/d/a/b/n;->g:Ljava/lang/String;
+00140  1071 299d 0009           invoke-static  # CALL Lc/d/a/b/l;->b(Ljava/lang/String;)Ljava/lang/Boolean;
+00143  090c                     move-result-object
+00144  106e 2c65 0009           invoke-virtual  # CALL Ljava/lang/Boolean;->booleanValue()Z
+00147  090a                     move-result
+00148  0939 0077                if-nez
+0014a  c954 1be3                iget-object  # FIELD Lc/d/a/b/n;->g:Ljava/lang/String;
+0014c  106e 2d12 0009           invoke-virtual  # CALL Ljava/lang/String;->length()I
+0014f  090a                     move-result
+00150  051a 01bc                const-string  # STR "**********"
+00152  061a 01bb                const-string  # STR "*****"
+00154  0713 000a                const/16
+00156  0813 000b                const/16
+00158  8934 0039                if-lt
+0015a  c954 1bdf                iget-object  # FIELD Lc/d/a/b/n;->c:Ljava/lang/String;
+0015c  106e 2d12 0009           invoke-virtual  # CALL Ljava/lang/String;->length()I
+0015f  090a                     move-result
+00160  8934 0031                if-lt
+00162  0922 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00164  1070 2d35 0009           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00167  c854 1be3                iget-object  # FIELD Lc/d/a/b/n;->g:Ljava/lang/String;
+00169  306e 2d1a 0708           invoke-virtual  # CALL Ljava/lang/String;->substring(I,I)Ljava/lang/String;
+0016c  080c                     move-result-object
+0016d  206e 2d3f 0089           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00170  206e 2d3f 0069           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00173  106e 2d44 0009           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00176  090c                     move-result-object
+00177  c95b 1be3                iput-object  # FIELD Lc/d/a/b/n;->g:Ljava/lang/String;
+00179  0922 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0017b  1070 2d35 0009           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0017e  c654 1bdf                iget-object  # FIELD Lc/d/a/b/n;->c:Ljava/lang/String;
+00180  306e 2d1a 0706           invoke-virtual  # CALL Ljava/lang/String;->substring(I,I)Ljava/lang/String;
+00183  060c                     move-result-object
+00184  206e 2d3f 0069           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00187  206e 2d3f 0059           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0018a  106e 2d44 0009           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0018d  090c                     move-result-object
+0018e  c95b 1bdf                iput-object  # FIELD Lc/d/a/b/n;->c:Ljava/lang/String;
+00190  2f28                     goto
+00191  c954 1be3                iget-object  # FIELD Lc/d/a/b/n;->g:Ljava/lang/String;
+00193  106e 2d12 0009           invoke-virtual  # CALL Ljava/lang/String;->length()I
+00196  090a                     move-result
+00197  8934 001a                if-lt
+00199  0922 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0019b  1070 2d35 0009           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0019e  c554 1be3                iget-object  # FIELD Lc/d/a/b/n;->g:Ljava/lang/String;
+001a0  306e 2d1a 0705           invoke-virtual  # CALL Ljava/lang/String;->substring(I,I)Ljava/lang/String;
+001a3  050c                     move-result-object
+001a4  206e 2d3f 0059           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+001a7  206e 2d3f 0069           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+001aa  106e 2d44 0009           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+001ad  090c                     move-result-object
+001ae  c95b 1be3                iput-object  # FIELD Lc/d/a/b/n;->g:Ljava/lang/String;
+001b0  0f28                     goto
+001b1  c954 1bdf                iget-object  # FIELD Lc/d/a/b/n;->c:Ljava/lang/String;
+001b3  106e 2d12 0009           invoke-virtual  # CALL Ljava/lang/String;->length()I
+001b6  090a                     move-result
+001b7  8934 0008                if-lt
+001b9  0922 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+001bb  1070 2d35 0009           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+001be  c028                     goto
+001bf  0963 1bb5                sget-boolean  # FIELD Lc/d/a/b/d;->e:Z
+001c1  0938 024f                if-eqz
+001c3  1912                     const/4
+001c4  0338 007a                if-eqz
+001c6  106e 2d0f 0003           invoke-virtual  # CALL Ljava/lang/String;->isEmpty()Z
+001c9  050a                     move-result
+001ca  0539 0074                if-nez
+001cc  051a 16c1                const-string  # STR "Xiaomi"
+001ce  206e 2d04 0053           invoke-virtual  # CALL Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+001d1  030a                     move-result
+001d2  0338 0050                if-eqz
+001d4  031a 2154                const-string  # STR "miui.telephony.TelephonyManager"
+001d6  1071 298e 0003           invoke-static  # CALL Lc/d/a/b/k;->a(Ljava/lang/String;)Ljava/lang/Class;
+001d9  030c                     move-result-object
+001da  0523 075c                new-array  # TYPE [Ljava/lang/Class;
+001dc  061a 1ce9                const-string  # STR "getDefault"
+001de  3071 2990 0563           invoke-static  # CALL Lc/d/a/b/k;->a(Ljava/lang/Class;,Ljava/lang/String;,[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+001e1  050c                     move-result-object
+001e2  0612                     const/4
+001e3  0723 075d                new-array  # TYPE [Ljava/lang/Object;
+001e5  3071 298f 0765           invoke-static  # CALL Lc/d/a/b/k;->a(Ljava/lang/reflect/Method;,Ljava/lang/Object;,[Ljava/lang/Object;)Ljava/lang/Object;
+001e8  050c                     move-result-object
+001e9  061a 1d5e                const-string  # STR "getImeiForSlot"
+001eb  9723 075c                new-array  # TYPE [Ljava/lang/Class;
+001ed  0862 1d60                sget-object  # FIELD Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+001ef  084d 0007                aput-object
+001f1  3071 2990 0763           invoke-static  # CALL Lc/d/a/b/k;->a(Ljava/lang/Class;,Ljava/lang/String;,[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+001f4  030c                     move-result-object
+001f5  9623 075d                new-array  # TYPE [Ljava/lang/Object;
+001f7  1071 2cae 000b           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+001fa  070c                     move-result-object
+001fb  074d 0006                aput-object
+001fd  3071 298f 0653           invoke-static  # CALL Lc/d/a/b/k;->a(Ljava/lang/reflect/Method;,Ljava/lang/Object;,[Ljava/lang/Object;)Ljava/lang/Object;
+00200  000c                     move-result-object
+00201  001f 0683                check-cast  # TYPE Ljava/lang/String;
+00203  c05b 1bde                iput-object  # FIELD Lc/d/a/b/n;->b:Ljava/lang/String;
+00205  0022 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00207  1070 2d35 0000           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0020a  031a 26a2                const-string  # STR "siginfo.IMEI: "
+0020c  206e 2d3f 0030           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0020f  c354 1bde                iget-object  # FIELD Lc/d/a/b/n;->b:Ljava/lang/String;
+00211  206e 2d3f 0030           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00214  106e 2d44 0000           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00217  000c                     move-result-object
+00218  2071 2987 0002           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+0021b  0d28                     goto
+0021c  001a 0785                const-string  # STR "Exception:getImeiForSlot"
+0021e  2071 2988 0002           invoke-static  # CALL Lc/d/a/b/h;->b(Ljava/lang/String;,Ljava/lang/String;)V
+00221  0728                     goto
+00222  106e 1be2 0001           invoke-virtual  # CALL Landroid/telephony/TelephonyManager;->getImei()Ljava/lang/String;
+00225  000c                     move-result-object
+00226  c05b 1bde                iput-object  # FIELD Lc/d/a/b/n;->b:Ljava/lang/String;
+00228  0022 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0022a  1070 2d35 0000           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0022d  031a 1d5d                const-string  # STR "getImei====> imei: "
+0022f  206e 2d3f 0030           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00232  c354 1bde                iget-object  # FIELD Lc/d/a/b/n;->b:Ljava/lang/String;
+00234  206e 2d3f 0030           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00237  106e 2d44 0000           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0023a  000c                     move-result-object
+0023b  2071 2987 0002           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+0023e  001a 1920                const-string  # STR "android.permission.ACCESS_COARSE_LOCATION"
+00240  2071 22be 000a           invoke-static  # CALL Lb/b/c/a/a;->a(Landroid/content/Context;,Ljava/lang/String;)I
+00243  000a                     move-result
+00244  0039 01cb                if-nez
+00246  001a 1924                const-string  # STR "android.permission.READ_PHONE_STATE"
+00248  2071 22be 000a           invoke-static  # CALL Lb/b/c/a/a;->a(Landroid/content/Context;,Ljava/lang/String;)I
+0024b  000a                     move-result
+0024c  0038 0004                if-eqz
+0024e  0029 01c1                goto/16
+00250  106e 1be5 0001           invoke-virtual  # CALL Landroid/telephony/TelephonyManager;->getServiceState()Landroid/telephony/ServiceState;
+00253  000c                     move-result-object
+00254  0038 01bb                if-eqz
+00256  106e 1bd3 0000           invoke-virtual  # CALL Landroid/telephony/ServiceState;->getNetworkRegistrationInfoList()Ljava/util/List;
+00259  000c                     move-result-object
+0025a  1072 2e59 0000           invoke-interface  # CALL Ljava/util/List;->iterator()Ljava/util/Iterator;
+0025d  000c                     move-result-object
+0025e  1072 2e43 0000           invoke-interface  # CALL Ljava/util/Iterator;->hasNext()Z
+00261  030a                     move-result
+00262  0338 00b7                if-eqz
+00264  1072 2e44 0000           invoke-interface  # CALL Ljava/util/Iterator;->next()Ljava/lang/Object;
+00267  030c                     move-result-object
+00268  031f 03ea                check-cast  # TYPE Landroid/telephony/NetworkRegistrationInfo;
+0026a  106e 1bcc 0003           invoke-virtual  # CALL Landroid/telephony/NetworkRegistrationInfo;->getDomain()I
+0026d  050a                     move-result
+0026e  2612                     const/4
+0026f  6533 ffef                if-ne
+00271  106e 1bcd 0003           invoke-virtual  # CALL Landroid/telephony/NetworkRegistrationInfo;->getTransportType()I
+00274  050a                     move-result
+00275  9533 ffe9                if-ne
+00277  106e 1bce 0003           invoke-virtual  # CALL Landroid/telephony/NetworkRegistrationInfo;->toString()Ljava/lang/String;
+0027a  050c                     move-result-object
+0027b  106e 1bcb 0003           invoke-virtual  # CALL Landroid/telephony/NetworkRegistrationInfo;->getCellIdentity()Landroid/telephony/CellIdentity;
+0027e  030c                     move-result-object
+0027f  0339 0003                if-nez
+00281  000e                     return-void
+00282  3620 03d7                instance-of  # TYPE Landroid/telephony/CellIdentityLte;
+00284  071a 176b                const-string  # STR "]"
+00286  081a 1713                const-string  # STR "["
+00288  0638 004d                if-eqz
+0028a  031f 03d7                check-cast  # TYPE Landroid/telephony/CellIdentityLte;
+0028c  106e 1b8a 0003           invoke-virtual  # CALL Landroid/telephony/CellIdentityLte;->getCi()I
+0028f  090a                     move-result
+00290  1071 2d22 0009           invoke-static  # CALL Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+00293  090c                     move-result-object
+00294  c95b 1be5                iput-object  # FIELD Lc/d/a/b/n;->i:Ljava/lang/String;
+00296  106e 1b91 0003           invoke-virtual  # CALL Landroid/telephony/CellIdentityLte;->getTac()I
+00299  090a                     move-result
+0029a  1071 2d22 0009           invoke-static  # CALL Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+0029d  090c                     move-result-object
+0029e  c95b 1be4                iput-object  # FIELD Lc/d/a/b/n;->h:Ljava/lang/String;
+002a0  106e 1b90 0003           invoke-virtual  # CALL Landroid/telephony/CellIdentityLte;->getPci()I
+002a3  090a                     move-result
+002a4  1071 2d22 0009           invoke-static  # CALL Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+002a7  090c                     move-result-object
+002a8  c95b 1be6                iput-object  # FIELD Lc/d/a/b/n;->j:Ljava/lang/String;
+002aa  106e 1b88 0003           invoke-virtual  # CALL Landroid/telephony/CellIdentityLte;->getBands()[I
+002ad  090c                     move-result-object
+002ae  1071 2e08 0009           invoke-static  # CALL Ljava/util/Arrays;->toString([I)Ljava/lang/String;
+002b1  090c                     move-result-object
+002b2  306e 2d14 0489           invoke-virtual  # CALL Ljava/lang/String;->replace(Ljava/lang/CharSequence;,Ljava/lang/CharSequence;)Ljava/lang/String;
+002b5  090c                     move-result-object
+002b6  306e 2d14 0479           invoke-virtual  # CALL Ljava/lang/String;->replace(Ljava/lang/CharSequence;,Ljava/lang/CharSequence;)Ljava/lang/String;
+002b9  090c                     move-result-object
+002ba  c95b 1be9                iput-object  # FIELD Lc/d/a/b/n;->m:Ljava/lang/String;
+002bc  106e 1b89 0003           invoke-virtual  # CALL Landroid/telephony/CellIdentityLte;->getBandwidth()I
+002bf  090a                     move-result
+002c0  1071 2d22 0009           invoke-static  # CALL Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+002c3  090c                     move-result-object
+002c4  c95b 1bea                iput-object  # FIELD Lc/d/a/b/n;->n:Ljava/lang/String;
+002c6  091a 09d5                const-string  # STR "LTE"
+002c8  c95b 1be7                iput-object  # FIELD Lc/d/a/b/n;->k:Ljava/lang/String;
+002ca  091a 201d                const-string  # STR "isEnDcAvailable = true"
+002cc  206e 2d01 0095           invoke-virtual  # CALL Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+002cf  090a                     move-result
+002d0  0938 0049                if-eqz
+002d2  091a 1275                const-string  # STR "NSA"
+002d4  4328                     goto
+002d5  3520 03d8                instance-of  # TYPE Landroid/telephony/CellIdentityNr;
+002d7  0538 ff87                if-eqz
+002d9  031f 03d8                check-cast  # TYPE Landroid/telephony/CellIdentityNr;
+002db  106e 1b95 0003           invoke-virtual  # CALL Landroid/telephony/CellIdentityNr;->getNci()J
+002de  050b                     move-result-wide
+002df  2071 2d23 0065           invoke-static  # CALL Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+002e2  090c                     move-result-object
+002e3  c95b 1be5                iput-object  # FIELD Lc/d/a/b/n;->i:Ljava/lang/String;
+002e5  106e 1b98 0003           invoke-virtual  # CALL Landroid/telephony/CellIdentityNr;->getTac()I
+002e8  090a                     move-result
+002e9  1071 2d22 0009           invoke-static  # CALL Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+002ec  090c                     move-result-object
+002ed  c95b 1be4                iput-object  # FIELD Lc/d/a/b/n;->h:Ljava/lang/String;
+002ef  106e 1b97 0003           invoke-virtual  # CALL Landroid/telephony/CellIdentityNr;->getPci()I
+002f2  090a                     move-result
+002f3  1071 2d22 0009           invoke-static  # CALL Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+002f6  090c                     move-result-object
+002f7  c95b 1be6                iput-object  # FIELD Lc/d/a/b/n;->j:Ljava/lang/String;
+002f9  106e 1b92 0003           invoke-virtual  # CALL Landroid/telephony/CellIdentityNr;->getBands()[I
+002fc  090c                     move-result-object
+002fd  1071 2e08 0009           invoke-static  # CALL Ljava/util/Arrays;->toString([I)Ljava/lang/String;
+00300  090c                     move-result-object
+00301  306e 2d14 0489           invoke-virtual  # CALL Ljava/lang/String;->replace(Ljava/lang/CharSequence;,Ljava/lang/CharSequence;)Ljava/lang/String;
+00304  090c                     move-result-object
+00305  306e 2d14 0479           invoke-virtual  # CALL Ljava/lang/String;->replace(Ljava/lang/CharSequence;,Ljava/lang/CharSequence;)Ljava/lang/String;
+00308  090c                     move-result-object
+00309  c95b 1be9                iput-object  # FIELD Lc/d/a/b/n;->m:Ljava/lang/String;
+0030b  106e 1b96 0003           invoke-virtual  # CALL Landroid/telephony/CellIdentityNr;->getNrarfcn()I
+0030e  090a                     move-result
+0030f  1071 2d22 0009           invoke-static  # CALL Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+00312  090c                     move-result-object
+00313  c95b 1be8                iput-object  # FIELD Lc/d/a/b/n;->l:Ljava/lang/String;
+00315  091a 13ae                const-string  # STR "SA"
+00317  c95b 1be7                iput-object  # FIELD Lc/d/a/b/n;->k:Ljava/lang/String;
+00319  091a 1922                const-string  # STR "android.permission.ACCESS_NETWORK_STATE"
+0031b  2071 22be 009a           invoke-static  # CALL Lb/b/c/a/a;->a(Landroid/content/Context;,Ljava/lang/String;)I
+0031e  090a                     move-result
+0031f  0939 0020                if-nez
+00321  1071 29b1 000a           invoke-static  # CALL Lc/d/a/b/l;->k(Landroid/content/Context;)Ljava/lang/Boolean;
+00324  090c                     move-result-object
+00325  106e 2c65 0009           invoke-virtual  # CALL Ljava/lang/Boolean;->booleanValue()Z
+00328  090a                     move-result
+00329  0938 0012                if-eqz
+0032b  1071 29b2 000a           invoke-static  # CALL Lc/d/a/b/l;->l(Landroid/content/Context;)Ljava/lang/Boolean;
+0032e  090c                     move-result-object
+0032f  106e 2c65 0009           invoke-virtual  # CALL Ljava/lang/Boolean;->booleanValue()Z
+00332  090a                     move-result
+00333  0939 0005                if-nez
+00335  091a 122c                const-string  # STR "Mobile"
+00337  0628                     goto
+00338  091a 1668                const-string  # STR "WiFi"
+0033a  0328                     goto
+0033b  091a 0736                const-string  # STR "Disconnected"
+0033d  c95b 1bdc                iput-object  # FIELD Lc/d/a/b/n;->F:Ljava/lang/String;
+0033f  106e 1be6 0001           invoke-virtual  # CALL Landroid/telephony/TelephonyManager;->getSignalStrength()Landroid/telephony/SignalStrength;
+00342  090c                     move-result-object
+00343  0a22 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00345  1070 2d35 000a           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00348  001a 26be                const-string  # STR "slot: "
+0034a  206e 2d3f 000a           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0034d  206e 2d3b 00ba           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+00350  0b1a 26af                const-string  # STR "signalStrength"
+00352  206e 2d3f 00ba           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00355  206e 2d3e 009a           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+00358  106e 2d44 000a           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0035b  0a0c                     move-result-object
+0035c  2071 2987 00a2           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+0035f  106e 1bd6 0009           invoke-virtual  # CALL Landroid/telephony/SignalStrength;->getCellSignalStrengths()Ljava/util/List;
+00362  090c                     move-result-object
+00363  0a22 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00365  1070 2d35 000a           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00368  0b1a 1a1e                const-string  # STR "cellSignalStrengthList ===> "
+0036a  206e 2d3f 00ba           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0036d  206e 2d3e 009a           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+00370  106e 2d44 000a           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00373  0a0c                     move-result-object
+00374  2071 2987 00a2           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+00377  0938 0098                if-eqz
+00379  1072 2e59 0009           invoke-interface  # CALL Ljava/util/List;->iterator()Ljava/util/Iterator;
+0037c  090c                     move-result-object
+0037d  1072 2e43 0009           invoke-interface  # CALL Ljava/util/Iterator;->hasNext()Z
+00380  0a0a                     move-result
+00381  0a38 008e                if-eqz
+00383  1072 2e44 0009           invoke-interface  # CALL Ljava/util/Iterator;->next()Ljava/lang/Object;
+00386  0a0c                     move-result-object
+00387  0a1f 03e3                check-cast  # TYPE Landroid/telephony/CellSignalStrength;
+00389  ab20 03e7                instance-of  # TYPE Landroid/telephony/CellSignalStrengthNr;
+0038b  0b38 004d                if-eqz
+0038d  0a1f 03e7                check-cast  # TYPE Landroid/telephony/CellSignalStrengthNr;
+0038f  106e 1bc6 000a           invoke-virtual  # CALL Landroid/telephony/CellSignalStrengthNr;->getSsRsrp()I
+00392  090a                     move-result
+00393  1071 2d22 0009           invoke-static  # CALL Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+00396  090c                     move-result-object
+00397  c95b 1bed                iput-object  # FIELD Lc/d/a/b/n;->q:Ljava/lang/String;
+00399  0922 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0039b  1070 2d35 0009           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0039e  0b1a 2493                const-string  # STR "rsrp : "
+003a0  206e 2d3f 00b9           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+003a3  cb54 1bed                iget-object  # FIELD Lc/d/a/b/n;->q:Ljava/lang/String;
+003a5  206e 2d3f 00b9           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+003a8  106e 2d44 0009           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+003ab  090c                     move-result-object
+003ac  2071 2987 0092           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+003af  106e 1bc7 000a           invoke-virtual  # CALL Landroid/telephony/CellSignalStrengthNr;->getSsRsrq()I
+003b2  090a                     move-result
+003b3  1071 2d22 0009           invoke-static  # CALL Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+003b6  090c                     move-result-object
+003b7  c95b 1bef                iput-object  # FIELD Lc/d/a/b/n;->s:Ljava/lang/String;
+003b9  106e 1bc8 000a           invoke-virtual  # CALL Landroid/telephony/CellSignalStrengthNr;->getSsSinr()I
+003bc  090a                     move-result
+003bd  1071 2d22 0009           invoke-static  # CALL Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+003c0  090c                     move-result-object
+003c1  c95b 1bee                iput-object  # FIELD Lc/d/a/b/n;->r:Ljava/lang/String;
+003c3  106e 1bc0 000a           invoke-virtual  # CALL Landroid/telephony/CellSignalStrengthNr;->getCsiCqiTableIndex()I
+003c6  090a                     move-result
+003c7  1071 2d22 0009           invoke-static  # CALL Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+003ca  090c                     move-result-object
+003cb  c95b 1beb                iput-object  # FIELD Lc/d/a/b/n;->o:Ljava/lang/String;
+003cd  106e 1bbf 000a           invoke-virtual  # CALL Landroid/telephony/CellSignalStrengthNr;->getCsiCqiReport()Ljava/util/List;
+003d0  090c                     move-result-object
+003d1  1071 2d24 0009           invoke-static  # CALL Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+003d4  090c                     move-result-object
+003d5  c95b 1bec                iput-object  # FIELD Lc/d/a/b/n;->p:Ljava/lang/String;
+003d7  3828                     goto
+003d8  ab20 03e6                instance-of  # TYPE Landroid/telephony/CellSignalStrengthLte;
+003da  0b38 ffa3                if-eqz
+003dc  0a1f 03e6                check-cast  # TYPE Landroid/telephony/CellSignalStrengthLte;
+003de  106e 1bb9 000a           invoke-virtual  # CALL Landroid/telephony/CellSignalStrengthLte;->getRsrp()I
+003e1  090a                     move-result
+003e2  1071 2d22 0009           invoke-static  # CALL Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+003e5  090c                     move-result-object
+003e6  c95b 1bed                iput-object  # FIELD Lc/d/a/b/n;->q:Ljava/lang/String;
+003e8  106e 1bba 000a           invoke-virtual  # CALL Landroid/telephony/CellSignalStrengthLte;->getRsrq()I
+003eb  090a                     move-result
+003ec  1071 2d22 0009           invoke-static  # CALL Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+003ef  090c                     move-result-object
+003f0  c95b 1bef                iput-object  # FIELD Lc/d/a/b/n;->s:Ljava/lang/String;
+003f2  106e 1bbc 000a           invoke-virtual  # CALL Landroid/telephony/CellSignalStrengthLte;->getRssnr()I
+003f5  090a                     move-result
+003f6  1071 2d22 0009           invoke-static  # CALL Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+003f9  090c                     move-result-object
+003fa  c95b 1bee                iput-object  # FIELD Lc/d/a/b/n;->r:Ljava/lang/String;
+003fc  106e 1bb8 000a           invoke-virtual  # CALL Landroid/telephony/CellSignalStrengthLte;->getCqiTableIndex()I
+003ff  090a                     move-result
+00400  1071 2d22 0009           invoke-static  # CALL Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+00403  090c                     move-result-object
+00404  c95b 1beb                iput-object  # FIELD Lc/d/a/b/n;->o:Ljava/lang/String;
+00406  106e 1bb7 000a           invoke-virtual  # CALL Landroid/telephony/CellSignalStrengthLte;->getCqi()I
+00409  090a                     move-result
+0040a  1071 2d22 0009           invoke-static  # CALL Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+0040d  090c                     move-result-object
+0040e  c728                     goto
+0040f  000e                     return-void
+00410  091a 08dd                const-string  # STR "Insufficient permission!!"
+00412  2071 2988 0092           invoke-static  # CALL Lc/d/a/b/h;->b(Ljava/lang/String;,Ljava/lang/String;)V
+00415  000e                     return-void
+
+### Lcom/mobiletools/systemhelper/control/d;->b(Landroid/content/Context;,I,Lc/d/a/b/n;)V  [access=0x1, regs=6, ins=4, outs=4, code_off=0x10cb68]
+00000  235b 1d4c                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/d;->a:Landroid/content/Context;
+00002  001a 07f8                const-string  # STR "GetSignalStrengthInfo"
+00004  011a 07f9                const-string  # STR "GetSignalStrengthInfo====>"
+00006  2071 2987 0010           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+00009  1071 2912 0004           invoke-static  # CALL Lc/d/a/a/a;->a(I)I
+0000c  000a                     move-result
+0000d  003d 0005                if-lez
+0000f  406e 2bb3 5432           invoke-virtual  # CALL Lcom/mobiletools/systemhelper/control/d;->a(Landroid/content/Context;,I,Lc/d/a/b/n;)V
+00012  000e                     return-void

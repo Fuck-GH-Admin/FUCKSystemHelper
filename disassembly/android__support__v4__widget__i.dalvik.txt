@@ -1,0 +1,21 @@
+### Landroid/support/v4/widget/i;->a(Landroid/widget/ListView;,I)V  [access=0x9, regs=4, ins=2, outs=3, code_off=0xc08cc]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0113 0013                const/16
+00004  1034 0006                if-lt
+00006  206e 2064 0032           invoke-virtual  # CALL Landroid/widget/ListView;->scrollListBy(I)V
+00009  1928                     goto
+0000a  106e 203e 0002           invoke-virtual  # CALL Landroid/widget/ListView;->getFirstVisiblePosition()I
+0000d  000a                     move-result
+0000e  f112                     const/4
+0000f  1033 0003                if-ne
+00011  000e                     return-void
+00012  0112                     const/4
+00013  206e 2037 0012           invoke-virtual  # CALL Landroid/widget/ListView;->getChildAt(I)Landroid/view/View;
+00016  010c                     move-result-object
+00017  0139 0003                if-nez
+00019  000e                     return-void
+0001a  106e 1d76 0001           invoke-virtual  # CALL Landroid/view/View;->getTop()I
+0001d  010a                     move-result
+0001e  31b1                     op_b1
+0001f  306e 2075 0102           invoke-virtual  # CALL Landroid/widget/ListView;->setSelectionFromTop(I,I)V
+00022  000e                     return-void

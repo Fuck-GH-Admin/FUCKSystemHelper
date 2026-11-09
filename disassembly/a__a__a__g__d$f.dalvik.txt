@@ -1,0 +1,55 @@
+### La/a/a/g/d$f;-><init>(La/a/a/g/d;)V  [access=0x10001, regs=3, ins=2, outs=2, code_off=0x6ec74]
+00000  1070 0aab 0001           invoke-direct  # CALL Landroid/os/Handler;-><init>()V
+00003  0022 0692                new-instance  # TYPE Ljava/lang/ref/WeakReference;
+00005  2070 2d67 0020           invoke-direct  # CALL Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+00008  105b 0346                iput-object  # FIELD La/a/a/g/d$f;->a:Ljava/lang/ref/WeakReference;
+0000a  000e                     return-void
+
+### La/a/a/g/d$f;->handleMessage(Landroid/os/Message;)V  [access=0x1, regs=5, ins=2, outs=3, code_off=0x6ec9c]
+00000  0063 1c65                sget-boolean  # FIELD Lcom/baidu/location/f;->f:Z
+00002  0039 0003                if-nez
+00004  000e                     return-void
+00005  3054 0346                iget-object  # FIELD La/a/a/g/d$f;->a:Ljava/lang/ref/WeakReference;
+00007  106e 2d68 0000           invoke-virtual  # CALL Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+0000a  000c                     move-result-object
+0000b  001f 00cd                check-cast  # TYPE La/a/a/g/d;
+0000d  305b 0347                iput-object  # FIELD La/a/a/g/d$f;->b:La/a/a/g/d;
+0000f  0039 0003                if-nez
+00011  000e                     return-void
+00012  4152 0559                iget  # FIELD Landroid/os/Message;->what:I
+00014  1212                     const/4
+00015  2132 0025                if-eq
+00017  3312                     const/4
+00018  3132 0018                if-eq
+0001a  4312                     const/4
+0001b  3132 000e                if-eq
+0001d  5312                     const/4
+0001e  3132 0003                if-eq
+00020  3428                     goto
+00021  4354 0557                iget-object  # FIELD Landroid/os/Message;->obj:Ljava/lang/Object;
+00023  031f 0683                check-cast  # TYPE Ljava/lang/String;
+00025  2071 04ff 0030           invoke-static  # CALL La/a/a/g/d;->a(La/a/a/g/d;,Ljava/lang/String;)V
+00028  2c28                     goto
+00029  4354 0557                iget-object  # FIELD Landroid/os/Message;->obj:Ljava/lang/Object;
+0002b  031f 01dc                check-cast  # TYPE Landroid/location/Location;
+0002d  041a 0145                const-string  # STR "&og=2"
+0002f  0728                     goto
+00030  4354 0557                iget-object  # FIELD Landroid/os/Message;->obj:Ljava/lang/Object;
+00032  031f 01dc                check-cast  # TYPE Landroid/location/Location;
+00034  041a 0144                const-string  # STR "&og=1"
+00036  3071 0500 0340           invoke-static  # CALL La/a/a/g/d;->a(La/a/a/g/d;,Ljava/lang/String;,Landroid/location/Location;)V
+00039  1b28                     goto
+0003a  f012                     const/4
+0003b  4454 0557                iget-object  # FIELD Landroid/os/Message;->obj:Ljava/lang/Object;
+0003d  041f 01dc                check-cast  # TYPE Landroid/location/Location;
+0003f  0071 005e 0000           invoke-static  # CALL La/a/a/b/d;->i()La/a/a/b/d;
+00042  010c                     move-result-object
+00043  1152 003b                iget  # FIELD La/a/a/b/d;->F:I
+00045  2133 000a                if-ne
+00047  0071 00b3 0000           invoke-static  # CALL La/a/a/b/i;->d()La/a/a/b/i;
+0004a  000c                     move-result-object
+0004b  206e 00b0 0040           invoke-virtual  # CALL La/a/a/b/i;->b(Landroid/location/Location;)I
+0004e  000a                     move-result
+0004f  3354 0347                iget-object  # FIELD La/a/a/g/d$f;->b:La/a/a/g/d;
+00051  3071 04fe 0043           invoke-static  # CALL La/a/a/g/d;->a(La/a/a/g/d;,Landroid/location/Location;,I)V
+00054  000e                     return-void

@@ -1,0 +1,221 @@
+### Landroid/support/v4/graphics/drawable/a;->a(Landroid/graphics/drawable/Drawable;,F,F)V  [access=0x9, regs=5, ins=3, outs=3, code_off=0xb5320]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0113 0015                const/16
+00004  1034 0005                if-lt
+00006  306e 09ff 0432           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setHotspot(F,F)V
+00009  000e                     return-void
+
+### Landroid/support/v4/graphics/drawable/a;->a(Landroid/graphics/drawable/Drawable;,I,I,I,I)V  [access=0x9, regs=7, ins=5, outs=5, code_off=0xb5344]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0113 0015                const/16
+00004  1034 0005                if-lt
+00006  566e 0a00 5432           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setHotspotBounds(I,I,I,I)V
+00009  000e                     return-void
+
+### Landroid/support/v4/graphics/drawable/a;->a(Landroid/graphics/drawable/Drawable;,Landroid/content/res/ColorStateList;)V  [access=0x9, regs=4, ins=2, outs=2, code_off=0xb53a0]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0113 0015                const/16
+00004  1034 0006                if-lt
+00006  206e 0a05 0032           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setTintList(Landroid/content/res/ColorStateList;)V
+00009  0a28                     goto
+0000a  2020 02b5                instance-of  # TYPE Landroid/support/v4/graphics/drawable/b;
+0000c  0038 0007                if-eqz
+0000e  021f 02b5                check-cast  # TYPE Landroid/support/v4/graphics/drawable/b;
+00010  2072 107d 0032           invoke-interface  # CALL Landroid/support/v4/graphics/drawable/b;->setTintList(Landroid/content/res/ColorStateList;)V
+00013  000e                     return-void
+
+### Landroid/support/v4/graphics/drawable/a;->a(Landroid/graphics/drawable/Drawable;,Landroid/content/res/Resources$Theme;)V  [access=0x9, regs=4, ins=2, outs=2, code_off=0xb5294]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0113 0015                const/16
+00004  1034 0005                if-lt
+00006  206e 09ce 0032           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->applyTheme(Landroid/content/res/Resources$Theme;)V
+00009  000e                     return-void
+
+### Landroid/support/v4/graphics/drawable/a;->a(Landroid/graphics/drawable/Drawable;,Landroid/content/res/Resources;,Lorg/xmlpull/v1/XmlPullParser;,Landroid/util/AttributeSet;,Landroid/content/res/Resources$Theme;)V  [access=0x9, regs=7, ins=5, outs=5, code_off=0xb52b8]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0113 0015                const/16
+00004  1034 0006                if-lt
+00006  566e 09eb 5432           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->inflate(Landroid/content/res/Resources;,Lorg/xmlpull/v1/XmlPullParser;,Landroid/util/AttributeSet;,Landroid/content/res/Resources$Theme;)V
+00009  0428                     goto
+0000a  406e 09ea 5432           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->inflate(Landroid/content/res/Resources;,Lorg/xmlpull/v1/XmlPullParser;,Landroid/util/AttributeSet;)V
+0000d  000e                     return-void
+
+### Landroid/support/v4/graphics/drawable/a;->a(Landroid/graphics/drawable/Drawable;,Landroid/graphics/PorterDuff$Mode;)V  [access=0x9, regs=4, ins=2, outs=2, code_off=0xb53d8]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0113 0015                const/16
+00004  1034 0006                if-lt
+00006  206e 0a06 0032           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setTintMode(Landroid/graphics/PorterDuff$Mode;)V
+00009  0a28                     goto
+0000a  2020 02b5                instance-of  # TYPE Landroid/support/v4/graphics/drawable/b;
+0000c  0038 0007                if-eqz
+0000e  021f 02b5                check-cast  # TYPE Landroid/support/v4/graphics/drawable/b;
+00010  2072 107e 0032           invoke-interface  # CALL Landroid/support/v4/graphics/drawable/b;->setTintMode(Landroid/graphics/PorterDuff$Mode;)V
+00013  000e                     return-void
+
+### Landroid/support/v4/graphics/drawable/a;->a(Landroid/graphics/drawable/Drawable;,Z)V  [access=0x9, regs=4, ins=2, outs=2, code_off=0xb52fc]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0113 0013                const/16
+00004  1034 0005                if-lt
+00006  206e 09f6 0032           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setAutoMirrored(Z)V
+00009  000e                     return-void
+
+### Landroid/support/v4/graphics/drawable/a;->a(Landroid/graphics/drawable/Drawable;)Z  [access=0x9, regs=3, ins=1, outs=1, code_off=0xb5088]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0113 0015                const/16
+00004  1034 0007                if-lt
+00006  106e 09cf 0002           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->canApplyTheme()Z
+00009  020a                     move-result
+0000a  020f                     return
+0000b  0212                     const/4
+0000c  020f                     return
+
+### Landroid/support/v4/graphics/drawable/a;->a(Landroid/graphics/drawable/Drawable;,I)Z  [access=0x9, regs=9, ins=2, outs=3, code_off=0xb50e0]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0113 0017                const/16
+00004  1034 0007                if-lt
+00006  206e 0a01 0087           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setLayoutDirection(I)Z
+00009  070a                     move-result
+0000a  070f                     return
+0000b  0113 0011                const/16
+0000d  0212                     const/4
+0000e  1034 003e                if-lt
+00010  0063 0da3                sget-boolean  # FIELD Landroid/support/v4/graphics/drawable/a;->b:Z
+00012  011a 073a                const-string  # STR "DrawableCompat"
+00014  1312                     const/4
+00015  0039 001e                if-nez
+00017  001c 01c0                const-class  # TYPE Landroid/graphics/drawable/Drawable;
+00019  041a 25a9                const-string  # STR "setLayoutDirection"
+0001b  3523 075c                new-array  # TYPE [Ljava/lang/Class;
+0001d  0662 1d60                sget-object  # FIELD Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+0001f  064d 0205                aput-object
+00021  306e 2c7a 0540           invoke-virtual  # CALL Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;,[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+00024  000c                     move-result-object
+00025  0069 0da2                sput-object  # FIELD Landroid/support/v4/graphics/drawable/a;->a:Ljava/lang/reflect/Method;
+00027  206e 2d7c 0030           invoke-virtual  # CALL Ljava/lang/reflect/Method;->setAccessible(Z)V
+0002a  0728                     goto
+0002b  000d                     op_0d
+0002c  041a 07bf                const-string  # STR "Failed to retrieve setLayoutDirection(int) method"
+0002e  3071 1c5f 0041           invoke-static  # CALL Landroid/util/Log;->i(Ljava/lang/String;,Ljava/lang/String;,Ljava/lang/Throwable;)I
+00031  036a 0da3                sput-boolean  # FIELD Landroid/support/v4/graphics/drawable/a;->b:Z
+00033  0062 0da2                sget-object  # FIELD Landroid/support/v4/graphics/drawable/a;->a:Ljava/lang/reflect/Method;
+00035  0038 0017                if-eqz
+00037  3423 075d                new-array  # TYPE [Ljava/lang/Object;
+00039  1071 2cae 0008           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+0003c  080c                     move-result-object
+0003d  084d 0204                aput-object
+0003f  306e 2d7a 0470           invoke-virtual  # CALL Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;,[Ljava/lang/Object;)Ljava/lang/Object;
+00042  030f                     return
+00043  070d                     op_0d
+00044  081a 07b7                const-string  # STR "Failed to invoke setLayoutDirection(int) via reflection"
+00046  3071 1c5f 0781           invoke-static  # CALL Landroid/util/Log;->i(Ljava/lang/String;,Ljava/lang/String;,Ljava/lang/Throwable;)I
+00049  0712                     const/4
+0004a  0769 0da2                sput-object  # FIELD Landroid/support/v4/graphics/drawable/a;->a:Ljava/lang/reflect/Method;
+0004c  020f                     return
+
+### Landroid/support/v4/graphics/drawable/a;->b(Landroid/graphics/drawable/Drawable;)I  [access=0x9, regs=3, ins=1, outs=1, code_off=0xb51a8]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0113 0013                const/16
+00004  1034 0007                if-lt
+00006  106e 09d6 0002           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->getAlpha()I
+00009  020a                     move-result
+0000a  020f                     return
+0000b  0212                     const/4
+0000c  020f                     return
+
+### Landroid/support/v4/graphics/drawable/a;->b(Landroid/graphics/drawable/Drawable;,I)V  [access=0x9, regs=4, ins=2, outs=2, code_off=0xb5368]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0113 0015                const/16
+00004  1034 0006                if-lt
+00006  206e 0a04 0032           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setTint(I)V
+00009  0a28                     goto
+0000a  2020 02b5                instance-of  # TYPE Landroid/support/v4/graphics/drawable/b;
+0000c  0038 0007                if-eqz
+0000e  021f 02b5                check-cast  # TYPE Landroid/support/v4/graphics/drawable/b;
+00010  2072 107c 0032           invoke-interface  # CALL Landroid/support/v4/graphics/drawable/b;->setTint(I)V
+00013  000e                     return-void
+
+### Landroid/support/v4/graphics/drawable/a;->c(Landroid/graphics/drawable/Drawable;)Landroid/graphics/ColorFilter;  [access=0x9, regs=3, ins=1, outs=1, code_off=0xb5008]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0113 0015                const/16
+00004  1034 0007                if-lt
+00006  106e 09da 0002           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->getColorFilter()Landroid/graphics/ColorFilter;
+00009  020c                     move-result-object
+0000a  0211                     return-object
+0000b  0212                     const/4
+0000c  0211                     return-object
+
+### Landroid/support/v4/graphics/drawable/a;->d(Landroid/graphics/drawable/Drawable;)I  [access=0x9, regs=7, ins=1, outs=3, code_off=0xb51d4]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0113 0017                const/16
+00004  1034 0007                if-lt
+00006  106e 09e1 0006           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->getLayoutDirection()I
+00009  060a                     move-result
+0000a  060f                     return
+0000b  0113 0011                const/16
+0000d  0212                     const/4
+0000e  1034 003b                if-lt
+00010  0063 0da5                sget-boolean  # FIELD Landroid/support/v4/graphics/drawable/a;->d:Z
+00012  011a 073a                const-string  # STR "DrawableCompat"
+00014  0039 001b                if-nez
+00016  1012                     const/4
+00017  031c 01c0                const-class  # TYPE Landroid/graphics/drawable/Drawable;
+00019  041a 1d90                const-string  # STR "getLayoutDirection"
+0001b  2523 075c                new-array  # TYPE [Ljava/lang/Class;
+0001d  306e 2c7a 0543           invoke-virtual  # CALL Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;,[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+00020  030c                     move-result-object
+00021  0369 0da4                sput-object  # FIELD Landroid/support/v4/graphics/drawable/a;->c:Ljava/lang/reflect/Method;
+00023  206e 2d7c 0003           invoke-virtual  # CALL Ljava/lang/reflect/Method;->setAccessible(Z)V
+00026  0728                     goto
+00027  030d                     op_0d
+00028  041a 07bd                const-string  # STR "Failed to retrieve getLayoutDirection() method"
+0002a  3071 1c5f 0341           invoke-static  # CALL Landroid/util/Log;->i(Ljava/lang/String;,Ljava/lang/String;,Ljava/lang/Throwable;)I
+0002d  006a 0da5                sput-boolean  # FIELD Landroid/support/v4/graphics/drawable/a;->d:Z
+0002f  0062 0da4                sget-object  # FIELD Landroid/support/v4/graphics/drawable/a;->c:Ljava/lang/reflect/Method;
+00031  0038 0018                if-eqz
+00033  2323 075d                new-array  # TYPE [Ljava/lang/Object;
+00035  306e 2d7a 0360           invoke-virtual  # CALL Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;,[Ljava/lang/Object;)Ljava/lang/Object;
+00038  060c                     move-result-object
+00039  061f 066d                check-cast  # TYPE Ljava/lang/Integer;
+0003b  106e 2ca6 0006           invoke-virtual  # CALL Ljava/lang/Integer;->intValue()I
+0003e  060a                     move-result
+0003f  060f                     return
+00040  060d                     op_0d
+00041  001a 07b6                const-string  # STR "Failed to invoke getLayoutDirection() via reflection"
+00043  3071 1c5f 0601           invoke-static  # CALL Landroid/util/Log;->i(Ljava/lang/String;,Ljava/lang/String;,Ljava/lang/Throwable;)I
+00046  0612                     const/4
+00047  0669 0da4                sput-object  # FIELD Landroid/support/v4/graphics/drawable/a;->c:Ljava/lang/reflect/Method;
+00049  020f                     return
+
+### Landroid/support/v4/graphics/drawable/a;->e(Landroid/graphics/drawable/Drawable;)Z  [access=0x9, regs=3, ins=1, outs=1, code_off=0xb50b4]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0113 0013                const/16
+00004  1034 0007                if-lt
+00006  106e 09ed 0002           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->isAutoMirrored()Z
+00009  020a                     move-result
+0000a  020f                     return
+0000b  0212                     const/4
+0000c  020f                     return
+
+### Landroid/support/v4/graphics/drawable/a;->f(Landroid/graphics/drawable/Drawable;)V  [access=0x9, regs=1, ins=1, outs=1, code_off=0xb52e4]
+00000  106e 09f0 0000           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->jumpToCurrentState()V
+00003  000e                     return-void
+
+### Landroid/support/v4/graphics/drawable/a;->g(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;  [access=0x9, regs=3, ins=1, outs=2, code_off=0xb5034]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0113 0017                const/16
+00004  1034 0003                if-lt
+00006  0211                     return-object
+00007  0113 0015                const/16
+00009  1034 000d                if-lt
+0000b  2020 02b5                instance-of  # TYPE Landroid/support/v4/graphics/drawable/b;
+0000d  0039 0008                if-nez
+0000f  0022 02bb                new-instance  # TYPE Landroid/support/v4/graphics/drawable/e;
+00011  2070 10b3 0020           invoke-direct  # CALL Landroid/support/v4/graphics/drawable/e;-><init>(Landroid/graphics/drawable/Drawable;)V
+00014  0011                     return-object
+00015  0211                     return-object
+00016  2020 02b5                instance-of  # TYPE Landroid/support/v4/graphics/drawable/b;
+00018  0039 0008                if-nez
+0001a  0022 02b9                new-instance  # TYPE Landroid/support/v4/graphics/drawable/d;
+0001c  2070 1089 0020           invoke-direct  # CALL Landroid/support/v4/graphics/drawable/d;-><init>(Landroid/graphics/drawable/Drawable;)V
+0001f  0011                     return-object
+00020  0211                     return-object

@@ -1,0 +1,103 @@
+### Lc/a/b/c/e$f;-><init>()V  [access=0x10000, regs=1, ins=1, outs=1, code_off=0xf5410]
+00000  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  000e                     return-void
+
+### Lc/a/b/c/e$f;->a(Landroid/content/Context;,Landroid/net/Uri;,I,I,I)I  [access=0x1, regs=8, ins=6, outs=3, code_off=0xf5390]
+00000  2254 1af1                iget-object  # FIELD Lc/a/b/c/e$f;->a:Ljava/lang/reflect/Method;
+00002  4012                     const/4
+00003  0023 075d                new-array  # TYPE [Ljava/lang/Object;
+00005  0112                     const/4
+00006  044d 0100                aput-object
+00008  1412                     const/4
+00009  1071 2cae 0005           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+0000c  050c                     move-result-object
+0000d  054d 0400                aput-object
+0000f  2412                     const/4
+00010  1071 2cae 0006           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+00013  050c                     move-result-object
+00014  054d 0400                aput-object
+00016  3412                     const/4
+00017  1071 2cae 0007           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+0001a  050c                     move-result-object
+0001b  054d 0400                aput-object
+0001d  306e 2d7a 0032           invoke-virtual  # CALL Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;,[Ljava/lang/Object;)Ljava/lang/Object;
+00020  020c                     move-result-object
+00021  021f 066d                check-cast  # TYPE Ljava/lang/Integer;
+00023  106e 2ca6 0002           invoke-virtual  # CALL Ljava/lang/Integer;->intValue()I
+00026  020a                     move-result
+00027  020f                     return
+00028  020d                     op_0d
+00029  0322 0575                new-instance  # TYPE Lc/a/b/a/e$a;
+0002b  2070 272a 0023           invoke-direct  # CALL Lc/a/b/a/e$a;-><init>(Ljava/lang/Throwable;)V
+0002e  0327                     throw
+
+### Lc/a/b/c/e$f;->a()V  [access=0x0, regs=9, ins=1, outs=3, code_off=0xf5428]
+00000  0071 2724 0000           invoke-static  # CALL Lc/a/b/a/d;->d()[B
+00003  000c                     move-result-object
+00004  1071 272b 0000           invoke-static  # CALL Lc/a/b/a/e;->a([B)Ljava/lang/String;
+00007  000c                     move-result-object
+00008  011c 016e                const-class  # TYPE Landroid/content/Context;
+0000a  4212                     const/4
+0000b  2223 075c                new-array  # TYPE [Ljava/lang/Class;
+0000d  031c 01e8                const-class  # TYPE Landroid/net/Uri;
+0000f  0412                     const/4
+00010  034d 0402                aput-object
+00012  0362 1d60                sget-object  # FIELD Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+00014  1512                     const/4
+00015  034d 0502                aput-object
+00017  0362 1d60                sget-object  # FIELD Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+00019  2612                     const/4
+0001a  034d 0602                aput-object
+0001c  0362 1d60                sget-object  # FIELD Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+0001e  3712                     const/4
+0001f  034d 0702                aput-object
+00021  3071 272c 0201           invoke-static  # CALL Lc/a/b/a/e;->a(Ljava/lang/Class;,Ljava/lang/String;,[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+00024  000c                     move-result-object
+00025  805b 1af1                iput-object  # FIELD Lc/a/b/c/e$f;->a:Ljava/lang/reflect/Method;
+00027  0071 2725 0000           invoke-static  # CALL Lc/a/b/a/d;->e()[B
+0002a  080c                     move-result-object
+0002b  1071 272b 0008           invoke-static  # CALL Lc/a/b/a/e;->a([B)Ljava/lang/String;
+0002e  080c                     move-result-object
+0002f  001c 016e                const-class  # TYPE Landroid/content/Context;
+00031  7123 075c                new-array  # TYPE [Ljava/lang/Class;
+00033  021c 0683                const-class  # TYPE Ljava/lang/String;
+00035  024d 0401                aput-object
+00037  021c 01e8                const-class  # TYPE Landroid/net/Uri;
+00039  024d 0501                aput-object
+0003b  0262 1d60                sget-object  # FIELD Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+0003d  024d 0601                aput-object
+0003f  3071 272c 0180           invoke-static  # CALL Lc/a/b/a/e;->a(Ljava/lang/Class;,Ljava/lang/String;,[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+00042  0071 2726 0000           invoke-static  # CALL Lc/a/b/a/d;->f()[B
+00045  080c                     move-result-object
+00046  1071 272b 0008           invoke-static  # CALL Lc/a/b/a/e;->a([B)Ljava/lang/String;
+00049  080c                     move-result-object
+0004a  001c 016b                const-class  # TYPE Landroid/content/ContentResolver;
+0004c  6123 075c                new-array  # TYPE [Ljava/lang/Class;
+0004e  021c 01e8                const-class  # TYPE Landroid/net/Uri;
+00050  024d 0401                aput-object
+00052  0262 1d60                sget-object  # FIELD Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+00054  024d 0501                aput-object
+00056  3071 272c 0180           invoke-static  # CALL Lc/a/b/a/e;->a(Ljava/lang/Class;,Ljava/lang/String;,[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+00059  0071 2727 0000           invoke-static  # CALL Lc/a/b/a/d;->g()[B
+0005c  080c                     move-result-object
+0005d  1071 272b 0008           invoke-static  # CALL Lc/a/b/a/e;->a([B)Ljava/lang/String;
+00060  080c                     move-result-object
+00061  001c 016e                const-class  # TYPE Landroid/content/Context;
+00063  6123 075c                new-array  # TYPE [Ljava/lang/Class;
+00065  021c 01e8                const-class  # TYPE Landroid/net/Uri;
+00067  024d 0401                aput-object
+00069  0262 1d60                sget-object  # FIELD Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+0006b  024d 0501                aput-object
+0006d  3071 272c 0180           invoke-static  # CALL Lc/a/b/a/e;->a(Ljava/lang/Class;,Ljava/lang/String;,[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+00070  0071 2728 0000           invoke-static  # CALL Lc/a/b/a/d;->h()[B
+00073  080c                     move-result-object
+00074  1071 272b 0008           invoke-static  # CALL Lc/a/b/a/e;->a([B)Ljava/lang/String;
+00077  080c                     move-result-object
+00078  001c 016b                const-class  # TYPE Landroid/content/ContentResolver;
+0007a  6123 075c                new-array  # TYPE [Ljava/lang/Class;
+0007c  021c 01e8                const-class  # TYPE Landroid/net/Uri;
+0007e  024d 0401                aput-object
+00080  0262 1d60                sget-object  # FIELD Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+00082  024d 0501                aput-object
+00084  3071 272c 0180           invoke-static  # CALL Lc/a/b/a/e;->a(Ljava/lang/Class;,Ljava/lang/String;,[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+00087  000e                     return-void

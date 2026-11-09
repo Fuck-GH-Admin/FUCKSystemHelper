@@ -1,0 +1,235 @@
+### Landroid/support/v7/widget/ContentFrameLayout;-><init>(Landroid/content/Context;)V  [access=0x10001, regs=3, ins=2, outs=3, code_off=0xe3e00]
+00000  0012                     const/4
+00001  3070 168f 0021           invoke-direct  # CALL Landroid/support/v7/widget/ContentFrameLayout;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;)V
+00004  000e                     return-void
+
+### Landroid/support/v7/widget/ContentFrameLayout;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;)V  [access=0x10001, regs=4, ins=3, outs=4, code_off=0xe3e1c]
+00000  0012                     const/4
+00001  4070 1690 0321           invoke-direct  # CALL Landroid/support/v7/widget/ContentFrameLayout;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;,I)V
+00004  000e                     return-void
+
+### Landroid/support/v7/widget/ContentFrameLayout;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;,I)V  [access=0x10001, regs=4, ins=4, outs=4, code_off=0xe3e38]
+00000  4070 1f55 3210           invoke-direct  # CALL Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;,I)V
+00003  0122 01b0                new-instance  # TYPE Landroid/graphics/Rect;
+00005  1070 0994 0001           invoke-direct  # CALL Landroid/graphics/Rect;-><init>()V
+00008  015b 1053                iput-object  # FIELD Landroid/support/v7/widget/ContentFrameLayout;->h:Landroid/graphics/Rect;
+0000a  000e                     return-void
+
+### Landroid/support/v7/widget/ContentFrameLayout;->a(I,I,I,I)V  [access=0x1, regs=6, ins=5, outs=5, code_off=0xe40b4]
+00000  1054 1053                iget-object  # FIELD Landroid/support/v7/widget/ContentFrameLayout;->h:Landroid/graphics/Rect;
+00002  556e 09a0 4320           invoke-virtual  # CALL Landroid/graphics/Rect;->set(I,I,I,I)V
+00005  1071 2546 0001           invoke-static  # CALL Lb/b/c/g/q;->k(Landroid/view/View;)Z
+00008  020a                     move-result
+00009  0238 0005                if-eqz
+0000b  106e 1f98 0001           invoke-virtual  # CALL Landroid/widget/FrameLayout;->requestLayout()V
+0000e  000e                     return-void
+
+### Landroid/support/v7/widget/ContentFrameLayout;->a(Landroid/graphics/Rect;)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0xe3e60]
+00000  206e 1f65 0010           invoke-virtual  # CALL Landroid/widget/FrameLayout;->fitSystemWindows(Landroid/graphics/Rect;)Z
+00003  000e                     return-void
+
+### Landroid/support/v7/widget/ContentFrameLayout;->getFixedHeightMajor()Landroid/util/TypedValue;  [access=0x1, regs=2, ins=1, outs=1, code_off=0xe3cf8]
+00000  1054 1051                iget-object  # FIELD Landroid/support/v7/widget/ContentFrameLayout;->f:Landroid/util/TypedValue;
+00002  0039 0009                if-nez
+00004  0022 041f                new-instance  # TYPE Landroid/util/TypedValue;
+00006  1070 1c7e 0000           invoke-direct  # CALL Landroid/util/TypedValue;-><init>()V
+00009  105b 1051                iput-object  # FIELD Landroid/support/v7/widget/ContentFrameLayout;->f:Landroid/util/TypedValue;
+0000b  1154 1051                iget-object  # FIELD Landroid/support/v7/widget/ContentFrameLayout;->f:Landroid/util/TypedValue;
+0000d  0111                     return-object
+
+### Landroid/support/v7/widget/ContentFrameLayout;->getFixedHeightMinor()Landroid/util/TypedValue;  [access=0x1, regs=2, ins=1, outs=1, code_off=0xe3d24]
+00000  1054 1052                iget-object  # FIELD Landroid/support/v7/widget/ContentFrameLayout;->g:Landroid/util/TypedValue;
+00002  0039 0009                if-nez
+00004  0022 041f                new-instance  # TYPE Landroid/util/TypedValue;
+00006  1070 1c7e 0000           invoke-direct  # CALL Landroid/util/TypedValue;-><init>()V
+00009  105b 1052                iput-object  # FIELD Landroid/support/v7/widget/ContentFrameLayout;->g:Landroid/util/TypedValue;
+0000b  1154 1052                iget-object  # FIELD Landroid/support/v7/widget/ContentFrameLayout;->g:Landroid/util/TypedValue;
+0000d  0111                     return-object
+
+### Landroid/support/v7/widget/ContentFrameLayout;->getFixedWidthMajor()Landroid/util/TypedValue;  [access=0x1, regs=2, ins=1, outs=1, code_off=0xe3d50]
+00000  1054 104f                iget-object  # FIELD Landroid/support/v7/widget/ContentFrameLayout;->d:Landroid/util/TypedValue;
+00002  0039 0009                if-nez
+00004  0022 041f                new-instance  # TYPE Landroid/util/TypedValue;
+00006  1070 1c7e 0000           invoke-direct  # CALL Landroid/util/TypedValue;-><init>()V
+00009  105b 104f                iput-object  # FIELD Landroid/support/v7/widget/ContentFrameLayout;->d:Landroid/util/TypedValue;
+0000b  1154 104f                iget-object  # FIELD Landroid/support/v7/widget/ContentFrameLayout;->d:Landroid/util/TypedValue;
+0000d  0111                     return-object
+
+### Landroid/support/v7/widget/ContentFrameLayout;->getFixedWidthMinor()Landroid/util/TypedValue;  [access=0x1, regs=2, ins=1, outs=1, code_off=0xe3d7c]
+00000  1054 1050                iget-object  # FIELD Landroid/support/v7/widget/ContentFrameLayout;->e:Landroid/util/TypedValue;
+00002  0039 0009                if-nez
+00004  0022 041f                new-instance  # TYPE Landroid/util/TypedValue;
+00006  1070 1c7e 0000           invoke-direct  # CALL Landroid/util/TypedValue;-><init>()V
+00009  105b 1050                iput-object  # FIELD Landroid/support/v7/widget/ContentFrameLayout;->e:Landroid/util/TypedValue;
+0000b  1154 1050                iget-object  # FIELD Landroid/support/v7/widget/ContentFrameLayout;->e:Landroid/util/TypedValue;
+0000d  0111                     return-object
+
+### Landroid/support/v7/widget/ContentFrameLayout;->getMinWidthMajor()Landroid/util/TypedValue;  [access=0x1, regs=2, ins=1, outs=1, code_off=0xe3da8]
+00000  1054 104d                iget-object  # FIELD Landroid/support/v7/widget/ContentFrameLayout;->b:Landroid/util/TypedValue;
+00002  0039 0009                if-nez
+00004  0022 041f                new-instance  # TYPE Landroid/util/TypedValue;
+00006  1070 1c7e 0000           invoke-direct  # CALL Landroid/util/TypedValue;-><init>()V
+00009  105b 104d                iput-object  # FIELD Landroid/support/v7/widget/ContentFrameLayout;->b:Landroid/util/TypedValue;
+0000b  1154 104d                iget-object  # FIELD Landroid/support/v7/widget/ContentFrameLayout;->b:Landroid/util/TypedValue;
+0000d  0111                     return-object
+
+### Landroid/support/v7/widget/ContentFrameLayout;->getMinWidthMinor()Landroid/util/TypedValue;  [access=0x1, regs=2, ins=1, outs=1, code_off=0xe3dd4]
+00000  1054 104e                iget-object  # FIELD Landroid/support/v7/widget/ContentFrameLayout;->c:Landroid/util/TypedValue;
+00002  0039 0009                if-nez
+00004  0022 041f                new-instance  # TYPE Landroid/util/TypedValue;
+00006  1070 1c7e 0000           invoke-direct  # CALL Landroid/util/TypedValue;-><init>()V
+00009  105b 104e                iput-object  # FIELD Landroid/support/v7/widget/ContentFrameLayout;->c:Landroid/util/TypedValue;
+0000b  1154 104e                iget-object  # FIELD Landroid/support/v7/widget/ContentFrameLayout;->c:Landroid/util/TypedValue;
+0000d  0111                     return-object
+
+### Landroid/support/v7/widget/ContentFrameLayout;->onAttachedToWindow()V  [access=0x4, regs=1, ins=1, outs=1, code_off=0xe3e78]
+00000  106f 1f87 0000           invoke-super  # CALL Landroid/widget/FrameLayout;->onAttachedToWindow()V
+00003  0054 1054                iget-object  # FIELD Landroid/support/v7/widget/ContentFrameLayout;->i:Landroid/support/v7/widget/ContentFrameLayout$a;
+00005  0038 0005                if-eqz
+00007  1072 168c 0000           invoke-interface  # CALL Landroid/support/v7/widget/ContentFrameLayout$a;->a()V
+0000a  000e                     return-void
+
+### Landroid/support/v7/widget/ContentFrameLayout;->onDetachedFromWindow()V  [access=0x4, regs=1, ins=1, outs=1, code_off=0xe3ea0]
+00000  106f 1f88 0000           invoke-super  # CALL Landroid/widget/FrameLayout;->onDetachedFromWindow()V
+00003  0054 1054                iget-object  # FIELD Landroid/support/v7/widget/ContentFrameLayout;->i:Landroid/support/v7/widget/ContentFrameLayout$a;
+00005  0038 0005                if-eqz
+00007  1072 168d 0000           invoke-interface  # CALL Landroid/support/v7/widget/ContentFrameLayout$a;->onDetachedFromWindow()V
+0000a  000e                     return-void
+
+### Landroid/support/v7/widget/ContentFrameLayout;->onMeasure(I,I)V  [access=0x4, regs=16, ins=3, outs=3, code_off=0xe3ec8]
+00000  106e 1f6b 000d           invoke-virtual  # CALL Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
+00003  000c                     move-result-object
+00004  106e 0848 0000           invoke-virtual  # CALL Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+00007  000c                     move-result-object
+00008  106e 08cb 0000           invoke-virtual  # CALL Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+0000b  000c                     move-result-object
+0000c  0152 124c                iget  # FIELD Landroid/util/DisplayMetrics;->widthPixels:I
+0000e  0252 124b                iget  # FIELD Landroid/util/DisplayMetrics;->heightPixels:I
+00010  1312                     const/4
+00011  0412                     const/4
+00012  2135 0004                if-ge
+00014  3101                     op_01
+00015  0228                     goto
+00016  4101                     op_01
+00017  1071 1d36 000e           invoke-static  # CALL Landroid/view/View$MeasureSpec;->getMode(I)I
+0001a  020a                     move-result
+0001b  1071 1d36 000f           invoke-static  # CALL Landroid/view/View$MeasureSpec;->getMode(I)I
+0001e  050a                     move-result
+0001f  6612                     const/4
+00020  5712                     const/4
+00021  0815 8000                const/high16
+00023  0915 4000                const/high16
+00025  8233 003b                if-ne
+00027  0138 0005                if-eqz
+00029  da54 1050                iget-object  # FIELD Landroid/support/v7/widget/ContentFrameLayout;->e:Landroid/util/TypedValue;
+0002b  0328                     goto
+0002c  da54 104f                iget-object  # FIELD Landroid/support/v7/widget/ContentFrameLayout;->d:Landroid/util/TypedValue;
+0002e  0a38 0032                if-eqz
+00030  ab52 1253                iget  # FIELD Landroid/util/TypedValue;->type:I
+00032  0b38 002e                if-eqz
+00034  7b33 0008                if-ne
+00036  206e 1c81 000a           invoke-virtual  # CALL Landroid/util/TypedValue;->getDimension(Landroid/util/DisplayMetrics;)F
+00039  0a0a                     move-result
+0003a  aa87                     op_87
+0003b  0d28                     goto
+0003c  6b33 000b                if-ne
+0003e  0b52 124c                iget  # FIELD Landroid/util/DisplayMetrics;->widthPixels:I
+00040  bc82                     op_82
+00041  bb82                     op_82
+00042  306e 1c83 0bca           invoke-virtual  # CALL Landroid/util/TypedValue;->getFraction(F,F)F
+00045  0a0a                     move-result
+00046  f428                     goto
+00047  4a01                     op_01
+00048  0a3d 0018                if-lez
+0004a  db54 1053                iget-object  # FIELD Landroid/support/v7/widget/ContentFrameLayout;->h:Landroid/graphics/Rect;
+0004c  bc52 0538                iget  # FIELD Landroid/graphics/Rect;->left:I
+0004e  bb52 0539                iget  # FIELD Landroid/graphics/Rect;->right:I
+00050  bcb0                     op_b0
+00051  cab1                     op_b1
+00052  1071 1d37 000e           invoke-static  # CALL Landroid/view/View$MeasureSpec;->getSize(I)I
+00055  0e0a                     move-result
+00056  2071 2ccf 00ea           invoke-static  # CALL Ljava/lang/Math;->min(I,I)I
+00059  0e0a                     move-result
+0005a  2071 1d38 009e           invoke-static  # CALL Landroid/view/View$MeasureSpec;->makeMeasureSpec(I,I)I
+0005d  0e0a                     move-result
+0005e  3a01                     op_01
+0005f  0228                     goto
+00060  4a01                     op_01
+00061  8533 0039                if-ne
+00063  0138 0005                if-eqz
+00065  d554 1051                iget-object  # FIELD Landroid/support/v7/widget/ContentFrameLayout;->f:Landroid/util/TypedValue;
+00067  0328                     goto
+00068  d554 1052                iget-object  # FIELD Landroid/support/v7/widget/ContentFrameLayout;->g:Landroid/util/TypedValue;
+0006a  0538 0030                if-eqz
+0006c  5b52 1253                iget  # FIELD Landroid/util/TypedValue;->type:I
+0006e  0b38 002c                if-eqz
+00070  7b33 0008                if-ne
+00072  206e 1c81 0005           invoke-virtual  # CALL Landroid/util/TypedValue;->getDimension(Landroid/util/DisplayMetrics;)F
+00075  050a                     move-result
+00076  5587                     op_87
+00077  0d28                     goto
+00078  6b33 000b                if-ne
+0007a  0b52 124b                iget  # FIELD Landroid/util/DisplayMetrics;->heightPixels:I
+0007c  bc82                     op_82
+0007d  bb82                     op_82
+0007e  306e 1c83 0bc5           invoke-virtual  # CALL Landroid/util/TypedValue;->getFraction(F,F)F
+00081  050a                     move-result
+00082  f428                     goto
+00083  4501                     op_01
+00084  053d 0016                if-lez
+00086  db54 1053                iget-object  # FIELD Landroid/support/v7/widget/ContentFrameLayout;->h:Landroid/graphics/Rect;
+00088  bc52 053a                iget  # FIELD Landroid/graphics/Rect;->top:I
+0008a  bb52 0537                iget  # FIELD Landroid/graphics/Rect;->bottom:I
+0008c  bcb0                     op_b0
+0008d  c5b1                     op_b1
+0008e  1071 1d37 000f           invoke-static  # CALL Landroid/view/View$MeasureSpec;->getSize(I)I
+00091  0f0a                     move-result
+00092  2071 2ccf 00f5           invoke-static  # CALL Ljava/lang/Math;->min(I,I)I
+00095  0f0a                     move-result
+00096  2071 1d38 009f           invoke-static  # CALL Landroid/view/View$MeasureSpec;->makeMeasureSpec(I,I)I
+00099  0f0a                     move-result
+0009a  306f 1f8d 0fed           invoke-super  # CALL Landroid/widget/FrameLayout;->onMeasure(I,I)V
+0009d  106e 1f75 000d           invoke-virtual  # CALL Landroid/widget/FrameLayout;->getMeasuredWidth()I
+000a0  0e0a                     move-result
+000a1  2071 1d38 009e           invoke-static  # CALL Landroid/view/View$MeasureSpec;->makeMeasureSpec(I,I)I
+000a4  050a                     move-result
+000a5  0a39 0036                if-nez
+000a7  8233 0034                if-ne
+000a9  0138 0005                if-eqz
+000ab  d154 104e                iget-object  # FIELD Landroid/support/v7/widget/ContentFrameLayout;->c:Landroid/util/TypedValue;
+000ad  0328                     goto
+000ae  d154 104d                iget-object  # FIELD Landroid/support/v7/widget/ContentFrameLayout;->b:Landroid/util/TypedValue;
+000b0  0138 002b                if-eqz
+000b2  1252 1253                iget  # FIELD Landroid/util/TypedValue;->type:I
+000b4  0238 0027                if-eqz
+000b6  7233 0008                if-ne
+000b8  206e 1c81 0001           invoke-virtual  # CALL Landroid/util/TypedValue;->getDimension(Landroid/util/DisplayMetrics;)F
+000bb  000a                     move-result
+000bc  0087                     op_87
+000bd  0d28                     goto
+000be  6233 000b                if-ne
+000c0  0052 124c                iget  # FIELD Landroid/util/DisplayMetrics;->widthPixels:I
+000c2  0282                     op_82
+000c3  0082                     op_82
+000c4  306e 1c83 0021           invoke-virtual  # CALL Landroid/util/TypedValue;->getFraction(F,F)F
+000c7  000a                     move-result
+000c8  f428                     goto
+000c9  4001                     op_01
+000ca  003d 000a                if-lez
+000cc  d154 1053                iget-object  # FIELD Landroid/support/v7/widget/ContentFrameLayout;->h:Landroid/graphics/Rect;
+000ce  1252 0538                iget  # FIELD Landroid/graphics/Rect;->left:I
+000d0  1152 0539                iget  # FIELD Landroid/graphics/Rect;->right:I
+000d2  12b0                     op_b0
+000d3  20b1                     op_b1
+000d4  0e35 0007                if-ge
+000d6  2071 1d38 0090           invoke-static  # CALL Landroid/view/View$MeasureSpec;->makeMeasureSpec(I,I)I
+000d9  050a                     move-result
+000da  0228                     goto
+000db  4301                     op_01
+000dc  0338 0005                if-eqz
+000de  306f 1f8d 0f5d           invoke-super  # CALL Landroid/widget/FrameLayout;->onMeasure(I,I)V
+000e1  000e                     return-void
+
+### Landroid/support/v7/widget/ContentFrameLayout;->setAttachListener(Landroid/support/v7/widget/ContentFrameLayout$a;)V  [access=0x1, regs=2, ins=2, outs=0, code_off=0xe409c]
+00000  015b 1054                iput-object  # FIELD Landroid/support/v7/widget/ContentFrameLayout;->i:Landroid/support/v7/widget/ContentFrameLayout$a;
+00002  000e                     return-void

@@ -1,0 +1,59 @@
+### Landroid/support/v4/app/x;-><init>()V  [access=0x10001, regs=2, ins=1, outs=2, code_off=0xb0aa4]
+00000  1070 06f1 0001           invoke-direct  # CALL Landroid/app/Activity;-><init>()V
+00003  0022 0519                new-instance  # TYPE Lb/b/c/f/k;
+00005  1070 2487 0000           invoke-direct  # CALL Lb/b/c/f/k;-><init>()V
+00008  0022 014f                new-instance  # TYPE Landroid/arch/lifecycle/f;
+0000a  2070 07db 0010           invoke-direct  # CALL Landroid/arch/lifecycle/f;-><init>(Landroid/arch/lifecycle/e;)V
+0000d  105b 0d95                iput-object  # FIELD Landroid/support/v4/app/x;->b:Landroid/arch/lifecycle/f;
+0000f  000e                     return-void
+
+### Landroid/support/v4/app/x;->a()Landroid/arch/lifecycle/c;  [access=0x1, regs=1, ins=1, outs=0, code_off=0xb09f0]
+00000  0054 0d95                iget-object  # FIELD Landroid/support/v4/app/x;->b:Landroid/arch/lifecycle/f;
+00002  0011                     return-object
+
+### Landroid/support/v4/app/x;->a(Landroid/view/KeyEvent;)Z  [access=0x1, regs=2, ins=2, outs=2, code_off=0xb0a88]
+00000  206f 06f3 0010           invoke-super  # CALL Landroid/app/Activity;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
+00003  000a                     move-result
+00004  000f                     return
+
+### Landroid/support/v4/app/x;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z  [access=0x1, regs=4, ins=2, outs=4, code_off=0xb0a08]
+00000  106e 0708 0002           invoke-virtual  # CALL Landroid/app/Activity;->getWindow()Landroid/view/Window;
+00003  000c                     move-result-object
+00004  106e 1e72 0000           invoke-virtual  # CALL Landroid/view/Window;->getDecorView()Landroid/view/View;
+00007  000c                     move-result-object
+00008  0038 000a                if-eqz
+0000a  2071 24f2 0030           invoke-static  # CALL Lb/b/c/g/e;->a(Landroid/view/View;,Landroid/view/KeyEvent;)Z
+0000d  010a                     move-result
+0000e  0138 0004                if-eqz
+00010  1212                     const/4
+00011  020f                     return
+00012  4071 24f3 3202           invoke-static  # CALL Lb/b/c/g/e;->a(Lb/b/c/g/e$a;,Landroid/view/View;,Landroid/view/Window$Callback;,Landroid/view/KeyEvent;)Z
+00015  020a                     move-result
+00016  020f                     return
+
+### Landroid/support/v4/app/x;->dispatchKeyShortcutEvent(Landroid/view/KeyEvent;)Z  [access=0x1, regs=3, ins=2, outs=2, code_off=0xb0a48]
+00000  106e 0708 0001           invoke-virtual  # CALL Landroid/app/Activity;->getWindow()Landroid/view/Window;
+00003  000c                     move-result-object
+00004  106e 1e72 0000           invoke-virtual  # CALL Landroid/view/Window;->getDecorView()Landroid/view/View;
+00007  000c                     move-result-object
+00008  0038 000a                if-eqz
+0000a  2071 24f2 0020           invoke-static  # CALL Lb/b/c/g/e;->a(Landroid/view/View;,Landroid/view/KeyEvent;)Z
+0000d  000a                     move-result
+0000e  0038 0004                if-eqz
+00010  1112                     const/4
+00011  010f                     return
+00012  206f 06f4 0021           invoke-super  # CALL Landroid/app/Activity;->dispatchKeyShortcutEvent(Landroid/view/KeyEvent;)Z
+00015  010a                     move-result
+00016  010f                     return
+
+### Landroid/support/v4/app/x;->onCreate(Landroid/os/Bundle;)V  [access=0x4, regs=2, ins=2, outs=2, code_off=0xb0ad4]
+00000  206f 0711 0010           invoke-super  # CALL Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
+00003  1071 07ff 0000           invoke-static  # CALL Landroid/arch/lifecycle/m;->a(Landroid/app/Activity;)V
+00006  000e                     return-void
+
+### Landroid/support/v4/app/x;->onSaveInstanceState(Landroid/os/Bundle;)V  [access=0x4, regs=4, ins=2, outs=2, code_off=0xb0af4]
+00000  2054 0d95                iget-object  # FIELD Landroid/support/v4/app/x;->b:Landroid/arch/lifecycle/f;
+00002  0162 04ea                sget-object  # FIELD Landroid/arch/lifecycle/c$b;->d:Landroid/arch/lifecycle/c$b;
+00004  206e 07df 0010           invoke-virtual  # CALL Landroid/arch/lifecycle/f;->a(Landroid/arch/lifecycle/c$b;)V
+00007  206f 0722 0032           invoke-super  # CALL Landroid/app/Activity;->onSaveInstanceState(Landroid/os/Bundle;)V
+0000a  000e                     return-void

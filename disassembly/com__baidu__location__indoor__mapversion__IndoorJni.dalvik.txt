@@ -1,0 +1,37 @@
+### Lcom/baidu/location/indoor/mapversion/IndoorJni;-><clinit>()V  [access=0x10009, regs=4, ins=0, outs=2, code_off=0x106638]
+00000  001a 1fc5                const-string  # STR "indoorJNI"
+00002  011a 1fc2                const-string  # STR "indoor"
+00004  1071 2d48 0001           invoke-static  # CALL Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
+00007  1112                     const/4
+00008  016a 1cbc                sput-boolean  # FIELD Lcom/baidu/location/indoor/mapversion/IndoorJni;->a:Z
+0000a  0162 1d61                sget-object  # FIELD Ljava/lang/System;->err:Ljava/io/PrintStream;
+0000c  021a 20c8                const-string  # STR "load vdr indoor lib success."
+0000e  206e 2c42 0021           invoke-virtual  # CALL Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+00011  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00013  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00016  021a 1fc4                const-string  # STR "indoor lib loadJniSuccess:"
+00018  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0001b  0263 1cbc                sget-boolean  # FIELD Lcom/baidu/location/indoor/mapversion/IndoorJni;->a:Z
+0001d  206e 2d40 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+00020  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00023  010c                     move-result-object
+00024  2071 1c5e 0010           invoke-static  # CALL Landroid/util/Log;->i(Ljava/lang/String;,Ljava/lang/String;)I
+00027  2728                     goto
+00028  010d                     op_0d
+00029  0222 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0002b  1070 2d35 0002           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0002e  031a 1fc3                const-string  # STR "indoor lib annot load indoor lib:"
+00030  206e 2d3f 0032           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00033  106e 2d63 0001           invoke-virtual  # CALL Ljava/lang/Throwable;->toString()Ljava/lang/String;
+00036  030c                     move-result-object
+00037  206e 2d3f 0032           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0003a  106e 2d44 0002           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0003d  020c                     move-result-object
+0003e  2071 1c5e 0020           invoke-static  # CALL Landroid/util/Log;->i(Ljava/lang/String;,Ljava/lang/String;)I
+00041  0062 1d61                sget-object  # FIELD Ljava/lang/System;->err:Ljava/io/PrintStream;
+00043  021a 0539                const-string  # STR "Cannot load indoor lib"
+00045  206e 2c42 0020           invoke-virtual  # CALL Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+00048  106e 2d60 0001           invoke-virtual  # CALL Ljava/lang/Throwable;->printStackTrace()V
+0004b  0012                     const/4
+0004c  006a 1cbc                sput-boolean  # FIELD Lcom/baidu/location/indoor/mapversion/IndoorJni;->a:Z
+0004e  000e                     return-void

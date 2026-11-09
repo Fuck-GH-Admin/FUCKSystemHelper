@@ -1,0 +1,47 @@
+### La/a/a/d/f;-><init>(I)V  [access=0x10001, regs=3, ins=2, outs=1, code_off=0x5b694]
+00000  1070 2de7 0001           invoke-direct  # CALL Ljava/util/ArrayList;-><init>()V
+00003  0012                     const/4
+00004  1059 01b9                iput  # FIELD La/a/a/d/f;->b:I
+00006  1259 01b9                iput  # FIELD La/a/a/d/f;->b:I
+00008  000e                     return-void
+
+### La/a/a/d/f;->add(Ljava/lang/Object;)Z  [access=0x1, regs=4, ins=2, outs=3, code_off=0x5b644]
+00000  021d                     monitor-enter
+00001  106e 2df8 0002           invoke-virtual  # CALL Ljava/util/ArrayList;->size()I
+00004  000a                     move-result
+00005  2152 01b9                iget  # FIELD La/a/a/d/f;->b:I
+00007  1033 0006                if-ne
+00009  0012                     const/4
+0000a  206e 2df4 0002           invoke-virtual  # CALL Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+0000d  106e 2df8 0002           invoke-virtual  # CALL Ljava/util/ArrayList;->size()I
+00010  000a                     move-result
+00011  306e 2dea 0302           invoke-virtual  # CALL Ljava/util/ArrayList;->add(I,Ljava/lang/Object;)V
+00014  021e                     monitor-exit
+00015  1212                     const/4
+00016  020f                     return
+00017  030d                     op_0d
+00018  021e                     monitor-exit
+00019  0327                     throw
+
+### La/a/a/d/f;->clear()V  [access=0x1, regs=3, ins=1, outs=2, code_off=0x5b6b8]
+00000  021d                     monitor-enter
+00001  106e 2df8 0002           invoke-virtual  # CALL Ljava/util/ArrayList;->size()I
+00004  000a                     move-result
+00005  3112                     const/4
+00006  1036 0004                if-gt
+00008  021e                     monitor-exit
+00009  000e                     return-void
+0000a  106e 2df8 0002           invoke-virtual  # CALL Ljava/util/ArrayList;->size()I
+0000d  000a                     move-result
+0000e  00db 0200                op_db
+00010  01d8 ff00                op_d8
+00012  003d 0008                if-lez
+00014  0012                     const/4
+00015  206e 2df4 0002           invoke-virtual  # CALL Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+00018  1001                     op_01
+00019  f728                     goto
+0001a  021e                     monitor-exit
+0001b  000e                     return-void
+0001c  000d                     op_0d
+0001d  021e                     monitor-exit
+0001e  0027                     throw

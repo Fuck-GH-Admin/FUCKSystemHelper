@@ -1,0 +1,610 @@
+### La/a/a/d/g;-><clinit>()V  [access=0x10009, regs=1, ins=0, outs=0, code_off=0x5be04]
+00000  0013 0010                const/16
+00002  0023 0721                new-array  # TYPE [C
+00004  0026 0006 0000           fill-array-data
+00007  0069 01cf                sput-object  # FIELD La/a/a/d/g;->n:[C
+00009  000e                     return-void
+0000a  0300 0002 0010 0000 0030 0031 0032 0033 0034 0035 0036 0037 0038 0039 0041 0042 ... <payload; units=20>
+
+### La/a/a/d/g;-><init>(Landroid/content/Context;)V  [access=0x10001, regs=7, ins=2, outs=2, code_off=0x5be50]
+00000  1070 2ce0 0005           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  0012                     const/4
+00004  505c 01c3                iput-boolean  # FIELD La/a/a/d/g;->b:Z
+00006  505c 01c4                iput-boolean  # FIELD La/a/a/d/g;->c:Z
+00008  505c 01c6                iput-boolean  # FIELD La/a/a/d/g;->e:Z
+0000a  505c 01c8                iput-boolean  # FIELD La/a/a/d/g;->g:Z
+0000c  0112                     const/4
+0000d  515b 01c9                iput-object  # FIELD La/a/a/d/g;->h:Ljava/lang/String;
+0000f  0216 ffff                const-wide/16
+00011  525a 01ca                iput-wide  # FIELD La/a/a/d/g;->i:J
+00013  0422 06e8                new-instance  # TYPE Ljava/util/concurrent/ConcurrentHashMap;
+00015  1070 2e90 0004           invoke-direct  # CALL Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+00018  545b 01cb                iput-object  # FIELD La/a/a/d/g;->j:Ljava/util/concurrent/ConcurrentMap;
+0001a  515b 01cc                iput-object  # FIELD La/a/a/d/g;->k:Ljava/lang/Object;
+0001c  505c 01cd                iput-boolean  # FIELD La/a/a/d/g;->l:Z
+0001e  525a 01ce                iput-wide  # FIELD La/a/a/d/g;->m:J
+00020  565b 01c2                iput-object  # FIELD La/a/a/d/g;->a:Landroid/content/Context;
+00022  5054 01c5                iget-object  # FIELD La/a/a/d/g;->d:Landroid/bluetooth/BluetoothAdapter;
+00024  0039 0030                if-nez
+00026  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00028  0113 0015                const/16
+0002a  1034 001f                if-lt
+0002c  001a 19d6                const-string  # STR "bluetooth"
+0002e  206e 084c 0006           invoke-virtual  # CALL Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+00031  060c                     move-result-object
+00032  061f 015f                check-cast  # TYPE Landroid/bluetooth/BluetoothManager;
+00034  106e 081a 0006           invoke-virtual  # CALL Landroid/bluetooth/BluetoothManager;->getAdapter()Landroid/bluetooth/BluetoothAdapter;
+00037  060c                     move-result-object
+00038  565b 01c5                iput-object  # FIELD La/a/a/d/g;->d:Landroid/bluetooth/BluetoothAdapter;
+0003a  5654 01c2                iget-object  # FIELD La/a/a/d/g;->a:Landroid/content/Context;
+0003c  106e 0846 0006           invoke-virtual  # CALL Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+0003f  060c                     move-result-object
+00040  001a 190c                const-string  # STR "android.hardware.bluetooth_le"
+00042  206e 08a4 0006           invoke-virtual  # CALL Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
+00045  060a                     move-result
+00046  565c 01c6                iput-boolean  # FIELD La/a/a/d/g;->e:Z
+00048  0c28                     goto
+00049  0071 0816 0000           invoke-static  # CALL Landroid/bluetooth/BluetoothAdapter;->getDefaultAdapter()Landroid/bluetooth/BluetoothAdapter;
+0004c  060c                     move-result-object
+0004d  565b 01c5                iput-object  # FIELD La/a/a/d/g;->d:Landroid/bluetooth/BluetoothAdapter;
+0004f  0528                     goto
+00050  050d                     op_0d
+00051  106e 2c96 0005           invoke-virtual  # CALL Ljava/lang/Exception;->printStackTrace()V
+00054  000e                     return-void
+
+### La/a/a/d/g;->a([B)Ljava/lang/String;  [access=0x9, regs=7, ins=1, outs=2, code_off=0x5bc18]
+00000  6021                     array-length
+00001  00da 0200                op_da
+00003  0023 0721                new-array  # TYPE [C
+00005  0112                     const/4
+00006  6221                     array-length
+00007  2135 001b                if-ge
+00009  0248 0106                aget-byte
+0000b  22d5 00ff                op_d5
+0000d  03da 0201                op_da
+0000f  0462 01cf                sget-object  # FIELD La/a/a/d/g;->n:[C
+00011  05e2 0402                op_e2
+00013  0549 0504                aget-char
+00015  0550 0300                aput-char
+00017  03d8 0103                op_d8
+00019  02dd 0f02                op_dd
+0001b  0249 0204                aget-char
+0001d  0250 0300                aput-char
+0001f  01d8 0101                op_d8
+00021  e528                     goto
+00022  0622 0683                new-instance  # TYPE Ljava/lang/String;
+00024  2070 2cfd 0006           invoke-direct  # CALL Ljava/lang/String;-><init>([C)V
+00027  106e 2d1f 0006           invoke-virtual  # CALL Ljava/lang/String;->toUpperCase()Ljava/lang/String;
+0002a  060c                     move-result-object
+0002b  0611                     return-object
+
+### La/a/a/d/g;->a([B,I,Ljava/lang/String;)La/a/a/d/g$b;  [access=0x1, regs=9, ins=4, outs=3, code_off=0x5b8b0]
+00000  757b                     op_7b
+00001  0712                     const/4
+00002  0838 0081                if-eqz
+00004  053b 0004                if-gez
+00006  0029 007d                goto/16
+00008  0071 025c 0000           invoke-static  # CALL La/a/a/d/d;->b()La/a/a/d/d;
+0000b  050c                     move-result-object
+0000c  106e 025b 0005           invoke-virtual  # CALL La/a/a/d/d;->a()La/a/a/d/b;
+0000f  050c                     move-result-object
+00010  0539 0003                if-nez
+00012  0711                     return-object
+00013  0812                     const/4
+00014  2012                     const/4
+00015  0101                     op_01
+00016  5212                     const/4
+00017  2136 005a                if-gt
+00019  02d8 0201                op_d8
+0001b  0348 0206                aget-byte
+0001d  33d5 00ff                op_d5
+0001f  0333 000e                if-ne
+00021  03d8 0301                op_d8
+00023  0348 0306                aget-byte
+00025  33d5 00ff                op_d5
+00027  0413 0015                const/16
+00029  4333 0004                if-ne
+0002b  1812                     const/4
+0002c  4528                     goto
+0002d  0348 0106                aget-byte
+0002f  33d5 00ff                op_d5
+00031  0413 002d                const/16
+00033  4333 001f                if-ne
+00035  03d8 0101                op_d8
+00037  0348 0306                aget-byte
+00039  33d5 00ff                op_d5
+0003b  0413 0024                const/16
+0003d  4333 0015                if-ne
+0003f  0348 0206                aget-byte
+00041  33d5 00ff                op_d5
+00043  0413 00bf                const/16
+00045  4333 000d                if-ne
+00047  03d8 0301                op_d8
+00049  0348 0306                aget-byte
+0004b  33d5 00ff                op_d5
+0004d  0413 0016                const/16
+0004f  4333 0003                if-ne
+00051  1d28                     goto
+00052  0348 0106                aget-byte
+00054  33d5 00ff                op_d5
+00056  0413 00ad                const/16
+00058  4333 0016                if-ne
+0005a  03d8 0101                op_d8
+0005c  0348 0306                aget-byte
+0005e  33d5 00ff                op_d5
+00060  0413 0077                const/16
+00062  4333 000c                if-ne
+00064  0248 0206                aget-byte
+00066  22d5 00ff                op_d5
+00068  0239 0006                if-nez
+0006a  02d8 0301                op_d8
+0006c  0248 0206                aget-byte
+0006e  01d8 0101                op_d8
+00070  a628                     goto
+00071  0839 0003                if-nez
+00073  0711                     return-object
+00074  0813 0009                const/16
+00076  0013 0019                const/16
+00078  3071 2e01 0086           invoke-static  # CALL Ljava/util/Arrays;->copyOfRange([B,I,I)[B
+0007b  060c                     move-result-object
+0007c  1071 0294 0006           invoke-static  # CALL La/a/a/d/g;->a([B)Ljava/lang/String;
+0007f  106e 0253 0005           invoke-virtual  # CALL La/a/a/d/b;->a()[Ljava/lang/String;
+00082  0727                     throw
+00083  0711                     return-object
+
+### La/a/a/d/g;->a(Ljava/util/List;,I)Ljava/lang/String;  [access=0x11, regs=5, ins=3, outs=2, code_off=0x5bc90]
+00000  0022 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00002  1070 2d35 0000           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00005  0122 0074                new-instance  # TYPE La/a/a/d/g$e;
+00007  2070 028d 0021           invoke-direct  # CALL La/a/a/d/g$e;-><init>(La/a/a/d/g;)V
+0000a  2071 2e16 0013           invoke-static  # CALL Ljava/util/Collections;->sort(Ljava/util/List;,Ljava/util/Comparator;)V
+0000d  0212                     const/4
+0000e  2072 2e57 0023           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+00011  020c                     move-result-object
+00012  021f 0070                check-cast  # TYPE La/a/a/d/g$a;
+00014  106e 0287 0002           invoke-virtual  # CALL La/a/a/d/g$a;->toString()Ljava/lang/String;
+00017  020c                     move-result-object
+00018  206e 2d3f 0020           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0001b  1212                     const/4
+0001c  1072 2e5d 0003           invoke-interface  # CALL Ljava/util/List;->size()I
+0001f  010a                     move-result
+00020  1235 0019                if-ge
+00022  4235 0017                if-ge
+00024  011a 28d8                const-string  # STR "|"
+00026  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00029  2072 2e57 0023           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+0002c  010c                     move-result-object
+0002d  011f 0070                check-cast  # TYPE La/a/a/d/g$a;
+0002f  106e 0287 0001           invoke-virtual  # CALL La/a/a/d/g$a;->toString()Ljava/lang/String;
+00032  010c                     move-result-object
+00033  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00036  02d8 0102                op_d8
+00038  e428                     goto
+00039  1072 2e5d 0003           invoke-interface  # CALL Ljava/util/List;->size()I
+0003c  106e 2d44 0000           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0003f  020c                     move-result-object
+00040  0211                     return-object
+
+### La/a/a/d/g;->a(Ljava/util/concurrent/ConcurrentMap;)V  [access=0x11, regs=21, ins=2, outs=6, code_off=0x5bf1c]
+00000  0608 0013                op_08
+00002  0022 06c8                new-instance  # TYPE Ljava/util/ArrayList;
+00004  0178 2e98 0014           invoke-interface/range  # CALL Ljava/util/concurrent/ConcurrentMap;->values()Ljava/util/Collection;
+00007  010c                     move-result-object
+00008  2070 2de9 0010           invoke-direct  # CALL Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+0000b  0722 06c8                new-instance  # TYPE Ljava/util/ArrayList;
+0000d  1070 2de7 0007           invoke-direct  # CALL Ljava/util/ArrayList;-><init>()V
+00010  0822 06d4                new-instance  # TYPE Ljava/util/HashMap;
+00012  1070 2e29 0008           invoke-direct  # CALL Ljava/util/HashMap;-><init>()V
+00015  0922 06d4                new-instance  # TYPE Ljava/util/HashMap;
+00017  1070 2e29 0009           invoke-direct  # CALL Ljava/util/HashMap;-><init>()V
+0001a  0a22 06d4                new-instance  # TYPE Ljava/util/HashMap;
+0001c  1070 2e29 000a           invoke-direct  # CALL Ljava/util/HashMap;-><init>()V
+0001f  0b22 06c8                new-instance  # TYPE Ljava/util/ArrayList;
+00021  1070 2de7 000b           invoke-direct  # CALL Ljava/util/ArrayList;-><init>()V
+00024  0c22 06c8                new-instance  # TYPE Ljava/util/ArrayList;
+00026  1070 2de7 000c           invoke-direct  # CALL Ljava/util/ArrayList;-><init>()V
+00029  1072 2e59 0000           invoke-interface  # CALL Ljava/util/List;->iterator()Ljava/util/Iterator;
+0002c  0d0c                     move-result-object
+0002d  1072 2e43 000d           invoke-interface  # CALL Ljava/util/Iterator;->hasNext()Z
+00030  000a                     move-result
+00031  011a 0000                const-string  # STR ""
+00033  0038 0096                if-eqz
+00035  1072 2e44 000d           invoke-interface  # CALL Ljava/util/Iterator;->next()Ljava/lang/Object;
+00038  000c                     move-result-object
+00039  1008 0000                op_08
+0003b  101f 0163                check-cast  # TYPE Landroid/bluetooth/le/ScanResult;
+0003d  0174 0821 0010           invoke-virtual/range  # CALL Landroid/bluetooth/le/ScanResult;->getScanRecord()Landroid/bluetooth/le/ScanRecord;
+00040  000c                     move-result-object
+00041  106e 081e 0000           invoke-virtual  # CALL Landroid/bluetooth/le/ScanRecord;->getBytes()[B
+00044  040c                     move-result-object
+00045  4021                     array-length
+00046  0213 001a                const/16
+00048  2035 0003                if-ge
+0004a  e328                     goto
+0004b  0174 081f 0010           invoke-virtual/range  # CALL Landroid/bluetooth/le/ScanResult;->getDevice()Landroid/bluetooth/BluetoothDevice;
+0004e  000c                     move-result-object
+0004f  106e 0818 0000           invoke-virtual  # CALL Landroid/bluetooth/BluetoothDevice;->getAddress()Ljava/lang/String;
+00052  000c                     move-result-object
+00053  021a 0258                const-string  # STR ":"
+00055  306e 2d15 0120           invoke-virtual  # CALL Ljava/lang/String;->replaceAll(Ljava/lang/String;,Ljava/lang/String;)Ljava/lang/String;
+00058  000c                     move-result-object
+00059  0174 0820 0010           invoke-virtual/range  # CALL Landroid/bluetooth/le/ScanResult;->getRssi()I
+0005c  010a                     move-result
+0005d  406e 0292 0146           invoke-virtual  # CALL La/a/a/d/g;->a([B,I,Ljava/lang/String;)La/a/a/d/g$b;
+00060  000c                     move-result-object
+00061  0038 001f                if-eqz
+00063  2072 2e52 000c           invoke-interface  # CALL Ljava/util/List;->add(Ljava/lang/Object;)Z
+00066  0522 0070                new-instance  # TYPE La/a/a/d/g$a;
+00068  0254 01c1                iget-object  # FIELD La/a/a/d/g$b;->e:Ljava/lang/String;
+0006a  0174 0820 0010           invoke-virtual/range  # CALL Landroid/bluetooth/le/ScanResult;->getRssi()I
+0006d  030a                     move-result
+0006e  0174 0822 0010           invoke-virtual/range  # CALL Landroid/bluetooth/le/ScanResult;->getTimestampNanos()J
+00071  110b                     move-result-wide
+00072  5007                     op_07
+00073  0108 0013                op_08
+00075  4e07                     op_07
+00076  5f07                     op_07
+00077  0405 0011                op_05
+00079  0676 0286 0000           invoke-direct/range  # CALL La/a/a/d/g$a;-><init>(La/a/a/d/g;,Ljava/lang/String;,I,J)V
+0007c  2072 2e52 00fb           invoke-interface  # CALL Ljava/util/List;->add(Ljava/lang/Object;)Z
+0007f  0228                     goto
+00080  4e07                     op_07
+00081  0013 0019                const/16
+00083  0113 0009                const/16
+00085  3071 2e01 001e           invoke-static  # CALL Ljava/util/Arrays;->copyOfRange([B,I,I)[B
+00088  000c                     move-result-object
+00089  1071 0294 0000           invoke-static  # CALL La/a/a/d/g;->a([B)Ljava/lang/String;
+0008c  000c                     move-result-object
+0008d  2072 2e52 0007           invoke-interface  # CALL Ljava/util/List;->add(Ljava/lang/Object;)Z
+00090  0174 081f 0010           invoke-virtual/range  # CALL Landroid/bluetooth/le/ScanResult;->getDevice()Landroid/bluetooth/BluetoothDevice;
+00093  020c                     move-result-object
+00094  106e 0819 0002           invoke-virtual  # CALL Landroid/bluetooth/BluetoothDevice;->getName()Ljava/lang/String;
+00097  020c                     move-result-object
+00098  306e 2e2f 0208           invoke-virtual  # CALL Ljava/util/HashMap;->put(Ljava/lang/Object;,Ljava/lang/Object;)Ljava/lang/Object;
+0009b  0212                     const/4
+0009c  3071 2e01 012e           invoke-static  # CALL Ljava/util/Arrays;->copyOfRange([B,I,I)[B
+0009f  010c                     move-result-object
+000a0  1071 0294 0001           invoke-static  # CALL La/a/a/d/g;->a([B)Ljava/lang/String;
+000a3  010c                     move-result-object
+000a4  306e 2e2f 0109           invoke-virtual  # CALL Ljava/util/HashMap;->put(Ljava/lang/Object;,Ljava/lang/Object;)Ljava/lang/Object;
+000a7  206e 2e2d 000a           invoke-virtual  # CALL Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+000aa  010c                     move-result-object
+000ab  0139 0009                if-nez
+000ad  1071 2cae 0002           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+000b0  010c                     move-result-object
+000b1  306e 2e2f 010a           invoke-virtual  # CALL Ljava/util/HashMap;->put(Ljava/lang/Object;,Ljava/lang/Object;)Ljava/lang/Object;
+000b4  206e 2e2d 000a           invoke-virtual  # CALL Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+000b7  010c                     move-result-object
+000b8  011f 066d                check-cast  # TYPE Ljava/lang/Integer;
+000ba  106e 2ca6 0001           invoke-virtual  # CALL Ljava/lang/Integer;->intValue()I
+000bd  010a                     move-result
+000be  1212                     const/4
+000bf  21b0                     op_b0
+000c0  1071 2cae 0001           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+000c3  010c                     move-result-object
+000c4  306e 2e2f 010a           invoke-virtual  # CALL Ljava/util/HashMap;->put(Ljava/lang/Object;,Ljava/lang/Object;)Ljava/lang/Object;
+000c7  0029 ff66                goto/16
+000c9  1212                     const/4
+000ca  0012                     const/4
+000cb  106e 2e2e 000a           invoke-virtual  # CALL Ljava/util/HashMap;->keySet()Ljava/util/Set;
+000ce  030c                     move-result-object
+000cf  1072 2e7c 0003           invoke-interface  # CALL Ljava/util/Set;->iterator()Ljava/util/Iterator;
+000d2  030c                     move-result-object
+000d3  0412                     const/4
+000d4  1072 2e43 0003           invoke-interface  # CALL Ljava/util/Iterator;->hasNext()Z
+000d7  050a                     move-result
+000d8  0538 0021                if-eqz
+000da  1072 2e44 0003           invoke-interface  # CALL Ljava/util/Iterator;->next()Ljava/lang/Object;
+000dd  050c                     move-result-object
+000de  051f 0683                check-cast  # TYPE Ljava/lang/String;
+000e0  206e 2e2d 005a           invoke-virtual  # CALL Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+000e3  070c                     move-result-object
+000e4  071f 066d                check-cast  # TYPE Ljava/lang/Integer;
+000e6  106e 2ca6 0007           invoke-virtual  # CALL Ljava/lang/Integer;->intValue()I
+000e9  070a                     move-result
+000ea  4737 ffea                if-le
+000ec  206e 2e2d 005a           invoke-virtual  # CALL Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+000ef  000c                     move-result-object
+000f0  001f 066d                check-cast  # TYPE Ljava/lang/Integer;
+000f2  106e 2ca6 0000           invoke-virtual  # CALL Ljava/lang/Integer;->intValue()I
+000f5  000a                     move-result
+000f6  0401                     op_01
+000f7  5007                     op_07
+000f8  dc28                     goto
+000f9  3312                     const/4
+000fa  3437 0004                if-le
+000fc  2e01                     op_01
+000fd  0228                     goto
+000fe  0e12                     const/4
+000ff  6254 01c7                iget-object  # FIELD La/a/a/d/g;->f:La/a/a/d/g$c;
+00101  0238 0018                if-eqz
+00103  6355 01c3                iget-boolean  # FIELD La/a/a/d/g;->b:Z
+00105  0338 0014                if-eqz
+00107  206e 2e2d 0008           invoke-virtual  # CALL Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+0010a  030c                     move-result-object
+0010b  031f 0683                check-cast  # TYPE Ljava/lang/String;
+0010d  206e 2e2d 0009           invoke-virtual  # CALL Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+00110  040c                     move-result-object
+00111  041f 0683                check-cast  # TYPE Ljava/lang/String;
+00113  5472 0289 30e2           invoke-interface  # CALL La/a/a/d/g$c;->a(Z,Ljava/lang/String;,Ljava/lang/String;,Ljava/lang/String;)V
+00116  0012                     const/4
+00117  605c 01c3                iput-boolean  # FIELD La/a/a/d/g;->b:Z
+00119  1072 2e5d 000b           invoke-interface  # CALL Ljava/util/List;->size()I
+0011c  000a                     move-result
+0011d  2212                     const/4
+0011e  2037 000e                if-le
+00120  0013 0020                const/16
+00122  306e 0293 00b6           invoke-virtual  # CALL La/a/a/d/g;->a(Ljava/util/List;,I)Ljava/lang/String;
+00125  010c                     move-result-object
+00126  615b 01c9                iput-object  # FIELD La/a/a/d/g;->h:Ljava/lang/String;
+00128  306e 0298 00c6           invoke-virtual  # CALL La/a/a/d/g;->b(Ljava/util/List;,I)Ljava/lang/String;
+0012b  0328                     goto
+0012c  615b 01c9                iput-object  # FIELD La/a/a/d/g;->h:Ljava/lang/String;
+0012e  6055 01c8                iget-boolean  # FIELD La/a/a/d/g;->g:Z
+00130  0038 001f                if-eqz
+00132  0071 025c 0000           invoke-static  # CALL La/a/a/d/d;->b()La/a/a/d/d;
+00135  000c                     move-result-object
+00136  106e 025b 0000           invoke-virtual  # CALL La/a/a/d/d;->a()La/a/a/d/b;
+00139  000c                     move-result-object
+0013a  0038 0015                if-eqz
+0013c  0174 0296 0013           invoke-virtual/range  # CALL La/a/a/d/g;->a()Z
+0013f  000a                     move-result
+00140  0038 000f                if-eqz
+00142  6055 01cd                iget-boolean  # FIELD La/a/a/d/g;->l:Z
+00144  0039 000b                if-nez
+00146  0174 0299 0013           invoke-virtual/range  # CALL La/a/a/d/g;->b()Z
+00149  000a                     move-result
+0014a  0038 0005                if-eqz
+0014c  0174 02a1 0013           invoke-virtual/range  # CALL La/a/a/d/g;->j()V
+0014f  000e                     return-void
+
+### La/a/a/d/g;->a()Z  [access=0x11, regs=5, ins=1, outs=0, code_off=0x5b9c8]
+00000  0071 2d46 0000           invoke-static  # CALL Ljava/lang/System;->currentTimeMillis()J
+00003  000b                     move-result-wide
+00004  4253 01ca                iget-wide  # FIELD La/a/a/d/g;->i:J
+00006  20bc                     op_bc
+00007  0216 1388                const-wide/16
+00009  0431 0200                op_31
+0000b  043d 0004                if-lez
+0000d  1412                     const/4
+0000e  0228                     goto
+0000f  0412                     const/4
+00010  040f                     return
+
+### La/a/a/d/g;->a(La/a/a/d/g$c;)Z  [access=0x1, regs=5, ins=2, outs=1, code_off=0x5b9fc]
+00000  3055 01c3                iget-boolean  # FIELD La/a/a/d/g;->b:Z
+00002  0112                     const/4
+00003  0038 0003                if-eqz
+00005  010f                     return
+00006  3055 01c4                iget-boolean  # FIELD La/a/a/d/g;->c:Z
+00008  0038 0003                if-eqz
+0000a  010f                     return
+0000b  1012                     const/4
+0000c  305c 01c4                iput-boolean  # FIELD La/a/a/d/g;->c:Z
+0000e  106e 029f 0003           invoke-virtual  # CALL La/a/a/d/g;->h()Z
+00011  020a                     move-result
+00012  0239 0003                if-nez
+00014  010f                     return
+00015  106e 029d 0003           invoke-virtual  # CALL La/a/a/d/g;->f()Z
+00018  020a                     move-result
+00019  0238 0003                if-eqz
+0001b  010f                     return
+0001c  106e 02a2 0003           invoke-virtual  # CALL La/a/a/d/g;->k()V
+0001f  345b 01c7                iput-object  # FIELD La/a/a/d/g;->f:La/a/a/d/g$c;
+00021  000f                     return
+
+### La/a/a/d/g;->b(Ljava/util/List;,I)Ljava/lang/String;  [access=0x11, regs=5, ins=3, outs=2, code_off=0x5bd24]
+00000  0338 0049                if-eqz
+00002  1072 2e5d 0003           invoke-interface  # CALL Ljava/util/List;->size()I
+00005  000a                     move-result
+00006  003d 0043                if-lez
+00008  0022 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0000a  1070 2d35 0000           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0000d  0122 0073                new-instance  # TYPE La/a/a/d/g$d;
+0000f  2070 028a 0021           invoke-direct  # CALL La/a/a/d/g$d;-><init>(La/a/a/d/g;)V
+00012  2071 2e16 0013           invoke-static  # CALL Ljava/util/Collections;->sort(Ljava/util/List;,Ljava/util/Comparator;)V
+00015  0212                     const/4
+00016  2072 2e57 0023           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+00019  020c                     move-result-object
+0001a  021f 0071                check-cast  # TYPE La/a/a/d/g$b;
+0001c  106e 0288 0002           invoke-virtual  # CALL La/a/a/d/g$b;->toString()Ljava/lang/String;
+0001f  020c                     move-result-object
+00020  206e 2d3f 0020           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00023  1212                     const/4
+00024  1072 2e5d 0003           invoke-interface  # CALL Ljava/util/List;->size()I
+00027  010a                     move-result
+00028  1235 0019                if-ge
+0002a  4235 0017                if-ge
+0002c  011a 28d8                const-string  # STR "|"
+0002e  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00031  2072 2e57 0023           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+00034  010c                     move-result-object
+00035  011f 0071                check-cast  # TYPE La/a/a/d/g$b;
+00037  106e 0288 0001           invoke-virtual  # CALL La/a/a/d/g$b;->toString()Ljava/lang/String;
+0003a  010c                     move-result-object
+0003b  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0003e  02d8 0102                op_d8
+00040  e428                     goto
+00041  1072 2e5d 0003           invoke-interface  # CALL Ljava/util/List;->size()I
+00044  106e 2d44 0000           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00047  020c                     move-result-object
+00048  0211                     return-object
+00049  021a 0000                const-string  # STR ""
+0004b  0211                     return-object
+
+### La/a/a/d/g;->b()Z  [access=0x11, regs=5, ins=1, outs=0, code_off=0x5ba50]
+00000  0071 2d46 0000           invoke-static  # CALL Ljava/lang/System;->currentTimeMillis()J
+00003  000b                     move-result-wide
+00004  4253 01ce                iget-wide  # FIELD La/a/a/d/g;->m:J
+00006  20bc                     op_bc
+00007  0216 1388                const-wide/16
+00009  0431 0200                op_31
+0000b  043d 0004                if-lez
+0000d  1412                     const/4
+0000e  0228                     goto
+0000f  0412                     const/4
+00010  040f                     return
+
+### La/a/a/d/g;->c()V  [access=0x11, regs=3, ins=1, outs=0, code_off=0x5c1cc]
+00000  001a 0000                const-string  # STR ""
+00002  205b 01c9                iput-object  # FIELD La/a/a/d/g;->h:Ljava/lang/String;
+00004  0016 ffff                const-wide/16
+00006  205a 01ca                iput-wide  # FIELD La/a/a/d/g;->i:J
+00008  000e                     return-void
+
+### La/a/a/d/g;->d()Ljava/lang/String;  [access=0x1, regs=2, ins=1, outs=2, code_off=0x5bdcc]
+00000  1054 01cb                iget-object  # FIELD La/a/a/d/g;->j:Ljava/util/concurrent/ConcurrentMap;
+00002  206e 0295 0001           invoke-virtual  # CALL La/a/a/d/g;->a(Ljava/util/concurrent/ConcurrentMap;)V
+00005  1154 01c9                iget-object  # FIELD La/a/a/d/g;->h:Ljava/lang/String;
+00007  0111                     return-object
+
+### La/a/a/d/g;->e()J  [access=0x1, regs=3, ins=1, outs=0, code_off=0x5bdec]
+00000  2053 01ca                iget-wide  # FIELD La/a/a/d/g;->i:J
+00002  0010                     return-wide
+
+### La/a/a/d/g;->f()Z  [access=0x11, regs=7, ins=1, outs=3, code_off=0x5ba84]
+00000  001a 0000                const-string  # STR ""
+00002  0122 063e                new-instance  # TYPE Ljava/io/File;
+00004  6654 01c2                iget-object  # FIELD La/a/a/d/g;->a:Landroid/content/Context;
+00006  106e 083d 0006           invoke-virtual  # CALL Landroid/content/Context;->getCacheDir()Ljava/io/File;
+00009  060c                     move-result-object
+0000a  021a 1f98                const-string  # STR "ibct"
+0000c  3070 2c0b 0261           invoke-direct  # CALL Ljava/io/File;-><init>(Ljava/io/File;,Ljava/lang/String;)V
+0000f  106e 2c11 0001           invoke-virtual  # CALL Ljava/io/File;->exists()Z
+00012  060a                     move-result
+00013  0212                     const/4
+00014  0639 0003                if-nez
+00016  020f                     return
+00017  0612                     const/4
+00018  0322 0637                new-instance  # TYPE Ljava/io/BufferedReader;
+0001a  0422 0643                new-instance  # TYPE Ljava/io/FileReader;
+0001c  2070 2c2c 0014           invoke-direct  # CALL Ljava/io/FileReader;-><init>(Ljava/io/File;)V
+0001f  2070 2bf3 0043           invoke-direct  # CALL Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
+00022  6107                     op_07
+00023  0607                     op_07
+00024  106e 2bf7 0003           invoke-virtual  # CALL Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
+00027  010c                     move-result-object
+00028  0138 0012                if-eqz
+0002a  0422 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0002c  1070 2d35 0004           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0002f  206e 2d3f 0064           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00032  206e 2d3f 0014           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00035  106e 2d44 0004           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00038  060c                     move-result-object
+00039  eb28                     goto
+0003a  106e 2bf5 0003           invoke-virtual  # CALL Ljava/io/BufferedReader;->close()V
+0003d  0b28                     goto
+0003e  060d                     op_0d
+0003f  0528                     goto
+00040  010d                     op_0d
+00041  1507                     op_07
+00042  6107                     op_07
+00043  5607                     op_07
+00044  106e 2c96 0006           invoke-virtual  # CALL Ljava/lang/Exception;->printStackTrace()V
+00047  1607                     op_07
+00048  0638 0023                if-eqz
+0004a  106e 2d20 0006           invoke-virtual  # CALL Ljava/lang/String;->trim()Ljava/lang/String;
+0004d  010c                     move-result-object
+0004e  206e 2d03 0001           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+00051  000a                     move-result
+00052  0038 0003                if-eqz
+00054  1728                     goto
+00055  1071 2cbc 0006           invoke-static  # CALL Ljava/lang/Long;->valueOf(Ljava/lang/String;)Ljava/lang/Long;
+00058  060c                     move-result-object
+00059  106e 2cb6 0006           invoke-virtual  # CALL Ljava/lang/Long;->longValue()J
+0005c  000b                     move-result-wide
+0005d  0071 2d46 0000           invoke-static  # CALL Ljava/lang/System;->currentTimeMillis()J
+00060  030b                     move-result-wide
+00061  03bc                     op_bc
+00062  0017 f480 0003           const-wide/32
+00065  0631 0003                op_31
+00067  063b 0004                if-gez
+00069  1612                     const/4
+0006a  060f                     return
+0006b  020f                     return
+
+### La/a/a/d/g;->g()Z  [access=0x1, regs=5, ins=1, outs=0, code_off=0x5bb9c]
+00000  0071 2d46 0000           invoke-static  # CALL Ljava/lang/System;->currentTimeMillis()J
+00003  000b                     move-result-wide
+00004  4253 01ca                iget-wide  # FIELD La/a/a/d/g;->i:J
+00006  20bc                     op_bc
+00007  0216 4e20                const-wide/16
+00009  0431 0200                op_31
+0000b  043c 0004                if-gtz
+0000d  1412                     const/4
+0000e  0228                     goto
+0000f  0412                     const/4
+00010  040f                     return
+
+### La/a/a/d/g;->h()Z  [access=0x1, regs=3, ins=1, outs=1, code_off=0x5bbd0]
+00000  2054 01c5                iget-object  # FIELD La/a/a/d/g;->d:Landroid/bluetooth/BluetoothAdapter;
+00002  0112                     const/4
+00003  0038 0010                if-eqz
+00005  2255 01c6                iget-boolean  # FIELD La/a/a/d/g;->e:Z
+00007  0239 0003                if-nez
+00009  0a28                     goto
+0000a  106e 0817 0000           invoke-virtual  # CALL Landroid/bluetooth/BluetoothAdapter;->isEnabled()Z
+0000d  020a                     move-result
+0000e  020f                     return
+0000f  020d                     op_0d
+00010  106e 2c96 0002           invoke-virtual  # CALL Ljava/lang/Exception;->printStackTrace()V
+00013  010f                     return
+
+### La/a/a/d/g;->i()V  [access=0x1, regs=3, ins=1, outs=0, code_off=0x5c1f0]
+00000  0012                     const/4
+00001  205c 01c4                iput-boolean  # FIELD La/a/a/d/g;->c:Z
+00003  205c 01c3                iput-boolean  # FIELD La/a/a/d/g;->b:Z
+00005  205c 01cd                iput-boolean  # FIELD La/a/a/d/g;->l:Z
+00007  0016 ffff                const-wide/16
+00009  205a 01ce                iput-wide  # FIELD La/a/a/d/g;->m:J
+0000b  000e                     return-void
+
+### La/a/a/d/g;->j()V  [access=0x11, regs=1, ins=1, outs=1, code_off=0x5c218]
+00000  106e 029f 0000           invoke-virtual  # CALL La/a/a/d/g;->h()Z
+00003  000a                     move-result
+00004  000e                     return-void
+
+### La/a/a/d/g;->k()V  [access=0x11, regs=4, ins=1, outs=3, code_off=0x5c234]
+00000  0022 063e                new-instance  # TYPE Ljava/io/File;
+00002  3354 01c2                iget-object  # FIELD La/a/a/d/g;->a:Landroid/content/Context;
+00004  106e 083d 0003           invoke-virtual  # CALL Landroid/content/Context;->getCacheDir()Ljava/io/File;
+00007  030c                     move-result-object
+00008  011a 1f98                const-string  # STR "ibct"
+0000a  3070 2c0b 0130           invoke-direct  # CALL Ljava/io/File;-><init>(Ljava/io/File;,Ljava/lang/String;)V
+0000d  0322 0644                new-instance  # TYPE Ljava/io/FileWriter;
+0000f  2070 2c2f 0003           invoke-direct  # CALL Ljava/io/FileWriter;-><init>(Ljava/io/File;)V
+00012  0022 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00014  1070 2d35 0000           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00017  0071 2d46 0000           invoke-static  # CALL Ljava/lang/System;->currentTimeMillis()J
+0001a  010b                     move-result-wide
+0001b  306e 2d3c 0210           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+0001e  011a 0000                const-string  # STR ""
+00020  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00023  106e 2d44 0000           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00026  000c                     move-result-object
+00027  206e 2c33 0003           invoke-virtual  # CALL Ljava/io/FileWriter;->write(Ljava/lang/String;)V
+0002a  106e 2c32 0003           invoke-virtual  # CALL Ljava/io/FileWriter;->flush()V
+0002d  106e 2c31 0003           invoke-virtual  # CALL Ljava/io/FileWriter;->close()V
+00030  000e                     return-void
+
+### La/a/a/d/g;->l()V  [access=0x1, regs=3, ins=1, outs=2, code_off=0x5c2b8]
+00000  2055 01c8                iget-boolean  # FIELD La/a/a/d/g;->g:Z
+00002  0039 0003                if-nez
+00004  000e                     return-void
+00005  2054 01c5                iget-object  # FIELD La/a/a/d/g;->d:Landroid/bluetooth/BluetoothAdapter;
+00007  106e 0815 0000           invoke-virtual  # CALL Landroid/bluetooth/BluetoothAdapter;->getBluetoothLeScanner()Landroid/bluetooth/le/BluetoothLeScanner;
+0000a  000c                     move-result-object
+0000b  0038 000e                if-eqz
+0000d  2154 01cc                iget-object  # FIELD La/a/a/d/g;->k:Ljava/lang/Object;
+0000f  011f 0161                check-cast  # TYPE Landroid/bluetooth/le/ScanCallback;
+00011  206e 081c 0010           invoke-virtual  # CALL Landroid/bluetooth/le/BluetoothLeScanner;->stopScan(Landroid/bluetooth/le/ScanCallback;)V
+00014  0528                     goto
+00015  000d                     op_0d
+00016  106e 2d60 0000           invoke-virtual  # CALL Ljava/lang/Throwable;->printStackTrace()V
+00019  0012                     const/4
+0001a  205c 01c8                iput-boolean  # FIELD La/a/a/d/g;->g:Z
+0001c  205c 01cd                iput-boolean  # FIELD La/a/a/d/g;->l:Z
+0001e  0016 ffff                const-wide/16
+00020  205a 01ce                iput-wide  # FIELD La/a/a/d/g;->m:J
+00022  106e 029a 0002           invoke-virtual  # CALL La/a/a/d/g;->c()V
+00025  000e                     return-void

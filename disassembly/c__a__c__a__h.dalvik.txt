@@ -1,0 +1,41 @@
+### Lc/a/c/a/h;-><init>(Lc/a/c/a/g;,Ljava/lang/String;,I,Ljava/lang/String;,Ljava/lang/String;)V  [access=0x10000, regs=6, ins=6, outs=1, code_off=0xfe6d0]
+00000  015b 1b76                iput-object  # FIELD Lc/a/c/a/h;->f:Lc/a/c/a/g;
+00002  025b 1b72                iput-object  # FIELD Lc/a/c/a/h;->b:Ljava/lang/String;
+00004  0359 1b73                iput  # FIELD Lc/a/c/a/h;->c:I
+00006  045b 1b74                iput-object  # FIELD Lc/a/c/a/h;->d:Ljava/lang/String;
+00008  055b 1b75                iput-object  # FIELD Lc/a/c/a/h;->e:Ljava/lang/String;
+0000a  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+0000d  000e                     return-void
+
+### Lc/a/c/a/h;->run()V  [access=0x1, regs=8, ins=1, outs=6, code_off=0xfe6fc]
+00000  0022 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00002  1070 2d35 0000           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00005  011a 237c                const-string  # STR "postWithHttps start Thread id = "
+00007  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0000a  0071 2d4d 0000           invoke-static  # CALL Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+0000d  010c                     move-result-object
+0000e  106e 2d4f 0001           invoke-virtual  # CALL Ljava/lang/Thread;->getId()J
+00011  010b                     move-result-wide
+00012  2071 2d23 0021           invoke-static  # CALL Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+00015  010c                     move-result-object
+00016  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00019  106e 2d44 0000           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0001c  000c                     move-result-object
+0001d  1071 2898 0000           invoke-static  # CALL Lc/a/c/a/d;->a(Ljava/lang/String;)V
+00020  0122 05c5                new-instance  # TYPE Lc/a/c/a/k;
+00022  7054 1b76                iget-object  # FIELD Lc/a/c/a/h;->f:Lc/a/c/a/g;
+00024  1071 28a9 0000           invoke-static  # CALL Lc/a/c/a/g;->a(Lc/a/c/a/g;)Landroid/content/Context;
+00027  000c                     move-result-object
+00028  2070 28bb 0001           invoke-direct  # CALL Lc/a/c/a/k;-><init>(Landroid/content/Context;)V
+0002b  7054 1b76                iget-object  # FIELD Lc/a/c/a/h;->f:Lc/a/c/a/g;
+0002d  1071 28ae 0000           invoke-static  # CALL Lc/a/c/a/g;->b(Lc/a/c/a/g;)Ljava/util/HashMap;
+00030  020c                     move-result-object
+00031  7354 1b72                iget-object  # FIELD Lc/a/c/a/h;->b:Ljava/lang/String;
+00033  7452 1b73                iget  # FIELD Lc/a/c/a/h;->c:I
+00035  7554 1b74                iget-object  # FIELD Lc/a/c/a/h;->d:Ljava/lang/String;
+00037  7654 1b75                iget-object  # FIELD Lc/a/c/a/h;->e:Ljava/lang/String;
+00039  0674 28bf 0001           invoke-virtual/range  # CALL Lc/a/c/a/k;->a(Ljava/util/HashMap;,Ljava/lang/String;,I,Ljava/lang/String;,Ljava/lang/String;)Ljava/lang/String;
+0003c  000c                     move-result-object
+0003d  7754 1b76                iget-object  # FIELD Lc/a/c/a/h;->f:Lc/a/c/a/g;
+0003f  2071 28ab 0007           invoke-static  # CALL Lc/a/c/a/g;->a(Lc/a/c/a/g;,Ljava/lang/String;)V
+00042  000e                     return-void

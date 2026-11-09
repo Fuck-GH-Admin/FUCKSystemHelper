@@ -1,0 +1,85 @@
+### Lc/a/c/a/r;-><init>(Ljava/lang/String;)V  [access=0x10000, regs=2, ins=2, outs=2, code_off=0xffd58]
+00000  2070 2d4c 0010           invoke-direct  # CALL Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
+00003  0112                     const/4
+00004  015b 1b93                iput-object  # FIELD Lc/a/c/a/r;->b:Landroid/os/Handler;
+00006  0122 067b                new-instance  # TYPE Ljava/lang/Object;
+00008  1070 2ce0 0001           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+0000b  015b 1b94                iput-object  # FIELD Lc/a/c/a/r;->c:Ljava/lang/Object;
+0000d  0112                     const/4
+0000e  015c 1b95                iput-boolean  # FIELD Lc/a/c/a/r;->d:Z
+00010  000e                     return-void
+
+### Lc/a/c/a/r;->a()V  [access=0x1, regs=2, ins=1, outs=1, code_off=0xffd8c]
+00000  0063 1b6c                sget-boolean  # FIELD Lc/a/c/a/d;->a:Z
+00002  0038 0007                if-eqz
+00004  001a 119c                const-string  # STR "Looper thread quit()"
+00006  1071 2898 0000           invoke-static  # CALL Lc/a/c/a/d;->a(Ljava/lang/String;)V
+00009  1054 1b93                iget-object  # FIELD Lc/a/c/a/r;->b:Landroid/os/Handler;
+0000b  0038 0012                if-eqz
+0000d  106e 0aaf 0000           invoke-virtual  # CALL Landroid/os/Handler;->getLooper()Landroid/os/Looper;
+00010  000c                     move-result-object
+00011  0039 0003                if-nez
+00013  0a28                     goto
+00014  1154 1b93                iget-object  # FIELD Lc/a/c/a/r;->b:Landroid/os/Handler;
+00016  106e 0aaf 0001           invoke-virtual  # CALL Landroid/os/Handler;->getLooper()Landroid/os/Looper;
+00019  010c                     move-result-object
+0001a  106e 0acd 0001           invoke-virtual  # CALL Landroid/os/Looper;->quit()V
+0001d  000e                     return-void
+
+### Lc/a/c/a/r;->b()V  [access=0x1, regs=3, ins=1, outs=1, code_off=0xffdd8]
+00000  2054 1b94                iget-object  # FIELD Lc/a/c/a/r;->c:Ljava/lang/Object;
+00002  001d                     monitor-enter
+00003  2155 1b95                iget-boolean  # FIELD Lc/a/c/a/r;->d:Z
+00005  0139 000e                if-nez
+00007  2254 1b94                iget-object  # FIELD Lc/a/c/a/r;->c:Ljava/lang/Object;
+00009  106e 2ce7 0002           invoke-virtual  # CALL Ljava/lang/Object;->wait()V
+0000c  0728                     goto
+0000d  020d                     op_0d
+0000e  0728                     goto
+0000f  020d                     op_0d
+00010  106e 2cb2 0002           invoke-virtual  # CALL Ljava/lang/InterruptedException;->printStackTrace()V
+00013  001e                     monitor-exit
+00014  000e                     return-void
+00015  001e                     monitor-exit
+00016  0227                     throw
+
+### Lc/a/c/a/r;->c()V  [access=0x1, regs=3, ins=1, outs=1, code_off=0xffe30]
+00000  2054 1b94                iget-object  # FIELD Lc/a/c/a/r;->c:Ljava/lang/Object;
+00002  001d                     monitor-enter
+00003  1112                     const/4
+00004  215c 1b95                iput-boolean  # FIELD Lc/a/c/a/r;->d:Z
+00006  2254 1b94                iget-object  # FIELD Lc/a/c/a/r;->c:Ljava/lang/Object;
+00008  106e 2ce5 0002           invoke-virtual  # CALL Ljava/lang/Object;->notifyAll()V
+0000b  001e                     monitor-exit
+0000c  000e                     return-void
+0000d  020d                     op_0d
+0000e  001e                     monitor-exit
+0000f  0227                     throw
+
+### Lc/a/c/a/r;->run()V  [access=0x1, regs=3, ins=1, outs=2, code_off=0xffe6c]
+00000  0071 0acc 0000           invoke-static  # CALL Landroid/os/Looper;->prepare()V
+00003  0022 01f6                new-instance  # TYPE Landroid/os/Handler;
+00005  1070 0aab 0000           invoke-direct  # CALL Landroid/os/Handler;-><init>()V
+00008  205b 1b93                iput-object  # FIELD Lc/a/c/a/r;->b:Landroid/os/Handler;
+0000a  0263 1b6c                sget-boolean  # FIELD Lc/a/c/a/d;->a:Z
+0000c  0238 0007                if-eqz
+0000e  021a 21a9                const-string  # STR "new Handler() finish!!"
+00010  1071 2898 0002           invoke-static  # CALL Lc/a/c/a/d;->a(Ljava/lang/String;)V
+00013  0071 0aca 0000           invoke-static  # CALL Landroid/os/Looper;->loop()V
+00016  0263 1b6c                sget-boolean  # FIELD Lc/a/c/a/d;->a:Z
+00018  0238 0022                if-eqz
+0001a  0222 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0001c  1070 2d35 0002           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0001f  001a 119d                const-string  # STR "LooperThread run() thread id:"
+00021  206e 2d3f 0002           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00024  0071 2d4d 0000           invoke-static  # CALL Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+00027  000c                     move-result-object
+00028  106e 2d4f 0000           invoke-virtual  # CALL Ljava/lang/Thread;->getId()J
+0002b  000b                     move-result-wide
+0002c  2071 2d23 0010           invoke-static  # CALL Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+0002f  000c                     move-result-object
+00030  206e 2d3f 0002           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00033  106e 2d44 0002           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00036  020c                     move-result-object
+00037  1071 2898 0002           invoke-static  # CALL Lc/a/c/a/d;->a(Ljava/lang/String;)V
+0003a  000e                     return-void

@@ -1,0 +1,16 @@
+### Lc/a/c/a/m;-><init>(Lc/a/c/a/k;)V  [access=0x10000, regs=2, ins=2, outs=1, code_off=0xff9d4]
+00000  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  000e                     return-void
+
+### Lc/a/c/a/m;->verify(Ljava/lang/String;,Ljavax/net/ssl/SSLSession;)Z  [access=0x1, regs=3, ins=3, outs=3, code_off=0xff99c]
+00000  001a 194e                const-string  # STR "api.map.baidu.com"
+00002  206e 2d03 0010           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+00005  000a                     move-result
+00006  0038 0004                if-eqz
+00008  1012                     const/4
+00009  000f                     return
+0000a  0071 2ee4 0000           invoke-static  # CALL Ljavax/net/ssl/HttpsURLConnection;->getDefaultHostnameVerifier()Ljavax/net/ssl/HostnameVerifier;
+0000d  000c                     move-result-object
+0000e  3072 2edf 0210           invoke-interface  # CALL Ljavax/net/ssl/HostnameVerifier;->verify(Ljava/lang/String;,Ljavax/net/ssl/SSLSession;)Z
+00011  000a                     move-result
+00012  000f                     return

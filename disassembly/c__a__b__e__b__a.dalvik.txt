@@ -1,0 +1,27 @@
+### Lc/a/b/e/b/a;->a(Ljava/nio/ByteBuffer;,Ljava/nio/ByteBuffer;,Ljava/nio/ByteBuffer;,I)V  [access=0x8, regs=7, ins=4, outs=2, code_off=0xf8748]
+00000  063a 0028                if-ltz
+00002  106e 2dab 0004           invoke-virtual  # CALL Ljava/nio/ByteBuffer;->remaining()I
+00005  000a                     move-result
+00006  6034 0022                if-lt
+00008  106e 2dab 0005           invoke-virtual  # CALL Ljava/nio/ByteBuffer;->remaining()I
+0000b  000a                     move-result
+0000c  6034 001c                if-lt
+0000e  106e 2dab 0003           invoke-virtual  # CALL Ljava/nio/ByteBuffer;->remaining()I
+00011  000a                     move-result
+00012  6034 0016                if-lt
+00014  0012                     const/4
+00015  6035 0012                if-ge
+00017  106e 2da5 0004           invoke-virtual  # CALL Ljava/nio/ByteBuffer;->get()B
+0001a  010a                     move-result
+0001b  106e 2da5 0005           invoke-virtual  # CALL Ljava/nio/ByteBuffer;->get()B
+0001e  020a                     move-result
+0001f  21b7                     op_b7
+00020  118d                     op_8d
+00021  206e 2da8 0013           invoke-virtual  # CALL Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+00024  00d8 0100                op_d8
+00026  ef28                     goto
+00027  000e                     return-void
+00028  0322 0669                new-instance  # TYPE Ljava/lang/IllegalArgumentException;
+0002a  041a 14bf                const-string  # STR "That combination of buffers, offsets and length to xor result in out-of-bond accesses."
+0002c  2070 2c9f 0043           invoke-direct  # CALL Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+0002f  0327                     throw

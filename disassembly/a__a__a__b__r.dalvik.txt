@@ -1,0 +1,116 @@
+### La/a/a/b/r;-><clinit>()V  [access=0x10009, regs=1, ins=0, outs=1, code_off=0x52d88]
+00000  0022 067b                new-instance  # TYPE Ljava/lang/Object;
+00002  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00005  0069 0109                sput-object  # FIELD La/a/a/b/r;->c:Ljava/lang/Object;
+00007  000e                     return-void
+
+### La/a/a/b/r;-><init>()V  [access=0x10001, regs=2, ins=1, outs=1, code_off=0x52da8]
+00000  1070 2ce0 0001           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  0012                     const/4
+00004  105b 0107                iput-object  # FIELD La/a/a/b/r;->a:Landroid/content/SharedPreferences;
+00006  105b 0108                iput-object  # FIELD La/a/a/b/r;->b:Landroid/content/SharedPreferences;
+00008  0071 2a5a 0000           invoke-static  # CALL Lcom/baidu/location/f;->c()Landroid/content/Context;
+0000b  000c                     move-result-object
+0000c  0038 000c                if-eqz
+0000e  0071 2a5a 0000           invoke-static  # CALL Lcom/baidu/location/f;->c()Landroid/content/Context;
+00011  000c                     move-result-object
+00012  1071 0166 0000           invoke-static  # CALL La/a/a/b/r;->b(Landroid/content/Context;)Landroid/content/SharedPreferences;
+00015  000c                     move-result-object
+00016  105b 0107                iput-object  # FIELD La/a/a/b/r;->a:Landroid/content/SharedPreferences;
+00018  000e                     return-void
+
+### La/a/a/b/r;->a()La/a/a/b/r;  [access=0x9, regs=2, ins=0, outs=1, code_off=0x52c24]
+00000  0062 0109                sget-object  # FIELD La/a/a/b/r;->c:Ljava/lang/Object;
+00002  001d                     monitor-enter
+00003  0162 010a                sget-object  # FIELD La/a/a/b/r;->d:La/a/a/b/r;
+00005  0139 0009                if-nez
+00007  0122 003d                new-instance  # TYPE La/a/a/b/r;
+00009  1070 0161 0001           invoke-direct  # CALL La/a/a/b/r;-><init>()V
+0000c  0169 010a                sput-object  # FIELD La/a/a/b/r;->d:La/a/a/b/r;
+0000e  0162 010a                sget-object  # FIELD La/a/a/b/r;->d:La/a/a/b/r;
+00010  001e                     monitor-exit
+00011  0111                     return-object
+00012  010d                     op_0d
+00013  001e                     monitor-exit
+00014  0127                     throw
+
+### La/a/a/b/r;->b(Landroid/content/Context;)Landroid/content/SharedPreferences;  [access=0x9, regs=4, ins=1, outs=3, code_off=0x52c6c]
+00000  0012                     const/4
+00001  0338 000e                if-eqz
+00003  011a 11f1                const-string  # STR "MapCoreServicePreIA"
+00005  0212                     const/4
+00006  306e 0849 0213           invoke-virtual  # CALL Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;,I)Landroid/content/SharedPreferences;
+00009  000c                     move-result-object
+0000a  0528                     goto
+0000b  030d                     op_0d
+0000c  106e 2c96 0003           invoke-virtual  # CALL Ljava/lang/Exception;->printStackTrace()V
+0000f  0011                     return-object
+
+### La/a/a/b/r;->a(Ljava/lang/String;,J)J  [access=0x20001, regs=5, ins=4, outs=4, code_off=0x52d44]
+00000  011d                     monitor-enter
+00001  1054 0107                iget-object  # FIELD La/a/a/b/r;->a:Landroid/content/SharedPreferences;
+00003  0038 0006                if-eqz
+00005  4072 0892 4320           invoke-interface  # CALL Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;,J)J
+00008  030b                     move-result-wide
+00009  011e                     monitor-exit
+0000a  0310                     return-wide
+0000b  020d                     op_0d
+0000c  011e                     monitor-exit
+0000d  0227                     throw
+
+### La/a/a/b/r;->a(Landroid/content/Context;)Landroid/content/SharedPreferences;  [access=0x1, regs=4, ins=2, outs=3, code_off=0x52cac]
+00000  2054 0108                iget-object  # FIELD La/a/a/b/r;->b:Landroid/content/SharedPreferences;
+00002  0039 0015                if-nez
+00004  0338 0013                if-eqz
+00006  001a 11f2                const-string  # STR "MapCoreServicePregck"
+00008  0112                     const/4
+00009  306e 0849 0103           invoke-virtual  # CALL Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;,I)Landroid/content/SharedPreferences;
+0000c  030c                     move-result-object
+0000d  235b 0108                iput-object  # FIELD La/a/a/b/r;->b:Landroid/content/SharedPreferences;
+0000f  0828                     goto
+00010  030d                     op_0d
+00011  106e 2c96 0003           invoke-virtual  # CALL Ljava/lang/Exception;->printStackTrace()V
+00014  0312                     const/4
+00015  235b 0108                iput-object  # FIELD La/a/a/b/r;->b:Landroid/content/SharedPreferences;
+00017  2254 0108                iget-object  # FIELD La/a/a/b/r;->b:Landroid/content/SharedPreferences;
+00019  0211                     return-object
+
+### La/a/a/b/r;->a(Ljava/lang/String;,Ljava/lang/String;)Ljava/lang/String;  [access=0x20001, regs=4, ins=3, outs=3, code_off=0x52d00]
+00000  011d                     monitor-enter
+00001  1054 0107                iget-object  # FIELD La/a/a/b/r;->a:Landroid/content/SharedPreferences;
+00003  0038 0006                if-eqz
+00005  3072 0893 0320           invoke-interface  # CALL Landroid/content/SharedPreferences;->getString(Ljava/lang/String;,Ljava/lang/String;)Ljava/lang/String;
+00008  030c                     move-result-object
+00009  011e                     monitor-exit
+0000a  0311                     return-object
+0000b  020d                     op_0d
+0000c  011e                     monitor-exit
+0000d  0227                     throw
+
+### La/a/a/b/r;->b(Ljava/lang/String;,J)V  [access=0x20001, regs=5, ins=4, outs=4, code_off=0x52e3c]
+00000  011d                     monitor-enter
+00001  1054 0107                iget-object  # FIELD La/a/a/b/r;->a:Landroid/content/SharedPreferences;
+00003  0038 000c                if-eqz
+00005  1072 088f 0000           invoke-interface  # CALL Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+00008  000c                     move-result-object
+00009  4072 088b 4320           invoke-interface  # CALL Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;,J)Landroid/content/SharedPreferences$Editor;
+0000c  1072 0888 0000           invoke-interface  # CALL Landroid/content/SharedPreferences$Editor;->commit()Z
+0000f  011e                     monitor-exit
+00010  000e                     return-void
+00011  020d                     op_0d
+00012  011e                     monitor-exit
+00013  0227                     throw
+
+### La/a/a/b/r;->b(Ljava/lang/String;,Ljava/lang/String;)V  [access=0x20001, regs=4, ins=3, outs=3, code_off=0x52dec]
+00000  011d                     monitor-enter
+00001  1054 0107                iget-object  # FIELD La/a/a/b/r;->a:Landroid/content/SharedPreferences;
+00003  0038 000c                if-eqz
+00005  1072 088f 0000           invoke-interface  # CALL Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+00008  000c                     move-result-object
+00009  3072 088c 0320           invoke-interface  # CALL Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;,Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+0000c  1072 0888 0000           invoke-interface  # CALL Landroid/content/SharedPreferences$Editor;->commit()Z
+0000f  011e                     monitor-exit
+00010  000e                     return-void
+00011  020d                     op_0d
+00012  011e                     monitor-exit
+00013  0227                     throw

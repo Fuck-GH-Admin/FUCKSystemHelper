@@ -1,0 +1,81 @@
+### Landroid/support/v7/widget/z0;-><clinit>()V  [access=0x10008, regs=5, ins=0, outs=3, code_off=0xf1d48]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0113 0012                const/16
+00004  1034 002c                if-lt
+00006  001c 044c                const-class  # TYPE Landroid/view/View;
+00008  011a 1aa8                const-string  # STR "computeFitSystemWindows"
+0000a  2212                     const/4
+0000b  2223 075c                new-array  # TYPE [Ljava/lang/Class;
+0000d  0312                     const/4
+0000e  041c 01b0                const-class  # TYPE Landroid/graphics/Rect;
+00010  044d 0302                aput-object
+00012  031c 01b0                const-class  # TYPE Landroid/graphics/Rect;
+00014  1412                     const/4
+00015  034d 0402                aput-object
+00017  306e 2c7a 0210           invoke-virtual  # CALL Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;,[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+0001a  000c                     move-result-object
+0001b  0069 1232                sput-object  # FIELD Landroid/support/v7/widget/z0;->a:Ljava/lang/reflect/Method;
+0001d  106e 2d7b 0000           invoke-virtual  # CALL Ljava/lang/reflect/Method;->isAccessible()Z
+00020  000a                     move-result
+00021  0039 000f                if-nez
+00023  0062 1232                sget-object  # FIELD Landroid/support/v7/widget/z0;->a:Ljava/lang/reflect/Method;
+00025  206e 2d7c 0040           invoke-virtual  # CALL Ljava/lang/reflect/Method;->setAccessible(Z)V
+00028  0828                     goto
+00029  001a 1652                const-string  # STR "ViewUtils"
+0002b  011a 06b7                const-string  # STR "Could not find method computeFitSystemWindows. Oh well."
+0002d  2071 1c59 0010           invoke-static  # CALL Landroid/util/Log;->d(Ljava/lang/String;,Ljava/lang/String;)I
+00030  000e                     return-void
+
+### Landroid/support/v7/widget/z0;->a(Landroid/view/View;,Landroid/graphics/Rect;,Landroid/graphics/Rect;)V  [access=0x9, regs=6, ins=3, outs=3, code_off=0xf1dcc]
+00000  0062 1232                sget-object  # FIELD Landroid/support/v7/widget/z0;->a:Ljava/lang/reflect/Method;
+00002  0038 0017                if-eqz
+00004  2112                     const/4
+00005  1123 075d                new-array  # TYPE [Ljava/lang/Object;
+00007  0212                     const/4
+00008  044d 0201                aput-object
+0000a  1412                     const/4
+0000b  054d 0401                aput-object
+0000d  306e 2d7a 0130           invoke-virtual  # CALL Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;,[Ljava/lang/Object;)Ljava/lang/Object;
+00010  0928                     goto
+00011  030d                     op_0d
+00012  041a 1652                const-string  # STR "ViewUtils"
+00014  051a 06c0                const-string  # STR "Could not invoke computeFitSystemWindows"
+00016  3071 1c5a 0354           invoke-static  # CALL Landroid/util/Log;->d(Ljava/lang/String;,Ljava/lang/String;,Ljava/lang/Throwable;)I
+00019  000e                     return-void
+
+### Landroid/support/v7/widget/z0;->a(Landroid/view/View;)Z  [access=0x9, regs=2, ins=1, outs=1, code_off=0xf1d24]
+00000  1071 253f 0001           invoke-static  # CALL Lb/b/c/g/q;->d(Landroid/view/View;)I
+00003  010a                     move-result
+00004  1012                     const/4
+00005  0133 0003                if-ne
+00007  0228                     goto
+00008  0012                     const/4
+00009  000f                     return
+
+### Landroid/support/v7/widget/z0;->b(Landroid/view/View;)V  [access=0x9, regs=7, ins=1, outs=3, code_off=0xf1e20]
+00000  001a 06c1                const-string  # STR "Could not invoke makeOptionalFitsSystemWindows"
+00002  011a 1652                const-string  # STR "ViewUtils"
+00004  0260 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00006  0313 0010                const/16
+00008  3234 0029                if-lt
+0000a  106e 2ce3 0006           invoke-virtual  # CALL Ljava/lang/Object;->getClass()Ljava/lang/Class;
+0000d  020c                     move-result-object
+0000e  031a 2124                const-string  # STR "makeOptionalFitsSystemWindows"
+00010  0412                     const/4
+00011  4523 075c                new-array  # TYPE [Ljava/lang/Class;
+00013  306e 2c7e 0532           invoke-virtual  # CALL Ljava/lang/Class;->getMethod(Ljava/lang/String;,[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+00016  020c                     move-result-object
+00017  106e 2d7b 0002           invoke-virtual  # CALL Ljava/lang/reflect/Method;->isAccessible()Z
+0001a  030a                     move-result
+0001b  0339 0006                if-nez
+0001d  1312                     const/4
+0001e  206e 2d7c 0032           invoke-virtual  # CALL Ljava/lang/reflect/Method;->setAccessible(Z)V
+00021  4323 075d                new-array  # TYPE [Ljava/lang/Object;
+00023  306e 2d7a 0362           invoke-virtual  # CALL Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;,[Ljava/lang/Object;)Ljava/lang/Object;
+00026  0b28                     goto
+00027  060d                     op_0d
+00028  3071 1c5a 0601           invoke-static  # CALL Landroid/util/Log;->d(Ljava/lang/String;,Ljava/lang/String;,Ljava/lang/Throwable;)I
+0002b  0628                     goto
+0002c  061a 06ba                const-string  # STR "Could not find method makeOptionalFitsSystemWindows. Oh well..."
+0002e  2071 1c59 0061           invoke-static  # CALL Landroid/util/Log;->d(Ljava/lang/String;,Ljava/lang/String;)I
+00031  000e                     return-void

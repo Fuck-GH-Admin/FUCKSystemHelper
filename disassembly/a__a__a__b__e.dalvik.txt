@@ -1,0 +1,80 @@
+### La/a/a/b/e;-><clinit>()V  [access=0x10009, regs=1, ins=0, outs=1, code_off=0x4a2a4]
+00000  0022 06f8                new-instance  # TYPE Ljava/util/concurrent/locks/ReentrantLock;
+00002  1070 2eb5 0000           invoke-direct  # CALL Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
+00005  0069 0056                sput-object  # FIELD La/a/a/b/e;->a:Ljava/util/concurrent/locks/Lock;
+00007  000e                     return-void
+
+### La/a/a/b/e;->a(Ljava/lang/String;)I  [access=0x9, regs=4, ins=1, outs=2, code_off=0x4a168]
+00000  f012                     const/4
+00001  0338 0024                if-eqz
+00003  011a 0000                const-string  # STR ""
+00005  206e 2d03 0031           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+00008  010a                     move-result
+00009  0138 0003                if-eqz
+0000b  1a28                     goto
+0000c  0071 0062 0000           invoke-static  # CALL La/a/a/b/e;->a()Z
+0000f  010a                     move-result
+00010  0138 0015                if-eqz
+00012  0162 0056                sget-object  # FIELD La/a/a/b/e;->a:Ljava/util/concurrent/locks/Lock;
+00014  1072 2eb3 0001           invoke-interface  # CALL Ljava/util/concurrent/locks/Lock;->lock()V
+00017  0212                     const/4
+00018  2071 2adf 0032           invoke-static  # CALL Lcom/baidu/location/indoor/mapversion/IndoorJni;->getGpsStatus(I,Ljava/lang/String;)I
+0001b  030a                     move-result
+0001c  1072 2eb4 0001           invoke-interface  # CALL Ljava/util/concurrent/locks/Lock;->unlock()V
+0001f  030f                     return
+00020  0362 0056                sget-object  # FIELD La/a/a/b/e;->a:Ljava/util/concurrent/locks/Lock;
+00022  1072 2eb4 0003           invoke-interface  # CALL Ljava/util/concurrent/locks/Lock;->unlock()V
+00025  000f                     return
+
+### La/a/a/b/e;->a(Ljava/lang/String;,Ljava/lang/String;)I  [access=0x9, regs=4, ins=2, outs=3, code_off=0x4a1d0]
+00000  0238 0031                if-eqz
+00002  001a 0000                const-string  # STR ""
+00004  206e 2d03 0020           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+00007  010a                     move-result
+00008  0138 0003                if-eqz
+0000a  2728                     goto
+0000b  0338 0008                if-eqz
+0000d  206e 2d03 0030           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+00010  000a                     move-result
+00011  0038 0004                if-eqz
+00013  031a 1b1e                const-string  # STR "default"
+00015  0071 0062 0000           invoke-static  # CALL La/a/a/b/e;->a()Z
+00018  000a                     move-result
+00019  0038 0015                if-eqz
+0001b  0062 0056                sget-object  # FIELD La/a/a/b/e;->a:Ljava/util/concurrent/locks/Lock;
+0001d  1072 2eb3 0000           invoke-interface  # CALL Ljava/util/concurrent/locks/Lock;->lock()V
+00020  0112                     const/4
+00021  3071 2ae1 0321           invoke-static  # CALL Lcom/baidu/location/indoor/mapversion/IndoorJni;->initGpsChecker(I,Ljava/lang/String;,Ljava/lang/String;)I
+00024  020a                     move-result
+00025  1072 2eb4 0000           invoke-interface  # CALL Ljava/util/concurrent/locks/Lock;->unlock()V
+00028  020f                     return
+00029  0262 0056                sget-object  # FIELD La/a/a/b/e;->a:Ljava/util/concurrent/locks/Lock;
+0002b  1072 2eb4 0002           invoke-interface  # CALL Ljava/util/concurrent/locks/Lock;->unlock()V
+0002e  0213 ff9b                const/16
+00030  020f                     return
+00031  0213 ff9c                const/16
+00033  020f                     return
+
+### La/a/a/b/e;->a()Z  [access=0x9, regs=2, ins=0, outs=0, code_off=0x4a140]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0113 0013                const/16
+00004  1035 0004                if-ge
+00006  0012                     const/4
+00007  000f                     return
+00008  0063 1cbc                sget-boolean  # FIELD Lcom/baidu/location/indoor/mapversion/IndoorJni;->a:Z
+0000a  000f                     return
+
+### La/a/a/b/e;->b()I  [access=0x9, regs=2, ins=0, outs=1, code_off=0x4a254]
+00000  0071 0062 0000           invoke-static  # CALL La/a/a/b/e;->a()Z
+00003  000a                     move-result
+00004  0038 0014                if-eqz
+00006  0062 0056                sget-object  # FIELD La/a/a/b/e;->a:Ljava/util/concurrent/locks/Lock;
+00008  1072 2eb3 0000           invoke-interface  # CALL Ljava/util/concurrent/locks/Lock;->lock()V
+0000b  0071 2add 0000           invoke-static  # CALL Lcom/baidu/location/indoor/mapversion/IndoorJni;->destroyGpsChecker()I
+0000e  010a                     move-result
+0000f  1072 2eb4 0000           invoke-interface  # CALL Ljava/util/concurrent/locks/Lock;->unlock()V
+00012  010f                     return
+00013  0062 0056                sget-object  # FIELD La/a/a/b/e;->a:Ljava/util/concurrent/locks/Lock;
+00015  1072 2eb4 0000           invoke-interface  # CALL Ljava/util/concurrent/locks/Lock;->unlock()V
+00018  0012                     const/4
+00019  000f                     return

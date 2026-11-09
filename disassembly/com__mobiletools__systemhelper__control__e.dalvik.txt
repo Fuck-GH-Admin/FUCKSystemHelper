@@ -1,0 +1,164 @@
+### Lcom/mobiletools/systemhelper/control/e;-><init>(Landroid/content/Context;)V  [access=0x10001, regs=3, ins=2, outs=1, code_off=0x10cdf4]
+00000  1070 2d4a 0001           invoke-direct  # CALL Ljava/lang/Thread;-><init>()V
+00003  0012                     const/4
+00004  105b 1d4d                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/e;->b:Landroid/content/Context;
+00006  125b 1d4d                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/e;->b:Landroid/content/Context;
+00008  000e                     return-void
+
+### Lcom/mobiletools/systemhelper/control/e;->a(Lorg/json/JSONObject;)Z  [access=0x20002, regs=9, ins=2, outs=4, code_off=0x10cba0]
+00000  071d                     monitor-enter
+00001  0063 1bb5                sget-boolean  # FIELD Lc/d/a/b/d;->e:Z
+00003  0112                     const/4
+00004  0039 0004                if-nez
+00006  071e                     monitor-exit
+00007  010f                     return
+00008  0012                     const/4
+00009  021a 1234                const-string  # STR "Model"
+0000b  206e 2f1b 0028           invoke-virtual  # CALL Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+0000e  020c                     move-result-object
+0000f  031a 11ef                const-string  # STR "Manuf"
+00011  206e 2f1b 0038           invoke-virtual  # CALL Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+00014  000c                     move-result-object
+00015  0828                     goto
+00016  030d                     op_0d
+00017  0328                     goto
+00018  030d                     op_0d
+00019  0207                     op_07
+0001a  106e 2f12 0003           invoke-virtual  # CALL Lorg/json/JSONException;->printStackTrace()V
+0001d  106e 2f2e 0008           invoke-virtual  # CALL Lorg/json/JSONObject;->toString()Ljava/lang/String;
+00020  080c                     move-result-object
+00021  031a 082d                const-string  # STR "HistoryPostThread"
+00023  0422 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00025  1070 2d35 0004           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00028  051a 2168                const-string  # STR "model:"
+0002a  206e 2d3f 0054           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0002d  206e 2d3f 0024           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00030  051a 001c                const-string  # STR " ,manuf:"
+00032  206e 2d3f 0054           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00035  206e 2d3f 0004           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00038  051a 001d                const-string  # STR " ,postString："
+0003a  206e 2d3f 0054           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0003d  206e 2d3f 0084           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00040  106e 2d44 0004           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00043  040c                     move-result-object
+00044  2071 2987 0043           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+00047  1071 2970 0008           invoke-static  # CALL Lc/d/a/b/c;->a(Ljava/lang/String;)[B
+0004a  030c                     move-result-object
+0004b  7454 1d4d                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/e;->b:Landroid/content/Context;
+0004d  2071 296f 0034           invoke-static  # CALL Lc/d/a/b/c;->a(Landroid/content/Context;,[B)[B
+00050  040c                     move-result-object
+00051  1071 296e 0004           invoke-static  # CALL Lc/d/a/b/c;->a([B)Ljava/lang/String;
+00054  040c                     move-result-object
+00055  051a 2824                const-string  # STR "utf-8"
+00057  2071 2da1 0054           invoke-static  # CALL Ljava/net/URLEncoder;->encode(Ljava/lang/String;,Ljava/lang/String;)Ljava/lang/String;
+0005a  040c                     move-result-object
+0005b  051a 2824                const-string  # STR "utf-8"
+0005d  2071 2da1 0052           invoke-static  # CALL Ljava/net/URLEncoder;->encode(Ljava/lang/String;,Ljava/lang/String;)Ljava/lang/String;
+00060  020c                     move-result-object
+00061  051a 2824                const-string  # STR "utf-8"
+00063  2071 2da1 0050           invoke-static  # CALL Ljava/net/URLEncoder;->encode(Ljava/lang/String;,Ljava/lang/String;)Ljava/lang/String;
+00066  000c                     move-result-object
+00067  0522 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00069  1070 2d35 0005           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0006c  7654 1d4d                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/e;->b:Landroid/content/Context;
+0006e  1071 29ae 0006           invoke-static  # CALL Lc/d/a/b/l;->h(Landroid/content/Context;)Ljava/lang/String;
+00071  060c                     move-result-object
+00072  206e 2d3f 0065           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00075  061a 02c4                const-string  # STR "?ver="
+00077  206e 2d3f 0065           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0007a  061a 0252                const-string  # STR "5.0"
+0007c  206e 2d3f 0065           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0007f  061a 0131                const-string  # STR "&model="
+00081  206e 2d3f 0065           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00084  206e 2d3f 0025           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00087  021a 012b                const-string  # STR "&manuf="
+00089  206e 2d3f 0025           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0008c  206e 2d3f 0005           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0008f  001a 015d                const-string  # STR "&sign="
+00091  206e 2d3f 0005           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00094  206e 2d3f 0045           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00097  106e 2d44 0005           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0009a  000c                     move-result-object
+0009b  2071 2971 0038           invoke-static  # CALL Lc/d/a/b/c;->a(Ljava/lang/String;,[B)[B
+0009e  080c                     move-result-object
+0009f  0222 05ed                new-instance  # TYPE Lc/d/a/b/f;
+000a1  1070 297c 0002           invoke-direct  # CALL Lc/d/a/b/f;-><init>()V
+000a4  406e 297e 3802           invoke-virtual  # CALL Lc/d/a/b/f;->a(Ljava/lang/String;,[B,[B)Z
+000a7  080a                     move-result
+000a8  0839 000b                if-nez
+000aa  106e 297d 0002           invoke-virtual  # CALL Lc/d/a/b/f;->a()I
+000ad  000a                     move-result
+000ae  0113 01a0                const/16
+000b0  1033 0003                if-ne
+000b2  1812                     const/4
+000b3  8101                     op_01
+000b4  1c28                     goto
+000b5  080d                     op_0d
+000b6  001a 082d                const-string  # STR "HistoryPostThread"
+000b8  0222 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+000ba  1070 2d35 0002           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+000bd  031a 24f0                const-string  # STR "sendPOSTRequest exception--->"
+000bf  206e 2d3f 0032           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000c2  106e 2c97 0008           invoke-virtual  # CALL Ljava/lang/Exception;->toString()Ljava/lang/String;
+000c5  080c                     move-result-object
+000c6  206e 2d3f 0082           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000c9  106e 2d44 0002           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+000cc  080c                     move-result-object
+000cd  2071 2988 0080           invoke-static  # CALL Lc/d/a/b/h;->b(Ljava/lang/String;,Ljava/lang/String;)V
+000d0  071e                     monitor-exit
+000d1  010f                     return
+000d2  080d                     op_0d
+000d3  001a 082d                const-string  # STR "HistoryPostThread"
+000d5  0222 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+000d7  1070 2d35 0002           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+000da  031a 1b65                const-string  # STR "doEncrpytPost catch exception "
+000dc  206e 2d3f 0032           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000df  106e 2c95 0008           invoke-virtual  # CALL Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+000e2  080c                     move-result-object
+000e3  206e 2d3f 0082           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000e6  106e 2d44 0002           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+000e9  080c                     move-result-object
+000ea  2071 2988 0080           invoke-static  # CALL Lc/d/a/b/h;->b(Ljava/lang/String;,Ljava/lang/String;)V
+000ed  071e                     monitor-exit
+000ee  010f                     return
+000ef  080d                     op_0d
+000f0  071e                     monitor-exit
+000f1  0827                     throw
+
+### Lcom/mobiletools/systemhelper/control/e;->run()V  [access=0x1, regs=5, ins=1, outs=3, code_off=0x10ce18]
+00000  001a 082d                const-string  # STR "HistoryPostThread"
+00002  0163 1bb5                sget-boolean  # FIELD Lc/d/a/b/d;->e:Z
+00004  0138 004a                if-eqz
+00006  4154 1d4d                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/e;->b:Landroid/content/Context;
+00008  0262 1bc9                sget-object  # FIELD Lc/d/a/b/e;->c:Ljava/lang/String;
+0000a  0362 1bc8                sget-object  # FIELD Lc/d/a/b/e;->b:Ljava/lang/Integer;
+0000c  106e 2ca6 0003           invoke-virtual  # CALL Ljava/lang/Integer;->intValue()I
+0000f  030a                     move-result
+00010  3071 2976 0321           invoke-static  # CALL Lc/d/a/b/e;->a(Landroid/content/Context;,Ljava/lang/String;,I)Lc/d/a/b/e;
+00013  010c                     move-result-object
+00014  106e 2977 0001           invoke-virtual  # CALL Lc/d/a/b/e;->a()Lorg/json/JSONObject;
+00017  020c                     move-result-object
+00018  0238 001a                if-eqz
+0001a  2070 2bb6 0024           invoke-direct  # CALL Lcom/mobiletools/systemhelper/control/e;->a(Lorg/json/JSONObject;)Z
+0001d  040a                     move-result
+0001e  0222 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00020  1070 2d35 0002           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00023  031a 2370                const-string  # STR "post history result:"
+00025  206e 2d3f 0032           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00028  206e 2d40 0042           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+0002b  106e 2d44 0002           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0002e  040c                     move-result-object
+0002f  2071 2987 0040           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+00032  106e 2979 0001           invoke-virtual  # CALL Lc/d/a/b/e;->close()V
+00035  1928                     goto
+00036  040d                     op_0d
+00037  106e 2c96 0004           invoke-virtual  # CALL Ljava/lang/Exception;->printStackTrace()V
+0003a  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0003c  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0003f  021a 077f                const-string  # STR "Exception : "
+00041  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00044  206e 2d3e 0041           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+00047  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0004a  040c                     move-result-object
+0004b  2071 2988 0040           invoke-static  # CALL Lc/d/a/b/h;->b(Ljava/lang/String;,Ljava/lang/String;)V
+0004e  000e                     return-void

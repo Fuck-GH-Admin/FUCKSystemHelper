@@ -1,0 +1,29 @@
+### Landroid/support/v7/widget/u0$a;-><init>(Landroid/support/v7/widget/u0;)V  [access=0x10000, regs=9, ins=2, outs=7, code_off=0xede60]
+00000  785b 11db                iput-object  # FIELD Landroid/support/v7/widget/u0$a;->c:Landroid/support/v7/widget/u0;
+00002  1070 2ce0 0007           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00005  0822 0311                new-instance  # TYPE Landroid/support/v7/view/menu/a;
+00007  7054 11db                iget-object  # FIELD Landroid/support/v7/widget/u0$a;->c:Landroid/support/v7/widget/u0;
+00009  0054 11df                iget-object  # FIELD Landroid/support/v7/widget/u0;->a:Landroid/support/v7/widget/Toolbar;
+0000b  106e 1df8 0000           invoke-virtual  # CALL Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
+0000e  010c                     move-result-object
+0000f  7054 11db                iget-object  # FIELD Landroid/support/v7/widget/u0$a;->c:Landroid/support/v7/widget/u0;
+00011  0654 11e7                iget-object  # FIELD Landroid/support/v7/widget/u0;->i:Ljava/lang/CharSequence;
+00013  0212                     const/4
+00014  0314 002c 0102           const
+00017  0412                     const/4
+00018  0512                     const/4
+00019  8007                     op_07
+0001a  0776 1393 0000           invoke-direct/range  # CALL Landroid/support/v7/view/menu/a;-><init>(Landroid/content/Context;,I,I,I,I,Ljava/lang/CharSequence;)V
+0001d  785b 11da                iput-object  # FIELD Landroid/support/v7/widget/u0$a;->b:Landroid/support/v7/view/menu/a;
+0001f  000e                     return-void
+
+### Landroid/support/v7/widget/u0$a;->onClick(Landroid/view/View;)V  [access=0x1, regs=3, ins=2, outs=3, code_off=0xedeb0]
+00000  1254 11db                iget-object  # FIELD Landroid/support/v7/widget/u0$a;->c:Landroid/support/v7/widget/u0;
+00002  2054 11ea                iget-object  # FIELD Landroid/support/v7/widget/u0;->l:Landroid/view/Window$Callback;
+00004  0038 000c                if-eqz
+00006  2255 11eb                iget-boolean  # FIELD Landroid/support/v7/widget/u0;->m:Z
+00008  0238 0008                if-eqz
+0000a  0212                     const/4
+0000b  1154 11da                iget-object  # FIELD Landroid/support/v7/widget/u0$a;->b:Landroid/support/v7/view/menu/a;
+0000d  3072 1e63 0120           invoke-interface  # CALL Landroid/view/Window$Callback;->onMenuItemSelected(I,Landroid/view/MenuItem;)Z
+00010  000e                     return-void

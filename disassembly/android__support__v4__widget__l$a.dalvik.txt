@@ -1,0 +1,213 @@
+### Landroid/support/v4/widget/l$a;-><init>(Landroid/view/ActionMode$Callback;,Landroid/widget/TextView;)V  [access=0x10000, regs=3, ins=3, outs=1, code_off=0xc36ac]
+00000  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  015b 0e04                iput-object  # FIELD Landroid/support/v4/widget/l$a;->a:Landroid/view/ActionMode$Callback;
+00005  025b 0e05                iput-object  # FIELD Landroid/support/v4/widget/l$a;->b:Landroid/widget/TextView;
+00007  0112                     const/4
+00008  015c 0e09                iput-boolean  # FIELD Landroid/support/v4/widget/l$a;->f:Z
+0000a  000e                     return-void
+
+### Landroid/support/v4/widget/l$a;->a()Landroid/content/Intent;  [access=0x2, regs=2, ins=1, outs=2, code_off=0xc34cc]
+00000  0122 0176                new-instance  # TYPE Landroid/content/Intent;
+00002  1070 086a 0001           invoke-direct  # CALL Landroid/content/Intent;-><init>()V
+00005  001a 1911                const-string  # STR "android.intent.action.PROCESS_TEXT"
+00007  206e 087e 0001           invoke-virtual  # CALL Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+0000a  010c                     move-result-object
+0000b  001a 277a                const-string  # STR "text/plain"
+0000d  206e 0883 0001           invoke-virtual  # CALL Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
+00010  010c                     move-result-object
+00011  0111                     return-object
+
+### Landroid/support/v4/widget/l$a;->a(Landroid/content/pm/ResolveInfo;,Landroid/widget/TextView;)Landroid/content/Intent;  [access=0x2, regs=4, ins=3, outs=3, code_off=0xc3500]
+00000  1070 1190 0001           invoke-direct  # CALL Landroid/support/v4/widget/l$a;->a()Landroid/content/Intent;
+00003  000c                     move-result-object
+00004  2070 1195 0031           invoke-direct  # CALL Landroid/support/v4/widget/l$a;->a(Landroid/widget/TextView;)Z
+00007  010a                     move-result
+00008  01df 0101                op_df
+0000a  031a 1918                const-string  # STR "android.intent.extra.PROCESS_TEXT_READONLY"
+0000c  306e 087c 0130           invoke-virtual  # CALL Landroid/content/Intent;->putExtra(Ljava/lang/String;,Z)Landroid/content/Intent;
+0000f  010c                     move-result-object
+00010  2254 0514                iget-object  # FIELD Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+00012  2354 0504                iget-object  # FIELD Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
+00014  2254 0503                iget-object  # FIELD Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
+00016  306e 087f 0231           invoke-virtual  # CALL Landroid/content/Intent;->setClassName(Ljava/lang/String;,Ljava/lang/String;)Landroid/content/Intent;
+00019  010c                     move-result-object
+0001a  0111                     return-object
+
+### Landroid/support/v4/widget/l$a;->a(Landroid/content/Context;,Landroid/content/pm/PackageManager;)Ljava/util/List;  [access=0x2, regs=6, ins=3, outs=3, code_off=0xc3640]
+00000  0022 06c8                new-instance  # TYPE Ljava/util/ArrayList;
+00002  1070 2de7 0000           invoke-direct  # CALL Ljava/util/ArrayList;-><init>()V
+00005  4120 011f                instance-of  # TYPE Landroid/app/Activity;
+00007  0139 0003                if-nez
+00009  0011                     return-object
+0000a  1070 1190 0003           invoke-direct  # CALL Landroid/support/v4/widget/l$a;->a()Landroid/content/Intent;
+0000d  010c                     move-result-object
+0000e  0212                     const/4
+0000f  306e 08a6 0215           invoke-virtual  # CALL Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;,I)Ljava/util/List;
+00012  050c                     move-result-object
+00013  1072 2e59 0005           invoke-interface  # CALL Ljava/util/List;->iterator()Ljava/util/Iterator;
+00016  050c                     move-result-object
+00017  1072 2e43 0005           invoke-interface  # CALL Ljava/util/Iterator;->hasNext()Z
+0001a  010a                     move-result
+0001b  0138 0012                if-eqz
+0001d  1072 2e44 0005           invoke-interface  # CALL Ljava/util/Iterator;->next()Ljava/lang/Object;
+00020  010c                     move-result-object
+00021  011f 0182                check-cast  # TYPE Landroid/content/pm/ResolveInfo;
+00023  3070 1194 0413           invoke-direct  # CALL Landroid/support/v4/widget/l$a;->a(Landroid/content/pm/ResolveInfo;,Landroid/content/Context;)Z
+00026  020a                     move-result
+00027  0238 fff0                if-eqz
+00029  2072 2e52 0010           invoke-interface  # CALL Ljava/util/List;->add(Ljava/lang/Object;)Z
+0002c  eb28                     goto
+0002d  0011                     return-object
+
+### Landroid/support/v4/widget/l$a;->a(Landroid/view/Menu;)V  [access=0x2, regs=10, ins=2, outs=5, code_off=0xc36f0]
+00000  8054 0e05                iget-object  # FIELD Landroid/support/v4/widget/l$a;->b:Landroid/widget/TextView;
+00002  106e 2101 0000           invoke-virtual  # CALL Landroid/widget/TextView;->getContext()Landroid/content/Context;
+00005  000c                     move-result-object
+00006  106e 0846 0000           invoke-virtual  # CALL Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+00009  010c                     move-result-object
+0000a  8255 0e09                iget-boolean  # FIELD Landroid/support/v4/widget/l$a;->f:Z
+0000c  031a 2423                const-string  # STR "removeItemAt"
+0000e  0412                     const/4
+0000f  1512                     const/4
+00010  0239 0022                if-nez
+00012  855c 0e09                iput-boolean  # FIELD Landroid/support/v4/widget/l$a;->f:Z
+00014  021a 1a87                const-string  # STR "com.android.internal.view.menu.MenuBuilder"
+00016  1071 2c72 0002           invoke-static  # CALL Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+00019  020c                     move-result-object
+0001a  825b 0e06                iput-object  # FIELD Landroid/support/v4/widget/l$a;->c:Ljava/lang/Class;
+0001c  5623 075c                new-array  # TYPE [Ljava/lang/Class;
+0001e  0762 1d60                sget-object  # FIELD Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+00020  074d 0406                aput-object
+00022  306e 2c7a 0632           invoke-virtual  # CALL Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;,[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+00025  020c                     move-result-object
+00026  825b 0e07                iput-object  # FIELD Landroid/support/v4/widget/l$a;->d:Ljava/lang/reflect/Method;
+00028  855c 0e08                iput-boolean  # FIELD Landroid/support/v4/widget/l$a;->e:Z
+0002a  0828                     goto
+0002b  0212                     const/4
+0002c  825b 0e06                iput-object  # FIELD Landroid/support/v4/widget/l$a;->c:Ljava/lang/Class;
+0002e  825b 0e07                iput-object  # FIELD Landroid/support/v4/widget/l$a;->d:Ljava/lang/reflect/Method;
+00030  845c 0e08                iput-boolean  # FIELD Landroid/support/v4/widget/l$a;->e:Z
+00032  8255 0e08                iget-boolean  # FIELD Landroid/support/v4/widget/l$a;->e:Z
+00034  0238 000d                if-eqz
+00036  8254 0e06                iget-object  # FIELD Landroid/support/v4/widget/l$a;->c:Ljava/lang/Class;
+00038  206e 2c84 0092           invoke-virtual  # CALL Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
+0003b  020a                     move-result
+0003c  0238 0005                if-eqz
+0003e  8254 0e07                iget-object  # FIELD Landroid/support/v4/widget/l$a;->d:Ljava/lang/reflect/Method;
+00040  0f28                     goto
+00041  106e 2ce3 0009           invoke-virtual  # CALL Ljava/lang/Object;->getClass()Ljava/lang/Class;
+00044  020c                     move-result-object
+00045  5623 075c                new-array  # TYPE [Ljava/lang/Class;
+00047  0762 1d60                sget-object  # FIELD Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+00049  074d 0406                aput-object
+0004b  306e 2c7a 0632           invoke-virtual  # CALL Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;,[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+0004e  020c                     move-result-object
+0004f  1072 1cd5 0009           invoke-interface  # CALL Landroid/view/Menu;->size()I
+00052  030a                     move-result
+00053  53b1                     op_b1
+00054  033a 002a                if-ltz
+00056  2072 1cca 0039           invoke-interface  # CALL Landroid/view/Menu;->getItem(I)Landroid/view/MenuItem;
+00059  060c                     move-result-object
+0005a  1072 1ce0 0006           invoke-interface  # CALL Landroid/view/MenuItem;->getIntent()Landroid/content/Intent;
+0005d  070c                     move-result-object
+0005e  0738 001d                if-eqz
+00060  071a 1911                const-string  # STR "android.intent.action.PROCESS_TEXT"
+00062  1072 1ce0 0006           invoke-interface  # CALL Landroid/view/MenuItem;->getIntent()Landroid/content/Intent;
+00065  060c                     move-result-object
+00066  106e 086f 0006           invoke-virtual  # CALL Landroid/content/Intent;->getAction()Ljava/lang/String;
+00069  060c                     move-result-object
+0006a  206e 2d03 0067           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+0006d  060a                     move-result
+0006e  0638 000d                if-eqz
+00070  5623 075d                new-array  # TYPE [Ljava/lang/Object;
+00072  1071 2cae 0003           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+00075  070c                     move-result-object
+00076  074d 0406                aput-object
+00078  306e 2d7a 0692           invoke-virtual  # CALL Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;,[Ljava/lang/Object;)Ljava/lang/Object;
+0007b  03d8 ff03                op_d8
+0007d  d728                     goto
+0007e  3070 1192 0108           invoke-direct  # CALL Landroid/support/v4/widget/l$a;->a(Landroid/content/Context;,Landroid/content/pm/PackageManager;)Ljava/util/List;
+00081  000c                     move-result-object
+00082  4201                     op_01
+00083  1072 2e5d 0000           invoke-interface  # CALL Ljava/util/List;->size()I
+00086  030a                     move-result
+00087  3235 0022                if-ge
+00089  2072 2e57 0020           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+0008c  030c                     move-result-object
+0008d  031f 0182                check-cast  # TYPE Landroid/content/pm/ResolveInfo;
+0008f  06d8 6402                op_d8
+00091  206e 08ab 0013           invoke-virtual  # CALL Landroid/content/pm/ResolveInfo;->loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
+00094  070c                     move-result-object
+00095  5772 1cc0 6449           invoke-interface  # CALL Landroid/view/Menu;->add(I,I,I,Ljava/lang/CharSequence;)Landroid/view/MenuItem;
+00098  060c                     move-result-object
+00099  8754 0e05                iget-object  # FIELD Landroid/support/v4/widget/l$a;->b:Landroid/widget/TextView;
+0009b  3070 1191 0738           invoke-direct  # CALL Landroid/support/v4/widget/l$a;->a(Landroid/content/pm/ResolveInfo;,Landroid/widget/TextView;)Landroid/content/Intent;
+0009e  030c                     move-result-object
+0009f  2072 1cfa 0036           invoke-interface  # CALL Landroid/view/MenuItem;->setIntent(Landroid/content/Intent;)Landroid/view/MenuItem;
+000a2  030c                     move-result-object
+000a3  2072 1d00 0053           invoke-interface  # CALL Landroid/view/MenuItem;->setShowAsAction(I)V
+000a6  02d8 0102                op_d8
+000a8  db28                     goto
+000a9  000e                     return-void
+
+### Landroid/support/v4/widget/l$a;->a(Landroid/content/pm/ResolveInfo;,Landroid/content/Context;)Z  [access=0x2, regs=5, ins=3, outs=2, code_off=0xc3580]
+00000  106e 0847 0004           invoke-virtual  # CALL Landroid/content/Context;->getPackageName()Ljava/lang/String;
+00003  020c                     move-result-object
+00004  3054 0514                iget-object  # FIELD Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+00006  0054 0504                iget-object  # FIELD Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
+00008  206e 2d03 0002           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+0000b  020a                     move-result
+0000c  1012                     const/4
+0000d  0238 0003                if-eqz
+0000f  000f                     return
+00010  3254 0514                iget-object  # FIELD Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+00012  2355 0501                iget-boolean  # FIELD Landroid/content/pm/ActivityInfo;->exported:Z
+00014  0112                     const/4
+00015  0339 0003                if-nez
+00017  010f                     return
+00018  2254 0506                iget-object  # FIELD Landroid/content/pm/ActivityInfo;->permission:Ljava/lang/String;
+0001a  0238 000a                if-eqz
+0001c  206e 0839 0024           invoke-virtual  # CALL Landroid/content/Context;->checkSelfPermission(Ljava/lang/String;)I
+0001f  020a                     move-result
+00020  0239 0003                if-nez
+00022  0228                     goto
+00023  1001                     op_01
+00024  000f                     return
+
+### Landroid/support/v4/widget/l$a;->a(Landroid/widget/TextView;)Z  [access=0x2, regs=2, ins=2, outs=1, code_off=0xc3548]
+00000  1020 03f9                instance-of  # TYPE Landroid/text/Editable;
+00002  0038 0010                if-eqz
+00004  106e 2123 0001           invoke-virtual  # CALL Landroid/widget/TextView;->onCheckIsTextEditor()Z
+00007  000a                     move-result
+00008  0038 000a                if-eqz
+0000a  106e 2120 0001           invoke-virtual  # CALL Landroid/widget/TextView;->isEnabled()Z
+0000d  000a                     move-result
+0000e  0038 0004                if-eqz
+00010  1012                     const/4
+00011  0228                     goto
+00012  0012                     const/4
+00013  000f                     return
+
+### Landroid/support/v4/widget/l$a;->onActionItemClicked(Landroid/view/ActionMode;,Landroid/view/MenuItem;)Z  [access=0x1, regs=3, ins=3, outs=3, code_off=0xc35dc]
+00000  0054 0e04                iget-object  # FIELD Landroid/support/v4/widget/l$a;->a:Landroid/view/ActionMode$Callback;
+00002  3072 1c85 0210           invoke-interface  # CALL Landroid/view/ActionMode$Callback;->onActionItemClicked(Landroid/view/ActionMode;,Landroid/view/MenuItem;)Z
+00005  000a                     move-result
+00006  000f                     return
+
+### Landroid/support/v4/widget/l$a;->onCreateActionMode(Landroid/view/ActionMode;,Landroid/view/Menu;)Z  [access=0x1, regs=3, ins=3, outs=3, code_off=0xc35fc]
+00000  0054 0e04                iget-object  # FIELD Landroid/support/v4/widget/l$a;->a:Landroid/view/ActionMode$Callback;
+00002  3072 1c86 0210           invoke-interface  # CALL Landroid/view/ActionMode$Callback;->onCreateActionMode(Landroid/view/ActionMode;,Landroid/view/Menu;)Z
+00005  000a                     move-result
+00006  000f                     return
+
+### Landroid/support/v4/widget/l$a;->onDestroyActionMode(Landroid/view/ActionMode;)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0xc36d4]
+00000  0054 0e04                iget-object  # FIELD Landroid/support/v4/widget/l$a;->a:Landroid/view/ActionMode$Callback;
+00002  2072 1c87 0010           invoke-interface  # CALL Landroid/view/ActionMode$Callback;->onDestroyActionMode(Landroid/view/ActionMode;)V
+00005  000e                     return-void
+
+### Landroid/support/v4/widget/l$a;->onPrepareActionMode(Landroid/view/ActionMode;,Landroid/view/Menu;)Z  [access=0x1, regs=3, ins=3, outs=3, code_off=0xc361c]
+00000  2070 1193 0020           invoke-direct  # CALL Landroid/support/v4/widget/l$a;->a(Landroid/view/Menu;)V
+00003  0054 0e04                iget-object  # FIELD Landroid/support/v4/widget/l$a;->a:Landroid/view/ActionMode$Callback;
+00005  3072 1c88 0210           invoke-interface  # CALL Landroid/view/ActionMode$Callback;->onPrepareActionMode(Landroid/view/ActionMode;,Landroid/view/Menu;)Z
+00008  000a                     move-result
+00009  000f                     return

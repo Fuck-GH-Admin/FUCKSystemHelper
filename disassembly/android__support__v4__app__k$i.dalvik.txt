@@ -1,0 +1,60 @@
+### Landroid/support/v4/app/k$i;-><init>(Landroid/view/animation/Animation;,Landroid/view/ViewGroup;,Landroid/view/View;)V  [access=0x10000, regs=5, ins=4, outs=2, code_off=0xa6e24]
+00000  0012                     const/4
+00001  2070 1eb7 0001           invoke-direct  # CALL Landroid/view/animation/AnimationSet;-><init>(Z)V
+00004  1012                     const/4
+00005  105c 0d1a                iput-boolean  # FIELD Landroid/support/v4/app/k$i;->f:Z
+00007  135b 0d16                iput-object  # FIELD Landroid/support/v4/app/k$i;->b:Landroid/view/ViewGroup;
+00009  145b 0d17                iput-object  # FIELD Landroid/support/v4/app/k$i;->c:Landroid/view/View;
+0000b  206e 1eb8 0021           invoke-virtual  # CALL Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
+0000e  1254 0d16                iget-object  # FIELD Landroid/support/v4/app/k$i;->b:Landroid/view/ViewGroup;
+00010  206e 1e28 0012           invoke-virtual  # CALL Landroid/view/ViewGroup;->post(Ljava/lang/Runnable;)Z
+00013  000e                     return-void
+
+### Landroid/support/v4/app/k$i;->getTransformation(J,Landroid/view/animation/Transformation;)Z  [access=0x1, regs=6, ins=4, outs=4, code_off=0xa6d9c]
+00000  1012                     const/4
+00001  205c 0d1a                iput-boolean  # FIELD Landroid/support/v4/app/k$i;->f:Z
+00003  2155 0d18                iget-boolean  # FIELD Landroid/support/v4/app/k$i;->d:Z
+00005  0138 0006                if-eqz
+00007  2255 0d19                iget-boolean  # FIELD Landroid/support/v4/app/k$i;->e:Z
+00009  02b7                     op_b7
+0000a  020f                     return
+0000b  406f 1eba 5432           invoke-super  # CALL Landroid/view/animation/AnimationSet;->getTransformation(J,Landroid/view/animation/Transformation;)Z
+0000e  030a                     move-result
+0000f  0339 0009                if-nez
+00011  205c 0d18                iput-boolean  # FIELD Landroid/support/v4/app/k$i;->d:Z
+00013  2354 0d16                iget-object  # FIELD Landroid/support/v4/app/k$i;->b:Landroid/view/ViewGroup;
+00015  2071 1046 0023           invoke-static  # CALL Landroid/support/v4/app/u;->a(Landroid/view/View;,Ljava/lang/Runnable;)Landroid/support/v4/app/u;
+00018  000f                     return
+
+### Landroid/support/v4/app/k$i;->getTransformation(J,Landroid/view/animation/Transformation;,F)Z  [access=0x1, regs=7, ins=5, outs=5, code_off=0xa6de0]
+00000  1012                     const/4
+00001  205c 0d1a                iput-boolean  # FIELD Landroid/support/v4/app/k$i;->f:Z
+00003  2155 0d18                iget-boolean  # FIELD Landroid/support/v4/app/k$i;->d:Z
+00005  0138 0006                if-eqz
+00007  2255 0d19                iget-boolean  # FIELD Landroid/support/v4/app/k$i;->e:Z
+00009  02b7                     op_b7
+0000a  020f                     return
+0000b  566f 1ebb 5432           invoke-super  # CALL Landroid/view/animation/AnimationSet;->getTransformation(J,Landroid/view/animation/Transformation;,F)Z
+0000e  030a                     move-result
+0000f  0339 0009                if-nez
+00011  205c 0d18                iput-boolean  # FIELD Landroid/support/v4/app/k$i;->d:Z
+00013  2354 0d16                iget-object  # FIELD Landroid/support/v4/app/k$i;->b:Landroid/view/ViewGroup;
+00015  2071 1046 0023           invoke-static  # CALL Landroid/support/v4/app/u;->a(Landroid/view/View;,Ljava/lang/Runnable;)Landroid/support/v4/app/u;
+00018  000f                     return
+
+### Landroid/support/v4/app/k$i;->run()V  [access=0x1, regs=3, ins=1, outs=2, code_off=0xa6e5c]
+00000  2055 0d18                iget-boolean  # FIELD Landroid/support/v4/app/k$i;->d:Z
+00002  0039 000f                if-nez
+00004  2055 0d1a                iget-boolean  # FIELD Landroid/support/v4/app/k$i;->f:Z
+00006  0038 000b                if-eqz
+00008  0012                     const/4
+00009  205c 0d1a                iput-boolean  # FIELD Landroid/support/v4/app/k$i;->f:Z
+0000b  2054 0d16                iget-object  # FIELD Landroid/support/v4/app/k$i;->b:Landroid/view/ViewGroup;
+0000d  206e 1e28 0020           invoke-virtual  # CALL Landroid/view/ViewGroup;->post(Ljava/lang/Runnable;)Z
+00010  0b28                     goto
+00011  2054 0d16                iget-object  # FIELD Landroid/support/v4/app/k$i;->b:Landroid/view/ViewGroup;
+00013  2154 0d17                iget-object  # FIELD Landroid/support/v4/app/k$i;->c:Landroid/view/View;
+00015  206e 1def 0010           invoke-virtual  # CALL Landroid/view/ViewGroup;->endViewTransition(Landroid/view/View;)V
+00018  1012                     const/4
+00019  205c 0d19                iput-boolean  # FIELD Landroid/support/v4/app/k$i;->e:Z
+0001b  000e                     return-void

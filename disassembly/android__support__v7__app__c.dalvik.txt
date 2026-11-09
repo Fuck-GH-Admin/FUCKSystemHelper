@@ -1,0 +1,367 @@
+### Landroid/support/v7/app/c;-><init>()V  [access=0x10001, regs=2, ins=1, outs=1, code_off=0xc59cc]
+00000  1070 0eb8 0001           invoke-direct  # CALL Landroid/support/v4/app/f;-><init>()V
+00003  0012                     const/4
+00004  1059 0e88                iput  # FIELD Landroid/support/v7/app/c;->o:I
+00006  000e                     return-void
+
+### Landroid/support/v7/app/c;->a(I,Landroid/view/KeyEvent;)Z  [access=0x2, regs=4, ins=3, outs=2, code_off=0xc5920]
+00000  0260 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0013 001a                const/16
+00004  0235 003a                if-ge
+00006  106e 1cb0 0003           invoke-virtual  # CALL Landroid/view/KeyEvent;->isCtrlPressed()Z
+00009  020a                     move-result
+0000a  0239 0034                if-nez
+0000c  106e 1caa 0003           invoke-virtual  # CALL Landroid/view/KeyEvent;->getMetaState()I
+0000f  020a                     move-result
+00010  1071 1cb5 0002           invoke-static  # CALL Landroid/view/KeyEvent;->metaStateHasNoModifiers(I)Z
+00013  020a                     move-result
+00014  0239 002a                if-nez
+00016  106e 1cac 0003           invoke-virtual  # CALL Landroid/view/KeyEvent;->getRepeatCount()I
+00019  020a                     move-result
+0001a  0239 0024                if-nez
+0001c  106e 1ca8 0003           invoke-virtual  # CALL Landroid/view/KeyEvent;->getKeyCode()I
+0001f  020a                     move-result
+00020  1071 1cb1 0002           invoke-static  # CALL Landroid/view/KeyEvent;->isModifierKey(I)Z
+00023  020a                     move-result
+00024  0239 001a                if-nez
+00026  106e 0708 0001           invoke-virtual  # CALL Landroid/app/Activity;->getWindow()Landroid/view/Window;
+00029  010c                     move-result-object
+0002a  0138 0014                if-eqz
+0002c  106e 1e72 0001           invoke-virtual  # CALL Landroid/view/Window;->getDecorView()Landroid/view/View;
+0002f  020c                     move-result-object
+00030  0238 000e                if-eqz
+00032  106e 1e72 0001           invoke-virtual  # CALL Landroid/view/Window;->getDecorView()Landroid/view/View;
+00035  010c                     move-result-object
+00036  206e 1d44 0031           invoke-virtual  # CALL Landroid/view/View;->dispatchKeyShortcutEvent(Landroid/view/KeyEvent;)Z
+00039  010a                     move-result
+0003a  0138 0004                if-eqz
+0003c  1112                     const/4
+0003d  010f                     return
+0003e  0112                     const/4
+0003f  010f                     return
+
+### Landroid/support/v7/app/c;->a(Lb/b/d/d/b$a;)Lb/b/d/d/b;  [access=0x1, regs=2, ins=2, outs=0, code_off=0xc5768]
+00000  0012                     const/4
+00001  0011                     return-object
+
+### Landroid/support/v7/app/c;->a(Landroid/content/Intent;)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0xc5db8]
+00000  2071 1041 0010           invoke-static  # CALL Landroid/support/v4/app/t;->a(Landroid/app/Activity;,Landroid/content/Intent;)V
+00003  000e                     return-void
+
+### Landroid/support/v7/app/c;->a(Landroid/support/v4/app/y;)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0xc5b3c]
+00000  206e 1058 0001           invoke-virtual  # CALL Landroid/support/v4/app/y;->a(Landroid/app/Activity;)Landroid/support/v4/app/y;
+00003  000e                     return-void
+
+### Landroid/support/v7/app/c;->a(Lb/b/d/d/b;)V  [access=0x1, regs=2, ins=2, outs=0, code_off=0xc5c84]
+00000  000e                     return-void
+
+### Landroid/support/v7/app/c;->addContentView(Landroid/view/View;,Landroid/view/ViewGroup$LayoutParams;)V  [access=0x1, regs=3, ins=3, outs=3, code_off=0xc59ec]
+00000  106e 1239 0000           invoke-virtual  # CALL Landroid/support/v7/app/c;->h()Landroid/support/v7/app/e;
+00003  000c                     move-result-object
+00004  306e 125c 0210           invoke-virtual  # CALL Landroid/support/v7/app/e;->a(Landroid/view/View;,Landroid/view/ViewGroup$LayoutParams;)V
+00007  000e                     return-void
+
+### Landroid/support/v7/app/c;->b(Landroid/support/v4/app/y;)V  [access=0x1, regs=2, ins=2, outs=0, code_off=0xc5be4]
+00000  000e                     return-void
+
+### Landroid/support/v7/app/c;->b(Lb/b/d/d/b;)V  [access=0x1, regs=2, ins=2, outs=0, code_off=0xc5c70]
+00000  000e                     return-void
+
+### Landroid/support/v7/app/c;->b(Landroid/content/Intent;)Z  [access=0x1, regs=2, ins=2, outs=2, code_off=0xc59b0]
+00000  2071 1044 0010           invoke-static  # CALL Landroid/support/v4/app/t;->b(Landroid/app/Activity;,Landroid/content/Intent;)Z
+00003  000a                     move-result
+00004  000f                     return
+
+### Landroid/support/v7/app/c;->c()Landroid/content/Intent;  [access=0x1, regs=1, ins=1, outs=1, code_off=0xc56b0]
+00000  1071 103f 0000           invoke-static  # CALL Landroid/support/v4/app/t;->a(Landroid/app/Activity;)Landroid/content/Intent;
+00003  000c                     move-result-object
+00004  0011                     return-object
+
+### Landroid/support/v7/app/c;->closeOptionsMenu()V  [access=0x1, regs=4, ins=1, outs=2, code_off=0xc5a0c]
+00000  106e 123a 0003           invoke-virtual  # CALL Landroid/support/v7/app/c;->i()Landroid/support/v7/app/a;
+00003  000c                     move-result-object
+00004  106e 0708 0003           invoke-virtual  # CALL Landroid/app/Activity;->getWindow()Landroid/view/Window;
+00007  010c                     move-result-object
+00008  0212                     const/4
+00009  206e 1e73 0021           invoke-virtual  # CALL Landroid/view/Window;->hasFeature(I)Z
+0000c  010a                     move-result
+0000d  0138 000d                if-eqz
+0000f  0038 0008                if-eqz
+00011  106e 1212 0000           invoke-virtual  # CALL Landroid/support/v7/app/a;->e()Z
+00014  000a                     move-result
+00015  0039 0005                if-nez
+00017  106f 06f2 0003           invoke-super  # CALL Landroid/app/Activity;->closeOptionsMenu()V
+0001a  000e                     return-void
+
+### Landroid/support/v7/app/c;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z  [access=0x1, regs=5, ins=2, outs=2, code_off=0xc57c4]
+00000  106e 1ca8 0004           invoke-virtual  # CALL Landroid/view/KeyEvent;->getKeyCode()I
+00003  000a                     move-result
+00004  106e 123a 0003           invoke-virtual  # CALL Landroid/support/v7/app/c;->i()Landroid/support/v7/app/a;
+00007  010c                     move-result-object
+00008  0213 0052                const/16
+0000a  2033 000c                if-ne
+0000c  0138 000a                if-eqz
+0000e  206e 120e 0041           invoke-virtual  # CALL Landroid/support/v7/app/a;->a(Landroid/view/KeyEvent;)Z
+00011  000a                     move-result
+00012  0038 0004                if-eqz
+00014  1312                     const/4
+00015  030f                     return
+00016  206f 1052 0043           invoke-super  # CALL Landroid/support/v4/app/x;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
+00019  030a                     move-result
+0001a  030f                     return
+
+### Landroid/support/v7/app/c;->findViewById(I)Landroid/view/View;  [access=0x1, regs=2, ins=2, outs=2, code_off=0xc57a0]
+00000  106e 1239 0000           invoke-virtual  # CALL Landroid/support/v7/app/c;->h()Landroid/support/v7/app/e;
+00003  000c                     move-result-object
+00004  206e 1258 0010           invoke-virtual  # CALL Landroid/support/v7/app/e;->a(I)Landroid/view/View;
+00007  000c                     move-result-object
+00008  0011                     return-object
+
+### Landroid/support/v7/app/c;->g()V  [access=0x1, regs=1, ins=1, outs=1, code_off=0xc5d98]
+00000  106e 1239 0000           invoke-virtual  # CALL Landroid/support/v7/app/c;->h()Landroid/support/v7/app/e;
+00003  000c                     move-result-object
+00004  106e 1267 0000           invoke-virtual  # CALL Landroid/support/v7/app/e;->e()V
+00007  000e                     return-void
+
+### Landroid/support/v7/app/c;->getMenuInflater()Landroid/view/MenuInflater;  [access=0x1, regs=1, ins=1, outs=1, code_off=0xc577c]
+00000  106e 1239 0000           invoke-virtual  # CALL Landroid/support/v7/app/c;->h()Landroid/support/v7/app/e;
+00003  000c                     move-result-object
+00004  106e 125f 0000           invoke-virtual  # CALL Landroid/support/v7/app/e;->b()Landroid/view/MenuInflater;
+00007  000c                     move-result-object
+00008  0011                     return-object
+
+### Landroid/support/v7/app/c;->getResources()Landroid/content/res/Resources;  [access=0x1, regs=3, ins=1, outs=3, code_off=0xc56cc]
+00000  2054 0e89                iget-object  # FIELD Landroid/support/v7/app/c;->p:Landroid/content/res/Resources;
+00002  0039 0013                if-nez
+00004  0071 1b34 0000           invoke-static  # CALL Landroid/support/v7/widget/y0;->b()Z
+00007  000a                     move-result
+00008  0038 000d                if-eqz
+0000a  0022 03cc                new-instance  # TYPE Landroid/support/v7/widget/y0;
+0000c  106f 0705 0002           invoke-super  # CALL Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
+0000f  010c                     move-result-object
+00010  3070 1b31 0120           invoke-direct  # CALL Landroid/support/v7/widget/y0;-><init>(Landroid/content/Context;,Landroid/content/res/Resources;)V
+00013  205b 0e89                iput-object  # FIELD Landroid/support/v7/app/c;->p:Landroid/content/res/Resources;
+00015  2054 0e89                iget-object  # FIELD Landroid/support/v7/app/c;->p:Landroid/content/res/Resources;
+00017  0039 0006                if-nez
+00019  106f 0705 0002           invoke-super  # CALL Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
+0001c  000c                     move-result-object
+0001d  0011                     return-object
+
+### Landroid/support/v7/app/c;->h()Landroid/support/v7/app/e;  [access=0x1, regs=2, ins=1, outs=2, code_off=0xc573c]
+00000  1054 0e87                iget-object  # FIELD Landroid/support/v7/app/c;->n:Landroid/support/v7/app/e;
+00002  0039 0008                if-nez
+00004  2071 1256 0011           invoke-static  # CALL Landroid/support/v7/app/e;->a(Landroid/app/Activity;,Landroid/support/v7/app/d;)Landroid/support/v7/app/e;
+00007  000c                     move-result-object
+00008  105b 0e87                iput-object  # FIELD Landroid/support/v7/app/c;->n:Landroid/support/v7/app/e;
+0000a  1154 0e87                iget-object  # FIELD Landroid/support/v7/app/c;->n:Landroid/support/v7/app/e;
+0000c  0111                     return-object
+
+### Landroid/support/v7/app/c;->i()Landroid/support/v7/app/a;  [access=0x1, regs=1, ins=1, outs=1, code_off=0xc5718]
+00000  106e 1239 0000           invoke-virtual  # CALL Landroid/support/v7/app/c;->h()Landroid/support/v7/app/e;
+00003  000c                     move-result-object
+00004  106e 1263 0000           invoke-virtual  # CALL Landroid/support/v7/app/e;->c()Landroid/support/v7/app/a;
+00007  000c                     move-result-object
+00008  0011                     return-object
+
+### Landroid/support/v7/app/c;->invalidateOptionsMenu()V  [access=0x1, regs=1, ins=1, outs=1, code_off=0xc5a54]
+00000  106e 1239 0000           invoke-virtual  # CALL Landroid/support/v7/app/c;->h()Landroid/support/v7/app/e;
+00003  000c                     move-result-object
+00004  106e 1267 0000           invoke-virtual  # CALL Landroid/support/v7/app/e;->e()V
+00007  000e                     return-void
+
+### Landroid/support/v7/app/c;->j()V  [access=0x1, regs=1, ins=1, outs=0, code_off=0xc5c98]
+00000  000e                     return-void
+
+### Landroid/support/v7/app/c;->k()Z  [access=0x1, regs=3, ins=1, outs=2, code_off=0xc58b0]
+00000  106e 1232 0002           invoke-virtual  # CALL Landroid/support/v7/app/c;->c()Landroid/content/Intent;
+00003  000c                     move-result-object
+00004  0038 0022                if-eqz
+00006  206e 1231 0002           invoke-virtual  # CALL Landroid/support/v7/app/c;->b(Landroid/content/Intent;)Z
+00009  010a                     move-result
+0000a  0138 0017                if-eqz
+0000c  1071 105a 0002           invoke-static  # CALL Landroid/support/v4/app/y;->a(Landroid/content/Context;)Landroid/support/v4/app/y;
+0000f  000c                     move-result-object
+00010  206e 122b 0002           invoke-virtual  # CALL Landroid/support/v7/app/c;->a(Landroid/support/v4/app/y;)V
+00013  206e 122f 0002           invoke-virtual  # CALL Landroid/support/v7/app/c;->b(Landroid/support/v4/app/y;)V
+00016  106e 105c 0000           invoke-virtual  # CALL Landroid/support/v4/app/y;->a()V
+00019  1071 0e0b 0002           invoke-static  # CALL Landroid/support/v4/app/a;->a(Landroid/app/Activity;)V
+0001c  0828                     goto
+0001d  106e 06f7 0002           invoke-virtual  # CALL Landroid/app/Activity;->finish()V
+00020  0428                     goto
+00021  206e 122a 0002           invoke-virtual  # CALL Landroid/support/v7/app/c;->a(Landroid/content/Intent;)V
+00024  1212                     const/4
+00025  020f                     return
+00026  0212                     const/4
+00027  020f                     return
+
+### Landroid/support/v7/app/c;->onConfigurationChanged(Landroid/content/res/Configuration;)V  [access=0x1, regs=3, ins=2, outs=3, code_off=0xc5a74]
+00000  206f 0ec9 0021           invoke-super  # CALL Landroid/support/v4/app/f;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+00003  106e 1239 0001           invoke-virtual  # CALL Landroid/support/v7/app/c;->h()Landroid/support/v7/app/e;
+00006  000c                     move-result-object
+00007  206e 1259 0020           invoke-virtual  # CALL Landroid/support/v7/app/e;->a(Landroid/content/res/Configuration;)V
+0000a  1054 0e89                iget-object  # FIELD Landroid/support/v7/app/c;->p:Landroid/content/res/Resources;
+0000c  0038 000f                if-eqz
+0000e  106f 0705 0001           invoke-super  # CALL Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
+00011  000c                     move-result-object
+00012  106e 08cb 0000           invoke-virtual  # CALL Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+00015  000c                     move-result-object
+00016  1154 0e89                iget-object  # FIELD Landroid/support/v7/app/c;->p:Landroid/content/res/Resources;
+00018  306e 08f0 0021           invoke-virtual  # CALL Landroid/content/res/Resources;->updateConfiguration(Landroid/content/res/Configuration;,Landroid/util/DisplayMetrics;)V
+0001b  000e                     return-void
+
+### Landroid/support/v7/app/c;->onContentChanged()V  [access=0x1, regs=1, ins=1, outs=1, code_off=0xc5abc]
+00000  106e 123c 0000           invoke-virtual  # CALL Landroid/support/v7/app/c;->j()V
+00003  000e                     return-void
+
+### Landroid/support/v7/app/c;->onCreate(Landroid/os/Bundle;)V  [access=0x4, regs=5, ins=2, outs=4, code_off=0xc5ad4]
+00000  106e 1239 0003           invoke-virtual  # CALL Landroid/support/v7/app/c;->h()Landroid/support/v7/app/e;
+00003  000c                     move-result-object
+00004  106e 1266 0000           invoke-virtual  # CALL Landroid/support/v7/app/e;->d()V
+00007  206e 125a 0040           invoke-virtual  # CALL Landroid/support/v7/app/e;->a(Landroid/os/Bundle;)V
+0000a  106e 125e 0000           invoke-virtual  # CALL Landroid/support/v7/app/e;->a()Z
+0000d  000a                     move-result
+0000e  0038 001a                if-eqz
+00010  3052 0e88                iget  # FIELD Landroid/support/v7/app/c;->o:I
+00012  0038 0016                if-eqz
+00014  0160 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00016  0213 0017                const/16
+00018  2134 000d                if-lt
+0001a  106e 0706 0003           invoke-virtual  # CALL Landroid/app/Activity;->getTheme()Landroid/content/res/Resources$Theme;
+0001d  000c                     move-result-object
+0001e  3152 0e88                iget  # FIELD Landroid/support/v7/app/c;->o:I
+00020  0212                     const/4
+00021  406e 070e 2103           invoke-virtual  # CALL Landroid/app/Activity;->onApplyThemeResource(Landroid/content/res/Resources$Theme;,I,Z)V
+00024  0428                     goto
+00025  206e 1250 0003           invoke-virtual  # CALL Landroid/support/v7/app/c;->setTheme(I)V
+00028  206f 0eca 0043           invoke-super  # CALL Landroid/support/v4/app/f;->onCreate(Landroid/os/Bundle;)V
+0002b  000e                     return-void
+
+### Landroid/support/v7/app/c;->onDestroy()V  [access=0x4, regs=1, ins=1, outs=1, code_off=0xc5b54]
+00000  106f 0ece 0000           invoke-super  # CALL Landroid/support/v4/app/f;->onDestroy()V
+00003  106e 1239 0000           invoke-virtual  # CALL Landroid/support/v7/app/c;->h()Landroid/support/v7/app/e;
+00006  000c                     move-result-object
+00007  106e 1268 0000           invoke-virtual  # CALL Landroid/support/v7/app/e;->f()V
+0000a  000e                     return-void
+
+### Landroid/support/v7/app/c;->onKeyDown(I,Landroid/view/KeyEvent;)Z  [access=0x1, regs=4, ins=3, outs=3, code_off=0xc580c]
+00000  3070 122d 0321           invoke-direct  # CALL Landroid/support/v7/app/c;->a(I,Landroid/view/KeyEvent;)Z
+00003  000a                     move-result
+00004  0038 0004                if-eqz
+00006  1112                     const/4
+00007  010f                     return
+00008  306f 0717 0321           invoke-super  # CALL Landroid/app/Activity;->onKeyDown(I,Landroid/view/KeyEvent;)Z
+0000b  010a                     move-result
+0000c  010f                     return
+
+### Landroid/support/v7/app/c;->onMenuItemSelected(I,Landroid/view/MenuItem;)Z  [access=0x11, regs=4, ins=3, outs=3, code_off=0xc5838]
+00000  306f 0ed0 0321           invoke-super  # CALL Landroid/support/v4/app/f;->onMenuItemSelected(I,Landroid/view/MenuItem;)Z
+00003  020a                     move-result
+00004  0238 0004                if-eqz
+00006  1112                     const/4
+00007  010f                     return
+00008  106e 123a 0001           invoke-virtual  # CALL Landroid/support/v7/app/c;->i()Landroid/support/v7/app/a;
+0000b  020c                     move-result-object
+0000c  1072 1ce1 0003           invoke-interface  # CALL Landroid/view/MenuItem;->getItemId()I
+0000f  030a                     move-result
+00010  0014 002c 0102           const
+00013  0333 0011                if-ne
+00015  0238 000f                if-eqz
+00017  106e 1214 0002           invoke-virtual  # CALL Landroid/support/v7/app/a;->g()I
+0001a  020a                     move-result
+0001b  02dd 0402                op_dd
+0001d  0238 0007                if-eqz
+0001f  106e 123d 0001           invoke-virtual  # CALL Landroid/support/v7/app/c;->k()Z
+00022  010a                     move-result
+00023  010f                     return
+00024  0112                     const/4
+00025  010f                     return
+
+### Landroid/support/v7/app/c;->onMenuOpened(I,Landroid/view/Menu;)Z  [access=0x1, regs=3, ins=3, outs=3, code_off=0xc5894]
+00000  306f 071a 0210           invoke-super  # CALL Landroid/app/Activity;->onMenuOpened(I,Landroid/view/Menu;)Z
+00003  000a                     move-result
+00004  000f                     return
+
+### Landroid/support/v7/app/c;->onPanelClosed(I,Landroid/view/Menu;)V  [access=0x1, regs=3, ins=3, outs=3, code_off=0xc5b7c]
+00000  306f 0ed3 0210           invoke-super  # CALL Landroid/support/v4/app/f;->onPanelClosed(I,Landroid/view/Menu;)V
+00003  000e                     return-void
+
+### Landroid/support/v7/app/c;->onPostCreate(Landroid/os/Bundle;)V  [access=0x4, regs=2, ins=2, outs=2, code_off=0xc5b94]
+00000  206f 071e 0010           invoke-super  # CALL Landroid/app/Activity;->onPostCreate(Landroid/os/Bundle;)V
+00003  106e 1239 0000           invoke-virtual  # CALL Landroid/support/v7/app/c;->h()Landroid/support/v7/app/e;
+00006  000c                     move-result-object
+00007  206e 1260 0010           invoke-virtual  # CALL Landroid/support/v7/app/e;->b(Landroid/os/Bundle;)V
+0000a  000e                     return-void
+
+### Landroid/support/v7/app/c;->onPostResume()V  [access=0x4, regs=1, ins=1, outs=1, code_off=0xc5bbc]
+00000  106f 0ed6 0000           invoke-super  # CALL Landroid/support/v4/app/f;->onPostResume()V
+00003  106e 1239 0000           invoke-virtual  # CALL Landroid/support/v7/app/c;->h()Landroid/support/v7/app/e;
+00006  000c                     move-result-object
+00007  106e 1269 0000           invoke-virtual  # CALL Landroid/support/v7/app/e;->g()V
+0000a  000e                     return-void
+
+### Landroid/support/v7/app/c;->onSaveInstanceState(Landroid/os/Bundle;)V  [access=0x4, regs=2, ins=2, outs=2, code_off=0xc5bf8]
+00000  206f 0edb 0010           invoke-super  # CALL Landroid/support/v4/app/f;->onSaveInstanceState(Landroid/os/Bundle;)V
+00003  106e 1239 0000           invoke-virtual  # CALL Landroid/support/v7/app/c;->h()Landroid/support/v7/app/e;
+00006  000c                     move-result-object
+00007  206e 1265 0010           invoke-virtual  # CALL Landroid/support/v7/app/e;->c(Landroid/os/Bundle;)V
+0000a  000e                     return-void
+
+### Landroid/support/v7/app/c;->onStart()V  [access=0x4, regs=1, ins=1, outs=1, code_off=0xc5c20]
+00000  106f 0edc 0000           invoke-super  # CALL Landroid/support/v4/app/f;->onStart()V
+00003  106e 1239 0000           invoke-virtual  # CALL Landroid/support/v7/app/c;->h()Landroid/support/v7/app/e;
+00006  000c                     move-result-object
+00007  106e 126a 0000           invoke-virtual  # CALL Landroid/support/v7/app/e;->h()V
+0000a  000e                     return-void
+
+### Landroid/support/v7/app/c;->onStop()V  [access=0x4, regs=1, ins=1, outs=1, code_off=0xc5c48]
+00000  106f 0ede 0000           invoke-super  # CALL Landroid/support/v4/app/f;->onStop()V
+00003  106e 1239 0000           invoke-virtual  # CALL Landroid/support/v7/app/c;->h()Landroid/support/v7/app/e;
+00006  000c                     move-result-object
+00007  106e 126b 0000           invoke-virtual  # CALL Landroid/support/v7/app/e;->i()V
+0000a  000e                     return-void
+
+### Landroid/support/v7/app/c;->onTitleChanged(Ljava/lang/CharSequence;,I)V  [access=0x4, regs=3, ins=3, outs=3, code_off=0xc5cac]
+00000  306f 0725 0210           invoke-super  # CALL Landroid/app/Activity;->onTitleChanged(Ljava/lang/CharSequence;,I)V
+00003  106e 1239 0000           invoke-virtual  # CALL Landroid/support/v7/app/c;->h()Landroid/support/v7/app/e;
+00006  000c                     move-result-object
+00007  206e 125d 0010           invoke-virtual  # CALL Landroid/support/v7/app/e;->a(Ljava/lang/CharSequence;)V
+0000a  000e                     return-void
+
+### Landroid/support/v7/app/c;->openOptionsMenu()V  [access=0x1, regs=4, ins=1, outs=2, code_off=0xc5cd4]
+00000  106e 123a 0003           invoke-virtual  # CALL Landroid/support/v7/app/c;->i()Landroid/support/v7/app/a;
+00003  000c                     move-result-object
+00004  106e 0708 0003           invoke-virtual  # CALL Landroid/app/Activity;->getWindow()Landroid/view/Window;
+00007  010c                     move-result-object
+00008  0212                     const/4
+00009  206e 1e73 0021           invoke-virtual  # CALL Landroid/view/Window;->hasFeature(I)Z
+0000c  010a                     move-result
+0000d  0138 000d                if-eqz
+0000f  0038 0008                if-eqz
+00011  106e 1218 0000           invoke-virtual  # CALL Landroid/support/v7/app/a;->k()Z
+00014  000a                     move-result
+00015  0039 0005                if-nez
+00017  106f 0727 0003           invoke-super  # CALL Landroid/app/Activity;->openOptionsMenu()V
+0001a  000e                     return-void
+
+### Landroid/support/v7/app/c;->setContentView(I)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0xc5d5c]
+00000  106e 1239 0000           invoke-virtual  # CALL Landroid/support/v7/app/c;->h()Landroid/support/v7/app/e;
+00003  000c                     move-result-object
+00004  206e 1264 0010           invoke-virtual  # CALL Landroid/support/v7/app/e;->c(I)V
+00007  000e                     return-void
+
+### Landroid/support/v7/app/c;->setContentView(Landroid/view/View;)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0xc5d1c]
+00000  106e 1239 0000           invoke-virtual  # CALL Landroid/support/v7/app/c;->h()Landroid/support/v7/app/e;
+00003  000c                     move-result-object
+00004  206e 125b 0010           invoke-virtual  # CALL Landroid/support/v7/app/e;->a(Landroid/view/View;)V
+00007  000e                     return-void
+
+### Landroid/support/v7/app/c;->setContentView(Landroid/view/View;,Landroid/view/ViewGroup$LayoutParams;)V  [access=0x1, regs=3, ins=3, outs=3, code_off=0xc5d3c]
+00000  106e 1239 0000           invoke-virtual  # CALL Landroid/support/v7/app/c;->h()Landroid/support/v7/app/e;
+00003  000c                     move-result-object
+00004  306e 1261 0210           invoke-virtual  # CALL Landroid/support/v7/app/e;->b(Landroid/view/View;,Landroid/view/ViewGroup$LayoutParams;)V
+00007  000e                     return-void
+
+### Landroid/support/v7/app/c;->setTheme(I)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0xc5d7c]
+00000  206f 072a 0010           invoke-super  # CALL Landroid/app/Activity;->setTheme(I)V
+00003  0159 0e88                iput  # FIELD Landroid/support/v7/app/c;->o:I
+00005  000e                     return-void

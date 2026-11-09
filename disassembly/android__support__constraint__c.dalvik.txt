@@ -1,0 +1,459 @@
+### Landroid/support/constraint/c;-><init>(Landroid/content/Context;)V  [access=0x10001, regs=3, ins=2, outs=2, code_off=0x82b14]
+00000  2070 1d3b 0021           invoke-direct  # CALL Landroid/view/View;-><init>(Landroid/content/Context;)V
+00003  0013 0020                const/16
+00005  0023 0724                new-array  # TYPE [I
+00007  105b 05cc                iput-object  # FIELD Landroid/support/constraint/c;->b:[I
+00009  0012                     const/4
+0000a  105c 05d0                iput-boolean  # FIELD Landroid/support/constraint/c;->f:Z
+0000c  0022 06d4                new-instance  # TYPE Ljava/util/HashMap;
+0000e  1070 2e29 0000           invoke-direct  # CALL Ljava/util/HashMap;-><init>()V
+00011  105b 05d3                iput-object  # FIELD Landroid/support/constraint/c;->i:Ljava/util/HashMap;
+00013  125b 05ce                iput-object  # FIELD Landroid/support/constraint/c;->d:Landroid/content/Context;
+00015  0212                     const/4
+00016  206e 0b6b 0021           invoke-virtual  # CALL Landroid/support/constraint/c;->a(Landroid/util/AttributeSet;)V
+00019  000e                     return-void
+
+### Landroid/support/constraint/c;->a(Landroid/support/constraint/ConstraintLayout;,Ljava/lang/String;)I  [access=0x2, regs=9, ins=3, outs=2, code_off=0x82998]
+00000  0012                     const/4
+00001  0838 0037                if-eqz
+00003  0739 0003                if-nez
+00005  3328                     goto
+00006  6654 05ce                iget-object  # FIELD Landroid/support/constraint/c;->d:Landroid/content/Context;
+00008  106e 0848 0006           invoke-virtual  # CALL Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+0000b  060c                     move-result-object
+0000c  0639 0003                if-nez
+0000e  000f                     return
+0000f  106e 1df6 0007           invoke-virtual  # CALL Landroid/view/ViewGroup;->getChildCount()I
+00012  010a                     move-result
+00013  0201                     op_01
+00014  1235 0024                if-ge
+00016  206e 1df5 0027           invoke-virtual  # CALL Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+00019  030c                     move-result-object
+0001a  106e 1d57 0003           invoke-virtual  # CALL Landroid/view/View;->getId()I
+0001d  040a                     move-result
+0001e  f512                     const/4
+0001f  5432 0016                if-eq
+00021  0412                     const/4
+00022  106e 1d57 0003           invoke-virtual  # CALL Landroid/view/View;->getId()I
+00025  050a                     move-result
+00026  206e 08d9 0056           invoke-virtual  # CALL Landroid/content/res/Resources;->getResourceEntryName(I)Ljava/lang/String;
+00029  040c                     move-result-object
+0002a  206e 2d03 0048           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+0002d  040a                     move-result
+0002e  0438 0007                if-eqz
+00030  106e 1d57 0003           invoke-virtual  # CALL Landroid/view/View;->getId()I
+00033  060a                     move-result
+00034  060f                     return
+00035  02d8 0102                op_d8
+00037  dd28                     goto
+00038  000f                     return
+
+### Landroid/support/constraint/c;->a(I)V  [access=0x2, regs=5, ins=2, outs=2, code_off=0x82c08]
+00000  106e 1d57 0003           invoke-virtual  # CALL Landroid/view/View;->getId()I
+00003  000a                     move-result
+00004  0433 0003                if-ne
+00006  000e                     return-void
+00007  3052 05cd                iget  # FIELD Landroid/support/constraint/c;->c:I
+00009  00d8 0100                op_d8
+0000b  3154 05cc                iget-object  # FIELD Landroid/support/constraint/c;->b:[I
+0000d  1221                     array-length
+0000e  2037 000b                if-le
+00010  1021                     array-length
+00011  00da 0200                op_da
+00013  2071 2dfe 0001           invoke-static  # CALL Ljava/util/Arrays;->copyOf([I,I)[I
+00016  000c                     move-result-object
+00017  305b 05cc                iput-object  # FIELD Landroid/support/constraint/c;->b:[I
+00019  3054 05cc                iget-object  # FIELD Landroid/support/constraint/c;->b:[I
+0001b  3152 05cd                iget  # FIELD Landroid/support/constraint/c;->c:I
+0001d  044b 0100                aput
+0001f  01d8 0101                op_d8
+00021  3159 05cd                iput  # FIELD Landroid/support/constraint/c;->c:I
+00023  000e                     return-void
+
+### Landroid/support/constraint/c;->a(Ljava/lang/String;)V  [access=0x2, regs=5, ins=2, outs=3, code_off=0x82b58]
+00000  0438 004e                if-eqz
+00002  106e 2d12 0004           invoke-virtual  # CALL Ljava/lang/String;->length()I
+00005  000a                     move-result
+00006  0039 0003                if-nez
+00008  4628                     goto
+00009  3054 05ce                iget-object  # FIELD Landroid/support/constraint/c;->d:Landroid/content/Context;
+0000b  0039 0003                if-nez
+0000d  000e                     return-void
+0000e  106e 2d20 0004           invoke-virtual  # CALL Ljava/lang/String;->trim()Ljava/lang/String;
+00011  040c                     move-result-object
+00012  106e 1d67 0003           invoke-virtual  # CALL Landroid/view/View;->getParent()Landroid/view/ViewParent;
+00015  000c                     move-result-object
+00016  0020 0211                instance-of  # TYPE Landroid/support/constraint/ConstraintLayout;
+00018  0038 0008                if-eqz
+0001a  106e 1d67 0003           invoke-virtual  # CALL Landroid/view/View;->getParent()Landroid/view/ViewParent;
+0001d  000c                     move-result-object
+0001e  001f 0211                check-cast  # TYPE Landroid/support/constraint/ConstraintLayout;
+00020  2070 0b70 0043           invoke-direct  # CALL Landroid/support/constraint/c;->c(Ljava/lang/String;)I
+00023  000a                     move-result
+00024  0038 000f                if-eqz
+00026  3154 05d3                iget-object  # FIELD Landroid/support/constraint/c;->i:Ljava/util/HashMap;
+00028  1071 2cae 0000           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+0002b  020c                     move-result-object
+0002c  306e 2e2f 0421           invoke-virtual  # CALL Ljava/util/HashMap;->put(Ljava/lang/Object;,Ljava/lang/Object;)Ljava/lang/Object;
+0002f  2070 0b68 0003           invoke-direct  # CALL Landroid/support/constraint/c;->a(I)V
+00032  1c28                     goto
+00033  0322 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00035  1070 2d35 0003           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00038  001a 06b5                const-string  # STR "Could not find id of \""
+0003a  206e 2d3f 0003           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0003d  206e 2d3f 0043           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00040  041a 00a7                const-string  # STR "\""
+00042  206e 2d3f 0043           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00045  106e 2d44 0003           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00048  030c                     move-result-object
+00049  041a 055c                const-string  # STR "ConstraintHelper"
+0004b  2071 1c61 0034           invoke-static  # CALL Landroid/util/Log;->w(Ljava/lang/String;,Ljava/lang/String;)I
+0004e  000e                     return-void
+
+### Landroid/support/constraint/c;->b(Ljava/lang/String;)V  [access=0x2, regs=9, ins=2, outs=2, code_off=0x82c60]
+00000  0838 007c                if-eqz
+00002  106e 2d12 0008           invoke-virtual  # CALL Ljava/lang/String;->length()I
+00005  000a                     move-result
+00006  0039 0004                if-nez
+00008  0029 0074                goto/16
+0000a  7054 05ce                iget-object  # FIELD Landroid/support/constraint/c;->d:Landroid/content/Context;
+0000c  0039 0003                if-nez
+0000e  000e                     return-void
+0000f  106e 2d20 0008           invoke-virtual  # CALL Ljava/lang/String;->trim()Ljava/lang/String;
+00012  080c                     move-result-object
+00013  0012                     const/4
+00014  106e 1d67 0007           invoke-virtual  # CALL Landroid/view/View;->getParent()Landroid/view/ViewParent;
+00017  010c                     move-result-object
+00018  1120 0211                instance-of  # TYPE Landroid/support/constraint/ConstraintLayout;
+0001a  0138 0008                if-eqz
+0001c  106e 1d67 0007           invoke-virtual  # CALL Landroid/view/View;->getParent()Landroid/view/ViewParent;
+0001f  000c                     move-result-object
+00020  001f 0211                check-cast  # TYPE Landroid/support/constraint/ConstraintLayout;
+00022  011a 055c                const-string  # STR "ConstraintHelper"
+00024  0039 0008                if-nez
+00026  071a 131e                const-string  # STR "Parent not a ConstraintLayout"
+00028  2071 1c61 0071           invoke-static  # CALL Landroid/util/Log;->w(Ljava/lang/String;,Ljava/lang/String;)I
+0002b  000e                     return-void
+0002c  106e 1df6 0000           invoke-virtual  # CALL Landroid/view/ViewGroup;->getChildCount()I
+0002f  020a                     move-result
+00030  0312                     const/4
+00031  2335 004b                if-ge
+00033  206e 1df5 0030           invoke-virtual  # CALL Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+00036  040c                     move-result-object
+00037  106e 1d5b 0004           invoke-virtual  # CALL Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+0003a  050c                     move-result-object
+0003b  5620 020f                instance-of  # TYPE Landroid/support/constraint/ConstraintLayout$b;
+0003d  0638 003c                if-eqz
+0003f  051f 020f                check-cast  # TYPE Landroid/support/constraint/ConstraintLayout$b;
+00041  5554 0570                iget-object  # FIELD Landroid/support/constraint/ConstraintLayout$b;->U:Ljava/lang/String;
+00043  206e 2d03 0058           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+00046  050a                     move-result
+00047  0538 0032                if-eqz
+00049  106e 1d57 0004           invoke-virtual  # CALL Landroid/view/View;->getId()I
+0004c  050a                     move-result
+0004d  f612                     const/4
+0004e  6533 0024                if-ne
+00050  0522 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00052  1070 2d35 0005           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00055  061a 27aa                const-string  # STR "to use ConstraintTag view "
+00057  206e 2d3f 0065           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0005a  106e 2ce3 0004           invoke-virtual  # CALL Ljava/lang/Object;->getClass()Ljava/lang/Class;
+0005d  040c                     move-result-object
+0005e  106e 2c81 0004           invoke-virtual  # CALL Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+00061  040c                     move-result-object
+00062  206e 2d3f 0045           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00065  041a 0083                const-string  # STR " must have an ID"
+00067  206e 2d3f 0045           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0006a  106e 2d44 0005           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0006d  040c                     move-result-object
+0006e  2071 1c61 0041           invoke-static  # CALL Landroid/util/Log;->w(Ljava/lang/String;,Ljava/lang/String;)I
+00071  0828                     goto
+00072  106e 1d57 0004           invoke-virtual  # CALL Landroid/view/View;->getId()I
+00075  040a                     move-result
+00076  2070 0b68 0047           invoke-direct  # CALL Landroid/support/constraint/c;->a(I)V
+00079  03d8 0103                op_d8
+0007b  b628                     goto
+0007c  000e                     return-void
+
+### Landroid/support/constraint/c;->c(Ljava/lang/String;)I  [access=0x2, regs=7, ins=2, outs=4, code_off=0x82a2c]
+00000  106e 1d67 0005           invoke-virtual  # CALL Landroid/view/View;->getParent()Landroid/view/ViewParent;
+00003  000c                     move-result-object
+00004  0020 0211                instance-of  # TYPE Landroid/support/constraint/ConstraintLayout;
+00006  0112                     const/4
+00007  0038 0009                if-eqz
+00009  106e 1d67 0005           invoke-virtual  # CALL Landroid/view/View;->getParent()Landroid/view/ViewParent;
+0000c  000c                     move-result-object
+0000d  001f 0211                check-cast  # TYPE Landroid/support/constraint/ConstraintLayout;
+0000f  0228                     goto
+00010  1007                     op_07
+00011  106e 1d88 0005           invoke-virtual  # CALL Landroid/view/View;->isInEditMode()Z
+00014  020a                     move-result
+00015  0312                     const/4
+00016  0238 0012                if-eqz
+00018  0038 0010                if-eqz
+0001a  306e 0b23 0630           invoke-virtual  # CALL Landroid/support/constraint/ConstraintLayout;->a(I,Ljava/lang/Object;)Ljava/lang/Object;
+0001d  020c                     move-result-object
+0001e  2420 066d                instance-of  # TYPE Ljava/lang/Integer;
+00020  0438 0008                if-eqz
+00022  021f 066d                check-cast  # TYPE Ljava/lang/Integer;
+00024  106e 2ca6 0002           invoke-virtual  # CALL Ljava/lang/Integer;->intValue()I
+00027  030a                     move-result
+00028  0339 0008                if-nez
+0002a  0038 0006                if-eqz
+0002c  3070 0b66 0605           invoke-direct  # CALL Landroid/support/constraint/c;->a(Landroid/support/constraint/ConstraintLayout;,Ljava/lang/String;)I
+0002f  030a                     move-result
+00030  0339 000c                if-nez
+00032  001c 0225                const-class  # TYPE Landroid/support/constraint/j;
+00034  206e 2c7c 0060           invoke-virtual  # CALL Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+00037  000c                     move-result-object
+00038  206e 2d71 0010           invoke-virtual  # CALL Ljava/lang/reflect/Field;->getInt(Ljava/lang/Object;)I
+0003b  030a                     move-result
+0003c  0339 0014                if-nez
+0003e  5054 05ce                iget-object  # FIELD Landroid/support/constraint/c;->d:Landroid/content/Context;
+00040  106e 0848 0000           invoke-virtual  # CALL Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+00043  000c                     move-result-object
+00044  5554 05ce                iget-object  # FIELD Landroid/support/constraint/c;->d:Landroid/content/Context;
+00046  106e 0847 0005           invoke-virtual  # CALL Landroid/content/Context;->getPackageName()Ljava/lang/String;
+00049  050c                     move-result-object
+0004a  011a 1fa2                const-string  # STR "id"
+0004c  406e 08d1 5160           invoke-virtual  # CALL Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;,Ljava/lang/String;,Ljava/lang/String;)I
+0004f  030a                     move-result
+00050  030f                     return
+
+### Landroid/support/constraint/c;->a()V  [access=0x4, regs=3, ins=1, outs=2, code_off=0x82d6c]
+00000  106e 1d67 0002           invoke-virtual  # CALL Landroid/view/View;->getParent()Landroid/view/ViewParent;
+00003  000c                     move-result-object
+00004  0038 000b                if-eqz
+00006  0120 0211                instance-of  # TYPE Landroid/support/constraint/ConstraintLayout;
+00008  0138 0007                if-eqz
+0000a  001f 0211                check-cast  # TYPE Landroid/support/constraint/ConstraintLayout;
+0000c  206e 0b69 0002           invoke-virtual  # CALL Landroid/support/constraint/c;->a(Landroid/support/constraint/ConstraintLayout;)V
+0000f  000e                     return-void
+
+### Landroid/support/constraint/c;->a(Landroid/support/constraint/ConstraintLayout;)V  [access=0x4, regs=9, ins=2, outs=2, code_off=0x82d9c]
+00000  106e 1d7c 0007           invoke-virtual  # CALL Landroid/view/View;->getVisibility()I
+00003  000a                     move-result
+00004  0160 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00006  0213 0015                const/16
+00008  0312                     const/4
+00009  2134 0007                if-lt
+0000b  106e 1d54 0007           invoke-virtual  # CALL Landroid/view/View;->getElevation()F
+0000e  010a                     move-result
+0000f  0228                     goto
+00010  3101                     op_01
+00011  0412                     const/4
+00012  7552 05cd                iget  # FIELD Landroid/support/constraint/c;->c:I
+00014  5435 0022                if-ge
+00016  7554 05cc                iget-object  # FIELD Landroid/support/constraint/c;->b:[I
+00018  0544 0405                aget
+0001a  206e 0b22 0058           invoke-virtual  # CALL Landroid/support/constraint/ConstraintLayout;->a(I)Landroid/view/View;
+0001d  050c                     move-result-object
+0001e  0538 0015                if-eqz
+00020  206e 1dcb 0005           invoke-virtual  # CALL Landroid/view/View;->setVisibility(I)V
+00023  062d 0301                op_2d
+00025  063d 000e                if-lez
+00027  0660 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00029  2634 000a                if-lt
+0002b  106e 1d7a 0005           invoke-virtual  # CALL Landroid/view/View;->getTranslationZ()F
+0002e  060a                     move-result
+0002f  16c6                     op_c6
+00030  206e 1dca 0065           invoke-virtual  # CALL Landroid/view/View;->setTranslationZ(F)V
+00033  04d8 0104                op_d8
+00035  dd28                     goto
+00036  000e                     return-void
+
+### Landroid/support/constraint/c;->a(Landroid/support/constraint/n/k/e;,Z)V  [access=0x1, regs=3, ins=3, outs=0, code_off=0x82f14]
+00000  000e                     return-void
+
+### Landroid/support/constraint/c;->a(Landroid/util/AttributeSet;)V  [access=0x4, regs=6, ins=2, outs=3, code_off=0x82e1c]
+00000  0538 0038                if-eqz
+00002  106e 1d51 0004           invoke-virtual  # CALL Landroid/view/View;->getContext()Landroid/content/Context;
+00005  000c                     move-result-object
+00006  0162 07e8                sget-object  # FIELD Landroid/support/constraint/k;->ConstraintLayout_Layout:[I
+00008  306e 0851 0150           invoke-virtual  # CALL Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;,[I)Landroid/content/res/TypedArray;
+0000b  050c                     move-result-object
+0000c  106e 08fb 0005           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getIndexCount()I
+0000f  000a                     move-result
+00010  0112                     const/4
+00011  0135 0024                if-ge
+00013  206e 08fa 0015           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getIndex(I)I
+00016  020a                     move-result
+00017  0360 07fc                sget  # FIELD Landroid/support/constraint/k;->ConstraintLayout_Layout_constraint_referenced_ids:I
+00019  3233 000c                if-ne
+0001b  206e 0902 0025           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
+0001e  020c                     move-result-object
+0001f  425b 05d1                iput-object  # FIELD Landroid/support/constraint/c;->g:Ljava/lang/String;
+00021  206e 0b78 0024           invoke-virtual  # CALL Landroid/support/constraint/c;->setIds(Ljava/lang/String;)V
+00024  0e28                     goto
+00025  0360 07fd                sget  # FIELD Landroid/support/constraint/k;->ConstraintLayout_Layout_constraint_referenced_tags:I
+00027  3233 000b                if-ne
+00029  206e 0902 0025           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
+0002c  020c                     move-result-object
+0002d  425b 05d2                iput-object  # FIELD Landroid/support/constraint/c;->h:Ljava/lang/String;
+0002f  206e 0b79 0024           invoke-virtual  # CALL Landroid/support/constraint/c;->setReferenceTags(Ljava/lang/String;)V
+00032  01d8 0101                op_d8
+00034  dd28                     goto
+00035  106e 090a 0005           invoke-virtual  # CALL Landroid/content/res/TypedArray;->recycle()V
+00038  000e                     return-void
+
+### Landroid/support/constraint/c;->b()V  [access=0x1, regs=3, ins=1, outs=1, code_off=0x8313c]
+00000  2054 05cf                iget-object  # FIELD Landroid/support/constraint/c;->e:Landroid/support/constraint/n/k/h;
+00002  0039 0003                if-nez
+00004  000e                     return-void
+00005  106e 1d5b 0002           invoke-virtual  # CALL Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+00008  000c                     move-result-object
+00009  0120 020f                instance-of  # TYPE Landroid/support/constraint/ConstraintLayout$b;
+0000b  0138 000a                if-eqz
+0000d  001f 020f                check-cast  # TYPE Landroid/support/constraint/ConstraintLayout$b;
+0000f  2254 05cf                iget-object  # FIELD Landroid/support/constraint/c;->e:Landroid/support/constraint/n/k/h;
+00011  021f 0242                check-cast  # TYPE Landroid/support/constraint/n/k/e;
+00013  025b 058f                iput-object  # FIELD Landroid/support/constraint/ConstraintLayout$b;->m0:Landroid/support/constraint/n/k/e;
+00015  000e                     return-void
+
+### Landroid/support/constraint/c;->b(Landroid/support/constraint/ConstraintLayout;)V  [access=0x1, regs=2, ins=2, outs=0, code_off=0x83038]
+00000  000e                     return-void
+
+### Landroid/support/constraint/c;->c(Landroid/support/constraint/ConstraintLayout;)V  [access=0x1, regs=2, ins=2, outs=0, code_off=0x8304c]
+00000  000e                     return-void
+
+### Landroid/support/constraint/c;->d(Landroid/support/constraint/ConstraintLayout;)V  [access=0x1, regs=2, ins=2, outs=0, code_off=0x83060]
+00000  000e                     return-void
+
+### Landroid/support/constraint/c;->e(Landroid/support/constraint/ConstraintLayout;)V  [access=0x1, regs=7, ins=2, outs=3, code_off=0x83074]
+00000  106e 1d88 0005           invoke-virtual  # CALL Landroid/view/View;->isInEditMode()Z
+00003  000a                     move-result
+00004  0038 0007                if-eqz
+00006  5054 05d1                iget-object  # FIELD Landroid/support/constraint/c;->g:Ljava/lang/String;
+00008  206e 0b78 0005           invoke-virtual  # CALL Landroid/support/constraint/c;->setIds(Ljava/lang/String;)V
+0000b  5054 05cf                iget-object  # FIELD Landroid/support/constraint/c;->e:Landroid/support/constraint/n/k/h;
+0000d  0039 0003                if-nez
+0000f  000e                     return-void
+00010  1072 0d44 0000           invoke-interface  # CALL Landroid/support/constraint/n/k/h;->a()V
+00013  0012                     const/4
+00014  5152 05cd                iget  # FIELD Landroid/support/constraint/c;->c:I
+00016  1035 003d                if-ge
+00018  5154 05cc                iget-object  # FIELD Landroid/support/constraint/c;->b:[I
+0001a  0144 0001                aget
+0001c  206e 0b22 0016           invoke-virtual  # CALL Landroid/support/constraint/ConstraintLayout;->a(I)Landroid/view/View;
+0001f  020c                     move-result-object
+00020  0239 0025                if-nez
+00022  5354 05d3                iget-object  # FIELD Landroid/support/constraint/c;->i:Ljava/util/HashMap;
+00024  1071 2cae 0001           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+00027  010c                     move-result-object
+00028  206e 2e2d 0013           invoke-virtual  # CALL Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+0002b  010c                     move-result-object
+0002c  011f 0683                check-cast  # TYPE Ljava/lang/String;
+0002e  3070 0b66 0165           invoke-direct  # CALL Landroid/support/constraint/c;->a(Landroid/support/constraint/ConstraintLayout;,Ljava/lang/String;)I
+00031  030a                     move-result
+00032  0338 0013                if-eqz
+00034  5254 05cc                iget-object  # FIELD Landroid/support/constraint/c;->b:[I
+00036  034b 0002                aput
+00038  5254 05d3                iget-object  # FIELD Landroid/support/constraint/c;->i:Ljava/util/HashMap;
+0003a  1071 2cae 0003           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+0003d  040c                     move-result-object
+0003e  306e 2e2f 0142           invoke-virtual  # CALL Ljava/util/HashMap;->put(Ljava/lang/Object;,Ljava/lang/Object;)Ljava/lang/Object;
+00041  206e 0b22 0036           invoke-virtual  # CALL Landroid/support/constraint/ConstraintLayout;->a(I)Landroid/view/View;
+00044  020c                     move-result-object
+00045  0238 000b                if-eqz
+00047  5154 05cf                iget-object  # FIELD Landroid/support/constraint/c;->e:Landroid/support/constraint/n/k/h;
+00049  206e 0b21 0026           invoke-virtual  # CALL Landroid/support/constraint/ConstraintLayout;->a(Landroid/view/View;)Landroid/support/constraint/n/k/e;
+0004c  020c                     move-result-object
+0004d  2072 0d45 0021           invoke-interface  # CALL Landroid/support/constraint/n/k/h;->a(Landroid/support/constraint/n/k/e;)V
+00050  00d8 0100                op_d8
+00052  c228                     goto
+00053  5554 05cf                iget-object  # FIELD Landroid/support/constraint/c;->e:Landroid/support/constraint/n/k/h;
+00055  6654 05a8                iget-object  # FIELD Landroid/support/constraint/ConstraintLayout;->d:Landroid/support/constraint/n/k/f;
+00057  2072 0d46 0065           invoke-interface  # CALL Landroid/support/constraint/n/k/h;->a(Landroid/support/constraint/n/k/f;)V
+0005a  000e                     return-void
+
+### Landroid/support/constraint/c;->getReferencedIds()[I  [access=0x1, regs=2, ins=1, outs=2, code_off=0x82af0]
+00000  1054 05cc                iget-object  # FIELD Landroid/support/constraint/c;->b:[I
+00002  1152 05cd                iget  # FIELD Landroid/support/constraint/c;->c:I
+00004  2071 2dfe 0010           invoke-static  # CALL Ljava/util/Arrays;->copyOf([I,I)[I
+00007  010c                     move-result-object
+00008  0111                     return-object
+
+### Landroid/support/constraint/c;->onAttachedToWindow()V  [access=0x4, regs=2, ins=1, outs=2, code_off=0x82ea0]
+00000  106f 1d92 0001           invoke-super  # CALL Landroid/view/View;->onAttachedToWindow()V
+00003  1054 05d1                iget-object  # FIELD Landroid/support/constraint/c;->g:Ljava/lang/String;
+00005  0038 0005                if-eqz
+00007  206e 0b78 0001           invoke-virtual  # CALL Landroid/support/constraint/c;->setIds(Ljava/lang/String;)V
+0000a  1054 05d2                iget-object  # FIELD Landroid/support/constraint/c;->h:Ljava/lang/String;
+0000c  0038 0005                if-eqz
+0000e  206e 0b79 0001           invoke-virtual  # CALL Landroid/support/constraint/c;->setReferenceTags(Ljava/lang/String;)V
+00011  000e                     return-void
+
+### Landroid/support/constraint/c;->onDraw(Landroid/graphics/Canvas;)V  [access=0x1, regs=2, ins=2, outs=0, code_off=0x82ed4]
+00000  000e                     return-void
+
+### Landroid/support/constraint/c;->onMeasure(I,I)V  [access=0x4, regs=4, ins=3, outs=3, code_off=0x82ee8]
+00000  1055 05d0                iget-boolean  # FIELD Landroid/support/constraint/c;->f:Z
+00002  0038 0006                if-eqz
+00004  306f 1d94 0321           invoke-super  # CALL Landroid/view/View;->onMeasure(I,I)V
+00007  0528                     goto
+00008  0212                     const/4
+00009  306e 1db3 0221           invoke-virtual  # CALL Landroid/view/View;->setMeasuredDimension(I,I)V
+0000c  000e                     return-void
+
+### Landroid/support/constraint/c;->setIds(Ljava/lang/String;)V  [access=0x4, regs=5, ins=2, outs=3, code_off=0x82f28]
+00000  345b 05d1                iput-object  # FIELD Landroid/support/constraint/c;->g:Ljava/lang/String;
+00002  0439 0003                if-nez
+00004  000e                     return-void
+00005  0012                     const/4
+00006  3059 05cd                iput  # FIELD Landroid/support/constraint/c;->c:I
+00008  0113 002c                const/16
+0000a  306e 2d0c 0014           invoke-virtual  # CALL Ljava/lang/String;->indexOf(I,I)I
+0000d  010a                     move-result
+0000e  f212                     const/4
+0000f  2133 000a                if-ne
+00011  206e 2d19 0004           invoke-virtual  # CALL Ljava/lang/String;->substring(I)Ljava/lang/String;
+00014  040c                     move-result-object
+00015  2070 0b6c 0043           invoke-direct  # CALL Landroid/support/constraint/c;->a(Ljava/lang/String;)V
+00018  000e                     return-void
+00019  306e 2d1a 0104           invoke-virtual  # CALL Ljava/lang/String;->substring(I,I)Ljava/lang/String;
+0001c  000c                     move-result-object
+0001d  2070 0b6c 0003           invoke-direct  # CALL Landroid/support/constraint/c;->a(Ljava/lang/String;)V
+00020  00d8 0101                op_d8
+00022  e628                     goto
+
+### Landroid/support/constraint/c;->setReferenceTags(Ljava/lang/String;)V  [access=0x4, regs=5, ins=2, outs=3, code_off=0x82f80]
+00000  345b 05d2                iput-object  # FIELD Landroid/support/constraint/c;->h:Ljava/lang/String;
+00002  0439 0003                if-nez
+00004  000e                     return-void
+00005  0012                     const/4
+00006  3059 05cd                iput  # FIELD Landroid/support/constraint/c;->c:I
+00008  0113 002c                const/16
+0000a  306e 2d0c 0014           invoke-virtual  # CALL Ljava/lang/String;->indexOf(I,I)I
+0000d  010a                     move-result
+0000e  f212                     const/4
+0000f  2133 000a                if-ne
+00011  206e 2d19 0004           invoke-virtual  # CALL Ljava/lang/String;->substring(I)Ljava/lang/String;
+00014  040c                     move-result-object
+00015  2070 0b6f 0043           invoke-direct  # CALL Landroid/support/constraint/c;->b(Ljava/lang/String;)V
+00018  000e                     return-void
+00019  306e 2d1a 0104           invoke-virtual  # CALL Ljava/lang/String;->substring(I,I)Ljava/lang/String;
+0001c  000c                     move-result-object
+0001d  2070 0b6f 0003           invoke-direct  # CALL Landroid/support/constraint/c;->b(Ljava/lang/String;)V
+00020  00d8 0101                op_d8
+00022  e628                     goto
+
+### Landroid/support/constraint/c;->setReferencedIds([I)V  [access=0x1, regs=4, ins=2, outs=2, code_off=0x82fd8]
+00000  0012                     const/4
+00001  205b 05d1                iput-object  # FIELD Landroid/support/constraint/c;->g:Ljava/lang/String;
+00003  0012                     const/4
+00004  2059 05cd                iput  # FIELD Landroid/support/constraint/c;->c:I
+00006  3121                     array-length
+00007  1035 000a                if-ge
+00009  0144 0003                aget
+0000b  2070 0b68 0012           invoke-direct  # CALL Landroid/support/constraint/c;->a(I)V
+0000e  00d8 0100                op_d8
+00010  f628                     goto
+00011  000e                     return-void
+
+### Landroid/support/constraint/c;->setTag(I,Ljava/lang/Object;)V  [access=0x1, regs=3, ins=3, outs=3, code_off=0x8300c]
+00000  306f 1dc4 0210           invoke-super  # CALL Landroid/view/View;->setTag(I,Ljava/lang/Object;)V
+00003  0239 0009                if-nez
+00005  0254 05d1                iget-object  # FIELD Landroid/support/constraint/c;->g:Ljava/lang/String;
+00007  0239 0005                if-nez
+00009  2070 0b68 0010           invoke-direct  # CALL Landroid/support/constraint/c;->a(I)V
+0000c  000e                     return-void

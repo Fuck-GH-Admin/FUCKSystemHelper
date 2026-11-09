@@ -1,0 +1,253 @@
+### Lcom/baidu/location/Jni;-><clinit>()V  [access=0x10009, regs=1, ins=0, outs=1, code_off=0x1036a4]
+00000  001a 20d6                const-string  # STR "locSDK8b"
+00002  1071 2d48 0000           invoke-static  # CALL Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
+00005  0828                     goto
+00006  000d                     op_0d
+00007  106e 2d64 0000           invoke-virtual  # CALL Ljava/lang/UnsatisfiedLinkError;->printStackTrace()V
+0000a  1012                     const/4
+0000b  006a 1bff                sput-boolean  # FIELD Lcom/baidu/location/Jni;->i:Z
+0000d  000e                     return-void
+
+### Lcom/baidu/location/Jni;->a(F,D,D)D  [access=0x9, regs=8, ins=5, outs=5, code_off=0x103210]
+00000  0063 1bff                sget-boolean  # FIELD Lcom/baidu/location/Jni;->i:Z
+00002  0116 0000                const-wide/16
+00004  0038 0003                if-eqz
+00006  0110                     return-wide
+00007  5771 29ce 6543           invoke-static  # CALL Lcom/baidu/location/Jni;->gsr(F,D,D)D
+0000a  010b                     move-result-wide
+0000b  0110                     return-wide
+
+### Lcom/baidu/location/Jni;->a()Ljava/lang/String;  [access=0x9, regs=2, ins=0, outs=1, code_off=0x103664]
+00000  0063 1bff                sget-boolean  # FIELD Lcom/baidu/location/Jni;->i:Z
+00002  0112                     const/4
+00003  0038 0003                if-eqz
+00005  0111                     return-object
+00006  0071 29cf 0000           invoke-static  # CALL Lcom/baidu/location/Jni;->ldkaiv()Ljava/lang/String;
+00009  010c                     move-result-object
+0000a  0528                     goto
+0000b  000d                     op_0d
+0000c  106e 2d64 0000           invoke-virtual  # CALL Ljava/lang/UnsatisfiedLinkError;->printStackTrace()V
+0000f  0111                     return-object
+
+### Lcom/baidu/location/Jni;->a(Ljava/lang/String;)Ljava/lang/String;  [access=0x9, regs=7, ins=1, outs=2, code_off=0x103404]
+00000  0063 1bff                sget-boolean  # FIELD Lcom/baidu/location/Jni;->i:Z
+00002  011a 1bbb                const-string  # STR "err!"
+00004  0038 0003                if-eqz
+00006  0111                     return-object
+00007  0639 0005                if-nez
+00009  061a 2204                const-string  # STR "null"
+0000b  0611                     return-object
+0000c  106e 2d07 0006           invoke-virtual  # CALL Ljava/lang/String;->getBytes()[B
+0000f  060c                     move-result-object
+00010  0060 1bfe                sget  # FIELD Lcom/baidu/location/Jni;->h:I
+00012  0023 0720                new-array  # TYPE [B
+00014  6221                     array-length
+00015  0313 02e4                const/16
+00017  3237 0003                if-le
+00019  3201                     op_01
+0001a  0312                     const/4
+0001b  3401                     op_01
+0001c  2335 000f                if-ge
+0001e  0548 0306                aget-byte
+00020  0538 0008                if-eqz
+00022  0548 0306                aget-byte
+00024  054f 0400                aput-byte
+00026  04d8 0104                op_d8
+00028  03d8 0103                op_d8
+0002a  f228                     goto
+0002b  0614 0568 0002           const
+0002e  2071 29c3 0060           invoke-static  # CALL Lcom/baidu/location/Jni;->a([B,I)Ljava/lang/String;
+00031  010c                     move-result-object
+00032  0528                     goto
+00033  060d                     op_0d
+00034  106e 2d64 0006           invoke-virtual  # CALL Ljava/lang/UnsatisfiedLinkError;->printStackTrace()V
+00037  0111                     return-object
+
+### Lcom/baidu/location/Jni;->a(D,D,Ljava/lang/String;)[D  [access=0x9, regs=13, ins=5, outs=6, code_off=0x103248]
+00000  2012                     const/4
+00001  0023 0722                new-array  # TYPE [D
+00003  0026 0089 0000           fill-array-data
+00006  0163 1bff                sget-boolean  # FIELD Lcom/baidu/location/Jni;->i:Z
+00008  0138 0003                if-eqz
+0000a  0011                     return-object
+0000b  f112                     const/4
+0000c  021a 19ba                const-string  # STR "bd09"
+0000e  206e 2d03 002c           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+00011  020a                     move-result
+00012  0238 0005                if-eqz
+00014  0160 1bf7                sget  # FIELD Lcom/baidu/location/Jni;->a:I
+00016  4228                     goto
+00017  021a 19bc                const-string  # STR "bd09ll"
+00019  206e 2d03 002c           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+0001c  020a                     move-result
+0001d  0238 0005                if-eqz
+0001f  0160 1bf8                sget  # FIELD Lcom/baidu/location/Jni;->b:I
+00021  3728                     goto
+00022  021a 1c2d                const-string  # STR "gcj02"
+00024  206e 2d03 002c           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+00027  020a                     move-result
+00028  0238 0005                if-eqz
+0002a  0160 1bf9                sget  # FIELD Lcom/baidu/location/Jni;->c:I
+0002c  2c28                     goto
+0002d  021a 1f0e                const-string  # STR "gps2gcj"
+0002f  206e 2d03 002c           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+00032  020a                     move-result
+00033  0238 0005                if-eqz
+00035  0160 1bfa                sget  # FIELD Lcom/baidu/location/Jni;->d:I
+00037  2128                     goto
+00038  021a 19bb                const-string  # STR "bd092gcj"
+0003a  206e 2d03 002c           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+0003d  020a                     move-result
+0003e  0238 0005                if-eqz
+00040  0160 1bfb                sget  # FIELD Lcom/baidu/location/Jni;->e:I
+00042  1628                     goto
+00043  021a 19bd                const-string  # STR "bd09ll2gcj"
+00045  206e 2d03 002c           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+00048  020a                     move-result
+00049  0238 0005                if-eqz
+0004b  0160 1bfc                sget  # FIELD Lcom/baidu/location/Jni;->f:I
+0004d  0b28                     goto
+0004e  021a 2880                const-string  # STR "wgs842mc"
+00050  206e 2d03 002c           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+00053  020a                     move-result
+00054  0238 0004                if-eqz
+00056  0160 1bfd                sget  # FIELD Lcom/baidu/location/Jni;->g:I
+00058  021a 1c2e                const-string  # STR "gcj2wgs"
+0005a  206e 2d03 002c           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+0005d  0c0a                     move-result
+0005e  0c38 0004                if-eqz
+00060  0113 0010                const/16
+00062  1601                     op_01
+00063  0714 0568 0002           const
+00066  1c12                     const/4
+00067  0112                     const/4
+00068  8204                     op_04
+00069  a404                     op_04
+0006a  0677 29c5 0002           invoke-static/range  # CALL Lcom/baidu/location/Jni;->b(D,D,I,I)Ljava/lang/String;
+0006d  080c                     move-result-object
+0006e  091a 0258                const-string  # STR ":"
+00070  206e 2d16 0098           invoke-virtual  # CALL Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+00073  080c                     move-result-object
+00074  0946 0108                aget-object
+00076  1071 2c89 0009           invoke-static  # CALL Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
+00079  090b                     move-result-wide
+0007a  094c 0100                aput-wide
+0007c  0846 0c08                aget-object
+0007e  1071 2c89 0008           invoke-static  # CALL Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
+00081  080b                     move-result-wide
+00082  084c 0c00                aput-wide
+00084  0728                     goto
+00085  0816 0000                const-wide/16
+00087  084c 0100                aput-wide
+00089  084c 0c00                aput-wide
+0008b  0011                     return-object
+0008c  0300 0008 0002 0000 0000 0000 0000 0000 0000 0000 0000 0000 ... <payload; units=12>
+
+### Lcom/baidu/location/Jni;->b(Ljava/lang/String;)Ljava/lang/String;  [access=0x9, regs=2, ins=1, outs=2, code_off=0x103494]
+00000  0063 1bff                sget-boolean  # FIELD Lcom/baidu/location/Jni;->i:Z
+00002  0038 0005                if-eqz
+00004  011a 1bbb                const-string  # STR "err!"
+00006  0111                     return-object
+00007  0022 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00009  1070 2d35 0000           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0000c  1071 29c2 0001           invoke-static  # CALL Lcom/baidu/location/Jni;->a(Ljava/lang/String;)Ljava/lang/String;
+0000f  010c                     move-result-object
+00010  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00013  011a 28dd                const-string  # STR "|tp=3"
+00015  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00018  106e 2d44 0000           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0001b  010c                     move-result-object
+0001c  0111                     return-object
+
+### Lcom/baidu/location/Jni;->c(Ljava/lang/String;)Ljava/lang/String;  [access=0x9, regs=3, ins=1, outs=2, code_off=0x1034e0]
+00000  0063 1bff                sget-boolean  # FIELD Lcom/baidu/location/Jni;->i:Z
+00002  011a 1bbb                const-string  # STR "err!"
+00004  0038 0003                if-eqz
+00006  0111                     return-object
+00007  0239 0005                if-nez
+00009  021a 2204                const-string  # STR "null"
+0000b  0211                     return-object
+0000c  106e 2d07 0002           invoke-virtual  # CALL Ljava/lang/String;->getBytes()[B
+0000f  020c                     move-result-object
+00010  0014 0568 0002           const
+00013  2071 29c8 0002           invoke-static  # CALL Lcom/baidu/location/Jni;->c([B,I)Ljava/lang/String;
+00016  010c                     move-result-object
+00017  0528                     goto
+00018  020d                     op_0d
+00019  106e 2d64 0002           invoke-virtual  # CALL Ljava/lang/UnsatisfiedLinkError;->printStackTrace()V
+0001c  0111                     return-object
+
+### Lcom/baidu/location/Jni;->d(Ljava/lang/String;)Ljava/lang/Long;  [access=0x9, regs=5, ins=1, outs=3, code_off=0x103394]
+00000  0063 1bff                sget-boolean  # FIELD Lcom/baidu/location/Jni;->i:Z
+00002  0112                     const/4
+00003  0038 0003                if-eqz
+00005  0111                     return-object
+00006  0022 0683                new-instance  # TYPE Ljava/lang/String;
+00008  106e 2d07 0004           invoke-virtual  # CALL Ljava/lang/String;->getBytes()[B
+0000b  040c                     move-result-object
+0000c  021a 154c                const-string  # STR "UTF-8"
+0000e  3070 2cfb 0240           invoke-direct  # CALL Ljava/lang/String;-><init>([B,Ljava/lang/String;)V
+00011  0328                     goto
+00012  001a 0000                const-string  # STR ""
+00014  1071 29d0 0000           invoke-static  # CALL Lcom/baidu/location/Jni;->murmur(Ljava/lang/String;)J
+00017  020b                     move-result-wide
+00018  2071 2cbb 0032           invoke-static  # CALL Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+0001b  010c                     move-result-object
+0001c  0528                     goto
+0001d  040d                     op_0d
+0001e  106e 2d64 0004           invoke-virtual  # CALL Ljava/lang/UnsatisfiedLinkError;->printStackTrace()V
+00021  0111                     return-object
+
+### Lcom/baidu/location/Jni;->e(Ljava/lang/String;)Ljava/lang/String;  [access=0x9, regs=4, ins=1, outs=3, code_off=0x10353c]
+00000  0063 1bff                sget-boolean  # FIELD Lcom/baidu/location/Jni;->i:Z
+00002  011a 1bbb                const-string  # STR "err!"
+00004  0038 0003                if-eqz
+00006  0111                     return-object
+00007  0022 0683                new-instance  # TYPE Ljava/lang/String;
+00009  106e 2d07 0003           invoke-virtual  # CALL Ljava/lang/String;->getBytes()[B
+0000c  030c                     move-result-object
+0000d  021a 154c                const-string  # STR "UTF-8"
+0000f  3070 2cfb 0230           invoke-direct  # CALL Ljava/lang/String;-><init>([B,Ljava/lang/String;)V
+00012  0328                     goto
+00013  001a 0000                const-string  # STR ""
+00015  0314 0568 0002           const
+00018  2071 29cc 0030           invoke-static  # CALL Lcom/baidu/location/Jni;->encodeNotLimit(Ljava/lang/String;,I)Ljava/lang/String;
+0001b  010c                     move-result-object
+0001c  0528                     goto
+0001d  030d                     op_0d
+0001e  106e 2d64 0003           invoke-virtual  # CALL Ljava/lang/UnsatisfiedLinkError;->printStackTrace()V
+00021  0322 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00023  1070 2d35 0003           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00026  206e 2d3f 0013           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00029  001a 28dd                const-string  # STR "|tp=3"
+0002b  206e 2d3f 0003           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0002e  106e 2d44 0003           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00031  030c                     move-result-object
+00032  0311                     return-object
+
+### Lcom/baidu/location/Jni;->f(Ljava/lang/String;)Ljava/lang/String;  [access=0x9, regs=4, ins=1, outs=3, code_off=0x1035d0]
+00000  0063 1bff                sget-boolean  # FIELD Lcom/baidu/location/Jni;->i:Z
+00002  011a 1bbb                const-string  # STR "err!"
+00004  0038 0003                if-eqz
+00006  0111                     return-object
+00007  0022 0683                new-instance  # TYPE Ljava/lang/String;
+00009  106e 2d07 0003           invoke-virtual  # CALL Ljava/lang/String;->getBytes()[B
+0000c  030c                     move-result-object
+0000d  021a 154c                const-string  # STR "UTF-8"
+0000f  3070 2cfb 0230           invoke-direct  # CALL Ljava/lang/String;-><init>([B,Ljava/lang/String;)V
+00012  0328                     goto
+00013  001a 0000                const-string  # STR ""
+00015  0314 0568 0002           const
+00018  2071 29cb 0030           invoke-static  # CALL Lcom/baidu/location/Jni;->ee(Ljava/lang/String;,I)Ljava/lang/String;
+0001b  010c                     move-result-object
+0001c  0528                     goto
+0001d  030d                     op_0d
+0001e  106e 2d64 0003           invoke-virtual  # CALL Ljava/lang/UnsatisfiedLinkError;->printStackTrace()V
+00021  0322 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00023  1070 2d35 0003           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00026  206e 2d3f 0013           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00029  001a 28de                const-string  # STR "|tp=4"
+0002b  206e 2d3f 0003           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0002e  106e 2d44 0003           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00031  030c                     move-result-object
+00032  0311                     return-object

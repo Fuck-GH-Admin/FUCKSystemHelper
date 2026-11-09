@@ -1,0 +1,164 @@
+### Lb/b/c/a/d/b;-><init>(Landroid/graphics/Shader;,Landroid/content/res/ColorStateList;,I)V  [access=0x10002, regs=4, ins=4, outs=1, code_off=0xb1500]
+00000  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  015b 1345                iput-object  # FIELD Lb/b/c/a/d/b;->a:Landroid/graphics/Shader;
+00005  025b 1346                iput-object  # FIELD Lb/b/c/a/d/b;->b:Landroid/content/res/ColorStateList;
+00007  0359 1347                iput  # FIELD Lb/b/c/a/d/b;->c:I
+00009  000e                     return-void
+
+### Lb/b/c/a/d/b;->a(Landroid/content/res/ColorStateList;)Lb/b/c/a/d/b;  [access=0x8, regs=4, ins=1, outs=4, code_off=0xb1378]
+00000  0022 04d7                new-instance  # TYPE Lb/b/c/a/d/b;
+00002  106e 08b3 0003           invoke-virtual  # CALL Landroid/content/res/ColorStateList;->getDefaultColor()I
+00005  010a                     move-result
+00006  0212                     const/4
+00007  4070 22ce 1320           invoke-direct  # CALL Lb/b/c/a/d/b;-><init>(Landroid/graphics/Shader;,Landroid/content/res/ColorStateList;,I)V
+0000a  0011                     return-object
+
+### Lb/b/c/a/d/b;->a(Landroid/content/res/Resources;,I,Landroid/content/res/Resources$Theme;)Lb/b/c/a/d/b;  [access=0xa, regs=9, ins=3, outs=4, code_off=0xb1278]
+00000  206e 08e7 0076           invoke-virtual  # CALL Landroid/content/res/Resources;->getXml(I)Landroid/content/res/XmlResourceParser;
+00003  070c                     move-result-object
+00004  1071 1c84 0007           invoke-static  # CALL Landroid/util/Xml;->asAttributeSet(Lorg/xmlpull/v1/XmlPullParser;)Landroid/util/AttributeSet;
+00007  000c                     move-result-object
+00008  1072 2f38 0007           invoke-interface  # CALL Lorg/xmlpull/v1/XmlPullParser;->next()I
+0000b  010a                     move-result
+0000c  2212                     const/4
+0000d  1312                     const/4
+0000e  2132 0005                if-eq
+00010  3132 0003                if-eq
+00012  f628                     goto
+00013  2133 005d                if-ne
+00015  1072 2f36 0007           invoke-interface  # CALL Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
+00018  010c                     move-result-object
+00019  f212                     const/4
+0001a  106e 2d0a 0001           invoke-virtual  # CALL Ljava/lang/String;->hashCode()I
+0001d  040a                     move-result
+0001e  0514 f730 0557           const
+00021  5432 0012                if-eq
+00023  0514 f3df 4705           const
+00026  5432 0003                if-eq
+00028  1428                     goto
+00029  041a 24e3                const-string  # STR "selector"
+0002b  206e 2d03 0041           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+0002e  040a                     move-result
+0002f  0438 000d                if-eqz
+00031  0212                     const/4
+00032  0a28                     goto
+00033  041a 1f18                const-string  # STR "gradient"
+00035  206e 2d03 0041           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+00038  040a                     move-result
+00039  0438 0003                if-eqz
+0003b  3201                     op_01
+0003c  0238 002b                if-eqz
+0003e  3233 000b                if-ne
+00040  4071 22f4 8076           invoke-static  # CALL Lb/b/c/a/d/d;->a(Landroid/content/res/Resources;,Lorg/xmlpull/v1/XmlPullParser;,Landroid/util/AttributeSet;,Landroid/content/res/Resources$Theme;)Landroid/graphics/Shader;
+00043  060c                     move-result-object
+00044  1071 22d2 0006           invoke-static  # CALL Lb/b/c/a/d/b;->a(Landroid/graphics/Shader;)Lb/b/c/a/d/b;
+00047  060c                     move-result-object
+00048  0611                     return-object
+00049  0622 071c                new-instance  # TYPE Lorg/xmlpull/v1/XmlPullParserException;
+0004b  0822 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0004d  1070 2d35 0008           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00050  1072 2f37 0007           invoke-interface  # CALL Lorg/xmlpull/v1/XmlPullParser;->getPositionDescription()Ljava/lang/String;
+00053  070c                     move-result-object
+00054  206e 2d3f 0078           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00057  071a 0267                const-string  # STR ": unsupported complex color tag "
+00059  206e 2d3f 0078           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0005c  206e 2d3f 0018           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0005f  106e 2d44 0008           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00062  070c                     move-result-object
+00063  2070 2f3a 0076           invoke-direct  # CALL Lorg/xmlpull/v1/XmlPullParserException;-><init>(Ljava/lang/String;)V
+00066  0627                     throw
+00067  4071 22cb 8076           invoke-static  # CALL Lb/b/c/a/d/a;->a(Landroid/content/res/Resources;,Lorg/xmlpull/v1/XmlPullParser;,Landroid/util/AttributeSet;,Landroid/content/res/Resources$Theme;)Landroid/content/res/ColorStateList;
+0006a  060c                     move-result-object
+0006b  1071 22d0 0006           invoke-static  # CALL Lb/b/c/a/d/b;->a(Landroid/content/res/ColorStateList;)Lb/b/c/a/d/b;
+0006e  060c                     move-result-object
+0006f  0611                     return-object
+00070  0622 071c                new-instance  # TYPE Lorg/xmlpull/v1/XmlPullParserException;
+00072  071a 129b                const-string  # STR "No start tag found"
+00074  2070 2f3a 0076           invoke-direct  # CALL Lorg/xmlpull/v1/XmlPullParserException;-><init>(Ljava/lang/String;)V
+00077  0627                     throw
+
+### Lb/b/c/a/d/b;->a(Landroid/graphics/Shader;)Lb/b/c/a/d/b;  [access=0x8, regs=4, ins=1, outs=4, code_off=0xb13a0]
+00000  0022 04d7                new-instance  # TYPE Lb/b/c/a/d/b;
+00002  0112                     const/4
+00003  0212                     const/4
+00004  4070 22ce 2130           invoke-direct  # CALL Lb/b/c/a/d/b;-><init>(Landroid/graphics/Shader;,Landroid/content/res/ColorStateList;,I)V
+00007  0011                     return-object
+
+### Lb/b/c/a/d/b;->b(I)Lb/b/c/a/d/b;  [access=0x8, regs=3, ins=1, outs=4, code_off=0xb13c0]
+00000  0022 04d7                new-instance  # TYPE Lb/b/c/a/d/b;
+00002  0112                     const/4
+00003  4070 22ce 2110           invoke-direct  # CALL Lb/b/c/a/d/b;-><init>(Landroid/graphics/Shader;,Landroid/content/res/ColorStateList;,I)V
+00006  0011                     return-object
+
+### Lb/b/c/a/d/b;->b(Landroid/content/res/Resources;,I,Landroid/content/res/Resources$Theme;)Lb/b/c/a/d/b;  [access=0x9, regs=3, ins=3, outs=3, code_off=0xb13e0]
+00000  3071 22d1 0210           invoke-static  # CALL Lb/b/c/a/d/b;->a(Landroid/content/res/Resources;,I,Landroid/content/res/Resources$Theme;)Lb/b/c/a/d/b;
+00003  000c                     move-result-object
+00004  0011                     return-object
+00005  000d                     op_0d
+00006  011a 0552                const-string  # STR "ComplexColorCompat"
+00008  021a 07b2                const-string  # STR "Failed to inflate ComplexColor."
+0000a  3071 1c5c 0021           invoke-static  # CALL Landroid/util/Log;->e(Ljava/lang/String;,Ljava/lang/String;,Ljava/lang/Throwable;)I
+0000d  0012                     const/4
+0000e  0011                     return-object
+
+### Lb/b/c/a/d/b;->a()I  [access=0x1, regs=1, ins=1, outs=0, code_off=0xb14e8]
+00000  0052 1347                iget  # FIELD Lb/b/c/a/d/b;->c:I
+00002  000f                     return
+
+### Lb/b/c/a/d/b;->a(I)V  [access=0x1, regs=2, ins=2, outs=0, code_off=0xb1524]
+00000  0159 1347                iput  # FIELD Lb/b/c/a/d/b;->c:I
+00002  000e                     return-void
+
+### Lb/b/c/a/d/b;->a([I)Z  [access=0x1, regs=4, ins=2, outs=3, code_off=0xb1474]
+00000  106e 22d9 0002           invoke-virtual  # CALL Lb/b/c/a/d/b;->d()Z
+00003  000a                     move-result
+00004  0038 0014                if-eqz
+00006  2054 1346                iget-object  # FIELD Lb/b/c/a/d/b;->b:Landroid/content/res/ColorStateList;
+00008  106e 08b3 0000           invoke-virtual  # CALL Landroid/content/res/ColorStateList;->getDefaultColor()I
+0000b  010a                     move-result
+0000c  306e 08b2 0130           invoke-virtual  # CALL Landroid/content/res/ColorStateList;->getColorForState([I,I)I
+0000f  030a                     move-result
+00010  2052 1347                iget  # FIELD Lb/b/c/a/d/b;->c:I
+00012  0332 0006                if-eq
+00014  1012                     const/4
+00015  2359 1347                iput  # FIELD Lb/b/c/a/d/b;->c:I
+00017  0228                     goto
+00018  0012                     const/4
+00019  000f                     return
+
+### Lb/b/c/a/d/b;->b()Landroid/graphics/Shader;  [access=0x1, regs=1, ins=1, outs=0, code_off=0xb1260]
+00000  0054 1345                iget-object  # FIELD Lb/b/c/a/d/b;->a:Landroid/graphics/Shader;
+00002  0011                     return-object
+
+### Lb/b/c/a/d/b;->c()Z  [access=0x1, regs=1, ins=1, outs=0, code_off=0xb1420]
+00000  0054 1345                iget-object  # FIELD Lb/b/c/a/d/b;->a:Landroid/graphics/Shader;
+00002  0038 0004                if-eqz
+00004  1012                     const/4
+00005  0228                     goto
+00006  0012                     const/4
+00007  000f                     return
+
+### Lb/b/c/a/d/b;->d()Z  [access=0x1, regs=2, ins=1, outs=1, code_off=0xb1440]
+00000  1054 1345                iget-object  # FIELD Lb/b/c/a/d/b;->a:Landroid/graphics/Shader;
+00002  0039 000e                if-nez
+00004  1154 1346                iget-object  # FIELD Lb/b/c/a/d/b;->b:Landroid/content/res/ColorStateList;
+00006  0138 000a                if-eqz
+00008  106e 08b4 0001           invoke-virtual  # CALL Landroid/content/res/ColorStateList;->isStateful()Z
+0000b  010a                     move-result
+0000c  0138 0004                if-eqz
+0000e  1112                     const/4
+0000f  0228                     goto
+00010  0112                     const/4
+00011  010f                     return
+
+### Lb/b/c/a/d/b;->e()Z  [access=0x1, regs=2, ins=1, outs=1, code_off=0xb14b8]
+00000  106e 22d8 0001           invoke-virtual  # CALL Lb/b/c/a/d/b;->c()Z
+00003  000a                     move-result
+00004  0039 0009                if-nez
+00006  1152 1347                iget  # FIELD Lb/b/c/a/d/b;->c:I
+00008  0138 0003                if-eqz
+0000a  0328                     goto
+0000b  0112                     const/4
+0000c  0228                     goto
+0000d  1112                     const/4
+0000e  010f                     return

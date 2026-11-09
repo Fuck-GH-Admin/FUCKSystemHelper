@@ -1,0 +1,19 @@
+### Lb/b/b/a/c$a;-><init>(Lb/b/b/a/c;)V  [access=0x10000, regs=2, ins=2, outs=1, code_off=0x9f368]
+00000  015b 12ef                iput-object  # FIELD Lb/b/b/a/c$a;->b:Lb/b/b/a/c;
+00002  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00005  000e                     return-void
+
+### Lb/b/b/a/c$a;->invalidateDrawable(Landroid/graphics/drawable/Drawable;)V  [access=0x1, regs=2, ins=2, outs=1, code_off=0x9f384]
+00000  0054 12ef                iget-object  # FIELD Lb/b/b/a/c$a;->b:Lb/b/b/a/c;
+00002  106e 09ec 0000           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+00005  000e                     return-void
+
+### Lb/b/b/a/c$a;->scheduleDrawable(Landroid/graphics/drawable/Drawable;,Ljava/lang/Runnable;,J)V  [access=0x1, regs=5, ins=5, outs=4, code_off=0x9f3a0]
+00000  0054 12ef                iget-object  # FIELD Lb/b/b/a/c$a;->b:Lb/b/b/a/c;
+00002  406e 09f4 4320           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->scheduleSelf(Ljava/lang/Runnable;,J)V
+00005  000e                     return-void
+
+### Lb/b/b/a/c$a;->unscheduleDrawable(Landroid/graphics/drawable/Drawable;,Ljava/lang/Runnable;)V  [access=0x1, regs=3, ins=3, outs=2, code_off=0x9f3bc]
+00000  0054 12ef                iget-object  # FIELD Lb/b/b/a/c$a;->b:Lb/b/b/a/c;
+00002  206e 0a08 0020           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->unscheduleSelf(Ljava/lang/Runnable;)V
+00005  000e                     return-void

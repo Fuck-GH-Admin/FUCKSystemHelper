@@ -1,0 +1,98 @@
+### Landroid/support/v7/view/menu/c;-><init>(Landroid/content/Context;,Ljava/lang/Object;)V  [access=0x10000, regs=3, ins=3, outs=2, code_off=0xd1e28]
+00000  2070 13e9 0020           invoke-direct  # CALL Landroid/support/v7/view/menu/d;-><init>(Ljava/lang/Object;)V
+00003  015b 0f5a                iput-object  # FIELD Landroid/support/v7/view/menu/c;->b:Landroid/content/Context;
+00005  000e                     return-void
+
+### Landroid/support/v7/view/menu/c;->a(Landroid/view/MenuItem;)Landroid/view/MenuItem;  [access=0x10, regs=4, ins=2, outs=3, code_off=0xd1d68]
+00000  3020 04f4                instance-of  # TYPE Lb/b/c/c/a/b;
+00002  0038 0025                if-eqz
+00004  3007                     op_07
+00005  001f 04f4                check-cast  # TYPE Lb/b/c/c/a/b;
+00007  2154 0f5b                iget-object  # FIELD Landroid/support/v7/view/menu/c;->c:Ljava/util/Map;
+00009  0139 0009                if-nez
+0000b  0122 0509                new-instance  # TYPE Lb/b/c/f/a;
+0000d  1070 23de 0001           invoke-direct  # CALL Lb/b/c/f/a;-><init>()V
+00010  215b 0f5b                iput-object  # FIELD Landroid/support/v7/view/menu/c;->c:Ljava/util/Map;
+00012  2154 0f5b                iget-object  # FIELD Landroid/support/v7/view/menu/c;->c:Ljava/util/Map;
+00014  2072 2e69 0031           invoke-interface  # CALL Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+00017  030c                     move-result-object
+00018  031f 0439                check-cast  # TYPE Landroid/view/MenuItem;
+0001a  0339 000d                if-nez
+0001c  2354 0f5a                iget-object  # FIELD Landroid/support/v7/view/menu/c;->b:Landroid/content/Context;
+0001e  2071 156c 0003           invoke-static  # CALL Landroid/support/v7/view/menu/q;->a(Landroid/content/Context;,Lb/b/c/c/a/b;)Landroid/view/MenuItem;
+00021  030c                     move-result-object
+00022  2254 0f5b                iget-object  # FIELD Landroid/support/v7/view/menu/c;->c:Ljava/util/Map;
+00024  3072 2e6b 0302           invoke-interface  # CALL Ljava/util/Map;->put(Ljava/lang/Object;,Ljava/lang/Object;)Ljava/lang/Object;
+00027  0311                     return-object
+
+### Landroid/support/v7/view/menu/c;->a(Landroid/view/SubMenu;)Landroid/view/SubMenu;  [access=0x10, regs=3, ins=2, outs=3, code_off=0xd1dc8]
+00000  2020 04f5                instance-of  # TYPE Lb/b/c/c/a/c;
+00002  0038 0025                if-eqz
+00004  021f 04f5                check-cast  # TYPE Lb/b/c/c/a/c;
+00006  1054 0f5c                iget-object  # FIELD Landroid/support/v7/view/menu/c;->d:Ljava/util/Map;
+00008  0039 0009                if-nez
+0000a  0022 0509                new-instance  # TYPE Lb/b/c/f/a;
+0000c  1070 23de 0000           invoke-direct  # CALL Lb/b/c/f/a;-><init>()V
+0000f  105b 0f5c                iput-object  # FIELD Landroid/support/v7/view/menu/c;->d:Ljava/util/Map;
+00011  1054 0f5c                iget-object  # FIELD Landroid/support/v7/view/menu/c;->d:Ljava/util/Map;
+00013  2072 2e69 0020           invoke-interface  # CALL Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+00016  000c                     move-result-object
+00017  001f 043c                check-cast  # TYPE Landroid/view/SubMenu;
+00019  0039 000d                if-nez
+0001b  1054 0f5a                iget-object  # FIELD Landroid/support/v7/view/menu/c;->b:Landroid/content/Context;
+0001d  2071 156d 0020           invoke-static  # CALL Landroid/support/v7/view/menu/q;->a(Landroid/content/Context;,Lb/b/c/c/a/c;)Landroid/view/SubMenu;
+00020  000c                     move-result-object
+00021  1154 0f5c                iget-object  # FIELD Landroid/support/v7/view/menu/c;->d:Ljava/util/Map;
+00023  3072 2e6b 0021           invoke-interface  # CALL Ljava/util/Map;->put(Ljava/lang/Object;,Ljava/lang/Object;)Ljava/lang/Object;
+00026  0011                     return-object
+00027  0211                     return-object
+
+### Landroid/support/v7/view/menu/c;->a(I)V  [access=0x10, regs=3, ins=2, outs=1, code_off=0xd1e74]
+00000  1154 0f5b                iget-object  # FIELD Landroid/support/v7/view/menu/c;->c:Ljava/util/Map;
+00002  0139 0003                if-nez
+00004  000e                     return-void
+00005  1072 2e6a 0001           invoke-interface  # CALL Ljava/util/Map;->keySet()Ljava/util/Set;
+00008  010c                     move-result-object
+00009  1072 2e7c 0001           invoke-interface  # CALL Ljava/util/Set;->iterator()Ljava/util/Iterator;
+0000c  010c                     move-result-object
+0000d  1072 2e43 0001           invoke-interface  # CALL Ljava/util/Iterator;->hasNext()Z
+00010  000a                     move-result
+00011  0038 0012                if-eqz
+00013  1072 2e44 0001           invoke-interface  # CALL Ljava/util/Iterator;->next()Ljava/lang/Object;
+00016  000c                     move-result-object
+00017  001f 0439                check-cast  # TYPE Landroid/view/MenuItem;
+00019  1072 1cde 0000           invoke-interface  # CALL Landroid/view/MenuItem;->getGroupId()I
+0001c  000a                     move-result
+0001d  0233 fff0                if-ne
+0001f  1072 2e45 0001           invoke-interface  # CALL Ljava/util/Iterator;->remove()V
+00022  eb28                     goto
+00023  000e                     return-void
+
+### Landroid/support/v7/view/menu/c;->b()V  [access=0x10, regs=2, ins=1, outs=1, code_off=0xd1e44]
+00000  1054 0f5b                iget-object  # FIELD Landroid/support/v7/view/menu/c;->c:Ljava/util/Map;
+00002  0038 0005                if-eqz
+00004  1072 2e66 0000           invoke-interface  # CALL Ljava/util/Map;->clear()V
+00007  1154 0f5c                iget-object  # FIELD Landroid/support/v7/view/menu/c;->d:Ljava/util/Map;
+00009  0138 0005                if-eqz
+0000b  1072 2e66 0001           invoke-interface  # CALL Ljava/util/Map;->clear()V
+0000e  000e                     return-void
+
+### Landroid/support/v7/view/menu/c;->b(I)V  [access=0x10, regs=3, ins=2, outs=1, code_off=0xd1ecc]
+00000  1154 0f5b                iget-object  # FIELD Landroid/support/v7/view/menu/c;->c:Ljava/util/Map;
+00002  0139 0003                if-nez
+00004  000e                     return-void
+00005  1072 2e6a 0001           invoke-interface  # CALL Ljava/util/Map;->keySet()Ljava/util/Set;
+00008  010c                     move-result-object
+00009  1072 2e7c 0001           invoke-interface  # CALL Ljava/util/Set;->iterator()Ljava/util/Iterator;
+0000c  010c                     move-result-object
+0000d  1072 2e43 0001           invoke-interface  # CALL Ljava/util/Iterator;->hasNext()Z
+00010  000a                     move-result
+00011  0038 0011                if-eqz
+00013  1072 2e44 0001           invoke-interface  # CALL Ljava/util/Iterator;->next()Ljava/lang/Object;
+00016  000c                     move-result-object
+00017  001f 0439                check-cast  # TYPE Landroid/view/MenuItem;
+00019  1072 1ce1 0000           invoke-interface  # CALL Landroid/view/MenuItem;->getItemId()I
+0001c  000a                     move-result
+0001d  0233 fff0                if-ne
+0001f  1072 2e45 0001           invoke-interface  # CALL Ljava/util/Iterator;->remove()V
+00022  000e                     return-void

@@ -1,0 +1,54 @@
+### Landroid/support/v4/app/CoreComponentFactory;-><init>()V  [access=0x10001, regs=1, ins=1, outs=1, code_off=0xa563c]
+00000  1070 0736 0000           invoke-direct  # CALL Landroid/app/AppComponentFactory;-><init>()V
+00003  000e                     return-void
+
+### Landroid/support/v4/app/CoreComponentFactory;->a(Ljava/lang/Object;)Ljava/lang/Object;  [access=0x8, regs=2, ins=1, outs=1, code_off=0xa560c]
+00000  1020 0263                instance-of  # TYPE Landroid/support/v4/app/CoreComponentFactory$a;
+00002  0038 000c                if-eqz
+00004  1007                     op_07
+00005  001f 0263                check-cast  # TYPE Landroid/support/v4/app/CoreComponentFactory$a;
+00007  1072 0de7 0000           invoke-interface  # CALL Landroid/support/v4/app/CoreComponentFactory$a;->a()Ljava/lang/Object;
+0000a  000c                     move-result-object
+0000b  0038 0003                if-eqz
+0000d  0011                     return-object
+0000e  0111                     return-object
+
+### Landroid/support/v4/app/CoreComponentFactory;->instantiateActivity(Ljava/lang/ClassLoader;,Ljava/lang/String;,Landroid/content/Intent;)Landroid/app/Activity;  [access=0x1, regs=4, ins=4, outs=4, code_off=0xa5544]
+00000  406f 0737 3210           invoke-super  # CALL Landroid/app/AppComponentFactory;->instantiateActivity(Ljava/lang/ClassLoader;,Ljava/lang/String;,Landroid/content/Intent;)Landroid/app/Activity;
+00003  000c                     move-result-object
+00004  1071 0de9 0000           invoke-static  # CALL Landroid/support/v4/app/CoreComponentFactory;->a(Ljava/lang/Object;)Ljava/lang/Object;
+00007  000c                     move-result-object
+00008  001f 011f                check-cast  # TYPE Landroid/app/Activity;
+0000a  0011                     return-object
+
+### Landroid/support/v4/app/CoreComponentFactory;->instantiateApplication(Ljava/lang/ClassLoader;,Ljava/lang/String;)Landroid/app/Application;  [access=0x1, regs=3, ins=3, outs=3, code_off=0xa556c]
+00000  306f 0738 0210           invoke-super  # CALL Landroid/app/AppComponentFactory;->instantiateApplication(Ljava/lang/ClassLoader;,Ljava/lang/String;)Landroid/app/Application;
+00003  000c                     move-result-object
+00004  1071 0de9 0000           invoke-static  # CALL Landroid/support/v4/app/CoreComponentFactory;->a(Ljava/lang/Object;)Ljava/lang/Object;
+00007  000c                     move-result-object
+00008  001f 0125                check-cast  # TYPE Landroid/app/Application;
+0000a  0011                     return-object
+
+### Landroid/support/v4/app/CoreComponentFactory;->instantiateProvider(Ljava/lang/ClassLoader;,Ljava/lang/String;)Landroid/content/ContentProvider;  [access=0x1, regs=3, ins=3, outs=3, code_off=0xa55e4]
+00000  306f 0739 0210           invoke-super  # CALL Landroid/app/AppComponentFactory;->instantiateProvider(Ljava/lang/ClassLoader;,Ljava/lang/String;)Landroid/content/ContentProvider;
+00003  000c                     move-result-object
+00004  1071 0de9 0000           invoke-static  # CALL Landroid/support/v4/app/CoreComponentFactory;->a(Ljava/lang/Object;)Ljava/lang/Object;
+00007  000c                     move-result-object
+00008  001f 016a                check-cast  # TYPE Landroid/content/ContentProvider;
+0000a  0011                     return-object
+
+### Landroid/support/v4/app/CoreComponentFactory;->instantiateReceiver(Ljava/lang/ClassLoader;,Ljava/lang/String;,Landroid/content/Intent;)Landroid/content/BroadcastReceiver;  [access=0x1, regs=4, ins=4, outs=4, code_off=0xa55bc]
+00000  406f 073a 3210           invoke-super  # CALL Landroid/app/AppComponentFactory;->instantiateReceiver(Ljava/lang/ClassLoader;,Ljava/lang/String;,Landroid/content/Intent;)Landroid/content/BroadcastReceiver;
+00003  000c                     move-result-object
+00004  1071 0de9 0000           invoke-static  # CALL Landroid/support/v4/app/CoreComponentFactory;->a(Ljava/lang/Object;)Ljava/lang/Object;
+00007  000c                     move-result-object
+00008  001f 0167                check-cast  # TYPE Landroid/content/BroadcastReceiver;
+0000a  0011                     return-object
+
+### Landroid/support/v4/app/CoreComponentFactory;->instantiateService(Ljava/lang/ClassLoader;,Ljava/lang/String;,Landroid/content/Intent;)Landroid/app/Service;  [access=0x1, regs=4, ins=4, outs=4, code_off=0xa5594]
+00000  406f 073b 3210           invoke-super  # CALL Landroid/app/AppComponentFactory;->instantiateService(Ljava/lang/ClassLoader;,Ljava/lang/String;,Landroid/content/Intent;)Landroid/app/Service;
+00003  000c                     move-result-object
+00004  1071 0de9 0000           invoke-static  # CALL Landroid/support/v4/app/CoreComponentFactory;->a(Ljava/lang/Object;)Ljava/lang/Object;
+00007  000c                     move-result-object
+00008  001f 012f                check-cast  # TYPE Landroid/app/Service;
+0000a  0011                     return-object

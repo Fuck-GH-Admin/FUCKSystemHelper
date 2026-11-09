@@ -1,0 +1,26 @@
+### Lcom/baidu/location/e;-><init>()V  [access=0x10001, regs=4, ins=1, outs=1, code_off=0x103190]
+00000  1070 2ce0 0003           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  0016 0001                const-wide/16
+00005  305a 1c58                iput-wide  # FIELD Lcom/baidu/location/e;->a:D
+00007  305a 1c59                iput-wide  # FIELD Lcom/baidu/location/e;->b:D
+00009  0212                     const/4
+0000a  3259 1c5a                iput  # FIELD Lcom/baidu/location/e;->c:F
+0000c  0212                     const/4
+0000d  325b 1c5b                iput-object  # FIELD Lcom/baidu/location/e;->d:Ljava/lang/String;
+0000f  305a 1c5c                iput-wide  # FIELD Lcom/baidu/location/e;->e:D
+00011  305a 1c5d                iput-wide  # FIELD Lcom/baidu/location/e;->f:D
+00013  0012                     const/4
+00014  3059 1c5e                iput  # FIELD Lcom/baidu/location/e;->g:I
+00016  000e                     return-void
+
+### Lcom/baidu/location/e;->a(Lcom/baidu/location/c;,F)V  [access=0x1, regs=3, ins=3, outs=2, code_off=0x1031d0]
+00000  0022 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00002  1070 2d35 0000           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00005  011a 21b2                const-string  # STR "new location, not far from the destination..."
+00007  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0000a  206e 2d3a 0020           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+0000d  106e 2d44 0000           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00010  000c                     move-result-object
+00011  011a 19b1                const-string  # STR "baidu_location_service"
+00013  2071 1c59 0001           invoke-static  # CALL Landroid/util/Log;->d(Ljava/lang/String;,Ljava/lang/String;)I
+00016  000e                     return-void

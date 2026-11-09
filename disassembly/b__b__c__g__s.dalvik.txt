@@ -1,0 +1,26 @@
+### Lb/b/c/g/s;->a(Landroid/view/ViewGroup;)Z  [access=0x9, regs=3, ins=1, outs=2, code_off=0xbd7b0]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0113 0015                const/16
+00004  1034 0007                if-lt
+00006  106e 1e17 0002           invoke-virtual  # CALL Landroid/view/ViewGroup;->isTransitionGroup()Z
+00009  020a                     move-result
+0000a  020f                     return
+0000b  0060 12b6                sget  # FIELD Lb/b/a/b;->tag_transition_group:I
+0000d  206e 1e0b 0002           invoke-virtual  # CALL Landroid/view/ViewGroup;->getTag(I)Ljava/lang/Object;
+00010  000c                     move-result-object
+00011  001f 0657                check-cast  # TYPE Ljava/lang/Boolean;
+00013  0038 0008                if-eqz
+00015  106e 2c65 0000           invoke-virtual  # CALL Ljava/lang/Boolean;->booleanValue()Z
+00018  000a                     move-result
+00019  0039 0011                if-nez
+0001b  106e 1df2 0002           invoke-virtual  # CALL Landroid/view/ViewGroup;->getBackground()Landroid/graphics/drawable/Drawable;
+0001e  000c                     move-result-object
+0001f  0039 000b                if-nez
+00021  1071 2541 0002           invoke-static  # CALL Lb/b/c/g/q;->f(Landroid/view/View;)Ljava/lang/String;
+00024  020c                     move-result-object
+00025  0238 0003                if-eqz
+00027  0328                     goto
+00028  0212                     const/4
+00029  0228                     goto
+0002a  1212                     const/4
+0002b  020f                     return

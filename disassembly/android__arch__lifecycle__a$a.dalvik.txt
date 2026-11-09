@@ -1,0 +1,61 @@
+### Landroid/arch/lifecycle/a$a;-><init>(Ljava/util/Map;)V  [access=0x10000, regs=6, ins=2, outs=3, code_off=0x7fa30]
+00000  1070 2ce0 0004           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  455b 04da                iput-object  # FIELD Landroid/arch/lifecycle/a$a;->b:Ljava/util/Map;
+00005  0022 06d4                new-instance  # TYPE Ljava/util/HashMap;
+00007  1070 2e29 0000           invoke-direct  # CALL Ljava/util/HashMap;-><init>()V
+0000a  405b 04d9                iput-object  # FIELD Landroid/arch/lifecycle/a$a;->a:Ljava/util/Map;
+0000c  1072 2e68 0005           invoke-interface  # CALL Ljava/util/Map;->entrySet()Ljava/util/Set;
+0000f  050c                     move-result-object
+00010  1072 2e7c 0005           invoke-interface  # CALL Ljava/util/Set;->iterator()Ljava/util/Iterator;
+00013  050c                     move-result-object
+00014  1072 2e43 0005           invoke-interface  # CALL Ljava/util/Iterator;->hasNext()Z
+00017  000a                     move-result
+00018  0038 002a                if-eqz
+0001a  1072 2e44 0005           invoke-interface  # CALL Ljava/util/Iterator;->next()Ljava/lang/Object;
+0001d  000c                     move-result-object
+0001e  001f 06dc                check-cast  # TYPE Ljava/util/Map$Entry;
+00020  1072 2e65 0000           invoke-interface  # CALL Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+00023  010c                     move-result-object
+00024  011f 0148                check-cast  # TYPE Landroid/arch/lifecycle/c$a;
+00026  4254 04d9                iget-object  # FIELD Landroid/arch/lifecycle/a$a;->a:Ljava/util/Map;
+00028  2072 2e69 0012           invoke-interface  # CALL Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+0002b  020c                     move-result-object
+0002c  021f 06da                check-cast  # TYPE Ljava/util/List;
+0002e  0239 000c                if-nez
+00030  0222 06c8                new-instance  # TYPE Ljava/util/ArrayList;
+00032  1070 2de7 0002           invoke-direct  # CALL Ljava/util/ArrayList;-><init>()V
+00035  4354 04d9                iget-object  # FIELD Landroid/arch/lifecycle/a$a;->a:Ljava/util/Map;
+00037  3072 2e6b 0213           invoke-interface  # CALL Ljava/util/Map;->put(Ljava/lang/Object;,Ljava/lang/Object;)Ljava/lang/Object;
+0003a  1072 2e64 0000           invoke-interface  # CALL Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+0003d  000c                     move-result-object
+0003e  2072 2e52 0002           invoke-interface  # CALL Ljava/util/List;->add(Ljava/lang/Object;)Z
+00041  d328                     goto
+00042  000e                     return-void
+
+### Landroid/arch/lifecycle/a$a;->a(Ljava/util/List;,Landroid/arch/lifecycle/e;,Landroid/arch/lifecycle/c$a;,Ljava/lang/Object;)V  [access=0xa, regs=6, ins=4, outs=4, code_off=0x7fb0c]
+00000  0238 0016                if-eqz
+00002  1072 2e5d 0002           invoke-interface  # CALL Ljava/util/List;->size()I
+00005  000a                     move-result
+00006  00d8 ff00                op_d8
+00008  003a 000e                if-ltz
+0000a  2072 2e57 0002           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+0000d  010c                     move-result-object
+0000e  011f 0145                check-cast  # TYPE Landroid/arch/lifecycle/a$b;
+00010  406e 07bf 5431           invoke-virtual  # CALL Landroid/arch/lifecycle/a$b;->a(Landroid/arch/lifecycle/e;,Landroid/arch/lifecycle/c$a;,Ljava/lang/Object;)V
+00013  00d8 ff00                op_d8
+00015  f328                     goto
+00016  000e                     return-void
+
+### Landroid/arch/lifecycle/a$a;->a(Landroid/arch/lifecycle/e;,Landroid/arch/lifecycle/c$a;,Ljava/lang/Object;)V  [access=0x0, regs=5, ins=4, outs=4, code_off=0x7fac8]
+00000  1054 04d9                iget-object  # FIELD Landroid/arch/lifecycle/a$a;->a:Ljava/util/Map;
+00002  2072 2e69 0030           invoke-interface  # CALL Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+00005  000c                     move-result-object
+00006  001f 06da                check-cast  # TYPE Ljava/util/List;
+00008  4071 07bd 4320           invoke-static  # CALL Landroid/arch/lifecycle/a$a;->a(Ljava/util/List;,Landroid/arch/lifecycle/e;,Landroid/arch/lifecycle/c$a;,Ljava/lang/Object;)V
+0000b  1154 04d9                iget-object  # FIELD Landroid/arch/lifecycle/a$a;->a:Ljava/util/Map;
+0000d  0062 04e1                sget-object  # FIELD Landroid/arch/lifecycle/c$a;->ON_ANY:Landroid/arch/lifecycle/c$a;
+0000f  2072 2e69 0001           invoke-interface  # CALL Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+00012  010c                     move-result-object
+00013  011f 06da                check-cast  # TYPE Ljava/util/List;
+00015  4071 07bd 4321           invoke-static  # CALL Landroid/arch/lifecycle/a$a;->a(Ljava/util/List;,Landroid/arch/lifecycle/e;,Landroid/arch/lifecycle/c$a;,Ljava/lang/Object;)V
+00018  000e                     return-void

@@ -1,0 +1,163 @@
+### La/a/a/f/f;-><clinit>()V  [access=0x10009, regs=5, ins=0, outs=3, code_off=0x6ae74]
+00000  0062 1d74                sget-object  # FIELD Ljava/util/Locale;->US:Ljava/util/Locale;
+00002  1112                     const/4
+00003  1223 075d                new-array  # TYPE [Ljava/lang/Object;
+00005  0313 0bb8                const/16
+00007  1071 2cae 0003           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+0000a  030c                     move-result-object
+0000b  0412                     const/4
+0000c  034d 0402                aput-object
+0000e  031a 06f4                const-string  # STR "DELETE FROM LOG WHERE timestamp NOT IN (SELECT timestamp FROM LOG ORDER BY timestamp DESC LIMIT %d);"
+00010  3071 2d06 0230           invoke-static  # CALL Ljava/lang/String;->format(Ljava/util/Locale;,Ljava/lang/String;,[Ljava/lang/Object;)Ljava/lang/String;
+00013  020c                     move-result-object
+00014  0269 0314                sput-object  # FIELD La/a/a/f/f;->d:Ljava/lang/String;
+00016  1123 075d                new-array  # TYPE [Ljava/lang/Object;
+00018  3212                     const/4
+00019  1071 2cae 0002           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+0001c  020c                     move-result-object
+0001d  024d 0401                aput-object
+0001f  021a 13b9                const-string  # STR "SELECT * FROM LOG ORDER BY timestamp DESC LIMIT %d;"
+00021  3071 2d06 0120           invoke-static  # CALL Ljava/lang/String;->format(Ljava/util/Locale;,Ljava/lang/String;,[Ljava/lang/Object;)Ljava/lang/String;
+00024  000c                     move-result-object
+00025  0069 0315                sput-object  # FIELD La/a/a/f/f;->e:Ljava/lang/String;
+00027  000e                     return-void
+
+### La/a/a/f/f;-><init>(Landroid/database/sqlite/SQLiteDatabase;)V  [access=0x10001, regs=3, ins=2, outs=3, code_off=0x6aed4]
+00000  1070 2ce0 0001           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  0012                     const/4
+00004  105b 0311                iput-object  # FIELD La/a/a/f/f;->a:Ljava/lang/String;
+00006  125b 0312                iput-object  # FIELD La/a/a/f/f;->b:Landroid/database/sqlite/SQLiteDatabase;
+00008  0022 00b4                new-instance  # TYPE La/a/a/f/f$a;
+0000a  3070 047d 0110           invoke-direct  # CALL La/a/a/f/f$a;-><init>(La/a/a/f/f;,La/a/a/f/f;)V
+0000d  105b 0313                iput-object  # FIELD La/a/a/f/f;->c:La/a/a/f/f$a;
+0000f  0238 000d                if-eqz
+00011  106e 0936 0002           invoke-virtual  # CALL Landroid/database/sqlite/SQLiteDatabase;->isOpen()Z
+00014  010a                     move-result
+00015  0138 0007                if-eqz
+00017  011a 050f                const-string  # STR "CREATE TABLE IF NOT EXISTS LOG(timestamp LONG PRIMARY KEY, log VARCHAR(4000))"
+00019  206e 0934 0012           invoke-virtual  # CALL Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+0001c  000e                     return-void
+
+### La/a/a/f/f;->a(La/a/a/f/f;)Ljava/lang/String;  [access=0x1009, regs=1, ins=1, outs=1, code_off=0x6ae58]
+00000  106e 0484 0000           invoke-virtual  # CALL La/a/a/f/f;->a()Ljava/lang/String;
+00003  000c                     move-result-object
+00004  0011                     return-object
+
+### La/a/a/f/f;->a(La/a/a/f/f;,Z)V  [access=0x1009, regs=2, ins=2, outs=2, code_off=0x6af30]
+00000  206e 0488 0010           invoke-virtual  # CALL La/a/a/f/f;->a(Z)V
+00003  000e                     return-void
+
+### La/a/a/f/f;->a()Ljava/lang/String;  [access=0x11, regs=8, ins=1, outs=3, code_off=0x6ad14]
+00000  0022 0718                new-instance  # TYPE Lorg/json/JSONArray;
+00002  1070 2f09 0000           invoke-direct  # CALL Lorg/json/JSONArray;-><init>()V
+00005  0122 071a                new-instance  # TYPE Lorg/json/JSONObject;
+00007  1070 2f13 0001           invoke-direct  # CALL Lorg/json/JSONObject;-><init>()V
+0000a  0212                     const/4
+0000b  7354 0312                iget-object  # FIELD La/a/a/f/f;->b:Landroid/database/sqlite/SQLiteDatabase;
+0000d  0462 0315                sget-object  # FIELD La/a/a/f/f;->e:Ljava/lang/String;
+0000f  306e 093b 0243           invoke-virtual  # CALL Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;,[Ljava/lang/String;)Landroid/database/Cursor;
+00012  030c                     move-result-object
+00013  0338 004c                if-eqz
+00015  1072 0917 0003           invoke-interface  # CALL Landroid/database/Cursor;->getCount()I
+00018  040a                     move-result
+00019  043d 0046                if-lez
+0001b  0422 0684                new-instance  # TYPE Ljava/lang/StringBuffer;
+0001d  1070 2d25 0004           invoke-direct  # CALL Ljava/lang/StringBuffer;-><init>()V
+00020  1072 0921 0003           invoke-interface  # CALL Landroid/database/Cursor;->moveToFirst()Z
+00023  1072 091f 0003           invoke-interface  # CALL Landroid/database/Cursor;->isAfterLast()Z
+00026  050a                     move-result
+00027  0539 0021                if-nez
+00029  1512                     const/4
+0002a  2072 091e 0053           invoke-interface  # CALL Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+0002d  050c                     move-result-object
+0002e  206e 2f0f 0050           invoke-virtual  # CALL Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
+00031  106e 2d31 0004           invoke-virtual  # CALL Ljava/lang/StringBuffer;->length()I
+00034  050a                     move-result
+00035  0538 0007                if-eqz
+00037  051a 01c9                const-string  # STR ","
+00039  206e 2d2e 0054           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+0003c  0512                     const/4
+0003d  2072 091c 0053           invoke-interface  # CALL Landroid/database/Cursor;->getLong(I)J
+00040  050b                     move-result-wide
+00041  306e 2d2c 0654           invoke-virtual  # CALL Ljava/lang/StringBuffer;->append(J)Ljava/lang/StringBuffer;
+00044  1072 0922 0003           invoke-interface  # CALL Landroid/database/Cursor;->moveToNext()Z
+00047  dc28                     goto
+00048  051a 222e                const-string  # STR "ofloc"
+0004a  306e 2f2b 0051           invoke-virtual  # CALL Lorg/json/JSONObject;->put(Ljava/lang/String;,Ljava/lang/Object;)Lorg/json/JSONObject;
+0004d  106e 2f2e 0001           invoke-virtual  # CALL Lorg/json/JSONObject;->toString()Ljava/lang/String;
+00050  000c                     move-result-object
+00051  0207                     op_07
+00052  106e 2d34 0004           invoke-virtual  # CALL Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+00055  000c                     move-result-object
+00056  705b 0311                iput-object  # FIELD La/a/a/f/f;->a:Ljava/lang/String;
+00058  0728                     goto
+00059  070d                     op_0d
+0005a  3207                     op_07
+0005b  0828                     goto
+0005c  2707                     op_07
+0005d  3207                     op_07
+0005e  0c28                     goto
+0005f  0338 0014                if-eqz
+00061  0d28                     goto
+00062  070d                     op_0d
+00063  0238 0005                if-eqz
+00065  1072 0914 0002           invoke-interface  # CALL Landroid/database/Cursor;->close()V
+00068  0727                     throw
+00069  2707                     op_07
+0006a  0238 0008                if-eqz
+0006c  2307                     op_07
+0006d  7207                     op_07
+0006e  1072 0914 0003           invoke-interface  # CALL Landroid/database/Cursor;->close()V
+00071  0228                     goto
+00072  7207                     op_07
+00073  0211                     return-object
+
+### La/a/a/f/f;->a(Ljava/lang/String;)V  [access=0x1, regs=6, ins=2, outs=3, code_off=0x6afb0]
+00000  1071 29ca 0005           invoke-static  # CALL Lcom/baidu/location/Jni;->e(Ljava/lang/String;)Ljava/lang/String;
+00003  050c                     move-result-object
+00004  0062 1d74                sget-object  # FIELD Ljava/util/Locale;->US:Ljava/util/Locale;
+00006  2112                     const/4
+00007  1123 075d                new-array  # TYPE [Ljava/lang/Object;
+00009  0071 2d46 0000           invoke-static  # CALL Ljava/lang/System;->currentTimeMillis()J
+0000c  020b                     move-result-wide
+0000d  2071 2cbb 0032           invoke-static  # CALL Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+00010  020c                     move-result-object
+00011  0312                     const/4
+00012  024d 0301                aput-object
+00014  1212                     const/4
+00015  054d 0201                aput-object
+00017  051a 088a                const-string  # STR "INSERT OR IGNORE INTO LOG VALUES (%d,\"%s\");"
+00019  3071 2d06 0150           invoke-static  # CALL Ljava/lang/String;->format(Ljava/util/Locale;,Ljava/lang/String;,[Ljava/lang/Object;)Ljava/lang/String;
+0001c  050c                     move-result-object
+0001d  4054 0312                iget-object  # FIELD La/a/a/f/f;->b:Landroid/database/sqlite/SQLiteDatabase;
+0001f  206e 0934 0050           invoke-virtual  # CALL Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+00022  4454 0312                iget-object  # FIELD La/a/a/f/f;->b:Landroid/database/sqlite/SQLiteDatabase;
+00024  0562 0314                sget-object  # FIELD La/a/a/f/f;->d:Ljava/lang/String;
+00026  206e 0934 0054           invoke-virtual  # CALL Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+00029  000e                     return-void
+
+### La/a/a/f/f;->a(Z)V  [access=0x11, regs=4, ins=2, outs=2, code_off=0x6af48]
+00000  0338 001f                if-eqz
+00002  2354 0311                iget-object  # FIELD La/a/a/f/f;->a:Ljava/lang/String;
+00004  0338 001b                if-eqz
+00006  1012                     const/4
+00007  0023 075d                new-array  # TYPE [Ljava/lang/Object;
+00009  0112                     const/4
+0000a  034d 0100                aput-object
+0000c  031a 06f5                const-string  # STR "DELETE FROM LOG WHERE timestamp in (%s);"
+0000e  2071 2d05 0003           invoke-static  # CALL Ljava/lang/String;->format(Ljava/lang/String;,[Ljava/lang/Object;)Ljava/lang/String;
+00011  030c                     move-result-object
+00012  2054 0311                iget-object  # FIELD La/a/a/f/f;->a:Ljava/lang/String;
+00014  106e 2d12 0000           invoke-virtual  # CALL Ljava/lang/String;->length()I
+00017  000a                     move-result
+00018  003d 0007                if-lez
+0001a  2054 0312                iget-object  # FIELD La/a/a/f/f;->b:Landroid/database/sqlite/SQLiteDatabase;
+0001c  206e 0934 0030           invoke-virtual  # CALL Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+0001f  0312                     const/4
+00020  235b 0311                iput-object  # FIELD La/a/a/f/f;->a:Ljava/lang/String;
+00022  000e                     return-void
+
+### La/a/a/f/f;->b()V  [access=0x1, regs=1, ins=1, outs=1, code_off=0x6b024]
+00000  0054 0313                iget-object  # FIELD La/a/a/f/f;->c:La/a/a/f/f$a;
+00002  1071 047f 0000           invoke-static  # CALL La/a/a/f/f$a;->a(La/a/a/f/f$a;)V
+00005  000e                     return-void

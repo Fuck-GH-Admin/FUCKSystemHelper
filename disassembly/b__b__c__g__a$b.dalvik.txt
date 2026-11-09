@@ -1,0 +1,39 @@
+### Lb/b/c/g/a$b;-><init>()V  [access=0x10000, regs=1, ins=1, outs=1, code_off=0xbbcd0]
+00000  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  000e                     return-void
+
+### Lb/b/c/g/a$b;->createFromParcel(Landroid/os/Parcel;)Lb/b/c/g/a;  [access=0x1, regs=3, ins=2, outs=3, code_off=0xbbc14]
+00000  0012                     const/4
+00001  306e 24b4 0021           invoke-virtual  # CALL Lb/b/c/g/a$b;->createFromParcel(Landroid/os/Parcel;,Ljava/lang/ClassLoader;)Lb/b/c/g/a;
+00004  010c                     move-result-object
+00005  0111                     return-object
+
+### Lb/b/c/g/a$b;->createFromParcel(Landroid/os/Parcel;,Ljava/lang/ClassLoader;)Lb/b/c/g/a;  [access=0x1, regs=3, ins=3, outs=2, code_off=0xbbc30]
+00000  206e 0ae7 0021           invoke-virtual  # CALL Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
+00003  000c                     move-result-object
+00004  0039 0005                if-nez
+00006  0062 13e4                sget-object  # FIELD Lb/b/c/g/a;->c:Lb/b/c/g/a;
+00008  0011                     return-object
+00009  0022 066a                new-instance  # TYPE Ljava/lang/IllegalStateException;
+0000b  011a 2745                const-string  # STR "superState must be null"
+0000d  2070 2ca3 0010           invoke-direct  # CALL Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+00010  0027                     throw
+
+### Lb/b/c/g/a$b;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;  [access=0x1041, regs=2, ins=2, outs=2, code_off=0xbbc7c]
+00000  206e 24b3 0010           invoke-virtual  # CALL Lb/b/c/g/a$b;->createFromParcel(Landroid/os/Parcel;)Lb/b/c/g/a;
+00003  000c                     move-result-object
+00004  0011                     return-object
+
+### Lb/b/c/g/a$b;->createFromParcel(Landroid/os/Parcel;,Ljava/lang/ClassLoader;)Ljava/lang/Object;  [access=0x1041, regs=3, ins=3, outs=3, code_off=0xbbc98]
+00000  306e 24b4 0210           invoke-virtual  # CALL Lb/b/c/g/a$b;->createFromParcel(Landroid/os/Parcel;,Ljava/lang/ClassLoader;)Lb/b/c/g/a;
+00003  000c                     move-result-object
+00004  0011                     return-object
+
+### Lb/b/c/g/a$b;->newArray(I)[Lb/b/c/g/a;  [access=0x1, regs=2, ins=2, outs=0, code_off=0xbbc64]
+00000  1023 0751                new-array  # TYPE [Lb/b/c/g/a;
+00002  0011                     return-object
+
+### Lb/b/c/g/a$b;->newArray(I)[Ljava/lang/Object;  [access=0x1041, regs=2, ins=2, outs=2, code_off=0xbbcb4]
+00000  206e 24b7 0010           invoke-virtual  # CALL Lb/b/c/g/a$b;->newArray(I)[Lb/b/c/g/a;
+00003  000c                     move-result-object
+00004  0011                     return-object

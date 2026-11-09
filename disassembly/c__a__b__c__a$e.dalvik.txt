@@ -1,0 +1,33 @@
+### Lc/a/b/c/a$e;-><init>(I,Lc/a/b/n$a;,Ljava/lang/Exception;)V  [access=0x10001, regs=4, ins=4, outs=1, code_off=0xf478c]
+00000  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  0159 1ad5                iput  # FIELD Lc/a/b/c/a$e;->b:I
+00005  025b 1ad4                iput-object  # FIELD Lc/a/b/c/a$e;->a:Lc/a/b/n$a;
+00007  000e                     return-void
+
+### Lc/a/b/c/a$e;->a(I)Lc/a/b/c/a$e;  [access=0x9, regs=3, ins=1, outs=4, code_off=0xf476c]
+00000  0022 0583                new-instance  # TYPE Lc/a/b/c/a$e;
+00002  0112                     const/4
+00003  4070 2755 1120           invoke-direct  # CALL Lc/a/b/c/a$e;-><init>(I,Lc/a/b/n$a;,Ljava/lang/Exception;)V
+00006  0011                     return-object
+
+### Lc/a/b/c/a$e;->a(Lc/a/b/n$a;)Lc/a/b/c/a$e;  [access=0x9, regs=4, ins=1, outs=4, code_off=0xf474c]
+00000  0022 0583                new-instance  # TYPE Lc/a/b/c/a$e;
+00002  0112                     const/4
+00003  0212                     const/4
+00004  4070 2755 2310           invoke-direct  # CALL Lc/a/b/c/a$e;-><init>(I,Lc/a/b/n$a;,Ljava/lang/Exception;)V
+00007  0011                     return-object
+
+### Lc/a/b/c/a$e;->b()Lc/a/b/c/a$e;  [access=0x9, regs=3, ins=0, outs=4, code_off=0xf472c]
+00000  0022 0583                new-instance  # TYPE Lc/a/b/c/a$e;
+00002  0112                     const/4
+00003  f212                     const/4
+00004  4070 2755 1120           invoke-direct  # CALL Lc/a/b/c/a$e;-><init>(I,Lc/a/b/n$a;,Ljava/lang/Exception;)V
+00007  0011                     return-object
+
+### Lc/a/b/c/a$e;->a()Z  [access=0x1, regs=1, ins=1, outs=0, code_off=0xf470c]
+00000  0052 1ad5                iget  # FIELD Lc/a/b/c/a$e;->b:I
+00002  0039 0004                if-nez
+00004  1012                     const/4
+00005  0228                     goto
+00006  0012                     const/4
+00007  000f                     return

@@ -1,0 +1,1007 @@
+### Lb/b/b/a/e;->a(Landroid/content/res/Resources;,Landroid/content/res/Resources$Theme;,Landroid/util/AttributeSet;,Lorg/xmlpull/v1/XmlPullParser;)I  [access=0xa, regs=5, ins=4, outs=4, code_off=0xa0e28]
+00000  0062 12ec                sget-object  # FIELD Lb/b/b/a/a;->j:[I
+00002  4071 230a 0321           invoke-static  # CALL Lb/b/c/a/d/g;->a(Landroid/content/res/Resources;,Landroid/content/res/Resources$Theme;,Landroid/util/AttributeSet;,[I)Landroid/content/res/TypedArray;
+00005  010c                     move-result-object
+00006  0212                     const/4
+00007  031a 282a                const-string  # STR "value"
+00009  4071 2310 2341           invoke-static  # CALL Lb/b/c/a/d/g;->b(Landroid/content/res/TypedArray;,Lorg/xmlpull/v1/XmlPullParser;,Ljava/lang/String;,I)Landroid/util/TypedValue;
+0000c  030c                     move-result-object
+0000d  0338 0004                if-eqz
+0000f  1412                     const/4
+00010  0228                     goto
+00011  2401                     op_01
+00012  0438 000b                if-eqz
+00014  3352 1253                iget  # FIELD Landroid/util/TypedValue;->type:I
+00016  1071 2214 0003           invoke-static  # CALL Lb/b/b/a/e;->a(I)Z
+00019  030a                     move-result
+0001a  0338 0003                if-eqz
+0001c  3212                     const/4
+0001d  106e 090a 0001           invoke-virtual  # CALL Landroid/content/res/TypedArray;->recycle()V
+00020  020f                     return
+
+### Lb/b/b/a/e;->a(Landroid/content/res/TypedArray;,I,I)I  [access=0xa, regs=6, ins=3, outs=2, code_off=0xa0db4]
+00000  206e 0909 0043           invoke-virtual  # CALL Landroid/content/res/TypedArray;->peekValue(I)Landroid/util/TypedValue;
+00003  040c                     move-result-object
+00004  1012                     const/4
+00005  0112                     const/4
+00006  0438 0004                if-eqz
+00008  0201                     op_01
+00009  0228                     goto
+0000a  1201                     op_01
+0000b  0238 0005                if-eqz
+0000d  4452 1253                iget  # FIELD Landroid/util/TypedValue;->type:I
+0000f  0228                     goto
+00010  1401                     op_01
+00011  206e 0909 0053           invoke-virtual  # CALL Landroid/content/res/TypedArray;->peekValue(I)Landroid/util/TypedValue;
+00014  030c                     move-result-object
+00015  0338 0003                if-eqz
+00017  0228                     goto
+00018  1001                     op_01
+00019  0038 0005                if-eqz
+0001b  3352 1253                iget  # FIELD Landroid/util/TypedValue;->type:I
+0001d  0228                     goto
+0001e  1301                     op_01
+0001f  0238 0008                if-eqz
+00021  1071 2214 0004           invoke-static  # CALL Lb/b/b/a/e;->a(I)Z
+00024  040a                     move-result
+00025  0439 000a                if-nez
+00027  0038 0009                if-eqz
+00029  1071 2214 0003           invoke-static  # CALL Lb/b/b/a/e;->a(I)Z
+0002c  030a                     move-result
+0002d  0338 0003                if-eqz
+0002f  3112                     const/4
+00030  010f                     return
+
+### Lb/b/b/a/e;->a(Landroid/content/Context;,I)Landroid/animation/Animator;  [access=0x9, regs=4, ins=2, outs=4, code_off=0xa05a8]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0113 0018                const/16
+00004  1034 0007                if-lt
+00006  2071 06c1 0032           invoke-static  # CALL Landroid/animation/AnimatorInflater;->loadAnimator(Landroid/content/Context;,I)Landroid/animation/Animator;
+00009  020c                     move-result-object
+0000a  0d28                     goto
+0000b  106e 0848 0002           invoke-virtual  # CALL Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+0000e  000c                     move-result-object
+0000f  106e 084e 0002           invoke-virtual  # CALL Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
+00012  010c                     move-result-object
+00013  4071 2206 3102           invoke-static  # CALL Lb/b/b/a/e;->a(Landroid/content/Context;,Landroid/content/res/Resources;,Landroid/content/res/Resources$Theme;,I)Landroid/animation/Animator;
+00016  020c                     move-result-object
+00017  0211                     return-object
+
+### Lb/b/b/a/e;->a(Landroid/content/Context;,Landroid/content/res/Resources;,Landroid/content/res/Resources$Theme;,I)Landroid/animation/Animator;  [access=0x9, regs=5, ins=4, outs=5, code_off=0xa04b4]
+00000  0015 3f80                const/high16
+00002  5071 2207 4321           invoke-static  # CALL Lb/b/b/a/e;->a(Landroid/content/Context;,Landroid/content/res/Resources;,Landroid/content/res/Resources$Theme;,I,F)Landroid/animation/Animator;
+00005  010c                     move-result-object
+00006  0111                     return-object
+
+### Lb/b/b/a/e;->a(Landroid/content/Context;,Landroid/content/res/Resources;,Landroid/content/res/Resources$Theme;,I,F)Landroid/animation/Animator;  [access=0x9, regs=7, ins=5, outs=5, code_off=0xa04d4]
+00000  001a 052f                const-string  # STR "Can't load animation resource ID #0x"
+00002  0112                     const/4
+00003  206e 08c2 0053           invoke-virtual  # CALL Landroid/content/res/Resources;->getAnimation(I)Landroid/content/res/XmlResourceParser;
+00006  010c                     move-result-object
+00007  5671 2208 1432           invoke-static  # CALL Lb/b/b/a/e;->a(Landroid/content/Context;,Landroid/content/res/Resources;,Landroid/content/res/Resources$Theme;,Lorg/xmlpull/v1/XmlPullParser;,F)Landroid/animation/Animator;
+0000a  020c                     move-result-object
+0000b  0138 0005                if-eqz
+0000d  1072 090b 0001           invoke-interface  # CALL Landroid/content/res/XmlResourceParser;->close()V
+00010  0211                     return-object
+00011  020d                     op_0d
+00012  3b28                     goto
+00013  020d                     op_0d
+00014  0322 0189                new-instance  # TYPE Landroid/content/res/Resources$NotFoundException;
+00016  0422 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00018  1070 2d35 0004           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0001b  206e 2d3f 0004           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0001e  1071 2cac 0005           invoke-static  # CALL Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+00021  050c                     move-result-object
+00022  206e 2d3f 0054           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00025  106e 2d44 0004           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00028  040c                     move-result-object
+00029  2070 08b9 0043           invoke-direct  # CALL Landroid/content/res/Resources$NotFoundException;-><init>(Ljava/lang/String;)V
+0002c  206e 08ba 0023           invoke-virtual  # CALL Landroid/content/res/Resources$NotFoundException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+0002f  0327                     throw
+00030  020d                     op_0d
+00031  0322 0189                new-instance  # TYPE Landroid/content/res/Resources$NotFoundException;
+00033  0422 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00035  1070 2d35 0004           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00038  206e 2d3f 0004           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0003b  1071 2cac 0005           invoke-static  # CALL Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+0003e  050c                     move-result-object
+0003f  206e 2d3f 0054           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00042  106e 2d44 0004           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00045  040c                     move-result-object
+00046  2070 08b9 0043           invoke-direct  # CALL Landroid/content/res/Resources$NotFoundException;-><init>(Ljava/lang/String;)V
+00049  206e 08ba 0023           invoke-virtual  # CALL Landroid/content/res/Resources$NotFoundException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+0004c  0327                     throw
+0004d  0138 0005                if-eqz
+0004f  1072 090b 0001           invoke-interface  # CALL Landroid/content/res/XmlResourceParser;->close()V
+00052  0227                     throw
+
+### Lb/b/b/a/e;->a(Landroid/content/Context;,Landroid/content/res/Resources;,Landroid/content/res/Resources$Theme;,Lorg/xmlpull/v1/XmlPullParser;,F)Landroid/animation/Animator;  [access=0xa, regs=13, ins=5, outs=8, code_off=0xa0484]
+00000  1071 1c84 000b           invoke-static  # CALL Landroid/util/Xml;->asAttributeSet(Lorg/xmlpull/v1/XmlPullParser;)Landroid/util/AttributeSet;
+00003  040c                     move-result-object
+00004  0512                     const/4
+00005  0612                     const/4
+00006  8007                     op_07
+00007  9107                     op_07
+00008  a207                     op_07
+00009  b307                     op_07
+0000a  c701                     op_01
+0000b  0877 2209 0000           invoke-static/range  # CALL Lb/b/b/a/e;->a(Landroid/content/Context;,Landroid/content/res/Resources;,Landroid/content/res/Resources$Theme;,Lorg/xmlpull/v1/XmlPullParser;,Landroid/util/AttributeSet;,Landroid/animation/AnimatorSet;,I,F)Landroid/animation/Animator;
+0000e  080c                     move-result-object
+0000f  0811                     return-object
+
+### Lb/b/b/a/e;->a(Landroid/content/Context;,Landroid/content/res/Resources;,Landroid/content/res/Resources$Theme;,Lorg/xmlpull/v1/XmlPullParser;,Landroid/util/AttributeSet;,Landroid/animation/AnimatorSet;,I,F)Landroid/animation/Animator;  [access=0xa, regs=26, ins=8, outs=8, code_off=0xa0260]
+00000  0808 0013                op_08
+00002  0908 0014                op_08
+00004  0a08 0015                op_08
+00006  0b08 0017                op_08
+00008  0178 2f33 0015           invoke-interface/range  # CALL Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
+0000b  0c0a                     move-result
+0000c  0012                     const/4
+0000d  0d07                     op_07
+0000e  0178 2f38 0015           invoke-interface/range  # CALL Lorg/xmlpull/v1/XmlPullParser;->next()I
+00011  010a                     move-result
+00012  3212                     const/4
+00013  0e12                     const/4
+00014  2133 0008                if-ne
+00016  0178 2f33 0015           invoke-interface/range  # CALL Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
+00019  020a                     move-result
+0001a  c237 00c5                if-le
+0001c  1212                     const/4
+0001d  2132 00c2                if-eq
+0001f  2312                     const/4
+00020  3132 0003                if-eq
+00022  ec28                     goto
+00023  0178 2f36 0015           invoke-interface/range  # CALL Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
+00026  010c                     move-result-object
+00027  031a 2216                const-string  # STR "objectAnimator"
+00029  206e 2d03 0031           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+0002c  030a                     move-result
+0002d  0338 0016                if-eqz
+0002f  0008 0012                op_08
+00031  0108 0013                op_08
+00033  0208 0014                op_08
+00035  0308 0016                op_08
+00037  0402 0019                op_02
+00039  0508 0015                op_08
+0003b  0677 220c 0000           invoke-static/range  # CALL Lb/b/b/a/e;->a(Landroid/content/Context;,Landroid/content/res/Resources;,Landroid/content/res/Resources$Theme;,Landroid/util/AttributeSet;,F,Lorg/xmlpull/v1/XmlPullParser;)Landroid/animation/ObjectAnimator;
+0003e  000c                     move-result-object
+0003f  0308 0012                op_08
+00041  0029 0073                goto/16
+00043  031a 1949                const-string  # STR "animator"
+00045  206e 2d03 0031           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+00048  030a                     move-result
+00049  0338 0014                if-eqz
+0004b  0412                     const/4
+0004c  0008 0012                op_08
+0004e  0108 0013                op_08
+00050  0208 0014                op_08
+00052  0308 0016                op_08
+00054  0502 0019                op_02
+00056  0608 0015                op_08
+00058  0777 220f 0000           invoke-static/range  # CALL Lb/b/b/a/e;->a(Landroid/content/Context;,Landroid/content/res/Resources;,Landroid/content/res/Resources$Theme;,Landroid/util/AttributeSet;,Landroid/animation/ValueAnimator;,F,Lorg/xmlpull/v1/XmlPullParser;)Landroid/animation/ValueAnimator;
+0005b  000c                     move-result-object
+0005c  e328                     goto
+0005d  031a 24f6                const-string  # STR "set"
+0005f  206e 2d03 0031           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+00062  030a                     move-result
+00063  0338 0030                if-eqz
+00065  0f22 0113                new-instance  # TYPE Landroid/animation/AnimatorSet;
+00067  1070 06c3 000f           invoke-direct  # CALL Landroid/animation/AnimatorSet;-><init>()V
+0006a  0062 12ea                sget-object  # FIELD Lb/b/b/a/a;->h:[I
+0006c  0708 0016                op_08
+0006e  4071 230a 0798           invoke-static  # CALL Lb/b/c/a/d/g;->a(Landroid/content/res/Resources;,Landroid/content/res/Resources$Theme;,Landroid/util/AttributeSet;,[I)Landroid/content/res/TypedArray;
+00071  060c                     move-result-object
+00072  001a 2303                const-string  # STR "ordering"
+00074  5e71 230f e0a6           invoke-static  # CALL Lb/b/c/a/d/g;->b(Landroid/content/res/TypedArray;,Lorg/xmlpull/v1/XmlPullParser;,Ljava/lang/String;,I,I)I
+00077  100a                     move-result
+00078  0008 0012                op_08
+0007a  0108 0013                op_08
+0007c  0208 0014                op_08
+0007e  0308 0015                op_08
+00080  0408 0016                op_08
+00082  f507                     op_07
+00083  1108 0006                op_08
+00085  0602 0010                op_02
+00087  0702 0019                op_02
+00089  0877 2209 0000           invoke-static/range  # CALL Lb/b/b/a/e;->a(Landroid/content/Context;,Landroid/content/res/Resources;,Landroid/content/res/Resources$Theme;,Lorg/xmlpull/v1/XmlPullParser;,Landroid/util/AttributeSet;,Landroid/animation/AnimatorSet;,I,F)Landroid/animation/Animator;
+0008c  0174 090a 0011           invoke-virtual/range  # CALL Landroid/content/res/TypedArray;->recycle()V
+0008f  0308 0012                op_08
+00091  f007                     op_07
+00092  2228                     goto
+00093  031a 239f                const-string  # STR "propertyValuesHolder"
+00095  206e 2d03 0031           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+00098  010a                     move-result
+00099  0138 002b                if-eqz
+0009b  0177 1c84 0015           invoke-static/range  # CALL Landroid/util/Xml;->asAttributeSet(Lorg/xmlpull/v1/XmlPullParser;)Landroid/util/AttributeSet;
+0009e  010c                     move-result-object
+0009f  0308 0012                op_08
+000a1  5171 2215 a983           invoke-static  # CALL Lb/b/b/a/e;->a(Landroid/content/Context;,Landroid/content/res/Resources;,Landroid/content/res/Resources$Theme;,Lorg/xmlpull/v1/XmlPullParser;,Landroid/util/AttributeSet;)[Landroid/animation/PropertyValuesHolder;
+000a4  010c                     move-result-object
+000a5  0138 000e                if-eqz
+000a7  0038 000c                if-eqz
+000a9  0420 011b                instance-of  # TYPE Landroid/animation/ValueAnimator;
+000ab  0438 0008                if-eqz
+000ad  0407                     op_07
+000ae  041f 011b                check-cast  # TYPE Landroid/animation/ValueAnimator;
+000b0  206e 06f0 0014           invoke-virtual  # CALL Landroid/animation/ValueAnimator;->setValues([Landroid/animation/PropertyValuesHolder;)V
+000b3  2e01                     op_01
+000b4  0b38 ff5a                if-eqz
+000b6  0e39 ff58                if-nez
+000b8  0d39 0007                if-nez
+000ba  0d22 06c8                new-instance  # TYPE Ljava/util/ArrayList;
+000bc  1070 2de7 000d           invoke-direct  # CALL Ljava/util/ArrayList;-><init>()V
+000bf  206e 2deb 000d           invoke-virtual  # CALL Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+000c2  0029 ff4c                goto/16
+000c4  0022 0680                new-instance  # TYPE Ljava/lang/RuntimeException;
+000c6  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+000c8  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+000cb  021a 155b                const-string  # STR "Unknown animator name: "
+000cd  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000d0  0178 2f36 0015           invoke-interface/range  # CALL Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
+000d3  020c                     move-result-object
+000d4  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000d7  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+000da  010c                     move-result-object
+000db  2070 2cee 0010           invoke-direct  # CALL Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+000de  0027                     throw
+000df  0b38 0029                if-eqz
+000e1  0d38 0027                if-eqz
+000e3  106e 2df8 000d           invoke-virtual  # CALL Ljava/util/ArrayList;->size()I
+000e6  010a                     move-result
+000e7  1123 072c                new-array  # TYPE [Landroid/animation/Animator;
+000e9  106e 2df3 000d           invoke-virtual  # CALL Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+000ec  020c                     move-result-object
+000ed  1072 2e43 0002           invoke-interface  # CALL Ljava/util/Iterator;->hasNext()Z
+000f0  030a                     move-result
+000f1  0338 000e                if-eqz
+000f3  1072 2e44 0002           invoke-interface  # CALL Ljava/util/Iterator;->next()Ljava/lang/Object;
+000f6  030c                     move-result-object
+000f7  031f 0110                check-cast  # TYPE Landroid/animation/Animator;
+000f9  04d8 010e                op_d8
+000fb  034d 0e01                aput-object
+000fd  4e01                     op_01
+000fe  ef28                     goto
+000ff  1839 0006                if-nez
+00101  206e 06ca 001b           invoke-virtual  # CALL Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
+00104  0428                     goto
+00105  206e 06c8 001b           invoke-virtual  # CALL Landroid/animation/AnimatorSet;->playSequentially([Landroid/animation/Animator;)V
+00108  0011                     return-object
+
+### Lb/b/b/a/e;->a(Landroid/animation/Keyframe;,F)Landroid/animation/Keyframe;  [access=0xa, regs=4, ins=2, outs=1, code_off=0xa05e8]
+00000  106e 06ce 0002           invoke-virtual  # CALL Landroid/animation/Keyframe;->getType()Ljava/lang/Class;
+00003  000c                     move-result-object
+00004  0162 1d5f                sget-object  # FIELD Ljava/lang/Float;->TYPE:Ljava/lang/Class;
+00006  1033 0007                if-ne
+00008  1071 06cf 0003           invoke-static  # CALL Landroid/animation/Keyframe;->ofFloat(F)Landroid/animation/Keyframe;
+0000b  020c                     move-result-object
+0000c  1228                     goto
+0000d  106e 06ce 0002           invoke-virtual  # CALL Landroid/animation/Keyframe;->getType()Ljava/lang/Class;
+00010  020c                     move-result-object
+00011  0062 1d60                sget-object  # FIELD Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+00013  0233 0007                if-ne
+00015  1071 06d1 0003           invoke-static  # CALL Landroid/animation/Keyframe;->ofInt(F)Landroid/animation/Keyframe;
+00018  020c                     move-result-object
+00019  0528                     goto
+0001a  1071 06d3 0003           invoke-static  # CALL Landroid/animation/Keyframe;->ofObject(F)Landroid/animation/Keyframe;
+0001d  020c                     move-result-object
+0001e  0211                     return-object
+
+### Lb/b/b/a/e;->a(Landroid/content/Context;,Landroid/content/res/Resources;,Landroid/content/res/Resources$Theme;,Landroid/util/AttributeSet;,I,Lorg/xmlpull/v1/XmlPullParser;)Landroid/animation/Keyframe;  [access=0xa, regs=12, ins=6, outs=5, code_off=0xa0638]
+00000  0062 12ec                sget-object  # FIELD Lb/b/b/a/a;->j:[I
+00002  4071 230a 0987           invoke-static  # CALL Lb/b/c/a/d/g;->a(Landroid/content/res/Resources;,Landroid/content/res/Resources$Theme;,Landroid/util/AttributeSet;,[I)Landroid/content/res/TypedArray;
+00005  070c                     move-result-object
+00006  3812                     const/4
+00007  091a 1c17                const-string  # STR "fraction"
+00009  0015 bf80                const/high16
+0000b  5071 2308 89b7           invoke-static  # CALL Lb/b/c/a/d/g;->a(Landroid/content/res/TypedArray;,Lorg/xmlpull/v1/XmlPullParser;,Ljava/lang/String;,I,F)F
+0000e  090a                     move-result
+0000f  001a 282a                const-string  # STR "value"
+00011  0112                     const/4
+00012  4071 2310 10b7           invoke-static  # CALL Lb/b/c/a/d/g;->b(Landroid/content/res/TypedArray;,Lorg/xmlpull/v1/XmlPullParser;,Ljava/lang/String;,I)Landroid/util/TypedValue;
+00015  020c                     move-result-object
+00016  1312                     const/4
+00017  0238 0004                if-eqz
+00019  3401                     op_01
+0001a  0228                     goto
+0001b  1401                     op_01
+0001c  4512                     const/4
+0001d  5a33 000f                if-ne
+0001f  0438 000c                if-eqz
+00021  2a52 1253                iget  # FIELD Landroid/util/TypedValue;->type:I
+00023  1071 2214 000a           invoke-static  # CALL Lb/b/b/a/e;->a(I)Z
+00026  0a0a                     move-result
+00027  0a38 0004                if-eqz
+00029  8a01                     op_01
+0002a  0228                     goto
+0002b  1a01                     op_01
+0002c  0438 001d                if-eqz
+0002e  0a38 0011                if-eqz
+00030  3a32 0006                if-eq
+00032  8a32 0004                if-eq
+00034  0812                     const/4
+00035  1f28                     goto
+00036  5171 230f 10b7           invoke-static  # CALL Lb/b/c/a/d/g;->b(Landroid/content/res/TypedArray;,Lorg/xmlpull/v1/XmlPullParser;,Ljava/lang/String;,I,I)I
+00039  080a                     move-result
+0003a  2071 06d2 0089           invoke-static  # CALL Landroid/animation/Keyframe;->ofInt(F,I)Landroid/animation/Keyframe;
+0003d  080c                     move-result-object
+0003e  1628                     goto
+0003f  0812                     const/4
+00040  5871 2308 10b7           invoke-static  # CALL Lb/b/c/a/d/g;->a(Landroid/content/res/TypedArray;,Lorg/xmlpull/v1/XmlPullParser;,Ljava/lang/String;,I,F)F
+00043  080a                     move-result
+00044  2071 06d0 0089           invoke-static  # CALL Landroid/animation/Keyframe;->ofFloat(F,F)Landroid/animation/Keyframe;
+00047  080c                     move-result-object
+00048  0c28                     goto
+00049  0a39 0007                if-nez
+0004b  1071 06cf 0009           invoke-static  # CALL Landroid/animation/Keyframe;->ofFloat(F)Landroid/animation/Keyframe;
+0004e  080c                     move-result-object
+0004f  0528                     goto
+00050  1071 06d1 0009           invoke-static  # CALL Landroid/animation/Keyframe;->ofInt(F)Landroid/animation/Keyframe;
+00053  080c                     move-result-object
+00054  091a 1fe1                const-string  # STR "interpolator"
+00056  5171 2311 39b7           invoke-static  # CALL Lb/b/c/a/d/g;->c(Landroid/content/res/TypedArray;,Lorg/xmlpull/v1/XmlPullParser;,Ljava/lang/String;,I,I)I
+00059  090a                     move-result
+0005a  093d 0009                if-lez
+0005c  2071 21fe 0096           invoke-static  # CALL Lb/b/b/a/d;->a(Landroid/content/Context;,I)Landroid/view/animation/Interpolator;
+0005f  060c                     move-result-object
+00060  206e 06d5 0068           invoke-virtual  # CALL Landroid/animation/Keyframe;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+00063  106e 090a 0007           invoke-virtual  # CALL Landroid/content/res/TypedArray;->recycle()V
+00066  0811                     return-object
+
+### Lb/b/b/a/e;->a(Landroid/content/Context;,Landroid/content/res/Resources;,Landroid/content/res/Resources$Theme;,Landroid/util/AttributeSet;,F,Lorg/xmlpull/v1/XmlPullParser;)Landroid/animation/ObjectAnimator;  [access=0xa, regs=14, ins=6, outs=7, code_off=0xa0718]
+00000  0722 0116                new-instance  # TYPE Landroid/animation/ObjectAnimator;
+00002  1070 06d6 0007           invoke-direct  # CALL Landroid/animation/ObjectAnimator;-><init>()V
+00005  8007                     op_07
+00006  9107                     op_07
+00007  a207                     op_07
+00008  b307                     op_07
+00009  7407                     op_07
+0000a  c501                     op_01
+0000b  d607                     op_07
+0000c  0777 220f 0000           invoke-static/range  # CALL Lb/b/b/a/e;->a(Landroid/content/Context;,Landroid/content/res/Resources;,Landroid/content/res/Resources$Theme;,Landroid/util/AttributeSet;,Landroid/animation/ValueAnimator;,F,Lorg/xmlpull/v1/XmlPullParser;)Landroid/animation/ValueAnimator;
+0000f  0711                     return-object
+
+### Lb/b/b/a/e;->a(Landroid/content/Context;,Landroid/content/res/Resources;,Landroid/content/res/Resources$Theme;,Lorg/xmlpull/v1/XmlPullParser;,Ljava/lang/String;,I)Landroid/animation/PropertyValuesHolder;  [access=0xa, regs=15, ins=6, outs=6, code_off=0xa0a28]
+00000  0012                     const/4
+00001  0107                     op_07
+00002  1072 2f38 000c           invoke-interface  # CALL Lorg/xmlpull/v1/XmlPullParser;->next()I
+00005  020a                     move-result
+00006  3312                     const/4
+00007  3232 0039                if-eq
+00009  1412                     const/4
+0000a  4232 0036                if-eq
+0000c  1072 2f36 000c           invoke-interface  # CALL Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
+0000f  020c                     move-result-object
+00010  031a 2082                const-string  # STR "keyframe"
+00012  206e 2d03 0032           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+00015  020a                     move-result
+00016  0238 ffec                if-eqz
+00018  4212                     const/4
+00019  2e33 000a                if-ne
+0001b  1071 1c84 000c           invoke-static  # CALL Landroid/util/Xml;->asAttributeSet(Lorg/xmlpull/v1/XmlPullParser;)Landroid/util/AttributeSet;
+0001e  0e0c                     move-result-object
+0001f  4071 2203 ceba           invoke-static  # CALL Lb/b/b/a/e;->a(Landroid/content/res/Resources;,Landroid/content/res/Resources$Theme;,Landroid/util/AttributeSet;,Lorg/xmlpull/v1/XmlPullParser;)I
+00022  0e0a                     move-result
+00023  1071 1c84 000c           invoke-static  # CALL Landroid/util/Xml;->asAttributeSet(Lorg/xmlpull/v1/XmlPullParser;)Landroid/util/AttributeSet;
+00026  050c                     move-result-object
+00027  9207                     op_07
+00028  a307                     op_07
+00029  b407                     op_07
+0002a  e601                     op_01
+0002b  c707                     op_07
+0002c  0677 220b 0002           invoke-static/range  # CALL Lb/b/b/a/e;->a(Landroid/content/Context;,Landroid/content/res/Resources;,Landroid/content/res/Resources$Theme;,Landroid/util/AttributeSet;,I,Lorg/xmlpull/v1/XmlPullParser;)Landroid/animation/Keyframe;
+0002f  020c                     move-result-object
+00030  0238 000c                if-eqz
+00032  0139 0007                if-nez
+00034  0122 06c8                new-instance  # TYPE Ljava/util/ArrayList;
+00036  1070 2de7 0001           invoke-direct  # CALL Ljava/util/ArrayList;-><init>()V
+00039  206e 2deb 0021           invoke-virtual  # CALL Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+0003c  1072 2f38 000c           invoke-interface  # CALL Lorg/xmlpull/v1/XmlPullParser;->next()I
+0003f  c328                     goto
+00040  0138 00a9                if-eqz
+00042  106e 2df8 0001           invoke-virtual  # CALL Ljava/util/ArrayList;->size()I
+00045  090a                     move-result
+00046  093d 00a3                if-lez
+00048  0a12                     const/4
+00049  206e 2df0 00a1           invoke-virtual  # CALL Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+0004c  0b0c                     move-result-object
+0004d  0b1f 0115                check-cast  # TYPE Landroid/animation/Keyframe;
+0004f  0cd8 ff09                op_d8
+00051  206e 2df0 00c1           invoke-virtual  # CALL Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+00054  0c0c                     move-result-object
+00055  0c1f 0115                check-cast  # TYPE Landroid/animation/Keyframe;
+00057  106e 06cd 000c           invoke-virtual  # CALL Landroid/animation/Keyframe;->getFraction()F
+0005a  000a                     move-result
+0005b  0215 3f80                const/high16
+0005d  042e 0200                op_2e
+0005f  0512                     const/4
+00060  043b 0017                if-gez
+00062  002e 0500                op_2e
+00064  003b 0006                if-gez
+00066  206e 06d4 002c           invoke-virtual  # CALL Landroid/animation/Keyframe;->setFraction(F)V
+00069  0e28                     goto
+0006a  106e 2df8 0001           invoke-virtual  # CALL Ljava/util/ArrayList;->size()I
+0006d  000a                     move-result
+0006e  2071 220a 002c           invoke-static  # CALL Lb/b/b/a/e;->a(Landroid/animation/Keyframe;,F)Landroid/animation/Keyframe;
+00071  0c0c                     move-result-object
+00072  306e 2dea 0c01           invoke-virtual  # CALL Ljava/util/ArrayList;->add(I,Ljava/lang/Object;)V
+00075  09d8 0109                op_d8
+00077  106e 06cd 000b           invoke-virtual  # CALL Landroid/animation/Keyframe;->getFraction()F
+0007a  0c0a                     move-result
+0007b  002d 050c                op_2d
+0007d  0038 0013                if-eqz
+0007f  0c2e 050c                op_2e
+00081  0c3b 0006                if-gez
+00083  206e 06d4 005b           invoke-virtual  # CALL Landroid/animation/Keyframe;->setFraction(F)V
+00086  0a28                     goto
+00087  2071 220a 005b           invoke-static  # CALL Lb/b/b/a/e;->a(Landroid/animation/Keyframe;,F)Landroid/animation/Keyframe;
+0008a  0b0c                     move-result-object
+0008b  306e 2dea 0ba1           invoke-virtual  # CALL Ljava/util/ArrayList;->add(I,Ljava/lang/Object;)V
+0008e  09d8 0109                op_d8
+00090  9b23 072d                new-array  # TYPE [Landroid/animation/Keyframe;
+00092  206e 2dfa 00b1           invoke-virtual  # CALL Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+00095  9a35 0047                if-ge
+00097  0c46 0a0b                aget-object
+00099  106e 06cd 000c           invoke-virtual  # CALL Landroid/animation/Keyframe;->getFraction()F
+0009c  000a                     move-result
+0009d  002e 0500                op_2e
+0009f  003b 003a                if-gez
+000a1  0a39 0006                if-nez
+000a3  206e 06d4 005c           invoke-virtual  # CALL Landroid/animation/Keyframe;->setFraction(F)V
+000a6  3328                     goto
+000a7  00d8 ff09                op_d8
+000a9  0a33 0006                if-ne
+000ab  206e 06d4 002c           invoke-virtual  # CALL Landroid/animation/Keyframe;->setFraction(F)V
+000ae  2b28                     goto
+000af  0cd8 010a                op_d8
+000b1  a101                     op_01
+000b2  0c35 0013                if-ge
+000b4  0446 0c0b                aget-object
+000b6  106e 06cd 0004           invoke-virtual  # CALL Landroid/animation/Keyframe;->getFraction()F
+000b9  040a                     move-result
+000ba  042d 0504                op_2d
+000bc  043a 0003                if-ltz
+000be  0728                     goto
+000bf  01d8 010c                op_d8
+000c1  1801                     op_01
+000c2  c101                     op_01
+000c3  8c01                     op_01
+000c4  ee28                     goto
+000c5  0cd8 0101                op_d8
+000c7  0c46 0c0b                aget-object
+000c9  106e 06cd 000c           invoke-virtual  # CALL Landroid/animation/Keyframe;->getFraction()F
+000cc  0c0a                     move-result
+000cd  00d8 ff0a                op_d8
+000cf  0046 000b                aget-object
+000d1  106e 06cd 0000           invoke-virtual  # CALL Landroid/animation/Keyframe;->getFraction()F
+000d4  000a                     move-result
+000d5  0cc7                     op_c7
+000d6  4071 2213 1acb           invoke-static  # CALL Lb/b/b/a/e;->a([Landroid/animation/Keyframe;,F,I,I)V
+000d9  0ad8 010a                op_d8
+000db  ba28                     goto
+000dc  2071 06e5 00bd           invoke-static  # CALL Landroid/animation/PropertyValuesHolder;->ofKeyframe(Ljava/lang/String;,[Landroid/animation/Keyframe;)Landroid/animation/PropertyValuesHolder;
+000df  000c                     move-result-object
+000e0  3e33 0009                if-ne
+000e2  0071 2218 0000           invoke-static  # CALL Lb/b/b/a/f;->a()Lb/b/b/a/f;
+000e5  090c                     move-result-object
+000e6  206e 06e7 0090           invoke-virtual  # CALL Landroid/animation/PropertyValuesHolder;->setEvaluator(Landroid/animation/TypeEvaluator;)V
+000e9  0011                     return-object
+
+### Lb/b/b/a/e;->a(Landroid/content/res/TypedArray;,I,I,I,Ljava/lang/String;)Landroid/animation/PropertyValuesHolder;  [access=0xa, regs=16, ins=5, outs=3, code_off=0xa0748]
+00000  206e 0909 00db           invoke-virtual  # CALL Landroid/content/res/TypedArray;->peekValue(I)Landroid/util/TypedValue;
+00003  000c                     move-result-object
+00004  1112                     const/4
+00005  0212                     const/4
+00006  0038 0004                if-eqz
+00008  1301                     op_01
+00009  0228                     goto
+0000a  2301                     op_01
+0000b  0338 0005                if-eqz
+0000d  0052 1253                iget  # FIELD Landroid/util/TypedValue;->type:I
+0000f  0228                     goto
+00010  2001                     op_01
+00011  206e 0909 00eb           invoke-virtual  # CALL Landroid/content/res/TypedArray;->peekValue(I)Landroid/util/TypedValue;
+00014  040c                     move-result-object
+00015  0438 0004                if-eqz
+00017  1501                     op_01
+00018  0228                     goto
+00019  2501                     op_01
+0001a  0538 0005                if-eqz
+0001c  4452 1253                iget  # FIELD Landroid/util/TypedValue;->type:I
+0001e  0228                     goto
+0001f  2401                     op_01
+00020  4612                     const/4
+00021  3712                     const/4
+00022  6c33 0015                if-ne
+00024  0338 0008                if-eqz
+00026  1071 2214 0000           invoke-static  # CALL Lb/b/b/a/e;->a(I)Z
+00029  0c0a                     move-result
+0002a  0c39 000a                if-nez
+0002c  0538 000a                if-eqz
+0002e  1071 2214 0004           invoke-static  # CALL Lb/b/b/a/e;->a(I)Z
+00031  0c0a                     move-result
+00032  0c38 0004                if-eqz
+00034  7c01                     op_01
+00035  0228                     goto
+00036  2c01                     op_01
+00037  0c39 0004                if-nez
+00039  1601                     op_01
+0003a  0228                     goto
+0003b  2601                     op_01
+0003c  0812                     const/4
+0003d  2912                     const/4
+0003e  9c33 006b                if-ne
+00040  206e 0902 00db           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
+00043  0c0c                     move-result-object
+00044  206e 0902 00eb           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
+00047  0b0c                     move-result-object
+00048  1071 2324 000c           invoke-static  # CALL Lb/b/c/b/b;->a(Ljava/lang/String;)[Lb/b/c/b/b$b;
+0004b  0d0c                     move-result-object
+0004c  1071 2324 000b           invoke-static  # CALL Lb/b/c/b/b;->a(Ljava/lang/String;)[Lb/b/c/b/b$b;
+0004f  0e0c                     move-result-object
+00050  0d39 0004                if-nez
+00052  0e38 0115                if-eqz
+00054  0d38 0044                if-eqz
+00056  0022 04c4                new-instance  # TYPE Lb/b/b/a/e$a;
+00058  1070 2200 0000           invoke-direct  # CALL Lb/b/b/a/e$a;-><init>()V
+0005b  0e38 0032                if-eqz
+0005d  2071 2322 00ed           invoke-static  # CALL Lb/b/c/b/b;->a([Lb/b/c/b/b$b;,[Lb/b/c/b/b$b;)Z
+00060  030a                     move-result
+00061  0338 000d                if-eqz
+00063  9b23 075d                new-array  # TYPE [Ljava/lang/Object;
+00065  0d4d 020b                aput-object
+00067  0e4d 010b                aput-object
+00069  3071 06e6 0b0f           invoke-static  # CALL Landroid/animation/PropertyValuesHolder;->ofObject(Ljava/lang/String;,Landroid/animation/TypeEvaluator;,[Ljava/lang/Object;)Landroid/animation/PropertyValuesHolder;
+0006c  0b0c                     move-result-object
+0006d  2828                     goto
+0006e  0d22 042c                new-instance  # TYPE Landroid/view/InflateException;
+00070  0e22 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00072  1070 2d35 000e           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00075  0f1a 0026                const-string  # STR " Can't morph from "
+00077  206e 2d3f 00fe           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0007a  206e 2d3f 00ce           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0007d  0c1a 009c                const-string  # STR " to "
+0007f  206e 2d3f 00ce           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00082  206e 2d3f 00be           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00085  106e 2d44 000e           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00088  0b0c                     move-result-object
+00089  2070 1c9b 00bd           invoke-direct  # CALL Landroid/view/InflateException;-><init>(Ljava/lang/String;)V
+0008c  0d27                     throw
+0008d  1b23 075d                new-array  # TYPE [Ljava/lang/Object;
+0008f  0d4d 020b                aput-object
+00091  3071 06e6 0b0f           invoke-static  # CALL Landroid/animation/PropertyValuesHolder;->ofObject(Ljava/lang/String;,Landroid/animation/TypeEvaluator;,[Ljava/lang/Object;)Landroid/animation/PropertyValuesHolder;
+00094  0b0c                     move-result-object
+00095  b807                     op_07
+00096  0029 00d1                goto/16
+00098  0e38 00cf                if-eqz
+0009a  0b22 04c4                new-instance  # TYPE Lb/b/b/a/e$a;
+0009c  1070 2200 000b           invoke-direct  # CALL Lb/b/b/a/e$a;-><init>()V
+0009f  1c23 075d                new-array  # TYPE [Ljava/lang/Object;
+000a1  0e4d 020c                aput-object
+000a3  3071 06e6 0cbf           invoke-static  # CALL Landroid/animation/PropertyValuesHolder;->ofObject(Ljava/lang/String;,Landroid/animation/TypeEvaluator;,[Ljava/lang/Object;)Landroid/animation/PropertyValuesHolder;
+000a6  080c                     move-result-object
+000a7  0029 00c0                goto/16
+000a9  7c33 0007                if-ne
+000ab  0071 2218 0000           invoke-static  # CALL Lb/b/b/a/f;->a()Lb/b/b/a/f;
+000ae  0c0c                     move-result-object
+000af  0228                     goto
+000b0  8c07                     op_07
+000b1  5712                     const/4
+000b2  0a12                     const/4
+000b3  0638 0046                if-eqz
+000b5  0338 002e                if-eqz
+000b7  7033 0007                if-ne
+000b9  306e 08f5 0adb           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getDimension(I,F)F
+000bc  0d0a                     move-result
+000bd  0528                     goto
+000be  306e 08f9 0adb           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getFloat(I,F)F
+000c1  0d0a                     move-result
+000c2  0538 0018                if-eqz
+000c4  7433 0007                if-ne
+000c6  306e 08f5 0aeb           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getDimension(I,F)F
+000c9  0b0a                     move-result
+000ca  0528                     goto
+000cb  306e 08f9 0aeb           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getFloat(I,F)F
+000ce  0b0a                     move-result
+000cf  9e23 0723                new-array  # TYPE [F
+000d1  0d4b 020e                aput
+000d3  0b4b 010e                aput
+000d5  2071 06e3 00ef           invoke-static  # CALL Landroid/animation/PropertyValuesHolder;->ofFloat(Ljava/lang/String;,[F)Landroid/animation/PropertyValuesHolder;
+000d8  0b0c                     move-result-object
+000d9  1d28                     goto
+000da  1b23 0723                new-array  # TYPE [F
+000dc  0d4b 020b                aput
+000de  2071 06e3 00bf           invoke-static  # CALL Landroid/animation/PropertyValuesHolder;->ofFloat(Ljava/lang/String;,[F)Landroid/animation/PropertyValuesHolder;
+000e1  0b0c                     move-result-object
+000e2  1428                     goto
+000e3  7433 0007                if-ne
+000e5  306e 08f5 0aeb           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getDimension(I,F)F
+000e8  0b0a                     move-result
+000e9  0528                     goto
+000ea  306e 08f9 0aeb           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getFloat(I,F)F
+000ed  0b0a                     move-result
+000ee  1d23 0723                new-array  # TYPE [F
+000f0  0b4b 020d                aput
+000f2  2071 06e3 00df           invoke-static  # CALL Landroid/animation/PropertyValuesHolder;->ofFloat(Ljava/lang/String;,[F)Landroid/animation/PropertyValuesHolder;
+000f5  0b0c                     move-result-object
+000f6  b807                     op_07
+000f7  0029 0069                goto/16
+000f9  0338 0046                if-eqz
+000fb  7033 0008                if-ne
+000fd  306e 08f5 0adb           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getDimension(I,F)F
+00100  0d0a                     move-result
+00101  dd87                     op_87
+00102  1028                     goto
+00103  1071 2214 0000           invoke-static  # CALL Lb/b/b/a/e;->a(I)Z
+00106  000a                     move-result
+00107  0038 0007                if-eqz
+00109  306e 08f3 02db           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getColor(I,I)I
+0010c  0d0a                     move-result
+0010d  0528                     goto
+0010e  306e 08fc 02db           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getInt(I,I)I
+00111  0d0a                     move-result
+00112  0538 0024                if-eqz
+00114  7433 0008                if-ne
+00116  306e 08f5 0aeb           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getDimension(I,F)F
+00119  0b0a                     move-result
+0011a  bb87                     op_87
+0011b  1028                     goto
+0011c  1071 2214 0004           invoke-static  # CALL Lb/b/b/a/e;->a(I)Z
+0011f  000a                     move-result
+00120  0038 0007                if-eqz
+00122  306e 08f3 02eb           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getColor(I,I)I
+00125  0b0a                     move-result
+00126  0528                     goto
+00127  306e 08fc 02eb           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getInt(I,I)I
+0012a  0b0a                     move-result
+0012b  9e23 0724                new-array  # TYPE [I
+0012d  0d4b 020e                aput
+0012f  0b4b 010e                aput
+00131  2071 06e4 00ef           invoke-static  # CALL Landroid/animation/PropertyValuesHolder;->ofInt(Ljava/lang/String;,[I)Landroid/animation/PropertyValuesHolder;
+00134  080c                     move-result-object
+00135  2b28                     goto
+00136  1b23 0724                new-array  # TYPE [I
+00138  0d4b 020b                aput
+0013a  2071 06e4 00bf           invoke-static  # CALL Landroid/animation/PropertyValuesHolder;->ofInt(Ljava/lang/String;,[I)Landroid/animation/PropertyValuesHolder;
+0013d  080c                     move-result-object
+0013e  2228                     goto
+0013f  0538 0021                if-eqz
+00141  7433 0008                if-ne
+00143  306e 08f5 0aeb           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getDimension(I,F)F
+00146  0b0a                     move-result
+00147  bb87                     op_87
+00148  1028                     goto
+00149  1071 2214 0004           invoke-static  # CALL Lb/b/b/a/e;->a(I)Z
+0014c  0d0a                     move-result
+0014d  0d38 0007                if-eqz
+0014f  306e 08f3 02eb           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getColor(I,I)I
+00152  0b0a                     move-result
+00153  0528                     goto
+00154  306e 08fc 02eb           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getInt(I,I)I
+00157  0b0a                     move-result
+00158  1d23 0724                new-array  # TYPE [I
+0015a  0b4b 020d                aput
+0015c  2071 06e4 00df           invoke-static  # CALL Landroid/animation/PropertyValuesHolder;->ofInt(Ljava/lang/String;,[I)Landroid/animation/PropertyValuesHolder;
+0015f  080c                     move-result-object
+00160  0838 0007                if-eqz
+00162  0c38 0005                if-eqz
+00164  206e 06e7 00c8           invoke-virtual  # CALL Landroid/animation/PropertyValuesHolder;->setEvaluator(Landroid/animation/TypeEvaluator;)V
+00167  0811                     return-object
+
+### Lb/b/b/a/e;->a(Landroid/content/Context;,Landroid/content/res/Resources;,Landroid/content/res/Resources$Theme;,Landroid/util/AttributeSet;,Landroid/animation/ValueAnimator;,F,Lorg/xmlpull/v1/XmlPullParser;)Landroid/animation/ValueAnimator;  [access=0xa, regs=9, ins=7, outs=5, code_off=0xa0d1c]
+00000  0062 12e9                sget-object  # FIELD Lb/b/b/a/a;->g:[I
+00002  4071 230a 0543           invoke-static  # CALL Lb/b/c/a/d/g;->a(Landroid/content/res/Resources;,Landroid/content/res/Resources$Theme;,Landroid/util/AttributeSet;,[I)Landroid/content/res/TypedArray;
+00005  000c                     move-result-object
+00006  0162 12ed                sget-object  # FIELD Lb/b/b/a/a;->k:[I
+00008  4071 230a 1543           invoke-static  # CALL Lb/b/c/a/d/g;->a(Landroid/content/res/Resources;,Landroid/content/res/Resources$Theme;,Landroid/util/AttributeSet;,[I)Landroid/content/res/TypedArray;
+0000b  030c                     move-result-object
+0000c  0639 0007                if-nez
+0000e  0622 011b                new-instance  # TYPE Landroid/animation/ValueAnimator;
+00010  1070 06e8 0006           invoke-direct  # CALL Landroid/animation/ValueAnimator;-><init>()V
+00013  5871 2211 7306           invoke-static  # CALL Lb/b/b/a/e;->a(Landroid/animation/ValueAnimator;,Landroid/content/res/TypedArray;,Landroid/content/res/TypedArray;,F,Lorg/xmlpull/v1/XmlPullParser;)V
+00016  0412                     const/4
+00017  051a 1fe1                const-string  # STR "interpolator"
+00019  5471 2311 4580           invoke-static  # CALL Lb/b/c/a/d/g;->c(Landroid/content/res/TypedArray;,Lorg/xmlpull/v1/XmlPullParser;,Ljava/lang/String;,I,I)I
+0001c  040a                     move-result
+0001d  043d 0009                if-lez
+0001f  2071 21fe 0042           invoke-static  # CALL Lb/b/b/a/d;->a(Landroid/content/Context;,I)Landroid/view/animation/Interpolator;
+00022  020c                     move-result-object
+00023  206e 06ec 0026           invoke-virtual  # CALL Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+00026  106e 090a 0000           invoke-virtual  # CALL Landroid/content/res/TypedArray;->recycle()V
+00029  0338 0005                if-eqz
+0002b  106e 090a 0003           invoke-virtual  # CALL Landroid/content/res/TypedArray;->recycle()V
+0002e  0611                     return-object
+
+### Lb/b/b/a/e;->a(Landroid/animation/ValueAnimator;,Landroid/content/res/TypedArray;,I,F,Lorg/xmlpull/v1/XmlPullParser;)V  [access=0xa, regs=10, ins=5, outs=5, code_off=0xa0f94]
+00000  051f 0116                check-cast  # TYPE Landroid/animation/ObjectAnimator;
+00002  001a 2331                const-string  # STR "pathData"
+00004  1112                     const/4
+00005  4071 230c 1096           invoke-static  # CALL Lb/b/c/a/d/g;->a(Landroid/content/res/TypedArray;,Lorg/xmlpull/v1/XmlPullParser;,Ljava/lang/String;,I)Ljava/lang/String;
+00008  000c                     move-result-object
+00009  0038 003e                if-eqz
+0000b  2112                     const/4
+0000c  021a 23a0                const-string  # STR "propertyXName"
+0000e  4071 230c 1296           invoke-static  # CALL Lb/b/c/a/d/g;->a(Landroid/content/res/TypedArray;,Lorg/xmlpull/v1/XmlPullParser;,Ljava/lang/String;,I)Ljava/lang/String;
+00011  020c                     move-result-object
+00012  3312                     const/4
+00013  041a 23a1                const-string  # STR "propertyYName"
+00015  4071 230c 3496           invoke-static  # CALL Lb/b/c/a/d/g;->a(Landroid/content/res/TypedArray;,Lorg/xmlpull/v1/XmlPullParser;,Ljava/lang/String;,I)Ljava/lang/String;
+00018  090c                     move-result-object
+00019  1732 0003                if-eq
+0001b  4112                     const/4
+0001c  0239 0020                if-nez
+0001e  0938 0003                if-eqz
+00020  1c28                     goto
+00021  0522 042c                new-instance  # TYPE Landroid/view/InflateException;
+00023  0722 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00025  1070 2d35 0007           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00028  106e 08ff 0006           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getPositionDescription()Ljava/lang/String;
+0002b  060c                     move-result-object
+0002c  206e 2d3f 0067           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0002f  061a 0092                const-string  # STR " propertyXName or propertyYName is needed for PathData"
+00031  206e 2d3f 0067           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00034  106e 2d44 0007           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00037  060c                     move-result-object
+00038  2070 1c9b 0065           invoke-direct  # CALL Landroid/view/InflateException;-><init>(Ljava/lang/String;)V
+0003b  0527                     throw
+0003c  1071 2326 0000           invoke-static  # CALL Lb/b/c/b/b;->b(Ljava/lang/String;)Landroid/graphics/Path;
+0003f  060c                     move-result-object
+00040  0715 3f00                const/high16
+00042  78c8                     op_c8
+00043  5971 2212 2856           invoke-static  # CALL Lb/b/b/a/e;->a(Landroid/graphics/Path;,Landroid/animation/ObjectAnimator;,F,Ljava/lang/String;,Ljava/lang/String;)V
+00046  0b28                     goto
+00047  0712                     const/4
+00048  081a 239e                const-string  # STR "propertyName"
+0004a  4071 230c 7896           invoke-static  # CALL Lb/b/c/a/d/g;->a(Landroid/content/res/TypedArray;,Lorg/xmlpull/v1/XmlPullParser;,Ljava/lang/String;,I)Ljava/lang/String;
+0004d  060c                     move-result-object
+0004e  206e 06df 0065           invoke-virtual  # CALL Landroid/animation/ObjectAnimator;->setPropertyName(Ljava/lang/String;)V
+00051  000e                     return-void
+
+### Lb/b/b/a/e;->a(Landroid/animation/ValueAnimator;,Landroid/content/res/TypedArray;,Landroid/content/res/TypedArray;,F,Lorg/xmlpull/v1/XmlPullParser;)V  [access=0xa, regs=16, ins=5, outs=5, code_off=0xa0ec0]
+00000  1012                     const/4
+00001  011a 1b87                const-string  # STR "duration"
+00003  0213 012c                const/16
+00005  5271 230f 01fc           invoke-static  # CALL Lb/b/c/a/d/g;->b(Landroid/content/res/TypedArray;,Lorg/xmlpull/v1/XmlPullParser;,Ljava/lang/String;,I,I)I
+00008  010a                     move-result
+00009  1181                     op_81
+0000a  0312                     const/4
+0000b  041a 26f9                const-string  # STR "startOffset"
+0000d  2512                     const/4
+0000e  5371 230f 54fc           invoke-static  # CALL Lb/b/c/a/d/g;->b(Landroid/content/res/TypedArray;,Lorg/xmlpull/v1/XmlPullParser;,Ljava/lang/String;,I,I)I
+00011  040a                     move-result
+00012  4481                     op_81
+00013  4612                     const/4
+00014  071a 282f                const-string  # STR "valueType"
+00016  7812                     const/4
+00017  5671 230f 87fc           invoke-static  # CALL Lb/b/c/a/d/g;->b(Landroid/content/res/TypedArray;,Lorg/xmlpull/v1/XmlPullParser;,Ljava/lang/String;,I,I)I
+0001a  070a                     move-result
+0001b  081a 282c                const-string  # STR "valueFrom"
+0001d  2071 230e 008f           invoke-static  # CALL Lb/b/c/a/d/g;->a(Lorg/xmlpull/v1/XmlPullParser;,Ljava/lang/String;)Z
+00020  080a                     move-result
+00021  0838 0021                if-eqz
+00023  081a 282e                const-string  # STR "valueTo"
+00025  2071 230e 008f           invoke-static  # CALL Lb/b/c/a/d/g;->a(Lorg/xmlpull/v1/XmlPullParser;,Ljava/lang/String;)Z
+00028  080a                     move-result
+00029  0838 0019                if-eqz
+0002b  6812                     const/4
+0002c  5912                     const/4
+0002d  6733 0006                if-ne
+0002f  3071 2204 089c           invoke-static  # CALL Lb/b/b/a/e;->a(Landroid/content/res/TypedArray;,I,I)I
+00032  070a                     move-result
+00033  0a1a 0000                const-string  # STR ""
+00035  5a71 220e 897c           invoke-static  # CALL Lb/b/b/a/e;->a(Landroid/content/res/TypedArray;,I,I,I,Ljava/lang/String;)Landroid/animation/PropertyValuesHolder;
+00038  080c                     move-result-object
+00039  0838 0009                if-eqz
+0003b  0923 072e                new-array  # TYPE [Landroid/animation/PropertyValuesHolder;
+0003d  084d 0309                aput-object
+0003f  206e 06f0 009b           invoke-virtual  # CALL Landroid/animation/ValueAnimator;->setValues([Landroid/animation/PropertyValuesHolder;)V
+00042  306e 06eb 021b           invoke-virtual  # CALL Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+00045  306e 06ef 054b           invoke-virtual  # CALL Landroid/animation/ValueAnimator;->setStartDelay(J)V
+00048  3112                     const/4
+00049  021a 2431                const-string  # STR "repeatCount"
+0004b  5371 230f 12fc           invoke-static  # CALL Lb/b/c/a/d/g;->b(Landroid/content/res/TypedArray;,Lorg/xmlpull/v1/XmlPullParser;,Ljava/lang/String;,I,I)I
+0004e  010a                     move-result
+0004f  206e 06ed 001b           invoke-virtual  # CALL Landroid/animation/ValueAnimator;->setRepeatCount(I)V
+00052  011a 2432                const-string  # STR "repeatMode"
+00054  5071 230f 61fc           invoke-static  # CALL Lb/b/c/a/d/g;->b(Landroid/content/res/TypedArray;,Lorg/xmlpull/v1/XmlPullParser;,Ljava/lang/String;,I,I)I
+00057  0c0a                     move-result
+00058  206e 06ee 00cb           invoke-virtual  # CALL Landroid/animation/ValueAnimator;->setRepeatMode(I)V
+0005b  0d38 0005                if-eqz
+0005d  5f71 2210 e7db           invoke-static  # CALL Lb/b/b/a/e;->a(Landroid/animation/ValueAnimator;,Landroid/content/res/TypedArray;,I,F,Lorg/xmlpull/v1/XmlPullParser;)V
+00060  000e                     return-void
+
+### Lb/b/b/a/e;->a(Landroid/graphics/Path;,Landroid/animation/ObjectAnimator;,F,Ljava/lang/String;,Ljava/lang/String;)V  [access=0xa, regs=22, ins=5, outs=4, code_off=0xa1048]
+00000  0008 0011                op_08
+00002  0108 0012                op_08
+00004  0208 0014                op_08
+00006  0308 0015                op_08
+00008  0422 01ab                new-instance  # TYPE Landroid/graphics/PathMeasure;
+0000a  0512                     const/4
+0000b  3070 0988 0504           invoke-direct  # CALL Landroid/graphics/PathMeasure;-><init>(Landroid/graphics/Path;,Z)V
+0000e  0622 06c8                new-instance  # TYPE Ljava/util/ArrayList;
+00010  1070 2de7 0006           invoke-direct  # CALL Ljava/util/ArrayList;-><init>()V
+00013  0712                     const/4
+00014  1071 2c9b 0007           invoke-static  # CALL Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+00017  080c                     move-result-object
+00018  206e 2deb 0086           invoke-virtual  # CALL Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+0001b  7801                     op_01
+0001c  106e 0989 0004           invoke-virtual  # CALL Landroid/graphics/PathMeasure;->getLength()F
+0001f  090a                     move-result
+00020  98c6                     op_c6
+00021  1071 2c9b 0008           invoke-static  # CALL Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+00024  090c                     move-result-object
+00025  206e 2deb 0096           invoke-virtual  # CALL Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+00028  106e 098c 0004           invoke-virtual  # CALL Landroid/graphics/PathMeasure;->nextContour()Z
+0002b  090a                     move-result
+0002c  0939 fff0                if-nez
+0002e  0422 01ab                new-instance  # TYPE Landroid/graphics/PathMeasure;
+00030  3070 0988 0504           invoke-direct  # CALL Landroid/graphics/PathMeasure;-><init>(Landroid/graphics/Path;,Z)V
+00033  0013 0064                const/16
+00035  09a9 1308                op_a9
+00037  9987                     op_87
+00038  1a12                     const/4
+00039  a9b0                     op_b0
+0003a  2071 2ccf 0090           invoke-static  # CALL Ljava/lang/Math;->min(I,I)I
+0003d  000a                     move-result
+0003e  0923 0723                new-array  # TYPE [F
+00040  0b23 0723                new-array  # TYPE [F
+00042  2c12                     const/4
+00043  cd23 0723                new-array  # TYPE [F
+00045  0ed8 ff00                op_d8
+00047  ee82                     op_82
+00048  e8c9                     op_c9
+00049  5e01                     op_01
+0004a  ef01                     op_01
+0004b  0c12                     const/4
+0004c  0e35 0039                if-ge
+0004e  206e 2df0 00f6           invoke-virtual  # CALL Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+00051  100c                     move-result-object
+00052  101f 0667                check-cast  # TYPE Ljava/lang/Float;
+00054  0174 2c98 0010           invoke-virtual/range  # CALL Ljava/lang/Float;->floatValue()F
+00057  100a                     move-result
+00058  0aa7 1007                op_a7
+0005a  406e 098a cda4           invoke-virtual  # CALL Landroid/graphics/PathMeasure;->getPosTan(F,[F,[F)Z
+0005d  0a44 050d                aget
+0005f  0a4b 0e09                aput
+00061  1a12                     const/4
+00062  0c44 0a0d                aget
+00064  0c4b 0e0b                aput
+00066  87c6                     op_c6
+00067  0ad8 010f                op_d8
+00069  106e 2df8 0006           invoke-virtual  # CALL Ljava/util/ArrayList;->size()I
+0006c  0c0a                     move-result
+0006d  ca35 0014                if-ge
+0006f  206e 2df0 00a6           invoke-virtual  # CALL Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+00072  0c0c                     move-result-object
+00073  0c1f 0667                check-cast  # TYPE Ljava/lang/Float;
+00075  106e 2c98 000c           invoke-virtual  # CALL Ljava/lang/Float;->floatValue()F
+00078  0c0a                     move-result
+00079  0c2d 0c07                op_2d
+0007b  0c3d 0006                if-lez
+0007d  106e 098c 0004           invoke-virtual  # CALL Landroid/graphics/PathMeasure;->nextContour()Z
+00080  af01                     op_01
+00081  0ed8 010e                op_d8
+00083  1a12                     const/4
+00084  c728                     goto
+00085  0238 0007                if-eqz
+00087  2071 06e3 0092           invoke-static  # CALL Landroid/animation/PropertyValuesHolder;->ofFloat(Ljava/lang/String;,[F)Landroid/animation/PropertyValuesHolder;
+0008a  000c                     move-result-object
+0008b  0228                     goto
+0008c  c007                     op_07
+0008d  0338 0006                if-eqz
+0008f  2071 06e3 00b3           invoke-static  # CALL Landroid/animation/PropertyValuesHolder;->ofFloat(Ljava/lang/String;,[F)Landroid/animation/PropertyValuesHolder;
+00092  0c0c                     move-result-object
+00093  1212                     const/4
+00094  0039 000a                if-nez
+00096  2023 072e                new-array  # TYPE [Landroid/animation/PropertyValuesHolder;
+00098  0c4d 0500                aput-object
+0009a  206e 06e0 0001           invoke-virtual  # CALL Landroid/animation/ObjectAnimator;->setValues([Landroid/animation/PropertyValuesHolder;)V
+0009d  1528                     goto
+0009e  0c39 000a                if-nez
+000a0  2223 072e                new-array  # TYPE [Landroid/animation/PropertyValuesHolder;
+000a2  004d 0502                aput-object
+000a4  206e 06e0 0021           invoke-virtual  # CALL Landroid/animation/ObjectAnimator;->setValues([Landroid/animation/PropertyValuesHolder;)V
+000a7  0b28                     goto
+000a8  2312                     const/4
+000a9  3323 072e                new-array  # TYPE [Landroid/animation/PropertyValuesHolder;
+000ab  004d 0503                aput-object
+000ad  0c4d 0203                aput-object
+000af  206e 06e0 0031           invoke-virtual  # CALL Landroid/animation/ObjectAnimator;->setValues([Landroid/animation/PropertyValuesHolder;)V
+000b2  000e                     return-void
+
+### Lb/b/b/a/e;->a([Landroid/animation/Keyframe;,F,I,I)V  [access=0xa, regs=6, ins=4, outs=2, code_off=0xa0e7c]
+00000  0091 0405                int-sub
+00002  00d8 0200                op_d8
+00004  0082                     op_82
+00005  03c9                     op_c9
+00006  5436 0013                if-gt
+00008  0046 0402                aget-object
+0000a  01d8 ff04                op_d8
+0000c  0146 0102                aget-object
+0000e  106e 06cd 0001           invoke-virtual  # CALL Landroid/animation/Keyframe;->getFraction()F
+00011  010a                     move-result
+00012  31c6                     op_c6
+00013  206e 06d4 0010           invoke-virtual  # CALL Landroid/animation/Keyframe;->setFraction(F)V
+00016  04d8 0104                op_d8
+00018  ee28                     goto
+00019  000e                     return-void
+
+### Lb/b/b/a/e;->a(I)Z  [access=0xa, regs=2, ins=1, outs=0, code_off=0xa0d8c]
+00000  0013 001c                const/16
+00002  0134 0008                if-lt
+00004  0013 001f                const/16
+00006  0136 0004                if-gt
+00008  1112                     const/4
+00009  0228                     goto
+0000a  0112                     const/4
+0000b  010f                     return
+
+### Lb/b/b/a/e;->a(Landroid/content/Context;,Landroid/content/res/Resources;,Landroid/content/res/Resources$Theme;,Lorg/xmlpull/v1/XmlPullParser;,Landroid/util/AttributeSet;)[Landroid/animation/PropertyValuesHolder;  [access=0xa, regs=22, ins=5, outs=6, code_off=0xa0c0c]
+00000  0608 0014                op_08
+00002  0712                     const/4
+00003  7807                     op_07
+00004  0178 2f34 0014           invoke-interface/range  # CALL Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
+00007  000a                     move-result
+00008  0912                     const/4
+00009  3112                     const/4
+0000a  1032 0060                if-eq
+0000c  1a12                     const/4
+0000d  a032 005d                if-eq
+0000f  2212                     const/4
+00010  2032 0006                if-eq
+00012  0178 2f38 0014           invoke-interface/range  # CALL Lorg/xmlpull/v1/XmlPullParser;->next()I
+00015  ef28                     goto
+00016  0178 2f36 0014           invoke-interface/range  # CALL Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
+00019  000c                     move-result-object
+0001a  031a 239f                const-string  # STR "propertyValuesHolder"
+0001c  206e 2d03 0030           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+0001f  000a                     move-result
+00020  0038 0043                if-eqz
+00022  0062 12eb                sget-object  # FIELD Lb/b/b/a/a;->i:[I
+00024  0b08 0012                op_08
+00026  0c08 0013                op_08
+00028  0d08 0015                op_08
+0002a  4071 230a 0dcb           invoke-static  # CALL Lb/b/c/a/d/g;->a(Landroid/content/res/Resources;,Landroid/content/res/Resources$Theme;,Landroid/util/AttributeSet;,[I)Landroid/content/res/TypedArray;
+0002d  0e0c                     move-result-object
+0002e  001a 239e                const-string  # STR "propertyName"
+00030  4071 230c 106e           invoke-static  # CALL Lb/b/c/a/d/g;->a(Landroid/content/res/TypedArray;,Lorg/xmlpull/v1/XmlPullParser;,Ljava/lang/String;,I)Ljava/lang/String;
+00033  0f0c                     move-result-object
+00034  4012                     const/4
+00035  011a 282f                const-string  # STR "valueType"
+00037  5071 230f 216e           invoke-static  # CALL Lb/b/c/a/d/g;->b(Landroid/content/res/TypedArray;,Lorg/xmlpull/v1/XmlPullParser;,Ljava/lang/String;,I,I)I
+0003a  050a                     move-result
+0003b  0008 0011                op_08
+0003d  0108 0012                op_08
+0003f  0208 0013                op_08
+00041  0308 0014                op_08
+00043  f407                     op_07
+00044  1002 0005                op_02
+00046  0677 220d 0000           invoke-static/range  # CALL Lb/b/b/a/e;->a(Landroid/content/Context;,Landroid/content/res/Resources;,Landroid/content/res/Resources$Theme;,Lorg/xmlpull/v1/XmlPullParser;,Ljava/lang/String;,I)Landroid/animation/PropertyValuesHolder;
+00049  000c                     move-result-object
+0004a  0039 0008                if-nez
+0004c  0102 0010                op_02
+0004e  5f71 220e a91e           invoke-static  # CALL Lb/b/b/a/e;->a(Landroid/content/res/TypedArray;,I,I,I,Ljava/lang/String;)Landroid/animation/PropertyValuesHolder;
+00051  000c                     move-result-object
+00052  0038 000d                if-eqz
+00054  0839 0008                if-nez
+00056  0122 06c8                new-instance  # TYPE Ljava/util/ArrayList;
+00058  1070 2de7 0001           invoke-direct  # CALL Ljava/util/ArrayList;-><init>()V
+0005b  1807                     op_07
+0005c  206e 2deb 0008           invoke-virtual  # CALL Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+0005f  106e 090a 000e           invoke-virtual  # CALL Landroid/content/res/TypedArray;->recycle()V
+00062  b028                     goto
+00063  0b08 0012                op_08
+00065  0c08 0013                op_08
+00067  0d08 0015                op_08
+00069  a928                     goto
+0006a  0838 0015                if-eqz
+0006c  106e 2df8 0008           invoke-virtual  # CALL Ljava/util/ArrayList;->size()I
+0006f  000a                     move-result
+00070  0723 072e                new-array  # TYPE [Landroid/animation/PropertyValuesHolder;
+00072  0935 000d                if-ge
+00074  206e 2df0 0098           invoke-virtual  # CALL Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+00077  010c                     move-result-object
+00078  011f 0117                check-cast  # TYPE Landroid/animation/PropertyValuesHolder;
+0007a  014d 0907                aput-object
+0007c  09d8 0109                op_d8
+0007e  f428                     goto
+0007f  0711                     return-object

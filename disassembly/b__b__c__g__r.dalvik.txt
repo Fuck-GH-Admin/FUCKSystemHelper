@@ -1,0 +1,49 @@
+### Lb/b/c/g/r;-><clinit>()V  [access=0x10008, regs=3, ins=0, outs=3, code_off=0xbd75c]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0113 0019                const/16
+00004  1033 0014                if-ne
+00006  001c 044d                const-class  # TYPE Landroid/view/ViewConfiguration;
+00008  011a 1e4c                const-string  # STR "getScaledScrollFactor"
+0000a  0212                     const/4
+0000b  2223 075c                new-array  # TYPE [Ljava/lang/Class;
+0000d  306e 2c7a 0210           invoke-virtual  # CALL Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;,[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+00010  0828                     goto
+00011  001a 1649                const-string  # STR "ViewConfigCompat"
+00013  011a 06b9                const-string  # STR "Could not find method getScaledScrollFactor() on ViewConfiguration"
+00015  2071 1c5e 0010           invoke-static  # CALL Landroid/util/Log;->i(Ljava/lang/String;,Ljava/lang/String;)I
+00018  000e                     return-void
+
+### Lb/b/c/g/r;->a(Landroid/view/ViewConfiguration;)I  [access=0x9, regs=3, ins=1, outs=1, code_off=0xbd728]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0113 001c                const/16
+00004  1034 0007                if-lt
+00006  106e 1dd1 0002           invoke-virtual  # CALL Landroid/view/ViewConfiguration;->getScaledHoverSlop()I
+00009  020a                     move-result
+0000a  020f                     return
+0000b  106e 1dd4 0002           invoke-virtual  # CALL Landroid/view/ViewConfiguration;->getScaledTouchSlop()I
+0000e  020a                     move-result
+0000f  02db 0202                op_db
+00011  020f                     return
+
+### Lb/b/c/g/r;->a(Landroid/view/ViewConfiguration;,Landroid/content/Context;)Z  [access=0x9, regs=4, ins=2, outs=4, code_off=0xbd6cc]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0113 001c                const/16
+00004  1034 0007                if-lt
+00006  106e 1dd7 0002           invoke-virtual  # CALL Landroid/view/ViewConfiguration;->shouldShowMenuShortcutsWhenKeyboardPresent()Z
+00009  020a                     move-result
+0000a  020f                     return
+0000b  106e 0848 0003           invoke-virtual  # CALL Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+0000e  020c                     move-result-object
+0000f  031a 1ab3                const-string  # STR "config_showMenuShortcutsWhenKeyboardPresent"
+00011  001a 19da                const-string  # STR "bool"
+00013  011a 1903                const-string  # STR "android"
+00015  406e 08d1 1032           invoke-virtual  # CALL Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;,Ljava/lang/String;,Ljava/lang/String;)I
+00018  030a                     move-result
+00019  0338 000a                if-eqz
+0001b  206e 08c4 0032           invoke-virtual  # CALL Landroid/content/res/Resources;->getBoolean(I)Z
+0001e  020a                     move-result
+0001f  0238 0004                if-eqz
+00021  1212                     const/4
+00022  0228                     goto
+00023  0212                     const/4
+00024  020f                     return

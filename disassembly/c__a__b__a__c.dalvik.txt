@@ -1,0 +1,72 @@
+### Lc/a/b/a/c;->a([B,[B,I)V  [access=0x9, regs=5, ins=3, outs=5, code_off=0xf39ec]
+00000  043a 005d                if-ltz
+00002  0238 0053                if-eqz
+00004  2021                     array-length
+00005  0038 0050                if-eqz
+00007  0338 0046                if-eqz
+00009  3021                     array-length
+0000a  0038 0043                if-eqz
+0000c  2021                     array-length
+0000d  3121                     array-length
+0000e  1034 0027                if-lt
+00010  3021                     array-length
+00011  40b0                     op_b0
+00012  2121                     array-length
+00013  0134 0008                if-lt
+00015  3021                     array-length
+00016  0112                     const/4
+00017  5071 2d45 4213           invoke-static  # CALL Ljava/lang/System;->arraycopy(Ljava/lang/Object;,I,Ljava/lang/Object;,I,I)V
+0001a  000e                     return-void
+0001b  0422 0669                new-instance  # TYPE Ljava/lang/IllegalArgumentException;
+0001d  0022 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0001f  1070 2d35 0000           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00022  011a 26eb                const-string  # STR "start should be less than:"
+00024  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00027  2221                     array-length
+00028  3321                     array-length
+00029  32b1                     op_b1
+0002a  206e 2d3b 0020           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+0002d  106e 2d44 0000           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00030  020c                     move-result-object
+00031  2070 2c9f 0024           invoke-direct  # CALL Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+00034  0427                     throw
+00035  0222 0669                new-instance  # TYPE Ljava/lang/IllegalArgumentException;
+00037  0422 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00039  1070 2d35 0004           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0003c  001a 1b83                const-string  # STR "dst array length should be longer than:"
+0003e  206e 2d3f 0004           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00041  3321                     array-length
+00042  206e 2d3b 0034           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+00045  106e 2d44 0004           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00048  030c                     move-result-object
+00049  2070 2c9f 0032           invoke-direct  # CALL Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+0004c  0227                     throw
+0004d  0222 0669                new-instance  # TYPE Ljava/lang/IllegalArgumentException;
+0004f  031a 26e0                const-string  # STR "src array should not be null or empty"
+00051  2070 2c9f 0032           invoke-direct  # CALL Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+00054  0227                     throw
+00055  0222 0669                new-instance  # TYPE Ljava/lang/IllegalArgumentException;
+00057  031a 1b84                const-string  # STR "dst array should not be null or empty"
+00059  2070 2c9f 0032           invoke-direct  # CALL Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+0005c  0227                     throw
+0005d  0222 0669                new-instance  # TYPE Ljava/lang/IllegalArgumentException;
+0005f  031a 26ec                const-string  # STR "start should be more than zero!"
+00061  2070 2c9f 0032           invoke-direct  # CALL Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+00064  0227                     throw
+
+### Lc/a/b/a/c;->a([B,I)[B  [access=0x9, regs=3, ins=2, outs=2, code_off=0xf39a4]
+00000  0138 0014                if-eqz
+00002  1021                     array-length
+00003  0038 0011                if-eqz
+00005  023a 0007                if-ltz
+00007  2071 2dfc 0021           invoke-static  # CALL Ljava/util/Arrays;->copyOf([B,I)[B
+0000a  010c                     move-result-object
+0000b  0111                     return-object
+0000c  0122 0669                new-instance  # TYPE Ljava/lang/IllegalArgumentException;
+0000e  021a 20a8                const-string  # STR "length should be more than zero!"
+00010  2070 2c9f 0021           invoke-direct  # CALL Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+00013  0127                     throw
+00014  0122 0669                new-instance  # TYPE Ljava/lang/IllegalArgumentException;
+00016  021a 2306                const-string  # STR "original array should not be null or empty"
+00018  2070 2c9f 0021           invoke-direct  # CALL Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+0001b  0127                     throw

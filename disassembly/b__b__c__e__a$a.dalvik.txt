@@ -1,0 +1,624 @@
+### Lb/b/c/e/a$a;-><init>(Landroid/text/PrecomputedText$Params;)V  [access=0x10001, regs=3, ins=2, outs=1, code_off=0xb80a8]
+00000  1070 2ce0 0001           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  106e 1c03 0002           invoke-virtual  # CALL Landroid/text/PrecomputedText$Params;->getTextPaint()Landroid/text/TextPaint;
+00006  000c                     move-result-object
+00007  105b 139b                iput-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+00009  106e 1c02 0002           invoke-virtual  # CALL Landroid/text/PrecomputedText$Params;->getTextDirection()Landroid/text/TextDirectionHeuristic;
+0000c  000c                     move-result-object
+0000d  105b 139c                iput-object  # FIELD Lb/b/c/e/a$a;->b:Landroid/text/TextDirectionHeuristic;
+0000f  106e 1c00 0002           invoke-virtual  # CALL Landroid/text/PrecomputedText$Params;->getBreakStrategy()I
+00012  000a                     move-result
+00013  1059 139d                iput  # FIELD Lb/b/c/e/a$a;->c:I
+00015  106e 1c01 0002           invoke-virtual  # CALL Landroid/text/PrecomputedText$Params;->getHyphenationFrequency()I
+00018  000a                     move-result
+00019  1059 139e                iput  # FIELD Lb/b/c/e/a$a;->d:I
+0001b  125b 139f                iput-object  # FIELD Lb/b/c/e/a$a;->e:Landroid/text/PrecomputedText$Params;
+0001d  000e                     return-void
+
+### Lb/b/c/e/a$a;-><init>(Landroid/text/TextPaint;,Landroid/text/TextDirectionHeuristic;,I,I)V  [access=0x10000, regs=7, ins=5, outs=2, code_off=0xb80f4]
+00000  1070 2ce0 0002           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00005  0113 001c                const/16
+00007  1034 0018                if-lt
+00009  0022 03fc                new-instance  # TYPE Landroid/text/PrecomputedText$Params$Builder;
+0000b  2070 1bfa 0030           invoke-direct  # CALL Landroid/text/PrecomputedText$Params$Builder;-><init>(Landroid/text/TextPaint;)V
+0000e  206e 1bfc 0050           invoke-virtual  # CALL Landroid/text/PrecomputedText$Params$Builder;->setBreakStrategy(I)Landroid/text/PrecomputedText$Params$Builder;
+00011  000c                     move-result-object
+00012  206e 1bfd 0060           invoke-virtual  # CALL Landroid/text/PrecomputedText$Params$Builder;->setHyphenationFrequency(I)Landroid/text/PrecomputedText$Params$Builder;
+00015  000c                     move-result-object
+00016  206e 1bfe 0040           invoke-virtual  # CALL Landroid/text/PrecomputedText$Params$Builder;->setTextDirection(Landroid/text/TextDirectionHeuristic;)Landroid/text/PrecomputedText$Params$Builder;
+00019  000c                     move-result-object
+0001a  106e 1bfb 0000           invoke-virtual  # CALL Landroid/text/PrecomputedText$Params$Builder;->build()Landroid/text/PrecomputedText$Params;
+0001d  000c                     move-result-object
+0001e  0228                     goto
+0001f  0012                     const/4
+00020  205b 139f                iput-object  # FIELD Lb/b/c/e/a$a;->e:Landroid/text/PrecomputedText$Params;
+00022  235b 139b                iput-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+00024  245b 139c                iput-object  # FIELD Lb/b/c/e/a$a;->b:Landroid/text/TextDirectionHeuristic;
+00026  2559 139d                iput  # FIELD Lb/b/c/e/a$a;->c:I
+00028  2659 139e                iput  # FIELD Lb/b/c/e/a$a;->d:I
+0002a  000e                     return-void
+
+### Lb/b/c/e/a$a;->a()I  [access=0x1, regs=1, ins=1, outs=0, code_off=0xb79a0]
+00000  0052 139d                iget  # FIELD Lb/b/c/e/a$a;->c:I
+00002  000f                     return
+
+### Lb/b/c/e/a$a;->b()I  [access=0x1, regs=1, ins=1, outs=0, code_off=0xb79b8]
+00000  0052 139e                iget  # FIELD Lb/b/c/e/a$a;->d:I
+00002  000f                     return
+
+### Lb/b/c/e/a$a;->c()Landroid/text/TextDirectionHeuristic;  [access=0x1, regs=1, ins=1, outs=0, code_off=0xb7730]
+00000  0054 139c                iget-object  # FIELD Lb/b/c/e/a$a;->b:Landroid/text/TextDirectionHeuristic;
+00002  0011                     return-object
+
+### Lb/b/c/e/a$a;->d()Landroid/text/TextPaint;  [access=0x1, regs=1, ins=1, outs=0, code_off=0xb7748]
+00000  0054 139b                iget-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+00002  0011                     return-object
+
+### Lb/b/c/e/a$a;->equals(Ljava/lang/Object;)Z  [access=0x1, regs=6, ins=2, outs=2, code_off=0xb7760]
+00000  1012                     const/4
+00001  4533 0003                if-ne
+00003  000f                     return
+00004  0112                     const/4
+00005  0538 0111                if-eqz
+00007  5220 0506                instance-of  # TYPE Lb/b/c/e/a$a;
+00009  0239 0004                if-nez
+0000b  0029 010b                goto/16
+0000d  051f 0506                check-cast  # TYPE Lb/b/c/e/a$a;
+0000f  4254 139f                iget-object  # FIELD Lb/b/c/e/a$a;->e:Landroid/text/PrecomputedText$Params;
+00011  0238 0009                if-eqz
+00013  5454 139f                iget-object  # FIELD Lb/b/c/e/a$a;->e:Landroid/text/PrecomputedText$Params;
+00015  206e 1bff 0042           invoke-virtual  # CALL Landroid/text/PrecomputedText$Params;->equals(Ljava/lang/Object;)Z
+00018  040a                     move-result
+00019  040f                     return
+0001a  0260 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+0001c  0313 0017                const/16
+0001e  3234 0014                if-lt
+00020  4252 139d                iget  # FIELD Lb/b/c/e/a$a;->c:I
+00022  106e 23bf 0005           invoke-virtual  # CALL Lb/b/c/e/a$a;->a()I
+00025  030a                     move-result
+00026  3232 0003                if-eq
+00028  010f                     return
+00029  4252 139e                iget  # FIELD Lb/b/c/e/a$a;->d:I
+0002b  106e 23c0 0005           invoke-virtual  # CALL Lb/b/c/e/a$a;->b()I
+0002e  030a                     move-result
+0002f  3232 0003                if-eq
+00031  010f                     return
+00032  0260 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00034  0313 0012                const/16
+00036  3234 000b                if-lt
+00038  4254 139c                iget-object  # FIELD Lb/b/c/e/a$a;->b:Landroid/text/TextDirectionHeuristic;
+0003a  106e 23c1 0005           invoke-virtual  # CALL Lb/b/c/e/a$a;->c()Landroid/text/TextDirectionHeuristic;
+0003d  030c                     move-result-object
+0003e  3232 0003                if-eq
+00040  010f                     return
+00041  4254 139b                iget-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+00043  106e 1c2e 0002           invoke-virtual  # CALL Landroid/text/TextPaint;->getTextSize()F
+00046  020a                     move-result
+00047  106e 23c2 0005           invoke-virtual  # CALL Lb/b/c/e/a$a;->d()Landroid/text/TextPaint;
+0004a  030c                     move-result-object
+0004b  106e 1c2e 0003           invoke-virtual  # CALL Landroid/text/TextPaint;->getTextSize()F
+0004e  030a                     move-result
+0004f  022d 0302                op_2d
+00051  0238 0003                if-eqz
+00053  010f                     return
+00054  4254 139b                iget-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+00056  106e 1c2d 0002           invoke-virtual  # CALL Landroid/text/TextPaint;->getTextScaleX()F
+00059  020a                     move-result
+0005a  106e 23c2 0005           invoke-virtual  # CALL Lb/b/c/e/a$a;->d()Landroid/text/TextPaint;
+0005d  030c                     move-result-object
+0005e  106e 1c2d 0003           invoke-virtual  # CALL Landroid/text/TextPaint;->getTextScaleX()F
+00061  030a                     move-result
+00062  022d 0302                op_2d
+00064  0238 0003                if-eqz
+00066  010f                     return
+00067  4254 139b                iget-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+00069  106e 1c2f 0002           invoke-virtual  # CALL Landroid/text/TextPaint;->getTextSkewX()F
+0006c  020a                     move-result
+0006d  106e 23c2 0005           invoke-virtual  # CALL Lb/b/c/e/a$a;->d()Landroid/text/TextPaint;
+00070  030c                     move-result-object
+00071  106e 1c2f 0003           invoke-virtual  # CALL Landroid/text/TextPaint;->getTextSkewX()F
+00074  030a                     move-result
+00075  022d 0302                op_2d
+00077  0238 0003                if-eqz
+00079  010f                     return
+0007a  0260 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+0007c  0313 0015                const/16
+0007e  3234 002a                if-lt
+00080  4254 139b                iget-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+00082  106e 1c2a 0002           invoke-virtual  # CALL Landroid/text/TextPaint;->getLetterSpacing()F
+00085  020a                     move-result
+00086  106e 23c2 0005           invoke-virtual  # CALL Lb/b/c/e/a$a;->d()Landroid/text/TextPaint;
+00089  030c                     move-result-object
+0008a  106e 1c2a 0003           invoke-virtual  # CALL Landroid/text/TextPaint;->getLetterSpacing()F
+0008d  030a                     move-result
+0008e  022d 0302                op_2d
+00090  0238 0003                if-eqz
+00092  010f                     return
+00093  4254 139b                iget-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+00095  106e 1c26 0002           invoke-virtual  # CALL Landroid/text/TextPaint;->getFontFeatureSettings()Ljava/lang/String;
+00098  020c                     move-result-object
+00099  106e 23c2 0005           invoke-virtual  # CALL Lb/b/c/e/a$a;->d()Landroid/text/TextPaint;
+0009c  030c                     move-result-object
+0009d  106e 1c26 0003           invoke-virtual  # CALL Landroid/text/TextPaint;->getFontFeatureSettings()Ljava/lang/String;
+000a0  030c                     move-result-object
+000a1  2071 1c35 0032           invoke-static  # CALL Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;,Ljava/lang/CharSequence;)Z
+000a4  020a                     move-result
+000a5  0239 0003                if-nez
+000a7  010f                     return
+000a8  4254 139b                iget-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+000aa  106e 1c25 0002           invoke-virtual  # CALL Landroid/text/TextPaint;->getFlags()I
+000ad  020a                     move-result
+000ae  106e 23c2 0005           invoke-virtual  # CALL Lb/b/c/e/a$a;->d()Landroid/text/TextPaint;
+000b1  030c                     move-result-object
+000b2  106e 1c25 0003           invoke-virtual  # CALL Landroid/text/TextPaint;->getFlags()I
+000b5  030a                     move-result
+000b6  3232 0003                if-eq
+000b8  010f                     return
+000b9  0260 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+000bb  0313 0018                const/16
+000bd  3234 0017                if-lt
+000bf  4254 139b                iget-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+000c1  106e 1c2c 0002           invoke-virtual  # CALL Landroid/text/TextPaint;->getTextLocales()Landroid/os/LocaleList;
+000c4  020c                     move-result-object
+000c5  106e 23c2 0005           invoke-virtual  # CALL Lb/b/c/e/a$a;->d()Landroid/text/TextPaint;
+000c8  030c                     move-result-object
+000c9  106e 1c2c 0003           invoke-virtual  # CALL Landroid/text/TextPaint;->getTextLocales()Landroid/os/LocaleList;
+000cc  030c                     move-result-object
+000cd  206e 0ac7 0032           invoke-virtual  # CALL Landroid/os/LocaleList;->equals(Ljava/lang/Object;)Z
+000d0  020a                     move-result
+000d1  0239 001c                if-nez
+000d3  010f                     return
+000d4  0313 0011                const/16
+000d6  3234 0017                if-lt
+000d8  4254 139b                iget-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+000da  106e 1c2b 0002           invoke-virtual  # CALL Landroid/text/TextPaint;->getTextLocale()Ljava/util/Locale;
+000dd  020c                     move-result-object
+000de  106e 23c2 0005           invoke-virtual  # CALL Lb/b/c/e/a$a;->d()Landroid/text/TextPaint;
+000e1  030c                     move-result-object
+000e2  106e 1c2b 0003           invoke-virtual  # CALL Landroid/text/TextPaint;->getTextLocale()Ljava/util/Locale;
+000e5  030c                     move-result-object
+000e6  206e 2e60 0032           invoke-virtual  # CALL Ljava/util/Locale;->equals(Ljava/lang/Object;)Z
+000e9  020a                     move-result
+000ea  0239 0003                if-nez
+000ec  010f                     return
+000ed  4254 139b                iget-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+000ef  106e 1c30 0002           invoke-virtual  # CALL Landroid/text/TextPaint;->getTypeface()Landroid/graphics/Typeface;
+000f2  020c                     move-result-object
+000f3  0239 000d                if-nez
+000f5  106e 23c2 0005           invoke-virtual  # CALL Lb/b/c/e/a$a;->d()Landroid/text/TextPaint;
+000f8  040c                     move-result-object
+000f9  106e 1c30 0004           invoke-virtual  # CALL Landroid/text/TextPaint;->getTypeface()Landroid/graphics/Typeface;
+000fc  040c                     move-result-object
+000fd  0438 0018                if-eqz
+000ff  010f                     return
+00100  4454 139b                iget-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+00102  106e 1c30 0004           invoke-virtual  # CALL Landroid/text/TextPaint;->getTypeface()Landroid/graphics/Typeface;
+00105  040c                     move-result-object
+00106  106e 23c2 0005           invoke-virtual  # CALL Lb/b/c/e/a$a;->d()Landroid/text/TextPaint;
+00109  050c                     move-result-object
+0010a  106e 1c30 0005           invoke-virtual  # CALL Landroid/text/TextPaint;->getTypeface()Landroid/graphics/Typeface;
+0010d  050c                     move-result-object
+0010e  206e 09b0 0054           invoke-virtual  # CALL Landroid/graphics/Typeface;->equals(Ljava/lang/Object;)Z
+00111  040a                     move-result
+00112  0439 0003                if-nez
+00114  010f                     return
+00115  000f                     return
+00116  010f                     return
+
+### Lb/b/c/e/a$a;->hashCode()I  [access=0x1, regs=15, ins=1, outs=1, code_off=0xb79d0]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0113 000a                const/16
+00004  0213 000b                const/16
+00006  0313 0009                const/16
+00008  0413 0008                const/16
+0000a  7512                     const/4
+0000b  6612                     const/4
+0000c  5712                     const/4
+0000d  4812                     const/4
+0000e  3912                     const/4
+0000f  2a12                     const/4
+00010  1b12                     const/4
+00011  0c12                     const/4
+00012  0d13 0018                const/16
+00014  d034 0075                if-lt
+00016  2023 075d                new-array  # TYPE [Ljava/lang/Object;
+00018  e254 139b                iget-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+0001a  106e 1c2e 0002           invoke-virtual  # CALL Landroid/text/TextPaint;->getTextSize()F
+0001d  020a                     move-result
+0001e  1071 2c9b 0002           invoke-static  # CALL Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+00021  020c                     move-result-object
+00022  024d 0c00                aput-object
+00024  e254 139b                iget-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+00026  106e 1c2d 0002           invoke-virtual  # CALL Landroid/text/TextPaint;->getTextScaleX()F
+00029  020a                     move-result
+0002a  1071 2c9b 0002           invoke-static  # CALL Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+0002d  020c                     move-result-object
+0002e  024d 0b00                aput-object
+00030  e254 139b                iget-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+00032  106e 1c2f 0002           invoke-virtual  # CALL Landroid/text/TextPaint;->getTextSkewX()F
+00035  020a                     move-result
+00036  1071 2c9b 0002           invoke-static  # CALL Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+00039  020c                     move-result-object
+0003a  024d 0a00                aput-object
+0003c  e254 139b                iget-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+0003e  106e 1c2a 0002           invoke-virtual  # CALL Landroid/text/TextPaint;->getLetterSpacing()F
+00041  020a                     move-result
+00042  1071 2c9b 0002           invoke-static  # CALL Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+00045  020c                     move-result-object
+00046  024d 0900                aput-object
+00048  e254 139b                iget-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+0004a  106e 1c25 0002           invoke-virtual  # CALL Landroid/text/TextPaint;->getFlags()I
+0004d  020a                     move-result
+0004e  1071 2cae 0002           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+00051  020c                     move-result-object
+00052  024d 0800                aput-object
+00054  e254 139b                iget-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+00056  106e 1c2c 0002           invoke-virtual  # CALL Landroid/text/TextPaint;->getTextLocales()Landroid/os/LocaleList;
+00059  020c                     move-result-object
+0005a  024d 0700                aput-object
+0005c  e254 139b                iget-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+0005e  106e 1c30 0002           invoke-virtual  # CALL Landroid/text/TextPaint;->getTypeface()Landroid/graphics/Typeface;
+00061  020c                     move-result-object
+00062  024d 0600                aput-object
+00064  e254 139b                iget-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+00066  106e 1c31 0002           invoke-virtual  # CALL Landroid/text/TextPaint;->isElegantTextHeight()Z
+00069  020a                     move-result
+0006a  1071 2c67 0002           invoke-static  # CALL Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+0006d  020c                     move-result-object
+0006e  024d 0500                aput-object
+00070  e254 139c                iget-object  # FIELD Lb/b/c/e/a$a;->b:Landroid/text/TextDirectionHeuristic;
+00072  024d 0400                aput-object
+00074  e252 139d                iget  # FIELD Lb/b/c/e/a$a;->c:I
+00076  1071 2cae 0002           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+00079  020c                     move-result-object
+0007a  024d 0300                aput-object
+0007c  ee52 139e                iget  # FIELD Lb/b/c/e/a$a;->d:I
+0007e  1071 2cae 000e           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+00081  0e0c                     move-result-object
+00082  0e4d 0100                aput-object
+00084  1071 2483 0000           invoke-static  # CALL Lb/b/c/f/i;->a([Ljava/lang/Object;)I
+00087  0e0a                     move-result
+00088  0e0f                     return
+00089  0d13 0015                const/16
+0008b  d034 0075                if-lt
+0008d  2023 075d                new-array  # TYPE [Ljava/lang/Object;
+0008f  e254 139b                iget-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+00091  106e 1c2e 0002           invoke-virtual  # CALL Landroid/text/TextPaint;->getTextSize()F
+00094  020a                     move-result
+00095  1071 2c9b 0002           invoke-static  # CALL Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+00098  020c                     move-result-object
+00099  024d 0c00                aput-object
+0009b  e254 139b                iget-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+0009d  106e 1c2d 0002           invoke-virtual  # CALL Landroid/text/TextPaint;->getTextScaleX()F
+000a0  020a                     move-result
+000a1  1071 2c9b 0002           invoke-static  # CALL Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+000a4  020c                     move-result-object
+000a5  024d 0b00                aput-object
+000a7  e254 139b                iget-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+000a9  106e 1c2f 0002           invoke-virtual  # CALL Landroid/text/TextPaint;->getTextSkewX()F
+000ac  020a                     move-result
+000ad  1071 2c9b 0002           invoke-static  # CALL Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+000b0  020c                     move-result-object
+000b1  024d 0a00                aput-object
+000b3  e254 139b                iget-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+000b5  106e 1c2a 0002           invoke-virtual  # CALL Landroid/text/TextPaint;->getLetterSpacing()F
+000b8  020a                     move-result
+000b9  1071 2c9b 0002           invoke-static  # CALL Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+000bc  020c                     move-result-object
+000bd  024d 0900                aput-object
+000bf  e254 139b                iget-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+000c1  106e 1c25 0002           invoke-virtual  # CALL Landroid/text/TextPaint;->getFlags()I
+000c4  020a                     move-result
+000c5  1071 2cae 0002           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+000c8  020c                     move-result-object
+000c9  024d 0800                aput-object
+000cb  e254 139b                iget-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+000cd  106e 1c2b 0002           invoke-virtual  # CALL Landroid/text/TextPaint;->getTextLocale()Ljava/util/Locale;
+000d0  020c                     move-result-object
+000d1  024d 0700                aput-object
+000d3  e254 139b                iget-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+000d5  106e 1c30 0002           invoke-virtual  # CALL Landroid/text/TextPaint;->getTypeface()Landroid/graphics/Typeface;
+000d8  020c                     move-result-object
+000d9  024d 0600                aput-object
+000db  e254 139b                iget-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+000dd  106e 1c31 0002           invoke-virtual  # CALL Landroid/text/TextPaint;->isElegantTextHeight()Z
+000e0  020a                     move-result
+000e1  1071 2c67 0002           invoke-static  # CALL Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+000e4  020c                     move-result-object
+000e5  024d 0500                aput-object
+000e7  e254 139c                iget-object  # FIELD Lb/b/c/e/a$a;->b:Landroid/text/TextDirectionHeuristic;
+000e9  024d 0400                aput-object
+000eb  e252 139d                iget  # FIELD Lb/b/c/e/a$a;->c:I
+000ed  1071 2cae 0002           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+000f0  020c                     move-result-object
+000f1  024d 0300                aput-object
+000f3  ee52 139e                iget  # FIELD Lb/b/c/e/a$a;->d:I
+000f5  1071 2cae 000e           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+000f8  0e0c                     move-result-object
+000f9  0e4d 0100                aput-object
+000fb  1071 2483 0000           invoke-static  # CALL Lb/b/c/f/i;->a([Ljava/lang/Object;)I
+000fe  0e0a                     move-result
+000ff  0e0f                     return
+00100  0113 0012                const/16
+00102  1034 005d                if-lt
+00104  3023 075d                new-array  # TYPE [Ljava/lang/Object;
+00106  e154 139b                iget-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+00108  106e 1c2e 0001           invoke-virtual  # CALL Landroid/text/TextPaint;->getTextSize()F
+0010b  010a                     move-result
+0010c  1071 2c9b 0001           invoke-static  # CALL Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+0010f  010c                     move-result-object
+00110  014d 0c00                aput-object
+00112  e154 139b                iget-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+00114  106e 1c2d 0001           invoke-virtual  # CALL Landroid/text/TextPaint;->getTextScaleX()F
+00117  010a                     move-result
+00118  1071 2c9b 0001           invoke-static  # CALL Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+0011b  010c                     move-result-object
+0011c  014d 0b00                aput-object
+0011e  e154 139b                iget-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+00120  106e 1c2f 0001           invoke-virtual  # CALL Landroid/text/TextPaint;->getTextSkewX()F
+00123  010a                     move-result
+00124  1071 2c9b 0001           invoke-static  # CALL Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+00127  010c                     move-result-object
+00128  014d 0a00                aput-object
+0012a  e154 139b                iget-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+0012c  106e 1c25 0001           invoke-virtual  # CALL Landroid/text/TextPaint;->getFlags()I
+0012f  010a                     move-result
+00130  1071 2cae 0001           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+00133  010c                     move-result-object
+00134  014d 0900                aput-object
+00136  e154 139b                iget-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+00138  106e 1c2b 0001           invoke-virtual  # CALL Landroid/text/TextPaint;->getTextLocale()Ljava/util/Locale;
+0013b  010c                     move-result-object
+0013c  014d 0800                aput-object
+0013e  e154 139b                iget-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+00140  106e 1c30 0001           invoke-virtual  # CALL Landroid/text/TextPaint;->getTypeface()Landroid/graphics/Typeface;
+00143  010c                     move-result-object
+00144  014d 0700                aput-object
+00146  e154 139c                iget-object  # FIELD Lb/b/c/e/a$a;->b:Landroid/text/TextDirectionHeuristic;
+00148  014d 0600                aput-object
+0014a  e152 139d                iget  # FIELD Lb/b/c/e/a$a;->c:I
+0014c  1071 2cae 0001           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+0014f  010c                     move-result-object
+00150  014d 0500                aput-object
+00152  ee52 139e                iget  # FIELD Lb/b/c/e/a$a;->d:I
+00154  1071 2cae 000e           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+00157  0e0c                     move-result-object
+00158  0e4d 0400                aput-object
+0015a  1071 2483 0000           invoke-static  # CALL Lb/b/c/f/i;->a([Ljava/lang/Object;)I
+0015d  0e0a                     move-result
+0015e  0e0f                     return
+0015f  0113 0011                const/16
+00161  1034 005d                if-lt
+00163  3023 075d                new-array  # TYPE [Ljava/lang/Object;
+00165  e154 139b                iget-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+00167  106e 1c2e 0001           invoke-virtual  # CALL Landroid/text/TextPaint;->getTextSize()F
+0016a  010a                     move-result
+0016b  1071 2c9b 0001           invoke-static  # CALL Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+0016e  010c                     move-result-object
+0016f  014d 0c00                aput-object
+00171  e154 139b                iget-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+00173  106e 1c2d 0001           invoke-virtual  # CALL Landroid/text/TextPaint;->getTextScaleX()F
+00176  010a                     move-result
+00177  1071 2c9b 0001           invoke-static  # CALL Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+0017a  010c                     move-result-object
+0017b  014d 0b00                aput-object
+0017d  e154 139b                iget-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+0017f  106e 1c2f 0001           invoke-virtual  # CALL Landroid/text/TextPaint;->getTextSkewX()F
+00182  010a                     move-result
+00183  1071 2c9b 0001           invoke-static  # CALL Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+00186  010c                     move-result-object
+00187  014d 0a00                aput-object
+00189  e154 139b                iget-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+0018b  106e 1c25 0001           invoke-virtual  # CALL Landroid/text/TextPaint;->getFlags()I
+0018e  010a                     move-result
+0018f  1071 2cae 0001           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+00192  010c                     move-result-object
+00193  014d 0900                aput-object
+00195  e154 139b                iget-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+00197  106e 1c2b 0001           invoke-virtual  # CALL Landroid/text/TextPaint;->getTextLocale()Ljava/util/Locale;
+0019a  010c                     move-result-object
+0019b  014d 0800                aput-object
+0019d  e154 139b                iget-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+0019f  106e 1c30 0001           invoke-virtual  # CALL Landroid/text/TextPaint;->getTypeface()Landroid/graphics/Typeface;
+001a2  010c                     move-result-object
+001a3  014d 0700                aput-object
+001a5  e154 139c                iget-object  # FIELD Lb/b/c/e/a$a;->b:Landroid/text/TextDirectionHeuristic;
+001a7  014d 0600                aput-object
+001a9  e152 139d                iget  # FIELD Lb/b/c/e/a$a;->c:I
+001ab  1071 2cae 0001           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+001ae  010c                     move-result-object
+001af  014d 0500                aput-object
+001b1  ee52 139e                iget  # FIELD Lb/b/c/e/a$a;->d:I
+001b3  1071 2cae 000e           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+001b6  0e0c                     move-result-object
+001b7  0e4d 0400                aput-object
+001b9  1071 2483 0000           invoke-static  # CALL Lb/b/c/f/i;->a([Ljava/lang/Object;)I
+001bc  0e0a                     move-result
+001bd  0e0f                     return
+001be  4023 075d                new-array  # TYPE [Ljava/lang/Object;
+001c0  e154 139b                iget-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+001c2  106e 1c2e 0001           invoke-virtual  # CALL Landroid/text/TextPaint;->getTextSize()F
+001c5  010a                     move-result
+001c6  1071 2c9b 0001           invoke-static  # CALL Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+001c9  010c                     move-result-object
+001ca  014d 0c00                aput-object
+001cc  e154 139b                iget-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+001ce  106e 1c2d 0001           invoke-virtual  # CALL Landroid/text/TextPaint;->getTextScaleX()F
+001d1  010a                     move-result
+001d2  1071 2c9b 0001           invoke-static  # CALL Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+001d5  010c                     move-result-object
+001d6  014d 0b00                aput-object
+001d8  e154 139b                iget-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+001da  106e 1c2f 0001           invoke-virtual  # CALL Landroid/text/TextPaint;->getTextSkewX()F
+001dd  010a                     move-result
+001de  1071 2c9b 0001           invoke-static  # CALL Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+001e1  010c                     move-result-object
+001e2  014d 0a00                aput-object
+001e4  e154 139b                iget-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+001e6  106e 1c25 0001           invoke-virtual  # CALL Landroid/text/TextPaint;->getFlags()I
+001e9  010a                     move-result
+001ea  1071 2cae 0001           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+001ed  010c                     move-result-object
+001ee  014d 0900                aput-object
+001f0  e154 139b                iget-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+001f2  106e 1c30 0001           invoke-virtual  # CALL Landroid/text/TextPaint;->getTypeface()Landroid/graphics/Typeface;
+001f5  010c                     move-result-object
+001f6  014d 0800                aput-object
+001f8  e154 139c                iget-object  # FIELD Lb/b/c/e/a$a;->b:Landroid/text/TextDirectionHeuristic;
+001fa  014d 0700                aput-object
+001fc  e152 139d                iget  # FIELD Lb/b/c/e/a$a;->c:I
+001fe  1071 2cae 0001           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+00201  010c                     move-result-object
+00202  014d 0600                aput-object
+00204  ee52 139e                iget  # FIELD Lb/b/c/e/a$a;->d:I
+00206  1071 2cae 000e           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+00209  0e0c                     move-result-object
+0020a  0e4d 0500                aput-object
+0020c  1071 2483 0000           invoke-static  # CALL Lb/b/c/f/i;->a([Ljava/lang/Object;)I
+0020f  0e0a                     move-result
+00210  0e0f                     return
+
+### Lb/b/c/e/a$a;->toString()Ljava/lang/String;  [access=0x1, regs=5, ins=1, outs=2, code_off=0xb7e04]
+00000  0022 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00002  011a 28d3                const-string  # STR "{"
+00004  2070 2d37 0010           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+00007  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00009  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0000c  021a 2787                const-string  # STR "textSize="
+0000e  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00011  4254 139b                iget-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+00013  106e 1c2e 0002           invoke-virtual  # CALL Landroid/text/TextPaint;->getTextSize()F
+00016  020a                     move-result
+00017  206e 2d3a 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+0001a  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0001d  010c                     move-result-object
+0001e  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00021  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00023  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00026  021a 01e7                const-string  # STR ", textScaleX="
+00028  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0002b  4254 139b                iget-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+0002d  106e 1c2d 0002           invoke-virtual  # CALL Landroid/text/TextPaint;->getTextScaleX()F
+00030  020a                     move-result
+00031  206e 2d3a 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+00034  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00037  010c                     move-result-object
+00038  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0003b  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0003d  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00040  021a 01e8                const-string  # STR ", textSkewX="
+00042  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00045  4254 139b                iget-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+00047  106e 1c2f 0002           invoke-virtual  # CALL Landroid/text/TextPaint;->getTextSkewX()F
+0004a  020a                     move-result
+0004b  206e 2d3a 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+0004e  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00051  010c                     move-result-object
+00052  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00055  0160 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00057  0213 0015                const/16
+00059  2134 0036                if-lt
+0005b  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0005d  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00060  021a 01d5                const-string  # STR ", letterSpacing="
+00062  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00065  4254 139b                iget-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+00067  106e 1c2a 0002           invoke-virtual  # CALL Landroid/text/TextPaint;->getLetterSpacing()F
+0006a  020a                     move-result
+0006b  206e 2d3a 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+0006e  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00071  010c                     move-result-object
+00072  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00075  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00077  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0007a  021a 01d3                const-string  # STR ", elegantTextHeight="
+0007c  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0007f  4254 139b                iget-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+00081  106e 1c31 0002           invoke-virtual  # CALL Landroid/text/TextPaint;->isElegantTextHeight()Z
+00084  020a                     move-result
+00085  206e 2d40 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+00088  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0008b  010c                     move-result-object
+0008c  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0008f  0160 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00091  0213 0018                const/16
+00093  031a 01e6                const-string  # STR ", textLocale="
+00095  2134 001b                if-lt
+00097  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00099  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0009c  206e 2d3f 0031           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0009f  4254 139b                iget-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+000a1  106e 1c2c 0002           invoke-virtual  # CALL Landroid/text/TextPaint;->getTextLocales()Landroid/os/LocaleList;
+000a4  020c                     move-result-object
+000a5  206e 2d3e 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+000a8  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+000ab  010c                     move-result-object
+000ac  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000af  1428                     goto
+000b0  0213 0011                const/16
+000b2  2134 0011                if-lt
+000b4  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+000b6  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+000b9  206e 2d3f 0031           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000bc  4254 139b                iget-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+000be  106e 1c2b 0002           invoke-virtual  # CALL Landroid/text/TextPaint;->getTextLocale()Ljava/util/Locale;
+000c1  020c                     move-result-object
+000c2  e328                     goto
+000c3  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+000c5  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+000c8  021a 01e9                const-string  # STR ", typeface="
+000ca  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000cd  4254 139b                iget-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+000cf  106e 1c30 0002           invoke-virtual  # CALL Landroid/text/TextPaint;->getTypeface()Landroid/graphics/Typeface;
+000d2  020c                     move-result-object
+000d3  206e 2d3e 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+000d6  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+000d9  010c                     move-result-object
+000da  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000dd  0160 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+000df  0213 001a                const/16
+000e1  2134 001c                if-lt
+000e3  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+000e5  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+000e8  021a 01ea                const-string  # STR ", variationSettings="
+000ea  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000ed  4254 139b                iget-object  # FIELD Lb/b/c/e/a$a;->a:Landroid/text/TextPaint;
+000ef  106e 1c29 0002           invoke-virtual  # CALL Landroid/text/TextPaint;->getFontVariationSettings()Ljava/lang/String;
+000f2  020c                     move-result-object
+000f3  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000f6  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+000f9  010c                     move-result-object
+000fa  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000fd  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+000ff  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00102  021a 01e5                const-string  # STR ", textDir="
+00104  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00107  4254 139c                iget-object  # FIELD Lb/b/c/e/a$a;->b:Landroid/text/TextDirectionHeuristic;
+00109  206e 2d3e 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+0010c  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0010f  010c                     move-result-object
+00110  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00113  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00115  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00118  021a 01ce                const-string  # STR ", breakStrategy="
+0011a  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0011d  4252 139d                iget  # FIELD Lb/b/c/e/a$a;->c:I
+0011f  206e 2d3b 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+00122  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00125  010c                     move-result-object
+00126  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00129  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0012b  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0012e  021a 01d4                const-string  # STR ", hyphenationFrequency="
+00130  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00133  4452 139e                iget  # FIELD Lb/b/c/e/a$a;->d:I
+00135  206e 2d3b 0041           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+00138  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0013b  040c                     move-result-object
+0013c  206e 2d3f 0040           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0013f  041a 28df                const-string  # STR "}"
+00141  206e 2d3f 0040           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00144  106e 2d44 0000           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00147  040c                     move-result-object
+00148  0411                     return-object

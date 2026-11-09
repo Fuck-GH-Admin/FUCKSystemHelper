@@ -1,0 +1,127 @@
+### Lb/b/d/d/a;-><init>(Landroid/content/Context;)V  [access=0x10002, regs=2, ins=2, outs=1, code_off=0xcf300]
+00000  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  015b 1a6b                iput-object  # FIELD Lb/b/d/d/a;->a:Landroid/content/Context;
+00005  000e                     return-void
+
+### Lb/b/d/d/a;->a(Landroid/content/Context;)Lb/b/d/d/a;  [access=0x9, regs=2, ins=1, outs=2, code_off=0xcf0fc]
+00000  0022 0562                new-instance  # TYPE Lb/b/d/d/a;
+00002  2070 2661 0010           invoke-direct  # CALL Lb/b/d/d/a;-><init>(Landroid/content/Context;)V
+00005  0011                     return-object
+
+### Lb/b/d/d/a;->a()Z  [access=0x1, regs=2, ins=1, outs=1, code_off=0xcf118]
+00000  1154 1a6b                iget-object  # FIELD Lb/b/d/d/a;->a:Landroid/content/Context;
+00002  106e 083b 0001           invoke-virtual  # CALL Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
+00005  010c                     move-result-object
+00006  1152 050b                iget  # FIELD Landroid/content/pm/ApplicationInfo;->targetSdkVersion:I
+00008  0013 000e                const/16
+0000a  0135 0004                if-ge
+0000c  1112                     const/4
+0000d  0228                     goto
+0000e  0112                     const/4
+0000f  010f                     return
+
+### Lb/b/d/d/a;->b()I  [access=0x1, regs=1, ins=1, outs=1, code_off=0xcf1ac]
+00000  0054 1a6b                iget-object  # FIELD Lb/b/d/d/a;->a:Landroid/content/Context;
+00002  106e 0848 0000           invoke-virtual  # CALL Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+00005  000c                     move-result-object
+00006  106e 08cb 0000           invoke-virtual  # CALL Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+00009  000c                     move-result-object
+0000a  0052 124c                iget  # FIELD Landroid/util/DisplayMetrics;->widthPixels:I
+0000c  00db 0200                op_db
+0000e  000f                     return
+
+### Lb/b/d/d/a;->c()I  [access=0x1, regs=4, ins=1, outs=1, code_off=0xcf1dc]
+00000  3354 1a6b                iget-object  # FIELD Lb/b/d/d/a;->a:Landroid/content/Context;
+00002  106e 0848 0003           invoke-virtual  # CALL Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+00005  030c                     move-result-object
+00006  106e 08c7 0003           invoke-virtual  # CALL Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+00009  030c                     move-result-object
+0000a  3052 051a                iget  # FIELD Landroid/content/res/Configuration;->screenWidthDp:I
+0000c  3152 0518                iget  # FIELD Landroid/content/res/Configuration;->screenHeightDp:I
+0000e  3352 051b                iget  # FIELD Landroid/content/res/Configuration;->smallestScreenWidthDp:I
+00010  0213 0258                const/16
+00012  2336 002c                if-gt
+00014  2036 002a                if-gt
+00016  0313 02d0                const/16
+00018  0213 03c0                const/16
+0001a  2037 0004                if-le
+0001c  3136 0022                if-gt
+0001e  3037 0005                if-le
+00020  2137 0003                if-le
+00022  1c28                     goto
+00023  0313 01f4                const/16
+00025  3035 0017                if-ge
+00027  0313 01e0                const/16
+00029  0213 0280                const/16
+0002b  2037 0004                if-le
+0002d  3136 000f                if-gt
+0002f  3037 0005                if-le
+00031  2137 0003                if-le
+00033  0928                     goto
+00034  0313 0168                const/16
+00036  3034 0004                if-lt
+00038  3312                     const/4
+00039  030f                     return
+0003a  2312                     const/4
+0003b  030f                     return
+0003c  4312                     const/4
+0003d  030f                     return
+0003e  5312                     const/4
+0003f  030f                     return
+
+### Lb/b/d/d/a;->d()I  [access=0x1, regs=2, ins=1, outs=2, code_off=0xcf26c]
+00000  1154 1a6b                iget-object  # FIELD Lb/b/d/d/a;->a:Landroid/content/Context;
+00002  106e 0848 0001           invoke-virtual  # CALL Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+00005  010c                     move-result-object
+00006  0060 157c                sget  # FIELD Lb/b/d/a/d;->abc_action_bar_stacked_tab_max_width:I
+00008  206e 08ca 0001           invoke-virtual  # CALL Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+0000b  010a                     move-result
+0000c  010f                     return
+
+### Lb/b/d/d/a;->e()I  [access=0x1, regs=6, ins=1, outs=5, code_off=0xcf298]
+00000  5054 1a6b                iget-object  # FIELD Lb/b/d/d/a;->a:Landroid/content/Context;
+00002  0162 1858                sget-object  # FIELD Lb/b/d/a/j;->ActionBar:[I
+00004  0260 1410                sget  # FIELD Lb/b/d/a/a;->actionBarStyle:I
+00006  0312                     const/4
+00007  0412                     const/4
+00008  536e 0852 2140           invoke-virtual  # CALL Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;,[I,I,I)Landroid/content/res/TypedArray;
+0000b  000c                     move-result-object
+0000c  0160 1868                sget  # FIELD Lb/b/d/a/j;->ActionBar_height:I
+0000e  306e 08fe 0310           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getLayoutDimension(I,I)I
+00011  010a                     move-result
+00012  5254 1a6b                iget-object  # FIELD Lb/b/d/d/a;->a:Landroid/content/Context;
+00014  106e 0848 0002           invoke-virtual  # CALL Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+00017  020c                     move-result-object
+00018  106e 2668 0005           invoke-virtual  # CALL Lb/b/d/d/a;->f()Z
+0001b  050a                     move-result
+0001c  0539 000c                if-nez
+0001e  0560 157b                sget  # FIELD Lb/b/d/a/d;->abc_action_bar_stacked_max_height:I
+00020  206e 08ca 0052           invoke-virtual  # CALL Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+00023  050a                     move-result
+00024  2071 2ccf 0051           invoke-static  # CALL Ljava/lang/Math;->min(I,I)I
+00027  010a                     move-result
+00028  106e 090a 0000           invoke-virtual  # CALL Landroid/content/res/TypedArray;->recycle()V
+0002b  010f                     return
+
+### Lb/b/d/d/a;->f()Z  [access=0x1, regs=2, ins=1, outs=2, code_off=0xcf148]
+00000  1154 1a6b                iget-object  # FIELD Lb/b/d/d/a;->a:Landroid/content/Context;
+00002  106e 0848 0001           invoke-virtual  # CALL Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+00005  010c                     move-result-object
+00006  0060 151b                sget  # FIELD Lb/b/d/a/b;->abc_action_bar_embed_tabs:I
+00008  206e 08c4 0001           invoke-virtual  # CALL Landroid/content/res/Resources;->getBoolean(I)Z
+0000b  010a                     move-result
+0000c  010f                     return
+
+### Lb/b/d/d/a;->g()Z  [access=0x1, regs=4, ins=1, outs=1, code_off=0xcf174]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  1112                     const/4
+00003  0213 0013                const/16
+00005  2034 0003                if-lt
+00007  010f                     return
+00008  3354 1a6b                iget-object  # FIELD Lb/b/d/d/a;->a:Landroid/content/Context;
+0000a  1071 1dcf 0003           invoke-static  # CALL Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
+0000d  030c                     move-result-object
+0000e  106e 1dd6 0003           invoke-virtual  # CALL Landroid/view/ViewConfiguration;->hasPermanentMenuKey()Z
+00011  030a                     move-result
+00012  13b7                     op_b7
+00013  030f                     return

@@ -1,0 +1,968 @@
+### Lc/d/a/a/n;-><clinit>()V  [access=0x10008, regs=1, ins=0, outs=1, code_off=0x110cb0]
+00000  0022 05e4                new-instance  # TYPE Lc/d/a/a/n$a;
+00002  1070 2945 0000           invoke-direct  # CALL Lc/d/a/a/n$a;-><init>()V
+00005  0069 1ba4                sput-object  # FIELD Lc/d/a/a/n;->d:Lcom/mobiletools/systemhelper/control/f$a;
+00007  0022 05e5                new-instance  # TYPE Lc/d/a/a/n$b;
+00009  1070 2947 0000           invoke-direct  # CALL Lc/d/a/a/n$b;-><init>()V
+0000c  0069 1ba5                sput-object  # FIELD Lc/d/a/a/n;->e:Lcom/mobiletools/systemhelper/control/c$a;
+0000e  000e                     return-void
+
+### Lc/d/a/a/n;->a(Landroid/content/Context;)Lc/d/a/a/n$c;  [access=0x9, regs=3, ins=1, outs=2, code_off=0x110a3c]
+00000  1071 2922 0002           invoke-static  # CALL Lc/d/a/a/a;->e(Landroid/content/Context;)V
+00003  0262 1ba2                sget-object  # FIELD Lc/d/a/a/n;->b:Lc/d/a/a/n$c;
+00005  0238 0003                if-eqz
+00007  0211                     return-object
+00008  0262 1bb4                sget-object  # FIELD Lc/d/a/b/d;->d:Landroid/content/Context;
+0000a  0022 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0000c  1070 2d35 0000           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0000f  011a 2167                const-string  # STR "model is "
+00011  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00014  0162 0554                sget-object  # FIELD Landroid/os/Build;->MODEL:Ljava/lang/String;
+00016  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00019  106e 2d44 0000           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0001c  000c                     move-result-object
+0001d  2071 2986 0002           invoke-static  # CALL Lc/d/a/b/h;->a(Landroid/content/Context;,Ljava/lang/String;)V
+00020  0262 1ba1                sget-object  # FIELD Lc/d/a/a/n;->a:Ljava/util/Map;
+00022  0062 0554                sget-object  # FIELD Landroid/os/Build;->MODEL:Ljava/lang/String;
+00024  2072 2e69 0002           invoke-interface  # CALL Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+00027  020c                     move-result-object
+00028  021f 0683                check-cast  # TYPE Ljava/lang/String;
+0002a  0238 00b6                if-eqz
+0002c  001a 16c1                const-string  # STR "Xiaomi"
+0002e  206e 2d03 0002           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+00031  000a                     move-result
+00032  0038 0009                if-eqz
+00034  0222 05e2                new-instance  # TYPE Lc/d/a/a/l;
+00036  1070 293e 0002           invoke-direct  # CALL Lc/d/a/a/l;-><init>()V
+00039  0029 00c4                goto/16
+0003b  001a 12c9                const-string  # STR "OPPO"
+0003d  206e 2d03 0002           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+00040  000a                     move-result
+00041  0038 0009                if-eqz
+00043  0222 05da                new-instance  # TYPE Lc/d/a/a/d;
+00045  1070 2928 0002           invoke-direct  # CALL Lc/d/a/a/d;-><init>()V
+00048  0029 00b5                goto/16
+0004a  001a 2850                const-string  # STR "vivo"
+0004c  206e 2d04 0002           invoke-virtual  # CALL Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+0004f  000a                     move-result
+00050  0038 0009                if-eqz
+00052  0222 05e0                new-instance  # TYPE Lc/d/a/a/j;
+00054  1070 2936 0002           invoke-direct  # CALL Lc/d/a/a/j;-><init>()V
+00057  0029 00a6                goto/16
+00059  001a 24a1                const-string  # STR "samsung"
+0005b  206e 2d04 0002           invoke-virtual  # CALL Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+0005e  000a                     move-result
+0005f  0038 0009                if-eqz
+00061  0222 05de                new-instance  # TYPE Lc/d/a/a/h;
+00063  1070 2931 0002           invoke-direct  # CALL Lc/d/a/a/h;-><init>()V
+00066  0029 0097                goto/16
+00068  001a 23fb                const-string  # STR "realme"
+0006a  206e 2d04 0002           invoke-virtual  # CALL Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+0006d  000a                     move-result
+0006e  0038 0009                if-eqz
+00070  0222 05dd                new-instance  # TYPE Lc/d/a/a/g;
+00072  1070 292f 0002           invoke-direct  # CALL Lc/d/a/a/g;-><init>()V
+00075  0029 0088                goto/16
+00077  001a 170e                const-string  # STR "ZTE"
+00079  206e 2d04 0002           invoke-virtual  # CALL Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+0007c  000a                     move-result
+0007d  0038 0009                if-eqz
+0007f  0222 05e3                new-instance  # TYPE Lc/d/a/a/m;
+00081  1070 2943 0002           invoke-direct  # CALL Lc/d/a/a/m;-><init>()V
+00084  0029 0079                goto/16
+00086  001a 2203                const-string  # STR "nubia"
+00088  206e 2d04 0002           invoke-virtual  # CALL Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+0008b  000a                     move-result
+0008c  0038 0008                if-eqz
+0008e  0222 05d9                new-instance  # TYPE Lc/d/a/a/c;
+00090  1070 2926 0002           invoke-direct  # CALL Lc/d/a/a/c;-><init>()V
+00093  6a28                     goto
+00094  001a 12e7                const-string  # STR "OnePlus"
+00096  206e 2d04 0002           invoke-virtual  # CALL Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+00099  000a                     move-result
+0009a  0038 0008                if-eqz
+0009c  0222 05db                new-instance  # TYPE Lc/d/a/a/e;
+0009e  1070 292b 0002           invoke-direct  # CALL Lc/d/a/a/e;-><init>()V
+000a1  5c28                     goto
+000a2  001a 1074                const-string  # STR "Liantong"
+000a4  206e 2d04 0002           invoke-virtual  # CALL Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+000a7  000a                     move-result
+000a8  0038 0008                if-eqz
+000aa  0222 05d8                new-instance  # TYPE Lc/d/a/a/b;
+000ac  1070 2924 0002           invoke-direct  # CALL Lc/d/a/a/b;-><init>()V
+000af  4e28                     goto
+000b0  001a 144d                const-string  # STR "TDTECH"
+000b2  206e 2d04 0002           invoke-virtual  # CALL Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+000b5  000a                     move-result
+000b6  0038 0008                if-eqz
+000b8  0222 05df                new-instance  # TYPE Lc/d/a/a/i;
+000ba  1070 2934 0002           invoke-direct  # CALL Lc/d/a/a/i;-><init>()V
+000bd  4028                     goto
+000be  001a 1314                const-string  # STR "PTAC"
+000c0  206e 2d04 0002           invoke-virtual  # CALL Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+000c3  000a                     move-result
+000c4  0038 0008                if-eqz
+000c6  0222 05dc                new-instance  # TYPE Lc/d/a/a/f;
+000c8  1070 292d 0002           invoke-direct  # CALL Lc/d/a/a/f;-><init>()V
+000cb  3228                     goto
+000cc  001a 1662                const-string  # STR "WIKO"
+000ce  206e 2d04 0002           invoke-virtual  # CALL Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+000d1  020a                     move-result
+000d2  0238 0008                if-eqz
+000d4  0222 05e1                new-instance  # TYPE Lc/d/a/a/k;
+000d6  1070 293c 0002           invoke-direct  # CALL Lc/d/a/a/k;-><init>()V
+000d9  2428                     goto
+000da  0222 05d7                new-instance  # TYPE Lc/d/a/a/a;
+000dc  1070 2911 0002           invoke-direct  # CALL Lc/d/a/a/a;-><init>()V
+000df  1e28                     goto
+000e0  0222 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+000e2  1070 2d35 0002           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+000e5  001a 1e26                const-string  # STR "getReader error!! manufacture==null! model="
+000e7  206e 2d3f 0002           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000ea  0062 0554                sget-object  # FIELD Landroid/os/Build;->MODEL:Ljava/lang/String;
+000ec  206e 2d3f 0002           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000ef  106e 2d44 0002           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+000f2  020c                     move-result-object
+000f3  001a 0731                const-string  # STR "DeviceManager"
+000f5  2071 2988 0020           invoke-static  # CALL Lc/d/a/b/h;->b(Ljava/lang/String;,Ljava/lang/String;)V
+000f8  0222 05d7                new-instance  # TYPE Lc/d/a/a/a;
+000fa  1070 2911 0002           invoke-direct  # CALL Lc/d/a/a/a;-><init>()V
+000fd  0269 1ba2                sput-object  # FIELD Lc/d/a/a/n;->b:Lc/d/a/a/n$c;
+000ff  0262 1ba2                sget-object  # FIELD Lc/d/a/a/n;->b:Lc/d/a/a/n$c;
+00101  0211                     return-object
+
+### Lc/d/a/a/n;->a(Landroid/content/Context;,Ljava/lang/String;)Lcom/mobiletools/systemhelper/control/b;  [access=0x20009, regs=8, ins=2, outs=4, code_off=0x110750]
+00000  001c 05e7                const-class  # TYPE Lc/d/a/a/n;
+00002  001d                     monitor-enter
+00003  011a 0731                const-string  # STR "DeviceManager"
+00005  0222 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00007  1070 2d35 0002           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0000a  031a 1bb0                const-string  # STR "enter getCurDeviceInfo--RegType:"
+0000c  206e 2d3f 0032           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0000f  206e 2d3f 0072           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00012  106e 2d44 0002           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00015  020c                     move-result-object
+00016  2071 2987 0021           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+00019  0122 0620                new-instance  # TYPE Lcom/mobiletools/systemhelper/control/b;
+0001b  1070 2baa 0001           invoke-direct  # CALL Lcom/mobiletools/systemhelper/control/b;-><init>()V
+0001e  175b 1d26                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->K:Ljava/lang/String;
+00020  2071 2957 0016           invoke-static  # CALL Lc/d/a/a/n;->c(Landroid/content/Context;,Lcom/mobiletools/systemhelper/control/b;)V
+00023  106e 2d20 0007           invoke-virtual  # CALL Ljava/lang/String;->trim()Ljava/lang/String;
+00026  020c                     move-result-object
+00027  031a 1446                const-string  # STR "T"
+00029  206e 2d03 0032           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+0002c  020a                     move-result
+0002d  0238 0017                if-eqz
+0002f  2071 2951 0016           invoke-static  # CALL Lc/d/a/a/n;->a(Landroid/content/Context;,Lcom/mobiletools/systemhelper/control/b;)Z
+00032  020a                     move-result
+00033  0239 0017                if-nez
+00035  2071 2954 0016           invoke-static  # CALL Lc/d/a/a/n;->b(Landroid/content/Context;,Lcom/mobiletools/systemhelper/control/b;)Z
+00038  020a                     move-result
+00039  0239 0011                if-nez
+0003b  061a 0731                const-string  # STR "DeviceManager"
+0003d  071a 13d2                const-string  # STR "SIM not changed，not post！"
+0003f  2071 2987 0076           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+00042  001e                     monitor-exit
+00043  0111                     return-object
+00044  2071 2951 0016           invoke-static  # CALL Lc/d/a/a/n;->a(Landroid/content/Context;,Lcom/mobiletools/systemhelper/control/b;)Z
+00047  2071 2954 0016           invoke-static  # CALL Lc/d/a/a/n;->b(Landroid/content/Context;,Lcom/mobiletools/systemhelper/control/b;)Z
+0004a  1071 2950 0001           invoke-static  # CALL Lc/d/a/a/n;->a(Lcom/mobiletools/systemhelper/control/b;)V
+0004d  106e 2d20 0007           invoke-virtual  # CALL Ljava/lang/String;->trim()Ljava/lang/String;
+00050  020c                     move-result-object
+00051  031a 02c5                const-string  # STR "A"
+00053  206e 2d03 0032           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+00056  020a                     move-result
+00057  0238 001f                if-eqz
+00059  0763 1bb5                sget-boolean  # FIELD Lc/d/a/b/d;->e:Z
+0005b  0738 000e                if-eqz
+0005d  0722 0627                new-instance  # TYPE Lcom/mobiletools/systemhelper/control/f;
+0005f  0262 1ba4                sget-object  # FIELD Lc/d/a/a/n;->d:Lcom/mobiletools/systemhelper/control/f$a;
+00061  4070 2bbc 2167           invoke-direct  # CALL Lcom/mobiletools/systemhelper/control/f;-><init>(Landroid/content/Context;,Lcom/mobiletools/systemhelper/control/b;,Lcom/mobiletools/systemhelper/control/f$a;)V
+00064  106e 2d56 0007           invoke-virtual  # CALL Ljava/lang/Thread;->start()V
+00067  0029 00ec                goto/16
+00069  071a 0731                const-string  # STR "DeviceManager"
+0006b  021a 0809                const-string  # STR "GlobalSetting.isUserPermissionOpen is false,type A-appinfo is not post"
+0006d  2071 2987 0027           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+00070  0722 0628                new-instance  # TYPE Lcom/mobiletools/systemhelper/control/g;
+00072  3070 2bc2 0167           invoke-direct  # CALL Lcom/mobiletools/systemhelper/control/g;-><init>(Landroid/content/Context;,Lcom/mobiletools/systemhelper/control/b;)V
+00075  ef28                     goto
+00076  106e 2d20 0007           invoke-virtual  # CALL Ljava/lang/String;->trim()Ljava/lang/String;
+00079  020c                     move-result-object
+0007a  031a 1342                const-string  # STR "R"
+0007c  206e 2d03 0032           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+0007f  020a                     move-result
+00080  0238 0084                if-eqz
+00082  071a 0731                const-string  # STR "DeviceManager"
+00084  021a 2413                const-string  # STR "regtype R"
+00086  2071 2987 0027           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+00089  0762 1bd3                sget-object  # FIELD Lc/d/a/b/m;->c:Ljava/lang/String;
+0008b  0262 1bd2                sget-object  # FIELD Lc/d/a/b/m;->b:Ljava/lang/Integer;
+0008d  106e 2ca6 0002           invoke-virtual  # CALL Ljava/lang/Integer;->intValue()I
+00090  020a                     move-result
+00091  3071 29b6 0276           invoke-static  # CALL Lc/d/a/b/m;->a(Landroid/content/Context;,Ljava/lang/String;,I)Lc/d/a/b/m;
+00094  070c                     move-result-object
+00095  106e 29b9 0007           invoke-virtual  # CALL Lc/d/a/b/m;->b()Lorg/json/JSONArray;
+00098  020c                     move-result-object
+00099  031a 0731                const-string  # STR "DeviceManager"
+0009b  0422 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0009d  1070 2d35 0004           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+000a0  051a 26ad                const-string  # STR "signalJSONArray.length() : "
+000a2  206e 2d3f 0054           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000a5  106e 2f0d 0002           invoke-virtual  # CALL Lorg/json/JSONArray;->length()I
+000a8  050a                     move-result
+000a9  206e 2d3b 0054           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+000ac  106e 2d44 0004           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+000af  040c                     move-result-object
+000b0  2071 2987 0043           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+000b3  0238 0049                if-eqz
+000b5  106e 2f0d 0002           invoke-virtual  # CALL Lorg/json/JSONArray;->length()I
+000b8  030a                     move-result
+000b9  033d 0043                if-lez
+000bb  125b 1d2b                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->P:Lorg/json/JSONArray;
+000bd  106e 29b7 0007           invoke-virtual  # CALL Lc/d/a/b/m;->a()V
+000c0  106e 29ba 0007           invoke-virtual  # CALL Lc/d/a/b/m;->close()V
+000c3  071a 0731                const-string  # STR "DeviceManager"
+000c5  0322 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+000c7  1070 2d35 0003           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+000ca  041a 26ae                const-string  # STR "signalJSONArray>>>>>:"
+000cc  206e 2d3f 0043           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000cf  106e 2f10 0002           invoke-virtual  # CALL Lorg/json/JSONArray;->toString()Ljava/lang/String;
+000d2  020c                     move-result-object
+000d3  206e 2d3f 0023           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000d6  106e 2d44 0003           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+000d9  020c                     move-result-object
+000da  2071 2987 0027           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+000dd  0763 1bb3                sget-boolean  # FIELD Lc/d/a/b/d;->c:Z
+000df  0738 000f                if-eqz
+000e1  0763 1bb5                sget-boolean  # FIELD Lc/d/a/b/d;->e:Z
+000e3  0738 000b                if-eqz
+000e5  0722 0622                new-instance  # TYPE Lcom/mobiletools/systemhelper/control/c;
+000e7  0262 1ba5                sget-object  # FIELD Lc/d/a/a/n;->e:Lcom/mobiletools/systemhelper/control/c$a;
+000e9  4070 2bae 2167           invoke-direct  # CALL Lcom/mobiletools/systemhelper/control/c;-><init>(Landroid/content/Context;,Lcom/mobiletools/systemhelper/control/b;,Lcom/mobiletools/systemhelper/control/c$a;)V
+000ec  0029 ff78                goto/16
+000ee  071a 0731                const-string  # STR "DeviceManager"
+000f0  021a 080a                const-string  # STR "GlobalSetting.isUserPermissionOpen is false,type R-appinfo is not post"
+000f2  2071 2987 0027           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+000f5  0722 0628                new-instance  # TYPE Lcom/mobiletools/systemhelper/control/g;
+000f7  3070 2bc2 0167           invoke-direct  # CALL Lcom/mobiletools/systemhelper/control/g;-><init>(Landroid/content/Context;,Lcom/mobiletools/systemhelper/control/b;)V
+000fa  0029 ff6a                goto/16
+000fc  061a 0731                const-string  # STR "DeviceManager"
+000fe  071a 1b34                const-string  # STR "deviceinfo.siginfo 为空！ "
+00100  2071 2987 0076           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+00103  5028                     goto
+00104  106e 2d20 0007           invoke-virtual  # CALL Ljava/lang/String;->trim()Ljava/lang/String;
+00107  020c                     move-result-object
+00108  031a 040d                const-string  # STR "B"
+0010a  206e 2d03 0032           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+0010d  020a                     move-result
+0010e  0239 0026                if-nez
+00110  106e 2d20 0007           invoke-virtual  # CALL Ljava/lang/String;->trim()Ljava/lang/String;
+00113  020c                     move-result-object
+00114  031a 078b                const-string  # STR "F"
+00116  206e 2d03 0032           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+00119  020a                     move-result
+0011a  0239 001a                if-nez
+0011c  106e 2d20 0007           invoke-virtual  # CALL Ljava/lang/String;->trim()Ljava/lang/String;
+0011f  020c                     move-result-object
+00120  031a 13ac                const-string  # STR "S"
+00122  206e 2d03 0032           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+00125  020a                     move-result
+00126  0239 000e                if-nez
+00128  106e 2d20 0007           invoke-virtual  # CALL Ljava/lang/String;->trim()Ljava/lang/String;
+0012b  070c                     move-result-object
+0012c  021a 1446                const-string  # STR "T"
+0012e  206e 2d03 0027           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+00131  070a                     move-result
+00132  0738 0021                if-eqz
+00134  0763 1bb3                sget-boolean  # FIELD Lc/d/a/b/d;->c:Z
+00136  0738 000f                if-eqz
+00138  0763 1bb5                sget-boolean  # FIELD Lc/d/a/b/d;->e:Z
+0013a  0738 000b                if-eqz
+0013c  0722 0622                new-instance  # TYPE Lcom/mobiletools/systemhelper/control/c;
+0013e  0262 1ba5                sget-object  # FIELD Lc/d/a/a/n;->e:Lcom/mobiletools/systemhelper/control/c$a;
+00140  4070 2bae 2167           invoke-direct  # CALL Lcom/mobiletools/systemhelper/control/c;-><init>(Landroid/content/Context;,Lcom/mobiletools/systemhelper/control/b;,Lcom/mobiletools/systemhelper/control/c$a;)V
+00143  0029 ff21                goto/16
+00145  071a 0731                const-string  # STR "DeviceManager"
+00147  021a 0808                const-string  # STR "GlobalSetting.isUserPermissionOpen is false,B/F/S/Tdeviceinfo is not post"
+00149  2071 2987 0027           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+0014c  0722 0628                new-instance  # TYPE Lcom/mobiletools/systemhelper/control/g;
+0014e  3070 2bc2 0167           invoke-direct  # CALL Lcom/mobiletools/systemhelper/control/g;-><init>(Landroid/content/Context;,Lcom/mobiletools/systemhelper/control/b;)V
+00151  0029 ff13                goto/16
+00153  001e                     monitor-exit
+00154  0111                     return-object
+00155  060d                     op_0d
+00156  001e                     monitor-exit
+00157  0627                     throw
+
+### Lc/d/a/a/n;->a()Ljava/util/List;  [access=0x1008, regs=1, ins=0, outs=0, code_off=0x110c80]
+00000  0062 1ba3                sget-object  # FIELD Lc/d/a/a/n;->c:Ljava/util/List;
+00002  0011                     return-object
+
+### Lc/d/a/a/n;->a(Ljava/util/List;)Ljava/util/List;  [access=0x1008, regs=1, ins=1, outs=0, code_off=0x110c98]
+00000  0069 1ba3                sput-object  # FIELD Lc/d/a/a/n;->c:Ljava/util/List;
+00002  0011                     return-object
+
+### Lc/d/a/a/n;->a(Lcom/mobiletools/systemhelper/control/b;)V  [access=0x2000a, regs=15, ins=1, outs=3, code_off=0x110ff8]
+00000  001c 05e7                const-class  # TYPE Lc/d/a/a/n;
+00002  001d                     monitor-enter
+00003  e154 1d33                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->g:Ljava/lang/String;
+00005  0138 00ed                if-eqz
+00007  e154 1d3f                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->s:Ljava/lang/String;
+00009  0138 00e9                if-eqz
+0000b  e154 1d33                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->g:Ljava/lang/String;
+0000d  106e 2d0f 0001           invoke-virtual  # CALL Ljava/lang/String;->isEmpty()Z
+00010  010a                     move-result
+00011  0139 00e1                if-nez
+00013  e154 1d3f                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->s:Ljava/lang/String;
+00015  106e 2d0f 0001           invoke-virtual  # CALL Ljava/lang/String;->isEmpty()Z
+00018  010a                     move-result
+00019  0139 00d9                if-nez
+0001b  e154 1d33                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->g:Ljava/lang/String;
+0001d  e254 1d3f                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->s:Ljava/lang/String;
+0001f  206e 2d00 0021           invoke-virtual  # CALL Ljava/lang/String;->compareTo(Ljava/lang/String;)I
+00022  010a                     move-result
+00023  013d 00cf                if-lez
+00025  0122 0620                new-instance  # TYPE Lcom/mobiletools/systemhelper/control/b;
+00027  1070 2baa 0001           invoke-direct  # CALL Lcom/mobiletools/systemhelper/control/b;-><init>()V
+0002a  e254 1d33                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->g:Ljava/lang/String;
+0002c  125b 1d33                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->g:Ljava/lang/String;
+0002e  e254 1d34                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->h:Ljava/lang/String;
+00030  125b 1d34                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->h:Ljava/lang/String;
+00032  e254 1d35                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->i:Ljava/lang/String;
+00034  125b 1d35                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->i:Ljava/lang/String;
+00036  e254 1d36                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->j:Ljava/lang/String;
+00038  125b 1d36                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->j:Ljava/lang/String;
+0003a  e254 1d37                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->k:Ljava/lang/String;
+0003c  125b 1d37                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->k:Ljava/lang/String;
+0003e  e254 1d38                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->l:Ljava/lang/String;
+00040  125b 1d38                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->l:Ljava/lang/String;
+00042  e254 1d3a                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->n:Ljava/lang/String;
+00044  125b 1d3a                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->n:Ljava/lang/String;
+00046  e254 1d3b                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->o:Ljava/lang/String;
+00048  125b 1d3b                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->o:Ljava/lang/String;
+0004a  e254 1d39                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->m:Ljava/lang/String;
+0004c  125b 1d39                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->m:Ljava/lang/String;
+0004e  e254 1d3c                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->p:Ljava/lang/String;
+00050  125b 1d3c                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->p:Ljava/lang/String;
+00052  e254 1d3e                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->r:Ljava/lang/String;
+00054  125b 1d3e                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->r:Ljava/lang/String;
+00056  e254 1d3d                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->q:Ljava/lang/String;
+00058  125b 1d3d                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->q:Ljava/lang/String;
+0005a  e254 1d3f                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->s:Ljava/lang/String;
+0005c  125b 1d3f                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->s:Ljava/lang/String;
+0005e  e354 1d40                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->t:Ljava/lang/String;
+00060  135b 1d40                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->t:Ljava/lang/String;
+00062  e454 1d41                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->u:Ljava/lang/String;
+00064  145b 1d41                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->u:Ljava/lang/String;
+00066  e554 1d42                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->v:Ljava/lang/String;
+00068  155b 1d42                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->v:Ljava/lang/String;
+0006a  e654 1d43                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->w:Ljava/lang/String;
+0006c  165b 1d43                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->w:Ljava/lang/String;
+0006e  e754 1d44                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->x:Ljava/lang/String;
+00070  175b 1d44                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->x:Ljava/lang/String;
+00072  e854 1d46                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->z:Ljava/lang/String;
+00074  185b 1d46                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->z:Ljava/lang/String;
+00076  e954 1d1c                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->A:Ljava/lang/String;
+00078  195b 1d1c                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->A:Ljava/lang/String;
+0007a  ea54 1d45                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->y:Ljava/lang/String;
+0007c  1a5b 1d45                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->y:Ljava/lang/String;
+0007e  eb54 1d1d                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->B:Ljava/lang/String;
+00080  1b5b 1d1d                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->B:Ljava/lang/String;
+00082  ec54 1d1f                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->D:Ljava/lang/String;
+00084  1c5b 1d1f                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->D:Ljava/lang/String;
+00086  ed54 1d1e                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->C:Ljava/lang/String;
+00088  1d5b 1d1e                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->C:Ljava/lang/String;
+0008a  e25b 1d33                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->g:Ljava/lang/String;
+0008c  e35b 1d34                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->h:Ljava/lang/String;
+0008e  e45b 1d35                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->i:Ljava/lang/String;
+00090  e55b 1d36                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->j:Ljava/lang/String;
+00092  e65b 1d37                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->k:Ljava/lang/String;
+00094  e75b 1d38                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->l:Ljava/lang/String;
+00096  e85b 1d3a                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->n:Ljava/lang/String;
+00098  e95b 1d3b                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->o:Ljava/lang/String;
+0009a  ea5b 1d39                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->m:Ljava/lang/String;
+0009c  eb5b 1d3c                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->p:Ljava/lang/String;
+0009e  ec5b 1d3e                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->r:Ljava/lang/String;
+000a0  ed5b 1d3d                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->q:Ljava/lang/String;
+000a2  1254 1d33                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->g:Ljava/lang/String;
+000a4  e25b 1d3f                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->s:Ljava/lang/String;
+000a6  1254 1d34                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->h:Ljava/lang/String;
+000a8  e25b 1d40                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->t:Ljava/lang/String;
+000aa  1254 1d35                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->i:Ljava/lang/String;
+000ac  e25b 1d41                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->u:Ljava/lang/String;
+000ae  1254 1d36                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->j:Ljava/lang/String;
+000b0  e25b 1d42                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->v:Ljava/lang/String;
+000b2  1254 1d37                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->k:Ljava/lang/String;
+000b4  e25b 1d43                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->w:Ljava/lang/String;
+000b6  1254 1d38                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->l:Ljava/lang/String;
+000b8  e25b 1d44                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->x:Ljava/lang/String;
+000ba  1254 1d3a                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->n:Ljava/lang/String;
+000bc  e25b 1d46                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->z:Ljava/lang/String;
+000be  1254 1d3b                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->o:Ljava/lang/String;
+000c0  e25b 1d1c                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->A:Ljava/lang/String;
+000c2  1254 1d39                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->m:Ljava/lang/String;
+000c4  e25b 1d45                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->y:Ljava/lang/String;
+000c6  1254 1d3c                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->p:Ljava/lang/String;
+000c8  e25b 1d1d                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->B:Ljava/lang/String;
+000ca  1254 1d3e                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->r:Ljava/lang/String;
+000cc  e25b 1d1f                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->D:Ljava/lang/String;
+000ce  1154 1d3d                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->q:Ljava/lang/String;
+000d0  e15b 1d1e                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->C:Ljava/lang/String;
+000d2  e154 1d20                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->E:Ljava/lang/String;
+000d4  0138 001e                if-eqz
+000d6  e154 1d20                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->E:Ljava/lang/String;
+000d8  021a 022f                const-string  # STR "1"
+000da  206e 2d03 0021           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+000dd  010a                     move-result
+000de  0138 0007                if-eqz
+000e0  011a 023c                const-string  # STR "2"
+000e2  e15b 1d20                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->E:Ljava/lang/String;
+000e4  0e28                     goto
+000e5  e154 1d20                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->E:Ljava/lang/String;
+000e7  021a 023c                const-string  # STR "2"
+000e9  206e 2d03 0021           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+000ec  010a                     move-result
+000ed  0138 0005                if-eqz
+000ef  011a 022f                const-string  # STR "1"
+000f1  f128                     goto
+000f2  e154 1d35                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->i:Ljava/lang/String;
+000f4  6212                     const/4
+000f5  5312                     const/4
+000f6  0413 000a                const/16
+000f8  0512                     const/4
+000f9  0613 000b                const/16
+000fb  0138 00c1                if-eqz
+000fd  e154 1d34                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->h:Ljava/lang/String;
+000ff  0138 00bd                if-eqz
+00101  e154 1d35                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->i:Ljava/lang/String;
+00103  071a 0000                const-string  # STR ""
+00105  206e 2d03 0071           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+00108  010a                     move-result
+00109  0139 00b3                if-nez
+0010b  e154 1d35                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->i:Ljava/lang/String;
+0010d  106e 2d12 0001           invoke-virtual  # CALL Ljava/lang/String;->length()I
+00110  010a                     move-result
+00111  3134 00ab                if-lt
+00113  e154 1d34                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->h:Ljava/lang/String;
+00115  106e 2d12 0001           invoke-virtual  # CALL Ljava/lang/String;->length()I
+00118  010a                     move-result
+00119  2134 00a3                if-lt
+0011b  e154 1d35                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->i:Ljava/lang/String;
+0011d  1071 299d 0001           invoke-static  # CALL Lc/d/a/b/l;->b(Ljava/lang/String;)Ljava/lang/Boolean;
+00120  010c                     move-result-object
+00121  106e 2c65 0001           invoke-virtual  # CALL Ljava/lang/Boolean;->booleanValue()Z
+00124  010a                     move-result
+00125  0139 0097                if-nez
+00127  e154 1d35                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->i:Ljava/lang/String;
+00129  106e 2d12 0001           invoke-virtual  # CALL Ljava/lang/String;->length()I
+0012c  010a                     move-result
+0012d  6134 003d                if-lt
+0012f  e154 1d34                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->h:Ljava/lang/String;
+00131  106e 2d12 0001           invoke-virtual  # CALL Ljava/lang/String;->length()I
+00134  010a                     move-result
+00135  6134 0035                if-lt
+00137  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00139  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0013c  e754 1d34                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->h:Ljava/lang/String;
+0013e  306e 2d1a 0457           invoke-virtual  # CALL Ljava/lang/String;->substring(I,I)Ljava/lang/String;
+00141  070c                     move-result-object
+00142  206e 2d3f 0071           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00145  071a 01bc                const-string  # STR "**********"
+00147  206e 2d3f 0071           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0014a  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0014d  010c                     move-result-object
+0014e  e15b 1d34                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->h:Ljava/lang/String;
+00150  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00152  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00155  e754 1d35                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->i:Ljava/lang/String;
+00157  306e 2d1a 0457           invoke-virtual  # CALL Ljava/lang/String;->substring(I,I)Ljava/lang/String;
+0015a  070c                     move-result-object
+0015b  206e 2d3f 0071           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0015e  071a 01bb                const-string  # STR "*****"
+00160  206e 2d3f 0071           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00163  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00166  010c                     move-result-object
+00167  e15b 1d35                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->i:Ljava/lang/String;
+00169  4328                     goto
+0016a  e154 1d34                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->h:Ljava/lang/String;
+0016c  106e 2d12 0001           invoke-virtual  # CALL Ljava/lang/String;->length()I
+0016f  010a                     move-result
+00170  6134 001c                if-lt
+00172  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00174  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00177  e754 1d34                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->h:Ljava/lang/String;
+00179  306e 2d1a 0457           invoke-virtual  # CALL Ljava/lang/String;->substring(I,I)Ljava/lang/String;
+0017c  070c                     move-result-object
+0017d  206e 2d3f 0071           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00180  071a 01bc                const-string  # STR "**********"
+00182  206e 2d3f 0071           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00185  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00188  010c                     move-result-object
+00189  e15b 1d34                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->h:Ljava/lang/String;
+0018b  2128                     goto
+0018c  e154 1d35                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->i:Ljava/lang/String;
+0018e  106e 2d12 0001           invoke-virtual  # CALL Ljava/lang/String;->length()I
+00191  010a                     move-result
+00192  6134 001a                if-lt
+00194  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00196  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00199  e754 1d35                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->i:Ljava/lang/String;
+0019b  306e 2d1a 0457           invoke-virtual  # CALL Ljava/lang/String;->substring(I,I)Ljava/lang/String;
+0019e  070c                     move-result-object
+0019f  206e 2d3f 0071           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+001a2  071a 01bb                const-string  # STR "*****"
+001a4  206e 2d3f 0071           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+001a7  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+001aa  010c                     move-result-object
+001ab  bc28                     goto
+001ac  e154 1d3a                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->n:Ljava/lang/String;
+001ae  1071 2989 0001           invoke-static  # CALL Lc/d/a/b/i;->a(Ljava/lang/String;)Ljava/lang/String;
+001b1  010c                     move-result-object
+001b2  e15b 1d3a                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->n:Ljava/lang/String;
+001b4  e154 1d39                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->m:Ljava/lang/String;
+001b6  1071 2989 0001           invoke-static  # CALL Lc/d/a/b/i;->a(Ljava/lang/String;)Ljava/lang/String;
+001b9  010c                     move-result-object
+001ba  e15b 1d39                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->m:Ljava/lang/String;
+001bc  e154 1d41                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->u:Ljava/lang/String;
+001be  0138 00cd                if-eqz
+001c0  e154 1d40                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->t:Ljava/lang/String;
+001c2  0138 00c9                if-eqz
+001c4  e154 1d41                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->u:Ljava/lang/String;
+001c6  071a 0000                const-string  # STR ""
+001c8  206e 2d03 0071           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+001cb  010a                     move-result
+001cc  0139 00bf                if-nez
+001ce  e154 1d41                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->u:Ljava/lang/String;
+001d0  106e 2d12 0001           invoke-virtual  # CALL Ljava/lang/String;->length()I
+001d3  010a                     move-result
+001d4  3134 00b7                if-lt
+001d6  e154 1d40                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->t:Ljava/lang/String;
+001d8  106e 2d12 0001           invoke-virtual  # CALL Ljava/lang/String;->length()I
+001db  010a                     move-result
+001dc  2134 00af                if-lt
+001de  e154 1d41                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->u:Ljava/lang/String;
+001e0  1071 299d 0001           invoke-static  # CALL Lc/d/a/b/l;->b(Ljava/lang/String;)Ljava/lang/Boolean;
+001e3  010c                     move-result-object
+001e4  106e 2c65 0001           invoke-virtual  # CALL Ljava/lang/Boolean;->booleanValue()Z
+001e7  010a                     move-result
+001e8  0139 00a3                if-nez
+001ea  e154 1d41                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->u:Ljava/lang/String;
+001ec  106e 2d12 0001           invoke-virtual  # CALL Ljava/lang/String;->length()I
+001ef  010a                     move-result
+001f0  6134 003d                if-lt
+001f2  e154 1d40                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->t:Ljava/lang/String;
+001f4  106e 2d12 0001           invoke-virtual  # CALL Ljava/lang/String;->length()I
+001f7  010a                     move-result
+001f8  6134 0035                if-lt
+001fa  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+001fc  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+001ff  e254 1d40                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->t:Ljava/lang/String;
+00201  306e 2d1a 0452           invoke-virtual  # CALL Ljava/lang/String;->substring(I,I)Ljava/lang/String;
+00204  020c                     move-result-object
+00205  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00208  021a 01bc                const-string  # STR "**********"
+0020a  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0020d  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00210  010c                     move-result-object
+00211  e15b 1d40                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->t:Ljava/lang/String;
+00213  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00215  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00218  e254 1d41                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->u:Ljava/lang/String;
+0021a  306e 2d1a 0452           invoke-virtual  # CALL Ljava/lang/String;->substring(I,I)Ljava/lang/String;
+0021d  020c                     move-result-object
+0021e  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00221  021a 01bb                const-string  # STR "*****"
+00223  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00226  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00229  010c                     move-result-object
+0022a  e15b 1d41                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->u:Ljava/lang/String;
+0022c  4328                     goto
+0022d  e154 1d40                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->t:Ljava/lang/String;
+0022f  106e 2d12 0001           invoke-virtual  # CALL Ljava/lang/String;->length()I
+00232  010a                     move-result
+00233  6134 001c                if-lt
+00235  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00237  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0023a  e254 1d40                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->t:Ljava/lang/String;
+0023c  306e 2d1a 0452           invoke-virtual  # CALL Ljava/lang/String;->substring(I,I)Ljava/lang/String;
+0023f  020c                     move-result-object
+00240  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00243  021a 01bc                const-string  # STR "**********"
+00245  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00248  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0024b  010c                     move-result-object
+0024c  e15b 1d40                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->t:Ljava/lang/String;
+0024e  2128                     goto
+0024f  e154 1d41                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->u:Ljava/lang/String;
+00251  106e 2d12 0001           invoke-virtual  # CALL Ljava/lang/String;->length()I
+00254  010a                     move-result
+00255  6134 001a                if-lt
+00257  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00259  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0025c  e254 1d41                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->u:Ljava/lang/String;
+0025e  306e 2d1a 0452           invoke-virtual  # CALL Ljava/lang/String;->substring(I,I)Ljava/lang/String;
+00261  020c                     move-result-object
+00262  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00265  021a 01bb                const-string  # STR "*****"
+00267  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0026a  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0026d  010c                     move-result-object
+0026e  bc28                     goto
+0026f  e154 1d46                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->z:Ljava/lang/String;
+00271  1071 2989 0001           invoke-static  # CALL Lc/d/a/b/i;->a(Ljava/lang/String;)Ljava/lang/String;
+00274  010c                     move-result-object
+00275  e15b 1d46                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->z:Ljava/lang/String;
+00277  e154 1d45                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->y:Ljava/lang/String;
+00279  1071 2989 0001           invoke-static  # CALL Lc/d/a/b/i;->a(Ljava/lang/String;)Ljava/lang/String;
+0027c  010c                     move-result-object
+0027d  e15b 1d45                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->y:Ljava/lang/String;
+0027f  0c28                     goto
+00280  0e0d                     op_0d
+00281  011a 0731                const-string  # STR "DeviceManager"
+00283  021a 1bc9                const-string  # STR "exception === sortAndAnonymousSubscriber"
+00285  2071 2988 0021           invoke-static  # CALL Lc/d/a/b/h;->b(Ljava/lang/String;,Ljava/lang/String;)V
+00288  106e 2c96 000e           invoke-virtual  # CALL Ljava/lang/Exception;->printStackTrace()V
+0028b  001e                     monitor-exit
+0028c  000e                     return-void
+0028d  0e0d                     op_0d
+0028e  001e                     monitor-exit
+0028f  0e27                     throw
+
+### Lc/d/a/a/n;->a(Landroid/content/Context;,Lcom/mobiletools/systemhelper/control/b;)Z  [access=0x2000a, regs=8, ins=2, outs=3, code_off=0x110508]
+00000  001c 05e7                const-class  # TYPE Lc/d/a/a/n;
+00002  001d                     monitor-enter
+00003  011a 1f9a                const-string  # STR "iccid1"
+00005  0212                     const/4
+00006  3071 2996 0216           invoke-static  # CALL Lc/d/a/b/l;->a(Landroid/content/Context;,Ljava/lang/String;,Ljava/lang/String;)Ljava/lang/String;
+00009  010c                     move-result-object
+0000a  1212                     const/4
+0000b  0138 0039                if-eqz
+0000d  106e 2d0f 0001           invoke-virtual  # CALL Ljava/lang/String;->isEmpty()Z
+00010  030a                     move-result
+00011  0339 0033                if-nez
+00013  7354 1d34                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->h:Ljava/lang/String;
+00015  206e 2d03 0031           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+00018  030a                     move-result
+00019  0339 0060                if-nez
+0001b  031a 0731                const-string  # STR "DeviceManager"
+0001d  0422 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0001f  1070 2d35 0004           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00022  051a 13d3                const-string  # STR "SIM1 Changed,old iccid:"
+00024  206e 2d3f 0054           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00027  206e 2d3f 0014           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0002a  011a 01dd                const-string  # STR ", new iccid:"
+0002c  206e 2d3f 0014           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0002f  7154 1d34                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->h:Ljava/lang/String;
+00031  206e 2d3f 0014           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00034  106e 2d44 0004           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00037  010c                     move-result-object
+00038  2071 2987 0013           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+0003b  011a 1f9a                const-string  # STR "iccid1"
+0003d  7754 1d34                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->h:Ljava/lang/String;
+0003f  3071 29a3 0716           invoke-static  # CALL Lc/d/a/b/l;->b(Landroid/content/Context;,Ljava/lang/String;,Ljava/lang/String;)V
+00042  001e                     monitor-exit
+00043  020f                     return
+00044  7354 1d34                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->h:Ljava/lang/String;
+00046  0338 0033                if-eqz
+00048  7354 1d34                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->h:Ljava/lang/String;
+0004a  106e 2d0f 0003           invoke-virtual  # CALL Ljava/lang/String;->isEmpty()Z
+0004d  030a                     move-result
+0004e  0339 002b                if-nez
+00050  031a 0731                const-string  # STR "DeviceManager"
+00052  0422 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00054  1070 2d35 0004           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00057  051a 13d3                const-string  # STR "SIM1 Changed,old iccid:"
+00059  206e 2d3f 0054           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0005c  206e 2d3f 0014           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0005f  011a 01dd                const-string  # STR ", new iccid:"
+00061  206e 2d3f 0014           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00064  7154 1d34                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->h:Ljava/lang/String;
+00066  206e 2d3f 0014           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00069  106e 2d44 0004           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0006c  010c                     move-result-object
+0006d  2071 2987 0013           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+00070  011a 1f9a                const-string  # STR "iccid1"
+00072  7754 1d34                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->h:Ljava/lang/String;
+00074  3071 29a3 0716           invoke-static  # CALL Lc/d/a/b/l;->b(Landroid/content/Context;,Ljava/lang/String;,Ljava/lang/String;)V
+00077  001e                     monitor-exit
+00078  020f                     return
+00079  0612                     const/4
+0007a  001e                     monitor-exit
+0007b  060f                     return
+0007c  060d                     op_0d
+0007d  001e                     monitor-exit
+0007e  0627                     throw
+
+### Lc/d/a/a/n;->b()Lcom/mobiletools/systemhelper/control/c$a;  [access=0x1008, regs=1, ins=0, outs=0, code_off=0x110a24]
+00000  0062 1ba5                sget-object  # FIELD Lc/d/a/a/n;->e:Lcom/mobiletools/systemhelper/control/c$a;
+00002  0011                     return-object
+
+### Lc/d/a/a/n;->b(Landroid/content/Context;)Z  [access=0x9, regs=3, ins=1, outs=2, code_off=0x1104d8]
+00000  0012                     const/4
+00001  0239 0003                if-nez
+00003  000f                     return
+00004  1071 294c 0002           invoke-static  # CALL Lc/d/a/a/n;->a(Landroid/content/Context;)Lc/d/a/a/n$c;
+00007  010c                     move-result-object
+00008  0139 0003                if-nez
+0000a  000f                     return
+0000b  2072 294a 0021           invoke-interface  # CALL Lc/d/a/a/n$c;->a(Landroid/content/Context;)Z
+0000e  020a                     move-result
+0000f  020f                     return
+
+### Lc/d/a/a/n;->b(Landroid/content/Context;,Lcom/mobiletools/systemhelper/control/b;)Z  [access=0x2000a, regs=8, ins=2, outs=3, code_off=0x11062c]
+00000  001c 05e7                const-class  # TYPE Lc/d/a/a/n;
+00002  001d                     monitor-enter
+00003  011a 1f9b                const-string  # STR "iccid2"
+00005  0212                     const/4
+00006  3071 2996 0216           invoke-static  # CALL Lc/d/a/b/l;->a(Landroid/content/Context;,Ljava/lang/String;,Ljava/lang/String;)Ljava/lang/String;
+00009  010c                     move-result-object
+0000a  1212                     const/4
+0000b  0138 0039                if-eqz
+0000d  106e 2d0f 0001           invoke-virtual  # CALL Ljava/lang/String;->isEmpty()Z
+00010  030a                     move-result
+00011  0339 0033                if-nez
+00013  7354 1d40                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->t:Ljava/lang/String;
+00015  206e 2d03 0031           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+00018  030a                     move-result
+00019  0339 0060                if-nez
+0001b  031a 0731                const-string  # STR "DeviceManager"
+0001d  0422 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0001f  1070 2d35 0004           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00022  051a 13d4                const-string  # STR "SIM2 Changed,old iccid:"
+00024  206e 2d3f 0054           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00027  206e 2d3f 0014           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0002a  011a 01dd                const-string  # STR ", new iccid:"
+0002c  206e 2d3f 0014           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0002f  7154 1d40                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->t:Ljava/lang/String;
+00031  206e 2d3f 0014           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00034  106e 2d44 0004           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00037  010c                     move-result-object
+00038  2071 2987 0013           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+0003b  011a 1f9b                const-string  # STR "iccid2"
+0003d  7754 1d40                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->t:Ljava/lang/String;
+0003f  3071 29a3 0716           invoke-static  # CALL Lc/d/a/b/l;->b(Landroid/content/Context;,Ljava/lang/String;,Ljava/lang/String;)V
+00042  001e                     monitor-exit
+00043  020f                     return
+00044  7354 1d40                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->t:Ljava/lang/String;
+00046  0338 0033                if-eqz
+00048  7354 1d40                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->t:Ljava/lang/String;
+0004a  106e 2d0f 0003           invoke-virtual  # CALL Ljava/lang/String;->isEmpty()Z
+0004d  030a                     move-result
+0004e  0339 002b                if-nez
+00050  031a 0731                const-string  # STR "DeviceManager"
+00052  0422 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00054  1070 2d35 0004           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00057  051a 13d4                const-string  # STR "SIM2 Changed,old iccid:"
+00059  206e 2d3f 0054           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0005c  206e 2d3f 0014           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0005f  011a 01dd                const-string  # STR ", new iccid:"
+00061  206e 2d3f 0014           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00064  7154 1d40                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->t:Ljava/lang/String;
+00066  206e 2d3f 0014           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00069  106e 2d44 0004           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0006c  010c                     move-result-object
+0006d  2071 2987 0013           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+00070  011a 1f9b                const-string  # STR "iccid2"
+00072  7754 1d40                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->t:Ljava/lang/String;
+00074  3071 29a3 0716           invoke-static  # CALL Lc/d/a/b/l;->b(Landroid/content/Context;,Ljava/lang/String;,Ljava/lang/String;)V
+00077  001e                     monitor-exit
+00078  020f                     return
+00079  0612                     const/4
+0007a  001e                     monitor-exit
+0007b  060f                     return
+0007c  060d                     op_0d
+0007d  001e                     monitor-exit
+0007e  0627                     throw
+
+### Lc/d/a/a/n;->c(Landroid/content/Context;)Ljava/lang/Boolean;  [access=0x9, regs=1, ins=1, outs=1, code_off=0x110c50]
+00000  0039 0008                if-nez
+00002  0012                     const/4
+00003  1071 2c67 0000           invoke-static  # CALL Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+00006  000c                     move-result-object
+00007  0011                     return-object
+00008  0071 2956 0000           invoke-static  # CALL Lc/d/a/a/n;->c()V
+0000b  1071 2953 0000           invoke-static  # CALL Lc/d/a/a/n;->b(Landroid/content/Context;)Z
+0000e  000a                     move-result
+0000f  f428                     goto
+
+### Lc/d/a/a/n;->c()V  [access=0x9, regs=4, ins=0, outs=3, code_off=0x110ce0]
+00000  0062 1ba1                sget-object  # FIELD Lc/d/a/a/n;->a:Ljava/util/Map;
+00002  0039 00da                if-nez
+00004  0022 06d4                new-instance  # TYPE Ljava/util/HashMap;
+00006  1070 2e29 0000           invoke-direct  # CALL Ljava/util/HashMap;-><init>()V
+00009  0069 1ba1                sput-object  # FIELD Lc/d/a/a/n;->a:Ljava/util/Map;
+0000b  001a 2484                const-string  # STR "ro.product.manufacturer"
+0000d  1071 2997 0000           invoke-static  # CALL Lc/d/a/b/l;->a(Ljava/lang/String;)Ljava/lang/String;
+00010  000c                     move-result-object
+00011  0038 00cb                if-eqz
+00013  106e 2d0f 0000           invoke-virtual  # CALL Ljava/lang/String;->isEmpty()Z
+00016  010a                     move-result
+00017  0139 00c5                if-nez
+00019  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0001b  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0001e  021a 2126                const-string  # STR "manufacturer="
+00020  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00023  206e 2d3f 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00026  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00029  010c                     move-result-object
+0002a  021a 0731                const-string  # STR "DeviceManager"
+0002c  2071 2987 0012           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+0002f  106e 2d20 0000           invoke-virtual  # CALL Ljava/lang/String;->trim()Ljava/lang/String;
+00032  010c                     move-result-object
+00033  031a 2850                const-string  # STR "vivo"
+00035  206e 2d04 0031           invoke-virtual  # CALL Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+00038  010a                     move-result
+00039  0139 0086                if-nez
+0003b  106e 2d20 0000           invoke-virtual  # CALL Ljava/lang/String;->trim()Ljava/lang/String;
+0003e  010c                     move-result-object
+0003f  031a 24a1                const-string  # STR "samsung"
+00041  206e 2d04 0031           invoke-virtual  # CALL Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+00044  010a                     move-result
+00045  0139 007a                if-nez
+00047  106e 2d20 0000           invoke-virtual  # CALL Ljava/lang/String;->trim()Ljava/lang/String;
+0004a  010c                     move-result-object
+0004b  031a 23fb                const-string  # STR "realme"
+0004d  206e 2d04 0031           invoke-virtual  # CALL Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+00050  010a                     move-result
+00051  0139 006e                if-nez
+00053  106e 2d20 0000           invoke-virtual  # CALL Ljava/lang/String;->trim()Ljava/lang/String;
+00056  010c                     move-result-object
+00057  031a 16c1                const-string  # STR "Xiaomi"
+00059  206e 2d04 0031           invoke-virtual  # CALL Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+0005c  010a                     move-result
+0005d  0139 0062                if-nez
+0005f  106e 2d20 0000           invoke-virtual  # CALL Ljava/lang/String;->trim()Ljava/lang/String;
+00062  010c                     move-result-object
+00063  031a 12c9                const-string  # STR "OPPO"
+00065  206e 2d04 0031           invoke-virtual  # CALL Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+00068  010a                     move-result
+00069  0139 0056                if-nez
+0006b  106e 2d20 0000           invoke-virtual  # CALL Ljava/lang/String;->trim()Ljava/lang/String;
+0006e  010c                     move-result-object
+0006f  031a 1074                const-string  # STR "Liantong"
+00071  206e 2d04 0031           invoke-virtual  # CALL Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+00074  010a                     move-result
+00075  0139 004a                if-nez
+00077  106e 2d20 0000           invoke-virtual  # CALL Ljava/lang/String;->trim()Ljava/lang/String;
+0007a  010c                     move-result-object
+0007b  031a 12e7                const-string  # STR "OnePlus"
+0007d  206e 2d04 0031           invoke-virtual  # CALL Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+00080  010a                     move-result
+00081  0139 003e                if-nez
+00083  106e 2d20 0000           invoke-virtual  # CALL Ljava/lang/String;->trim()Ljava/lang/String;
+00086  010c                     move-result-object
+00087  031a 144d                const-string  # STR "TDTECH"
+00089  206e 2d04 0031           invoke-virtual  # CALL Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+0008c  010a                     move-result
+0008d  0139 0032                if-nez
+0008f  106e 2d20 0000           invoke-virtual  # CALL Ljava/lang/String;->trim()Ljava/lang/String;
+00092  010c                     move-result-object
+00093  031a 2203                const-string  # STR "nubia"
+00095  206e 2d04 0031           invoke-virtual  # CALL Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+00098  010a                     move-result
+00099  0139 0026                if-nez
+0009b  106e 2d20 0000           invoke-virtual  # CALL Ljava/lang/String;->trim()Ljava/lang/String;
+0009e  010c                     move-result-object
+0009f  031a 1314                const-string  # STR "PTAC"
+000a1  206e 2d04 0031           invoke-virtual  # CALL Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+000a4  010a                     move-result
+000a5  0139 001a                if-nez
+000a7  106e 2d20 0000           invoke-virtual  # CALL Ljava/lang/String;->trim()Ljava/lang/String;
+000aa  010c                     move-result-object
+000ab  031a 170e                const-string  # STR "ZTE"
+000ad  206e 2d04 0031           invoke-virtual  # CALL Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+000b0  010a                     move-result
+000b1  0139 000e                if-nez
+000b3  106e 2d20 0000           invoke-virtual  # CALL Ljava/lang/String;->trim()Ljava/lang/String;
+000b6  010c                     move-result-object
+000b7  031a 1662                const-string  # STR "WIKO"
+000b9  206e 2d04 0031           invoke-virtual  # CALL Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+000bc  010a                     move-result
+000bd  0138 001f                if-eqz
+000bf  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+000c1  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+000c4  031a 2169                const-string  # STR "model: "
+000c6  206e 2d3f 0031           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000c9  0362 0554                sget-object  # FIELD Landroid/os/Build;->MODEL:Ljava/lang/String;
+000cb  206e 2d3f 0031           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000ce  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+000d1  010c                     move-result-object
+000d2  2071 2987 0012           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+000d5  0162 1ba1                sget-object  # FIELD Lc/d/a/a/n;->a:Ljava/util/Map;
+000d7  0262 0554                sget-object  # FIELD Landroid/os/Build;->MODEL:Ljava/lang/String;
+000d9  3072 2e6b 0021           invoke-interface  # CALL Ljava/util/Map;->put(Ljava/lang/Object;,Ljava/lang/Object;)Ljava/lang/Object;
+000dc  000e                     return-void
+
+### Lc/d/a/a/n;->c(Landroid/content/Context;,Lcom/mobiletools/systemhelper/control/b;)V  [access=0x2000a, regs=6, ins=2, outs=3, code_off=0x110eac]
+00000  001c 05e7                const-class  # TYPE Lc/d/a/a/n;
+00002  001d                     monitor-enter
+00003  106e 0846 0004           invoke-virtual  # CALL Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+00006  010c                     move-result-object
+00007  106e 0847 0004           invoke-virtual  # CALL Landroid/content/Context;->getPackageName()Ljava/lang/String;
+0000a  020c                     move-result-object
+0000b  0312                     const/4
+0000c  306e 089f 0321           invoke-virtual  # CALL Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;,I)Landroid/content/pm/PackageInfo;
+0000f  010c                     move-result-object
+00010  1154 0511                iget-object  # FIELD Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
+00012  515b 1d28                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->M:Ljava/lang/String;
+00014  0828                     goto
+00015  040d                     op_0d
+00016  0029 0075                goto/16
+00018  010d                     op_0d
+00019  106e 0897 0001           invoke-virtual  # CALL Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
+0001c  0071 2956 0000           invoke-static  # CALL Lc/d/a/a/n;->c()V
+0001f  1071 294c 0004           invoke-static  # CALL Lc/d/a/a/n;->a(Landroid/content/Context;)Lc/d/a/a/n$c;
+00022  010c                     move-result-object
+00023  0138 004e                if-eqz
+00025  3072 2949 0541           invoke-interface  # CALL Lc/d/a/a/n$c;->a(Landroid/content/Context;,Lcom/mobiletools/systemhelper/control/b;)V
+00028  011a 1922                const-string  # STR "android.permission.ACCESS_NETWORK_STATE"
+0002a  2071 22be 0014           invoke-static  # CALL Lb/b/c/a/a;->a(Landroid/content/Context;,Ljava/lang/String;)I
+0002d  010a                     move-result
+0002e  0139 0021                if-nez
+00030  1071 29b1 0004           invoke-static  # CALL Lc/d/a/b/l;->k(Landroid/content/Context;)Ljava/lang/Boolean;
+00033  010c                     move-result-object
+00034  106e 2c65 0001           invoke-virtual  # CALL Ljava/lang/Boolean;->booleanValue()Z
+00037  010a                     move-result
+00038  0138 0014                if-eqz
+0003a  1071 29b2 0004           invoke-static  # CALL Lc/d/a/b/l;->l(Landroid/content/Context;)Ljava/lang/Boolean;
+0003d  040c                     move-result-object
+0003e  106e 2c65 0004           invoke-virtual  # CALL Ljava/lang/Boolean;->booleanValue()Z
+00041  040a                     move-result
+00042  0439 0007                if-nez
+00044  041a 122c                const-string  # STR "Mobile"
+00046  545b 1d21                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->F:Ljava/lang/String;
+00048  0728                     goto
+00049  041a 1668                const-string  # STR "WiFi"
+0004b  fb28                     goto
+0004c  041a 0736                const-string  # STR "Disconnected"
+0004e  f828                     goto
+0004f  0071 2995 0000           invoke-static  # CALL Lc/d/a/b/l;->a()Ljava/lang/String;
+00052  040c                     move-result-object
+00053  545b 1d29                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->N:Ljava/lang/String;
+00055  041a 0731                const-string  # STR "DeviceManager"
+00057  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00059  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0005c  021a 1cf6                const-string  # STR "getDeviceInfo:"
+0005e  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00061  106e 2bac 0005           invoke-virtual  # CALL Lcom/mobiletools/systemhelper/control/b;->a()Ljava/lang/String;
+00064  050c                     move-result-object
+00065  206e 2d3f 0051           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00068  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0006b  050c                     move-result-object
+0006c  2071 2987 0054           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+0006f  001e                     monitor-exit
+00070  000e                     return-void
+00071  041a 0731                const-string  # STR "DeviceManager"
+00073  0522 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00075  1070 2d35 0005           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00078  011a 2125                const-string  # STR "manuf==null,model="
+0007a  206e 2d3f 0015           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0007d  0162 0554                sget-object  # FIELD Landroid/os/Build;->MODEL:Ljava/lang/String;
+0007f  206e 2d3f 0015           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00082  106e 2d44 0005           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00085  050c                     move-result-object
+00086  2071 2988 0054           invoke-static  # CALL Lc/d/a/b/h;->b(Ljava/lang/String;,Ljava/lang/String;)V
+00089  001e                     monitor-exit
+0008a  000e                     return-void
+0008b  001e                     monitor-exit
+0008c  0427                     throw

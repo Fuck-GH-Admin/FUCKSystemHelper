@@ -1,0 +1,123 @@
+### Landroid/support/v7/widget/c0;-><clinit>()V  [access=0x10008, regs=2, ins=0, outs=1, code_off=0xe432c]
+00000  0022 01b0                new-instance  # TYPE Landroid/graphics/Rect;
+00002  1070 0994 0000           invoke-direct  # CALL Landroid/graphics/Rect;-><init>()V
+00005  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00007  0113 0012                const/16
+00009  1034 0007                if-lt
+0000b  001a 1909                const-string  # STR "android.graphics.Insets"
+0000d  1071 2c72 0000           invoke-static  # CALL Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+00010  000e                     return-void
+
+### Landroid/support/v7/widget/c0;->a(I,Landroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuff$Mode;  [access=0x9, regs=3, ins=2, outs=0, code_off=0xe41e4]
+00000  3012                     const/4
+00001  0132 001c                if-eq
+00003  5012                     const/4
+00004  0132 0016                if-eq
+00006  0013 0009                const/16
+00008  0132 000f                if-eq
+0000a  012b 0016 0000           packed-switch
+0000d  0211                     return-object
+0000e  0162 0531                sget-object  # FIELD Landroid/graphics/PorterDuff$Mode;->ADD:Landroid/graphics/PorterDuff$Mode;
+00010  0111                     return-object
+00011  0162 0533                sget-object  # FIELD Landroid/graphics/PorterDuff$Mode;->SCREEN:Landroid/graphics/PorterDuff$Mode;
+00013  0111                     return-object
+00014  0162 0532                sget-object  # FIELD Landroid/graphics/PorterDuff$Mode;->MULTIPLY:Landroid/graphics/PorterDuff$Mode;
+00016  0111                     return-object
+00017  0162 0534                sget-object  # FIELD Landroid/graphics/PorterDuff$Mode;->SRC_ATOP:Landroid/graphics/PorterDuff$Mode;
+00019  0111                     return-object
+0001a  0162 0535                sget-object  # FIELD Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
+0001c  0111                     return-object
+0001d  0162 0536                sget-object  # FIELD Landroid/graphics/PorterDuff$Mode;->SRC_OVER:Landroid/graphics/PorterDuff$Mode;
+0001f  0111                     return-object
+00020  0100 0003 000e 0000 000a 0000 0007 0000 0004 0000 ... <payload; units=10>
+
+### Landroid/support/v7/widget/c0;->a(Landroid/graphics/drawable/Drawable;)Z  [access=0x9, regs=5, ins=1, outs=1, code_off=0xe4248]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0113 000f                const/16
+00004  0212                     const/4
+00005  1035 0007                if-ge
+00007  4020 01c5                instance-of  # TYPE Landroid/graphics/drawable/InsetDrawable;
+00009  0038 0003                if-eqz
+0000b  020f                     return
+0000c  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+0000e  1035 0007                if-ge
+00010  4020 01c3                instance-of  # TYPE Landroid/graphics/drawable/GradientDrawable;
+00012  0038 0003                if-eqz
+00014  020f                     return
+00015  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00017  0113 0011                const/16
+00019  1035 0007                if-ge
+0001b  4020 01c6                instance-of  # TYPE Landroid/graphics/drawable/LayerDrawable;
+0001d  0038 0003                if-eqz
+0001f  020f                     return
+00020  4020 01c2                instance-of  # TYPE Landroid/graphics/drawable/DrawableContainer;
+00022  0038 0020                if-eqz
+00024  106e 09db 0004           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
+00027  040c                     move-result-object
+00028  4020 01c1                instance-of  # TYPE Landroid/graphics/drawable/DrawableContainer$DrawableContainerState;
+0002a  0038 003d                if-eqz
+0002c  041f 01c1                check-cast  # TYPE Landroid/graphics/drawable/DrawableContainer$DrawableContainerState;
+0002e  106e 0a09 0004           invoke-virtual  # CALL Landroid/graphics/drawable/DrawableContainer$DrawableContainerState;->getChildren()[Landroid/graphics/drawable/Drawable;
+00031  040c                     move-result-object
+00032  4021                     array-length
+00033  2101                     op_01
+00034  0135 0033                if-ge
+00036  0346 0104                aget-object
+00038  1071 182e 0003           invoke-static  # CALL Landroid/support/v7/widget/c0;->a(Landroid/graphics/drawable/Drawable;)Z
+0003b  030a                     move-result
+0003c  0339 0003                if-nez
+0003e  020f                     return
+0003f  01d8 0101                op_d8
+00041  f328                     goto
+00042  4020 02b6                instance-of  # TYPE Landroid/support/v4/graphics/drawable/c;
+00044  0038 000d                if-eqz
+00046  041f 02b6                check-cast  # TYPE Landroid/support/v4/graphics/drawable/c;
+00048  1072 107f 0004           invoke-interface  # CALL Landroid/support/v4/graphics/drawable/c;->a()Landroid/graphics/drawable/Drawable;
+0004b  040c                     move-result-object
+0004c  1071 182e 0004           invoke-static  # CALL Landroid/support/v7/widget/c0;->a(Landroid/graphics/drawable/Drawable;)Z
+0004f  040a                     move-result
+00050  040f                     return
+00051  4020 055f                instance-of  # TYPE Lb/b/d/c/a/c;
+00053  0038 0009                if-eqz
+00055  041f 055f                check-cast  # TYPE Lb/b/d/c/a/c;
+00057  106e 262e 0004           invoke-virtual  # CALL Lb/b/d/c/a/c;->a()Landroid/graphics/drawable/Drawable;
+0005a  040c                     move-result-object
+0005b  f128                     goto
+0005c  4020 01c8                instance-of  # TYPE Landroid/graphics/drawable/ScaleDrawable;
+0005e  0038 0009                if-eqz
+00060  041f 01c8                check-cast  # TYPE Landroid/graphics/drawable/ScaleDrawable;
+00062  106e 0a12 0004           invoke-virtual  # CALL Landroid/graphics/drawable/ScaleDrawable;->getDrawable()Landroid/graphics/drawable/Drawable;
+00065  040c                     move-result-object
+00066  e628                     goto
+00067  1412                     const/4
+00068  040f                     return
+
+### Landroid/support/v7/widget/c0;->b(Landroid/graphics/drawable/Drawable;)V  [access=0x8, regs=3, ins=1, outs=2, code_off=0xe4370]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0113 0015                const/16
+00004  1033 0015                if-ne
+00006  001a 190a                const-string  # STR "android.graphics.drawable.VectorDrawable"
+00008  106e 2ce3 0002           invoke-virtual  # CALL Ljava/lang/Object;->getClass()Ljava/lang/Class;
+0000b  010c                     move-result-object
+0000c  106e 2c7f 0001           invoke-virtual  # CALL Ljava/lang/Class;->getName()Ljava/lang/String;
+0000f  010c                     move-result-object
+00010  206e 2d03 0010           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+00013  000a                     move-result
+00014  0038 0005                if-eqz
+00016  1071 1830 0002           invoke-static  # CALL Landroid/support/v7/widget/c0;->c(Landroid/graphics/drawable/Drawable;)V
+00019  000e                     return-void
+
+### Landroid/support/v7/widget/c0;->c(Landroid/graphics/drawable/Drawable;)V  [access=0xa, regs=3, ins=1, outs=2, code_off=0xe43b4]
+00000  106e 09e8 0002           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->getState()[I
+00003  000c                     move-result-object
+00004  0038 000c                if-eqz
+00006  0121                     array-length
+00007  0139 0003                if-nez
+00009  0728                     goto
+0000a  0162 11bf                sget-object  # FIELD Landroid/support/v7/widget/o0;->f:[I
+0000c  206e 0a03 0012           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setState([I)Z
+0000f  0628                     goto
+00010  0162 11be                sget-object  # FIELD Landroid/support/v7/widget/o0;->e:[I
+00012  206e 0a03 0012           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setState([I)Z
+00015  206e 0a03 0002           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setState([I)Z
+00018  000e                     return-void

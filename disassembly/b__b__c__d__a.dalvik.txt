@@ -1,0 +1,123 @@
+### Lb/b/c/d/a;-><init>(Ljava/lang/String;,Ljava/lang/String;,Ljava/lang/String;,Ljava/util/List;)V  [access=0x10001, regs=5, ins=5, outs=2, code_off=0xb6680]
+00000  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  1071 2485 0001           invoke-static  # CALL Lb/b/c/f/j;->a(Ljava/lang/Object;)Ljava/lang/Object;
+00006  011f 0683                check-cast  # TYPE Ljava/lang/String;
+00008  015b 1369                iput-object  # FIELD Lb/b/c/d/a;->a:Ljava/lang/String;
+0000a  1071 2485 0002           invoke-static  # CALL Lb/b/c/f/j;->a(Ljava/lang/Object;)Ljava/lang/Object;
+0000d  021f 0683                check-cast  # TYPE Ljava/lang/String;
+0000f  025b 136a                iput-object  # FIELD Lb/b/c/d/a;->b:Ljava/lang/String;
+00011  1071 2485 0003           invoke-static  # CALL Lb/b/c/f/j;->a(Ljava/lang/Object;)Ljava/lang/Object;
+00014  031f 0683                check-cast  # TYPE Ljava/lang/String;
+00016  035b 136b                iput-object  # FIELD Lb/b/c/d/a;->c:Ljava/lang/String;
+00018  1071 2485 0004           invoke-static  # CALL Lb/b/c/f/j;->a(Ljava/lang/Object;)Ljava/lang/Object;
+0001b  041f 06da                check-cast  # TYPE Ljava/util/List;
+0001d  045b 136c                iput-object  # FIELD Lb/b/c/d/a;->d:Ljava/util/List;
+0001f  0112                     const/4
+00020  0159 136d                iput  # FIELD Lb/b/c/d/a;->e:I
+00022  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00024  0254 1369                iget-object  # FIELD Lb/b/c/d/a;->a:Ljava/lang/String;
+00026  2070 2d37 0021           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+00029  021a 01f4                const-string  # STR "-"
+0002b  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0002e  0354 136a                iget-object  # FIELD Lb/b/c/d/a;->b:Ljava/lang/String;
+00030  206e 2d3f 0031           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00033  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00036  0254 136b                iget-object  # FIELD Lb/b/c/d/a;->c:Ljava/lang/String;
+00038  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0003b  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0003e  010c                     move-result-object
+0003f  015b 136e                iput-object  # FIELD Lb/b/c/d/a;->f:Ljava/lang/String;
+00041  000e                     return-void
+
+### Lb/b/c/d/a;->a()Ljava/util/List;  [access=0x1, regs=1, ins=1, outs=0, code_off=0xb6668]
+00000  0054 136c                iget-object  # FIELD Lb/b/c/d/a;->d:Ljava/util/List;
+00002  0011                     return-object
+
+### Lb/b/c/d/a;->b()I  [access=0x1, regs=1, ins=1, outs=0, code_off=0xb64b8]
+00000  0052 136d                iget  # FIELD Lb/b/c/d/a;->e:I
+00002  000f                     return
+
+### Lb/b/c/d/a;->c()Ljava/lang/String;  [access=0x1, regs=1, ins=1, outs=0, code_off=0xb64d0]
+00000  0054 136e                iget-object  # FIELD Lb/b/c/d/a;->f:Ljava/lang/String;
+00002  0011                     return-object
+
+### Lb/b/c/d/a;->d()Ljava/lang/String;  [access=0x1, regs=1, ins=1, outs=0, code_off=0xb64e8]
+00000  0054 1369                iget-object  # FIELD Lb/b/c/d/a;->a:Ljava/lang/String;
+00002  0011                     return-object
+
+### Lb/b/c/d/a;->e()Ljava/lang/String;  [access=0x1, regs=1, ins=1, outs=0, code_off=0xb6500]
+00000  0054 136a                iget-object  # FIELD Lb/b/c/d/a;->b:Ljava/lang/String;
+00002  0011                     return-object
+
+### Lb/b/c/d/a;->f()Ljava/lang/String;  [access=0x1, regs=1, ins=1, outs=0, code_off=0xb6518]
+00000  0054 136b                iget-object  # FIELD Lb/b/c/d/a;->c:Ljava/lang/String;
+00002  0011                     return-object
+
+### Lb/b/c/d/a;->toString()Ljava/lang/String;  [access=0x1, regs=7, ins=1, outs=2, code_off=0xb6530]
+00000  0022 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00002  1070 2d35 0000           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00005  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00007  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0000a  021a 07d7                const-string  # STR "FontRequest {mProviderAuthority: "
+0000c  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0000f  6254 1369                iget-object  # FIELD Lb/b/c/d/a;->a:Ljava/lang/String;
+00011  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00014  021a 01d9                const-string  # STR ", mProviderPackage: "
+00016  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00019  6254 136a                iget-object  # FIELD Lb/b/c/d/a;->b:Ljava/lang/String;
+0001b  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0001e  021a 01da                const-string  # STR ", mQuery: "
+00020  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00023  6254 136b                iget-object  # FIELD Lb/b/c/d/a;->c:Ljava/lang/String;
+00025  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00028  021a 01d6                const-string  # STR ", mCertificates:"
+0002a  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0002d  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00030  010c                     move-result-object
+00031  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00034  0112                     const/4
+00035  1201                     op_01
+00036  6354 136c                iget-object  # FIELD Lb/b/c/d/a;->d:Ljava/util/List;
+00038  1072 2e5d 0003           invoke-interface  # CALL Ljava/util/List;->size()I
+0003b  030a                     move-result
+0003c  3235 0038                if-ge
+0003e  031a 002a                const-string  # STR " ["
+00040  206e 2d3f 0030           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00043  6354 136c                iget-object  # FIELD Lb/b/c/d/a;->d:Ljava/util/List;
+00045  2072 2e57 0023           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+00048  030c                     move-result-object
+00049  031f 06da                check-cast  # TYPE Ljava/util/List;
+0004b  1401                     op_01
+0004c  1072 2e5d 0003           invoke-interface  # CALL Ljava/util/List;->size()I
+0004f  050a                     move-result
+00050  5435 001c                if-ge
+00052  051a 0017                const-string  # STR " \""
+00054  206e 2d3f 0050           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00057  2072 2e57 0043           invoke-interface  # CALL Ljava/util/List;->get(I)Ljava/lang/Object;
+0005a  050c                     move-result-object
+0005b  051f 0720                check-cast  # TYPE [B
+0005d  2071 1c57 0015           invoke-static  # CALL Landroid/util/Base64;->encodeToString([B,I)Ljava/lang/String;
+00060  050c                     move-result-object
+00061  206e 2d3f 0050           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00064  051a 00a7                const-string  # STR "\""
+00066  206e 2d3f 0050           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00069  04d8 0104                op_d8
+0006b  e128                     goto
+0006c  031a 002b                const-string  # STR " ]"
+0006e  206e 2d3f 0030           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00071  02d8 0102                op_d8
+00073  c328                     goto
+00074  011a 28df                const-string  # STR "}"
+00076  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00079  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0007b  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0007e  021a 20f8                const-string  # STR "mCertificatesArray: "
+00080  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00083  6652 136d                iget  # FIELD Lb/b/c/d/a;->e:I
+00085  206e 2d3b 0061           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+00088  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0008b  060c                     move-result-object
+0008c  206e 2d3f 0060           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0008f  106e 2d44 0000           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00092  060c                     move-result-object
+00093  0611                     return-object

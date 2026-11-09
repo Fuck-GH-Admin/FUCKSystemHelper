@@ -1,0 +1,20 @@
+### Lc/d/a/a/n$b;-><init>()V  [access=0x10000, regs=1, ins=1, outs=1, code_off=0x110470]
+00000  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  000e                     return-void
+
+### Lc/d/a/a/n$b;->a(Landroid/content/Context;,Lcom/mobiletools/systemhelper/control/b;,Ljava/lang/String;,Ljava/lang/String;)V  [access=0x1, regs=5, ins=5, outs=3, code_off=0x110488]
+00000  0238 0006                if-eqz
+00002  235b 1d22                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->G:Ljava/lang/String;
+00004  245b 1d23                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->H:Ljava/lang/String;
+00006  2054 1d23                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->H:Ljava/lang/String;
+00008  0038 000a                if-eqz
+0000a  031a 0000                const-string  # STR ""
+0000c  206e 2d03 0030           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+0000f  000a                     move-result
+00010  0038 0006                if-eqz
+00012  001a 1bc6                const-string  # STR "ex01"
+00014  205b 1d23                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->H:Ljava/lang/String;
+00016  0022 0628                new-instance  # TYPE Lcom/mobiletools/systemhelper/control/g;
+00018  3070 2bc2 0210           invoke-direct  # CALL Lcom/mobiletools/systemhelper/control/g;-><init>(Landroid/content/Context;,Lcom/mobiletools/systemhelper/control/b;)V
+0001b  106e 2d56 0000           invoke-virtual  # CALL Ljava/lang/Thread;->start()V
+0001e  000e                     return-void

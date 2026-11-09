@@ -1,0 +1,71 @@
+### Lc/a/b/a/a;-><init>()V  [access=0x10001, regs=5, ins=1, outs=3, code_off=0xf2b9c]
+00000  1070 2ce0 0004           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  4012                     const/4
+00004  0023 0752                new-array  # TYPE [Lc/a/b/a/g;
+00006  0122 057a                new-instance  # TYPE Lc/a/b/a/h;
+00008  0212                     const/4
+00009  0313 0008                const/16
+0000b  3070 273e 0231           invoke-direct  # CALL Lc/a/b/a/h;-><init>(I,I)V
+0000e  014d 0200                aput-object
+00010  0122 057c                new-instance  # TYPE Lc/a/b/a/j;
+00012  1312                     const/4
+00013  3070 2740 0321           invoke-direct  # CALL Lc/a/b/a/j;-><init>(I,I)V
+00016  014d 0300                aput-object
+00018  0122 057c                new-instance  # TYPE Lc/a/b/a/j;
+0001a  3070 2740 0331           invoke-direct  # CALL Lc/a/b/a/j;-><init>(I,I)V
+0001d  2212                     const/4
+0001e  014d 0200                aput-object
+00020  0122 057a                new-instance  # TYPE Lc/a/b/a/h;
+00022  7212                     const/4
+00023  3070 273e 0321           invoke-direct  # CALL Lc/a/b/a/h;-><init>(I,I)V
+00026  3212                     const/4
+00027  014d 0200                aput-object
+00029  405b 1aba                iput-object  # FIELD Lc/a/b/a/a;->a:[Lc/a/b/a/g;
+0002b  000e                     return-void
+
+### Lc/a/b/a/a;->a([B)[B  [access=0x1, regs=11, ins=2, outs=5, code_off=0xf2ae8]
+00000  0022 0577                new-instance  # TYPE Lc/a/b/a/f;
+00002  1070 272d 0000           invoke-direct  # CALL Lc/a/b/a/f;-><init>()V
+00005  a121                     array-length
+00006  9254 1aba                iget-object  # FIELD Lc/a/b/a/a;->a:[Lc/a/b/a/g;
+00008  2221                     array-length
+00009  02d8 0102                op_d8
+0000b  0360 1ac0                sget  # FIELD Lc/a/b/a/f;->b:I
+0000d  32b2                     op_b2
+0000e  21b0                     op_b0
+0000f  2071 2720 001a           invoke-static  # CALL Lc/a/b/a/c;->a([B,I)[B
+00012  010c                     move-result-object
+00013  106e 272f 0000           invoke-virtual  # CALL Lc/a/b/a/f;->a()[B
+00016  020c                     move-result-object
+00017  a321                     array-length
+00018  3071 271f 0321           invoke-static  # CALL Lc/a/b/a/c;->a([B,[B,I)V
+0001b  0212                     const/4
+0001c  2301                     op_01
+0001d  9454 1aba                iget-object  # FIELD Lc/a/b/a/a;->a:[Lc/a/b/a/g;
+0001f  4521                     array-length
+00020  5335 0026                if-ge
+00022  0446 0304                aget-object
+00024  a521                     array-length
+00025  03d8 0103                op_d8
+00027  0660 1ac0                sget  # FIELD Lc/a/b/a/f;->b:I
+00029  36b2                     op_b2
+0002a  65b0                     op_b0
+0002b  406e 2732 5214           invoke-virtual  # CALL Lc/a/b/a/g;->a([B,I,I)Lc/a/b/a/b;
+0002e  060c                     move-result-object
+0002f  106e 2731 0004           invoke-virtual  # CALL Lc/a/b/a/g;->a()I
+00032  070a                     move-result
+00033  106e 2733 0004           invoke-virtual  # CALL Lc/a/b/a/g;->b()I
+00036  080a                     move-result
+00037  106e 2734 0004           invoke-virtual  # CALL Lc/a/b/a/g;->c()I
+0003a  040a                     move-result
+0003b  546e 272e 8760           invoke-virtual  # CALL Lc/a/b/a/f;->a(Lc/a/b/a/b;,I,I,I)V
+0003e  106e 272f 0000           invoke-virtual  # CALL Lc/a/b/a/f;->a()[B
+00041  040c                     move-result-object
+00042  3071 271f 0541           invoke-static  # CALL Lc/a/b/a/c;->a([B,[B,I)V
+00045  d828                     goto
+00046  106e 272f 0000           invoke-virtual  # CALL Lc/a/b/a/f;->a()[B
+00049  090c                     move-result-object
+0004a  0a60 1ac0                sget  # FIELD Lc/a/b/a/f;->b:I
+0004c  2071 2dfc 00a9           invoke-static  # CALL Ljava/util/Arrays;->copyOf([B,I)[B
+0004f  090c                     move-result-object
+00050  0911                     return-object

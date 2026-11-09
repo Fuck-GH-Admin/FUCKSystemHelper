@@ -1,0 +1,164 @@
+### Landroid/support/v7/widget/r;-><clinit>()V  [access=0x10008, regs=1, ins=0, outs=0, code_off=0xe05e0]
+00000  2012                     const/4
+00001  0023 0724                new-array  # TYPE [I
+00003  0026 0007 0000           fill-array-data
+00006  0069 11d2                sput-object  # FIELD Landroid/support/v7/widget/r;->c:[I
+00008  000e                     return-void
+00009  0000                     nop
+0000a  0300 0004 0002 0000 013b 0101 013c 0101 ... <payload; units=8>
+
+### Landroid/support/v7/widget/r;-><init>(Landroid/widget/ProgressBar;)V  [access=0x10000, regs=2, ins=2, outs=1, code_off=0xe0614]
+00000  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  015b 11d0                iput-object  # FIELD Landroid/support/v7/widget/r;->a:Landroid/widget/ProgressBar;
+00005  000e                     return-void
+
+### Landroid/support/v7/widget/r;->a(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;  [access=0x2, regs=8, ins=2, outs=3, code_off=0xe0510]
+00000  7020 01ba                instance-of  # TYPE Landroid/graphics/drawable/AnimationDrawable;
+00002  0038 0033                if-eqz
+00004  071f 01ba                check-cast  # TYPE Landroid/graphics/drawable/AnimationDrawable;
+00006  106e 09ba 0007           invoke-virtual  # CALL Landroid/graphics/drawable/AnimationDrawable;->getNumberOfFrames()I
+00009  000a                     move-result
+0000a  0122 01ba                new-instance  # TYPE Landroid/graphics/drawable/AnimationDrawable;
+0000c  1070 09b6 0001           invoke-direct  # CALL Landroid/graphics/drawable/AnimationDrawable;-><init>()V
+0000f  106e 09bb 0007           invoke-virtual  # CALL Landroid/graphics/drawable/AnimationDrawable;->isOneShot()Z
+00012  020a                     move-result
+00013  206e 09bd 0021           invoke-virtual  # CALL Landroid/graphics/drawable/AnimationDrawable;->setOneShot(Z)V
+00016  0212                     const/4
+00017  0313 2710                const/16
+00019  0235 0018                if-ge
+0001b  206e 09b9 0027           invoke-virtual  # CALL Landroid/graphics/drawable/AnimationDrawable;->getFrame(I)Landroid/graphics/drawable/Drawable;
+0001e  040c                     move-result-object
+0001f  1512                     const/4
+00020  3070 1a5d 0546           invoke-direct  # CALL Landroid/support/v7/widget/r;->a(Landroid/graphics/drawable/Drawable;,Z)Landroid/graphics/drawable/Drawable;
+00023  040c                     move-result-object
+00024  206e 0a02 0034           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setLevel(I)Z
+00027  206e 09b8 0027           invoke-virtual  # CALL Landroid/graphics/drawable/AnimationDrawable;->getDuration(I)I
+0002a  030a                     move-result
+0002b  306e 09b7 0341           invoke-virtual  # CALL Landroid/graphics/drawable/AnimationDrawable;->addFrame(Landroid/graphics/drawable/Drawable;,I)V
+0002e  02d8 0102                op_d8
+00030  e728                     goto
+00031  206e 09bc 0031           invoke-virtual  # CALL Landroid/graphics/drawable/AnimationDrawable;->setLevel(I)Z
+00034  1707                     op_07
+00035  0711                     return-object
+
+### Landroid/support/v7/widget/r;->a(Landroid/graphics/drawable/Drawable;,Z)Landroid/graphics/drawable/Drawable;  [access=0x2, regs=10, ins=3, outs=4, code_off=0xe03c8]
+00000  8020 02b6                instance-of  # TYPE Landroid/support/v4/graphics/drawable/c;
+00002  0038 0014                if-eqz
+00004  8007                     op_07
+00005  001f 02b6                check-cast  # TYPE Landroid/support/v4/graphics/drawable/c;
+00007  1072 107f 0000           invoke-interface  # CALL Landroid/support/v4/graphics/drawable/c;->a()Landroid/graphics/drawable/Drawable;
+0000a  010c                     move-result-object
+0000b  0138 008f                if-eqz
+0000d  3070 1a5d 0917           invoke-direct  # CALL Landroid/support/v7/widget/r;->a(Landroid/graphics/drawable/Drawable;,Z)Landroid/graphics/drawable/Drawable;
+00010  070c                     move-result-object
+00011  2072 1080 0070           invoke-interface  # CALL Landroid/support/v4/graphics/drawable/c;->a(Landroid/graphics/drawable/Drawable;)V
+00014  0029 0086                goto/16
+00016  8020 01c6                instance-of  # TYPE Landroid/graphics/drawable/LayerDrawable;
+00018  1112                     const/4
+00019  0038 003f                if-eqz
+0001b  081f 01c6                check-cast  # TYPE Landroid/graphics/drawable/LayerDrawable;
+0001d  106e 0a10 0008           invoke-virtual  # CALL Landroid/graphics/drawable/LayerDrawable;->getNumberOfLayers()I
+00020  090a                     move-result
+00021  9023 0734                new-array  # TYPE [Landroid/graphics/drawable/Drawable;
+00023  0212                     const/4
+00024  2301                     op_01
+00025  9335 0021                if-ge
+00027  206e 0a0f 0038           invoke-virtual  # CALL Landroid/graphics/drawable/LayerDrawable;->getId(I)I
+0002a  040a                     move-result
+0002b  206e 0a0e 0038           invoke-virtual  # CALL Landroid/graphics/drawable/LayerDrawable;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+0002e  050c                     move-result-object
+0002f  0614 000d 0102           const
+00032  6432 000a                if-eq
+00034  0614 000f 0102           const
+00037  6433 0003                if-ne
+00039  0328                     goto
+0003a  2401                     op_01
+0003b  0228                     goto
+0003c  1401                     op_01
+0003d  3070 1a5d 0457           invoke-direct  # CALL Landroid/support/v7/widget/r;->a(Landroid/graphics/drawable/Drawable;,Z)Landroid/graphics/drawable/Drawable;
+00040  040c                     move-result-object
+00041  044d 0300                aput-object
+00043  03d8 0103                op_d8
+00045  e028                     goto
+00046  0722 01c6                new-instance  # TYPE Landroid/graphics/drawable/LayerDrawable;
+00048  2070 0a0c 0007           invoke-direct  # CALL Landroid/graphics/drawable/LayerDrawable;-><init>([Landroid/graphics/drawable/Drawable;)V
+0004b  9235 000c                if-ge
+0004d  206e 0a0f 0028           invoke-virtual  # CALL Landroid/graphics/drawable/LayerDrawable;->getId(I)I
+00050  000a                     move-result
+00051  306e 0a11 0027           invoke-virtual  # CALL Landroid/graphics/drawable/LayerDrawable;->setId(I,I)V
+00054  02d8 0102                op_d8
+00056  f528                     goto
+00057  0711                     return-object
+00058  8020 01bb                instance-of  # TYPE Landroid/graphics/drawable/BitmapDrawable;
+0005a  0038 0040                if-eqz
+0005c  081f 01bb                check-cast  # TYPE Landroid/graphics/drawable/BitmapDrawable;
+0005e  106e 09be 0008           invoke-virtual  # CALL Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
+00061  000c                     move-result-object
+00062  7254 11d1                iget-object  # FIELD Landroid/support/v7/widget/r;->b:Landroid/graphics/Bitmap;
+00064  0239 0004                if-nez
+00066  705b 11d1                iput-object  # FIELD Landroid/support/v7/widget/r;->b:Landroid/graphics/Bitmap;
+00068  0222 01c9                new-instance  # TYPE Landroid/graphics/drawable/ShapeDrawable;
+0006a  1070 1a5f 0007           invoke-direct  # CALL Landroid/support/v7/widget/r;->b()Landroid/graphics/drawable/shapes/Shape;
+0006d  070c                     move-result-object
+0006e  2070 0a13 0072           invoke-direct  # CALL Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
+00071  0722 019b                new-instance  # TYPE Landroid/graphics/BitmapShader;
+00073  0362 053f                sget-object  # FIELD Landroid/graphics/Shader$TileMode;->REPEAT:Landroid/graphics/Shader$TileMode;
+00075  0462 053d                sget-object  # FIELD Landroid/graphics/Shader$TileMode;->CLAMP:Landroid/graphics/Shader$TileMode;
+00077  4070 0947 4307           invoke-direct  # CALL Landroid/graphics/BitmapShader;-><init>(Landroid/graphics/Bitmap;,Landroid/graphics/Shader$TileMode;,Landroid/graphics/Shader$TileMode;)V
+0007a  106e 0a14 0002           invoke-virtual  # CALL Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
+0007d  000c                     move-result-object
+0007e  206e 0970 0070           invoke-virtual  # CALL Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
+00081  106e 0a14 0002           invoke-virtual  # CALL Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
+00084  070c                     move-result-object
+00085  106e 09bf 0008           invoke-virtual  # CALL Landroid/graphics/drawable/BitmapDrawable;->getPaint()Landroid/graphics/Paint;
+00088  080c                     move-result-object
+00089  106e 0969 0008           invoke-virtual  # CALL Landroid/graphics/Paint;->getColorFilter()Landroid/graphics/ColorFilter;
+0008c  080c                     move-result-object
+0008d  206e 096e 0087           invoke-virtual  # CALL Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
+00090  0938 0009                if-eqz
+00092  0722 01bc                new-instance  # TYPE Landroid/graphics/drawable/ClipDrawable;
+00094  3812                     const/4
+00095  4070 09c0 1827           invoke-direct  # CALL Landroid/graphics/drawable/ClipDrawable;-><init>(Landroid/graphics/drawable/Drawable;,I,I)V
+00098  7207                     op_07
+00099  0211                     return-object
+0009a  0811                     return-object
+
+### Landroid/support/v7/widget/r;->b()Landroid/graphics/drawable/shapes/Shape;  [access=0x2, regs=3, ins=1, outs=4, code_off=0xe058c]
+00000  0213 0008                const/16
+00002  2223 0723                new-array  # TYPE [F
+00004  0226 000a 0000           fill-array-data
+00007  0022 01cb                new-instance  # TYPE Landroid/graphics/drawable/shapes/RoundRectShape;
+00009  0112                     const/4
+0000a  4070 0a15 1120           invoke-direct  # CALL Landroid/graphics/drawable/shapes/RoundRectShape;-><init>([F,Landroid/graphics/RectF;,[F)V
+0000d  0011                     return-object
+0000e  0300 0004 0008 0000 0000 40a0 0000 40a0 0000 40a0 0000 40a0 0000 40a0 0000 40a0 ... <payload; units=20>
+
+### Landroid/support/v7/widget/r;->a()Landroid/graphics/Bitmap;  [access=0x0, regs=1, ins=1, outs=0, code_off=0xe03b0]
+00000  0054 11d1                iget-object  # FIELD Landroid/support/v7/widget/r;->b:Landroid/graphics/Bitmap;
+00002  0011                     return-object
+
+### Landroid/support/v7/widget/r;->a(Landroid/util/AttributeSet;,I)V  [access=0x0, regs=6, ins=3, outs=5, code_off=0xe0630]
+00000  3054 11d0                iget-object  # FIELD Landroid/support/v7/widget/r;->a:Landroid/widget/ProgressBar;
+00002  106e 20a8 0000           invoke-virtual  # CALL Landroid/widget/ProgressBar;->getContext()Landroid/content/Context;
+00005  000c                     move-result-object
+00006  0162 11d2                sget-object  # FIELD Landroid/support/v7/widget/r;->c:[I
+00008  0212                     const/4
+00009  5271 1a72 5140           invoke-static  # CALL Landroid/support/v7/widget/t0;->a(Landroid/content/Context;,Landroid/util/AttributeSet;,[I,I,I)Landroid/support/v7/widget/t0;
+0000c  040c                     move-result-object
+0000d  206e 1a78 0024           invoke-virtual  # CALL Landroid/support/v7/widget/t0;->c(I)Landroid/graphics/drawable/Drawable;
+00010  050c                     move-result-object
+00011  0538 000b                if-eqz
+00013  3054 11d0                iget-object  # FIELD Landroid/support/v7/widget/r;->a:Landroid/widget/ProgressBar;
+00015  2070 1a5c 0053           invoke-direct  # CALL Landroid/support/v7/widget/r;->a(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+00018  050c                     move-result-object
+00019  206e 20a9 0050           invoke-virtual  # CALL Landroid/widget/ProgressBar;->setIndeterminateDrawable(Landroid/graphics/drawable/Drawable;)V
+0001c  1512                     const/4
+0001d  206e 1a78 0054           invoke-virtual  # CALL Landroid/support/v7/widget/t0;->c(I)Landroid/graphics/drawable/Drawable;
+00020  050c                     move-result-object
+00021  0538 000b                if-eqz
+00023  3054 11d0                iget-object  # FIELD Landroid/support/v7/widget/r;->a:Landroid/widget/ProgressBar;
+00025  3070 1a5d 0253           invoke-direct  # CALL Landroid/support/v7/widget/r;->a(Landroid/graphics/drawable/Drawable;,Z)Landroid/graphics/drawable/Drawable;
+00028  030c                     move-result-object
+00029  206e 20aa 0030           invoke-virtual  # CALL Landroid/widget/ProgressBar;->setProgressDrawable(Landroid/graphics/drawable/Drawable;)V
+0002c  106e 1a73 0004           invoke-virtual  # CALL Landroid/support/v7/widget/t0;->a()V
+0002f  000e                     return-void

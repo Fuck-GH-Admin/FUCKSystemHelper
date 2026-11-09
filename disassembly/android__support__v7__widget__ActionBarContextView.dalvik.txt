@@ -1,0 +1,558 @@
+### Landroid/support/v7/widget/ActionBarContextView;-><init>(Landroid/content/Context;)V  [access=0x10001, regs=3, ins=2, outs=3, code_off=0xd95dc]
+00000  0012                     const/4
+00001  3070 15df 0021           invoke-direct  # CALL Landroid/support/v7/widget/ActionBarContextView;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;)V
+00004  000e                     return-void
+
+### Landroid/support/v7/widget/ActionBarContextView;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;)V  [access=0x10001, regs=4, ins=3, outs=4, code_off=0xd95f8]
+00000  0060 1426                sget  # FIELD Lb/b/d/a/a;->actionModeStyle:I
+00002  4070 15e0 0321           invoke-direct  # CALL Landroid/support/v7/widget/ActionBarContextView;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;,I)V
+00005  000e                     return-void
+
+### Landroid/support/v7/widget/ActionBarContextView;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;,I)V  [access=0x10001, regs=6, ins=4, outs=5, code_off=0xd9614]
+00000  4070 17e8 5432           invoke-direct  # CALL Landroid/support/v7/widget/a;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;,I)V
+00003  0062 187b                sget-object  # FIELD Lb/b/d/a/j;->ActionMode:[I
+00005  0112                     const/4
+00006  5171 1a72 5043           invoke-static  # CALL Landroid/support/v7/widget/t0;->a(Landroid/content/Context;,Landroid/util/AttributeSet;,[I,I,I)Landroid/support/v7/widget/t0;
+00009  030c                     move-result-object
+0000a  0460 187c                sget  # FIELD Lb/b/d/a/j;->ActionMode_background:I
+0000c  206e 1a76 0043           invoke-virtual  # CALL Landroid/support/v7/widget/t0;->b(I)Landroid/graphics/drawable/Drawable;
+0000f  040c                     move-result-object
+00010  2071 2535 0042           invoke-static  # CALL Lb/b/c/g/q;->a(Landroid/view/View;,Landroid/graphics/drawable/Drawable;)V
+00013  0460 1881                sget  # FIELD Lb/b/d/a/j;->ActionMode_titleTextStyle:I
+00015  306e 1a7f 0143           invoke-virtual  # CALL Landroid/support/v7/widget/t0;->g(I,I)I
+00018  040a                     move-result
+00019  2459 1013                iput  # FIELD Landroid/support/v7/widget/ActionBarContextView;->q:I
+0001b  0460 1880                sget  # FIELD Lb/b/d/a/j;->ActionMode_subtitleTextStyle:I
+0001d  306e 1a7f 0143           invoke-virtual  # CALL Landroid/support/v7/widget/t0;->g(I,I)I
+00020  040a                     move-result
+00021  2459 1014                iput  # FIELD Landroid/support/v7/widget/ActionBarContextView;->r:I
+00023  0460 187f                sget  # FIELD Lb/b/d/a/j;->ActionMode_height:I
+00025  306e 1a7d 0143           invoke-virtual  # CALL Landroid/support/v7/widget/t0;->f(I,I)I
+00028  040a                     move-result
+00029  2459 10e3                iput  # FIELD Landroid/support/v7/widget/a;->f:I
+0002b  0460 187e                sget  # FIELD Lb/b/d/a/j;->ActionMode_closeItemLayout:I
+0002d  0560 16b4                sget  # FIELD Lb/b/d/a/g;->abc_action_mode_close_item_material:I
+0002f  306e 1a7f 0543           invoke-virtual  # CALL Landroid/support/v7/widget/t0;->g(I,I)I
+00032  040a                     move-result
+00033  2459 1016                iput  # FIELD Landroid/support/v7/widget/ActionBarContextView;->t:I
+00035  106e 1a73 0003           invoke-virtual  # CALL Landroid/support/v7/widget/t0;->a()V
+00038  000e                     return-void
+
+### Landroid/support/v7/widget/ActionBarContextView;->e()V  [access=0x2, regs=7, ins=1, outs=3, code_off=0xd97a8]
+00000  6054 1010                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContextView;->n:Landroid/widget/LinearLayout;
+00002  0039 0051                if-nez
+00004  106e 1df8 0006           invoke-virtual  # CALL Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
+00007  000c                     move-result-object
+00008  1071 1cb8 0000           invoke-static  # CALL Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+0000b  000c                     move-result-object
+0000c  0160 16af                sget  # FIELD Lb/b/d/a/g;->abc_action_bar_title_item:I
+0000e  306e 1cbb 0610           invoke-virtual  # CALL Landroid/view/LayoutInflater;->inflate(I,Landroid/view/ViewGroup;)Landroid/view/View;
+00011  106e 1df6 0006           invoke-virtual  # CALL Landroid/view/ViewGroup;->getChildCount()I
+00014  000a                     move-result
+00015  00d8 ff00                op_d8
+00017  206e 1df5 0006           invoke-virtual  # CALL Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+0001a  000c                     move-result-object
+0001b  001f 0493                check-cast  # TYPE Landroid/widget/LinearLayout;
+0001d  605b 1010                iput-object  # FIELD Landroid/support/v7/widget/ActionBarContextView;->n:Landroid/widget/LinearLayout;
+0001f  0160 164c                sget  # FIELD Lb/b/d/a/f;->action_bar_title:I
+00021  206e 2002 0010           invoke-virtual  # CALL Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
+00024  000c                     move-result-object
+00025  001f 04a3                check-cast  # TYPE Landroid/widget/TextView;
+00027  605b 1011                iput-object  # FIELD Landroid/support/v7/widget/ActionBarContextView;->o:Landroid/widget/TextView;
+00029  6054 1010                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContextView;->n:Landroid/widget/LinearLayout;
+0002b  0160 164b                sget  # FIELD Lb/b/d/a/f;->action_bar_subtitle:I
+0002d  206e 2002 0010           invoke-virtual  # CALL Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
+00030  000c                     move-result-object
+00031  001f 04a3                check-cast  # TYPE Landroid/widget/TextView;
+00033  605b 1012                iput-object  # FIELD Landroid/support/v7/widget/ActionBarContextView;->p:Landroid/widget/TextView;
+00035  6052 1013                iget  # FIELD Landroid/support/v7/widget/ActionBarContextView;->q:I
+00037  0038 000d                if-eqz
+00039  6054 1011                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContextView;->o:Landroid/widget/TextView;
+0003b  106e 1df8 0006           invoke-virtual  # CALL Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
+0003e  010c                     move-result-object
+0003f  6252 1013                iget  # FIELD Landroid/support/v7/widget/ActionBarContextView;->q:I
+00041  306e 2147 0210           invoke-virtual  # CALL Landroid/widget/TextView;->setTextAppearance(Landroid/content/Context;,I)V
+00044  6052 1014                iget  # FIELD Landroid/support/v7/widget/ActionBarContextView;->r:I
+00046  0038 000d                if-eqz
+00048  6054 1012                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContextView;->p:Landroid/widget/TextView;
+0004a  106e 1df8 0006           invoke-virtual  # CALL Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
+0004d  010c                     move-result-object
+0004e  6252 1014                iget  # FIELD Landroid/support/v7/widget/ActionBarContextView;->r:I
+00050  306e 2147 0210           invoke-virtual  # CALL Landroid/widget/TextView;->setTextAppearance(Landroid/content/Context;,I)V
+00053  6054 1011                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContextView;->o:Landroid/widget/TextView;
+00055  6154 100c                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContextView;->j:Ljava/lang/CharSequence;
+00057  206e 2146 0010           invoke-virtual  # CALL Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+0005a  6054 1012                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContextView;->p:Landroid/widget/TextView;
+0005c  6154 100d                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContextView;->k:Ljava/lang/CharSequence;
+0005e  206e 2146 0010           invoke-virtual  # CALL Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+00061  6054 100c                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContextView;->j:Ljava/lang/CharSequence;
+00063  1071 1c37 0000           invoke-static  # CALL Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+00066  000a                     move-result
+00067  00df 0100                op_df
+00069  6154 100d                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContextView;->k:Ljava/lang/CharSequence;
+0006b  1071 1c37 0001           invoke-static  # CALL Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+0006e  010a                     move-result
+0006f  01df 0101                op_df
+00071  6254 1012                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContextView;->p:Landroid/widget/TextView;
+00073  0312                     const/4
+00074  0413 0008                const/16
+00076  0138 0004                if-eqz
+00078  3501                     op_01
+00079  0228                     goto
+0007a  4501                     op_01
+0007b  206e 214e 0052           invoke-virtual  # CALL Landroid/widget/TextView;->setVisibility(I)V
+0007e  6254 1010                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContextView;->n:Landroid/widget/LinearLayout;
+00080  0039 0006                if-nez
+00082  0138 0003                if-eqz
+00084  0228                     goto
+00085  4301                     op_01
+00086  206e 2025 0032           invoke-virtual  # CALL Landroid/widget/LinearLayout;->setVisibility(I)V
+00089  6054 1010                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContextView;->n:Landroid/widget/LinearLayout;
+0008b  106e 200e 0000           invoke-virtual  # CALL Landroid/widget/LinearLayout;->getParent()Landroid/view/ViewParent;
+0008e  000c                     move-result-object
+0008f  0039 0007                if-nez
+00091  6054 1010                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContextView;->n:Landroid/widget/LinearLayout;
+00093  206e 1de7 0006           invoke-virtual  # CALL Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+00096  000e                     return-void
+
+### Landroid/support/v7/widget/ActionBarContextView;->a()V  [access=0x1, regs=2, ins=1, outs=1, code_off=0xd9698]
+00000  1054 100e                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContextView;->l:Landroid/view/View;
+00002  0039 0005                if-nez
+00004  106e 15e5 0001           invoke-virtual  # CALL Landroid/support/v7/widget/ActionBarContextView;->c()V
+00007  000e                     return-void
+
+### Landroid/support/v7/widget/ActionBarContextView;->a(Lb/b/d/d/b;)V  [access=0x1, regs=5, ins=2, outs=4, code_off=0xd96b8]
+00000  3054 100e                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContextView;->l:Landroid/view/View;
+00002  0039 0017                if-nez
+00004  106e 1df8 0003           invoke-virtual  # CALL Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
+00007  000c                     move-result-object
+00008  1071 1cb8 0000           invoke-static  # CALL Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+0000b  000c                     move-result-object
+0000c  3152 1016                iget  # FIELD Landroid/support/v7/widget/ActionBarContextView;->t:I
+0000e  0212                     const/4
+0000f  406e 1cbc 2310           invoke-virtual  # CALL Landroid/view/LayoutInflater;->inflate(I,Landroid/view/ViewGroup;,Z)Landroid/view/View;
+00012  000c                     move-result-object
+00013  305b 100e                iput-object  # FIELD Landroid/support/v7/widget/ActionBarContextView;->l:Landroid/view/View;
+00015  206e 1de7 0003           invoke-virtual  # CALL Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+00018  0a28                     goto
+00019  106e 1d67 0000           invoke-virtual  # CALL Landroid/view/View;->getParent()Landroid/view/ViewParent;
+0001c  000c                     move-result-object
+0001d  0039 0005                if-nez
+0001f  3054 100e                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContextView;->l:Landroid/view/View;
+00021  f428                     goto
+00022  3054 100e                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContextView;->l:Landroid/view/View;
+00024  0160 1655                sget  # FIELD Lb/b/d/a/f;->action_mode_close_button:I
+00026  206e 1d47 0010           invoke-virtual  # CALL Landroid/view/View;->findViewById(I)Landroid/view/View;
+00029  000c                     move-result-object
+0002a  0122 033b                new-instance  # TYPE Landroid/support/v7/widget/ActionBarContextView$a;
+0002c  3070 15dc 0431           invoke-direct  # CALL Landroid/support/v7/widget/ActionBarContextView$a;-><init>(Landroid/support/v7/widget/ActionBarContextView;,Lb/b/d/d/b;)V
+0002f  206e 1db5 0010           invoke-virtual  # CALL Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+00032  106e 2678 0004           invoke-virtual  # CALL Lb/b/d/d/b;->c()Landroid/view/Menu;
+00035  040c                     move-result-object
+00036  041f 0320                check-cast  # TYPE Landroid/support/v7/view/menu/h;
+00038  3054 10e2                iget-object  # FIELD Landroid/support/v7/widget/a;->e:Landroid/support/v7/widget/c;
+0003a  0038 0005                if-eqz
+0003c  106e 1842 0000           invoke-virtual  # CALL Landroid/support/v7/widget/c;->b()Z
+0003f  0022 037e                new-instance  # TYPE Landroid/support/v7/widget/c;
+00041  106e 1df8 0003           invoke-virtual  # CALL Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
+00044  010c                     move-result-object
+00045  2070 1831 0010           invoke-direct  # CALL Landroid/support/v7/widget/c;-><init>(Landroid/content/Context;)V
+00048  305b 10e2                iput-object  # FIELD Landroid/support/v7/widget/a;->e:Landroid/support/v7/widget/c;
+0004a  1112                     const/4
+0004b  206e 1845 0010           invoke-virtual  # CALL Landroid/support/v7/widget/c;->c(Z)V
+0004e  0022 0450                new-instance  # TYPE Landroid/view/ViewGroup$LayoutParams;
+00050  e112                     const/4
+00051  f212                     const/4
+00052  3070 1dd8 0210           invoke-direct  # CALL Landroid/view/ViewGroup$LayoutParams;-><init>(I,I)V
+00055  3154 10e2                iget-object  # FIELD Landroid/support/v7/widget/a;->e:Landroid/support/v7/widget/c;
+00057  3254 10e0                iget-object  # FIELD Landroid/support/v7/widget/a;->c:Landroid/content/Context;
+00059  306e 1446 0214           invoke-virtual  # CALL Landroid/support/v7/view/menu/h;->a(Landroid/support/v7/view/menu/o;,Landroid/content/Context;)V
+0005c  3454 10e2                iget-object  # FIELD Landroid/support/v7/widget/a;->e:Landroid/support/v7/widget/c;
+0005e  206e 1840 0034           invoke-virtual  # CALL Landroid/support/v7/widget/c;->b(Landroid/view/ViewGroup;)Landroid/support/v7/view/menu/p;
+00061  040c                     move-result-object
+00062  041f 0348                check-cast  # TYPE Landroid/support/v7/widget/ActionMenuView;
+00064  345b 10e1                iput-object  # FIELD Landroid/support/v7/widget/a;->d:Landroid/support/v7/widget/ActionMenuView;
+00066  0112                     const/4
+00067  2071 2535 0014           invoke-static  # CALL Lb/b/c/g/q;->a(Landroid/view/View;,Landroid/graphics/drawable/Drawable;)V
+0006a  3454 10e1                iget-object  # FIELD Landroid/support/v7/widget/a;->d:Landroid/support/v7/widget/ActionMenuView;
+0006c  306e 1dea 0043           invoke-virtual  # CALL Landroid/view/ViewGroup;->addView(Landroid/view/View;,Landroid/view/ViewGroup$LayoutParams;)V
+0006f  000e                     return-void
+
+### Landroid/support/v7/widget/ActionBarContextView;->b()Z  [access=0x1, regs=1, ins=1, outs=0, code_off=0xd9520]
+00000  0055 1015                iget-boolean  # FIELD Landroid/support/v7/widget/ActionBarContextView;->s:Z
+00002  000f                     return
+
+### Landroid/support/v7/widget/ActionBarContextView;->c()V  [access=0x1, regs=2, ins=1, outs=1, code_off=0xd98e8]
+00000  106e 1e2a 0001           invoke-virtual  # CALL Landroid/view/ViewGroup;->removeAllViews()V
+00003  0012                     const/4
+00004  105b 100f                iput-object  # FIELD Landroid/support/v7/widget/ActionBarContextView;->m:Landroid/view/View;
+00006  105b 10e1                iput-object  # FIELD Landroid/support/v7/widget/a;->d:Landroid/support/v7/widget/ActionMenuView;
+00008  000e                     return-void
+
+### Landroid/support/v7/widget/ActionBarContextView;->d()Z  [access=0x1, regs=1, ins=1, outs=1, code_off=0xd954c]
+00000  0054 10e2                iget-object  # FIELD Landroid/support/v7/widget/a;->e:Landroid/support/v7/widget/c;
+00002  0038 0007                if-eqz
+00004  106e 184e 0000           invoke-virtual  # CALL Landroid/support/v7/widget/c;->i()Z
+00007  000a                     move-result
+00008  000f                     return
+00009  0012                     const/4
+0000a  000f                     return
+
+### Landroid/support/v7/widget/ActionBarContextView;->generateDefaultLayoutParams()Landroid/view/ViewGroup$LayoutParams;  [access=0x4, regs=3, ins=1, outs=3, code_off=0xd94dc]
+00000  0222 0451                new-instance  # TYPE Landroid/view/ViewGroup$MarginLayoutParams;
+00002  f012                     const/4
+00003  e112                     const/4
+00004  3070 1dd9 0102           invoke-direct  # CALL Landroid/view/ViewGroup$MarginLayoutParams;-><init>(I,I)V
+00007  0211                     return-object
+
+### Landroid/support/v7/widget/ActionBarContextView;->generateLayoutParams(Landroid/util/AttributeSet;)Landroid/view/ViewGroup$LayoutParams;  [access=0x1, regs=3, ins=2, outs=3, code_off=0xd94fc]
+00000  0022 0451                new-instance  # TYPE Landroid/view/ViewGroup$MarginLayoutParams;
+00002  106e 1df8 0001           invoke-virtual  # CALL Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
+00005  010c                     move-result-object
+00006  3070 1dda 0210           invoke-direct  # CALL Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;)V
+00009  0011                     return-object
+
+### Landroid/support/v7/widget/ActionBarContextView;->getAnimatedVisibility()I  [access=0x1041, regs=1, ins=1, outs=1, code_off=0xd9574]
+00000  106f 17ef 0000           invoke-super  # CALL Landroid/support/v7/widget/a;->getAnimatedVisibility()I
+00003  000a                     move-result
+00004  000f                     return
+
+### Landroid/support/v7/widget/ActionBarContextView;->getContentHeight()I  [access=0x1041, regs=1, ins=1, outs=1, code_off=0xd9590]
+00000  106f 17f0 0000           invoke-super  # CALL Landroid/support/v7/widget/a;->getContentHeight()I
+00003  000a                     move-result
+00004  000f                     return
+
+### Landroid/support/v7/widget/ActionBarContextView;->getSubtitle()Ljava/lang/CharSequence;  [access=0x1, regs=1, ins=1, outs=0, code_off=0xd95ac]
+00000  0054 100d                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContextView;->k:Ljava/lang/CharSequence;
+00002  0011                     return-object
+
+### Landroid/support/v7/widget/ActionBarContextView;->getTitle()Ljava/lang/CharSequence;  [access=0x1, regs=1, ins=1, outs=0, code_off=0xd95c4]
+00000  0054 100c                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContextView;->j:Ljava/lang/CharSequence;
+00002  0011                     return-object
+
+### Landroid/support/v7/widget/ActionBarContextView;->onDetachedFromWindow()V  [access=0x1, regs=2, ins=1, outs=1, code_off=0xd990c]
+00000  106f 1e1b 0001           invoke-super  # CALL Landroid/view/ViewGroup;->onDetachedFromWindow()V
+00003  1054 10e2                iget-object  # FIELD Landroid/support/v7/widget/a;->e:Landroid/support/v7/widget/c;
+00005  0038 000a                if-eqz
+00007  106e 1849 0000           invoke-virtual  # CALL Landroid/support/v7/widget/c;->e()Z
+0000a  1154 10e2                iget-object  # FIELD Landroid/support/v7/widget/a;->e:Landroid/support/v7/widget/c;
+0000c  106e 184b 0001           invoke-virtual  # CALL Landroid/support/v7/widget/c;->f()Z
+0000f  000e                     return-void
+
+### Landroid/support/v7/widget/ActionBarContextView;->onInitializeAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V  [access=0x1, regs=4, ins=2, outs=2, code_off=0xd993c]
+00000  106e 1e87 0003           invoke-virtual  # CALL Landroid/view/accessibility/AccessibilityEvent;->getEventType()I
+00003  000a                     move-result
+00004  0113 0020                const/16
+00006  1033 001f                if-ne
+00008  206e 1e8e 0023           invoke-virtual  # CALL Landroid/view/accessibility/AccessibilityEvent;->setSource(Landroid/view/View;)V
+0000b  001c 033c                const-class  # TYPE Landroid/support/v7/widget/ActionBarContextView;
+0000d  106e 2c7f 0000           invoke-virtual  # CALL Ljava/lang/Class;->getName()Ljava/lang/String;
+00010  000c                     move-result-object
+00011  206e 1e88 0003           invoke-virtual  # CALL Landroid/view/accessibility/AccessibilityEvent;->setClassName(Ljava/lang/CharSequence;)V
+00014  106e 1df8 0002           invoke-virtual  # CALL Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
+00017  000c                     move-result-object
+00018  106e 0847 0000           invoke-virtual  # CALL Landroid/content/Context;->getPackageName()Ljava/lang/String;
+0001b  000c                     move-result-object
+0001c  206e 1e8a 0003           invoke-virtual  # CALL Landroid/view/accessibility/AccessibilityEvent;->setPackageName(Ljava/lang/CharSequence;)V
+0001f  2254 100c                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContextView;->j:Ljava/lang/CharSequence;
+00021  206e 1e89 0023           invoke-virtual  # CALL Landroid/view/accessibility/AccessibilityEvent;->setContentDescription(Ljava/lang/CharSequence;)V
+00024  0428                     goto
+00025  206f 1e1d 0032           invoke-super  # CALL Landroid/view/ViewGroup;->onInitializeAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
+00028  000e                     return-void
+
+### Landroid/support/v7/widget/ActionBarContextView;->onLayout(Z,I,I,I,I)V  [access=0x4, regs=15, ins=6, outs=6, code_off=0xd99a0]
+00000  1071 1b5c 0009           invoke-static  # CALL Landroid/support/v7/widget/z0;->a(Landroid/view/View;)Z
+00003  0a0a                     move-result
+00004  0a38 000a                if-eqz
+00006  0091 0b0d                int-sub
+00008  106e 1e04 0009           invoke-virtual  # CALL Landroid/view/ViewGroup;->getPaddingRight()I
+0000b  010a                     move-result
+0000c  10b1                     op_b1
+0000d  0528                     goto
+0000e  106e 1e03 0009           invoke-virtual  # CALL Landroid/view/ViewGroup;->getPaddingLeft()I
+00011  000a                     move-result
+00012  106e 1e06 0009           invoke-virtual  # CALL Landroid/view/ViewGroup;->getPaddingTop()I
+00015  060a                     move-result
+00016  ceb1                     op_b1
+00017  106e 1e06 0009           invoke-virtual  # CALL Landroid/view/ViewGroup;->getPaddingTop()I
+0001a  0c0a                     move-result
+0001b  ceb1                     op_b1
+0001c  106e 1e01 0009           invoke-virtual  # CALL Landroid/view/ViewGroup;->getPaddingBottom()I
+0001f  0c0a                     move-result
+00020  0c91 0c0e                int-sub
+00022  9e54 100e                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContextView;->l:Landroid/view/View;
+00024  0713 0008                const/16
+00026  0e38 0032                if-eqz
+00028  106e 1d7c 000e           invoke-virtual  # CALL Landroid/view/View;->getVisibility()I
+0002b  0e0a                     move-result
+0002c  7e32 002c                if-eq
+0002e  9e54 100e                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContextView;->l:Landroid/view/View;
+00030  106e 1d5b 000e           invoke-virtual  # CALL Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+00033  0e0c                     move-result-object
+00034  0e1f 0451                check-cast  # TYPE Landroid/view/ViewGroup$MarginLayoutParams;
+00036  0a38 0005                if-eqz
+00038  e152 125a                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+0003a  0328                     goto
+0003b  e152 1259                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+0003d  0a38 0005                if-eqz
+0003f  ee52 1259                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+00041  0328                     goto
+00042  ee52 125a                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+00044  3071 17e9 0a10           invoke-static  # CALL Landroid/support/v7/widget/a;->a(I,I,Z)I
+00047  080a                     move-result
+00048  9154 100e                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContextView;->l:Landroid/view/View;
+0004a  9007                     op_07
+0004b  8201                     op_01
+0004c  6301                     op_01
+0004d  c401                     op_01
+0004e  a501                     op_01
+0004f  0674 17eb 0000           invoke-virtual/range  # CALL Landroid/support/v7/widget/a;->a(Landroid/view/View;,I,I,I,Z)I
+00052  000a                     move-result
+00053  08b0                     op_b0
+00054  3071 17e9 0ae8           invoke-static  # CALL Landroid/support/v7/widget/a;->a(I,I,Z)I
+00057  000a                     move-result
+00058  0e01                     op_01
+00059  9054 1010                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContextView;->n:Landroid/widget/LinearLayout;
+0005b  0038 0018                if-eqz
+0005d  9154 100f                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContextView;->m:Landroid/view/View;
+0005f  0139 0014                if-nez
+00061  106e 2010 0000           invoke-virtual  # CALL Landroid/widget/LinearLayout;->getVisibility()I
+00064  000a                     move-result
+00065  7032 000e                if-eq
+00067  9154 1010                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContextView;->n:Landroid/widget/LinearLayout;
+00069  9007                     op_07
+0006a  e201                     op_01
+0006b  6301                     op_01
+0006c  c401                     op_01
+0006d  a501                     op_01
+0006e  0674 17eb 0000           invoke-virtual/range  # CALL Landroid/support/v7/widget/a;->a(Landroid/view/View;,I,I,I,Z)I
+00071  000a                     move-result
+00072  0eb0                     op_b0
+00073  e201                     op_01
+00074  9154 100f                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContextView;->m:Landroid/view/View;
+00076  0138 0009                if-eqz
+00078  9007                     op_07
+00079  6301                     op_01
+0007a  c401                     op_01
+0007b  a501                     op_01
+0007c  0674 17eb 0000           invoke-virtual/range  # CALL Landroid/support/v7/widget/a;->a(Landroid/view/View;,I,I,I,Z)I
+0007f  0a38 0008                if-eqz
+00081  106e 1e03 0009           invoke-virtual  # CALL Landroid/view/ViewGroup;->getPaddingLeft()I
+00084  0b0a                     move-result
+00085  b301                     op_01
+00086  0828                     goto
+00087  bdb1                     op_b1
+00088  106e 1e04 0009           invoke-virtual  # CALL Landroid/view/ViewGroup;->getPaddingRight()I
+0008b  0b0a                     move-result
+0008c  bdb1                     op_b1
+0008d  d301                     op_01
+0008e  9254 10e1                iget-object  # FIELD Landroid/support/v7/widget/a;->d:Landroid/support/v7/widget/ActionMenuView;
+00090  0238 000b                if-eqz
+00092  0adf 010a                op_df
+00094  9107                     op_07
+00095  6401                     op_01
+00096  c501                     op_01
+00097  a601                     op_01
+00098  0674 17eb 0001           invoke-virtual/range  # CALL Landroid/support/v7/widget/a;->a(Landroid/view/View;,I,I,I,Z)I
+0009b  000e                     return-void
+
+### Landroid/support/v7/widget/ActionBarContextView;->onMeasure(I,I)V  [access=0x4, regs=13, ins=3, outs=5, code_off=0xd9ae8]
+00000  1071 1d36 000b           invoke-static  # CALL Landroid/view/View$MeasureSpec;->getMode(I)I
+00003  000a                     move-result
+00004  011a 0035                const-string  # STR " can only be used "
+00006  0215 4000                const/high16
+00008  2033 0100                if-ne
+0000a  1071 1d36 000c           invoke-static  # CALL Landroid/view/View$MeasureSpec;->getMode(I)I
+0000d  000a                     move-result
+0000e  0038 00da                if-eqz
+00010  1071 1d37 000b           invoke-static  # CALL Landroid/view/View$MeasureSpec;->getSize(I)I
+00013  0b0a                     move-result
+00014  a052 10e3                iget  # FIELD Landroid/support/v7/widget/a;->f:I
+00016  003d 0003                if-lez
+00018  0528                     goto
+00019  1071 1d37 000c           invoke-static  # CALL Landroid/view/View$MeasureSpec;->getSize(I)I
+0001c  000a                     move-result
+0001d  106e 1e06 000a           invoke-virtual  # CALL Landroid/view/ViewGroup;->getPaddingTop()I
+00020  0c0a                     move-result
+00021  106e 1e01 000a           invoke-virtual  # CALL Landroid/view/ViewGroup;->getPaddingBottom()I
+00024  010a                     move-result
+00025  1cb0                     op_b0
+00026  106e 1e03 000a           invoke-virtual  # CALL Landroid/view/ViewGroup;->getPaddingLeft()I
+00029  010a                     move-result
+0002a  0191 010b                int-sub
+0002c  106e 1e04 000a           invoke-virtual  # CALL Landroid/view/ViewGroup;->getPaddingRight()I
+0002f  030a                     move-result
+00030  31b1                     op_b1
+00031  0391 0c00                int-sub
+00033  0415 8000                const/high16
+00035  2071 1d38 0043           invoke-static  # CALL Landroid/view/View$MeasureSpec;->makeMeasureSpec(I,I)I
+00038  050a                     move-result
+00039  a654 100e                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContextView;->l:Landroid/view/View;
+0003b  0712                     const/4
+0003c  0638 0014                if-eqz
+0003e  576e 17ea 516a           invoke-virtual  # CALL Landroid/support/v7/widget/a;->a(Landroid/view/View;,I,I,I)I
+00041  010a                     move-result
+00042  a654 100e                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContextView;->l:Landroid/view/View;
+00044  106e 1d5b 0006           invoke-virtual  # CALL Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+00047  060c                     move-result-object
+00048  061f 0451                check-cast  # TYPE Landroid/view/ViewGroup$MarginLayoutParams;
+0004a  6852 1259                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+0004c  6652 125a                iget  # FIELD Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+0004e  68b0                     op_b0
+0004f  81b1                     op_b1
+00050  a654 10e1                iget-object  # FIELD Landroid/support/v7/widget/a;->d:Landroid/support/v7/widget/ActionMenuView;
+00052  0638 000e                if-eqz
+00054  106e 1e07 0006           invoke-virtual  # CALL Landroid/view/ViewGroup;->getParent()Landroid/view/ViewParent;
+00057  060c                     move-result-object
+00058  a633 0008                if-ne
+0005a  a654 10e1                iget-object  # FIELD Landroid/support/v7/widget/a;->d:Landroid/support/v7/widget/ActionMenuView;
+0005c  576e 17ea 516a           invoke-virtual  # CALL Landroid/support/v7/widget/a;->a(Landroid/view/View;,I,I,I)I
+0005f  010a                     move-result
+00060  a654 1010                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContextView;->n:Landroid/widget/LinearLayout;
+00062  0638 0031                if-eqz
+00064  a854 100f                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContextView;->m:Landroid/view/View;
+00066  0839 002d                if-nez
+00068  a855 1015                iget-boolean  # FIELD Landroid/support/v7/widget/ActionBarContextView;->s:Z
+0006a  0838 0025                if-eqz
+0006c  2071 1d38 0077           invoke-static  # CALL Landroid/view/View$MeasureSpec;->makeMeasureSpec(I,I)I
+0006f  060a                     move-result
+00070  a854 1010                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContextView;->n:Landroid/widget/LinearLayout;
+00072  306e 2013 0568           invoke-virtual  # CALL Landroid/widget/LinearLayout;->measure(I,I)V
+00075  a554 1010                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContextView;->n:Landroid/widget/LinearLayout;
+00077  106e 2008 0005           invoke-virtual  # CALL Landroid/widget/LinearLayout;->getMeasuredWidth()I
+0007a  050a                     move-result
+0007b  1536 0004                if-gt
+0007d  1612                     const/4
+0007e  0228                     goto
+0007f  7601                     op_01
+00080  0638 0003                if-eqz
+00082  51b1                     op_b1
+00083  a554 1010                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContextView;->n:Landroid/widget/LinearLayout;
+00085  0638 0004                if-eqz
+00087  7601                     op_01
+00088  0328                     goto
+00089  0613 0008                const/16
+0008b  206e 2025 0065           invoke-virtual  # CALL Landroid/widget/LinearLayout;->setVisibility(I)V
+0008e  0528                     goto
+0008f  576e 17ea 516a           invoke-virtual  # CALL Landroid/support/v7/widget/a;->a(Landroid/view/View;,I,I,I)I
+00092  010a                     move-result
+00093  a554 100f                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContextView;->m:Landroid/view/View;
+00095  0538 0031                if-eqz
+00097  106e 1d5b 0005           invoke-virtual  # CALL Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+0009a  050c                     move-result-object
+0009b  5652 1256                iget  # FIELD Landroid/view/ViewGroup$LayoutParams;->width:I
+0009d  e812                     const/4
+0009e  8632 0004                if-eq
+000a0  2601                     op_01
+000a1  0228                     goto
+000a2  4601                     op_01
+000a3  5952 1256                iget  # FIELD Landroid/view/ViewGroup$LayoutParams;->width:I
+000a5  093a 0006                if-ltz
+000a7  2071 2ccf 0019           invoke-static  # CALL Ljava/lang/Math;->min(I,I)I
+000aa  010a                     move-result
+000ab  5952 1255                iget  # FIELD Landroid/view/ViewGroup$LayoutParams;->height:I
+000ad  8932 0003                if-eq
+000af  0228                     goto
+000b0  4201                     op_01
+000b1  5452 1255                iget  # FIELD Landroid/view/ViewGroup$LayoutParams;->height:I
+000b3  043a 0006                if-ltz
+000b5  2071 2ccf 0034           invoke-static  # CALL Ljava/lang/Math;->min(I,I)I
+000b8  030a                     move-result
+000b9  a454 100f                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContextView;->m:Landroid/view/View;
+000bb  2071 1d38 0061           invoke-static  # CALL Landroid/view/View$MeasureSpec;->makeMeasureSpec(I,I)I
+000be  010a                     move-result
+000bf  2071 1d38 0023           invoke-static  # CALL Landroid/view/View$MeasureSpec;->makeMeasureSpec(I,I)I
+000c2  020a                     move-result
+000c3  306e 1d90 0214           invoke-virtual  # CALL Landroid/view/View;->measure(I,I)V
+000c6  a152 10e3                iget  # FIELD Landroid/support/v7/widget/a;->f:I
+000c8  013c 001c                if-gtz
+000ca  106e 1df6 000a           invoke-virtual  # CALL Landroid/view/ViewGroup;->getChildCount()I
+000cd  000a                     move-result
+000ce  7101                     op_01
+000cf  0735 0011                if-ge
+000d1  206e 1df5 007a           invoke-virtual  # CALL Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+000d4  020c                     move-result-object
+000d5  106e 1d5f 0002           invoke-virtual  # CALL Landroid/view/View;->getMeasuredHeight()I
+000d8  020a                     move-result
+000d9  c2b0                     op_b0
+000da  1237 0003                if-le
+000dc  2101                     op_01
+000dd  07d8 0107                op_d8
+000df  f028                     goto
+000e0  306e 1e38 01ba           invoke-virtual  # CALL Landroid/view/ViewGroup;->setMeasuredDimension(I,I)V
+000e3  0428                     goto
+000e4  306e 1e38 00ba           invoke-virtual  # CALL Landroid/view/ViewGroup;->setMeasuredDimension(I,I)V
+000e7  000e                     return-void
+000e8  0a22 066a                new-instance  # TYPE Ljava/lang/IllegalStateException;
+000ea  0b22 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+000ec  1070 2d35 000b           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+000ef  0c1c 033c                const-class  # TYPE Landroid/support/v7/widget/ActionBarContextView;
+000f1  106e 2c81 000c           invoke-virtual  # CALL Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+000f4  0c0c                     move-result-object
+000f5  206e 2d3f 00cb           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000f8  206e 2d3f 001b           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000fb  0c1a 289f                const-string  # STR "with android:layout_height=\"wrap_content\""
+000fd  206e 2d3f 00cb           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00100  106e 2d44 000b           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00103  0b0c                     move-result-object
+00104  2070 2ca3 00ba           invoke-direct  # CALL Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+00107  0a27                     throw
+00108  0a22 066a                new-instance  # TYPE Ljava/lang/IllegalStateException;
+0010a  0b22 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0010c  1070 2d35 000b           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0010f  0c1c 033c                const-class  # TYPE Landroid/support/v7/widget/ActionBarContextView;
+00111  106e 2c81 000c           invoke-virtual  # CALL Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+00114  0c0c                     move-result-object
+00115  206e 2d3f 00cb           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00118  206e 2d3f 001b           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0011b  0c1a 28a0                const-string  # STR "with android:layout_width=\"match_parent\" (or fill_parent)"
+0011d  206e 2d3f 00cb           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00120  106e 2d44 000b           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00123  0b0c                     move-result-object
+00124  2070 2ca3 00ba           invoke-direct  # CALL Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+00127  0a27                     throw
+
+### Landroid/support/v7/widget/ActionBarContextView;->setContentHeight(I)V  [access=0x1, regs=2, ins=2, outs=0, code_off=0xd9d48]
+00000  0159 10e3                iput  # FIELD Landroid/support/v7/widget/a;->f:I
+00002  000e                     return-void
+
+### Landroid/support/v7/widget/ActionBarContextView;->setCustomView(Landroid/view/View;)V  [access=0x1, regs=3, ins=2, outs=2, code_off=0xd9d60]
+00000  1054 100f                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContextView;->m:Landroid/view/View;
+00002  0038 0005                if-eqz
+00004  206e 1e2c 0001           invoke-virtual  # CALL Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
+00007  125b 100f                iput-object  # FIELD Landroid/support/v7/widget/ActionBarContextView;->m:Landroid/view/View;
+00009  0238 000c                if-eqz
+0000b  1054 1010                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContextView;->n:Landroid/widget/LinearLayout;
+0000d  0038 0008                if-eqz
+0000f  206e 1e2c 0001           invoke-virtual  # CALL Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
+00012  0012                     const/4
+00013  105b 1010                iput-object  # FIELD Landroid/support/v7/widget/ActionBarContextView;->n:Landroid/widget/LinearLayout;
+00015  0238 0005                if-eqz
+00017  206e 1de7 0021           invoke-virtual  # CALL Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+0001a  106e 1e30 0001           invoke-virtual  # CALL Landroid/view/ViewGroup;->requestLayout()V
+0001d  000e                     return-void
+
+### Landroid/support/v7/widget/ActionBarContextView;->setSubtitle(Ljava/lang/CharSequence;)V  [access=0x1, regs=2, ins=2, outs=1, code_off=0xd9dac]
+00000  015b 100d                iput-object  # FIELD Landroid/support/v7/widget/ActionBarContextView;->k:Ljava/lang/CharSequence;
+00002  1070 15e7 0000           invoke-direct  # CALL Landroid/support/v7/widget/ActionBarContextView;->e()V
+00005  000e                     return-void
+
+### Landroid/support/v7/widget/ActionBarContextView;->setTitle(Ljava/lang/CharSequence;)V  [access=0x1, regs=2, ins=2, outs=1, code_off=0xd9dc8]
+00000  015b 100c                iput-object  # FIELD Landroid/support/v7/widget/ActionBarContextView;->j:Ljava/lang/CharSequence;
+00002  1070 15e7 0000           invoke-direct  # CALL Landroid/support/v7/widget/ActionBarContextView;->e()V
+00005  000e                     return-void
+
+### Landroid/support/v7/widget/ActionBarContextView;->setTitleOptional(Z)V  [access=0x1, regs=3, ins=2, outs=1, code_off=0xd9de4]
+00000  1055 1015                iget-boolean  # FIELD Landroid/support/v7/widget/ActionBarContextView;->s:Z
+00002  0232 0005                if-eq
+00004  106e 1e30 0001           invoke-virtual  # CALL Landroid/view/ViewGroup;->requestLayout()V
+00007  125c 1015                iput-boolean  # FIELD Landroid/support/v7/widget/ActionBarContextView;->s:Z
+00009  000e                     return-void
+
+### Landroid/support/v7/widget/ActionBarContextView;->setVisibility(I)V  [access=0x1041, regs=2, ins=2, outs=2, code_off=0xd9e08]
+00000  206f 17f5 0010           invoke-super  # CALL Landroid/support/v7/widget/a;->setVisibility(I)V
+00003  000e                     return-void
+
+### Landroid/support/v7/widget/ActionBarContextView;->shouldDelayChildPressedState()Z  [access=0x1, regs=1, ins=1, outs=0, code_off=0xd9538]
+00000  0012                     const/4
+00001  000f                     return

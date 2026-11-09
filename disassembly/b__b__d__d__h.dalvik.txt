@@ -1,0 +1,101 @@
+### Lb/b/d/d/h;-><init>()V  [access=0x10001, regs=3, ins=1, outs=2, code_off=0xd0858]
+00000  1070 2ce0 0002           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  0016 ffff                const-wide/16
+00005  205a 1aac                iput-wide  # FIELD Lb/b/d/d/h;->b:J
+00007  0022 056d                new-instance  # TYPE Lb/b/d/d/h$a;
+00009  2070 26cc 0020           invoke-direct  # CALL Lb/b/d/d/h$a;-><init>(Lb/b/d/d/h;)V
+0000c  205b 1ab0                iput-object  # FIELD Lb/b/d/d/h;->f:Lb/b/c/g/w;
+0000e  0022 06c8                new-instance  # TYPE Ljava/util/ArrayList;
+00010  1070 2de7 0000           invoke-direct  # CALL Ljava/util/ArrayList;-><init>()V
+00013  205b 1aab                iput-object  # FIELD Lb/b/d/d/h;->a:Ljava/util/ArrayList;
+00015  000e                     return-void
+
+### Lb/b/d/d/h;->a(J)Lb/b/d/d/h;  [access=0x1, regs=4, ins=3, outs=0, code_off=0xd07f8]
+00000  1055 1aaf                iget-boolean  # FIELD Lb/b/d/d/h;->e:Z
+00002  0039 0004                if-nez
+00004  125a 1aac                iput-wide  # FIELD Lb/b/d/d/h;->b:J
+00006  0111                     return-object
+
+### Lb/b/d/d/h;->a(Landroid/view/animation/Interpolator;)Lb/b/d/d/h;  [access=0x1, regs=3, ins=2, outs=0, code_off=0xd0818]
+00000  1055 1aaf                iget-boolean  # FIELD Lb/b/d/d/h;->e:Z
+00002  0039 0004                if-nez
+00004  125b 1aad                iput-object  # FIELD Lb/b/d/d/h;->c:Landroid/view/animation/Interpolator;
+00006  0111                     return-object
+
+### Lb/b/d/d/h;->a(Lb/b/c/g/u;)Lb/b/d/d/h;  [access=0x1, regs=3, ins=2, outs=2, code_off=0xd07a0]
+00000  1055 1aaf                iget-boolean  # FIELD Lb/b/d/d/h;->e:Z
+00002  0039 0007                if-nez
+00004  1054 1aab                iget-object  # FIELD Lb/b/d/d/h;->a:Ljava/util/ArrayList;
+00006  206e 2deb 0020           invoke-virtual  # CALL Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+00009  0111                     return-object
+
+### Lb/b/d/d/h;->a(Lb/b/c/g/u;,Lb/b/c/g/u;)Lb/b/d/d/h;  [access=0x1, regs=5, ins=3, outs=3, code_off=0xd07c4]
+00000  2054 1aab                iget-object  # FIELD Lb/b/d/d/h;->a:Ljava/util/ArrayList;
+00002  206e 2deb 0030           invoke-virtual  # CALL Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+00005  106e 2567 0003           invoke-virtual  # CALL Lb/b/c/g/u;->b()J
+00008  000b                     move-result-wide
+00009  306e 2569 0104           invoke-virtual  # CALL Lb/b/c/g/u;->b(J)Lb/b/c/g/u;
+0000c  2354 1aab                iget-object  # FIELD Lb/b/d/d/h;->a:Ljava/util/ArrayList;
+0000e  206e 2deb 0043           invoke-virtual  # CALL Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+00011  0211                     return-object
+
+### Lb/b/d/d/h;->a(Lb/b/c/g/v;)Lb/b/d/d/h;  [access=0x1, regs=3, ins=2, outs=0, code_off=0xd0838]
+00000  1055 1aaf                iget-boolean  # FIELD Lb/b/d/d/h;->e:Z
+00002  0039 0004                if-nez
+00004  125b 1aae                iput-object  # FIELD Lb/b/d/d/h;->d:Lb/b/c/g/v;
+00006  0111                     return-object
+
+### Lb/b/d/d/h;->a()V  [access=0x1, regs=3, ins=1, outs=1, code_off=0xd0894]
+00000  2055 1aaf                iget-boolean  # FIELD Lb/b/d/d/h;->e:Z
+00002  0039 0003                if-nez
+00004  000e                     return-void
+00005  2054 1aab                iget-object  # FIELD Lb/b/d/d/h;->a:Ljava/util/ArrayList;
+00007  106e 2df3 0000           invoke-virtual  # CALL Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+0000a  000c                     move-result-object
+0000b  1072 2e43 0000           invoke-interface  # CALL Ljava/util/Iterator;->hasNext()Z
+0000e  010a                     move-result
+0000f  0138 000c                if-eqz
+00011  1072 2e44 0000           invoke-interface  # CALL Ljava/util/Iterator;->next()Ljava/lang/Object;
+00014  010c                     move-result-object
+00015  011f 053f                check-cast  # TYPE Lb/b/c/g/u;
+00017  106e 2565 0001           invoke-virtual  # CALL Lb/b/c/g/u;->a()V
+0001a  f128                     goto
+0001b  0012                     const/4
+0001c  205c 1aaf                iput-boolean  # FIELD Lb/b/d/d/h;->e:Z
+0001e  000e                     return-void
+
+### Lb/b/d/d/h;->b()V  [access=0x0, regs=2, ins=1, outs=0, code_off=0xd08e4]
+00000  0012                     const/4
+00001  105c 1aaf                iput-boolean  # FIELD Lb/b/d/d/h;->e:Z
+00003  000e                     return-void
+
+### Lb/b/d/d/h;->c()V  [access=0x1, regs=7, ins=1, outs=3, code_off=0xd08fc]
+00000  6055 1aaf                iget-boolean  # FIELD Lb/b/d/d/h;->e:Z
+00002  0038 0003                if-eqz
+00004  000e                     return-void
+00005  6054 1aab                iget-object  # FIELD Lb/b/d/d/h;->a:Ljava/util/ArrayList;
+00007  106e 2df3 0000           invoke-virtual  # CALL Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+0000a  000c                     move-result-object
+0000b  1072 2e43 0000           invoke-interface  # CALL Ljava/util/Iterator;->hasNext()Z
+0000e  010a                     move-result
+0000f  0138 0027                if-eqz
+00011  1072 2e44 0000           invoke-interface  # CALL Ljava/util/Iterator;->next()Ljava/lang/Object;
+00014  010c                     move-result-object
+00015  011f 053f                check-cast  # TYPE Lb/b/c/g/u;
+00017  6253 1aac                iget-wide  # FIELD Lb/b/d/d/h;->b:J
+00019  0416 0000                const-wide/16
+0001b  0431 0402                op_31
+0001d  043a 0005                if-ltz
+0001f  306e 2561 0321           invoke-virtual  # CALL Lb/b/c/g/u;->a(J)Lb/b/c/g/u;
+00022  6254 1aad                iget-object  # FIELD Lb/b/d/d/h;->c:Landroid/view/animation/Interpolator;
+00024  0238 0005                if-eqz
+00026  206e 2562 0021           invoke-virtual  # CALL Lb/b/c/g/u;->a(Landroid/view/animation/Interpolator;)Lb/b/c/g/u;
+00029  6254 1aae                iget-object  # FIELD Lb/b/d/d/h;->d:Lb/b/c/g/v;
+0002b  0238 0007                if-eqz
+0002d  6254 1ab0                iget-object  # FIELD Lb/b/d/d/h;->f:Lb/b/c/g/w;
+0002f  206e 2563 0021           invoke-virtual  # CALL Lb/b/c/g/u;->a(Lb/b/c/g/v;)Lb/b/c/g/u;
+00032  106e 256a 0001           invoke-virtual  # CALL Lb/b/c/g/u;->c()V
+00035  d628                     goto
+00036  1012                     const/4
+00037  605c 1aaf                iput-boolean  # FIELD Lb/b/d/d/h;->e:Z
+00039  000e                     return-void

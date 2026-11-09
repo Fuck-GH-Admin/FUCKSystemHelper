@@ -1,0 +1,355 @@
+### Landroid/support/v4/graphics/drawable/d;-><clinit>()V  [access=0x10008, regs=1, ins=0, outs=0, code_off=0xb5f18]
+00000  0062 0535                sget-object  # FIELD Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
+00002  0069 0db0                sput-object  # FIELD Landroid/support/v4/graphics/drawable/d;->h:Landroid/graphics/PorterDuff$Mode;
+00004  000e                     return-void
+
+### Landroid/support/v4/graphics/drawable/d;-><init>(Landroid/graphics/drawable/Drawable;)V  [access=0x10000, regs=3, ins=2, outs=2, code_off=0xb5f34]
+00000  1070 09cd 0001           invoke-direct  # CALL Landroid/graphics/drawable/Drawable;-><init>()V
+00003  106e 1090 0001           invoke-virtual  # CALL Landroid/support/v4/graphics/drawable/d;->c()Landroid/support/v4/graphics/drawable/d$a;
+00006  000c                     move-result-object
+00007  105b 0dad                iput-object  # FIELD Landroid/support/v4/graphics/drawable/d;->e:Landroid/support/v4/graphics/drawable/d$a;
+00009  206e 108d 0021           invoke-virtual  # CALL Landroid/support/v4/graphics/drawable/d;->a(Landroid/graphics/drawable/Drawable;)V
+0000c  000e                     return-void
+
+### Landroid/support/v4/graphics/drawable/d;-><init>(Landroid/support/v4/graphics/drawable/d$a;,Landroid/content/res/Resources;)V  [access=0x10000, regs=3, ins=3, outs=2, code_off=0xb5f60]
+00000  1070 09cd 0000           invoke-direct  # CALL Landroid/graphics/drawable/Drawable;-><init>()V
+00003  015b 0dad                iput-object  # FIELD Landroid/support/v4/graphics/drawable/d;->e:Landroid/support/v4/graphics/drawable/d$a;
+00005  2070 108c 0020           invoke-direct  # CALL Landroid/support/v4/graphics/drawable/d;->a(Landroid/content/res/Resources;)V
+00008  000e                     return-void
+
+### Landroid/support/v4/graphics/drawable/d;->a(Landroid/content/res/Resources;)V  [access=0x2, regs=3, ins=2, outs=2, code_off=0xb61c0]
+00000  1054 0dad                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d;->e:Landroid/support/v4/graphics/drawable/d$a;
+00002  0038 000d                if-eqz
+00004  0054 0da7                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d$a;->b:Landroid/graphics/drawable/Drawable$ConstantState;
+00006  0038 0009                if-eqz
+00008  206e 09cb 0020           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable$ConstantState;->newDrawable(Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;
+0000b  020c                     move-result-object
+0000c  206e 108d 0021           invoke-virtual  # CALL Landroid/support/v4/graphics/drawable/d;->a(Landroid/graphics/drawable/Drawable;)V
+0000f  000e                     return-void
+
+### Landroid/support/v4/graphics/drawable/d;->a([I)Z  [access=0x2, regs=6, ins=2, outs=3, code_off=0xb5d98]
+00000  106e 108f 0004           invoke-virtual  # CALL Landroid/support/v4/graphics/drawable/d;->b()Z
+00003  000a                     move-result
+00004  0112                     const/4
+00005  0039 0003                if-nez
+00007  010f                     return
+00008  4054 0dad                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d;->e:Landroid/support/v4/graphics/drawable/d$a;
+0000a  0254 0da8                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d$a;->c:Landroid/content/res/ColorStateList;
+0000c  0054 0da9                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d$a;->d:Landroid/graphics/PorterDuff$Mode;
+0000e  0238 0023                if-eqz
+00010  0038 0021                if-eqz
+00012  106e 08b3 0002           invoke-virtual  # CALL Landroid/content/res/ColorStateList;->getDefaultColor()I
+00015  030a                     move-result
+00016  306e 08b2 0352           invoke-virtual  # CALL Landroid/content/res/ColorStateList;->getColorForState([I,I)I
+00019  050a                     move-result
+0001a  4255 0dac                iget-boolean  # FIELD Landroid/support/v4/graphics/drawable/d;->d:Z
+0001c  0238 000a                if-eqz
+0001e  4252 0daa                iget  # FIELD Landroid/support/v4/graphics/drawable/d;->b:I
+00020  2533 0006                if-ne
+00022  4254 0dab                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d;->c:Landroid/graphics/PorterDuff$Mode;
+00024  2032 0012                if-eq
+00026  306e 09fb 0054           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setColorFilter(I,Landroid/graphics/PorterDuff$Mode;)V
+00029  4559 0daa                iput  # FIELD Landroid/support/v4/graphics/drawable/d;->b:I
+0002b  405b 0dab                iput-object  # FIELD Landroid/support/v4/graphics/drawable/d;->c:Landroid/graphics/PorterDuff$Mode;
+0002d  1512                     const/4
+0002e  455c 0dac                iput-boolean  # FIELD Landroid/support/v4/graphics/drawable/d;->d:Z
+00030  050f                     return
+00031  415c 0dac                iput-boolean  # FIELD Landroid/support/v4/graphics/drawable/d;->d:Z
+00033  106e 09d0 0004           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->clearColorFilter()V
+00036  010f                     return
+
+### Landroid/support/v4/graphics/drawable/d;->a()Landroid/graphics/drawable/Drawable;  [access=0x11, regs=1, ins=1, outs=0, code_off=0xb5b7c]
+00000  0054 0daf                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d;->g:Landroid/graphics/drawable/Drawable;
+00002  0011                     return-object
+
+### Landroid/support/v4/graphics/drawable/d;->a(Landroid/graphics/drawable/Drawable;)V  [access=0x11, regs=4, ins=2, outs=3, code_off=0xb6124]
+00000  2054 0daf                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d;->g:Landroid/graphics/drawable/Drawable;
+00002  0038 0006                if-eqz
+00004  0112                     const/4
+00005  206e 09f9 0010           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
+00008  235b 0daf                iput-object  # FIELD Landroid/support/v4/graphics/drawable/d;->g:Landroid/graphics/drawable/Drawable;
+0000a  0338 002c                if-eqz
+0000c  206e 09f9 0023           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
+0000f  106e 09ef 0003           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->isVisible()Z
+00012  000a                     move-result
+00013  1112                     const/4
+00014  306e 10af 0102           invoke-virtual  # CALL Landroid/support/v4/graphics/drawable/d;->setVisible(Z,Z)Z
+00017  106e 09e8 0003           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->getState()[I
+0001a  000c                     move-result-object
+0001b  206e 10ab 0002           invoke-virtual  # CALL Landroid/support/v4/graphics/drawable/d;->setState([I)Z
+0001e  106e 09e2 0003           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->getLevel()I
+00021  000a                     move-result
+00022  206e 0a02 0002           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setLevel(I)Z
+00025  106e 09d7 0003           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+00028  000c                     move-result-object
+00029  206e 09f8 0002           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
+0002c  2054 0dad                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d;->e:Landroid/support/v4/graphics/drawable/d$a;
+0002e  0038 0008                if-eqz
+00030  106e 09db 0003           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
+00033  030c                     move-result-object
+00034  035b 0da7                iput-object  # FIELD Landroid/support/v4/graphics/drawable/d$a;->b:Landroid/graphics/drawable/Drawable$ConstantState;
+00036  106e 09ec 0002           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+00039  000e                     return-void
+
+### Landroid/support/v4/graphics/drawable/d;->b()Z  [access=0x4, regs=1, ins=1, outs=0, code_off=0xb5ca0]
+00000  1012                     const/4
+00001  000f                     return
+
+### Landroid/support/v4/graphics/drawable/d;->c()Landroid/support/v4/graphics/drawable/d$a;  [access=0x0, regs=3, ins=1, outs=3, code_off=0xb5c3c]
+00000  0022 02b8                new-instance  # TYPE Landroid/support/v4/graphics/drawable/d$b;
+00002  2254 0dad                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d;->e:Landroid/support/v4/graphics/drawable/d$a;
+00004  0112                     const/4
+00005  3070 1086 0120           invoke-direct  # CALL Landroid/support/v4/graphics/drawable/d$b;-><init>(Landroid/support/v4/graphics/drawable/d$a;,Landroid/content/res/Resources;)V
+00008  0011                     return-object
+
+### Landroid/support/v4/graphics/drawable/d;->draw(Landroid/graphics/Canvas;)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0xb5f84]
+00000  0054 0daf                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d;->g:Landroid/graphics/drawable/Drawable;
+00002  206e 09d5 0010           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
+00005  000e                     return-void
+
+### Landroid/support/v4/graphics/drawable/d;->getChangingConfigurations()I  [access=0x1, regs=3, ins=1, outs=1, code_off=0xb5e18]
+00000  106f 09d9 0002           invoke-super  # CALL Landroid/graphics/drawable/Drawable;->getChangingConfigurations()I
+00003  000a                     move-result
+00004  2154 0dad                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d;->e:Landroid/support/v4/graphics/drawable/d$a;
+00006  0138 0007                if-eqz
+00008  106e 1083 0001           invoke-virtual  # CALL Landroid/support/v4/graphics/drawable/d$a;->getChangingConfigurations()I
+0000b  010a                     move-result
+0000c  0228                     goto
+0000d  0112                     const/4
+0000e  10b6                     op_b6
+0000f  2254 0daf                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d;->g:Landroid/graphics/drawable/Drawable;
+00011  106e 09d9 0002           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->getChangingConfigurations()I
+00014  020a                     move-result
+00015  02b6                     op_b6
+00016  020f                     return
+
+### Landroid/support/v4/graphics/drawable/d;->getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;  [access=0x1, regs=3, ins=1, outs=1, code_off=0xb5bfc]
+00000  2054 0dad                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d;->e:Landroid/support/v4/graphics/drawable/d$a;
+00002  0038 0013                if-eqz
+00004  106e 1082 0000           invoke-virtual  # CALL Landroid/support/v4/graphics/drawable/d$a;->a()Z
+00007  000a                     move-result
+00008  0038 000d                if-eqz
+0000a  2054 0dad                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d;->e:Landroid/support/v4/graphics/drawable/d$a;
+0000c  106e 1092 0002           invoke-virtual  # CALL Landroid/support/v4/graphics/drawable/d;->getChangingConfigurations()I
+0000f  010a                     move-result
+00010  0159 0da6                iput  # FIELD Landroid/support/v4/graphics/drawable/d$a;->a:I
+00012  2254 0dad                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d;->e:Landroid/support/v4/graphics/drawable/d$a;
+00014  0211                     return-object
+00015  0212                     const/4
+00016  0211                     return-object
+
+### Landroid/support/v4/graphics/drawable/d;->getCurrent()Landroid/graphics/drawable/Drawable;  [access=0x1, regs=1, ins=1, outs=1, code_off=0xb5b5c]
+00000  0054 0daf                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d;->g:Landroid/graphics/drawable/Drawable;
+00002  106e 09dc 0000           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->getCurrent()Landroid/graphics/drawable/Drawable;
+00005  000c                     move-result-object
+00006  0011                     return-object
+
+### Landroid/support/v4/graphics/drawable/d;->getIntrinsicHeight()I  [access=0x1, regs=1, ins=1, outs=1, code_off=0xb5e58]
+00000  0054 0daf                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d;->g:Landroid/graphics/drawable/Drawable;
+00002  106e 09df 0000           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
+00005  000a                     move-result
+00006  000f                     return
+
+### Landroid/support/v4/graphics/drawable/d;->getIntrinsicWidth()I  [access=0x1, regs=1, ins=1, outs=1, code_off=0xb5e78]
+00000  0054 0daf                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d;->g:Landroid/graphics/drawable/Drawable;
+00002  106e 09e0 0000           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+00005  000a                     move-result
+00006  000f                     return
+
+### Landroid/support/v4/graphics/drawable/d;->getMinimumHeight()I  [access=0x1, regs=1, ins=1, outs=1, code_off=0xb5e98]
+00000  0054 0daf                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d;->g:Landroid/graphics/drawable/Drawable;
+00002  106e 09e3 0000           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->getMinimumHeight()I
+00005  000a                     move-result
+00006  000f                     return
+
+### Landroid/support/v4/graphics/drawable/d;->getMinimumWidth()I  [access=0x1, regs=1, ins=1, outs=1, code_off=0xb5eb8]
+00000  0054 0daf                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d;->g:Landroid/graphics/drawable/Drawable;
+00002  106e 09e4 0000           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->getMinimumWidth()I
+00005  000a                     move-result
+00006  000f                     return
+
+### Landroid/support/v4/graphics/drawable/d;->getOpacity()I  [access=0x1, regs=1, ins=1, outs=1, code_off=0xb5ed8]
+00000  0054 0daf                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d;->g:Landroid/graphics/drawable/Drawable;
+00002  106e 09e5 0000           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->getOpacity()I
+00005  000a                     move-result
+00006  000f                     return
+
+### Landroid/support/v4/graphics/drawable/d;->getPadding(Landroid/graphics/Rect;)Z  [access=0x1, regs=2, ins=2, outs=2, code_off=0xb5c60]
+00000  0054 0daf                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d;->g:Landroid/graphics/drawable/Drawable;
+00002  206e 09e7 0010           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->getPadding(Landroid/graphics/Rect;)Z
+00005  000a                     move-result
+00006  000f                     return
+
+### Landroid/support/v4/graphics/drawable/d;->getState()[I  [access=0x1, regs=1, ins=1, outs=1, code_off=0xb5ef8]
+00000  0054 0daf                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d;->g:Landroid/graphics/drawable/Drawable;
+00002  106e 09e8 0000           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->getState()[I
+00005  000c                     move-result-object
+00006  0011                     return-object
+
+### Landroid/support/v4/graphics/drawable/d;->getTransparentRegion()Landroid/graphics/Region;  [access=0x1, regs=1, ins=1, outs=1, code_off=0xb5b3c]
+00000  0054 0daf                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d;->g:Landroid/graphics/drawable/Drawable;
+00002  106e 09e9 0000           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->getTransparentRegion()Landroid/graphics/Region;
+00005  000c                     move-result-object
+00006  0011                     return-object
+
+### Landroid/support/v4/graphics/drawable/d;->invalidateDrawable(Landroid/graphics/drawable/Drawable;)V  [access=0x1, regs=2, ins=2, outs=1, code_off=0xb5fa0]
+00000  106e 09ec 0000           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+00003  000e                     return-void
+
+### Landroid/support/v4/graphics/drawable/d;->isAutoMirrored()Z  [access=0x1, regs=1, ins=1, outs=1, code_off=0xb5c80]
+00000  0054 0daf                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d;->g:Landroid/graphics/drawable/Drawable;
+00002  106e 09ed 0000           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->isAutoMirrored()Z
+00005  000a                     move-result
+00006  000f                     return
+
+### Landroid/support/v4/graphics/drawable/d;->isStateful()Z  [access=0x1, regs=2, ins=1, outs=1, code_off=0xb5cb4]
+00000  106e 108f 0001           invoke-virtual  # CALL Landroid/support/v4/graphics/drawable/d;->b()Z
+00003  000a                     move-result
+00004  0038 0009                if-eqz
+00006  1054 0dad                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d;->e:Landroid/support/v4/graphics/drawable/d$a;
+00008  0038 0005                if-eqz
+0000a  0054 0da8                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d$a;->c:Landroid/content/res/ColorStateList;
+0000c  0228                     goto
+0000d  0012                     const/4
+0000e  0038 0008                if-eqz
+00010  106e 08b4 0000           invoke-virtual  # CALL Landroid/content/res/ColorStateList;->isStateful()Z
+00013  000a                     move-result
+00014  0039 000a                if-nez
+00016  1154 0daf                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d;->g:Landroid/graphics/drawable/Drawable;
+00018  106e 09ee 0001           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->isStateful()Z
+0001b  010a                     move-result
+0001c  0138 0004                if-eqz
+0001e  1112                     const/4
+0001f  0228                     goto
+00020  0112                     const/4
+00021  010f                     return
+
+### Landroid/support/v4/graphics/drawable/d;->jumpToCurrentState()V  [access=0x1, regs=1, ins=1, outs=1, code_off=0xb5fb8]
+00000  0054 0daf                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d;->g:Landroid/graphics/drawable/Drawable;
+00002  106e 09f0 0000           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->jumpToCurrentState()V
+00005  000e                     return-void
+
+### Landroid/support/v4/graphics/drawable/d;->mutate()Landroid/graphics/drawable/Drawable;  [access=0x1, regs=3, ins=1, outs=1, code_off=0xb5b94]
+00000  2055 0dae                iget-boolean  # FIELD Landroid/support/v4/graphics/drawable/d;->f:Z
+00002  0039 0028                if-nez
+00004  106f 09f1 0002           invoke-super  # CALL Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+00007  000c                     move-result-object
+00008  2033 0022                if-ne
+0000a  106e 1090 0002           invoke-virtual  # CALL Landroid/support/v4/graphics/drawable/d;->c()Landroid/support/v4/graphics/drawable/d$a;
+0000d  000c                     move-result-object
+0000e  205b 0dad                iput-object  # FIELD Landroid/support/v4/graphics/drawable/d;->e:Landroid/support/v4/graphics/drawable/d$a;
+00010  2054 0daf                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d;->g:Landroid/graphics/drawable/Drawable;
+00012  0038 0005                if-eqz
+00014  106e 09f1 0000           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+00017  2054 0dad                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d;->e:Landroid/support/v4/graphics/drawable/d$a;
+00019  0038 000e                if-eqz
+0001b  2154 0daf                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d;->g:Landroid/graphics/drawable/Drawable;
+0001d  0138 0007                if-eqz
+0001f  106e 09db 0001           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
+00022  010c                     move-result-object
+00023  0228                     goto
+00024  0112                     const/4
+00025  015b 0da7                iput-object  # FIELD Landroid/support/v4/graphics/drawable/d$a;->b:Landroid/graphics/drawable/Drawable$ConstantState;
+00027  1012                     const/4
+00028  205c 0dae                iput-boolean  # FIELD Landroid/support/v4/graphics/drawable/d;->f:Z
+0002a  0211                     return-object
+
+### Landroid/support/v4/graphics/drawable/d;->onBoundsChange(Landroid/graphics/Rect;)V  [access=0x4, regs=2, ins=2, outs=2, code_off=0xb5fd4]
+00000  0054 0daf                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d;->g:Landroid/graphics/drawable/Drawable;
+00002  0038 0005                if-eqz
+00004  206e 09f8 0010           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
+00007  000e                     return-void
+
+### Landroid/support/v4/graphics/drawable/d;->onLevelChange(I)Z  [access=0x4, regs=2, ins=2, outs=2, code_off=0xb5d08]
+00000  0054 0daf                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d;->g:Landroid/graphics/drawable/Drawable;
+00002  206e 0a02 0010           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setLevel(I)Z
+00005  000a                     move-result
+00006  000f                     return
+
+### Landroid/support/v4/graphics/drawable/d;->scheduleDrawable(Landroid/graphics/drawable/Drawable;,Ljava/lang/Runnable;,J)V  [access=0x1, regs=5, ins=5, outs=4, code_off=0xb5ff4]
+00000  406e 09f4 4320           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->scheduleSelf(Ljava/lang/Runnable;,J)V
+00003  000e                     return-void
+
+### Landroid/support/v4/graphics/drawable/d;->setAlpha(I)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0xb600c]
+00000  0054 0daf                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d;->g:Landroid/graphics/drawable/Drawable;
+00002  206e 09f5 0010           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setAlpha(I)V
+00005  000e                     return-void
+
+### Landroid/support/v4/graphics/drawable/d;->setAutoMirrored(Z)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0xb6028]
+00000  0054 0daf                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d;->g:Landroid/graphics/drawable/Drawable;
+00002  206e 09f6 0010           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setAutoMirrored(Z)V
+00005  000e                     return-void
+
+### Landroid/support/v4/graphics/drawable/d;->setChangingConfigurations(I)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0xb6044]
+00000  0054 0daf                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d;->g:Landroid/graphics/drawable/Drawable;
+00002  206e 09fa 0010           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setChangingConfigurations(I)V
+00005  000e                     return-void
+
+### Landroid/support/v4/graphics/drawable/d;->setColorFilter(Landroid/graphics/ColorFilter;)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0xb6060]
+00000  0054 0daf                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d;->g:Landroid/graphics/drawable/Drawable;
+00002  206e 09fc 0010           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
+00005  000e                     return-void
+
+### Landroid/support/v4/graphics/drawable/d;->setDither(Z)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0xb607c]
+00000  0054 0daf                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d;->g:Landroid/graphics/drawable/Drawable;
+00002  206e 09fd 0010           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setDither(Z)V
+00005  000e                     return-void
+
+### Landroid/support/v4/graphics/drawable/d;->setFilterBitmap(Z)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0xb6098]
+00000  0054 0daf                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d;->g:Landroid/graphics/drawable/Drawable;
+00002  206e 09fe 0010           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setFilterBitmap(Z)V
+00005  000e                     return-void
+
+### Landroid/support/v4/graphics/drawable/d;->setState([I)Z  [access=0x1, regs=3, ins=2, outs=2, code_off=0xb5d28]
+00000  1054 0daf                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d;->g:Landroid/graphics/drawable/Drawable;
+00002  206e 0a03 0020           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setState([I)Z
+00005  000a                     move-result
+00006  2070 108e 0021           invoke-direct  # CALL Landroid/support/v4/graphics/drawable/d;->a([I)Z
+00009  010a                     move-result
+0000a  0139 0007                if-nez
+0000c  0038 0003                if-eqz
+0000e  0328                     goto
+0000f  0112                     const/4
+00010  0228                     goto
+00011  1112                     const/4
+00012  010f                     return
+
+### Landroid/support/v4/graphics/drawable/d;->setTint(I)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0xb60b4]
+00000  1071 08b5 0001           invoke-static  # CALL Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+00003  010c                     move-result-object
+00004  206e 10ad 0010           invoke-virtual  # CALL Landroid/support/v4/graphics/drawable/d;->setTintList(Landroid/content/res/ColorStateList;)V
+00007  000e                     return-void
+
+### Landroid/support/v4/graphics/drawable/d;->setTintList(Landroid/content/res/ColorStateList;)V  [access=0x1, regs=3, ins=2, outs=2, code_off=0xb60d4]
+00000  1054 0dad                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d;->e:Landroid/support/v4/graphics/drawable/d$a;
+00002  025b 0da8                iput-object  # FIELD Landroid/support/v4/graphics/drawable/d$a;->c:Landroid/content/res/ColorStateList;
+00004  106e 109b 0001           invoke-virtual  # CALL Landroid/support/v4/graphics/drawable/d;->getState()[I
+00007  020c                     move-result-object
+00008  2070 108e 0021           invoke-direct  # CALL Landroid/support/v4/graphics/drawable/d;->a([I)Z
+0000b  000e                     return-void
+
+### Landroid/support/v4/graphics/drawable/d;->setTintMode(Landroid/graphics/PorterDuff$Mode;)V  [access=0x1, regs=3, ins=2, outs=2, code_off=0xb60fc]
+00000  1054 0dad                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d;->e:Landroid/support/v4/graphics/drawable/d$a;
+00002  025b 0da9                iput-object  # FIELD Landroid/support/v4/graphics/drawable/d$a;->d:Landroid/graphics/PorterDuff$Mode;
+00004  106e 109b 0001           invoke-virtual  # CALL Landroid/support/v4/graphics/drawable/d;->getState()[I
+00007  020c                     move-result-object
+00008  2070 108e 0021           invoke-direct  # CALL Landroid/support/v4/graphics/drawable/d;->a([I)Z
+0000b  000e                     return-void
+
+### Landroid/support/v4/graphics/drawable/d;->setVisible(Z,Z)Z  [access=0x1, regs=4, ins=3, outs=3, code_off=0xb5d60]
+00000  306f 0a07 0321           invoke-super  # CALL Landroid/graphics/drawable/Drawable;->setVisible(Z,Z)Z
+00003  000a                     move-result
+00004  0039 000d                if-nez
+00006  1154 0daf                iget-object  # FIELD Landroid/support/v4/graphics/drawable/d;->g:Landroid/graphics/drawable/Drawable;
+00008  306e 0a07 0321           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setVisible(Z,Z)Z
+0000b  010a                     move-result
+0000c  0138 0003                if-eqz
+0000e  0328                     goto
+0000f  0112                     const/4
+00010  0228                     goto
+00011  1112                     const/4
+00012  010f                     return
+
+### Landroid/support/v4/graphics/drawable/d;->unscheduleDrawable(Landroid/graphics/drawable/Drawable;,Ljava/lang/Runnable;)V  [access=0x1, regs=3, ins=3, outs=2, code_off=0xb61a8]
+00000  206e 0a08 0020           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->unscheduleSelf(Ljava/lang/Runnable;)V
+00003  000e                     return-void

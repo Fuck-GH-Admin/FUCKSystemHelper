@@ -1,0 +1,73 @@
+### Landroidx/core/graphics/drawable/IconCompatParcelizer;-><init>()V  [access=0x10001, regs=1, ins=1, outs=1, code_off=0xf1f4c]
+00000  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  000e                     return-void
+
+### Landroidx/core/graphics/drawable/IconCompatParcelizer;->read(Landroidx/versionedparcelable/a;)Landroid/support/v4/graphics/drawable/IconCompat;  [access=0x9, regs=4, ins=1, outs=3, code_off=0xf1ea8]
+00000  0022 02b2                new-instance  # TYPE Landroid/support/v4/graphics/drawable/IconCompat;
+00002  1070 1060 0000           invoke-direct  # CALL Landroid/support/v4/graphics/drawable/IconCompat;-><init>()V
+00005  0152 0d98                iget  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->a:I
+00007  1212                     const/4
+00008  306e 215f 0213           invoke-virtual  # CALL Landroidx/versionedparcelable/a;->a(I,I)I
+0000b  010a                     move-result
+0000c  0159 0d98                iput  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->a:I
+0000e  0154 0d9a                iget-object  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->c:[B
+00010  2212                     const/4
+00011  306e 216c 0213           invoke-virtual  # CALL Landroidx/versionedparcelable/a;->a([B,I)[B
+00014  010c                     move-result-object
+00015  015b 0d9a                iput-object  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->c:[B
+00017  0154 0d9b                iget-object  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->d:Landroid/os/Parcelable;
+00019  3212                     const/4
+0001a  306e 2160 0213           invoke-virtual  # CALL Landroidx/versionedparcelable/a;->a(Landroid/os/Parcelable;,I)Landroid/os/Parcelable;
+0001d  010c                     move-result-object
+0001e  015b 0d9b                iput-object  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->d:Landroid/os/Parcelable;
+00020  0152 0d9c                iget  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->e:I
+00022  4212                     const/4
+00023  306e 215f 0213           invoke-virtual  # CALL Landroidx/versionedparcelable/a;->a(I,I)I
+00026  010a                     move-result
+00027  0159 0d9c                iput  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->e:I
+00029  0152 0d9d                iget  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->f:I
+0002b  5212                     const/4
+0002c  306e 215f 0213           invoke-virtual  # CALL Landroidx/versionedparcelable/a;->a(I,I)I
+0002f  010a                     move-result
+00030  0159 0d9d                iput  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->f:I
+00032  0154 0d9e                iget-object  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->g:Landroid/content/res/ColorStateList;
+00034  6212                     const/4
+00035  306e 2160 0213           invoke-virtual  # CALL Landroidx/versionedparcelable/a;->a(Landroid/os/Parcelable;,I)Landroid/os/Parcelable;
+00038  010c                     move-result-object
+00039  011f 0187                check-cast  # TYPE Landroid/content/res/ColorStateList;
+0003b  015b 0d9e                iput-object  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->g:Landroid/content/res/ColorStateList;
+0003d  0154 0da0                iget-object  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->i:Ljava/lang/String;
+0003f  7212                     const/4
+00040  306e 2163 0213           invoke-virtual  # CALL Landroidx/versionedparcelable/a;->a(Ljava/lang/String;,I)Ljava/lang/String;
+00043  030c                     move-result-object
+00044  035b 0da0                iput-object  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->i:Ljava/lang/String;
+00046  106e 1067 0000           invoke-virtual  # CALL Landroid/support/v4/graphics/drawable/IconCompat;->c()V
+00049  0011                     return-object
+
+### Landroidx/core/graphics/drawable/IconCompatParcelizer;->write(Landroid/support/v4/graphics/drawable/IconCompat;,Landroidx/versionedparcelable/a;)V  [access=0x9, regs=4, ins=2, outs=3, code_off=0xf1f64]
+00000  1012                     const/4
+00001  306e 2169 0003           invoke-virtual  # CALL Landroidx/versionedparcelable/a;->a(Z,Z)V
+00004  106e 2176 0003           invoke-virtual  # CALL Landroidx/versionedparcelable/a;->c()Z
+00007  010a                     move-result
+00008  206e 1064 0012           invoke-virtual  # CALL Landroid/support/v4/graphics/drawable/IconCompat;->a(Z)V
+0000b  2152 0d98                iget  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->a:I
+0000d  306e 2170 0013           invoke-virtual  # CALL Landroidx/versionedparcelable/a;->b(I,I)V
+00010  2054 0d9a                iget-object  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->c:[B
+00012  2112                     const/4
+00013  306e 2173 0103           invoke-virtual  # CALL Landroidx/versionedparcelable/a;->b([B,I)V
+00016  2054 0d9b                iget-object  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->d:Landroid/os/Parcelable;
+00018  3112                     const/4
+00019  306e 2171 0103           invoke-virtual  # CALL Landroidx/versionedparcelable/a;->b(Landroid/os/Parcelable;,I)V
+0001c  2052 0d9c                iget  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->e:I
+0001e  4112                     const/4
+0001f  306e 2170 0103           invoke-virtual  # CALL Landroidx/versionedparcelable/a;->b(I,I)V
+00022  2052 0d9d                iget  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->f:I
+00024  5112                     const/4
+00025  306e 2170 0103           invoke-virtual  # CALL Landroidx/versionedparcelable/a;->b(I,I)V
+00028  2054 0d9e                iget-object  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->g:Landroid/content/res/ColorStateList;
+0002a  6112                     const/4
+0002b  306e 2171 0103           invoke-virtual  # CALL Landroidx/versionedparcelable/a;->b(Landroid/os/Parcelable;,I)V
+0002e  2254 0da0                iget-object  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->i:Ljava/lang/String;
+00030  7012                     const/4
+00031  306e 2172 0023           invoke-virtual  # CALL Landroidx/versionedparcelable/a;->b(Ljava/lang/String;,I)V
+00034  000e                     return-void

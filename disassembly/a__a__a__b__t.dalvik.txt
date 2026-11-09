@@ -1,0 +1,130 @@
+### La/a/a/b/t;-><init>()V  [access=0x10001, regs=2, ins=1, outs=1, code_off=0x53b20]
+00000  1070 2ce0 0001           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  0012                     const/4
+00004  105c 0122                iput-boolean  # FIELD La/a/a/b/t;->c:Z
+00006  105c 0123                iput-boolean  # FIELD La/a/a/b/t;->d:Z
+00008  000e                     return-void
+
+### La/a/a/b/t;-><init>(La/a/a/b/t$a;)V  [access=0x11001, regs=2, ins=2, outs=1, code_off=0x53b44]
+00000  1070 0186 0000           invoke-direct  # CALL La/a/a/b/t;-><init>()V
+00003  000e                     return-void
+
+### La/a/a/b/t;->e()La/a/a/b/t;  [access=0x9, regs=1, ins=0, outs=0, code_off=0x53ad4]
+00000  0071 0185 0000           invoke-static  # CALL La/a/a/b/t$b;->a()La/a/a/b/t;
+00003  000c                     move-result-object
+00004  0011                     return-object
+
+### La/a/a/b/t;->a()F  [access=0x1, regs=1, ins=1, outs=0, code_off=0x53b08]
+00000  0052 0121                iget  # FIELD La/a/a/b/t;->b:F
+00002  000f                     return
+
+### La/a/a/b/t;->a(Z)V  [access=0x1, regs=2, ins=2, outs=0, code_off=0x53b5c]
+00000  000e                     return-void
+
+### La/a/a/b/t;->b(Z)V  [access=0x1, regs=2, ins=2, outs=0, code_off=0x53b70]
+00000  015c 0122                iput-boolean  # FIELD La/a/a/b/t;->c:Z
+00002  000e                     return-void
+
+### La/a/a/b/t;->b()Z  [access=0x1, regs=1, ins=1, outs=0, code_off=0x53af0]
+00000  0055 0122                iget-boolean  # FIELD La/a/a/b/t;->c:Z
+00002  000f                     return
+
+### La/a/a/b/t;->c()V  [access=0x20001, regs=4, ins=1, outs=4, code_off=0x53b88]
+00000  031d                     monitor-enter
+00001  3055 0123                iget-boolean  # FIELD La/a/a/b/t;->d:Z
+00003  0038 0004                if-eqz
+00005  031e                     monitor-exit
+00006  000e                     return-void
+00007  3055 0122                iget-boolean  # FIELD La/a/a/b/t;->c:Z
+00009  0039 0004                if-nez
+0000b  031e                     monitor-exit
+0000c  000e                     return-void
+0000d  3054 0120                iget-object  # FIELD La/a/a/b/t;->a:Landroid/hardware/SensorManager;
+0000f  0039 0010                if-nez
+00011  0071 2a5a 0000           invoke-static  # CALL Lcom/baidu/location/f;->c()Landroid/content/Context;
+00014  000c                     move-result-object
+00015  011a 24f2                const-string  # STR "sensor"
+00017  206e 084c 0010           invoke-virtual  # CALL Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+0001a  000c                     move-result-object
+0001b  001f 01d1                check-cast  # TYPE Landroid/hardware/SensorManager;
+0001d  305b 0120                iput-object  # FIELD La/a/a/b/t;->a:Landroid/hardware/SensorManager;
+0001f  3054 0120                iget-object  # FIELD La/a/a/b/t;->a:Landroid/hardware/SensorManager;
+00021  0038 0014                if-eqz
+00023  0113 000b                const/16
+00025  206e 0a18 0010           invoke-virtual  # CALL Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
+00028  000c                     move-result-object
+00029  0038 000c                if-eqz
+0002b  3155 0122                iget-boolean  # FIELD La/a/a/b/t;->c:Z
+0002d  0138 0008                if-eqz
+0002f  3154 0120                iget-object  # FIELD La/a/a/b/t;->a:Landroid/hardware/SensorManager;
+00031  3212                     const/4
+00032  406e 0a1c 2031           invoke-virtual  # CALL Landroid/hardware/SensorManager;->registerListener(Landroid/hardware/SensorEventListener;,Landroid/hardware/Sensor;,I)Z
+00035  1012                     const/4
+00036  305c 0123                iput-boolean  # FIELD La/a/a/b/t;->d:Z
+00038  031e                     monitor-exit
+00039  000e                     return-void
+0003a  000d                     op_0d
+0003b  031e                     monitor-exit
+0003c  0027                     throw
+
+### La/a/a/b/t;->d()V  [access=0x20001, regs=2, ins=1, outs=2, code_off=0x53c30]
+00000  011d                     monitor-enter
+00001  1055 0123                iget-boolean  # FIELD La/a/a/b/t;->d:Z
+00003  0039 0004                if-nez
+00005  011e                     monitor-exit
+00006  000e                     return-void
+00007  1054 0120                iget-object  # FIELD La/a/a/b/t;->a:Landroid/hardware/SensorManager;
+00009  0038 0008                if-eqz
+0000b  206e 0a1d 0010           invoke-virtual  # CALL Landroid/hardware/SensorManager;->unregisterListener(Landroid/hardware/SensorEventListener;)V
+0000e  0012                     const/4
+0000f  105b 0120                iput-object  # FIELD La/a/a/b/t;->a:Landroid/hardware/SensorManager;
+00011  0012                     const/4
+00012  105c 0123                iput-boolean  # FIELD La/a/a/b/t;->d:Z
+00014  011e                     monitor-exit
+00015  000e                     return-void
+00016  000d                     op_0d
+00017  011e                     monitor-exit
+00018  0027                     throw
+
+### La/a/a/b/t;->onAccuracyChanged(Landroid/hardware/Sensor;,I)V  [access=0x1, regs=3, ins=3, outs=0, code_off=0x53c88]
+00000  000e                     return-void
+
+### La/a/a/b/t;->onSensorChanged(Landroid/hardware/SensorEvent;)V  [access=0x1, regs=6, ins=2, outs=2, code_off=0x53c9c]
+00000  5054 0544                iget-object  # FIELD Landroid/hardware/SensorEvent;->sensor:Landroid/hardware/Sensor;
+00002  106e 0a17 0000           invoke-virtual  # CALL Landroid/hardware/Sensor;->getType()I
+00005  000a                     move-result
+00006  0113 000b                const/16
+00008  1032 0003                if-eq
+0000a  3728                     goto
+0000b  5554 0545                iget-object  # FIELD Landroid/hardware/SensorEvent;->values:[F
+0000d  106e 2f3d 0005           invoke-virtual  # CALL [F->clone()Ljava/lang/Object;
+00010  050c                     move-result-object
+00011  051f 0723                check-cast  # TYPE [F
+00013  0538 002e                if-eqz
+00015  0013 0009                const/16
+00017  0023 0723                new-array  # TYPE [F
+00019  0112                     const/4
+0001a  2071 0a1a 0050           invoke-static  # CALL Landroid/hardware/SensorManager;->getRotationMatrixFromVector([F,[F)V
+0001d  3512                     const/4
+0001e  5523 0723                new-array  # TYPE [F
+00020  2071 0a19 0050           invoke-static  # CALL Landroid/hardware/SensorManager;->getOrientation([F,[F)[F
+00023  0012                     const/4
+00024  0544 0005                aget
+00026  5289                     op_89
+00027  2071 2cd8 0032           invoke-static  # CALL Ljava/lang/Math;->toDegrees(D)D
+0002a  020b                     move-result-wide
+0002b  258c                     op_8c
+0002c  4559 0121                iput  # FIELD La/a/a/b/t;->b:F
+0002e  002d 0105                op_2d
+00030  003a 0003                if-ltz
+00032  0428                     goto
+00033  0015 43b4                const/high16
+00035  05c6                     op_c6
+00036  5289                     op_89
+00037  2071 2cc7 0032           invoke-static  # CALL Ljava/lang/Math;->floor(D)D
+0003a  020b                     move-result-wide
+0003b  258c                     op_8c
+0003c  4559 0121                iput  # FIELD La/a/a/b/t;->b:F
+0003e  0328                     goto
+0003f  4159 0121                iput  # FIELD La/a/a/b/t;->b:F
+00041  000e                     return-void

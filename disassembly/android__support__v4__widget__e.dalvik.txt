@@ -1,0 +1,40 @@
+### Landroid/support/v4/widget/e;-><init>(Landroid/support/v4/widget/e$a;)V  [access=0x10000, regs=2, ins=2, outs=1, code_off=0xc05dc]
+00000  1070 1f52 0000           invoke-direct  # CALL Landroid/widget/Filter;-><init>()V
+00003  015b 0dfb                iput-object  # FIELD Landroid/support/v4/widget/e;->a:Landroid/support/v4/widget/e$a;
+00005  000e                     return-void
+
+### Landroid/support/v4/widget/e;->convertResultToString(Ljava/lang/Object;)Ljava/lang/CharSequence;  [access=0x1, regs=2, ins=2, outs=2, code_off=0xc05b8]
+00000  0054 0dfb                iget-object  # FIELD Landroid/support/v4/widget/e;->a:Landroid/support/v4/widget/e$a;
+00002  011f 0190                check-cast  # TYPE Landroid/database/Cursor;
+00004  2072 1179 0010           invoke-interface  # CALL Landroid/support/v4/widget/e$a;->a(Landroid/database/Cursor;)Ljava/lang/CharSequence;
+00007  000c                     move-result-object
+00008  0011                     return-object
+
+### Landroid/support/v4/widget/e;->performFiltering(Ljava/lang/CharSequence;)Landroid/widget/Filter$FilterResults;  [access=0x4, regs=3, ins=2, outs=2, code_off=0xc0570]
+00000  1154 0dfb                iget-object  # FIELD Landroid/support/v4/widget/e;->a:Landroid/support/v4/widget/e$a;
+00002  2072 1178 0021           invoke-interface  # CALL Landroid/support/v4/widget/e$a;->a(Ljava/lang/CharSequence;)Landroid/database/Cursor;
+00005  010c                     move-result-object
+00006  0222 0489                new-instance  # TYPE Landroid/widget/Filter$FilterResults;
+00008  1070 1f51 0002           invoke-direct  # CALL Landroid/widget/Filter$FilterResults;-><init>()V
+0000b  0138 0009                if-eqz
+0000d  1072 0917 0001           invoke-interface  # CALL Landroid/database/Cursor;->getCount()I
+00010  000a                     move-result
+00011  2059 126c                iput  # FIELD Landroid/widget/Filter$FilterResults;->count:I
+00013  0528                     goto
+00014  0112                     const/4
+00015  2159 126c                iput  # FIELD Landroid/widget/Filter$FilterResults;->count:I
+00017  0112                     const/4
+00018  215b 126d                iput-object  # FIELD Landroid/widget/Filter$FilterResults;->values:Ljava/lang/Object;
+0001a  0211                     return-object
+
+### Landroid/support/v4/widget/e;->publishResults(Ljava/lang/CharSequence;,Landroid/widget/Filter$FilterResults;)V  [access=0x4, regs=3, ins=3, outs=2, code_off=0xc05f8]
+00000  0154 0dfb                iget-object  # FIELD Landroid/support/v4/widget/e;->a:Landroid/support/v4/widget/e$a;
+00002  1072 1177 0001           invoke-interface  # CALL Landroid/support/v4/widget/e$a;->a()Landroid/database/Cursor;
+00005  010c                     move-result-object
+00006  2254 126d                iget-object  # FIELD Landroid/widget/Filter$FilterResults;->values:Ljava/lang/Object;
+00008  0238 000b                if-eqz
+0000a  1232 0009                if-eq
+0000c  0054 0dfb                iget-object  # FIELD Landroid/support/v4/widget/e;->a:Landroid/support/v4/widget/e$a;
+0000e  021f 0190                check-cast  # TYPE Landroid/database/Cursor;
+00010  2072 117a 0020           invoke-interface  # CALL Landroid/support/v4/widget/e$a;->b(Landroid/database/Cursor;)V
+00013  000e                     return-void

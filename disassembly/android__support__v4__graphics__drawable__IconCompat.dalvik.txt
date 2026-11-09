@@ -1,0 +1,370 @@
+### Landroid/support/v4/graphics/drawable/IconCompat;-><clinit>()V  [access=0x10008, regs=1, ins=0, outs=0, code_off=0xb5868]
+00000  0062 0535                sget-object  # FIELD Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
+00002  0069 0da1                sput-object  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->j:Landroid/graphics/PorterDuff$Mode;
+00004  000e                     return-void
+
+### Landroid/support/v4/graphics/drawable/IconCompat;-><init>()V  [access=0x10001, regs=2, ins=1, outs=1, code_off=0xb5884]
+00000  1070 2154 0001           invoke-direct  # CALL Landroidx/versionedparcelable/CustomVersionedParcelable;-><init>()V
+00003  0012                     const/4
+00004  105b 0d9e                iput-object  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->g:Landroid/content/res/ColorStateList;
+00006  0062 0da1                sget-object  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->j:Landroid/graphics/PorterDuff$Mode;
+00008  105b 0d9f                iput-object  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->h:Landroid/graphics/PorterDuff$Mode;
+0000a  000e                     return-void
+
+### Landroid/support/v4/graphics/drawable/IconCompat;->a(Landroid/graphics/drawable/Icon;)I  [access=0xa, regs=7, ins=1, outs=3, code_off=0xb54d4]
+00000  001a 1555                const-string  # STR "Unable to get icon resource"
+00002  011a 08c7                const-string  # STR "IconCompat"
+00004  0260 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00006  0313 001c                const/16
+00008  3234 0007                if-lt
+0000a  106e 0a0a 0006           invoke-virtual  # CALL Landroid/graphics/drawable/Icon;->getResId()I
+0000d  060a                     move-result
+0000e  060f                     return
+0000f  0212                     const/4
+00010  106e 2ce3 0006           invoke-virtual  # CALL Ljava/lang/Object;->getClass()Ljava/lang/Class;
+00013  030c                     move-result-object
+00014  041a 1e2b                const-string  # STR "getResId"
+00016  2523 075c                new-array  # TYPE [Ljava/lang/Class;
+00018  306e 2c7e 0543           invoke-virtual  # CALL Ljava/lang/Class;->getMethod(Ljava/lang/String;,[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+0001b  030c                     move-result-object
+0001c  2423 075d                new-array  # TYPE [Ljava/lang/Object;
+0001e  306e 2d7a 0463           invoke-virtual  # CALL Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;,[Ljava/lang/Object;)Ljava/lang/Object;
+00021  060c                     move-result-object
+00022  061f 066d                check-cast  # TYPE Ljava/lang/Integer;
+00024  106e 2ca6 0006           invoke-virtual  # CALL Ljava/lang/Integer;->intValue()I
+00027  060a                     move-result
+00028  060f                     return
+00029  060d                     op_0d
+0002a  3071 1c5c 0601           invoke-static  # CALL Landroid/util/Log;->e(Ljava/lang/String;,Ljava/lang/String;,Ljava/lang/Throwable;)I
+0002d  020f                     return
+0002e  060d                     op_0d
+0002f  3071 1c5c 0601           invoke-static  # CALL Landroid/util/Log;->e(Ljava/lang/String;,Ljava/lang/String;,Ljava/lang/Throwable;)I
+00032  020f                     return
+00033  060d                     op_0d
+00034  3071 1c5c 0601           invoke-static  # CALL Landroid/util/Log;->e(Ljava/lang/String;,Ljava/lang/String;,Ljava/lang/Throwable;)I
+00037  020f                     return
+
+### Landroid/support/v4/graphics/drawable/IconCompat;->a(I)Ljava/lang/String;  [access=0xa, regs=2, ins=1, outs=0, code_off=0xb5814]
+00000  1012                     const/4
+00001  0132 001d                if-eq
+00003  2012                     const/4
+00004  0132 0017                if-eq
+00006  3012                     const/4
+00007  0132 0011                if-eq
+00009  4012                     const/4
+0000a  0132 000b                if-eq
+0000c  5012                     const/4
+0000d  0132 0005                if-eq
+0000f  011a 1537                const-string  # STR "UNKNOWN"
+00011  0111                     return-object
+00012  011a 0417                const-string  # STR "BITMAP_MASKABLE"
+00014  0111                     return-object
+00015  011a 1548                const-string  # STR "URI"
+00017  0111                     return-object
+00018  011a 06e1                const-string  # STR "DATA"
+0001a  0111                     return-object
+0001b  011a 1353                const-string  # STR "RESOURCE"
+0001d  0111                     return-object
+0001e  011a 0416                const-string  # STR "BITMAP"
+00020  0111                     return-object
+
+### Landroid/support/v4/graphics/drawable/IconCompat;->b(Landroid/graphics/drawable/Icon;)Ljava/lang/String;  [access=0xa, regs=8, ins=1, outs=3, code_off=0xb55f4]
+00000  001a 1554                const-string  # STR "Unable to get icon package"
+00002  011a 08c7                const-string  # STR "IconCompat"
+00004  0260 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00006  0313 001c                const/16
+00008  3234 0007                if-lt
+0000a  106e 0a0b 0007           invoke-virtual  # CALL Landroid/graphics/drawable/Icon;->getResPackage()Ljava/lang/String;
+0000d  070c                     move-result-object
+0000e  0711                     return-object
+0000f  0212                     const/4
+00010  106e 2ce3 0007           invoke-virtual  # CALL Ljava/lang/Object;->getClass()Ljava/lang/Class;
+00013  030c                     move-result-object
+00014  041a 1e2c                const-string  # STR "getResPackage"
+00016  0512                     const/4
+00017  5623 075c                new-array  # TYPE [Ljava/lang/Class;
+00019  306e 2c7e 0643           invoke-virtual  # CALL Ljava/lang/Class;->getMethod(Ljava/lang/String;,[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+0001c  030c                     move-result-object
+0001d  5423 075d                new-array  # TYPE [Ljava/lang/Object;
+0001f  306e 2d7a 0473           invoke-virtual  # CALL Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;,[Ljava/lang/Object;)Ljava/lang/Object;
+00022  070c                     move-result-object
+00023  071f 0683                check-cast  # TYPE Ljava/lang/String;
+00025  0711                     return-object
+00026  070d                     op_0d
+00027  3071 1c5c 0701           invoke-static  # CALL Landroid/util/Log;->e(Ljava/lang/String;,Ljava/lang/String;,Ljava/lang/Throwable;)I
+0002a  0211                     return-object
+0002b  070d                     op_0d
+0002c  3071 1c5c 0701           invoke-static  # CALL Landroid/util/Log;->e(Ljava/lang/String;,Ljava/lang/String;,Ljava/lang/Throwable;)I
+0002f  0211                     return-object
+00030  070d                     op_0d
+00031  3071 1c5c 0701           invoke-static  # CALL Landroid/util/Log;->e(Ljava/lang/String;,Ljava/lang/String;,Ljava/lang/Throwable;)I
+00034  0211                     return-object
+
+### Landroid/support/v4/graphics/drawable/IconCompat;->a()I  [access=0x1, regs=4, ins=1, outs=2, code_off=0xb545c]
+00000  3052 0d98                iget  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->a:I
+00002  f112                     const/4
+00003  1033 0011                if-ne
+00005  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00007  0113 0017                const/16
+00009  1034 000b                if-lt
+0000b  3354 0d99                iget-object  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->b:Ljava/lang/Object;
+0000d  031f 01c4                check-cast  # TYPE Landroid/graphics/drawable/Icon;
+0000f  1071 1062 0003           invoke-static  # CALL Landroid/support/v4/graphics/drawable/IconCompat;->a(Landroid/graphics/drawable/Icon;)I
+00012  030a                     move-result
+00013  030f                     return
+00014  3052 0d98                iget  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->a:I
+00016  2112                     const/4
+00017  1033 0005                if-ne
+00019  3352 0d9c                iget  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->e:I
+0001b  030f                     return
+0001c  0022 066a                new-instance  # TYPE Ljava/lang/IllegalStateException;
+0001e  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00020  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00023  021a 1a02                const-string  # STR "called getResId() on "
+00025  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00028  206e 2d3e 0031           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+0002b  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0002e  030c                     move-result-object
+0002f  2070 2ca3 0030           invoke-direct  # CALL Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+00032  0027                     throw
+
+### Landroid/support/v4/graphics/drawable/IconCompat;->a(Z)V  [access=0x1, regs=5, ins=2, outs=4, code_off=0xb5964]
+00000  3054 0d9f                iget-object  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->h:Landroid/graphics/PorterDuff$Mode;
+00002  106e 0990 0000           invoke-virtual  # CALL Landroid/graphics/PorterDuff$Mode;->name()Ljava/lang/String;
+00005  000c                     move-result-object
+00006  305b 0da0                iput-object  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->i:Ljava/lang/String;
+00008  3052 0d98                iget  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->a:I
+0000a  f112                     const/4
+0000b  1032 0054                if-eq
+0000d  1112                     const/4
+0000e  1032 0038                if-eq
+00010  2112                     const/4
+00011  021a 154b                const-string  # STR "UTF-16"
+00013  1032 0024                if-eq
+00015  3112                     const/4
+00016  1032 001a                if-eq
+00018  4112                     const/4
+00019  1032 0006                if-eq
+0001b  5112                     const/4
+0001c  1032 002a                if-eq
+0001e  4928                     goto
+0001f  3454 0d99                iget-object  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->b:Ljava/lang/Object;
+00021  106e 2ce6 0004           invoke-virtual  # CALL Ljava/lang/Object;->toString()Ljava/lang/String;
+00024  040c                     move-result-object
+00025  1071 2db5 0002           invoke-static  # CALL Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
+00028  000c                     move-result-object
+00029  206e 2d09 0004           invoke-virtual  # CALL Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+0002c  040c                     move-result-object
+0002d  345b 0d9a                iput-object  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->c:[B
+0002f  3828                     goto
+00030  3454 0d99                iget-object  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->b:Ljava/lang/Object;
+00032  041f 0720                check-cast  # TYPE [B
+00034  345b 0d9a                iput-object  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->c:[B
+00036  3128                     goto
+00037  3454 0d99                iget-object  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->b:Ljava/lang/Object;
+00039  041f 0683                check-cast  # TYPE Ljava/lang/String;
+0003b  1071 2db5 0002           invoke-static  # CALL Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
+0003e  000c                     move-result-object
+0003f  206e 2d09 0004           invoke-virtual  # CALL Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+00042  040c                     move-result-object
+00043  345b 0d9a                iput-object  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->c:[B
+00045  2228                     goto
+00046  0438 001b                if-eqz
+00048  3454 0d99                iget-object  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->b:Ljava/lang/Object;
+0004a  041f 019a                check-cast  # TYPE Landroid/graphics/Bitmap;
+0004c  0022 063a                new-instance  # TYPE Ljava/io/ByteArrayOutputStream;
+0004e  1070 2bfd 0000           invoke-direct  # CALL Ljava/io/ByteArrayOutputStream;-><init>()V
+00051  0162 051d                sget-object  # FIELD Landroid/graphics/Bitmap$CompressFormat;->PNG:Landroid/graphics/Bitmap$CompressFormat;
+00053  0213 005a                const/16
+00055  406e 0942 0214           invoke-virtual  # CALL Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;,I,Ljava/io/OutputStream;)Z
+00058  106e 2bff 0000           invoke-virtual  # CALL Ljava/io/ByteArrayOutputStream;->toByteArray()[B
+0005b  040c                     move-result-object
+0005c  345b 0d9a                iput-object  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->c:[B
+0005e  0928                     goto
+0005f  0439 0009                if-nez
+00061  3454 0d99                iget-object  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->b:Ljava/lang/Object;
+00063  041f 0202                check-cast  # TYPE Landroid/os/Parcelable;
+00065  345b 0d9b                iput-object  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->d:Landroid/os/Parcelable;
+00067  000e                     return-void
+00068  0322 0669                new-instance  # TYPE Ljava/lang/IllegalArgumentException;
+0006a  041a 0531                const-string  # STR "Can't serialize Icon created with IconCompat#createFromIcon"
+0006c  2070 2c9f 0043           invoke-direct  # CALL Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+0006f  0327                     throw
+
+### Landroid/support/v4/graphics/drawable/IconCompat;->b()Ljava/lang/String;  [access=0x1, regs=4, ins=1, outs=3, code_off=0xb5568]
+00000  3052 0d98                iget  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->a:I
+00002  f112                     const/4
+00003  1033 0011                if-ne
+00005  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00007  0213 0017                const/16
+00009  2034 000b                if-lt
+0000b  3354 0d99                iget-object  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->b:Ljava/lang/Object;
+0000d  031f 01c4                check-cast  # TYPE Landroid/graphics/drawable/Icon;
+0000f  1071 1066 0003           invoke-static  # CALL Landroid/support/v4/graphics/drawable/IconCompat;->b(Landroid/graphics/drawable/Icon;)Ljava/lang/String;
+00012  030c                     move-result-object
+00013  0311                     return-object
+00014  3052 0d98                iget  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->a:I
+00016  2212                     const/4
+00017  2033 0010                if-ne
+00019  3354 0d99                iget-object  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->b:Ljava/lang/Object;
+0001b  031f 0683                check-cast  # TYPE Ljava/lang/String;
+0001d  001a 0258                const-string  # STR ":"
+0001f  306e 2d17 0103           invoke-virtual  # CALL Ljava/lang/String;->split(Ljava/lang/String;,I)[Ljava/lang/String;
+00022  030c                     move-result-object
+00023  0012                     const/4
+00024  0346 0003                aget-object
+00026  0311                     return-object
+00027  0022 066a                new-instance  # TYPE Ljava/lang/IllegalStateException;
+00029  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0002b  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0002e  021a 1a03                const-string  # STR "called getResPackage() on "
+00030  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00033  206e 2d3e 0031           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+00036  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00039  030c                     move-result-object
+0003a  2070 2ca3 0030           invoke-direct  # CALL Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+0003d  0027                     throw
+
+### Landroid/support/v4/graphics/drawable/IconCompat;->c()V  [access=0x1, regs=4, ins=1, outs=3, code_off=0xb58ac]
+00000  3054 0da0                iget-object  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->i:Ljava/lang/String;
+00002  1071 0991 0000           invoke-static  # CALL Landroid/graphics/PorterDuff$Mode;->valueOf(Ljava/lang/String;)Landroid/graphics/PorterDuff$Mode;
+00005  000c                     move-result-object
+00006  305b 0d9f                iput-object  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->h:Landroid/graphics/PorterDuff$Mode;
+00008  3052 0d98                iget  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->a:I
+0000a  f112                     const/4
+0000b  1032 0039                if-eq
+0000d  1112                     const/4
+0000e  3212                     const/4
+0000f  1032 0023                if-eq
+00011  2112                     const/4
+00012  1032 0010                if-eq
+00014  2032 0009                if-eq
+00016  4112                     const/4
+00017  1032 000b                if-eq
+00019  5112                     const/4
+0001a  1032 0018                if-eq
+0001c  2e28                     goto
+0001d  3054 0d9a                iget-object  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->c:[B
+0001f  305b 0d99                iput-object  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->b:Ljava/lang/Object;
+00021  2928                     goto
+00022  0022 0683                new-instance  # TYPE Ljava/lang/String;
+00024  3154 0d9a                iget-object  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->c:[B
+00026  021a 154b                const-string  # STR "UTF-16"
+00028  1071 2db5 0002           invoke-static  # CALL Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
+0002b  020c                     move-result-object
+0002c  3070 2cfc 0210           invoke-direct  # CALL Ljava/lang/String;-><init>([B,Ljava/nio/charset/Charset;)V
+0002f  305b 0d99                iput-object  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->b:Ljava/lang/Object;
+00031  1928                     goto
+00032  3054 0d9b                iget-object  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->d:Landroid/os/Parcelable;
+00034  0038 0003                if-eqz
+00036  1228                     goto
+00037  3054 0d9a                iget-object  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->c:[B
+00039  305b 0d99                iput-object  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->b:Ljava/lang/Object;
+0003b  3259 0d98                iput  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->a:I
+0003d  0112                     const/4
+0003e  3159 0d9c                iput  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->e:I
+00040  0021                     array-length
+00041  3059 0d9d                iput  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->f:I
+00043  0728                     goto
+00044  3054 0d9b                iget-object  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->d:Landroid/os/Parcelable;
+00046  0038 0005                if-eqz
+00048  305b 0d99                iput-object  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->b:Ljava/lang/Object;
+0004a  000e                     return-void
+0004b  0322 0669                new-instance  # TYPE Ljava/lang/IllegalArgumentException;
+0004d  001a 08e3                const-string  # STR "Invalid icon"
+0004f  2070 2c9f 0003           invoke-direct  # CALL Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+00052  0327                     throw
+
+### Landroid/support/v4/graphics/drawable/IconCompat;->toString()Ljava/lang/String;  [access=0x1, regs=5, ins=1, outs=2, code_off=0xb5684]
+00000  4052 0d98                iget  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->a:I
+00002  f112                     const/4
+00003  1033 0009                if-ne
+00005  4454 0d99                iget-object  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->b:Ljava/lang/Object;
+00007  1071 2d24 0004           invoke-static  # CALL Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+0000a  040c                     move-result-object
+0000b  0411                     return-object
+0000c  0022 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0000e  011a 08c6                const-string  # STR "Icon(typ="
+00010  2070 2d37 0010           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+00013  4152 0d98                iget  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->a:I
+00015  1071 1063 0001           invoke-static  # CALL Landroid/support/v4/graphics/drawable/IconCompat;->a(I)Ljava/lang/String;
+00018  010c                     move-result-object
+00019  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0001c  4152 0d98                iget  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->a:I
+0001e  1212                     const/4
+0001f  2132 0058                if-eq
+00021  2312                     const/4
+00022  3132 002d                if-eq
+00024  3212                     const/4
+00025  2132 0014                if-eq
+00027  4212                     const/4
+00028  2132 0006                if-eq
+0002a  5212                     const/4
+0002b  2132 004c                if-eq
+0002d  6a28                     goto
+0002e  011a 009d                const-string  # STR " uri="
+00030  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00033  4154 0d99                iget-object  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->b:Ljava/lang/Object;
+00035  206e 2d3e 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+00038  5f28                     goto
+00039  011a 0065                const-string  # STR " len="
+0003b  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0003e  4152 0d9c                iget  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->e:I
+00040  206e 2d3b 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+00043  4152 0d9d                iget  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->f:I
+00045  0138 0052                if-eqz
+00047  011a 008a                const-string  # STR " off="
+00049  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0004c  4152 0d9d                iget  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->f:I
+0004e  4628                     goto
+0004f  011a 0090                const-string  # STR " pkg="
+00051  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00054  106e 1065 0004           invoke-virtual  # CALL Landroid/support/v4/graphics/drawable/IconCompat;->b()Ljava/lang/String;
+00057  010c                     move-result-object
+00058  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0005b  011a 005a                const-string  # STR " id="
+0005d  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00060  2123 075d                new-array  # TYPE [Ljava/lang/Object;
+00062  0212                     const/4
+00063  106e 1061 0004           invoke-virtual  # CALL Landroid/support/v4/graphics/drawable/IconCompat;->a()I
+00066  030a                     move-result
+00067  1071 2cae 0003           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+0006a  030c                     move-result-object
+0006b  034d 0201                aput-object
+0006d  021a 022c                const-string  # STR "0x%08x"
+0006f  2071 2d05 0012           invoke-static  # CALL Ljava/lang/String;->format(Ljava/lang/String;,[Ljava/lang/Object;)Ljava/lang/String;
+00072  010c                     move-result-object
+00073  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00076  2128                     goto
+00077  011a 0096                const-string  # STR " size="
+00079  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0007c  4154 0d99                iget-object  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->b:Ljava/lang/Object;
+0007e  011f 019a                check-cast  # TYPE Landroid/graphics/Bitmap;
+00080  106e 0946 0001           invoke-virtual  # CALL Landroid/graphics/Bitmap;->getWidth()I
+00083  010a                     move-result
+00084  206e 2d3b 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+00087  011a 28bb                const-string  # STR "x"
+00089  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0008c  4154 0d99                iget-object  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->b:Ljava/lang/Object;
+0008e  011f 019a                check-cast  # TYPE Landroid/graphics/Bitmap;
+00090  106e 0945 0001           invoke-virtual  # CALL Landroid/graphics/Bitmap;->getHeight()I
+00093  010a                     move-result
+00094  206e 2d3b 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+00097  4154 0d9e                iget-object  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->g:Landroid/content/res/ColorStateList;
+00099  0138 000c                if-eqz
+0009b  011a 009b                const-string  # STR " tint="
+0009d  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000a0  4154 0d9e                iget-object  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->g:Landroid/content/res/ColorStateList;
+000a2  206e 2d3e 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+000a5  4154 0d9f                iget-object  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->h:Landroid/graphics/PorterDuff$Mode;
+000a7  0262 0da1                sget-object  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->j:Landroid/graphics/PorterDuff$Mode;
+000a9  2132 000c                if-eq
+000ab  011a 0081                const-string  # STR " mode="
+000ad  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000b0  4454 0d9f                iget-object  # FIELD Landroid/support/v4/graphics/drawable/IconCompat;->h:Landroid/graphics/PorterDuff$Mode;
+000b2  206e 2d3e 0040           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+000b5  041a 01ae                const-string  # STR ")"
+000b7  206e 2d3f 0040           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000ba  106e 2d44 0000           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+000bd  040c                     move-result-object
+000be  0411                     return-object

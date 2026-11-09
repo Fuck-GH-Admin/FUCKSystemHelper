@@ -1,0 +1,18 @@
+### La/a/a/g/b;->a(I)Ljava/lang/String;  [access=0x9, regs=2, ins=1, outs=1, code_off=0x6dd2c]
+00000  0071 058e 0000           invoke-static  # CALL La/a/a/g/f;->w()La/a/a/g/f;
+00003  000c                     move-result-object
+00004  106e 0587 0000           invoke-virtual  # CALL La/a/a/g/f;->p()Z
+00007  000a                     move-result
+00008  0038 0005                if-eqz
+0000a  011a 1660                const-string  # STR "WIFI"
+0000c  0111                     return-object
+0000d  012b 000f 0000           packed-switch
+00010  011a 2802                const-string  # STR "unknown"
+00012  0111                     return-object
+00013  011a 0250                const-string  # STR "4G"
+00015  0111                     return-object
+00016  011a 0246                const-string  # STR "3G"
+00018  0111                     return-object
+00019  011a 0241                const-string  # STR "2G"
+0001b  0111                     return-object
+0001c  0100 000f 0001 0000 000c 0000 000c 0000 0009 0000 000c 0000 0009 0000 0009 0000 ... <payload; units=34>

@@ -1,0 +1,24 @@
+### Landroid/support/v7/view/menu/k$b;-><init>(Landroid/view/View;)V  [access=0x10000, regs=3, ins=2, outs=2, code_off=0xd667c]
+00000  106e 1d51 0002           invoke-virtual  # CALL Landroid/view/View;->getContext()Landroid/content/Context;
+00003  000c                     move-result-object
+00004  2070 1f53 0001           invoke-direct  # CALL Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
+00007  2007                     op_07
+00008  001f 0425                check-cast  # TYPE Landroid/view/CollapsibleActionView;
+0000a  105b 0fd5                iput-object  # FIELD Landroid/support/v7/view/menu/k$b;->b:Landroid/view/CollapsibleActionView;
+0000c  206e 1f56 0021           invoke-virtual  # CALL Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
+0000f  000e                     return-void
+
+### Landroid/support/v7/view/menu/k$b;->a()V  [access=0x1, regs=1, ins=1, outs=1, code_off=0xd66c8]
+00000  0054 0fd5                iget-object  # FIELD Landroid/support/v7/view/menu/k$b;->b:Landroid/view/CollapsibleActionView;
+00002  1072 1c93 0000           invoke-interface  # CALL Landroid/view/CollapsibleActionView;->onActionViewExpanded()V
+00005  000e                     return-void
+
+### Landroid/support/v7/view/menu/k$b;->b()V  [access=0x1, regs=1, ins=1, outs=1, code_off=0xd66ac]
+00000  0054 0fd5                iget-object  # FIELD Landroid/support/v7/view/menu/k$b;->b:Landroid/view/CollapsibleActionView;
+00002  1072 1c92 0000           invoke-interface  # CALL Landroid/view/CollapsibleActionView;->onActionViewCollapsed()V
+00005  000e                     return-void
+
+### Landroid/support/v7/view/menu/k$b;->c()Landroid/view/View;  [access=0x0, regs=1, ins=1, outs=0, code_off=0xd6660]
+00000  0054 0fd5                iget-object  # FIELD Landroid/support/v7/view/menu/k$b;->b:Landroid/view/CollapsibleActionView;
+00002  001f 044c                check-cast  # TYPE Landroid/view/View;
+00004  0011                     return-object

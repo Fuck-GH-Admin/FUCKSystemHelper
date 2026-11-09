@@ -1,0 +1,99 @@
+### Landroid/support/v4/widget/g;->a(Landroid/widget/ImageView;)Landroid/content/res/ColorStateList;  [access=0x9, regs=3, ins=1, outs=1, code_off=0xc065c]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0113 0015                const/16
+00004  1034 0007                if-lt
+00006  106e 1fd6 0002           invoke-virtual  # CALL Landroid/widget/ImageView;->getImageTintList()Landroid/content/res/ColorStateList;
+00009  020c                     move-result-object
+0000a  0211                     return-object
+0000b  2020 02d4                instance-of  # TYPE Landroid/support/v4/widget/n;
+0000d  0038 0009                if-eqz
+0000f  021f 02d4                check-cast  # TYPE Landroid/support/v4/widget/n;
+00011  1072 11a7 0002           invoke-interface  # CALL Landroid/support/v4/widget/n;->getSupportImageTintList()Landroid/content/res/ColorStateList;
+00014  020c                     move-result-object
+00015  0228                     goto
+00016  0212                     const/4
+00017  0211                     return-object
+
+### Landroid/support/v4/widget/g;->a(Landroid/widget/ImageView;,Landroid/content/res/ColorStateList;)V  [access=0x9, regs=4, ins=2, outs=2, code_off=0xc06dc]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0113 0015                const/16
+00004  1034 0031                if-lt
+00006  206e 1ff1 0032           invoke-virtual  # CALL Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
+00009  0360 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+0000b  1333 0033                if-ne
+0000d  106e 1fd3 0002           invoke-virtual  # CALL Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
+00010  030c                     move-result-object
+00011  106e 1fd6 0002           invoke-virtual  # CALL Landroid/widget/ImageView;->getImageTintList()Landroid/content/res/ColorStateList;
+00014  000c                     move-result-object
+00015  0038 000a                if-eqz
+00017  106e 1fd7 0002           invoke-virtual  # CALL Landroid/widget/ImageView;->getImageTintMode()Landroid/graphics/PorterDuff$Mode;
+0001a  000c                     move-result-object
+0001b  0038 0004                if-eqz
+0001d  1012                     const/4
+0001e  0228                     goto
+0001f  0012                     const/4
+00020  0338 001e                if-eqz
+00022  0038 001c                if-eqz
+00024  106e 09ee 0003           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->isStateful()Z
+00027  000a                     move-result
+00028  0038 0009                if-eqz
+0002a  106e 1fd4 0002           invoke-virtual  # CALL Landroid/widget/ImageView;->getDrawableState()[I
+0002d  000c                     move-result-object
+0002e  206e 0a03 0003           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setState([I)Z
+00031  206e 1fef 0032           invoke-virtual  # CALL Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+00034  0a28                     goto
+00035  2020 02d4                instance-of  # TYPE Landroid/support/v4/widget/n;
+00037  0038 0007                if-eqz
+00039  021f 02d4                check-cast  # TYPE Landroid/support/v4/widget/n;
+0003b  2072 11a9 0032           invoke-interface  # CALL Landroid/support/v4/widget/n;->setSupportImageTintList(Landroid/content/res/ColorStateList;)V
+0003e  000e                     return-void
+
+### Landroid/support/v4/widget/g;->a(Landroid/widget/ImageView;,Landroid/graphics/PorterDuff$Mode;)V  [access=0x9, regs=4, ins=2, outs=2, code_off=0xc076c]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0113 0015                const/16
+00004  1034 0031                if-lt
+00006  206e 1ff2 0032           invoke-virtual  # CALL Landroid/widget/ImageView;->setImageTintMode(Landroid/graphics/PorterDuff$Mode;)V
+00009  0360 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+0000b  1333 0033                if-ne
+0000d  106e 1fd3 0002           invoke-virtual  # CALL Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
+00010  030c                     move-result-object
+00011  106e 1fd6 0002           invoke-virtual  # CALL Landroid/widget/ImageView;->getImageTintList()Landroid/content/res/ColorStateList;
+00014  000c                     move-result-object
+00015  0038 000a                if-eqz
+00017  106e 1fd7 0002           invoke-virtual  # CALL Landroid/widget/ImageView;->getImageTintMode()Landroid/graphics/PorterDuff$Mode;
+0001a  000c                     move-result-object
+0001b  0038 0004                if-eqz
+0001d  1012                     const/4
+0001e  0228                     goto
+0001f  0012                     const/4
+00020  0338 001e                if-eqz
+00022  0038 001c                if-eqz
+00024  106e 09ee 0003           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->isStateful()Z
+00027  000a                     move-result
+00028  0038 0009                if-eqz
+0002a  106e 1fd4 0002           invoke-virtual  # CALL Landroid/widget/ImageView;->getDrawableState()[I
+0002d  000c                     move-result-object
+0002e  206e 0a03 0003           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setState([I)Z
+00031  206e 1fef 0032           invoke-virtual  # CALL Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+00034  0a28                     goto
+00035  2020 02d4                instance-of  # TYPE Landroid/support/v4/widget/n;
+00037  0038 0007                if-eqz
+00039  021f 02d4                check-cast  # TYPE Landroid/support/v4/widget/n;
+0003b  2072 11aa 0032           invoke-interface  # CALL Landroid/support/v4/widget/n;->setSupportImageTintMode(Landroid/graphics/PorterDuff$Mode;)V
+0003e  000e                     return-void
+
+### Landroid/support/v4/widget/g;->b(Landroid/widget/ImageView;)Landroid/graphics/PorterDuff$Mode;  [access=0x9, regs=3, ins=1, outs=1, code_off=0xc069c]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0113 0015                const/16
+00004  1034 0007                if-lt
+00006  106e 1fd7 0002           invoke-virtual  # CALL Landroid/widget/ImageView;->getImageTintMode()Landroid/graphics/PorterDuff$Mode;
+00009  020c                     move-result-object
+0000a  0211                     return-object
+0000b  2020 02d4                instance-of  # TYPE Landroid/support/v4/widget/n;
+0000d  0038 0009                if-eqz
+0000f  021f 02d4                check-cast  # TYPE Landroid/support/v4/widget/n;
+00011  1072 11a8 0002           invoke-interface  # CALL Landroid/support/v4/widget/n;->getSupportImageTintMode()Landroid/graphics/PorterDuff$Mode;
+00014  020c                     move-result-object
+00015  0228                     goto
+00016  0212                     const/4
+00017  0211                     return-object

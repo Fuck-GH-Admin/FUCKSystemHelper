@@ -1,0 +1,58 @@
+### La/a/a/d/j;-><init>(Ljava/lang/String;,[Landroid/location/Location;)V  [access=0x10001, regs=4, ins=3, outs=2, code_off=0x60498]
+00000  1070 2ce0 0001           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  0012                     const/4
+00004  105b 023b                iput-object  # FIELD La/a/a/d/j;->c:Landroid/location/Location;
+00006  0338 000a                if-eqz
+00008  3021                     array-length
+00009  003d 0007                if-lez
+0000b  206e 0334 0031           invoke-virtual  # CALL La/a/a/d/j;->a([Landroid/location/Location;)V
+0000e  125b 023a                iput-object  # FIELD La/a/a/d/j;->b:Ljava/lang/String;
+00010  000e                     return-void
+
+### La/a/a/d/j;->a()Ljava/lang/String;  [access=0x1, regs=1, ins=1, outs=0, code_off=0x60480]
+00000  0054 023a                iget-object  # FIELD La/a/a/d/j;->b:Ljava/lang/String;
+00002  0011                     return-object
+
+### La/a/a/d/j;->a([Landroid/location/Location;)V  [access=0x11, regs=9, ins=2, outs=3, code_off=0x604cc]
+00000  0838 004a                if-eqz
+00002  8021                     array-length
+00003  003d 0047                if-lez
+00005  7054 0239                iget-object  # FIELD La/a/a/d/j;->a:Ljava/util/List;
+00007  0039 0009                if-nez
+00009  0022 06c8                new-instance  # TYPE Ljava/util/ArrayList;
+0000b  1070 2de7 0000           invoke-direct  # CALL Ljava/util/ArrayList;-><init>()V
+0000e  705b 0239                iput-object  # FIELD La/a/a/d/j;->a:Ljava/util/List;
+00010  0012                     const/4
+00011  0116 0000                const-wide/16
+00013  1304                     op_04
+00014  8521                     array-length
+00015  5035 001a                if-ge
+00017  0546 0008                aget-object
+00019  106e 0a3b 0005           invoke-virtual  # CALL Landroid/location/Location;->getLatitude()D
+0001c  050b                     move-result-wide
+0001d  53cb                     op_cb
+0001e  0546 0008                aget-object
+00020  106e 0a3c 0005           invoke-virtual  # CALL Landroid/location/Location;->getLongitude()D
+00023  050b                     move-result-wide
+00024  51cb                     op_cb
+00025  7554 0239                iget-object  # FIELD La/a/a/d/j;->a:Ljava/util/List;
+00027  0646 0008                aget-object
+00029  2072 2e52 0065           invoke-interface  # CALL Ljava/util/List;->add(Ljava/lang/Object;)Z
+0002c  00d8 0100                op_d8
+0002e  e628                     goto
+0002f  7054 023b                iget-object  # FIELD La/a/a/d/j;->c:Landroid/location/Location;
+00031  0039 0019                if-nez
+00033  0022 01dc                new-instance  # TYPE Landroid/location/Location;
+00035  051a 1f0d                const-string  # STR "gps"
+00037  2070 0a34 0050           invoke-direct  # CALL Landroid/location/Location;-><init>(Ljava/lang/String;)V
+0003a  705b 023b                iput-object  # FIELD La/a/a/d/j;->c:Landroid/location/Location;
+0003c  8521                     array-length
+0003d  5583                     op_83
+0003e  53ce                     op_ce
+0003f  306e 0a45 0430           invoke-virtual  # CALL Landroid/location/Location;->setLatitude(D)V
+00042  7754 023b                iget-object  # FIELD La/a/a/d/j;->c:Landroid/location/Location;
+00044  8821                     array-length
+00045  8383                     op_83
+00046  31ce                     op_ce
+00047  306e 0a46 0217           invoke-virtual  # CALL Landroid/location/Location;->setLongitude(D)V
+0004a  000e                     return-void

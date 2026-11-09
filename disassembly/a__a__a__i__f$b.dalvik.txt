@@ -1,0 +1,90 @@
+### La/a/a/i/f$b;-><init>(La/a/a/i/f;,La/a/a/i/f$a;,La/a/a/i/f$a;)V  [access=0x10001, regs=4, ins=4, outs=1, code_off=0x7b4e0]
+00000  015b 042e                iput-object  # FIELD La/a/a/i/f$b;->c:La/a/a/i/f;
+00002  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00005  025b 042c                iput-object  # FIELD La/a/a/i/f$b;->a:La/a/a/i/f$a;
+00007  035b 042d                iput-object  # FIELD La/a/a/i/f$b;->b:La/a/a/i/f$a;
+00009  000e                     return-void
+
+### La/a/a/i/f$b;->a(La/a/a/i/f$a;)Z  [access=0x1, regs=10, ins=2, outs=4, code_off=0x7b394]
+00000  8054 042e                iget-object  # FIELD La/a/a/i/f$b;->c:La/a/a/i/f;
+00002  206e 065b 0098           invoke-virtual  # CALL La/a/a/i/f$b;->b(La/a/a/i/f$a;)D
+00005  010b                     move-result-wide
+00006  306e 065e 0210           invoke-virtual  # CALL La/a/a/i/f;->a(D)I
+00009  000a                     move-result
+0000a  0039 0055                if-nez
+0000c  9053 042a                iget-wide  # FIELD La/a/a/i/f$a;->a:D
+0000e  8254 042c                iget-object  # FIELD La/a/a/i/f$b;->a:La/a/a/i/f$a;
+00010  2253 042a                iget-wide  # FIELD La/a/a/i/f$a;->a:D
+00012  8454 042d                iget-object  # FIELD La/a/a/i/f$b;->b:La/a/a/i/f$a;
+00014  4453 042a                iget-wide  # FIELD La/a/a/i/f$a;->a:D
+00016  4071 2cc9 5432           invoke-static  # CALL Ljava/lang/Math;->max(D,D)D
+00019  020b                     move-result-wide
+0001a  0418 8c3a e230 798e 3e45 const-wide
+0001f  42cb                     op_cb
+00020  0030 0200                op_30
+00022  003b 003d                if-gez
+00024  9053 042a                iget-wide  # FIELD La/a/a/i/f$a;->a:D
+00026  8254 042c                iget-object  # FIELD La/a/a/i/f$b;->a:La/a/a/i/f$a;
+00028  2253 042a                iget-wide  # FIELD La/a/a/i/f$a;->a:D
+0002a  8654 042d                iget-object  # FIELD La/a/a/i/f$b;->b:La/a/a/i/f$a;
+0002c  6653 042a                iget-wide  # FIELD La/a/a/i/f$a;->a:D
+0002e  4071 2ccd 7632           invoke-static  # CALL Ljava/lang/Math;->min(D,D)D
+00031  020b                     move-result-wide
+00032  42cc                     op_cc
+00033  002f 0200                op_2f
+00035  003d 002a                if-lez
+00037  9053 042b                iget-wide  # FIELD La/a/a/i/f$a;->b:D
+00039  8254 042c                iget-object  # FIELD La/a/a/i/f$b;->a:La/a/a/i/f$a;
+0003b  2253 042b                iget-wide  # FIELD La/a/a/i/f$a;->b:D
+0003d  8654 042d                iget-object  # FIELD La/a/a/i/f$b;->b:La/a/a/i/f$a;
+0003f  6653 042b                iget-wide  # FIELD La/a/a/i/f$a;->b:D
+00041  4071 2cc9 7632           invoke-static  # CALL Ljava/lang/Math;->max(D,D)D
+00044  020b                     move-result-wide
+00045  42cb                     op_cb
+00046  0030 0200                op_30
+00048  003b 0017                if-gez
+0004a  9053 042b                iget-wide  # FIELD La/a/a/i/f$a;->b:D
+0004c  8954 042c                iget-object  # FIELD La/a/a/i/f$b;->a:La/a/a/i/f$a;
+0004e  9253 042b                iget-wide  # FIELD La/a/a/i/f$a;->b:D
+00050  8854 042d                iget-object  # FIELD La/a/a/i/f$b;->b:La/a/a/i/f$a;
+00052  8853 042b                iget-wide  # FIELD La/a/a/i/f$a;->b:D
+00054  4071 2ccd 9832           invoke-static  # CALL Ljava/lang/Math;->min(D,D)D
+00057  080b                     move-result-wide
+00058  48cc                     op_cc
+00059  082f 0800                op_2f
+0005b  083d 0004                if-lez
+0005d  1812                     const/4
+0005e  0228                     goto
+0005f  0812                     const/4
+00060  080f                     return
+
+### La/a/a/i/f$b;->b(La/a/a/i/f$a;)D  [access=0x1, regs=14, ins=2, outs=6, code_off=0x7b468]
+00000  0622 00f6                new-instance  # TYPE La/a/a/i/f$a;
+00002  c754 042e                iget-object  # FIELD La/a/a/i/f$b;->c:La/a/a/i/f;
+00004  c054 042d                iget-object  # FIELD La/a/a/i/f$b;->b:La/a/a/i/f$a;
+00006  0153 042a                iget-wide  # FIELD La/a/a/i/f$a;->a:D
+00008  cc54 042c                iget-object  # FIELD La/a/a/i/f$b;->a:La/a/a/i/f$a;
+0000a  c853 042a                iget-wide  # FIELD La/a/a/i/f$a;->a:D
+0000c  02ac 0801                op_ac
+0000e  0053 042b                iget-wide  # FIELD La/a/a/i/f$a;->b:D
+00010  ca53 042b                iget-wide  # FIELD La/a/a/i/f$a;->b:D
+00012  04ac 0a00                op_ac
+00014  6007                     op_07
+00015  7107                     op_07
+00016  0676 0658 0000           invoke-direct/range  # CALL La/a/a/i/f$a;-><init>(La/a/a/i/f;,D,D)V
+00019  0c22 00f6                new-instance  # TYPE La/a/a/i/f$a;
+0001b  d053 042a                iget-wide  # FIELD La/a/a/i/f$a;->a:D
+0001d  02ac 0800                op_ac
+0001f  d053 042b                iget-wide  # FIELD La/a/a/i/f$a;->b:D
+00021  04ac 0a00                op_ac
+00023  c007                     op_07
+00024  7107                     op_07
+00025  0676 0658 0000           invoke-direct/range  # CALL La/a/a/i/f$a;-><init>(La/a/a/i/f;,D,D)V
+00028  6053 042a                iget-wide  # FIELD La/a/a/i/f$a;->a:D
+0002a  c253 042b                iget-wide  # FIELD La/a/a/i/f$a;->b:D
+0002c  20cd                     op_cd
+0002d  6253 042b                iget-wide  # FIELD La/a/a/i/f$a;->b:D
+0002f  cc53 042a                iget-wide  # FIELD La/a/a/i/f$a;->a:D
+00031  c2cd                     op_cd
+00032  20cc                     op_cc
+00033  0010                     return-wide

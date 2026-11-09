@@ -1,0 +1,37 @@
+### Landroid/support/v4/app/q$b;-><init>(Landroid/support/v4/app/q;,Landroid/view/View;,Ljava/util/ArrayList;)V  [access=0x10000, regs=4, ins=4, outs=1, code_off=0xac548]
+00000  025b 0d7f                iput-object  # FIELD Landroid/support/v4/app/q$b;->a:Landroid/view/View;
+00002  035b 0d80                iput-object  # FIELD Landroid/support/v4/app/q$b;->b:Ljava/util/ArrayList;
+00004  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00007  000e                     return-void
+
+### Landroid/support/v4/app/q$b;->onTransitionCancel(Landroid/transition/Transition;)V  [access=0x1, regs=2, ins=2, outs=0, code_off=0xac568]
+00000  000e                     return-void
+
+### Landroid/support/v4/app/q$b;->onTransitionEnd(Landroid/transition/Transition;)V  [access=0x1, regs=5, ins=2, outs=2, code_off=0xac57c]
+00000  206e 1c44 0034           invoke-virtual  # CALL Landroid/transition/Transition;->removeListener(Landroid/transition/Transition$TransitionListener;)Landroid/transition/Transition;
+00003  3454 0d7f                iget-object  # FIELD Landroid/support/v4/app/q$b;->a:Landroid/view/View;
+00005  0013 0008                const/16
+00007  206e 1dcb 0004           invoke-virtual  # CALL Landroid/view/View;->setVisibility(I)V
+0000a  3454 0d80                iget-object  # FIELD Landroid/support/v4/app/q$b;->b:Ljava/util/ArrayList;
+0000c  106e 2df8 0004           invoke-virtual  # CALL Ljava/util/ArrayList;->size()I
+0000f  040a                     move-result
+00010  0012                     const/4
+00011  0101                     op_01
+00012  4135 0010                if-ge
+00014  3254 0d80                iget-object  # FIELD Landroid/support/v4/app/q$b;->b:Ljava/util/ArrayList;
+00016  206e 2df0 0012           invoke-virtual  # CALL Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+00019  020c                     move-result-object
+0001a  021f 044c                check-cast  # TYPE Landroid/view/View;
+0001c  206e 1dcb 0002           invoke-virtual  # CALL Landroid/view/View;->setVisibility(I)V
+0001f  01d8 0101                op_d8
+00021  f128                     goto
+00022  000e                     return-void
+
+### Landroid/support/v4/app/q$b;->onTransitionPause(Landroid/transition/Transition;)V  [access=0x1, regs=2, ins=2, outs=0, code_off=0xac5d4]
+00000  000e                     return-void
+
+### Landroid/support/v4/app/q$b;->onTransitionResume(Landroid/transition/Transition;)V  [access=0x1, regs=2, ins=2, outs=0, code_off=0xac5e8]
+00000  000e                     return-void
+
+### Landroid/support/v4/app/q$b;->onTransitionStart(Landroid/transition/Transition;)V  [access=0x1, regs=2, ins=2, outs=0, code_off=0xac5fc]
+00000  000e                     return-void

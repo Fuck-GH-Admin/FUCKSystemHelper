@@ -1,0 +1,21 @@
+### Landroid/support/v7/widget/ActionBarOverlayLayout$b;-><init>(Landroid/support/v7/widget/ActionBarOverlayLayout;)V  [access=0x10000, regs=2, ins=2, outs=1, code_off=0xd9e84]
+00000  015b 1018                iput-object  # FIELD Landroid/support/v7/widget/ActionBarOverlayLayout$b;->b:Landroid/support/v7/widget/ActionBarOverlayLayout;
+00002  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00005  000e                     return-void
+
+### Landroid/support/v7/widget/ActionBarOverlayLayout$b;->run()V  [access=0x1, regs=4, ins=1, outs=2, code_off=0xd9ea0]
+00000  3054 1018                iget-object  # FIELD Landroid/support/v7/widget/ActionBarOverlayLayout$b;->b:Landroid/support/v7/widget/ActionBarOverlayLayout;
+00002  106e 1624 0000           invoke-virtual  # CALL Landroid/support/v7/widget/ActionBarOverlayLayout;->h()V
+00005  3054 1018                iget-object  # FIELD Landroid/support/v7/widget/ActionBarOverlayLayout$b;->b:Landroid/support/v7/widget/ActionBarOverlayLayout;
+00007  0154 1020                iget-object  # FIELD Landroid/support/v7/widget/ActionBarOverlayLayout;->e:Landroid/support/v7/widget/ActionBarContainer;
+00009  106e 1f5a 0001           invoke-virtual  # CALL Landroid/widget/FrameLayout;->animate()Landroid/view/ViewPropertyAnimator;
+0000c  010c                     move-result-object
+0000d  0212                     const/4
+0000e  206e 1e4f 0021           invoke-virtual  # CALL Landroid/view/ViewPropertyAnimator;->translationY(F)Landroid/view/ViewPropertyAnimator;
+00011  010c                     move-result-object
+00012  3354 1018                iget-object  # FIELD Landroid/support/v7/widget/ActionBarOverlayLayout$b;->b:Landroid/support/v7/widget/ActionBarOverlayLayout;
+00014  3354 1034                iget-object  # FIELD Landroid/support/v7/widget/ActionBarOverlayLayout;->y:Landroid/animation/AnimatorListenerAdapter;
+00016  206e 1e4b 0031           invoke-virtual  # CALL Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
+00019  030c                     move-result-object
+0001a  035b 1033                iput-object  # FIELD Landroid/support/v7/widget/ActionBarOverlayLayout;->x:Landroid/view/ViewPropertyAnimator;
+0001c  000e                     return-void

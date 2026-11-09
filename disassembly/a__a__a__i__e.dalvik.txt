@@ -1,0 +1,113 @@
+### La/a/a/i/e;-><init>()V  [access=0x10001, regs=2, ins=1, outs=1, code_off=0x7b270]
+00000  1070 2ce0 0001           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  001a 1bee                const-string  # STR "firll.dat"
+00005  105b 0425                iput-object  # FIELD La/a/a/i/e;->a:Ljava/lang/String;
+00007  0013 0c5c                const/16
+00009  1059 0426                iput  # FIELD La/a/a/i/e;->b:I
+0000b  0013 0014                const/16
+0000d  1059 0427                iput  # FIELD La/a/a/i/e;->c:I
+0000f  0013 003c                const/16
+00011  1059 0428                iput  # FIELD La/a/a/i/e;->d:I
+00013  000e                     return-void
+
+### La/a/a/i/e;->c()La/a/a/i/e;  [access=0x9, regs=1, ins=0, outs=1, code_off=0x7b114]
+00000  0062 0429                sget-object  # FIELD La/a/a/i/e;->e:La/a/a/i/e;
+00002  0039 0009                if-nez
+00004  0022 00f5                new-instance  # TYPE La/a/a/i/e;
+00006  1070 0650 0000           invoke-direct  # CALL La/a/a/i/e;-><init>()V
+00009  0069 0429                sput-object  # FIELD La/a/a/i/e;->e:La/a/a/i/e;
+0000b  0062 0429                sget-object  # FIELD La/a/a/i/e;->e:La/a/a/i/e;
+0000d  0011                     return-object
+
+### La/a/a/i/e;->a()J  [access=0x1, regs=3, ins=1, outs=2, code_off=0x7b140]
+00000  2052 0427                iget  # FIELD La/a/a/i/e;->c:I
+00002  206e 0652 0002           invoke-virtual  # CALL La/a/a/i/e;->a(I)J
+00005  000b                     move-result-wide
+00006  0010                     return-wide
+
+### La/a/a/i/e;->a(I)J  [access=0x11, regs=8, ins=2, outs=3, code_off=0x7b160]
+00000  0071 0698 0000           invoke-static  # CALL La/a/a/i/i;->c()Ljava/lang/String;
+00003  000c                     move-result-object
+00004  0116 ffff                const-wide/16
+00006  0039 0003                if-nez
+00008  0110                     return-wide
+00009  0322 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0000b  1070 2d35 0003           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0000e  206e 2d3f 0003           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00011  0062 1d5b                sget-object  # FIELD Ljava/io/File;->separator:Ljava/lang/String;
+00013  206e 2d3f 0003           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00016  6654 0425                iget-object  # FIELD La/a/a/i/e;->a:Ljava/lang/String;
+00018  206e 2d3f 0063           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0001b  106e 2d44 0003           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0001e  060c                     move-result-object
+0001f  0012                     const/4
+00020  0322 064e                new-instance  # TYPE Ljava/io/RandomAccessFile;
+00022  041a 249b                const-string  # STR "rw"
+00024  3070 2c4e 0463           invoke-direct  # CALL Ljava/io/RandomAccessFile;-><init>(Ljava/lang/String;,Ljava/lang/String;)V
+00027  7681                     op_81
+00028  306e 2c58 0763           invoke-virtual  # CALL Ljava/io/RandomAccessFile;->seek(J)V
+0002b  106e 2c56 0003           invoke-virtual  # CALL Ljava/io/RandomAccessFile;->readInt()I
+0002e  060a                     move-result
+0002f  106e 2c57 0003           invoke-virtual  # CALL Ljava/io/RandomAccessFile;->readLong()J
+00032  040b                     move-result-wide
+00033  106e 2c56 0003           invoke-virtual  # CALL Ljava/io/RandomAccessFile;->readInt()I
+00036  070a                     move-result
+00037  7633 0015                if-ne
+00039  106e 2c4f 0003           invoke-virtual  # CALL Ljava/io/RandomAccessFile;->close()V
+0003c  0410                     return-wide
+0003d  060d                     op_0d
+0003e  3007                     op_07
+0003f  0428                     goto
+00040  3007                     op_07
+00041  0828                     goto
+00042  060d                     op_0d
+00043  0038 0005                if-eqz
+00045  106e 2c4f 0000           invoke-virtual  # CALL Ljava/io/RandomAccessFile;->close()V
+00048  0627                     throw
+00049  0038 0006                if-eqz
+0004b  0307                     op_07
+0004c  106e 2c4f 0003           invoke-virtual  # CALL Ljava/io/RandomAccessFile;->close()V
+0004f  0110                     return-wide
+
+### La/a/a/i/e;->a(I,J)V  [access=0x11, regs=8, ins=4, outs=3, code_off=0x7b2a8]
+00000  0071 0698 0000           invoke-static  # CALL La/a/a/i/i;->c()Ljava/lang/String;
+00003  000c                     move-result-object
+00004  0039 0003                if-nez
+00006  000e                     return-void
+00007  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00009  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0000c  206e 2d3f 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0000f  0062 1d5b                sget-object  # FIELD Ljava/io/File;->separator:Ljava/lang/String;
+00011  206e 2d3f 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00014  4054 0425                iget-object  # FIELD La/a/a/i/e;->a:Ljava/lang/String;
+00016  206e 2d3f 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00019  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0001c  000c                     move-result-object
+0001d  0122 064e                new-instance  # TYPE Ljava/io/RandomAccessFile;
+0001f  021a 249b                const-string  # STR "rw"
+00021  3070 2c4e 0201           invoke-direct  # CALL Ljava/io/RandomAccessFile;-><init>(Ljava/lang/String;,Ljava/lang/String;)V
+00024  5281                     op_81
+00025  306e 2c58 0321           invoke-virtual  # CALL Ljava/io/RandomAccessFile;->seek(J)V
+00028  4552 0426                iget  # FIELD La/a/a/i/e;->b:I
+0002a  206e 2c5d 0051           invoke-virtual  # CALL Ljava/io/RandomAccessFile;->writeInt(I)V
+0002d  306e 2c5e 0761           invoke-virtual  # CALL Ljava/io/RandomAccessFile;->writeLong(J)V
+00030  4452 0426                iget  # FIELD La/a/a/i/e;->b:I
+00032  206e 2c5d 0041           invoke-virtual  # CALL Ljava/io/RandomAccessFile;->writeInt(I)V
+00035  106e 2c4f 0001           invoke-virtual  # CALL Ljava/io/RandomAccessFile;->close()V
+00038  000e                     return-void
+
+### La/a/a/i/e;->a(J)V  [access=0x1, regs=4, ins=3, outs=4, code_off=0x7b33c]
+00000  1052 0427                iget  # FIELD La/a/a/i/e;->c:I
+00002  406e 0653 3201           invoke-virtual  # CALL La/a/a/i/e;->a(I,J)V
+00005  000e                     return-void
+
+### La/a/a/i/e;->b()J  [access=0x1, regs=3, ins=1, outs=2, code_off=0x7b250]
+00000  2052 0428                iget  # FIELD La/a/a/i/e;->d:I
+00002  206e 0652 0002           invoke-virtual  # CALL La/a/a/i/e;->a(I)J
+00005  000b                     move-result-wide
+00006  0010                     return-wide
+
+### La/a/a/i/e;->b(J)V  [access=0x1, regs=4, ins=3, outs=4, code_off=0x7b358]
+00000  1052 0428                iget  # FIELD La/a/a/i/e;->d:I
+00002  406e 0653 3201           invoke-virtual  # CALL La/a/a/i/e;->a(I,J)V
+00005  000e                     return-void

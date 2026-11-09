@@ -1,0 +1,48 @@
+### Lc/d/a/a/c;-><init>()V  [access=0x10001, regs=1, ins=1, outs=1, code_off=0x10f71c]
+00000  1070 2911 0000           invoke-direct  # CALL Lc/d/a/a/a;-><init>()V
+00003  000e                     return-void
+
+### Lc/d/a/a/c;->a(Landroid/content/Context;,Lcom/mobiletools/systemhelper/control/b;)V  [access=0x1, regs=6, ins=3, outs=3, code_off=0x10f734]
+00000  306f 2918 0543           invoke-super  # CALL Lc/d/a/a/a;->a(Landroid/content/Context;,Lcom/mobiletools/systemhelper/control/b;)V
+00003  0063 1bb5                sget-boolean  # FIELD Lc/d/a/b/d;->e:Z
+00005  011a 0723                const-string  # STR "DeviceInfoReaderNubia"
+00007  0039 0008                if-nez
+00009  031a 2052                const-string  # STR "isUserPermissionOpen==false, do not read!"
+0000b  2071 2988 0031           invoke-static  # CALL Lc/d/a/b/h;->b(Ljava/lang/String;,Ljava/lang/String;)V
+0000e  000e                     return-void
+0000f  5054 1d2e                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->b:Ljava/lang/String;
+00011  021a 127b                const-string  # STR "NX659J"
+00013  206e 2d03 0020           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+00016  000a                     move-result
+00017  0039 0027                if-nez
+00019  5054 1d2e                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->b:Ljava/lang/String;
+0001b  021a 127a                const-string  # STR "NX651J"
+0001d  206e 2d03 0020           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+00020  000a                     move-result
+00021  0039 001d                if-nez
+00023  5054 1d2e                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->b:Ljava/lang/String;
+00025  021a 1942                const-string  # STR "angelcare N9"
+00027  206e 2d03 0020           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+0002a  000a                     move-result
+0002b  0039 0013                if-nez
+0002d  5054 1d2e                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->b:Ljava/lang/String;
+0002f  021a 127c                const-string  # STR "NX724J"
+00031  206e 2d03 0020           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+00034  000a                     move-result
+00035  0038 0003                if-eqz
+00037  0728                     goto
+00038  031a 0724                const-string  # STR "DeviceInfoReaderNubia model unknow!!!"
+0003a  2071 2988 0031           invoke-static  # CALL Lc/d/a/b/h;->b(Ljava/lang/String;,Ljava/lang/String;)V
+0003d  1928                     goto
+0003e  001a 2166                const-string  # STR "model : angelcare N9"
+00040  2071 2987 0001           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+00043  001a 247c                const-string  # STR "ro.build.display.id"
+00045  1071 2997 0000           invoke-static  # CALL Lc/d/a/b/l;->a(Ljava/lang/String;)Ljava/lang/String;
+00048  000c                     move-result-object
+00049  505b 1d30                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->d:Ljava/lang/String;
+0004b  001a 2483                const-string  # STR "ro.product.hardware"
+0004d  1071 2997 0000           invoke-static  # CALL Lc/d/a/b/l;->a(Ljava/lang/String;)Ljava/lang/String;
+00050  000c                     move-result-object
+00051  505b 1d2f                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->c:Ljava/lang/String;
+00053  306e 291c 0543           invoke-virtual  # CALL Lc/d/a/a/a;->b(Landroid/content/Context;,Lcom/mobiletools/systemhelper/control/b;)V
+00056  000e                     return-void

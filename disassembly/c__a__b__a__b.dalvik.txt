@@ -1,0 +1,837 @@
+### Lc/a/b/a/b;-><clinit>()V  [access=0x10008, regs=3, ins=0, outs=3, code_off=0xf3200]
+00000  001c 0572                const-class  # TYPE Lc/a/b/a/b;
+00002  106e 2c71 0000           invoke-virtual  # CALL Ljava/lang/Class;->desiredAssertionStatus()Z
+00005  000a                     move-result
+00006  00df 0100                op_df
+00008  006a 1abe                sput-boolean  # FIELD Lc/a/b/a/b;->e:Z
+0000a  0022 0649                new-instance  # TYPE Ljava/io/ObjectStreamField;
+0000c  011c 0725                const-class  # TYPE [J
+0000e  021a 19cd                const-string  # STR "bits"
+00010  3070 2c3c 0120           invoke-direct  # CALL Ljava/io/ObjectStreamField;-><init>(Ljava/lang/String;,Ljava/lang/Class;)V
+00013  000e                     return-void
+
+### Lc/a/b/a/b;-><init>()V  [access=0x10001, regs=3, ins=1, outs=2, code_off=0xf3238]
+00000  1070 2ce0 0002           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  0012                     const/4
+00004  2059 1abc                iput  # FIELD Lc/a/b/a/b;->c:I
+00006  205c 1abd                iput-boolean  # FIELD Lc/a/b/a/b;->d:Z
+00008  0113 0040                const/16
+0000a  2070 271a 0012           invoke-direct  # CALL Lc/a/b/a/b;->g(I)V
+0000d  205c 1abd                iput-boolean  # FIELD Lc/a/b/a/b;->d:Z
+0000f  000e                     return-void
+
+### Lc/a/b/a/b;-><init>(I)V  [access=0x10001, regs=4, ins=2, outs=2, code_off=0xf3268]
+00000  1070 2ce0 0002           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  0012                     const/4
+00004  2059 1abc                iput  # FIELD Lc/a/b/a/b;->c:I
+00006  205c 1abd                iput-boolean  # FIELD Lc/a/b/a/b;->d:Z
+00008  033a 0009                if-ltz
+0000a  2070 271a 0032           invoke-direct  # CALL Lc/a/b/a/b;->g(I)V
+0000d  1312                     const/4
+0000e  235c 1abd                iput-boolean  # FIELD Lc/a/b/a/b;->d:Z
+00010  000e                     return-void
+00011  0222 0673                new-instance  # TYPE Ljava/lang/NegativeArraySizeException;
+00013  0022 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00015  1070 2d35 0000           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00018  011a 2196                const-string  # STR "nbits < 0: "
+0001a  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0001d  206e 2d3b 0030           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+00020  106e 2d44 0000           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00023  030c                     move-result-object
+00024  2070 2cda 0032           invoke-direct  # CALL Ljava/lang/NegativeArraySizeException;-><init>(Ljava/lang/String;)V
+00027  0227                     throw
+
+### Lc/a/b/a/b;-><init>([J)V  [access=0x10002, regs=3, ins=2, outs=1, code_off=0xf32c8]
+00000  1070 2ce0 0001           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  0012                     const/4
+00004  1059 1abc                iput  # FIELD Lc/a/b/a/b;->c:I
+00006  105c 1abd                iput-boolean  # FIELD Lc/a/b/a/b;->d:Z
+00008  125b 1abb                iput-object  # FIELD Lc/a/b/a/b;->b:[J
+0000a  2221                     array-length
+0000b  1259 1abc                iput  # FIELD Lc/a/b/a/b;->c:I
+0000d  1070 2712 0001           invoke-direct  # CALL Lc/a/b/a/b;->d()V
+00010  000e                     return-void
+
+### Lc/a/b/a/b;->a([J)Lc/a/b/a/b;  [access=0x9, regs=6, ins=1, outs=2, code_off=0xf2d94]
+00000  5021                     array-length
+00001  003d 000f                if-lez
+00003  01d8 ff00                op_d8
+00005  0145 0105                aget-wide
+00007  0316 0000                const-wide/16
+00009  0131 0301                op_31
+0000b  0139 0005                if-nez
+0000d  00d8 ff00                op_d8
+0000f  f228                     goto
+00010  0122 0572                new-instance  # TYPE Lc/a/b/a/b;
+00012  2071 2dff 0005           invoke-static  # CALL Ljava/util/Arrays;->copyOf([J,I)[J
+00015  050c                     move-result-object
+00016  2070 2700 0051           invoke-direct  # CALL Lc/a/b/a/b;-><init>([J)V
+00019  0111                     return-object
+
+### Lc/a/b/a/b;->d()V  [access=0x2, regs=6, ins=1, outs=1, code_off=0xf36ec]
+00000  0063 1abe                sget-boolean  # FIELD Lc/a/b/a/b;->e:Z
+00002  0116 0000                const-wide/16
+00004  0039 0017                if-nez
+00006  5052 1abc                iget  # FIELD Lc/a/b/a/b;->c:I
+00008  0038 0013                if-eqz
+0000a  5354 1abb                iget-object  # FIELD Lc/a/b/a/b;->b:[J
+0000c  00d8 ff00                op_d8
+0000e  0345 0003                aget-wide
+00010  0031 0103                op_31
+00012  0038 0003                if-eqz
+00014  0728                     goto
+00015  0522 0656                new-instance  # TYPE Ljava/lang/AssertionError;
+00017  1070 2c63 0005           invoke-direct  # CALL Ljava/lang/AssertionError;-><init>()V
+0001a  0527                     throw
+0001b  0063 1abe                sget-boolean  # FIELD Lc/a/b/a/b;->e:Z
+0001d  0039 0012                if-nez
+0001f  5052 1abc                iget  # FIELD Lc/a/b/a/b;->c:I
+00021  003a 0008                if-ltz
+00023  5354 1abb                iget-object  # FIELD Lc/a/b/a/b;->b:[J
+00025  3321                     array-length
+00026  3036 0003                if-gt
+00028  0728                     goto
+00029  0522 0656                new-instance  # TYPE Ljava/lang/AssertionError;
+0002b  1070 2c63 0005           invoke-direct  # CALL Ljava/lang/AssertionError;-><init>()V
+0002e  0527                     throw
+0002f  0063 1abe                sget-boolean  # FIELD Lc/a/b/a/b;->e:Z
+00031  0039 0016                if-nez
+00033  5052 1abc                iget  # FIELD Lc/a/b/a/b;->c:I
+00035  5554 1abb                iget-object  # FIELD Lc/a/b/a/b;->b:[J
+00037  5321                     array-length
+00038  3032 000f                if-eq
+0003a  0345 0005                aget-wide
+0003c  0531 0103                op_31
+0003e  0539 0003                if-nez
+00040  0728                     goto
+00041  0522 0656                new-instance  # TYPE Ljava/lang/AssertionError;
+00043  1070 2c63 0005           invoke-direct  # CALL Ljava/lang/AssertionError;-><init>()V
+00046  0527                     throw
+00047  000e                     return-void
+
+### Lc/a/b/a/b;->d(I,I)V  [access=0xa, regs=5, ins=2, outs=2, code_off=0xf37e0]
+00000  033a 003d                if-ltz
+00002  043a 0024                if-ltz
+00004  4336 0003                if-gt
+00006  000e                     return-void
+00007  0022 066b                new-instance  # TYPE Ljava/lang/IndexOutOfBoundsException;
+00009  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0000b  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0000e  021a 1c20                const-string  # STR "fromIndex: "
+00010  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00013  206e 2d3b 0031           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+00016  031a 0025                const-string  # STR " > toIndex: "
+00018  206e 2d3f 0031           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0001b  206e 2d3b 0041           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+0001e  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00021  030c                     move-result-object
+00022  2070 2ca5 0030           invoke-direct  # CALL Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+00025  0027                     throw
+00026  0322 066b                new-instance  # TYPE Ljava/lang/IndexOutOfBoundsException;
+00028  0022 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0002a  1070 2d35 0000           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0002d  011a 27b1                const-string  # STR "toIndex < 0: "
+0002f  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00032  206e 2d3b 0040           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+00035  106e 2d44 0000           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00038  040c                     move-result-object
+00039  2070 2ca5 0043           invoke-direct  # CALL Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+0003c  0327                     throw
+0003d  0422 066b                new-instance  # TYPE Ljava/lang/IndexOutOfBoundsException;
+0003f  0022 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00041  1070 2d35 0000           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00044  011a 1c1f                const-string  # STR "fromIndex < 0: "
+00046  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00049  206e 2d3b 0030           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+0004c  106e 2d44 0000           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0004f  030c                     move-result-object
+00050  2070 2ca5 0034           invoke-direct  # CALL Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+00053  0427                     throw
+
+### Lc/a/b/a/b;->e()V  [access=0x2, regs=6, ins=1, outs=0, code_off=0xf3898]
+00000  5052 1abc                iget  # FIELD Lc/a/b/a/b;->c:I
+00002  00d8 ff00                op_d8
+00004  003a 0010                if-ltz
+00006  5154 1abb                iget-object  # FIELD Lc/a/b/a/b;->b:[J
+00008  0145 0001                aget-wide
+0000a  0316 0000                const-wide/16
+0000c  0131 0301                op_31
+0000e  0138 0003                if-eqz
+00010  0428                     goto
+00011  00d8 ff00                op_d8
+00013  f128                     goto
+00014  00d8 0100                op_d8
+00016  5059 1abc                iput  # FIELD Lc/a/b/a/b;->c:I
+00018  000e                     return-void
+
+### Lc/a/b/a/b;->f(I)I  [access=0xa, regs=1, ins=1, outs=0, code_off=0xf3098]
+00000  00e1 0600                op_e1
+00002  000f                     return
+
+### Lc/a/b/a/b;->f()V  [access=0x2, regs=4, ins=1, outs=2, code_off=0xf38dc]
+00000  3052 1abc                iget  # FIELD Lc/a/b/a/b;->c:I
+00002  3154 1abb                iget-object  # FIELD Lc/a/b/a/b;->b:[J
+00004  1221                     array-length
+00005  2032 000b                if-eq
+00007  2071 2dff 0001           invoke-static  # CALL Ljava/util/Arrays;->copyOf([J,I)[J
+0000a  000c                     move-result-object
+0000b  305b 1abb                iput-object  # FIELD Lc/a/b/a/b;->b:[J
+0000d  1070 2712 0003           invoke-direct  # CALL Lc/a/b/a/b;->d()V
+00010  000e                     return-void
+
+### Lc/a/b/a/b;->g(I)V  [access=0x2, regs=2, ins=2, outs=1, code_off=0xf3910]
+00000  01d8 ff01                op_d8
+00002  1071 2718 0001           invoke-static  # CALL Lc/a/b/a/b;->f(I)I
+00005  010a                     move-result
+00006  01d8 0101                op_d8
+00008  1123 0725                new-array  # TYPE [J
+0000a  015b 1abb                iput-object  # FIELD Lc/a/b/a/b;->b:[J
+0000c  000e                     return-void
+
+### Lc/a/b/a/b;->h(I)V  [access=0x2, regs=4, ins=2, outs=2, code_off=0xf393c]
+00000  2054 1abb                iget-object  # FIELD Lc/a/b/a/b;->b:[J
+00002  0121                     array-length
+00003  3135 0014                if-ge
+00005  0021                     array-length
+00006  00da 0200                op_da
+00008  2071 2ccb 0030           invoke-static  # CALL Ljava/lang/Math;->max(I,I)I
+0000b  030a                     move-result
+0000c  2054 1abb                iget-object  # FIELD Lc/a/b/a/b;->b:[J
+0000e  2071 2dff 0030           invoke-static  # CALL Ljava/util/Arrays;->copyOf([J,I)[J
+00011  030c                     move-result-object
+00012  235b 1abb                iput-object  # FIELD Lc/a/b/a/b;->b:[J
+00014  0312                     const/4
+00015  235c 1abd                iput-boolean  # FIELD Lc/a/b/a/b;->d:Z
+00017  000e                     return-void
+
+### Lc/a/b/a/b;->i(I)V  [access=0x2, regs=3, ins=2, outs=2, code_off=0xf397c]
+00000  02d8 0102                op_d8
+00002  1052 1abc                iget  # FIELD Lc/a/b/a/b;->c:I
+00004  2035 0007                if-ge
+00006  2070 271b 0021           invoke-direct  # CALL Lc/a/b/a/b;->h(I)V
+00009  1259 1abc                iput  # FIELD Lc/a/b/a/b;->c:I
+0000b  000e                     return-void
+
+### Lc/a/b/a/b;->a(I)V  [access=0x1, regs=8, ins=2, outs=2, code_off=0xf3368]
+00000  073a 0017                if-ltz
+00002  1071 2718 0007           invoke-static  # CALL Lc/a/b/a/b;->f(I)I
+00005  000a                     move-result
+00006  2070 271d 0006           invoke-direct  # CALL Lc/a/b/a/b;->i(I)V
+00009  6154 1abb                iget-object  # FIELD Lc/a/b/a/b;->b:[J
+0000b  0245 0001                aget-wide
+0000d  0416 0001                const-wide/16
+0000f  74c3                     op_c3
+00010  42c1                     op_c1
+00011  024c 0001                aput-wide
+00013  1070 2712 0006           invoke-direct  # CALL Lc/a/b/a/b;->d()V
+00016  000e                     return-void
+00017  0622 066b                new-instance  # TYPE Ljava/lang/IndexOutOfBoundsException;
+00019  0022 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0001b  1070 2d35 0000           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0001e  011a 19cb                const-string  # STR "bitIndex < 0: "
+00020  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00023  206e 2d3b 0070           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+00026  106e 2d44 0000           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00029  070c                     move-result-object
+0002a  2070 2ca5 0076           invoke-direct  # CALL Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+0002d  0627                     throw
+
+### Lc/a/b/a/b;->a(I,I)V  [access=0x1, regs=12, ins=3, outs=2, code_off=0xf33f8]
+00000  2071 2713 00ba           invoke-static  # CALL Lc/a/b/a/b;->d(I,I)V
+00003  ba33 0003                if-ne
+00005  000e                     return-void
+00006  1071 2718 000a           invoke-static  # CALL Lc/a/b/a/b;->f(I)I
+00009  000a                     move-result
+0000a  01d8 ff0b                op_d8
+0000c  1071 2718 0001           invoke-static  # CALL Lc/a/b/a/b;->f(I)I
+0000f  010a                     move-result
+00010  2070 271d 0019           invoke-direct  # CALL Lc/a/b/a/b;->i(I)V
+00013  0216 ffff                const-wide/16
+00015  04a3 0a02                op_a3
+00017  ba7b                     op_7b
+00018  0aa5 0a02                op_a5
+0001a  1033 000b                if-ne
+0001c  9154 1abb                iget-object  # FIELD Lc/a/b/a/b;->b:[J
+0001e  0245 0001                aget-wide
+00020  4ac0                     op_c0
+00021  2ac1                     op_c1
+00022  0a4c 0001                aput-wide
+00024  1828                     goto
+00025  9654 1abb                iget-object  # FIELD Lc/a/b/a/b;->b:[J
+00027  0745 0006                aget-wide
+00029  74c1                     op_c1
+0002a  044c 0006                aput-wide
+0002c  00d8 0100                op_d8
+0002e  1035 0007                if-ge
+00030  9454 1abb                iget-object  # FIELD Lc/a/b/a/b;->b:[J
+00032  024c 0004                aput-wide
+00034  f828                     goto
+00035  9054 1abb                iget-object  # FIELD Lc/a/b/a/b;->b:[J
+00037  0245 0100                aget-wide
+00039  2ac1                     op_c1
+0003a  0a4c 0100                aput-wide
+0003c  1070 2712 0009           invoke-direct  # CALL Lc/a/b/a/b;->d()V
+0003f  000e                     return-void
+
+### Lc/a/b/a/b;->a(I,I,Z)V  [access=0x1, regs=4, ins=4, outs=3, code_off=0xf3488]
+00000  0338 0006                if-eqz
+00002  306e 2703 0210           invoke-virtual  # CALL Lc/a/b/a/b;->a(I,I)V
+00005  0428                     goto
+00006  306e 270a 0210           invoke-virtual  # CALL Lc/a/b/a/b;->b(I,I)V
+00009  000e                     return-void
+
+### Lc/a/b/a/b;->a(I,Z)V  [access=0x1, regs=3, ins=3, outs=2, code_off=0xf33d4]
+00000  0238 0006                if-eqz
+00002  206e 2702 0010           invoke-virtual  # CALL Lc/a/b/a/b;->a(I)V
+00005  0428                     goto
+00006  206e 2709 0010           invoke-virtual  # CALL Lc/a/b/a/b;->b(I)V
+00009  000e                     return-void
+
+### Lc/a/b/a/b;->a(Lc/a/b/a/b;)V  [access=0x1, regs=8, ins=2, outs=1, code_off=0xf32fc]
+00000  7633 0003                if-ne
+00002  000e                     return-void
+00003  6052 1abc                iget  # FIELD Lc/a/b/a/b;->c:I
+00005  7152 1abc                iget  # FIELD Lc/a/b/a/b;->c:I
+00007  1037 000d                if-le
+00009  6154 1abb                iget-object  # FIELD Lc/a/b/a/b;->b:[J
+0000b  00d8 ff00                op_d8
+0000d  6059 1abc                iput  # FIELD Lc/a/b/a/b;->c:I
+0000f  0216 0000                const-wide/16
+00011  024c 0001                aput-wide
+00013  f028                     goto
+00014  0012                     const/4
+00015  6152 1abc                iget  # FIELD Lc/a/b/a/b;->c:I
+00017  1035 0010                if-ge
+00019  6154 1abb                iget-object  # FIELD Lc/a/b/a/b;->b:[J
+0001b  0245 0001                aget-wide
+0001d  7454 1abb                iget-object  # FIELD Lc/a/b/a/b;->b:[J
+0001f  0445 0004                aget-wide
+00021  42c0                     op_c0
+00022  024c 0001                aput-wide
+00024  00d8 0100                op_d8
+00026  ef28                     goto
+00027  1070 2716 0006           invoke-direct  # CALL Lc/a/b/a/b;->e()V
+0002a  1070 2712 0006           invoke-direct  # CALL Lc/a/b/a/b;->d()V
+0002d  000e                     return-void
+
+### Lc/a/b/a/b;->a()[B  [access=0x1, regs=12, ins=1, outs=3, code_off=0xf2cf4]
+00000  b052 1abc                iget  # FIELD Lc/a/b/a/b;->c:I
+00002  0112                     const/4
+00003  0039 0005                if-nez
+00005  1b23 0720                new-array  # TYPE [B
+00007  0b11                     return-object
+00008  00d8 ff00                op_d8
+0000a  02da 0800                op_da
+0000c  b354 1abb                iget-object  # FIELD Lc/a/b/a/b;->b:[J
+0000e  0345 0003                aget-wide
+00010  0516 0000                const-wide/16
+00012  0731 0503                op_31
+00014  0813 0008                const/16
+00016  0738 0006                if-eqz
+00018  02d8 0102                op_d8
+0001a  83c5                     op_c5
+0001b  f528                     goto
+0001c  2223 0720                new-array  # TYPE [B
+0001e  1071 2dac 0002           invoke-static  # CALL Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
+00021  030c                     move-result-object
+00022  0462 1d6d                sget-object  # FIELD Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
+00024  206e 2da7 0043           invoke-virtual  # CALL Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+00027  030c                     move-result-object
+00028  0135 000c                if-ge
+0002a  b454 1abb                iget-object  # FIELD Lc/a/b/a/b;->b:[J
+0002c  0945 0104                aget-wide
+0002e  306e 2daa 0a93           invoke-virtual  # CALL Ljava/nio/ByteBuffer;->putLong(J)Ljava/nio/ByteBuffer;
+00031  01d8 0101                op_d8
+00033  f528                     goto
+00034  bb54 1abb                iget-object  # FIELD Lc/a/b/a/b;->b:[J
+00036  0045 000b                aget-wide
+00038  0b31 0500                op_31
+0003a  0b38 000c                if-eqz
+0003c  0916 00ff                const-wide/16
+0003e  09c0                     op_c0
+0003f  9b84                     op_84
+00040  bb8d                     op_8d
+00041  206e 2da8 00b3           invoke-virtual  # CALL Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+00044  80c5                     op_c5
+00045  f328                     goto
+00046  0211                     return-object
+
+### Lc/a/b/a/b;->b()I  [access=0x1, regs=5, ins=1, outs=2, code_off=0xf2edc]
+00000  4052 1abc                iget  # FIELD Lc/a/b/a/b;->c:I
+00002  0039 0004                if-nez
+00004  0412                     const/4
+00005  040f                     return
+00006  00d8 ff00                op_d8
+00008  01da 4000                op_da
+0000a  4454 1abb                iget-object  # FIELD Lc/a/b/a/b;->b:[J
+0000c  0245 0004                aget-wide
+0000e  2071 2cb7 0032           invoke-static  # CALL Ljava/lang/Long;->numberOfLeadingZeros(J)I
+00011  040a                     move-result
+00012  04d9 4004                op_d9
+00014  41b0                     op_b0
+00015  010f                     return
+
+### Lc/a/b/a/b;->b(I)V  [access=0x1, regs=8, ins=2, outs=2, code_off=0xf3534]
+00000  073a 001d                if-ltz
+00002  1071 2718 0007           invoke-static  # CALL Lc/a/b/a/b;->f(I)I
+00005  000a                     move-result
+00006  6152 1abc                iget  # FIELD Lc/a/b/a/b;->c:I
+00008  1034 0003                if-lt
+0000a  000e                     return-void
+0000b  6154 1abb                iget-object  # FIELD Lc/a/b/a/b;->b:[J
+0000d  0245 0001                aget-wide
+0000f  0416 0001                const-wide/16
+00011  74c3                     op_c3
+00012  447e                     op_7e
+00013  42c0                     op_c0
+00014  024c 0001                aput-wide
+00016  1070 2716 0006           invoke-direct  # CALL Lc/a/b/a/b;->e()V
+00019  1070 2712 0006           invoke-direct  # CALL Lc/a/b/a/b;->d()V
+0001c  000e                     return-void
+0001d  0622 066b                new-instance  # TYPE Ljava/lang/IndexOutOfBoundsException;
+0001f  0022 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00021  1070 2d35 0000           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00024  011a 19cb                const-string  # STR "bitIndex < 0: "
+00026  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00029  206e 2d3b 0070           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+0002c  106e 2d44 0000           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0002f  070c                     move-result-object
+00030  2070 2ca5 0076           invoke-direct  # CALL Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+00033  0627                     throw
+
+### Lc/a/b/a/b;->b(I,I)V  [access=0x1, regs=11, ins=3, outs=2, code_off=0xf35ac]
+00000  2071 2713 00a9           invoke-static  # CALL Lc/a/b/a/b;->d(I,I)V
+00003  a933 0003                if-ne
+00005  000e                     return-void
+00006  1071 2718 0009           invoke-static  # CALL Lc/a/b/a/b;->f(I)I
+00009  000a                     move-result
+0000a  8152 1abc                iget  # FIELD Lc/a/b/a/b;->c:I
+0000c  1034 0003                if-lt
+0000e  000e                     return-void
+0000f  01d8 ff0a                op_d8
+00011  1071 2718 0001           invoke-static  # CALL Lc/a/b/a/b;->f(I)I
+00014  010a                     move-result
+00015  8252 1abc                iget  # FIELD Lc/a/b/a/b;->c:I
+00017  2134 000a                if-lt
+00019  106e 2708 0008           invoke-virtual  # CALL Lc/a/b/a/b;->b()I
+0001c  0a0a                     move-result
+0001d  8152 1abc                iget  # FIELD Lc/a/b/a/b;->c:I
+0001f  01d8 ff01                op_d8
+00021  0216 ffff                const-wide/16
+00023  04a3 0902                op_a3
+00025  a97b                     op_7b
+00026  09a5 0902                op_a5
+00028  1033 000c                if-ne
+0002a  8154 1abb                iget-object  # FIELD Lc/a/b/a/b;->b:[J
+0002c  0245 0001                aget-wide
+0002e  49c0                     op_c0
+0002f  997e                     op_7e
+00030  29c0                     op_c0
+00031  094c 0001                aput-wide
+00033  1c28                     goto
+00034  8254 1abb                iget-object  # FIELD Lc/a/b/a/b;->b:[J
+00036  0645 0002                aget-wide
+00038  437e                     op_7e
+00039  63c0                     op_c0
+0003a  034c 0002                aput-wide
+0003c  00d8 0100                op_d8
+0003e  1035 0009                if-ge
+00040  8254 1abb                iget-object  # FIELD Lc/a/b/a/b;->b:[J
+00042  0316 0000                const-wide/16
+00044  034c 0002                aput-wide
+00046  f628                     goto
+00047  8054 1abb                iget-object  # FIELD Lc/a/b/a/b;->b:[J
+00049  0245 0100                aget-wide
+0004b  997e                     op_7e
+0004c  29c0                     op_c0
+0004d  094c 0100                aput-wide
+0004f  1070 2716 0008           invoke-direct  # CALL Lc/a/b/a/b;->e()V
+00052  1070 2712 0008           invoke-direct  # CALL Lc/a/b/a/b;->d()V
+00055  000e                     return-void
+
+### Lc/a/b/a/b;->b(Lc/a/b/a/b;)V  [access=0x1, regs=9, ins=2, outs=5, code_off=0xf34ac]
+00000  8733 0003                if-ne
+00002  000e                     return-void
+00003  7052 1abc                iget  # FIELD Lc/a/b/a/b;->c:I
+00005  8152 1abc                iget  # FIELD Lc/a/b/a/b;->c:I
+00007  2071 2ccf 0010           invoke-static  # CALL Ljava/lang/Math;->min(I,I)I
+0000a  000a                     move-result
+0000b  7152 1abc                iget  # FIELD Lc/a/b/a/b;->c:I
+0000d  8252 1abc                iget  # FIELD Lc/a/b/a/b;->c:I
+0000f  2135 0009                if-ge
+00011  2070 271b 0027           invoke-direct  # CALL Lc/a/b/a/b;->h(I)V
+00014  8152 1abc                iget  # FIELD Lc/a/b/a/b;->c:I
+00016  7159 1abc                iput  # FIELD Lc/a/b/a/b;->c:I
+00018  0112                     const/4
+00019  0135 0010                if-ge
+0001b  7254 1abb                iget-object  # FIELD Lc/a/b/a/b;->b:[J
+0001d  0345 0102                aget-wide
+0001f  8554 1abb                iget-object  # FIELD Lc/a/b/a/b;->b:[J
+00021  0545 0105                aget-wide
+00023  53c1                     op_c1
+00024  034c 0102                aput-wide
+00026  01d8 0101                op_d8
+00028  f128                     goto
+00029  8152 1abc                iget  # FIELD Lc/a/b/a/b;->c:I
+0002b  1035 000c                if-ge
+0002d  8854 1abb                iget-object  # FIELD Lc/a/b/a/b;->b:[J
+0002f  7154 1abb                iget-object  # FIELD Lc/a/b/a/b;->b:[J
+00031  7252 1abc                iget  # FIELD Lc/a/b/a/b;->c:I
+00033  02b1                     op_b1
+00034  5271 2d45 0108           invoke-static  # CALL Ljava/lang/System;->arraycopy(Ljava/lang/Object;,I,Ljava/lang/Object;,I,I)V
+00037  1070 2712 0007           invoke-direct  # CALL Lc/a/b/a/b;->d()V
+0003a  000e                     return-void
+
+### Lc/a/b/a/b;->c()I  [access=0x1, regs=5, ins=1, outs=2, code_off=0xf2f18]
+00000  0012                     const/4
+00001  0101                     op_01
+00002  4252 1abc                iget  # FIELD Lc/a/b/a/b;->c:I
+00004  2035 000e                if-ge
+00006  4254 1abb                iget-object  # FIELD Lc/a/b/a/b;->b:[J
+00008  0245 0002                aget-wide
+0000a  2071 2cb4 0032           invoke-static  # CALL Ljava/lang/Long;->bitCount(J)I
+0000d  020a                     move-result
+0000e  21b0                     op_b0
+0000f  00d8 0100                op_d8
+00011  f128                     goto
+00012  010f                     return
+
+### Lc/a/b/a/b;->c(I,I)Lc/a/b/a/b;  [access=0x1, regs=16, ins=3, outs=2, code_off=0xf2dd8]
+00000  2071 2713 00fe           invoke-static  # CALL Lc/a/b/a/b;->d(I,I)V
+00003  1070 2712 000d           invoke-direct  # CALL Lc/a/b/a/b;->d()V
+00006  106e 2708 000d           invoke-virtual  # CALL Lc/a/b/a/b;->b()I
+00009  000a                     move-result
+0000a  0112                     const/4
+0000b  e037 0069                if-le
+0000d  fe33 0003                if-ne
+0000f  6528                     goto
+00010  0f37 0003                if-le
+00012  0f01                     op_01
+00013  0022 0572                new-instance  # TYPE Lc/a/b/a/b;
+00015  0291 0e0f                int-sub
+00017  2070 26ff 0020           invoke-direct  # CALL Lc/a/b/a/b;-><init>(I)V
+0001a  1312                     const/4
+0001b  32b1                     op_b1
+0001c  1071 2718 0002           invoke-static  # CALL Lc/a/b/a/b;->f(I)I
+0001f  020a                     move-result
+00020  32b0                     op_b0
+00021  1071 2718 000e           invoke-static  # CALL Lc/a/b/a/b;->f(I)I
+00024  040a                     move-result
+00025  05dd 3f0e                op_dd
+00027  0539 0004                if-nez
+00029  3601                     op_01
+0002a  0228                     goto
+0002b  1601                     op_01
+0002c  07d8 ff02                op_d8
+0002e  7135 001d                if-ge
+00030  0754 1abb                iget-object  # FIELD Lc/a/b/a/b;->b:[J
+00032  d854 1abb                iget-object  # FIELD Lc/a/b/a/b;->b:[J
+00034  0638 0005                if-eqz
+00036  0845 0408                aget-wide
+00038  0c28                     goto
+00039  0945 0408                aget-wide
+0003b  e9c5                     op_c5
+0003c  0bd8 0104                op_d8
+0003e  0b45 0b08                aget-wide
+00040  e87b                     op_7b
+00041  8bc3                     op_c3
+00042  08a1 0b09                op_a1
+00044  084c 0107                aput-wide
+00046  01d8 0101                op_d8
+00048  04d8 0104                op_d8
+0004a  e228                     goto
+0004b  f17b                     op_7b
+0004c  0816 ffff                const-wide/16
+0004e  18c5                     op_c5
+0004f  0154 1abb                iget-object  # FIELD Lc/a/b/a/b;->b:[J
+00051  3fb1                     op_b1
+00052  0fdd 3f0f                op_dd
+00054  dd54 1abb                iget-object  # FIELD Lc/a/b/a/b;->b:[J
+00056  5f35 000e                if-ge
+00058  0545 040d                aget-wide
+0005a  e5c5                     op_c5
+0005b  34b0                     op_b0
+0005c  0345 040d                aget-wide
+0005e  83c0                     op_c0
+0005f  ed7b                     op_7b
+00060  0da3 0d03                op_a3
+00062  5dc1                     op_c1
+00063  0628                     goto
+00064  0345 040d                aget-wide
+00066  83c0                     op_c0
+00067  0da5 0e03                op_a5
+00069  0d4c 0701                aput-wide
+0006b  0259 1abc                iput  # FIELD Lc/a/b/a/b;->c:I
+0006d  1070 2716 0000           invoke-direct  # CALL Lc/a/b/a/b;->e()V
+00070  1070 2712 0000           invoke-direct  # CALL Lc/a/b/a/b;->d()V
+00073  0011                     return-object
+00074  0d22 0572                new-instance  # TYPE Lc/a/b/a/b;
+00076  2070 26ff 001d           invoke-direct  # CALL Lc/a/b/a/b;-><init>(I)V
+00079  0d11                     return-object
+
+### Lc/a/b/a/b;->c(Lc/a/b/a/b;)V  [access=0x1, regs=9, ins=2, outs=5, code_off=0xf3668]
+00000  7052 1abc                iget  # FIELD Lc/a/b/a/b;->c:I
+00002  8152 1abc                iget  # FIELD Lc/a/b/a/b;->c:I
+00004  2071 2ccf 0010           invoke-static  # CALL Ljava/lang/Math;->min(I,I)I
+00007  000a                     move-result
+00008  7152 1abc                iget  # FIELD Lc/a/b/a/b;->c:I
+0000a  8252 1abc                iget  # FIELD Lc/a/b/a/b;->c:I
+0000c  2135 0009                if-ge
+0000e  2070 271b 0027           invoke-direct  # CALL Lc/a/b/a/b;->h(I)V
+00011  8152 1abc                iget  # FIELD Lc/a/b/a/b;->c:I
+00013  7159 1abc                iput  # FIELD Lc/a/b/a/b;->c:I
+00015  0112                     const/4
+00016  0135 0010                if-ge
+00018  7254 1abb                iget-object  # FIELD Lc/a/b/a/b;->b:[J
+0001a  0345 0102                aget-wide
+0001c  8554 1abb                iget-object  # FIELD Lc/a/b/a/b;->b:[J
+0001e  0545 0105                aget-wide
+00020  53c2                     op_c2
+00021  034c 0102                aput-wide
+00023  01d8 0101                op_d8
+00025  f128                     goto
+00026  8152 1abc                iget  # FIELD Lc/a/b/a/b;->c:I
+00028  1035 000a                if-ge
+0002a  8854 1abb                iget-object  # FIELD Lc/a/b/a/b;->b:[J
+0002c  7254 1abb                iget-object  # FIELD Lc/a/b/a/b;->b:[J
+0002e  01b1                     op_b1
+0002f  5171 2d45 0208           invoke-static  # CALL Ljava/lang/System;->arraycopy(Ljava/lang/Object;,I,Ljava/lang/Object;,I,I)V
+00032  1070 2716 0007           invoke-direct  # CALL Lc/a/b/a/b;->e()V
+00035  1070 2712 0007           invoke-direct  # CALL Lc/a/b/a/b;->d()V
+00038  000e                     return-void
+
+### Lc/a/b/a/b;->c(I)Z  [access=0x1, regs=6, ins=2, outs=2, code_off=0xf2c04]
+00000  053a 0020                if-ltz
+00002  1070 2712 0004           invoke-direct  # CALL Lc/a/b/a/b;->d()V
+00005  1071 2718 0005           invoke-static  # CALL Lc/a/b/a/b;->f(I)I
+00008  000a                     move-result
+00009  4152 1abc                iget  # FIELD Lc/a/b/a/b;->c:I
+0000b  1035 0013                if-ge
+0000d  4454 1abb                iget-object  # FIELD Lc/a/b/a/b;->b:[J
+0000f  0045 0004                aget-wide
+00011  0216 0001                const-wide/16
+00013  04a3 0502                op_a3
+00015  04c0                     op_c0
+00016  0016 0000                const-wide/16
+00018  0431 0004                op_31
+0001a  0438 0004                if-eqz
+0001c  1412                     const/4
+0001d  0228                     goto
+0001e  0412                     const/4
+0001f  040f                     return
+00020  0422 066b                new-instance  # TYPE Ljava/lang/IndexOutOfBoundsException;
+00022  0022 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00024  1070 2d35 0000           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00027  011a 19cb                const-string  # STR "bitIndex < 0: "
+00029  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0002c  206e 2d3b 0050           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+0002f  106e 2d44 0000           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00032  050c                     move-result-object
+00033  2070 2ca5 0054           invoke-direct  # CALL Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+00036  0427                     throw
+
+### Lc/a/b/a/b;->clone()Ljava/lang/Object;  [access=0x1, regs=2, ins=1, outs=1, code_off=0xf30f4]
+00000  1055 1abd                iget-boolean  # FIELD Lc/a/b/a/b;->d:Z
+00002  0039 0005                if-nez
+00004  1070 2719 0001           invoke-direct  # CALL Lc/a/b/a/b;->f()V
+00007  106f 2ce1 0001           invoke-super  # CALL Ljava/lang/Object;->clone()Ljava/lang/Object;
+0000a  000c                     move-result-object
+0000b  001f 0572                check-cast  # TYPE Lc/a/b/a/b;
+0000d  1154 1abb                iget-object  # FIELD Lc/a/b/a/b;->b:[J
+0000f  106e 2f3f 0001           invoke-virtual  # CALL [J->clone()Ljava/lang/Object;
+00012  010c                     move-result-object
+00013  011f 0725                check-cast  # TYPE [J
+00015  015b 1abb                iput-object  # FIELD Lc/a/b/a/b;->b:[J
+00017  1070 2712 0000           invoke-direct  # CALL Lc/a/b/a/b;->d()V
+0001a  0011                     return-object
+0001b  0122 066e                new-instance  # TYPE Ljava/lang/InternalError;
+0001d  1070 2cb0 0001           invoke-direct  # CALL Ljava/lang/InternalError;-><init>()V
+00020  0127                     throw
+
+### Lc/a/b/a/b;->d(I)I  [access=0x1, regs=9, ins=2, outs=2, code_off=0xf2f50]
+00000  083a 0031                if-ltz
+00002  1070 2712 0007           invoke-direct  # CALL Lc/a/b/a/b;->d()V
+00005  1071 2718 0008           invoke-static  # CALL Lc/a/b/a/b;->f(I)I
+00008  000a                     move-result
+00009  7152 1abc                iget  # FIELD Lc/a/b/a/b;->c:I
+0000b  f212                     const/4
+0000c  1034 0003                if-lt
+0000e  020f                     return
+0000f  7154 1abb                iget-object  # FIELD Lc/a/b/a/b;->b:[J
+00011  0345 0001                aget-wide
+00013  0516 ffff                const-wide/16
+00015  85c3                     op_c3
+00016  53c0                     op_c0
+00017  0516 0000                const-wide/16
+00019  0831 0503                op_31
+0001b  0838 000a                if-eqz
+0001d  00da 4000                op_da
+0001f  2071 2cb8 0043           invoke-static  # CALL Ljava/lang/Long;->numberOfTrailingZeros(J)I
+00022  070a                     move-result
+00023  70b0                     op_b0
+00024  000f                     return
+00025  00d8 0100                op_d8
+00027  7852 1abc                iget  # FIELD Lc/a/b/a/b;->c:I
+00029  8033 0003                if-ne
+0002b  020f                     return
+0002c  7854 1abb                iget-object  # FIELD Lc/a/b/a/b;->b:[J
+0002e  0345 0008                aget-wide
+00030  e728                     goto
+00031  0722 066b                new-instance  # TYPE Ljava/lang/IndexOutOfBoundsException;
+00033  0022 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00035  1070 2d35 0000           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00038  011a 1c1f                const-string  # STR "fromIndex < 0: "
+0003a  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0003d  206e 2d3b 0080           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+00040  106e 2d44 0000           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00043  080c                     move-result-object
+00044  2070 2ca5 0087           invoke-direct  # CALL Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+00047  0727                     throw
+
+### Lc/a/b/a/b;->d(Lc/a/b/a/b;)V  [access=0x1, regs=8, ins=2, outs=2, code_off=0xf378c]
+00000  6052 1abc                iget  # FIELD Lc/a/b/a/b;->c:I
+00002  7152 1abc                iget  # FIELD Lc/a/b/a/b;->c:I
+00004  2071 2ccf 0010           invoke-static  # CALL Ljava/lang/Math;->min(I,I)I
+00007  000a                     move-result
+00008  00d8 ff00                op_d8
+0000a  003a 0011                if-ltz
+0000c  6154 1abb                iget-object  # FIELD Lc/a/b/a/b;->b:[J
+0000e  0245 0001                aget-wide
+00010  7454 1abb                iget-object  # FIELD Lc/a/b/a/b;->b:[J
+00012  0445 0004                aget-wide
+00014  447e                     op_7e
+00015  42c0                     op_c0
+00016  024c 0001                aput-wide
+00018  00d8 ff00                op_d8
+0001a  f028                     goto
+0001b  1070 2716 0006           invoke-direct  # CALL Lc/a/b/a/b;->e()V
+0001e  1070 2712 0006           invoke-direct  # CALL Lc/a/b/a/b;->d()V
+00021  000e                     return-void
+
+### Lc/a/b/a/b;->e(I)I  [access=0x1, regs=7, ins=2, outs=2, code_off=0xf2ff0]
+00000  063a 0034                if-ltz
+00002  1070 2712 0005           invoke-direct  # CALL Lc/a/b/a/b;->d()V
+00005  1071 2718 0006           invoke-static  # CALL Lc/a/b/a/b;->f(I)I
+00008  000a                     move-result
+00009  5152 1abc                iget  # FIELD Lc/a/b/a/b;->c:I
+0000b  1034 0003                if-lt
+0000d  060f                     return
+0000e  5154 1abb                iget-object  # FIELD Lc/a/b/a/b;->b:[J
+00010  0145 0001                aget-wide
+00012  117e                     op_7e
+00013  0316 ffff                const-wide/16
+00015  63c3                     op_c3
+00016  31c0                     op_c0
+00017  0316 0000                const-wide/16
+00019  0631 0301                op_31
+0001b  0638 000a                if-eqz
+0001d  00da 4000                op_da
+0001f  2071 2cb8 0021           invoke-static  # CALL Ljava/lang/Long;->numberOfTrailingZeros(J)I
+00022  050a                     move-result
+00023  50b0                     op_b0
+00024  000f                     return
+00025  00d8 0100                op_d8
+00027  5652 1abc                iget  # FIELD Lc/a/b/a/b;->c:I
+00029  6033 0005                if-ne
+0002b  06da 4006                op_da
+0002d  060f                     return
+0002e  5654 1abb                iget-object  # FIELD Lc/a/b/a/b;->b:[J
+00030  0145 0006                aget-wide
+00032  117e                     op_7e
+00033  e428                     goto
+00034  0522 066b                new-instance  # TYPE Ljava/lang/IndexOutOfBoundsException;
+00036  0022 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00038  1070 2d35 0000           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0003b  011a 1c1f                const-string  # STR "fromIndex < 0: "
+0003d  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00040  206e 2d3b 0060           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+00043  106e 2d44 0000           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00046  060c                     move-result-object
+00047  2070 2ca5 0065           invoke-direct  # CALL Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+0004a  0527                     throw
+
+### Lc/a/b/a/b;->equals(Ljava/lang/Object;)Z  [access=0x1, regs=9, ins=2, outs=1, code_off=0xf2c84]
+00000  8020 0572                instance-of  # TYPE Lc/a/b/a/b;
+00002  0112                     const/4
+00003  0039 0003                if-nez
+00005  010f                     return
+00006  1012                     const/4
+00007  8733 0003                if-ne
+00009  000f                     return
+0000a  081f 0572                check-cast  # TYPE Lc/a/b/a/b;
+0000c  1070 2712 0007           invoke-direct  # CALL Lc/a/b/a/b;->d()V
+0000f  1070 2712 0008           invoke-direct  # CALL Lc/a/b/a/b;->d()V
+00012  7252 1abc                iget  # FIELD Lc/a/b/a/b;->c:I
+00014  8352 1abc                iget  # FIELD Lc/a/b/a/b;->c:I
+00016  3232 0003                if-eq
+00018  010f                     return
+00019  1201                     op_01
+0001a  7352 1abc                iget  # FIELD Lc/a/b/a/b;->c:I
+0001c  3235 0012                if-ge
+0001e  7354 1abb                iget-object  # FIELD Lc/a/b/a/b;->b:[J
+00020  0345 0203                aget-wide
+00022  8554 1abb                iget-object  # FIELD Lc/a/b/a/b;->b:[J
+00024  0545 0205                aget-wide
+00026  0331 0503                op_31
+00028  0338 0003                if-eqz
+0002a  010f                     return
+0002b  02d8 0102                op_d8
+0002d  ed28                     goto
+0002e  000f                     return
+
+### Lc/a/b/a/b;->hashCode()I  [access=0x1, regs=8, ins=1, outs=0, code_off=0xf30b0]
+00000  7052 1abc                iget  # FIELD Lc/a/b/a/b;->c:I
+00002  0116 04d2                const-wide/16
+00004  00d8 ff00                op_d8
+00006  003a 000c                if-ltz
+00008  7354 1abb                iget-object  # FIELD Lc/a/b/a/b;->b:[J
+0000a  0345 0003                aget-wide
+0000c  05d8 0100                op_d8
+0000e  5581                     op_81
+0000f  53bd                     op_bd
+00010  31c2                     op_c2
+00011  f328                     goto
+00012  0713 0020                const/16
+00014  03a4 0701                op_a4
+00016  00a2 0103                op_a2
+00018  0784                     op_84
+00019  070f                     return
+
+### Lc/a/b/a/b;->toString()Ljava/lang/String;  [access=0x1, regs=5, ins=1, outs=2, code_off=0xf3158]
+00000  1070 2712 0004           invoke-direct  # CALL Lc/a/b/a/b;->d()V
+00003  4052 1abc                iget  # FIELD Lc/a/b/a/b;->c:I
+00005  0113 0080                const/16
+00007  1037 0007                if-le
+00009  106e 270c 0004           invoke-virtual  # CALL Lc/a/b/a/b;->c()I
+0000c  000a                     move-result
+0000d  0328                     goto
+0000e  00da 4000                op_da
+00010  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00012  00da 0600                op_da
+00014  00d8 0200                op_d8
+00016  2070 2d36 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>(I)V
+00019  0013 007b                const/16
+0001b  206e 2d38 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+0001e  0012                     const/4
+0001f  206e 2711 0004           invoke-virtual  # CALL Lc/a/b/a/b;->d(I)I
+00022  000a                     move-result
+00023  f212                     const/4
+00024  2032 001e                if-eq
+00026  206e 2d3b 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+00029  00d8 0100                op_d8
+0002b  206e 2711 0004           invoke-virtual  # CALL Lc/a/b/a/b;->d(I)I
+0002e  000a                     move-result
+0002f  003a 0013                if-ltz
+00031  206e 2715 0004           invoke-virtual  # CALL Lc/a/b/a/b;->e(I)I
+00034  020a                     move-result
+00035  031a 01ca                const-string  # STR ", "
+00037  206e 2d3f 0031           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0003a  206e 2d3b 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+0003d  00d8 0100                op_d8
+0003f  2034 fff6                if-lt
+00041  e828                     goto
+00042  0413 007d                const/16
+00044  206e 2d38 0041           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+00047  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0004a  040c                     move-result-object
+0004b  0411                     return-object

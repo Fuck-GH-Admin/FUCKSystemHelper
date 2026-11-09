@@ -1,0 +1,32 @@
+### Lc/a/b/c/b;-><init>()V  [access=0x10000, regs=1, ins=1, outs=1, code_off=0xf48c8]
+00000  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  000e                     return-void
+
+### Lc/a/b/c/b;->a(Lc/a/b/c/a;,Lc/a/b/c/a;)I  [access=0x1, regs=7, ins=3, outs=2, code_off=0xf4850]
+00000  106e 2760 0005           invoke-virtual  # CALL Lc/a/b/c/a;->b()J
+00003  000b                     move-result-wide
+00004  106e 2760 0006           invoke-virtual  # CALL Lc/a/b/c/a;->b()J
+00007  020b                     move-result-wide
+00008  20bc                     op_bc
+00009  0216 0000                const-wide/16
+0000b  0431 0200                op_31
+0000d  0438 0008                if-eqz
+0000f  043d 0004                if-lez
+00011  f412                     const/4
+00012  0228                     goto
+00013  1412                     const/4
+00014  040f                     return
+00015  106e 275d 0005           invoke-virtual  # CALL Lc/a/b/c/a;->a()Ljava/lang/String;
+00018  040c                     move-result-object
+00019  106e 275d 0006           invoke-virtual  # CALL Lc/a/b/c/a;->a()Ljava/lang/String;
+0001c  050c                     move-result-object
+0001d  206e 2d00 0054           invoke-virtual  # CALL Ljava/lang/String;->compareTo(Ljava/lang/String;)I
+00020  040a                     move-result
+00021  040f                     return
+
+### Lc/a/b/c/b;->compare(Ljava/lang/Object;,Ljava/lang/Object;)I  [access=0x1001, regs=3, ins=3, outs=3, code_off=0xf48a4]
+00000  011f 0584                check-cast  # TYPE Lc/a/b/c/a;
+00002  021f 0584                check-cast  # TYPE Lc/a/b/c/a;
+00004  306e 2762 0210           invoke-virtual  # CALL Lc/a/b/c/b;->a(Lc/a/b/c/a;,Lc/a/b/c/a;)I
+00007  000a                     move-result
+00008  000f                     return

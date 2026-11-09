@@ -1,0 +1,25 @@
+### La/a/a/b/v;-><clinit>()V  [access=0x10009, regs=0, ins=0, outs=0, code_off=0x53ea8]
+00000  000e                     return-void
+
+### La/a/a/b/v;->a()Landroid/os/HandlerThread;  [access=0x20009, regs=4, ins=0, outs=3, code_off=0x53e30]
+00000  001c 0046                const-class  # TYPE La/a/a/b/v;
+00002  001d                     monitor-enter
+00003  0162 0129                sget-object  # FIELD La/a/a/b/v;->a:Landroid/os/HandlerThread;
+00005  0139 0018                if-nez
+00007  0122 01f7                new-instance  # TYPE Landroid/os/HandlerThread;
+00009  021a 140e                const-string  # STR "ServiceStartArguments"
+0000b  0313 000a                const/16
+0000d  3070 0ac1 0321           invoke-direct  # CALL Landroid/os/HandlerThread;-><init>(Ljava/lang/String;,I)V
+00010  0169 0129                sput-object  # FIELD La/a/a/b/v;->a:Landroid/os/HandlerThread;
+00012  106e 0ac5 0001           invoke-virtual  # CALL Landroid/os/HandlerThread;->start()V
+00015  0828                     goto
+00016  010d                     op_0d
+00017  106e 2d60 0001           invoke-virtual  # CALL Ljava/lang/Throwable;->printStackTrace()V
+0001a  0112                     const/4
+0001b  0169 0129                sput-object  # FIELD La/a/a/b/v;->a:Landroid/os/HandlerThread;
+0001d  0162 0129                sget-object  # FIELD La/a/a/b/v;->a:Landroid/os/HandlerThread;
+0001f  001e                     monitor-exit
+00020  0111                     return-object
+00021  010d                     op_0d
+00022  001e                     monitor-exit
+00023  0127                     throw

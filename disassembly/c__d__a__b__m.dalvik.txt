@@ -1,0 +1,203 @@
+### Lc/d/a/b/m;-><clinit>()V  [access=0x10008, regs=1, ins=0, outs=1, code_off=0x1143e4]
+00000  1012                     const/4
+00001  1071 2cae 0000           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+00004  000c                     move-result-object
+00005  0069 1bd2                sput-object  # FIELD Lc/d/a/b/m;->b:Ljava/lang/Integer;
+00007  001a 26b0                const-string  # STR "signalhelper"
+00009  0069 1bd3                sput-object  # FIELD Lc/d/a/b/m;->c:Ljava/lang/String;
+0000b  001a 26a7                const-string  # STR "signal"
+0000d  0069 1bd4                sput-object  # FIELD Lc/d/a/b/m;->d:Ljava/lang/String;
+0000f  0022 06f4                new-instance  # TYPE Ljava/util/concurrent/atomic/AtomicInteger;
+00011  1070 2eaa 0000           invoke-direct  # CALL Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
+00014  0069 1bd5                sput-object  # FIELD Lc/d/a/b/m;->e:Ljava/util/concurrent/atomic/AtomicInteger;
+00016  0012                     const/4
+00017  0069 1bd6                sput-object  # FIELD Lc/d/a/b/m;->f:Lc/d/a/b/m;
+00019  000e                     return-void
+
+### Lc/d/a/b/m;-><init>(Landroid/content/Context;,Ljava/lang/String;,I)V  [access=0x10002, regs=5, ins=4, outs=5, code_off=0x114440]
+00000  0012                     const/4
+00001  5470 29b5 0321           invoke-direct  # CALL Lc/d/a/b/m;-><init>(Landroid/content/Context;,Ljava/lang/String;,Landroid/database/sqlite/SQLiteDatabase$CursorFactory;,I)V
+00004  000e                     return-void
+
+### Lc/d/a/b/m;-><init>(Landroid/content/Context;,Ljava/lang/String;,Landroid/database/sqlite/SQLiteDatabase$CursorFactory;,I)V  [access=0x10002, regs=5, ins=5, outs=5, code_off=0x114428]
+00000  5470 093f 3210           invoke-direct  # CALL Landroid/database/sqlite/SQLiteOpenHelper;-><init>(Landroid/content/Context;,Ljava/lang/String;,Landroid/database/sqlite/SQLiteDatabase$CursorFactory;,I)V
+00003  000e                     return-void
+
+### Lc/d/a/b/m;->a(Landroid/content/Context;,Ljava/lang/String;,I)Lc/d/a/b/m;  [access=0x20009, regs=5, ins=3, outs=4, code_off=0x1142a4]
+00000  001c 05f4                const-class  # TYPE Lc/d/a/b/m;
+00002  001d                     monitor-enter
+00003  0162 1bd5                sget-object  # FIELD Lc/d/a/b/m;->e:Ljava/util/concurrent/atomic/AtomicInteger;
+00005  106e 2ead 0001           invoke-virtual  # CALL Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
+00008  0162 1bd6                sget-object  # FIELD Lc/d/a/b/m;->f:Lc/d/a/b/m;
+0000a  0139 0009                if-nez
+0000c  0122 05f4                new-instance  # TYPE Lc/d/a/b/m;
+0000e  4070 29b4 4321           invoke-direct  # CALL Lc/d/a/b/m;-><init>(Landroid/content/Context;,Ljava/lang/String;,I)V
+00011  0169 1bd6                sput-object  # FIELD Lc/d/a/b/m;->f:Lc/d/a/b/m;
+00013  0262 1bd6                sget-object  # FIELD Lc/d/a/b/m;->f:Lc/d/a/b/m;
+00015  001e                     monitor-exit
+00016  0211                     return-object
+00017  020d                     op_0d
+00018  001e                     monitor-exit
+00019  0227                     throw
+
+### Lc/d/a/b/m;->a()V  [access=0x20001, regs=4, ins=1, outs=4, code_off=0x11445c]
+00000  031d                     monitor-enter
+00001  001a 1411                const-string  # STR "SignalDatabaseHelper"
+00003  011a 1a60                const-string  # STR "clearSignalDB-->"
+00005  2071 2987 0010           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+00008  106e 0941 0003           invoke-virtual  # CALL Landroid/database/sqlite/SQLiteOpenHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+0000b  000c                     move-result-object
+0000c  0162 1bd4                sget-object  # FIELD Lc/d/a/b/m;->d:Ljava/lang/String;
+0000e  0212                     const/4
+0000f  406e 0932 2210           invoke-virtual  # CALL Landroid/database/sqlite/SQLiteDatabase;->delete(Ljava/lang/String;,Ljava/lang/String;,[Ljava/lang/String;)I
+00012  031e                     monitor-exit
+00013  000e                     return-void
+00014  000d                     op_0d
+00015  031e                     monitor-exit
+00016  0027                     throw
+
+### Lc/d/a/b/m;->a(Ljava/lang/String;)V  [access=0x20001, regs=12, ins=2, outs=8, code_off=0x1144ec]
+00000  0a1d                     monitor-enter
+00001  001a 1411                const-string  # STR "SignalDatabaseHelper"
+00003  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00005  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00008  021a 1fd6                const-string  # STR "insertRecord:"
+0000a  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0000d  206e 2d3f 00b1           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00010  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00013  010c                     move-result-object
+00014  2071 2987 0010           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+00017  106e 0941 000a           invoke-virtual  # CALL Landroid/database/sqlite/SQLiteOpenHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+0001a  000c                     move-result-object
+0001b  011a 1ae1                const-string  # STR "create table if not exists signal (ID integer primary key autoincrement, jsonString text)"
+0001d  206e 0934 0010           invoke-virtual  # CALL Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+00020  0362 1bd4                sget-object  # FIELD Lc/d/a/b/m;->d:Ljava/lang/String;
+00022  011a 0840                const-string  # STR "ID"
+00024  021a 2074                const-string  # STR "jsonString"
+00026  2024 075f 0021           filled-new-array  # TYPE [Ljava/lang/String;
+00029  040c                     move-result-object
+0002a  0512                     const/4
+0002b  0612                     const/4
+0002c  0712                     const/4
+0002d  0812                     const/4
+0002e  0912                     const/4
+0002f  0207                     op_07
+00030  0874 0939 0002           invoke-virtual/range  # CALL Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;,[Ljava/lang/String;,Ljava/lang/String;,[Ljava/lang/String;,Ljava/lang/String;,Ljava/lang/String;,Ljava/lang/String;)Landroid/database/Cursor;
+00033  010c                     move-result-object
+00034  1072 0917 0001           invoke-interface  # CALL Landroid/database/Cursor;->getCount()I
+00037  020a                     move-result
+00038  0313 0064                const/16
+0003a  3234 0020                if-lt
+0003c  1072 0921 0001           invoke-interface  # CALL Landroid/database/Cursor;->moveToFirst()Z
+0003f  021a 0840                const-string  # STR "ID"
+00041  2072 0915 0021           invoke-interface  # CALL Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+00044  020a                     move-result
+00045  2072 091b 0021           invoke-interface  # CALL Landroid/database/Cursor;->getInt(I)I
+00048  020a                     move-result
+00049  0362 1bd4                sget-object  # FIELD Lc/d/a/b/m;->d:Ljava/lang/String;
+0004b  041a 0842                const-string  # STR "ID=?"
+0004d  1512                     const/4
+0004e  5523 075f                new-array  # TYPE [Ljava/lang/String;
+00050  0612                     const/4
+00051  1071 2d22 0002           invoke-static  # CALL Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+00054  020c                     move-result-object
+00055  024d 0605                aput-object
+00057  406e 0932 5430           invoke-virtual  # CALL Landroid/database/sqlite/SQLiteDatabase;->delete(Ljava/lang/String;,Ljava/lang/String;,[Ljava/lang/String;)I
+0005a  0222 016d                new-instance  # TYPE Landroid/content/ContentValues;
+0005c  1070 0831 0002           invoke-direct  # CALL Landroid/content/ContentValues;-><init>()V
+0005f  031a 2074                const-string  # STR "jsonString"
+00061  306e 0836 0b32           invoke-virtual  # CALL Landroid/content/ContentValues;->put(Ljava/lang/String;,Ljava/lang/String;)V
+00064  0b62 1bd4                sget-object  # FIELD Lc/d/a/b/m;->d:Ljava/lang/String;
+00066  0312                     const/4
+00067  406e 0935 23b0           invoke-virtual  # CALL Landroid/database/sqlite/SQLiteDatabase;->insert(Ljava/lang/String;,Ljava/lang/String;,Landroid/content/ContentValues;)J
+0006a  1072 0914 0001           invoke-interface  # CALL Landroid/database/Cursor;->close()V
+0006d  0a1e                     monitor-exit
+0006e  000e                     return-void
+0006f  0b0d                     op_0d
+00070  0a1e                     monitor-exit
+00071  0b27                     throw
+
+### Lc/d/a/b/m;->b()Lorg/json/JSONArray;  [access=0x20001, regs=9, ins=1, outs=8, code_off=0x1142f4]
+00000  081d                     monitor-enter
+00001  106e 0941 0008           invoke-virtual  # CALL Landroid/database/sqlite/SQLiteOpenHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+00004  000c                     move-result-object
+00005  0162 1bd4                sget-object  # FIELD Lc/d/a/b/m;->d:Ljava/lang/String;
+00007  021a 2074                const-string  # STR "jsonString"
+00009  1024 075f 0002           filled-new-array  # TYPE [Ljava/lang/String;
+0000c  020c                     move-result-object
+0000d  0312                     const/4
+0000e  0412                     const/4
+0000f  0512                     const/4
+00010  0612                     const/4
+00011  0712                     const/4
+00012  0874 0939 0000           invoke-virtual/range  # CALL Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;,[Ljava/lang/String;,Ljava/lang/String;,[Ljava/lang/String;,Ljava/lang/String;,Ljava/lang/String;,Ljava/lang/String;)Landroid/database/Cursor;
+00015  000c                     move-result-object
+00016  0122 0191                new-instance  # TYPE Landroid/database/CursorWindow;
+00018  021a 23d0                const-string  # STR "queryWindow"
+0001a  0317 0000 0140           const-wide/32
+0001d  4070 0929 4321           invoke-direct  # CALL Landroid/database/CursorWindow;-><init>(Ljava/lang/String;,J)V
+00020  001f 018e                check-cast  # TYPE Landroid/database/AbstractWindowedCursor;
+00022  206e 0912 0010           invoke-virtual  # CALL Landroid/database/AbstractWindowedCursor;->setWindow(Landroid/database/CursorWindow;)V
+00025  0222 0718                new-instance  # TYPE Lorg/json/JSONArray;
+00027  1070 2f09 0002           invoke-direct  # CALL Lorg/json/JSONArray;-><init>()V
+0002a  106e 090e 0000           invoke-virtual  # CALL Landroid/database/AbstractWindowedCursor;->getCount()I
+0002d  030a                     move-result
+0002e  033d 0020                if-lez
+00030  106e 0911 0000           invoke-virtual  # CALL Landroid/database/AbstractWindowedCursor;->moveToNext()Z
+00033  030a                     move-result
+00034  0338 0021                if-eqz
+00036  031a 2074                const-string  # STR "jsonString"
+00038  206e 090d 0030           invoke-virtual  # CALL Landroid/database/AbstractWindowedCursor;->getColumnIndex(Ljava/lang/String;)I
+0003b  030a                     move-result
+0003c  206e 090f 0030           invoke-virtual  # CALL Landroid/database/AbstractWindowedCursor;->getString(I)Ljava/lang/String;
+0003f  030c                     move-result-object
+00040  0422 071a                new-instance  # TYPE Lorg/json/JSONObject;
+00042  2070 2f14 0034           invoke-direct  # CALL Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+00045  206e 2f0f 0042           invoke-virtual  # CALL Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
+00048  e828                     goto
+00049  030d                     op_0d
+0004a  106e 2f12 0003           invoke-virtual  # CALL Lorg/json/JSONException;->printStackTrace()V
+0004d  e328                     goto
+0004e  031a 1411                const-string  # STR "SignalDatabaseHelper"
+00050  041a 26a8                const-string  # STR "signal database is null"
+00052  2071 2987 0043           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+00055  106e 090c 0000           invoke-virtual  # CALL Landroid/database/AbstractWindowedCursor;->close()V
+00058  106e 092a 0001           invoke-virtual  # CALL Landroid/database/CursorWindow;->close()V
+0005b  081e                     monitor-exit
+0005c  0211                     return-object
+0005d  000d                     op_0d
+0005e  081e                     monitor-exit
+0005f  0027                     throw
+
+### Lc/d/a/b/m;->close()V  [access=0x20001, regs=2, ins=1, outs=1, code_off=0x1144a8]
+00000  011d                     monitor-enter
+00001  106f 0940 0001           invoke-super  # CALL Landroid/database/sqlite/SQLiteOpenHelper;->close()V
+00004  0062 1bd5                sget-object  # FIELD Lc/d/a/b/m;->e:Ljava/util/concurrent/atomic/AtomicInteger;
+00006  106e 2eac 0000           invoke-virtual  # CALL Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+00009  000a                     move-result
+0000a  0039 0005                if-nez
+0000c  0012                     const/4
+0000d  0069 1bd6                sput-object  # FIELD Lc/d/a/b/m;->f:Lc/d/a/b/m;
+0000f  011e                     monitor-exit
+00010  000e                     return-void
+00011  000d                     op_0d
+00012  011e                     monitor-exit
+00013  0027                     throw
+
+### Lc/d/a/b/m;->onCreate(Landroid/database/sqlite/SQLiteDatabase;)V  [access=0x20001, regs=4, ins=2, outs=2, code_off=0x1145ec]
+00000  021d                     monitor-enter
+00001  001a 1411                const-string  # STR "SignalDatabaseHelper"
+00003  011a 2259                const-string  # STR "onCreate-->"
+00005  2071 2987 0010           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+00008  001a 1ae1                const-string  # STR "create table if not exists signal (ID integer primary key autoincrement, jsonString text)"
+0000a  206e 0934 0003           invoke-virtual  # CALL Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+0000d  021e                     monitor-exit
+0000e  000e                     return-void
+0000f  030d                     op_0d
+00010  021e                     monitor-exit
+00011  0327                     throw
+
+### Lc/d/a/b/m;->onUpgrade(Landroid/database/sqlite/SQLiteDatabase;,I,I)V  [access=0x20001, regs=4, ins=4, outs=0, code_off=0x11462c]
+00000  001d                     monitor-enter
+00001  001e                     monitor-exit
+00002  000e                     return-void

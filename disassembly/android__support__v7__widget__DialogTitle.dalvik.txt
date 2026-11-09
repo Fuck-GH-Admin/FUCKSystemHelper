@@ -1,0 +1,51 @@
+### Landroid/support/v7/widget/DialogTitle;-><init>(Landroid/content/Context;)V  [access=0x10001, regs=2, ins=2, outs=2, code_off=0xe40e4]
+00000  2070 20f2 0010           invoke-direct  # CALL Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+00003  000e                     return-void
+
+### Landroid/support/v7/widget/DialogTitle;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;)V  [access=0x10001, regs=3, ins=3, outs=3, code_off=0xe40fc]
+00000  3070 20f3 0210           invoke-direct  # CALL Landroid/widget/TextView;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;)V
+00003  000e                     return-void
+
+### Landroid/support/v7/widget/DialogTitle;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;,I)V  [access=0x10001, regs=4, ins=4, outs=4, code_off=0xe4114]
+00000  4070 20f4 3210           invoke-direct  # CALL Landroid/widget/TextView;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;,I)V
+00003  000e                     return-void
+
+### Landroid/support/v7/widget/DialogTitle;->onMeasure(I,I)V  [access=0x4, regs=9, ins=3, outs=5, code_off=0xe412c]
+00000  306f 2127 0876           invoke-super  # CALL Landroid/widget/TextView;->onMeasure(I,I)V
+00003  106e 2107 0006           invoke-virtual  # CALL Landroid/widget/TextView;->getLayout()Landroid/text/Layout;
+00006  000c                     move-result-object
+00007  0038 003b                if-eqz
+00009  106e 1bf9 0000           invoke-virtual  # CALL Landroid/text/Layout;->getLineCount()I
+0000c  010a                     move-result
+0000d  013d 0035                if-lez
+0000f  01d8 ff01                op_d8
+00011  206e 1bf8 0010           invoke-virtual  # CALL Landroid/text/Layout;->getEllipsisCount(I)I
+00014  000a                     move-result
+00015  003d 002d                if-lez
+00017  0012                     const/4
+00018  206e 2145 0006           invoke-virtual  # CALL Landroid/widget/TextView;->setSingleLine(Z)V
+0001b  2112                     const/4
+0001c  206e 2140 0016           invoke-virtual  # CALL Landroid/widget/TextView;->setMaxLines(I)V
+0001f  106e 2101 0006           invoke-virtual  # CALL Landroid/widget/TextView;->getContext()Landroid/content/Context;
+00022  010c                     move-result-object
+00023  0212                     const/4
+00024  0362 19e9                sget-object  # FIELD Lb/b/d/a/j;->TextAppearance:[I
+00026  0414 0041 0101           const
+00029  0514 0044 0103           const
+0002c  556e 0852 4321           invoke-virtual  # CALL Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;,[I,I,I)Landroid/content/res/TypedArray;
+0002f  010c                     move-result-object
+00030  0260 19f2                sget  # FIELD Lb/b/d/a/j;->TextAppearance_android_textSize:I
+00032  306e 08f7 0021           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getDimensionPixelSize(I,I)I
+00035  020a                     move-result
+00036  0238 0006                if-eqz
+00038  2282                     op_82
+00039  306e 214c 0206           invoke-virtual  # CALL Landroid/widget/TextView;->setTextSize(I,F)V
+0003c  106e 090a 0001           invoke-virtual  # CALL Landroid/content/res/TypedArray;->recycle()V
+0003f  306f 2127 0876           invoke-super  # CALL Landroid/widget/TextView;->onMeasure(I,I)V
+00042  000e                     return-void
+
+### Landroid/support/v7/widget/DialogTitle;->setCustomSelectionActionModeCallback(Landroid/view/ActionMode$Callback;)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0xe41c4]
+00000  2071 119c 0010           invoke-static  # CALL Landroid/support/v4/widget/l;->a(Landroid/widget/TextView;,Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode$Callback;
+00003  010c                     move-result-object
+00004  206f 2135 0010           invoke-super  # CALL Landroid/widget/TextView;->setCustomSelectionActionModeCallback(Landroid/view/ActionMode$Callback;)V
+00007  000e                     return-void

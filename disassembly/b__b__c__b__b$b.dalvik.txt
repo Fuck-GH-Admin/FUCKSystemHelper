@@ -1,0 +1,767 @@
+### Lb/b/c/b/b$b;-><init>(C,[F)V  [access=0x10000, regs=3, ins=3, outs=1, code_off=0xb2778]
+00000  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  015e 135a                iput-char  # FIELD Lb/b/c/b/b$b;->a:C
+00005  025b 135b                iput-object  # FIELD Lb/b/c/b/b$b;->b:[F
+00007  000e                     return-void
+
+### Lb/b/c/b/b$b;-><init>(Lb/b/c/b/b$b;)V  [access=0x10000, regs=4, ins=2, outs=3, code_off=0xb2744]
+00000  1070 2ce0 0002           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  3057 135a                iget-char  # FIELD Lb/b/c/b/b$b;->a:C
+00005  205e 135a                iput-char  # FIELD Lb/b/c/b/b$b;->a:C
+00007  3354 135b                iget-object  # FIELD Lb/b/c/b/b$b;->b:[F
+00009  3021                     array-length
+0000a  0112                     const/4
+0000b  3071 2323 0013           invoke-static  # CALL Lb/b/c/b/b;->a([F,I,I)[F
+0000e  030c                     move-result-object
+0000f  235b 135b                iput-object  # FIELD Lb/b/c/b/b$b;->b:[F
+00011  000e                     return-void
+
+### Lb/b/c/b/b$b;->a(Landroid/graphics/Path;,D,D,D,D,D,D,D,D,D)V  [access=0xa, regs=68, ins=19, outs=7, code_off=0xb2e84]
+00000  0005 0036                op_05
+00002  0219 4010                const-wide/high16
+00004  04ad 0242                op_ad
+00006  0618 2d18 5444 21fb 4009 const-wide
+0000b  64ce                     op_ce
+0000c  2071 2cbd 0054           invoke-static  # CALL Ljava/lang/Math;->abs(D)D
+0000f  040b                     move-result-wide
+00010  2071 2cc4 0054           invoke-static  # CALL Ljava/lang/Math;->ceil(D)D
+00013  040b                     move-result-wide
+00014  448a                     op_8a
+00015  0277 2cc5 003e           invoke-static/range  # CALL Ljava/lang/Math;->cos(D)D
+00018  050b                     move-result-wide
+00019  0277 2cd5 003e           invoke-static/range  # CALL Ljava/lang/Math;->sin(D)D
+0001c  070b                     move-result-wide
+0001d  0277 2cc5 0040           invoke-static/range  # CALL Ljava/lang/Math;->cos(D)D
+00020  090b                     move-result-wide
+00021  0277 2cd5 0040           invoke-static/range  # CALL Ljava/lang/Math;->sin(D)D
+00024  0b0b                     move-result-wide
+00025  0d80                     op_80
+00026  0fad 050d                op_ad
+00028  11ad 0b0f                op_ad
+0002a  13ad 0738                op_ad
+0002c  15ad 0913                op_ad
+0002e  11ac 1511                op_ac
+00030  7dcd                     op_cd
+00031  dbcd                     op_cd
+00032  15ad 0538                op_ad
+00034  09ad 1509                op_ad
+00036  9bcb                     op_cb
+00037  4983                     op_83
+00038  09ae 0942                op_ae
+0003a  1713 0000                const/16
+0003c  1905 000b                op_05
+0003e  1b05 0011                op_05
+00040  0202 0017                op_02
+00042  0b05 003a                op_05
+00044  1105 003c                op_05
+00046  1705 0040                op_05
+00048  4235 00a0                if-ge
+0004a  1fab 0917                op_ab
+0004c  0277 2cd5 001f           invoke-static/range  # CALL Ljava/lang/Math;->sin(D)D
+0004f  210b                     move-result-wide
+00050  0277 2cc5 001f           invoke-static/range  # CALL Ljava/lang/Math;->cos(D)D
+00053  230b                     move-result-wide
+00054  25ad 0500                op_ad
+00056  25ad 2325                op_ad
+00058  25ab 2532                op_ab
+0005a  27ad 2113                op_ad
+0005c  2902 0004                op_02
+0005e  03ac 2725                op_ac
+00060  25ad 0700                op_ad
+00062  25ad 2325                op_ad
+00064  25ab 2534                op_ab
+00066  27ad 2115                op_ad
+00068  00ab 2725                op_ab
+0006a  25ad 210f                op_ad
+0006c  27ad 2313                op_ad
+0006e  25ac 2725                op_ac
+00070  21ad 0d21                op_ad
+00072  23ad 1523                op_ad
+00074  21ab 2321                op_ab
+00076  17ac 171f                op_ac
+00078  2319 4000                const-wide/high16
+0007a  23ae 2317                op_ae
+0007c  0277 2cd7 0023           invoke-static/range  # CALL Ljava/lang/Math;->tan(D)D
+0007f  230b                     move-result-wide
+00080  0277 2cd5 0017           invoke-static/range  # CALL Ljava/lang/Math;->sin(D)D
+00083  170b                     move-result-wide
+00084  2719 4008                const-wide/high16
+00086  2aad 2723                op_ad
+00088  2aad 232a                op_ad
+0008a  1d19 4010                const-wide/high16
+0008c  2aab 1d2a                op_ab
+0008e  0277 2cd6 002a           invoke-static/range  # CALL Ljava/lang/Math;->sqrt(D)D
+00091  230b                     move-result-wide
+00092  2a19 3ff0                const-wide/high16
+00094  23ac 2a23                op_ac
+00096  17ad 2317                op_ad
+00098  17ae 2717                op_ae
+0009a  1bad 171b                op_ad
+0009c  0bab 1b0b                op_ab
+0009e  19ad 1719                op_ad
+000a0  1b05 0005                op_05
+000a2  05ab 1911                op_ab
+000a4  11ad 2517                op_ad
+000a6  3e05 0007                op_05
+000a8  07ac 1103                op_ac
+000aa  17ad 2117                op_ad
+000ac  3805 0009                op_05
+000ae  09ac 1700                op_ac
+000b0  1105 000d                op_05
+000b2  0d12                     const/4
+000b3  0e08 0031                op_08
+000b5  306e 0982 0dde           invoke-virtual  # CALL Landroid/graphics/Path;->rLineTo(F,F)V
+000b8  bb8c                     op_8c
+000b9  558c                     op_8c
+000ba  768c                     op_8c
+000bb  978c                     op_8c
+000bc  388c                     op_8c
+000bd  098c                     op_8c
+000be  2a08 0031                op_08
+000c0  2b02 000b                op_02
+000c2  2c02 0005                op_02
+000c4  2d02 0006                op_02
+000c6  2e02 0007                op_02
+000c8  2f02 0008                op_02
+000ca  3002 0009                op_02
+000cc  0774 097d 002a           invoke-virtual/range  # CALL Landroid/graphics/Path;->cubicTo(F,F,F,F,F,F)V
+000cf  02d8 0102                op_d8
+000d1  0905 0038                op_05
+000d3  0705 003e                op_05
+000d5  3b04                     op_04
+000d6  0d05 0011                op_05
+000d8  0505 001b                op_05
+000da  1705 001f                op_05
+000dc  1905 0021                op_05
+000de  1b05 0025                op_05
+000e0  0402 0029                op_02
+000e2  1105 0000                op_05
+000e4  0005 0036                op_05
+000e6  0029 ff62                goto/16
+000e8  000e                     return-void
+
+### Lb/b/c/b/b$b;->a(Landroid/graphics/Path;,F,F,F,F,F,F,F,Z,Z)V  [access=0xa, regs=51, ins=10, outs=19, code_off=0xb3068]
+00000  0102 002a                op_02
+00002  0302 002c                op_02
+00004  0002 002e                op_02
+00006  0202 002f                op_02
+00008  0702 0030                op_02
+0000a  0902 0032                op_02
+0000c  7489                     op_89
+0000d  2071 2cd9 0054           invoke-static  # CALL Ljava/lang/Math;->toRadians(D)D
+00010  130b                     move-result-wide
+00011  0277 2cc5 0013           invoke-static/range  # CALL Ljava/lang/Math;->cos(D)D
+00014  040b                     move-result-wide
+00015  0277 2cd5 0013           invoke-static/range  # CALL Ljava/lang/Math;->sin(D)D
+00018  0a0b                     move-result-wide
+00019  1d89                     op_89
+0001a  0fad 040d                op_ad
+0001c  0602 002b                op_02
+0001e  1105 000d                op_05
+00020  6d89                     op_89
+00021  15ad 0a0d                op_ad
+00023  0fab 150f                op_ab
+00025  0689                     op_89
+00026  6fce                     op_ce
+00027  187f                     op_7f
+00028  8889                     op_89
+00029  a8cd                     op_cd
+0002a  15ad 040d                op_ad
+0002c  08ab 1508                op_ab
+0002e  1505 000d                op_05
+00030  2d89                     op_89
+00031  d8ce                     op_ce
+00032  3189                     op_89
+00033  41cd                     op_cd
+00034  0c02 002d                op_02
+00036  1705 0008                op_05
+00038  c889                     op_89
+00039  19ad 0a08                op_ad
+0003b  01ab 1901                op_ab
+0003d  61ce                     op_ce
+0003e  3c7f                     op_7f
+0003f  1905 0006                op_05
+00041  c689                     op_89
+00042  a6cd                     op_cd
+00043  48cd                     op_cd
+00044  86cb                     op_cb
+00045  d6ce                     op_ce
+00046  08ac 010f                op_ac
+00048  1bac 0617                op_ac
+0004a  1dab 010f                op_ab
+0004c  1f19 4000                const-wide/high16
+0004e  1dae 1f1d                op_ae
+00050  21ab 0617                op_ab
+00052  21ae 1f21                op_ae
+00054  1fad 0808                op_ad
+00056  23ad 1b1b                op_ad
+00058  2505 000a                op_05
+0005a  0aab 231f                op_ab
+0005c  1f16 0000                const-wide/16
+0005e  0c2f 1f0a                op_2f
+00060  031a 131f                const-string  # STR "PathParser"
+00062  0c39 0008                if-nez
+00064  001a 0028                const-string  # STR " Points are coincident"
+00066  2071 1c61 0003           invoke-static  # CALL Landroid/util/Log;->w(Ljava/lang/String;,Ljava/lang/String;)I
+00069  000e                     return-void
+0006a  2319 3ff0                const-wide/high16
+0006c  23ae 0a23                op_ae
+0006e  2719 3fd0                const-wide/high16
+00070  23ac 2723                op_ac
+00072  0c30 1f23                op_30
+00074  0c3b 0039                if-gez
+00076  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00078  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0007b  021a 132c                const-string  # STR "Points are too far apart "
+0007d  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00080  306e 2d39 0ba1           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+00083  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00086  010c                     move-result-object
+00087  2071 1c61 0013           invoke-static  # CALL Landroid/util/Log;->w(Ljava/lang/String;,Ljava/lang/String;)I
+0008a  2071 2cd6 00ba           invoke-static  # CALL Ljava/lang/Math;->sqrt(D)D
+0008d  010b                     move-result-wide
+0008e  0318 3b8e 83a5 fff5 3fff const-wide
+00093  31ce                     op_ce
+00094  118c                     op_8c
+00095  05a8 0100                op_a8
+00097  06a8 012f                op_a8
+00099  0008 0029                op_08
+0009b  0102 002a                op_02
+0009d  0202 002b                op_02
+0009f  0302 002c                op_02
+000a1  0402 002d                op_02
+000a3  0702 0030                op_02
+000a5  0802 0031                op_02
+000a7  0902 0032                op_02
+000a9  0a77 231b 0000           invoke-static/range  # CALL Lb/b/c/b/b$b;->a(Landroid/graphics/Path;,F,F,F,F,F,F,F,Z,Z)V
+000ac  000e                     return-void
+000ad  0277 2cd6 0023           invoke-static/range  # CALL Ljava/lang/Math;->sqrt(D)D
+000b0  0a0b                     move-result-wide
+000b1  a8cd                     op_cd
+000b2  0aad 1b0a                op_ad
+000b4  0002 0031                op_02
+000b6  0302 0032                op_02
+000b8  3033 0007                if-ne
+000ba  1dac 0a1d                op_ac
+000bc  21ab 0821                op_ab
+000be  0528                     goto
+000bf  1dab 0a1d                op_ab
+000c1  21ac 0821                op_ac
+000c3  08ac 2117                op_ac
+000c5  0aac 1d0f                op_ac
+000c7  4071 2cc3 ba98           invoke-static  # CALL Ljava/lang/Math;->atan2(D,D)D
+000ca  170b                     move-result-wide
+000cb  06ac 2106                op_ac
+000cd  01ac 1d01                op_ac
+000cf  4071 2cc3 2176           invoke-static  # CALL Ljava/lang/Math;->atan2(D,D)D
+000d2  000b                     move-result-wide
+000d3  00ac 1700                op_ac
+000d5  022f 1f00                op_2f
+000d7  023a 0004                if-ltz
+000d9  1612                     const/4
+000da  0228                     goto
+000db  0612                     const/4
+000dc  6332 000c                if-eq
+000de  0618 2d18 5444 21fb 4019 const-wide
+000e3  023d 0004                if-lez
+000e5  60cc                     op_cc
+000e6  0228                     goto
+000e7  60cb                     op_cb
+000e8  1dad 191d                op_ad
+000ea  21ad 0d21                op_ad
+000ec  02ad 041d                op_ad
+000ee  0aad 2521                op_ad
+000f0  07ac 0a02                op_ac
+000f2  0205 0019                op_05
+000f4  1dad 251d                op_ad
+000f6  21ad 0421                op_ad
+000f8  09ab 211d                op_ab
+000fa  0608 0029                op_08
+000fc  2b04                     op_04
+000fd  0205 0011                op_05
+000ff  0405 0015                op_05
+00101  2f04                     op_04
+00102  1105 0004                op_05
+00104  1505 0017                op_05
+00106  1705 0000                op_05
+00108  1377 231a 0006           invoke-static/range  # CALL Lb/b/c/b/b$b;->a(Landroid/graphics/Path;,D,D,D,D,D,D,D,D,D)V
+0010b  000e                     return-void
+
+### Lb/b/c/b/b$b;->a(Landroid/graphics/Path;,[F,C,C,[F)V  [access=0xa, regs=30, ins=5, outs=10, code_off=0xb2798]
+00000  0a08 0019                op_08
+00002  0b02 001c                op_02
+00004  0c08 001d                op_08
+00006  0d12                     const/4
+00007  0044 0d1a                aget
+00009  1e12                     const/4
+0000a  0144 0e1a                aget
+0000c  2f12                     const/4
+0000d  0244 0f1a                aget
+0000f  1013 0003                const/16
+00011  0344 101a                aget
+00013  1113 0004                const/16
+00015  0444 111a                aget
+00017  1213 0005                const/16
+00019  0544 121a                aget
+0001b  0b2c 0301 0000           sparse-switch
+0001e  1302 000f                op_02
+00020  1728                     goto
+00021  0174 097c 0019           invoke-virtual/range  # CALL Landroid/graphics/Path;->close()V
+00024  306e 097f 054a           invoke-virtual  # CALL Landroid/graphics/Path;->moveTo(F,F)V
+00027  4001                     op_01
+00028  0201                     op_01
+00029  5101                     op_01
+0002a  1301                     op_01
+0002b  f328                     goto
+0002c  1302 0011                op_02
+0002e  0928                     goto
+0002f  1302 000e                op_02
+00031  0628                     goto
+00032  6612                     const/4
+00033  0228                     goto
+00034  7612                     const/4
+00035  1302 0006                op_02
+00037  0901                     op_01
+00038  1801                     op_01
+00039  1402 0004                op_02
+0003b  1502 0005                op_02
+0003d  d701                     op_01
+0003e  0002 001b                op_02
+00040  c121                     array-length
+00041  1735 02c9                if-ge
+00043  0113 0041                const/16
+00045  1b32 027f                if-eq
+00047  0113 0043                const/16
+00049  1b32 0250                if-eq
+0004b  0513 0048                const/16
+0004d  5b32 023e                if-eq
+0004f  0513 0051                const/16
+00051  5b32 0219                if-eq
+00053  0613 0056                const/16
+00055  6b32 0207                if-eq
+00057  0613 0061                const/16
+00059  6b32 01b6                if-eq
+0005b  0613 0063                const/16
+0005d  6b32 0185                if-eq
+0005f  0f13 0068                const/16
+00061  fb32 0174                if-eq
+00063  0f13 0071                const/16
+00065  fb32 0151                if-eq
+00067  0e13 0076                const/16
+00069  eb32 0141                if-eq
+0006b  0e13 004c                const/16
+0006d  eb32 012c                if-eq
+0006f  0e13 004d                const/16
+00071  eb32 0106                if-eq
+00073  0e13 0073                const/16
+00075  0d13 0053                const/16
+00077  1615 4000                const/high16
+00079  db32 00cb                if-eq
+0007b  0413 0074                const/16
+0007d  0d13 0054                const/16
+0007f  db32 00a0                if-eq
+00081  0113 006c                const/16
+00083  1b32 0089                if-eq
+00085  0113 006d                const/16
+00087  1b32 0068                if-eq
+00089  eb32 002e                if-eq
+0008b  4b32 0006                if-eq
+0008d  1802 0007                op_02
+0008f  0029 0271                goto/16
+00091  f032 000c                if-eq
+00093  4032 000a                if-eq
+00095  5032 0008                if-eq
+00097  d033 0003                if-ne
+00099  0428                     goto
+0009a  0012                     const/4
+0009b  0412                     const/4
+0009c  0528                     goto
+0009d  04a7 0209                op_a7
+0009f  00a7 0308                op_a7
+000a1  01d8 0007                op_d8
+000a3  0244 010c                aget
+000a5  03d8 0107                op_d8
+000a7  0544 030c                aget
+000a9  556e 0984 204a           invoke-virtual  # CALL Landroid/graphics/Path;->rQuadTo(F,F,F,F)V
+000ac  94c6                     op_c6
+000ad  80c6                     op_c6
+000ae  0144 010c                aget
+000b0  19c6                     op_c6
+000b1  0144 030c                aget
+000b3  18c6                     op_c6
+000b4  0301                     op_01
+000b5  4201                     op_01
+000b6  d728                     goto
+000b7  6032 0010                if-eq
+000b9  e032 000e                if-eq
+000bb  0113 0043                const/16
+000bd  1032 000a                if-eq
+000bf  0113 0053                const/16
+000c1  1033 0003                if-ne
+000c3  0428                     goto
+000c4  0112                     const/4
+000c5  0212                     const/4
+000c6  0728                     goto
+000c7  00a7 0209                op_a7
+000c9  01a7 0308                op_a7
+000cb  1201                     op_01
+000cc  0101                     op_01
+000cd  0dd8 0007                op_d8
+000cf  0344 0d0c                aget
+000d1  0ed8 0107                op_d8
+000d3  0444 0e0c                aget
+000d5  0fd8 0207                op_d8
+000d7  0544 0f0c                aget
+000d9  16d8 0307                op_d8
+000db  0644 160c                aget
+000dd  0008 0019                op_08
+000df  0774 0981 0000           invoke-virtual/range  # CALL Landroid/graphics/Path;->rCubicTo(F,F,F,F,F,F)V
+000e2  0044 0d0c                aget
+000e4  90c6                     op_c6
+000e5  0144 0e0c                aget
+000e7  81c6                     op_c6
+000e8  0244 0f0c                aget
+000ea  29c6                     op_c6
+000eb  0244 160c                aget
+000ed  0029 011d                goto/16
+000ef  00d8 0007                op_d8
+000f1  0144 000c                aget
+000f3  19c6                     op_c6
+000f4  01d8 0107                op_d8
+000f6  0444 010c                aget
+000f8  48c6                     op_c6
+000f9  073d 000a                if-lez
+000fb  0044 000c                aget
+000fd  0144 010c                aget
+000ff  306e 0982 010a           invoke-virtual  # CALL Landroid/graphics/Path;->rLineTo(F,F)V
+00102  8b28                     goto
+00103  0044 000c                aget
+00105  0144 010c                aget
+00107  306e 0983 010a           invoke-virtual  # CALL Landroid/graphics/Path;->rMoveTo(F,F)V
+0010a  0029 0087                goto/16
+0010c  00d8 0007                op_d8
+0010e  0144 000c                aget
+00110  04d8 0107                op_d8
+00112  0544 040c                aget
+00114  306e 0982 051a           invoke-virtual  # CALL Landroid/graphics/Path;->rLineTo(F,F)V
+00117  0044 000c                aget
+00119  09c6                     op_c6
+0011a  0044 040c                aget
+0011c  08c6                     op_c6
+0011d  0029 ff70                goto/16
+0011f  f032 0008                if-eq
+00121  4032 0006                if-eq
+00123  5032 0004                if-eq
+00125  d033 0008                if-ne
+00127  09a8 1609                op_a8
+00129  29c7                     op_c7
+0012a  08a8 1608                op_a8
+0012c  38c7                     op_c7
+0012d  00d8 0007                op_d8
+0012f  0144 000c                aget
+00131  02d8 0107                op_d8
+00133  0344 020c                aget
+00135  536e 0980 189a           invoke-virtual  # CALL Landroid/graphics/Path;->quadTo(F,F,F,F)V
+00138  0044 000c                aget
+0013a  0144 020c                aget
+0013c  1802 0007                op_02
+0013e  8301                     op_01
+0013f  9201                     op_01
+00140  0901                     op_01
+00141  1801                     op_01
+00142  0029 01be                goto/16
+00144  6032 000c                if-eq
+00146  e032 000a                if-eq
+00148  0113 0043                const/16
+0014a  1032 0006                if-eq
+0014c  0113 0053                const/16
+0014e  1033 0008                if-ne
+00150  09a8 1609                op_a8
+00152  29c7                     op_c7
+00153  08a8 1608                op_a8
+00155  38c7                     op_c7
+00156  8201                     op_01
+00157  9101                     op_01
+00158  08d8 0007                op_d8
+0015a  0344 080c                aget
+0015c  09d8 0107                op_d8
+0015e  0444 090c                aget
+00160  0dd8 0207                op_d8
+00162  0544 0d0c                aget
+00164  0ed8 0307                op_d8
+00166  0644 0e0c                aget
+00168  0008 0019                op_08
+0016a  0774 097d 0000           invoke-virtual/range  # CALL Landroid/graphics/Path;->cubicTo(F,F,F,F,F,F)V
+0016d  0044 080c                aget
+0016f  0144 090c                aget
+00171  0944 0d0c                aget
+00173  0844 0e0c                aget
+00175  0029 0096                goto/16
+00177  00d8 0007                op_d8
+00179  0944 000c                aget
+0017b  01d8 0107                op_d8
+0017d  0844 010c                aget
+0017f  073d 000b                if-lez
+00181  0044 000c                aget
+00183  0144 010c                aget
+00185  306e 097e 010a           invoke-virtual  # CALL Landroid/graphics/Path;->lineTo(F,F)V
+00188  0029 ff05                goto/16
+0018a  0044 000c                aget
+0018c  0144 010c                aget
+0018e  306e 097f 010a           invoke-virtual  # CALL Landroid/graphics/Path;->moveTo(F,F)V
+00191  1802 0007                op_02
+00193  1502 0008                op_02
+00195  1402 0009                op_02
+00197  0029 0169                goto/16
+00199  00d8 0007                op_d8
+0019b  0144 000c                aget
+0019d  04d8 0107                op_d8
+0019f  0544 040c                aget
+001a1  306e 097e 051a           invoke-virtual  # CALL Landroid/graphics/Path;->lineTo(F,F)V
+001a4  0944 000c                aget
+001a6  0844 040c                aget
+001a8  0029 fee5                goto/16
+001aa  00d8 0007                op_d8
+001ac  0144 000c                aget
+001ae  0412                     const/4
+001af  306e 0982 014a           invoke-virtual  # CALL Landroid/graphics/Path;->rLineTo(F,F)V
+001b2  0044 000c                aget
+001b4  0029 ff68                goto/16
+001b6  00d8 0007                op_d8
+001b8  0144 000c                aget
+001ba  02d8 0107                op_d8
+001bc  0344 020c                aget
+001be  04d8 0207                op_d8
+001c0  0544 040c                aget
+001c2  06d8 0307                op_d8
+001c4  0d44 060c                aget
+001c6  5d6e 0984 531a           invoke-virtual  # CALL Landroid/graphics/Path;->rQuadTo(F,F,F,F)V
+001c9  0044 000c                aget
+001cb  90c6                     op_c6
+001cc  0144 020c                aget
+001ce  81c6                     op_c6
+001cf  0244 040c                aget
+001d1  29c6                     op_c6
+001d2  0244 060c                aget
+001d4  3628                     goto
+001d5  00d8 0007                op_d8
+001d7  0144 000c                aget
+001d9  0412                     const/4
+001da  306e 0982 041a           invoke-virtual  # CALL Landroid/graphics/Path;->rLineTo(F,F)V
+001dd  0044 000c                aget
+001df  09c6                     op_c6
+001e0  0029 fead                goto/16
+001e2  00d8 0007                op_d8
+001e4  0144 000c                aget
+001e6  00d8 0107                op_d8
+001e8  0244 000c                aget
+001ea  0dd8 0207                op_d8
+001ec  0344 0d0c                aget
+001ee  0ed8 0307                op_d8
+001f0  0444 0e0c                aget
+001f2  0fd8 0407                op_d8
+001f4  0544 0f0c                aget
+001f6  16d8 0507                op_d8
+001f8  0644 160c                aget
+001fa  0008 0019                op_08
+001fc  0774 0981 0000           invoke-virtual/range  # CALL Landroid/graphics/Path;->rCubicTo(F,F,F,F,F,F)V
+001ff  0044 0d0c                aget
+00201  90c6                     op_c6
+00202  0144 0e0c                aget
+00204  81c6                     op_c6
+00205  0244 0f0c                aget
+00207  29c6                     op_c6
+00208  0244 160c                aget
+0020a  28c6                     op_c6
+0020b  0201                     op_01
+0020c  1301                     op_01
+0020d  0029 fe80                goto/16
+0020f  0dd8 0507                op_d8
+00211  0044 0d0c                aget
+00213  03a6 0900                op_a6
+00215  0ed8 0607                op_d8
+00217  0044 0e0c                aget
+00219  04a6 0800                op_a6
+0021b  00d8 0007                op_d8
+0021d  0544 000c                aget
+0021f  00d8 0107                op_d8
+00221  0644 000c                aget
+00223  00d8 0207                op_d8
+00225  0f44 000c                aget
+00227  00d8 0307                op_d8
+00229  0044 000c                aget
+0022b  0112                     const/4
+0022c  002d 0100                op_2d
+0022e  0038 0005                if-eqz
+00230  1613 0001                const/16
+00232  0328                     goto
+00233  1613 0000                const/16
+00235  00d8 0407                op_d8
+00237  0044 000c                aget
+00239  002d 0100                op_2d
+0023b  0038 0005                if-eqz
+0023d  1713 0001                const/16
+0023f  0328                     goto
+00240  1713 0000                const/16
+00242  0008 0019                op_08
+00244  9101                     op_01
+00245  8201                     op_01
+00246  1802 0007                op_02
+00248  f701                     op_01
+00249  8f01                     op_01
+0024a  0802 0016                op_02
+0024c  9b01                     op_01
+0024d  0902 0017                op_02
+0024f  0a77 231b 0000           invoke-static/range  # CALL Lb/b/c/b/b$b;->a(Landroid/graphics/Path;,F,F,F,F,F,F,F,Z,Z)V
+00252  0044 0d0c                aget
+00254  09a6 000b                op_a6
+00256  0044 0e0c                aget
+00258  08a6 000f                op_a6
+0025a  0029 00a4                goto/16
+0025c  1802 0007                op_02
+0025e  9b01                     op_01
+0025f  07d8 0018                op_d8
+00261  0044 070c                aget
+00263  306e 097e 00ba           invoke-virtual  # CALL Landroid/graphics/Path;->lineTo(F,F)V
+00266  0844 070c                aget
+00268  0029 0098                goto/16
+0026a  1802 0007                op_02
+0026c  07d8 0018                op_d8
+0026e  0044 070c                aget
+00270  01d8 0118                op_d8
+00272  0244 010c                aget
+00274  03d8 0218                op_d8
+00276  0444 030c                aget
+00278  05d8 0318                op_d8
+0027a  0644 050c                aget
+0027c  566e 0980 420a           invoke-virtual  # CALL Landroid/graphics/Path;->quadTo(F,F,F,F)V
+0027f  0044 070c                aget
+00281  0144 010c                aget
+00283  0944 030c                aget
+00285  0844 050c                aget
+00287  0201                     op_01
+00288  1301                     op_01
+00289  0029 0077                goto/16
+0028b  1802 0007                op_02
+0028d  8f01                     op_01
+0028e  07d8 0018                op_d8
+00290  0044 070c                aget
+00292  306e 097e 0f0a           invoke-virtual  # CALL Landroid/graphics/Path;->lineTo(F,F)V
+00295  0944 070c                aget
+00297  0029 0069                goto/16
+00299  1802 0007                op_02
+0029b  07d8 0018                op_d8
+0029d  0144 070c                aget
+0029f  07d8 0118                op_d8
+002a1  0244 070c                aget
+002a3  07d8 0218                op_d8
+002a5  0344 070c                aget
+002a7  08d8 0318                op_d8
+002a9  0444 080c                aget
+002ab  09d8 0418                op_d8
+002ad  0544 090c                aget
+002af  0bd8 0518                op_d8
+002b1  0644 0b0c                aget
+002b3  0008 0019                op_08
+002b5  0774 097d 0000           invoke-virtual/range  # CALL Landroid/graphics/Path;->cubicTo(F,F,F,F,F,F)V
+002b8  0944 090c                aget
+002ba  0044 0b0c                aget
+002bc  0144 070c                aget
+002be  0244 080c                aget
+002c0  0801                     op_01
+002c1  2301                     op_01
+002c2  1201                     op_01
+002c3  3d28                     goto
+002c4  1802 0007                op_02
+002c6  8f01                     op_01
+002c7  9b01                     op_01
+002c8  0dd8 0518                op_d8
+002ca  0344 0d0c                aget
+002cc  0ed8 0618                op_d8
+002ce  0444 0e0c                aget
+002d0  07d8 0018                op_d8
+002d2  0544 070c                aget
+002d4  07d8 0118                op_d8
+002d6  0644 070c                aget
+002d8  07d8 0218                op_d8
+002da  0744 070c                aget
+002dc  00d8 0318                op_d8
+002de  0044 000c                aget
+002e0  0112                     const/4
+002e1  002d 0100                op_2d
+002e3  0038 0004                if-eqz
+002e5  1812                     const/4
+002e6  0228                     goto
+002e7  0812                     const/4
+002e8  00d8 0418                op_d8
+002ea  0044 000c                aget
+002ec  002d 0100                op_2d
+002ee  0038 0004                if-eqz
+002f0  1912                     const/4
+002f1  0228                     goto
+002f2  0912                     const/4
+002f3  0008 0019                op_08
+002f5  b101                     op_01
+002f6  f201                     op_01
+002f7  0a77 231b 0000           invoke-static/range  # CALL Lb/b/c/b/b$b;->a(Landroid/graphics/Path;,F,F,F,F,F,F,F,Z,Z)V
+002fa  0944 0d0c                aget
+002fc  0844 0e0c                aget
+002fe  8301                     op_01
+002ff  9201                     op_01
+00300  0790 1318                int-add
+00302  0002 001c                op_02
+00304  0b01                     op_01
+00305  0d12                     const/4
+00306  1e12                     const/4
+00307  2f12                     const/4
+00308  0029 fd38                goto/16
+0030a  8f01                     op_01
+0030b  9b01                     op_01
+0030c  d001                     op_01
+0030d  0b4b 001a                aput
+0030f  1012                     const/4
+00310  0f4b 001a                aput
+00312  2012                     const/4
+00313  024b 001a                aput
+00315  034b 101a                aput
+00317  144b 111a                aput
+00319  154b 121a                aput
+0031b  000e                     return-void
+0031c  0200 0014 0041 0000 0043 0000 0048 0000 004c 0000 004d 0000 0051 0000 0053 0000 ... <payload; units=82>
+
+### Lb/b/c/b/b$b;->a([Lb/b/c/b/b$b;,Landroid/graphics/Path;)V  [access=0x9, regs=7, ins=2, outs=5, code_off=0xb32d4]
+00000  6012                     const/4
+00001  0023 0723                new-array  # TYPE [F
+00003  0113 006d                const/16
+00005  0212                     const/4
+00006  5321                     array-length
+00007  3235 0014                if-ge
+00009  0346 0205                aget-object
+0000b  3357 135a                iget-char  # FIELD Lb/b/c/b/b$b;->a:C
+0000d  0446 0205                aget-object
+0000f  4454 135b                iget-object  # FIELD Lb/b/c/b/b$b;->b:[F
+00011  5471 231c 3106           invoke-static  # CALL Lb/b/c/b/b$b;->a(Landroid/graphics/Path;,[F,C,C,[F)V
+00014  0146 0205                aget-object
+00016  1157 135a                iget-char  # FIELD Lb/b/c/b/b$b;->a:C
+00018  02d8 0102                op_d8
+0001a  ec28                     goto
+0001b  000e                     return-void
+
+### Lb/b/c/b/b$b;->a(Lb/b/c/b/b$b;,Lb/b/c/b/b$b;,F)V  [access=0x1, regs=8, ins=4, outs=0, code_off=0xb3290]
+00000  0012                     const/4
+00001  5154 135b                iget-object  # FIELD Lb/b/c/b/b$b;->b:[F
+00003  1221                     array-length
+00004  2035 0015                if-ge
+00006  4254 135b                iget-object  # FIELD Lb/b/c/b/b$b;->b:[F
+00008  0144 0001                aget
+0000a  0315 3f80                const/high16
+0000c  73c7                     op_c7
+0000d  31c8                     op_c8
+0000e  6354 135b                iget-object  # FIELD Lb/b/c/b/b$b;->b:[F
+00010  0344 0003                aget
+00012  73c8                     op_c8
+00013  31c6                     op_c6
+00014  014b 0002                aput
+00016  00d8 0100                op_d8
+00018  e928                     goto
+00019  000e                     return-void

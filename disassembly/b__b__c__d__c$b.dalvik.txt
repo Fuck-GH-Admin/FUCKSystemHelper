@@ -1,0 +1,18 @@
+### Lb/b/c/d/c$b;-><init>(Lb/b/c/d/c;,Ljava/util/concurrent/Callable;,Landroid/os/Handler;,Lb/b/c/d/c$d;)V  [access=0x10000, regs=5, ins=5, outs=1, code_off=0xb728c]
+00000  025b 1387                iput-object  # FIELD Lb/b/c/d/c$b;->b:Ljava/util/concurrent/Callable;
+00002  035b 1388                iput-object  # FIELD Lb/b/c/d/c$b;->c:Landroid/os/Handler;
+00004  045b 1389                iput-object  # FIELD Lb/b/c/d/c$b;->d:Lb/b/c/d/c$d;
+00006  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00009  000e                     return-void
+
+### Lb/b/c/d/c$b;->run()V  [access=0x1, regs=4, ins=1, outs=3, code_off=0xb72b0]
+00000  3054 1387                iget-object  # FIELD Lb/b/c/d/c$b;->b:Ljava/util/concurrent/Callable;
+00002  1072 2e8f 0000           invoke-interface  # CALL Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;
+00005  000c                     move-result-object
+00006  0228                     goto
+00007  0012                     const/4
+00008  3154 1388                iget-object  # FIELD Lb/b/c/d/c$b;->c:Landroid/os/Handler;
+0000a  0222 0500                new-instance  # TYPE Lb/b/c/d/c$b$a;
+0000c  3070 23ab 0032           invoke-direct  # CALL Lb/b/c/d/c$b$a;-><init>(Lb/b/c/d/c$b;,Ljava/lang/Object;)V
+0000f  206e 0ab5 0021           invoke-virtual  # CALL Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+00012  000e                     return-void

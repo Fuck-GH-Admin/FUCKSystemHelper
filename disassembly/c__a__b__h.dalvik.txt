@@ -1,0 +1,30 @@
+### Lc/a/b/h;-><init>(Lc/a/b/f;)V  [access=0x10000, regs=2, ins=2, outs=1, code_off=0xfa9c8]
+00000  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  000e                     return-void
+
+### Lc/a/b/h;->a(Lc/a/b/d;,Lc/a/b/d;)I  [access=0x1, regs=4, ins=3, outs=0, code_off=0xfa958]
+00000  3152 1af5                iget  # FIELD Lc/a/b/d;->b:I
+00002  2052 1af5                iget  # FIELD Lc/a/b/d;->b:I
+00004  01b1                     op_b1
+00005  0139 0017                if-nez
+00007  2055 1af7                iget-boolean  # FIELD Lc/a/b/d;->d:Z
+00009  0038 0008                if-eqz
+0000b  3055 1af7                iget-boolean  # FIELD Lc/a/b/d;->d:Z
+0000d  0038 0004                if-eqz
+0000f  0112                     const/4
+00010  010f                     return
+00011  2255 1af7                iget-boolean  # FIELD Lc/a/b/d;->d:Z
+00013  0238 0004                if-eqz
+00015  f112                     const/4
+00016  010f                     return
+00017  3255 1af7                iget-boolean  # FIELD Lc/a/b/d;->d:Z
+00019  0238 0003                if-eqz
+0001b  1112                     const/4
+0001c  010f                     return
+
+### Lc/a/b/h;->compare(Ljava/lang/Object;,Ljava/lang/Object;)I  [access=0x1001, regs=3, ins=3, outs=3, code_off=0xfa9a4]
+00000  011f 0594                check-cast  # TYPE Lc/a/b/d;
+00002  021f 0594                check-cast  # TYPE Lc/a/b/d;
+00004  306e 2824 0210           invoke-virtual  # CALL Lc/a/b/h;->a(Lc/a/b/d;,Lc/a/b/d;)I
+00007  000a                     move-result
+00008  000f                     return

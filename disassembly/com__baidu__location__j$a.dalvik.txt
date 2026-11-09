@@ -1,0 +1,33 @@
+### Lcom/baidu/location/j$a;-><init>()V  [access=0x10001, regs=1, ins=1, outs=1, code_off=0x1060e8]
+00000  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  000e                     return-void
+
+### Lcom/baidu/location/j$a;->createFromParcel(Landroid/os/Parcel;)Lcom/baidu/location/j;  [access=0x1, regs=9, ins=2, outs=7, code_off=0x106050]
+00000  106e 0ae8 0008           invoke-virtual  # CALL Landroid/os/Parcel;->readString()Ljava/lang/String;
+00003  010c                     move-result-object
+00004  106e 0ae8 0008           invoke-virtual  # CALL Landroid/os/Parcel;->readString()Ljava/lang/String;
+00007  020c                     move-result-object
+00008  106e 0ae2 0008           invoke-virtual  # CALL Landroid/os/Parcel;->readDouble()D
+0000b  030b                     move-result-wide
+0000c  106e 0ae8 0008           invoke-virtual  # CALL Landroid/os/Parcel;->readString()Ljava/lang/String;
+0000f  050c                     move-result-object
+00010  106e 0ae8 0008           invoke-virtual  # CALL Landroid/os/Parcel;->readString()Ljava/lang/String;
+00013  060c                     move-result-object
+00014  0722 060d                new-instance  # TYPE Lcom/baidu/location/j;
+00016  7007                     op_07
+00017  0776 2af6 0000           invoke-direct/range  # CALL Lcom/baidu/location/j;-><init>(Ljava/lang/String;,Ljava/lang/String;,D,Ljava/lang/String;,Ljava/lang/String;)V
+0001a  0711                     return-object
+
+### Lcom/baidu/location/j$a;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;  [access=0x1041, regs=2, ins=2, outs=2, code_off=0x1060b0]
+00000  206e 2af1 0010           invoke-virtual  # CALL Lcom/baidu/location/j$a;->createFromParcel(Landroid/os/Parcel;)Lcom/baidu/location/j;
+00003  000c                     move-result-object
+00004  0011                     return-object
+
+### Lcom/baidu/location/j$a;->newArray(I)[Lcom/baidu/location/j;  [access=0x1, regs=2, ins=2, outs=0, code_off=0x106098]
+00000  1023 0757                new-array  # TYPE [Lcom/baidu/location/j;
+00002  0011                     return-object
+
+### Lcom/baidu/location/j$a;->newArray(I)[Ljava/lang/Object;  [access=0x1041, regs=2, ins=2, outs=2, code_off=0x1060cc]
+00000  206e 2af3 0010           invoke-virtual  # CALL Lcom/baidu/location/j$a;->newArray(I)[Lcom/baidu/location/j;
+00003  000c                     move-result-object
+00004  0011                     return-object

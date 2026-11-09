@@ -1,0 +1,59 @@
+### Lc/a/b/e/a/h;-><init>(I)V  [access=0x10000, regs=2, ins=2, outs=1, code_off=0xf86e0]
+00000  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  0159 1b21                iput  # FIELD Lc/a/b/e/a/h;->a:I
+00005  000e                     return-void
+
+### Lc/a/b/e/a/h;->a(I)I  [access=0x1, regs=2, ins=2, outs=0, code_off=0xf8660]
+00000  0052 1b21                iget  # FIELD Lc/a/b/e/a/h;->a:I
+00002  01b4                     op_b4
+00003  10b1                     op_b1
+00004  000f                     return
+
+### Lc/a/b/e/a/h;->a([B,I,I)V  [access=0x1, regs=6, ins=4, outs=2, code_off=0xf86fc]
+00000  0339 0003                if-nez
+00002  000e                     return-void
+00003  0290 0504                int-add
+00005  3021                     array-length
+00006  0236 0010                if-gt
+00008  52d5 00ff                op_d5
+0000a  228d                     op_8d
+0000b  0012                     const/4
+0000c  5035 0009                if-ge
+0000e  0190 0400                int-add
+00010  024f 0103                aput-byte
+00012  00d8 0100                op_d8
+00014  f828                     goto
+00015  000e                     return-void
+00016  0222 0703                new-instance  # TYPE Ljavax/crypto/ShortBufferException;
+00018  031a 04c7                const-string  # STR "Buffer too small to hold padding"
+0001a  2070 2ed5 0032           invoke-direct  # CALL Ljavax/crypto/ShortBufferException;-><init>(Ljava/lang/String;)V
+0001d  0227                     throw
+
+### Lc/a/b/e/a/h;->b([B,I,I)I  [access=0x1, regs=9, ins=4, outs=0, code_off=0xf867c]
+00000  0012                     const/4
+00001  0638 0027                if-eqz
+00003  0839 0003                if-nez
+00005  2328                     goto
+00006  78b0                     op_b0
+00007  01d8 ff08                op_d8
+00009  0148 0106                aget-byte
+0000b  12d5 00ff                op_d5
+0000d  f312                     const/4
+0000e  1412                     const/4
+0000f  4234 0018                if-lt
+00011  5552 1b21                iget  # FIELD Lc/a/b/e/a/h;->a:I
+00013  5237 0003                if-le
+00015  1228                     goto
+00016  28b1                     op_b1
+00017  7835 0003                if-ge
+00019  030f                     return
+0001a  2035 000c                if-ge
+0001c  0590 0008                int-add
+0001e  0548 0506                aget-byte
+00020  1532 0003                if-eq
+00022  030f                     return
+00023  00d8 0100                op_d8
+00025  f528                     goto
+00026  080f                     return
+00027  030f                     return
+00028  000f                     return

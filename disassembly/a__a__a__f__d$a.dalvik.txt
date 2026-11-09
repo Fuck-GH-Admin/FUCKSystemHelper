@@ -1,0 +1,101 @@
+### La/a/a/f/d$a;-><init>(La/a/a/f/d;,[Ljava/lang/String;)V  [access=0x10001, regs=3, ins=3, outs=1, code_off=0x691e0]
+00000  015b 02ea                iput-object  # FIELD La/a/a/f/d$a;->b:La/a/a/f/d;
+00002  025b 02e9                iput-object  # FIELD La/a/a/f/d$a;->a:[Ljava/lang/String;
+00004  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00007  000e                     return-void
+
+### La/a/a/f/d$a;->a()Lcom/baidu/location/c;  [access=0x1, regs=12, ins=1, outs=6, code_off=0x69014]
+00000  0022 05fc                new-instance  # TYPE Lcom/baidu/location/c;
+00002  1070 29f6 0000           invoke-direct  # CALL Lcom/baidu/location/c;-><init>()V
+00005  b154 02e9                iget-object  # FIELD La/a/a/f/d$a;->a:[Ljava/lang/String;
+00007  1121                     array-length
+00008  013d 0090                if-lez
+0000a  b054 02ea                iget-object  # FIELD La/a/a/f/d$a;->b:La/a/a/f/d;
+0000c  1071 045d 0000           invoke-static  # CALL La/a/a/f/d;->a(La/a/a/f/d;)La/a/a/f/c;
+0000f  000c                     move-result-object
+00010  106e 0439 0000           invoke-virtual  # CALL La/a/a/f/c;->k()[Ljava/lang/String;
+00013  000c                     move-result-object
+00014  0112                     const/4
+00015  0212                     const/4
+00016  1301                     op_01
+00017  2407                     op_07
+00018  0521                     array-length
+00019  5335 0018                if-ge
+0001b  0071 0474 0000           invoke-static  # CALL La/a/a/f/d;->q()Landroid/content/Context;
+0001e  040c                     move-result-object
+0001f  106e 0846 0004           invoke-virtual  # CALL Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+00022  040c                     move-result-object
+00023  0546 0300                aget-object
+00025  306e 08a9 0154           invoke-virtual  # CALL Landroid/content/pm/PackageManager;->resolveContentProvider(Ljava/lang/String;,I)Landroid/content/pm/ProviderInfo;
+00028  040c                     move-result-object
+00029  0228                     goto
+0002a  2407                     op_07
+0002b  0438 0003                if-eqz
+0002d  0428                     goto
+0002e  03d8 0103                op_d8
+00030  e828                     goto
+00031  0438 0031                if-eqz
+00033  0071 0474 0000           invoke-static  # CALL La/a/a/f/d;->q()Landroid/content/Context;
+00036  000c                     move-result-object
+00037  106e 0840 0000           invoke-virtual  # CALL Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+0003a  050c                     move-result-object
+0003b  4054 0512                iget-object  # FIELD Landroid/content/pm/ProviderInfo;->authority:Ljava/lang/String;
+0003d  1071 0463 0000           invoke-static  # CALL La/a/a/f/d;->b(Ljava/lang/String;)Landroid/net/Uri;
+00040  060c                     move-result-object
+00041  b754 02e9                iget-object  # FIELD La/a/a/f/d$a;->a:[Ljava/lang/String;
+00043  0812                     const/4
+00044  0912                     const/4
+00045  0a12                     const/4
+00046  0674 082e 0005           invoke-virtual/range  # CALL Landroid/content/ContentResolver;->query(Landroid/net/Uri;,[Ljava/lang/String;,Ljava/lang/String;,[Ljava/lang/String;,Ljava/lang/String;)Landroid/database/Cursor;
+00049  0b0c                     move-result-object
+0004a  1071 0479 000b           invoke-static  # CALL La/a/a/f/e;->a(Landroid/database/Cursor;)Lcom/baidu/location/c;
+0004d  020c                     move-result-object
+0004e  0b38 003a                if-eqz
+00050  0e28                     goto
+00051  000d                     op_0d
+00052  b207                     op_07
+00053  0228                     goto
+00054  000d                     op_0d
+00055  0238 0005                if-eqz
+00057  1072 0914 0002           invoke-interface  # CALL Landroid/database/Cursor;->close()V
+0005a  0027                     throw
+0005b  2b07                     op_07
+0005c  0b38 002c                if-eqz
+0005e  1072 0914 000b           invoke-interface  # CALL Landroid/database/Cursor;->close()V
+00061  2728                     goto
+00062  0022 00b2                new-instance  # TYPE La/a/a/f/e$a;
+00064  b154 02e9                iget-object  # FIELD La/a/a/f/d$a;->a:[Ljava/lang/String;
+00066  2070 0476 0010           invoke-direct  # CALL La/a/a/f/e$a;-><init>([Ljava/lang/String;)V
+00069  bb54 02ea                iget-object  # FIELD La/a/a/f/d$a;->b:La/a/a/f/d;
+0006b  1071 0462 000b           invoke-static  # CALL La/a/a/f/d;->b(La/a/a/f/d;)La/a/a/f/b;
+0006e  0b0c                     move-result-object
+0006f  206e 03ed 000b           invoke-virtual  # CALL La/a/a/f/b;->a(La/a/a/f/e$a;)Landroid/database/Cursor;
+00072  0b0c                     move-result-object
+00073  1071 0479 000b           invoke-static  # CALL La/a/a/f/e;->a(Landroid/database/Cursor;)Lcom/baidu/location/c;
+00076  020c                     move-result-object
+00077  0b38 0011                if-eqz
+00079  0e28                     goto
+0007a  000d                     op_0d
+0007b  b207                     op_07
+0007c  0228                     goto
+0007d  000d                     op_0d
+0007e  0238 0005                if-eqz
+00080  1072 0914 0002           invoke-interface  # CALL Landroid/database/Cursor;->close()V
+00083  0027                     throw
+00084  2b07                     op_07
+00085  0b38 0003                if-eqz
+00087  d728                     goto
+00088  2007                     op_07
+00089  0038 000f                if-eqz
+0008b  106e 2a48 0000           invoke-virtual  # CALL Lcom/baidu/location/c;->r()I
+0008e  0b0a                     move-result
+0008f  0113 0043                const/16
+00091  1b32 0007                if-eq
+00093  0b13 0042                const/16
+00095  206e 2a30 00b0           invoke-virtual  # CALL Lcom/baidu/location/c;->h(I)V
+00098  0011                     return-object
+
+### La/a/a/f/d$a;->call()Ljava/lang/Object;  [access=0x1041, regs=1, ins=1, outs=1, code_off=0x691c4]
+00000  106e 044c 0000           invoke-virtual  # CALL La/a/a/f/d$a;->a()Lcom/baidu/location/c;
+00003  000c                     move-result-object
+00004  0011                     return-object

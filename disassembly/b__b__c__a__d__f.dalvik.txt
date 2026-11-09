@@ -1,0 +1,160 @@
+### Lb/b/c/a/d/f;->a(Landroid/content/Context;,I,Landroid/util/TypedValue;,I,Lb/b/c/a/d/f$a;)Landroid/graphics/Typeface;  [access=0x9, regs=12, ins=5, outs=7, code_off=0xb2178]
+00000  106e 084f 0007           invoke-virtual  # CALL Landroid/content/Context;->isRestricted()Z
+00003  000a                     move-result
+00004  0038 0004                if-eqz
+00006  0712                     const/4
+00007  0711                     return-object
+00008  0512                     const/4
+00009  1612                     const/4
+0000a  7007                     op_07
+0000b  8101                     op_01
+0000c  9207                     op_07
+0000d  a301                     op_01
+0000e  b407                     op_07
+0000f  0777 2305 0000           invoke-static/range  # CALL Lb/b/c/a/d/f;->a(Landroid/content/Context;,I,Landroid/util/TypedValue;,I,Lb/b/c/a/d/f$a;,Landroid/os/Handler;,Z)Landroid/graphics/Typeface;
+00012  070c                     move-result-object
+00013  0711                     return-object
+
+### Lb/b/c/a/d/f;->a(Landroid/content/Context;,I,Landroid/util/TypedValue;,I,Lb/b/c/a/d/f$a;,Landroid/os/Handler;,Z)Landroid/graphics/Typeface;  [access=0xa, regs=15, ins=7, outs=8, code_off=0xb2364]
+00000  106e 0848 0008           invoke-virtual  # CALL Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+00003  010c                     move-result-object
+00004  1012                     const/4
+00005  406e 08e4 0a91           invoke-virtual  # CALL Landroid/content/res/Resources;->getValue(I,Landroid/util/TypedValue;,Z)V
+00008  8007                     op_07
+00009  a207                     op_07
+0000a  9301                     op_01
+0000b  b401                     op_01
+0000c  c507                     op_07
+0000d  d607                     op_07
+0000e  e701                     op_01
+0000f  0877 2306 0000           invoke-static/range  # CALL Lb/b/c/a/d/f;->a(Landroid/content/Context;,Landroid/content/res/Resources;,Landroid/util/TypedValue;,I,I,Lb/b/c/a/d/f$a;,Landroid/os/Handler;,Z)Landroid/graphics/Typeface;
+00012  080c                     move-result-object
+00013  0839 0025                if-nez
+00015  0c38 0003                if-eqz
+00017  2128                     goto
+00018  0822 0189                new-instance  # TYPE Landroid/content/res/Resources$NotFoundException;
+0001a  0a22 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0001c  1070 2d35 000a           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0001f  0b1a 07c4                const-string  # STR "Font resource ID #0x"
+00021  206e 2d3f 00ba           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00024  1071 2cac 0009           invoke-static  # CALL Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+00027  090c                     move-result-object
+00028  206e 2d3f 009a           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0002b  091a 0037                const-string  # STR " could not be retrieved."
+0002d  206e 2d3f 009a           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00030  106e 2d44 000a           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00033  090c                     move-result-object
+00034  2070 08b9 0098           invoke-direct  # CALL Landroid/content/res/Resources$NotFoundException;-><init>(Ljava/lang/String;)V
+00037  0827                     throw
+00038  0811                     return-object
+
+### Lb/b/c/a/d/f;->a(Landroid/content/Context;,Landroid/content/res/Resources;,Landroid/util/TypedValue;,I,I,Lb/b/c/a/d/f$a;,Landroid/os/Handler;,Z)Landroid/graphics/Typeface;  [access=0xa, regs=23, ins=8, outs=8, code_off=0xb21b0]
+00000  0008 0010                op_08
+00002  0108 0011                op_08
+00004  0402 0012                op_02
+00006  0502 0013                op_02
+00008  0908 0014                op_08
+0000a  0a08 0015                op_08
+0000c  0b1a 1398                const-string  # STR "ResourcesCompat"
+0000e  1254 1252                iget-object  # FIELD Landroid/util/TypedValue;->string:Ljava/lang/CharSequence;
+00010  0238 008a                if-eqz
+00012  1072 2c6b 0002           invoke-interface  # CALL Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+00015  0c0c                     move-result-object
+00016  011a 244b                const-string  # STR "res/"
+00018  206e 2d18 001c           invoke-virtual  # CALL Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+0001b  010a                     move-result
+0001c  0d12                     const/4
+0001d  de12                     const/4
+0001e  0139 0008                if-nez
+00020  0938 0005                if-eqz
+00022  306e 2301 0ae9           invoke-virtual  # CALL Lb/b/c/a/d/f$a;->a(I,Landroid/os/Handler;)V
+00025  0d11                     return-object
+00026  3071 232e 0540           invoke-static  # CALL Lb/b/c/b/c;->b(Landroid/content/res/Resources;,I,I)Landroid/graphics/Typeface;
+00029  010c                     move-result-object
+0002a  0138 0008                if-eqz
+0002c  0938 0005                if-eqz
+0002e  306e 2303 0a19           invoke-virtual  # CALL Lb/b/c/a/d/f$a;->a(Landroid/graphics/Typeface;,Landroid/os/Handler;)V
+00031  0111                     return-object
+00032  106e 2d1c 000c           invoke-virtual  # CALL Ljava/lang/String;->toLowerCase()Ljava/lang/String;
+00035  010c                     move-result-object
+00036  021a 020a                const-string  # STR ".xml"
+00038  206e 2d02 0021           invoke-virtual  # CALL Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+0003b  010a                     move-result
+0003c  0138 0029                if-eqz
+0003e  206e 08e7 0040           invoke-virtual  # CALL Landroid/content/res/Resources;->getXml(I)Landroid/content/res/XmlResourceParser;
+00041  010c                     move-result-object
+00042  2071 22e9 0001           invoke-static  # CALL Lb/b/c/a/d/c;->a(Lorg/xmlpull/v1/XmlPullParser;,Landroid/content/res/Resources;)Lb/b/c/a/d/c$a;
+00045  020c                     move-result-object
+00046  0239 000d                if-nez
+00048  001a 07ae                const-string  # STR "Failed to find font-family tag"
+0004a  2071 1c5b 000b           invoke-static  # CALL Landroid/util/Log;->e(Ljava/lang/String;,Ljava/lang/String;)I
+0004d  0938 0005                if-eqz
+0004f  306e 2301 0ae9           invoke-virtual  # CALL Lb/b/c/a/d/f$a;->a(I,Landroid/os/Handler;)V
+00052  0d11                     return-object
+00053  f107                     op_07
+00054  0308 0010                op_08
+00056  0402 0012                op_02
+00058  0502 0013                op_02
+0005a  0608 0014                op_08
+0005c  0708 0015                op_08
+0005e  0802 0016                op_02
+00060  0877 232c 0001           invoke-static/range  # CALL Lb/b/c/b/c;->a(Landroid/content/Context;,Lb/b/c/a/d/c$a;,Landroid/content/res/Resources;,I,I,Lb/b/c/a/d/f$a;,Landroid/os/Handler;,Z)Landroid/graphics/Typeface;
+00063  000c                     move-result-object
+00064  0011                     return-object
+00065  f107                     op_07
+00066  5571 232a c40f           invoke-static  # CALL Lb/b/c/b/c;->a(Landroid/content/Context;,Landroid/content/res/Resources;,I,Ljava/lang/String;,I)Landroid/graphics/Typeface;
+00069  000c                     move-result-object
+0006a  0938 000b                if-eqz
+0006c  0038 0006                if-eqz
+0006e  306e 2303 0a09           invoke-virtual  # CALL Lb/b/c/a/d/f$a;->a(Landroid/graphics/Typeface;,Landroid/os/Handler;)V
+00071  0428                     goto
+00072  306e 2301 0ae9           invoke-virtual  # CALL Lb/b/c/a/d/f$a;->a(I,Landroid/os/Handler;)V
+00075  0011                     return-object
+00076  000d                     op_0d
+00077  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00079  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0007c  021a 07ba                const-string  # STR "Failed to read xml resource "
+0007e  0928                     goto
+0007f  000d                     op_0d
+00080  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00082  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00085  021a 07b9                const-string  # STR "Failed to parse xml resource "
+00087  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0008a  206e 2d3f 00c1           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0008d  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00090  010c                     move-result-object
+00091  3071 1c5c 001b           invoke-static  # CALL Landroid/util/Log;->e(Ljava/lang/String;,Ljava/lang/String;,Ljava/lang/Throwable;)I
+00094  0938 0005                if-eqz
+00096  306e 2301 0ae9           invoke-virtual  # CALL Lb/b/c/a/d/f$a;->a(I,Landroid/os/Handler;)V
+00099  0d11                     return-object
+0009a  0222 0189                new-instance  # TYPE Landroid/content/res/Resources$NotFoundException;
+0009c  0322 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0009e  1070 2d35 0003           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+000a1  051a 1396                const-string  # STR "Resource \""
+000a3  206e 2d3f 0053           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000a6  206e 08da 0040           invoke-virtual  # CALL Landroid/content/res/Resources;->getResourceName(I)Ljava/lang/String;
+000a9  000c                     move-result-object
+000aa  206e 2d3f 0003           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000ad  001a 00a8                const-string  # STR "\" ("
+000af  206e 2d3f 0003           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000b2  0177 2cac 0012           invoke-static/range  # CALL Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+000b5  000c                     move-result-object
+000b6  206e 2d3f 0003           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000b9  001a 01b3                const-string  # STR ") is not a Font: "
+000bb  206e 2d3f 0003           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000be  206e 2d3e 0013           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+000c1  106e 2d44 0003           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+000c4  000c                     move-result-object
+000c5  2070 08b9 0002           invoke-direct  # CALL Landroid/content/res/Resources$NotFoundException;-><init>(Ljava/lang/String;)V
+000c8  0227                     throw
+
+### Lb/b/c/a/d/f;->a(Landroid/content/res/Resources;,I,Landroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;  [access=0x9, regs=5, ins=3, outs=3, code_off=0xb23e8]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0113 0015                const/16
+00004  1034 0007                if-lt
+00006  306e 08cd 0432           invoke-virtual  # CALL Landroid/content/res/Resources;->getDrawable(I,Landroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
+00009  020c                     move-result-object
+0000a  0211                     return-object
+0000b  206e 08cc 0032           invoke-virtual  # CALL Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+0000e  020c                     move-result-object
+0000f  0211                     return-object

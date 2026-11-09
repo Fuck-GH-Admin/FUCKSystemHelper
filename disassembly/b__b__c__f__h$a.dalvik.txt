@@ -1,0 +1,56 @@
+### Lb/b/c/f/h$a;-><init>(Lb/b/c/f/h;,I)V  [access=0x10000, regs=4, ins=3, outs=1, code_off=0xb9d88]
+00000  125b 13c6                iput-object  # FIELD Lb/b/c/f/h$a;->f:Lb/b/c/f/h;
+00002  1070 2ce0 0001           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00005  0012                     const/4
+00006  105c 13c5                iput-boolean  # FIELD Lb/b/c/f/h$a;->e:Z
+00008  1359 13c2                iput  # FIELD Lb/b/c/f/h$a;->b:I
+0000a  106e 247e 0002           invoke-virtual  # CALL Lb/b/c/f/h;->c()I
+0000d  020a                     move-result
+0000e  1259 13c3                iput  # FIELD Lb/b/c/f/h$a;->c:I
+00010  000e                     return-void
+
+### Lb/b/c/f/h$a;->hasNext()Z  [access=0x1, regs=2, ins=1, outs=0, code_off=0xb9d14]
+00000  1052 13c4                iget  # FIELD Lb/b/c/f/h$a;->d:I
+00002  1152 13c3                iget  # FIELD Lb/b/c/f/h$a;->c:I
+00004  1035 0004                if-ge
+00006  1112                     const/4
+00007  0228                     goto
+00008  0112                     const/4
+00009  010f                     return
+
+### Lb/b/c/f/h$a;->next()Ljava/lang/Object;  [access=0x1, regs=4, ins=1, outs=3, code_off=0xb9d38]
+00000  106e 2433 0003           invoke-virtual  # CALL Lb/b/c/f/h$a;->hasNext()Z
+00003  000a                     move-result
+00004  0038 0015                if-eqz
+00006  3054 13c6                iget-object  # FIELD Lb/b/c/f/h$a;->f:Lb/b/c/f/h;
+00008  3152 13c4                iget  # FIELD Lb/b/c/f/h$a;->d:I
+0000a  3252 13c2                iget  # FIELD Lb/b/c/f/h$a;->b:I
+0000c  306e 2472 0210           invoke-virtual  # CALL Lb/b/c/f/h;->a(I,I)Ljava/lang/Object;
+0000f  000c                     move-result-object
+00010  3152 13c4                iget  # FIELD Lb/b/c/f/h$a;->d:I
+00012  1212                     const/4
+00013  21b0                     op_b0
+00014  3159 13c4                iput  # FIELD Lb/b/c/f/h$a;->d:I
+00016  325c 13c5                iput-boolean  # FIELD Lb/b/c/f/h$a;->e:Z
+00018  0011                     return-object
+00019  0322 06de                new-instance  # TYPE Ljava/util/NoSuchElementException;
+0001b  1070 2e70 0003           invoke-direct  # CALL Ljava/util/NoSuchElementException;-><init>()V
+0001e  0327                     throw
+
+### Lb/b/c/f/h$a;->remove()V  [access=0x1, regs=3, ins=1, outs=2, code_off=0xb9dbc]
+00000  2055 13c5                iget-boolean  # FIELD Lb/b/c/f/h$a;->e:Z
+00002  0038 0017                if-eqz
+00004  2052 13c4                iget  # FIELD Lb/b/c/f/h$a;->d:I
+00006  00d8 ff00                op_d8
+00008  2059 13c4                iput  # FIELD Lb/b/c/f/h$a;->d:I
+0000a  2152 13c3                iget  # FIELD Lb/b/c/f/h$a;->c:I
+0000c  01d8 ff01                op_d8
+0000e  2159 13c3                iput  # FIELD Lb/b/c/f/h$a;->c:I
+00010  0112                     const/4
+00011  215c 13c5                iput-boolean  # FIELD Lb/b/c/f/h$a;->e:Z
+00013  2254 13c6                iget-object  # FIELD Lb/b/c/f/h$a;->f:Lb/b/c/f/h;
+00015  206e 2475 0002           invoke-virtual  # CALL Lb/b/c/f/h;->a(I)V
+00018  000e                     return-void
+00019  0222 066a                new-instance  # TYPE Ljava/lang/IllegalStateException;
+0001b  1070 2ca2 0002           invoke-direct  # CALL Ljava/lang/IllegalStateException;-><init>()V
+0001e  0227                     throw

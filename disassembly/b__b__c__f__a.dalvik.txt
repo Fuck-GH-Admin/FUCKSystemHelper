@@ -1,0 +1,66 @@
+### Lb/b/c/f/a;-><init>()V  [access=0x10001, regs=1, ins=1, outs=1, code_off=0xb855c]
+00000  1070 2487 0000           invoke-direct  # CALL Lb/b/c/f/k;-><init>()V
+00003  000e                     return-void
+
+### Lb/b/c/f/a;-><init>(I)V  [access=0x10001, regs=2, ins=2, outs=2, code_off=0xb8574]
+00000  2070 2488 0010           invoke-direct  # CALL Lb/b/c/f/k;-><init>(I)V
+00003  000e                     return-void
+
+### Lb/b/c/f/a;->b()Lb/b/c/f/h;  [access=0x2, regs=2, ins=1, outs=2, code_off=0xb84a8]
+00000  1054 13a4                iget-object  # FIELD Lb/b/c/f/a;->i:Lb/b/c/f/h;
+00002  0039 0009                if-nez
+00004  0022 0508                new-instance  # TYPE Lb/b/c/f/a$a;
+00006  2070 23d4 0010           invoke-direct  # CALL Lb/b/c/f/a$a;-><init>(Lb/b/c/f/a;)V
+00009  105b 13a4                iput-object  # FIELD Lb/b/c/f/a;->i:Lb/b/c/f/h;
+0000b  1154 13a4                iget-object  # FIELD Lb/b/c/f/a;->i:Lb/b/c/f/h;
+0000d  0111                     return-object
+
+### Lb/b/c/f/a;->a(Ljava/util/Collection;)Z  [access=0x1, regs=2, ins=2, outs=2, code_off=0xb84d4]
+00000  2071 247f 0010           invoke-static  # CALL Lb/b/c/f/h;->c(Ljava/util/Map;,Ljava/util/Collection;)Z
+00003  000a                     move-result
+00004  000f                     return
+
+### Lb/b/c/f/a;->entrySet()Ljava/util/Set;  [access=0x1, regs=1, ins=1, outs=1, code_off=0xb8514]
+00000  1070 23e1 0000           invoke-direct  # CALL Lb/b/c/f/a;->b()Lb/b/c/f/h;
+00003  000c                     move-result-object
+00004  106e 2480 0000           invoke-virtual  # CALL Lb/b/c/f/h;->d()Ljava/util/Set;
+00007  000c                     move-result-object
+00008  0011                     return-object
+
+### Lb/b/c/f/a;->keySet()Ljava/util/Set;  [access=0x1, regs=1, ins=1, outs=1, code_off=0xb8538]
+00000  1070 23e1 0000           invoke-direct  # CALL Lb/b/c/f/a;->b()Lb/b/c/f/h;
+00003  000c                     move-result-object
+00004  106e 2481 0000           invoke-virtual  # CALL Lb/b/c/f/h;->e()Ljava/util/Set;
+00007  000c                     move-result-object
+00008  0011                     return-object
+
+### Lb/b/c/f/a;->putAll(Ljava/util/Map;)V  [access=0x1, regs=4, ins=2, outs=3, code_off=0xb858c]
+00000  2052 13d3                iget  # FIELD Lb/b/c/f/k;->d:I
+00002  1072 2e6e 0003           invoke-interface  # CALL Ljava/util/Map;->size()I
+00005  010a                     move-result
+00006  10b0                     op_b0
+00007  206e 248e 0002           invoke-virtual  # CALL Lb/b/c/f/k;->a(I)V
+0000a  1072 2e68 0003           invoke-interface  # CALL Ljava/util/Map;->entrySet()Ljava/util/Set;
+0000d  030c                     move-result-object
+0000e  1072 2e7c 0003           invoke-interface  # CALL Ljava/util/Set;->iterator()Ljava/util/Iterator;
+00011  030c                     move-result-object
+00012  1072 2e43 0003           invoke-interface  # CALL Ljava/util/Iterator;->hasNext()Z
+00015  000a                     move-result
+00016  0038 0014                if-eqz
+00018  1072 2e44 0003           invoke-interface  # CALL Ljava/util/Iterator;->next()Ljava/lang/Object;
+0001b  000c                     move-result-object
+0001c  001f 06dc                check-cast  # TYPE Ljava/util/Map$Entry;
+0001e  1072 2e64 0000           invoke-interface  # CALL Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+00021  010c                     move-result-object
+00022  1072 2e65 0000           invoke-interface  # CALL Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+00025  000c                     move-result-object
+00026  306e 249c 0012           invoke-virtual  # CALL Lb/b/c/f/k;->put(Ljava/lang/Object;,Ljava/lang/Object;)Ljava/lang/Object;
+00029  e928                     goto
+0002a  000e                     return-void
+
+### Lb/b/c/f/a;->values()Ljava/util/Collection;  [access=0x1, regs=1, ins=1, outs=1, code_off=0xb84f0]
+00000  1070 23e1 0000           invoke-direct  # CALL Lb/b/c/f/a;->b()Lb/b/c/f/h;
+00003  000c                     move-result-object
+00004  106e 2482 0000           invoke-virtual  # CALL Lb/b/c/f/h;->f()Ljava/util/Collection;
+00007  000c                     move-result-object
+00008  0011                     return-object

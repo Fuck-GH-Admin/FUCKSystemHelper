@@ -1,0 +1,11 @@
+### Lc/a/b/g/c;->a([B)[B  [access=0x9, regs=2, ins=1, outs=2, code_off=0xfa914]
+00000  001a 13c9                const-string  # STR "SHA-1"
+00002  1071 2dc7 0000           invoke-static  # CALL Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
+00005  000c                     move-result-object
+00006  206e 2dc5 0010           invoke-virtual  # CALL Ljava/security/MessageDigest;->digest([B)[B
+00009  010c                     move-result-object
+0000a  0111                     return-object
+0000b  010d                     op_0d
+0000c  0022 0680                new-instance  # TYPE Ljava/lang/RuntimeException;
+0000e  2070 2cf0 0010           invoke-direct  # CALL Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+00011  0027                     throw

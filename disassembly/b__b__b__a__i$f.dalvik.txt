@@ -1,0 +1,51 @@
+### Lb/b/b/a/i$f;-><init>()V  [access=0x10001, regs=2, ins=1, outs=2, code_off=0xa2dd4]
+00000  0012                     const/4
+00001  2070 2268 0001           invoke-direct  # CALL Lb/b/b/a/i$e;-><init>(Lb/b/b/a/i$a;)V
+00004  105b 1319                iput-object  # FIELD Lb/b/b/a/i$f;->a:[Lb/b/c/b/b$b;
+00006  000e                     return-void
+
+### Lb/b/b/a/i$f;-><init>(Lb/b/b/a/i$f;)V  [access=0x10001, regs=3, ins=2, outs=2, code_off=0xa2df4]
+00000  0012                     const/4
+00001  2070 2268 0001           invoke-direct  # CALL Lb/b/b/a/i$e;-><init>(Lb/b/b/a/i$a;)V
+00004  105b 1319                iput-object  # FIELD Lb/b/b/a/i$f;->a:[Lb/b/c/b/b$b;
+00006  2054 131a                iget-object  # FIELD Lb/b/b/a/i$f;->b:Ljava/lang/String;
+00008  105b 131a                iput-object  # FIELD Lb/b/b/a/i$f;->b:Ljava/lang/String;
+0000a  2052 131b                iget  # FIELD Lb/b/b/a/i$f;->c:I
+0000c  1059 131b                iput  # FIELD Lb/b/b/a/i$f;->c:I
+0000e  2254 1319                iget-object  # FIELD Lb/b/b/a/i$f;->a:[Lb/b/c/b/b$b;
+00010  1071 2325 0002           invoke-static  # CALL Lb/b/c/b/b;->a([Lb/b/c/b/b$b;)[Lb/b/c/b/b$b;
+00013  020c                     move-result-object
+00014  125b 1319                iput-object  # FIELD Lb/b/b/a/i$f;->a:[Lb/b/c/b/b$b;
+00016  000e                     return-void
+
+### Lb/b/b/a/i$f;->a(Landroid/graphics/Path;)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0xa2e70]
+00000  106e 0985 0001           invoke-virtual  # CALL Landroid/graphics/Path;->reset()V
+00003  0054 1319                iget-object  # FIELD Lb/b/b/a/i$f;->a:[Lb/b/c/b/b$b;
+00005  0038 0005                if-eqz
+00007  2071 231e 0010           invoke-static  # CALL Lb/b/c/b/b$b;->a([Lb/b/c/b/b$b;,Landroid/graphics/Path;)V
+0000a  000e                     return-void
+
+### Lb/b/b/a/i$f;->b()Z  [access=0x1, regs=1, ins=1, outs=0, code_off=0xa2da8]
+00000  0012                     const/4
+00001  000f                     return
+
+### Lb/b/b/a/i$f;->getPathData()[Lb/b/c/b/b$b;  [access=0x1, regs=1, ins=1, outs=0, code_off=0xa2d90]
+00000  0054 1319                iget-object  # FIELD Lb/b/b/a/i$f;->a:[Lb/b/c/b/b$b;
+00002  0011                     return-object
+
+### Lb/b/b/a/i$f;->getPathName()Ljava/lang/String;  [access=0x1, regs=1, ins=1, outs=0, code_off=0xa2dbc]
+00000  0054 131a                iget-object  # FIELD Lb/b/b/a/i$f;->b:Ljava/lang/String;
+00002  0011                     return-object
+
+### Lb/b/b/a/i$f;->setPathData([Lb/b/c/b/b$b;)V  [access=0x1, regs=3, ins=2, outs=2, code_off=0xa2e34]
+00000  1054 1319                iget-object  # FIELD Lb/b/b/a/i$f;->a:[Lb/b/c/b/b$b;
+00002  2071 2322 0020           invoke-static  # CALL Lb/b/c/b/b;->a([Lb/b/c/b/b$b;,[Lb/b/c/b/b$b;)Z
+00005  000a                     move-result
+00006  0039 0009                if-nez
+00008  1071 2325 0002           invoke-static  # CALL Lb/b/c/b/b;->a([Lb/b/c/b/b$b;)[Lb/b/c/b/b$b;
+0000b  020c                     move-result-object
+0000c  125b 1319                iput-object  # FIELD Lb/b/b/a/i$f;->a:[Lb/b/c/b/b$b;
+0000e  0628                     goto
+0000f  1154 1319                iget-object  # FIELD Lb/b/b/a/i$f;->a:[Lb/b/c/b/b$b;
+00011  2071 2327 0021           invoke-static  # CALL Lb/b/c/b/b;->b([Lb/b/c/b/b$b;,[Lb/b/c/b/b$b;)V
+00014  000e                     return-void

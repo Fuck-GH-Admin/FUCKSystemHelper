@@ -1,0 +1,90 @@
+### Lb/b/b/a/c$b;-><init>(Landroid/content/Context;,Lb/b/b/a/c$b;,Landroid/graphics/drawable/Drawable$Callback;,Landroid/content/res/Resources;)V  [access=0x10001, regs=7, ins=5, outs=3, code_off=0x9f430]
+00000  1070 09c7 0002           invoke-direct  # CALL Landroid/graphics/drawable/Drawable$ConstantState;-><init>()V
+00003  0438 007f                if-eqz
+00005  4352 12f0                iget  # FIELD Lb/b/b/a/c$b;->a:I
+00007  2359 12f0                iput  # FIELD Lb/b/b/a/c$b;->a:I
+00009  4354 12f1                iget-object  # FIELD Lb/b/b/a/c$b;->b:Lb/b/b/a/i;
+0000b  0012                     const/4
+0000c  0338 0031                if-eqz
+0000e  106e 22a6 0003           invoke-virtual  # CALL Lb/b/b/a/i;->getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
+00011  030c                     move-result-object
+00012  0638 0007                if-eqz
+00014  206e 09cb 0063           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable$ConstantState;->newDrawable(Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;
+00017  030c                     move-result-object
+00018  0528                     goto
+00019  106e 09ca 0003           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable$ConstantState;->newDrawable()Landroid/graphics/drawable/Drawable;
+0001c  030c                     move-result-object
+0001d  031f 04d2                check-cast  # TYPE Lb/b/b/a/i;
+0001f  235b 12f1                iput-object  # FIELD Lb/b/b/a/c$b;->b:Lb/b/b/a/i;
+00021  2354 12f1                iget-object  # FIELD Lb/b/b/a/c$b;->b:Lb/b/b/a/i;
+00023  106e 22b0 0003           invoke-virtual  # CALL Lb/b/b/a/i;->mutate()Landroid/graphics/drawable/Drawable;
+00026  031f 04d2                check-cast  # TYPE Lb/b/b/a/i;
+00028  235b 12f1                iput-object  # FIELD Lb/b/b/a/c$b;->b:Lb/b/b/a/i;
+0002a  206e 09f9 0053           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
+0002d  2354 12f1                iget-object  # FIELD Lb/b/b/a/c$b;->b:Lb/b/b/a/i;
+0002f  4554 12f1                iget-object  # FIELD Lb/b/b/a/c$b;->b:Lb/b/b/a/i;
+00031  106e 09d7 0005           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+00034  050c                     move-result-object
+00035  206e 09f8 0053           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
+00038  2354 12f1                iget-object  # FIELD Lb/b/b/a/c$b;->b:Lb/b/b/a/i;
+0003a  206e 229f 0003           invoke-virtual  # CALL Lb/b/b/a/i;->a(Z)V
+0003d  4354 12f3                iget-object  # FIELD Lb/b/b/a/c$b;->d:Ljava/util/ArrayList;
+0003f  0338 0043                if-eqz
+00041  106e 2df8 0003           invoke-virtual  # CALL Ljava/util/ArrayList;->size()I
+00044  030a                     move-result
+00045  0522 06c8                new-instance  # TYPE Ljava/util/ArrayList;
+00047  2070 2de8 0035           invoke-direct  # CALL Ljava/util/ArrayList;-><init>(I)V
+0004a  255b 12f3                iput-object  # FIELD Lb/b/b/a/c$b;->d:Ljava/util/ArrayList;
+0004c  0522 0509                new-instance  # TYPE Lb/b/c/f/a;
+0004e  2070 23df 0035           invoke-direct  # CALL Lb/b/c/f/a;-><init>(I)V
+00051  255b 12f4                iput-object  # FIELD Lb/b/b/a/c$b;->e:Lb/b/c/f/a;
+00053  3035 002c                if-ge
+00055  4554 12f3                iget-object  # FIELD Lb/b/b/a/c$b;->d:Ljava/util/ArrayList;
+00057  206e 2df0 0005           invoke-virtual  # CALL Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+0005a  050c                     move-result-object
+0005b  051f 0110                check-cast  # TYPE Landroid/animation/Animator;
+0005d  106e 06bc 0005           invoke-virtual  # CALL Landroid/animation/Animator;->clone()Landroid/animation/Animator;
+00060  060c                     move-result-object
+00061  4154 12f4                iget-object  # FIELD Lb/b/b/a/c$b;->e:Lb/b/c/f/a;
+00063  206e 2499 0051           invoke-virtual  # CALL Lb/b/c/f/k;->get(Ljava/lang/Object;)Ljava/lang/Object;
+00066  050c                     move-result-object
+00067  051f 0683                check-cast  # TYPE Ljava/lang/String;
+00069  2154 12f1                iget-object  # FIELD Lb/b/b/a/c$b;->b:Lb/b/b/a/i;
+0006b  206e 229c 0051           invoke-virtual  # CALL Lb/b/b/a/i;->a(Ljava/lang/String;)Ljava/lang/Object;
+0006e  010c                     move-result-object
+0006f  206e 06bf 0016           invoke-virtual  # CALL Landroid/animation/Animator;->setTarget(Ljava/lang/Object;)V
+00072  2154 12f3                iget-object  # FIELD Lb/b/b/a/c$b;->d:Ljava/util/ArrayList;
+00074  206e 2deb 0061           invoke-virtual  # CALL Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+00077  2154 12f4                iget-object  # FIELD Lb/b/b/a/c$b;->e:Lb/b/c/f/a;
+00079  306e 249c 0561           invoke-virtual  # CALL Lb/b/c/f/k;->put(Ljava/lang/Object;,Ljava/lang/Object;)Ljava/lang/Object;
+0007c  00d8 0100                op_d8
+0007e  d528                     goto
+0007f  106e 21d3 0002           invoke-virtual  # CALL Lb/b/b/a/c$b;->a()V
+00082  000e                     return-void
+
+### Lb/b/b/a/c$b;->a()V  [access=0x1, regs=2, ins=1, outs=2, code_off=0x9f548]
+00000  1054 12f2                iget-object  # FIELD Lb/b/b/a/c$b;->c:Landroid/animation/AnimatorSet;
+00002  0039 0009                if-nez
+00004  0022 0113                new-instance  # TYPE Landroid/animation/AnimatorSet;
+00006  1070 06c3 0000           invoke-direct  # CALL Landroid/animation/AnimatorSet;-><init>()V
+00009  105b 12f2                iput-object  # FIELD Lb/b/b/a/c$b;->c:Landroid/animation/AnimatorSet;
+0000b  1054 12f2                iget-object  # FIELD Lb/b/b/a/c$b;->c:Landroid/animation/AnimatorSet;
+0000d  1154 12f3                iget-object  # FIELD Lb/b/b/a/c$b;->d:Ljava/util/ArrayList;
+0000f  206e 06c9 0010           invoke-virtual  # CALL Landroid/animation/AnimatorSet;->playTogether(Ljava/util/Collection;)V
+00012  000e                     return-void
+
+### Lb/b/b/a/c$b;->getChangingConfigurations()I  [access=0x1, regs=1, ins=1, outs=0, code_off=0x9f418]
+00000  0052 12f0                iget  # FIELD Lb/b/b/a/c$b;->a:I
+00002  000f                     return
+
+### Lb/b/b/a/c$b;->newDrawable()Landroid/graphics/drawable/Drawable;  [access=0x1, regs=2, ins=1, outs=2, code_off=0x9f3d8]
+00000  0122 066a                new-instance  # TYPE Ljava/lang/IllegalStateException;
+00002  001a 1292                const-string  # STR "No constant state support for SDK < 24."
+00004  2070 2ca3 0001           invoke-direct  # CALL Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+00007  0127                     throw
+
+### Lb/b/b/a/c$b;->newDrawable(Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;  [access=0x1, regs=2, ins=2, outs=2, code_off=0x9f3f8]
+00000  0022 066a                new-instance  # TYPE Ljava/lang/IllegalStateException;
+00002  011a 1292                const-string  # STR "No constant state support for SDK < 24."
+00004  2070 2ca3 0010           invoke-direct  # CALL Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+00007  0027                     throw

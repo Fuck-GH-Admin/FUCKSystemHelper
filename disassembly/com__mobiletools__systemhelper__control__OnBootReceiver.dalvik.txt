@@ -1,0 +1,119 @@
+### Lcom/mobiletools/systemhelper/control/OnBootReceiver;-><clinit>()V  [access=0x10008, regs=0, ins=0, outs=0, code_off=0x10ced8]
+00000  000e                     return-void
+
+### Lcom/mobiletools/systemhelper/control/OnBootReceiver;-><init>()V  [access=0x10001, regs=1, ins=1, outs=1, code_off=0x10ceec]
+00000  1070 0826 0000           invoke-direct  # CALL Landroid/content/BroadcastReceiver;-><init>()V
+00003  000e                     return-void
+
+### Lcom/mobiletools/systemhelper/control/OnBootReceiver;->onReceive(Landroid/content/Context;,Landroid/content/Intent;)V  [access=0x1, regs=7, ins=3, outs=5, code_off=0x10cf04]
+00000  0569 1d13                sput-object  # FIELD Lcom/mobiletools/systemhelper/control/OnBootReceiver;->a:Landroid/content/Context;
+00002  0463 1bb2                sget-boolean  # FIELD Lc/d/a/b/d;->b:Z
+00004  0439 0013                if-nez
+00006  0412                     const/4
+00007  1071 2c67 0004           invoke-static  # CALL Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+0000a  040c                     move-result-object
+0000b  001a 2386                const-string  # STR "preference_enable_log"
+0000d  3071 2993 0405           invoke-static  # CALL Lc/d/a/b/l;->a(Landroid/content/Context;,Ljava/lang/String;,Ljava/lang/Boolean;)Ljava/lang/Boolean;
+00010  040c                     move-result-object
+00011  106e 2c65 0004           invoke-virtual  # CALL Ljava/lang/Boolean;->booleanValue()Z
+00014  040a                     move-result
+00015  046a 1bb1                sput-boolean  # FIELD Lc/d/a/b/d;->a:Z
+00017  0422 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00019  1070 2d35 0004           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0001c  001a 22ac                const-string  # STR "onReceive-->intent action: "
+0001e  206e 2d3f 0004           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00021  106e 086f 0006           invoke-virtual  # CALL Landroid/content/Intent;->getAction()Ljava/lang/String;
+00024  000c                     move-result-object
+00025  206e 2d3f 0004           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00028  106e 2d44 0004           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0002b  040c                     move-result-object
+0002c  001a 12d6                const-string  # STR "OnBootReceiver"
+0002e  2071 2987 0040           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+00031  1071 2922 0005           invoke-static  # CALL Lc/d/a/a/a;->e(Landroid/content/Context;)V
+00034  106e 086f 0006           invoke-virtual  # CALL Landroid/content/Intent;->getAction()Ljava/lang/String;
+00037  040c                     move-result-object
+00038  0438 0050                if-eqz
+0003a  061a 190f                const-string  # STR "android.intent.action.BOOT_COMPLETED"
+0003c  206e 2d03 0064           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+0003f  060a                     move-result
+00040  0639 000a                if-nez
+00042  061a 1912                const-string  # STR "android.intent.action.QUICKBOOT_POWERON"
+00044  206e 2d03 0064           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+00047  040a                     move-result
+00048  0438 0040                if-eqz
+0004a  041a 0030                const-string  # STR " boot delayed for 4 minutes-->"
+0004c  2071 2987 0040           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+0004f  0462 1d13                sget-object  # FIELD Lcom/mobiletools/systemhelper/control/OnBootReceiver;->a:Landroid/content/Context;
+00051  0017 a980 0003           const-wide/32
+00054  3071 2958 0104           invoke-static  # CALL Lc/d/a/b/a;->a(Landroid/content/Context;,J)V
+00057  0462 1d13                sget-object  # FIELD Lcom/mobiletools/systemhelper/control/OnBootReceiver;->a:Landroid/content/Context;
+00059  1071 29b0 0005           invoke-static  # CALL Lc/d/a/b/l;->j(Landroid/content/Context;)J
+0005c  000b                     move-result-wide
+0005d  3071 295a 0104           invoke-static  # CALL Lc/d/a/b/a;->b(Landroid/content/Context;,J)V
+00060  0462 1d13                sget-object  # FIELD Lcom/mobiletools/systemhelper/control/OnBootReceiver;->a:Landroid/content/Context;
+00062  1071 29aa 0005           invoke-static  # CALL Lc/d/a/b/l;->f(Landroid/content/Context;)J
+00065  000b                     move-result-wide
+00066  1071 29af 0005           invoke-static  # CALL Lc/d/a/b/l;->i(Landroid/content/Context;)J
+00069  020b                     move-result-wide
+0006a  5371 295d 2104           invoke-static  # CALL Lc/d/a/b/a;->c(Landroid/content/Context;,J,J)V
+0006d  0462 1d13                sget-object  # FIELD Lcom/mobiletools/systemhelper/control/OnBootReceiver;->a:Landroid/content/Context;
+0006f  1071 29a8 0005           invoke-static  # CALL Lc/d/a/b/l;->e(Landroid/content/Context;)J
+00072  000b                     move-result-wide
+00073  1071 29ac 0005           invoke-static  # CALL Lc/d/a/b/l;->g(Landroid/content/Context;)J
+00076  020b                     move-result-wide
+00077  5371 295b 2104           invoke-static  # CALL Lc/d/a/b/a;->b(Landroid/content/Context;,J,J)V
+0007a  0462 1d13                sget-object  # FIELD Lcom/mobiletools/systemhelper/control/OnBootReceiver;->a:Landroid/content/Context;
+0007c  1071 29a6 0005           invoke-static  # CALL Lc/d/a/b/l;->d(Landroid/content/Context;)J
+0007f  000b                     move-result-wide
+00080  1071 29a4 0005           invoke-static  # CALL Lc/d/a/b/l;->c(Landroid/content/Context;)J
+00083  050b                     move-result-wide
+00084  5671 2959 5104           invoke-static  # CALL Lc/d/a/b/a;->a(Landroid/content/Context;,J,J)V
+00087  000e                     return-void
+00088  041a 234e                const-string  # STR "phone"
+0008a  206e 084c 0045           invoke-virtual  # CALL Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+0008d  040c                     move-result-object
+0008e  041f 03f4                check-cast  # TYPE Landroid/telephony/TelephonyManager;
+00090  106e 1be9 0004           invoke-virtual  # CALL Landroid/telephony/TelephonyManager;->getSimState()I
+00093  040a                     move-result
+00094  0622 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00096  1070 2d35 0006           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00099  011a 13d7                const-string  # STR "SIM_STATE_CHANGED, state:"
+0009b  206e 2d3f 0016           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0009e  206e 2d3b 0046           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+000a1  106e 2d44 0006           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+000a4  040c                     move-result-object
+000a5  2071 2987 0040           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+000a8  0422 061c                new-instance  # TYPE Lcom/mobiletools/systemhelper/control/SIMStateReceiver;
+000aa  1070 2b9b 0004           invoke-direct  # CALL Lcom/mobiletools/systemhelper/control/SIMStateReceiver;-><init>()V
+000ad  0662 1d13                sget-object  # FIELD Lcom/mobiletools/systemhelper/control/OnBootReceiver;->a:Landroid/content/Context;
+000af  106e 083a 0006           invoke-virtual  # CALL Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+000b2  060c                     move-result-object
+000b3  206e 2b9d 0064           invoke-virtual  # CALL Lcom/mobiletools/systemhelper/control/SIMStateReceiver;->a(Landroid/content/Context;)V
+000b6  0422 0617                new-instance  # TYPE Lcom/mobiletools/systemhelper/control/ConnectStateReceiver;
+000b8  1070 2b86 0004           invoke-direct  # CALL Lcom/mobiletools/systemhelper/control/ConnectStateReceiver;-><init>()V
+000bb  0662 1d13                sget-object  # FIELD Lcom/mobiletools/systemhelper/control/OnBootReceiver;->a:Landroid/content/Context;
+000bd  106e 083a 0006           invoke-virtual  # CALL Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+000c0  060c                     move-result-object
+000c1  206e 2b88 0064           invoke-virtual  # CALL Lcom/mobiletools/systemhelper/control/ConnectStateReceiver;->a(Landroid/content/Context;)V
+000c4  0071 2956 0000           invoke-static  # CALL Lc/d/a/a/n;->c()V
+000c7  1071 294c 0005           invoke-static  # CALL Lc/d/a/a/n;->a(Landroid/content/Context;)Lc/d/a/a/n$c;
+000ca  040c                     move-result-object
+000cb  0438 0025                if-eqz
+000cd  041a 1bf0                const-string  # STR "firstPowerOn"
+000cf  061a 0000                const-string  # STR ""
+000d1  3071 2996 0645           invoke-static  # CALL Lc/d/a/b/l;->a(Landroid/content/Context;,Ljava/lang/String;,Ljava/lang/String;)Ljava/lang/String;
+000d4  060c                     move-result-object
+000d5  0638 0011                if-eqz
+000d7  106e 2d0f 0006           invoke-virtual  # CALL Ljava/lang/String;->isEmpty()Z
+000da  060a                     move-result
+000db  0638 0003                if-eqz
+000dd  0928                     goto
+000de  0462 1d13                sget-object  # FIELD Lcom/mobiletools/systemhelper/control/OnBootReceiver;->a:Landroid/content/Context;
+000e0  051a 040d                const-string  # STR "B"
+000e2  2071 2bab 0054           invoke-static  # CALL Lcom/mobiletools/systemhelper/control/b;->a(Landroid/content/Context;,Ljava/lang/String;)Lcom/mobiletools/systemhelper/control/b;
+000e5  0b28                     goto
+000e6  0662 1d13                sget-object  # FIELD Lcom/mobiletools/systemhelper/control/OnBootReceiver;->a:Landroid/content/Context;
+000e8  001a 078b                const-string  # STR "F"
+000ea  2071 2bab 0006           invoke-static  # CALL Lcom/mobiletools/systemhelper/control/b;->a(Landroid/content/Context;,Ljava/lang/String;)Lcom/mobiletools/systemhelper/control/b;
+000ed  3071 29a3 0445           invoke-static  # CALL Lc/d/a/b/l;->b(Landroid/content/Context;,Ljava/lang/String;,Ljava/lang/String;)V
+000f0  000e                     return-void

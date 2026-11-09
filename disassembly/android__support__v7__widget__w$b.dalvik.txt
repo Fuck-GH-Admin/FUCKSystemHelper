@@ -1,0 +1,127 @@
+### Landroid/support/v7/widget/w$b;-><init>(Landroid/widget/SpinnerAdapter;,Landroid/content/res/Resources$Theme;)V  [access=0x10001, regs=4, ins=3, outs=2, code_off=0xe0ec4]
+00000  1070 2ce0 0001           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  125b 11f9                iput-object  # FIELD Landroid/support/v7/widget/w$b;->b:Landroid/widget/SpinnerAdapter;
+00005  2020 0494                instance-of  # TYPE Landroid/widget/ListAdapter;
+00007  0038 0007                if-eqz
+00009  2007                     op_07
+0000a  001f 0494                check-cast  # TYPE Landroid/widget/ListAdapter;
+0000c  105b 11fa                iput-object  # FIELD Landroid/support/v7/widget/w$b;->c:Landroid/widget/ListAdapter;
+0000e  0338 0027                if-eqz
+00010  0160 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00012  0013 0017                const/16
+00014  0134 0012                if-lt
+00016  2120 04a4                instance-of  # TYPE Landroid/widget/ThemedSpinnerAdapter;
+00018  0138 000e                if-eqz
+0001a  021f 04a4                check-cast  # TYPE Landroid/widget/ThemedSpinnerAdapter;
+0001c  1072 214f 0002           invoke-interface  # CALL Landroid/widget/ThemedSpinnerAdapter;->getDropDownViewTheme()Landroid/content/res/Resources$Theme;
+0001f  010c                     move-result-object
+00020  3132 0015                if-eq
+00022  2072 2150 0032           invoke-interface  # CALL Landroid/widget/ThemedSpinnerAdapter;->setDropDownViewTheme(Landroid/content/res/Resources$Theme;)V
+00025  1028                     goto
+00026  2120 03af                instance-of  # TYPE Landroid/support/v7/widget/p0;
+00028  0138 000d                if-eqz
+0002a  021f 03af                check-cast  # TYPE Landroid/support/v7/widget/p0;
+0002c  1072 1a39 0002           invoke-interface  # CALL Landroid/support/v7/widget/p0;->getDropDownViewTheme()Landroid/content/res/Resources$Theme;
+0002f  010c                     move-result-object
+00030  0139 0005                if-nez
+00032  2072 1a3a 0032           invoke-interface  # CALL Landroid/support/v7/widget/p0;->setDropDownViewTheme(Landroid/content/res/Resources$Theme;)V
+00035  000e                     return-void
+
+### Landroid/support/v7/widget/w$b;->areAllItemsEnabled()Z  [access=0x1, regs=1, ins=1, outs=1, code_off=0xe0d84]
+00000  0054 11fa                iget-object  # FIELD Landroid/support/v7/widget/w$b;->c:Landroid/widget/ListAdapter;
+00002  0038 0007                if-eqz
+00004  1072 2026 0000           invoke-interface  # CALL Landroid/widget/ListAdapter;->areAllItemsEnabled()Z
+00007  000a                     move-result
+00008  000f                     return
+00009  1012                     const/4
+0000a  000f                     return
+
+### Landroid/support/v7/widget/w$b;->getCount()I  [access=0x1, regs=1, ins=1, outs=1, code_off=0xe0e24]
+00000  0054 11f9                iget-object  # FIELD Landroid/support/v7/widget/w$b;->b:Landroid/widget/SpinnerAdapter;
+00002  0039 0004                if-nez
+00004  0012                     const/4
+00005  0528                     goto
+00006  1072 20e9 0000           invoke-interface  # CALL Landroid/widget/SpinnerAdapter;->getCount()I
+00009  000a                     move-result
+0000a  000f                     return
+
+### Landroid/support/v7/widget/w$b;->getDropDownView(I,Landroid/view/View;,Landroid/view/ViewGroup;)Landroid/view/View;  [access=0x1, regs=4, ins=4, outs=4, code_off=0xe0d40]
+00000  0054 11f9                iget-object  # FIELD Landroid/support/v7/widget/w$b;->b:Landroid/widget/SpinnerAdapter;
+00002  0039 0004                if-nez
+00004  0012                     const/4
+00005  0528                     goto
+00006  4072 20ea 3210           invoke-interface  # CALL Landroid/widget/SpinnerAdapter;->getDropDownView(I,Landroid/view/View;,Landroid/view/ViewGroup;)Landroid/view/View;
+00009  000c                     move-result-object
+0000a  0011                     return-object
+
+### Landroid/support/v7/widget/w$b;->getItem(I)Ljava/lang/Object;  [access=0x1, regs=2, ins=2, outs=2, code_off=0xe0e74]
+00000  0054 11f9                iget-object  # FIELD Landroid/support/v7/widget/w$b;->b:Landroid/widget/SpinnerAdapter;
+00002  0039 0004                if-nez
+00004  0012                     const/4
+00005  0528                     goto
+00006  2072 20eb 0010           invoke-interface  # CALL Landroid/widget/SpinnerAdapter;->getItem(I)Ljava/lang/Object;
+00009  000c                     move-result-object
+0000a  0011                     return-object
+
+### Landroid/support/v7/widget/w$b;->getItemId(I)J  [access=0x1, regs=2, ins=2, outs=2, code_off=0xe0e9c]
+00000  0054 11f9                iget-object  # FIELD Landroid/support/v7/widget/w$b;->b:Landroid/widget/SpinnerAdapter;
+00002  0039 0005                if-nez
+00004  0016 ffff                const-wide/16
+00006  0528                     goto
+00007  2072 20ec 0010           invoke-interface  # CALL Landroid/widget/SpinnerAdapter;->getItemId(I)J
+0000a  000b                     move-result-wide
+0000b  0010                     return-wide
+
+### Landroid/support/v7/widget/w$b;->getItemViewType(I)I  [access=0x1, regs=2, ins=2, outs=0, code_off=0xe0e4c]
+00000  0012                     const/4
+00001  000f                     return
+
+### Landroid/support/v7/widget/w$b;->getView(I,Landroid/view/View;,Landroid/view/ViewGroup;)Landroid/view/View;  [access=0x1, regs=4, ins=4, outs=4, code_off=0xe0d68]
+00000  406e 1ac8 3210           invoke-virtual  # CALL Landroid/support/v7/widget/w$b;->getDropDownView(I,Landroid/view/View;,Landroid/view/ViewGroup;)Landroid/view/View;
+00003  000c                     move-result-object
+00004  0011                     return-object
+
+### Landroid/support/v7/widget/w$b;->getViewTypeCount()I  [access=0x1, regs=1, ins=1, outs=0, code_off=0xe0e60]
+00000  1012                     const/4
+00001  000f                     return
+
+### Landroid/support/v7/widget/w$b;->hasStableIds()Z  [access=0x1, regs=1, ins=1, outs=1, code_off=0xe0dac]
+00000  0054 11f9                iget-object  # FIELD Landroid/support/v7/widget/w$b;->b:Landroid/widget/SpinnerAdapter;
+00002  0038 000a                if-eqz
+00004  1072 20ef 0000           invoke-interface  # CALL Landroid/widget/SpinnerAdapter;->hasStableIds()Z
+00007  000a                     move-result
+00008  0038 0004                if-eqz
+0000a  1012                     const/4
+0000b  0228                     goto
+0000c  0012                     const/4
+0000d  000f                     return
+
+### Landroid/support/v7/widget/w$b;->isEmpty()Z  [access=0x1, regs=1, ins=1, outs=1, code_off=0xe0dd8]
+00000  106e 1ac7 0000           invoke-virtual  # CALL Landroid/support/v7/widget/w$b;->getCount()I
+00003  000a                     move-result
+00004  0039 0004                if-nez
+00006  1012                     const/4
+00007  0228                     goto
+00008  0012                     const/4
+00009  000f                     return
+
+### Landroid/support/v7/widget/w$b;->isEnabled(I)Z  [access=0x1, regs=2, ins=2, outs=2, code_off=0xe0dfc]
+00000  0054 11fa                iget-object  # FIELD Landroid/support/v7/widget/w$b;->c:Landroid/widget/ListAdapter;
+00002  0038 0007                if-eqz
+00004  2072 202c 0010           invoke-interface  # CALL Landroid/widget/ListAdapter;->isEnabled(I)Z
+00007  000a                     move-result
+00008  000f                     return
+00009  1012                     const/4
+0000a  000f                     return
+
+### Landroid/support/v7/widget/w$b;->registerDataSetObserver(Landroid/database/DataSetObserver;)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0xe0f40]
+00000  0054 11f9                iget-object  # FIELD Landroid/support/v7/widget/w$b;->b:Landroid/widget/SpinnerAdapter;
+00002  0038 0005                if-eqz
+00004  2072 20f0 0010           invoke-interface  # CALL Landroid/widget/SpinnerAdapter;->registerDataSetObserver(Landroid/database/DataSetObserver;)V
+00007  000e                     return-void
+
+### Landroid/support/v7/widget/w$b;->unregisterDataSetObserver(Landroid/database/DataSetObserver;)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0xe0f60]
+00000  0054 11f9                iget-object  # FIELD Landroid/support/v7/widget/w$b;->b:Landroid/widget/SpinnerAdapter;
+00002  0038 0005                if-eqz
+00004  2072 20f1 0010           invoke-interface  # CALL Landroid/widget/SpinnerAdapter;->unregisterDataSetObserver(Landroid/database/DataSetObserver;)V
+00007  000e                     return-void

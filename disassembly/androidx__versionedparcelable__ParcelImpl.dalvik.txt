@@ -1,0 +1,25 @@
+### Landroidx/versionedparcelable/ParcelImpl;-><clinit>()V  [access=0x10008, regs=1, ins=0, outs=1, code_off=0xf2090]
+00000  0022 04a7                new-instance  # TYPE Landroidx/versionedparcelable/ParcelImpl$a;
+00002  1070 2155 0000           invoke-direct  # CALL Landroidx/versionedparcelable/ParcelImpl$a;-><init>()V
+00005  0069 1278                sput-object  # FIELD Landroidx/versionedparcelable/ParcelImpl;->CREATOR:Landroid/os/Parcelable$Creator;
+00007  000e                     return-void
+
+### Landroidx/versionedparcelable/ParcelImpl;-><init>(Landroid/os/Parcel;)V  [access=0x10004, regs=3, ins=2, outs=2, code_off=0xf20b0]
+00000  1070 2ce0 0001           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  0022 04aa                new-instance  # TYPE Landroidx/versionedparcelable/b;
+00005  2070 217c 0020           invoke-direct  # CALL Landroidx/versionedparcelable/b;-><init>(Landroid/os/Parcel;)V
+00008  106e 217b 0000           invoke-virtual  # CALL Landroidx/versionedparcelable/a;->h()Landroidx/versionedparcelable/c;
+0000b  020c                     move-result-object
+0000c  125b 1279                iput-object  # FIELD Landroidx/versionedparcelable/ParcelImpl;->b:Landroidx/versionedparcelable/c;
+0000e  000e                     return-void
+
+### Landroidx/versionedparcelable/ParcelImpl;->describeContents()I  [access=0x1, regs=1, ins=1, outs=0, code_off=0xf207c]
+00000  0012                     const/4
+00001  000f                     return
+
+### Landroidx/versionedparcelable/ParcelImpl;->writeToParcel(Landroid/os/Parcel;,I)V  [access=0x1, regs=3, ins=3, outs=2, code_off=0xf20e0]
+00000  0222 04aa                new-instance  # TYPE Landroidx/versionedparcelable/b;
+00002  2070 217c 0012           invoke-direct  # CALL Landroidx/versionedparcelable/b;-><init>(Landroid/os/Parcel;)V
+00005  0054 1279                iget-object  # FIELD Landroidx/versionedparcelable/ParcelImpl;->b:Landroidx/versionedparcelable/c;
+00007  206e 2166 0002           invoke-virtual  # CALL Landroidx/versionedparcelable/a;->a(Landroidx/versionedparcelable/c;)V
+0000a  000e                     return-void

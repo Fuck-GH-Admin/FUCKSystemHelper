@@ -1,0 +1,22 @@
+### Lc/a/b/c/e$c;-><init>()V  [access=0x10000, regs=2, ins=1, outs=1, code_off=0xf5274]
+00000  1070 2ce0 0001           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  0022 06c8                new-instance  # TYPE Ljava/util/ArrayList;
+00005  1070 2de7 0000           invoke-direct  # CALL Ljava/util/ArrayList;-><init>()V
+00008  105b 1aeb                iput-object  # FIELD Lc/a/b/c/e$c;->a:Ljava/util/List;
+0000a  000e                     return-void
+
+### Lc/a/b/c/e$c;->a()Ljava/util/List;  [access=0x1, regs=3, ins=1, outs=2, code_off=0xf5244]
+00000  0022 06c8                new-instance  # TYPE Ljava/util/ArrayList;
+00002  2154 1aeb                iget-object  # FIELD Lc/a/b/c/e$c;->a:Ljava/util/List;
+00004  2070 2de9 0010           invoke-direct  # CALL Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+00007  0122 0593                new-instance  # TYPE Lc/a/b/c/f;
+00009  2070 27a2 0021           invoke-direct  # CALL Lc/a/b/c/f;-><init>(Lc/a/b/c/e$c;)V
+0000c  2071 2e16 0010           invoke-static  # CALL Ljava/util/Collections;->sort(Ljava/util/List;,Ljava/util/Comparator;)V
+0000f  0011                     return-object
+
+### Lc/a/b/c/e$c;->a(Lc/a/b/c/e$a;)V  [access=0x1, regs=3, ins=2, outs=2, code_off=0xf529c]
+00000  1154 1aeb                iget-object  # FIELD Lc/a/b/c/e$c;->a:Ljava/util/List;
+00002  0022 058d                new-instance  # TYPE Lc/a/b/c/e$c$a;
+00004  2070 278b 0020           invoke-direct  # CALL Lc/a/b/c/e$c$a;-><init>(Lc/a/b/c/e$a;)V
+00007  2072 2e52 0001           invoke-interface  # CALL Ljava/util/List;->add(Ljava/lang/Object;)Z
+0000a  000e                     return-void

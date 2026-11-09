@@ -1,0 +1,26 @@
+### Landroid/support/v4/widget/k;-><init>(Landroid/content/Context;,I,Landroid/database/Cursor;,Z)V  [access=0x10001, regs=5, ins=5, outs=4, code_off=0xc3498]
+00000  4070 1167 4310           invoke-direct  # CALL Landroid/support/v4/widget/d;-><init>(Landroid/content/Context;,Landroid/database/Cursor;,Z)V
+00003  0259 0e02                iput  # FIELD Landroid/support/v4/widget/k;->k:I
+00005  0259 0e01                iput  # FIELD Landroid/support/v4/widget/k;->j:I
+00007  021a 209e                const-string  # STR "layout_inflater"
+00009  206e 084c 0021           invoke-virtual  # CALL Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+0000c  010c                     move-result-object
+0000d  011f 0434                check-cast  # TYPE Landroid/view/LayoutInflater;
+0000f  015b 0e03                iput-object  # FIELD Landroid/support/v4/widget/k;->l:Landroid/view/LayoutInflater;
+00011  000e                     return-void
+
+### Landroid/support/v4/widget/k;->a(Landroid/content/Context;,Landroid/database/Cursor;,Landroid/view/ViewGroup;)Landroid/view/View;  [access=0x1, regs=4, ins=4, outs=4, code_off=0xc3450]
+00000  0154 0e03                iget-object  # FIELD Landroid/support/v4/widget/k;->l:Landroid/view/LayoutInflater;
+00002  0052 0e02                iget  # FIELD Landroid/support/v4/widget/k;->k:I
+00004  0212                     const/4
+00005  406e 1cbc 2301           invoke-virtual  # CALL Landroid/view/LayoutInflater;->inflate(I,Landroid/view/ViewGroup;,Z)Landroid/view/View;
+00008  000c                     move-result-object
+00009  0011                     return-object
+
+### Landroid/support/v4/widget/k;->b(Landroid/content/Context;,Landroid/database/Cursor;,Landroid/view/ViewGroup;)Landroid/view/View;  [access=0x1, regs=4, ins=4, outs=4, code_off=0xc3474]
+00000  0154 0e03                iget-object  # FIELD Landroid/support/v4/widget/k;->l:Landroid/view/LayoutInflater;
+00002  0052 0e01                iget  # FIELD Landroid/support/v4/widget/k;->j:I
+00004  0212                     const/4
+00005  406e 1cbc 2301           invoke-virtual  # CALL Landroid/view/LayoutInflater;->inflate(I,Landroid/view/ViewGroup;,Z)Landroid/view/View;
+00008  000c                     move-result-object
+00009  0011                     return-object

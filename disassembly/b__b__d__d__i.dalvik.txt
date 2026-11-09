@@ -1,0 +1,144 @@
+### Lb/b/d/d/i;-><init>(Landroid/view/Window$Callback;)V  [access=0x10001, regs=2, ins=2, outs=2, code_off=0xd0b60]
+00000  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  0138 0005                if-eqz
+00005  015b 1ab1                iput-object  # FIELD Lb/b/d/d/i;->b:Landroid/view/Window$Callback;
+00007  000e                     return-void
+00008  0022 0669                new-instance  # TYPE Ljava/lang/IllegalArgumentException;
+0000a  011a 16b6                const-string  # STR "Window callback may not be null"
+0000c  2070 2c9f 0010           invoke-direct  # CALL Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+0000f  0027                     throw
+
+### Lb/b/d/d/i;->dispatchGenericMotionEvent(Landroid/view/MotionEvent;)Z  [access=0x1, regs=2, ins=2, outs=2, code_off=0xd09e0]
+00000  0054 1ab1                iget-object  # FIELD Lb/b/d/d/i;->b:Landroid/view/Window$Callback;
+00002  2072 1e56 0010           invoke-interface  # CALL Landroid/view/Window$Callback;->dispatchGenericMotionEvent(Landroid/view/MotionEvent;)Z
+00005  000a                     move-result
+00006  000f                     return
+
+### Lb/b/d/d/i;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z  [access=0x1, regs=2, ins=2, outs=2, code_off=0xd0a00]
+00000  0054 1ab1                iget-object  # FIELD Lb/b/d/d/i;->b:Landroid/view/Window$Callback;
+00002  2072 1e57 0010           invoke-interface  # CALL Landroid/view/Window$Callback;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
+00005  000a                     move-result
+00006  000f                     return
+
+### Lb/b/d/d/i;->dispatchKeyShortcutEvent(Landroid/view/KeyEvent;)Z  [access=0x1, regs=2, ins=2, outs=2, code_off=0xd0a20]
+00000  0054 1ab1                iget-object  # FIELD Lb/b/d/d/i;->b:Landroid/view/Window$Callback;
+00002  2072 1e58 0010           invoke-interface  # CALL Landroid/view/Window$Callback;->dispatchKeyShortcutEvent(Landroid/view/KeyEvent;)Z
+00005  000a                     move-result
+00006  000f                     return
+
+### Lb/b/d/d/i;->dispatchPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)Z  [access=0x1, regs=2, ins=2, outs=2, code_off=0xd0a40]
+00000  0054 1ab1                iget-object  # FIELD Lb/b/d/d/i;->b:Landroid/view/Window$Callback;
+00002  2072 1e59 0010           invoke-interface  # CALL Landroid/view/Window$Callback;->dispatchPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)Z
+00005  000a                     move-result
+00006  000f                     return
+
+### Lb/b/d/d/i;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z  [access=0x1, regs=2, ins=2, outs=2, code_off=0xd0a60]
+00000  0054 1ab1                iget-object  # FIELD Lb/b/d/d/i;->b:Landroid/view/Window$Callback;
+00002  2072 1e5a 0010           invoke-interface  # CALL Landroid/view/Window$Callback;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
+00005  000a                     move-result
+00006  000f                     return
+
+### Lb/b/d/d/i;->dispatchTrackballEvent(Landroid/view/MotionEvent;)Z  [access=0x1, regs=2, ins=2, outs=2, code_off=0xd0a80]
+00000  0054 1ab1                iget-object  # FIELD Lb/b/d/d/i;->b:Landroid/view/Window$Callback;
+00002  2072 1e5b 0010           invoke-interface  # CALL Landroid/view/Window$Callback;->dispatchTrackballEvent(Landroid/view/MotionEvent;)Z
+00005  000a                     move-result
+00006  000f                     return
+
+### Lb/b/d/d/i;->onActionModeFinished(Landroid/view/ActionMode;)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0xd0b90]
+00000  0054 1ab1                iget-object  # FIELD Lb/b/d/d/i;->b:Landroid/view/Window$Callback;
+00002  2072 1e5c 0010           invoke-interface  # CALL Landroid/view/Window$Callback;->onActionModeFinished(Landroid/view/ActionMode;)V
+00005  000e                     return-void
+
+### Lb/b/d/d/i;->onActionModeStarted(Landroid/view/ActionMode;)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0xd0bac]
+00000  0054 1ab1                iget-object  # FIELD Lb/b/d/d/i;->b:Landroid/view/Window$Callback;
+00002  2072 1e5d 0010           invoke-interface  # CALL Landroid/view/Window$Callback;->onActionModeStarted(Landroid/view/ActionMode;)V
+00005  000e                     return-void
+
+### Lb/b/d/d/i;->onAttachedToWindow()V  [access=0x1, regs=1, ins=1, outs=1, code_off=0xd0bc8]
+00000  0054 1ab1                iget-object  # FIELD Lb/b/d/d/i;->b:Landroid/view/Window$Callback;
+00002  1072 1e5e 0000           invoke-interface  # CALL Landroid/view/Window$Callback;->onAttachedToWindow()V
+00005  000e                     return-void
+
+### Lb/b/d/d/i;->onCreatePanelMenu(I,Landroid/view/Menu;)Z  [access=0x1, regs=3, ins=3, outs=3, code_off=0xd0aa0]
+00000  0054 1ab1                iget-object  # FIELD Lb/b/d/d/i;->b:Landroid/view/Window$Callback;
+00002  3072 1e60 0210           invoke-interface  # CALL Landroid/view/Window$Callback;->onCreatePanelMenu(I,Landroid/view/Menu;)Z
+00005  000a                     move-result
+00006  000f                     return
+
+### Lb/b/d/d/i;->onCreatePanelView(I)Landroid/view/View;  [access=0x1, regs=2, ins=2, outs=2, code_off=0xd09c0]
+00000  0054 1ab1                iget-object  # FIELD Lb/b/d/d/i;->b:Landroid/view/Window$Callback;
+00002  2072 1e61 0010           invoke-interface  # CALL Landroid/view/Window$Callback;->onCreatePanelView(I)Landroid/view/View;
+00005  000c                     move-result-object
+00006  0011                     return-object
+
+### Lb/b/d/d/i;->onDetachedFromWindow()V  [access=0x1, regs=1, ins=1, outs=1, code_off=0xd0be4]
+00000  0054 1ab1                iget-object  # FIELD Lb/b/d/d/i;->b:Landroid/view/Window$Callback;
+00002  1072 1e62 0000           invoke-interface  # CALL Landroid/view/Window$Callback;->onDetachedFromWindow()V
+00005  000e                     return-void
+
+### Lb/b/d/d/i;->onMenuItemSelected(I,Landroid/view/MenuItem;)Z  [access=0x1, regs=3, ins=3, outs=3, code_off=0xd0ac0]
+00000  0054 1ab1                iget-object  # FIELD Lb/b/d/d/i;->b:Landroid/view/Window$Callback;
+00002  3072 1e63 0210           invoke-interface  # CALL Landroid/view/Window$Callback;->onMenuItemSelected(I,Landroid/view/MenuItem;)Z
+00005  000a                     move-result
+00006  000f                     return
+
+### Lb/b/d/d/i;->onMenuOpened(I,Landroid/view/Menu;)Z  [access=0x1, regs=3, ins=3, outs=3, code_off=0xd0ae0]
+00000  0054 1ab1                iget-object  # FIELD Lb/b/d/d/i;->b:Landroid/view/Window$Callback;
+00002  3072 1e64 0210           invoke-interface  # CALL Landroid/view/Window$Callback;->onMenuOpened(I,Landroid/view/Menu;)Z
+00005  000a                     move-result
+00006  000f                     return
+
+### Lb/b/d/d/i;->onPanelClosed(I,Landroid/view/Menu;)V  [access=0x1, regs=3, ins=3, outs=3, code_off=0xd0c00]
+00000  0054 1ab1                iget-object  # FIELD Lb/b/d/d/i;->b:Landroid/view/Window$Callback;
+00002  3072 1e65 0210           invoke-interface  # CALL Landroid/view/Window$Callback;->onPanelClosed(I,Landroid/view/Menu;)V
+00005  000e                     return-void
+
+### Lb/b/d/d/i;->onPointerCaptureChanged(Z)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0xd0c1c]
+00000  0054 1ab1                iget-object  # FIELD Lb/b/d/d/i;->b:Landroid/view/Window$Callback;
+00002  2072 1e66 0010           invoke-interface  # CALL Landroid/view/Window$Callback;->onPointerCaptureChanged(Z)V
+00005  000e                     return-void
+
+### Lb/b/d/d/i;->onPreparePanel(I,Landroid/view/View;,Landroid/view/Menu;)Z  [access=0x1, regs=4, ins=4, outs=4, code_off=0xd0b00]
+00000  0054 1ab1                iget-object  # FIELD Lb/b/d/d/i;->b:Landroid/view/Window$Callback;
+00002  4072 1e67 3210           invoke-interface  # CALL Landroid/view/Window$Callback;->onPreparePanel(I,Landroid/view/View;,Landroid/view/Menu;)Z
+00005  000a                     move-result
+00006  000f                     return
+
+### Lb/b/d/d/i;->onProvideKeyboardShortcuts(Ljava/util/List;,Landroid/view/Menu;,I)V  [access=0x1, regs=4, ins=4, outs=4, code_off=0xd0c38]
+00000  0054 1ab1                iget-object  # FIELD Lb/b/d/d/i;->b:Landroid/view/Window$Callback;
+00002  4072 1e68 3210           invoke-interface  # CALL Landroid/view/Window$Callback;->onProvideKeyboardShortcuts(Ljava/util/List;,Landroid/view/Menu;,I)V
+00005  000e                     return-void
+
+### Lb/b/d/d/i;->onSearchRequested()Z  [access=0x1, regs=1, ins=1, outs=1, code_off=0xd0b20]
+00000  0054 1ab1                iget-object  # FIELD Lb/b/d/d/i;->b:Landroid/view/Window$Callback;
+00002  1072 1e69 0000           invoke-interface  # CALL Landroid/view/Window$Callback;->onSearchRequested()Z
+00005  000a                     move-result
+00006  000f                     return
+
+### Lb/b/d/d/i;->onSearchRequested(Landroid/view/SearchEvent;)Z  [access=0x1, regs=2, ins=2, outs=2, code_off=0xd0b40]
+00000  0054 1ab1                iget-object  # FIELD Lb/b/d/d/i;->b:Landroid/view/Window$Callback;
+00002  2072 1e6a 0010           invoke-interface  # CALL Landroid/view/Window$Callback;->onSearchRequested(Landroid/view/SearchEvent;)Z
+00005  000a                     move-result
+00006  000f                     return
+
+### Lb/b/d/d/i;->onWindowAttributesChanged(Landroid/view/WindowManager$LayoutParams;)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0xd0c54]
+00000  0054 1ab1                iget-object  # FIELD Lb/b/d/d/i;->b:Landroid/view/Window$Callback;
+00002  2072 1e6b 0010           invoke-interface  # CALL Landroid/view/Window$Callback;->onWindowAttributesChanged(Landroid/view/WindowManager$LayoutParams;)V
+00005  000e                     return-void
+
+### Lb/b/d/d/i;->onWindowFocusChanged(Z)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0xd0c70]
+00000  0054 1ab1                iget-object  # FIELD Lb/b/d/d/i;->b:Landroid/view/Window$Callback;
+00002  2072 1e6c 0010           invoke-interface  # CALL Landroid/view/Window$Callback;->onWindowFocusChanged(Z)V
+00005  000e                     return-void
+
+### Lb/b/d/d/i;->onWindowStartingActionMode(Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;  [access=0x1, regs=2, ins=2, outs=2, code_off=0xd0980]
+00000  0054 1ab1                iget-object  # FIELD Lb/b/d/d/i;->b:Landroid/view/Window$Callback;
+00002  2072 1e6d 0010           invoke-interface  # CALL Landroid/view/Window$Callback;->onWindowStartingActionMode(Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;
+00005  000c                     move-result-object
+00006  0011                     return-object
+
+### Lb/b/d/d/i;->onWindowStartingActionMode(Landroid/view/ActionMode$Callback;,I)Landroid/view/ActionMode;  [access=0x1, regs=3, ins=3, outs=3, code_off=0xd09a0]
+00000  0054 1ab1                iget-object  # FIELD Lb/b/d/d/i;->b:Landroid/view/Window$Callback;
+00002  3072 1e6e 0210           invoke-interface  # CALL Landroid/view/Window$Callback;->onWindowStartingActionMode(Landroid/view/ActionMode$Callback;,I)Landroid/view/ActionMode;
+00005  000c                     move-result-object
+00006  0011                     return-object

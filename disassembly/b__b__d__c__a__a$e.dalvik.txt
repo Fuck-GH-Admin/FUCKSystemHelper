@@ -1,0 +1,55 @@
+### Lb/b/d/c/a/a$e;-><init>(Landroid/graphics/drawable/AnimationDrawable;,Z,Z)V  [access=0x10000, regs=9, ins=4, outs=3, code_off=0xcc96c]
+00000  0012                     const/4
+00001  2070 25c2 0005           invoke-direct  # CALL Lb/b/d/c/a/a$g;-><init>(Lb/b/d/c/a/a$a;)V
+00004  106e 09ba 0006           invoke-virtual  # CALL Landroid/graphics/drawable/AnimationDrawable;->getNumberOfFrames()I
+00007  000a                     move-result
+00008  0112                     const/4
+00009  0738 0005                if-eqz
+0000b  02d8 ff00                op_d8
+0000d  0228                     goto
+0000e  1201                     op_01
+0000f  1312                     const/4
+00010  0738 0004                if-eqz
+00012  1001                     op_01
+00013  0228                     goto
+00014  30b1                     op_b1
+00015  0422 0558                new-instance  # TYPE Lb/b/d/c/a/a$f;
+00017  3070 25bd 0764           invoke-direct  # CALL Lb/b/d/c/a/a$f;-><init>(Landroid/graphics/drawable/AnimationDrawable;,Z)V
+0001a  2712                     const/4
+0001b  7723 0724                new-array  # TYPE [I
+0001d  024b 0107                aput
+0001f  004b 0307                aput
+00021  001a 1b02                const-string  # STR "currentIndex"
+00023  3071 06d9 0706           invoke-static  # CALL Landroid/animation/ObjectAnimator;->ofInt(Ljava/lang/Object;,Ljava/lang/String;,[I)Landroid/animation/ObjectAnimator;
+00026  060c                     move-result-object
+00027  0760 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00029  0013 0012                const/16
+0002b  0734 0005                if-lt
+0002d  206e 06db 0036           invoke-virtual  # CALL Landroid/animation/ObjectAnimator;->setAutoCancel(Z)V
+00030  106e 25be 0004           invoke-virtual  # CALL Lb/b/d/c/a/a$f;->a()I
+00033  070a                     move-result
+00034  7081                     op_81
+00035  306e 06dc 0106           invoke-virtual  # CALL Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
+00038  206e 06de 0046           invoke-virtual  # CALL Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+0003b  585c 1a2d                iput-boolean  # FIELD Lb/b/d/c/a/a$e;->b:Z
+0003d  565b 1a2c                iput-object  # FIELD Lb/b/d/c/a/a$e;->a:Landroid/animation/ObjectAnimator;
+0003f  000e                     return-void
+
+### Lb/b/d/c/a/a$e;->a()Z  [access=0x1, regs=1, ins=1, outs=0, code_off=0xcc954]
+00000  0055 1a2d                iget-boolean  # FIELD Lb/b/d/c/a/a$e;->b:Z
+00002  000f                     return
+
+### Lb/b/d/c/a/a$e;->b()V  [access=0x1, regs=1, ins=1, outs=1, code_off=0xcc9fc]
+00000  0054 1a2c                iget-object  # FIELD Lb/b/d/c/a/a$e;->a:Landroid/animation/ObjectAnimator;
+00002  106e 06da 0000           invoke-virtual  # CALL Landroid/animation/ObjectAnimator;->reverse()V
+00005  000e                     return-void
+
+### Lb/b/d/c/a/a$e;->c()V  [access=0x1, regs=1, ins=1, outs=1, code_off=0xcca18]
+00000  0054 1a2c                iget-object  # FIELD Lb/b/d/c/a/a$e;->a:Landroid/animation/ObjectAnimator;
+00002  106e 06e1 0000           invoke-virtual  # CALL Landroid/animation/ObjectAnimator;->start()V
+00005  000e                     return-void
+
+### Lb/b/d/c/a/a$e;->d()V  [access=0x1, regs=1, ins=1, outs=1, code_off=0xcca34]
+00000  0054 1a2c                iget-object  # FIELD Lb/b/d/c/a/a$e;->a:Landroid/animation/ObjectAnimator;
+00002  106e 06d7 0000           invoke-virtual  # CALL Landroid/animation/ObjectAnimator;->cancel()V
+00005  000e                     return-void

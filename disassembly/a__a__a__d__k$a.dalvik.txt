@@ -1,0 +1,156 @@
+### La/a/a/d/k$a;-><init>(La/a/a/d/k;)V  [access=0x10001, regs=2, ins=2, outs=1, code_off=0x60574]
+00000  015b 023c                iput-object  # FIELD La/a/a/d/k$a;->a:La/a/a/d/k;
+00002  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00005  000e                     return-void
+
+### La/a/a/d/k$a;->onAccuracyChanged(Landroid/hardware/Sensor;,I)V  [access=0x1, regs=3, ins=3, outs=0, code_off=0x60590]
+00000  000e                     return-void
+
+### La/a/a/d/k$a;->onSensorChanged(Landroid/hardware/SensorEvent;)V  [access=0x1, regs=16, ins=2, outs=10, code_off=0x605a4]
+00000  f054 0544                iget-object  # FIELD Landroid/hardware/SensorEvent;->sensor:Landroid/hardware/Sensor;
+00002  106e 0a17 0000           invoke-virtual  # CALL Landroid/hardware/Sensor;->getType()I
+00005  000a                     move-result
+00006  1112                     const/4
+00007  1032 008f                if-eq
+00009  0213 000b                const/16
+0000b  2032 0004                if-eq
+0000d  0029 0107                goto/16
+0000f  ff54 0545                iget-object  # FIELD Landroid/hardware/SensorEvent;->values:[F
+00011  106e 2f3d 000f           invoke-virtual  # CALL [F->clone()Ljava/lang/Object;
+00014  0f0c                     move-result-object
+00015  0f1f 0723                check-cast  # TYPE [F
+00017  e054 023c                iget-object  # FIELD La/a/a/d/k$a;->a:La/a/a/d/k;
+00019  1071 034a 0000           invoke-static  # CALL La/a/a/d/k;->e(La/a/a/d/k;)[F
+0001c  000c                     move-result-object
+0001d  2071 0a1a 00f0           invoke-static  # CALL Landroid/hardware/SensorManager;->getRotationMatrixFromVector([F,[F)V
+00020  ef54 023c                iget-object  # FIELD La/a/a/d/k$a;->a:La/a/a/d/k;
+00022  1071 034a 000f           invoke-static  # CALL La/a/a/d/k;->e(La/a/a/d/k;)[F
+00025  0f0c                     move-result-object
+00026  e054 023c                iget-object  # FIELD La/a/a/d/k$a;->a:La/a/a/d/k;
+00028  1071 034b 0000           invoke-static  # CALL La/a/a/d/k;->f(La/a/a/d/k;)[F
+0002b  000c                     move-result-object
+0002c  2071 0a19 000f           invoke-static  # CALL Landroid/hardware/SensorManager;->getOrientation([F,[F)[F
+0002f  3f12                     const/4
+00030  ff23 0723                new-array  # TYPE [F
+00032  e054 023c                iget-object  # FIELD La/a/a/d/k$a;->a:La/a/a/d/k;
+00034  1071 034b 0000           invoke-static  # CALL La/a/a/d/k;->f(La/a/a/d/k;)[F
+00037  000c                     move-result-object
+00038  0212                     const/4
+00039  0044 0200                aget
+0003b  0389                     op_89
+0003c  2071 2cd8 0043           invoke-static  # CALL Ljava/lang/Math;->toDegrees(D)D
+0003f  030b                     move-result-wide
+00040  0516 0000                const-wide/16
+00042  0030 0503                op_30
+00044  2512                     const/4
+00045  003b 000f                if-gez
+00047  0618 0000 0000 8000 4076 const-wide
+0004c  63cb                     op_cb
+0004d  308c                     op_8c
+0004e  0315 43b4                const/high16
+00050  30ca                     op_ca
+00051  004b 050f                aput
+00053  0428                     goto
+00054  308c                     op_8c
+00055  004b 050f                aput
+00057  e054 023c                iget-object  # FIELD La/a/a/d/k$a;->a:La/a/a/d/k;
+00059  0344 050f                aget
+0005b  2071 033d 0030           invoke-static  # CALL La/a/a/d/k;->a(La/a/a/d/k;,F)F
+0005e  e054 023c                iget-object  # FIELD La/a/a/d/k$a;->a:La/a/a/d/k;
+00060  1071 034b 0000           invoke-static  # CALL La/a/a/d/k;->f(La/a/a/d/k;)[F
+00063  000c                     move-result-object
+00064  0044 0100                aget
+00066  0389                     op_89
+00067  2071 2cd8 0043           invoke-static  # CALL Ljava/lang/Math;->toDegrees(D)D
+0006a  030b                     move-result-wide
+0006b  308c                     op_8c
+0006c  004b 020f                aput
+0006e  e054 023c                iget-object  # FIELD La/a/a/d/k$a;->a:La/a/a/d/k;
+00070  1071 034b 0000           invoke-static  # CALL La/a/a/d/k;->f(La/a/a/d/k;)[F
+00073  000c                     move-result-object
+00074  0044 0500                aget
+00076  0289                     op_89
+00077  2071 2cd8 0032           invoke-static  # CALL Ljava/lang/Math;->toDegrees(D)D
+0007a  020b                     move-result-wide
+0007b  208c                     op_8c
+0007c  004b 010f                aput
+0007e  ee54 023c                iget-object  # FIELD La/a/a/d/k$a;->a:La/a/a/d/k;
+00080  1071 0341 000e           invoke-static  # CALL La/a/a/d/k;->a(La/a/a/d/k;)Z
+00083  0e0a                     move-result
+00084  0e38 0090                if-eqz
+00086  0071 035f 0000           invoke-static  # CALL La/a/a/d/m/a;->a()Z
+00089  0e0a                     move-result
+0008a  0e38 008a                if-eqz
+0008c  0071 2d46 0000           invoke-static  # CALL Ljava/lang/System;->currentTimeMillis()J
+0008f  000b                     move-result-wide
+00090  5e12                     const/4
+00091  4071 035e 10fe           invoke-static  # CALL La/a/a/d/m/a;->a(I,[F,J)Ljava/lang/String;
+00094  0029 0080                goto/16
+00096  ff54 0545                iget-object  # FIELD Landroid/hardware/SensorEvent;->values:[F
+00098  106e 2f3d 000f           invoke-virtual  # CALL [F->clone()Ljava/lang/Object;
+0009b  0f0c                     move-result-object
+0009c  0f1f 0723                check-cast  # TYPE [F
+0009e  e054 023c                iget-object  # FIELD La/a/a/d/k$a;->a:La/a/a/d/k;
+000a0  0071 2d46 0000           invoke-static  # CALL Ljava/lang/System;->currentTimeMillis()J
+000a3  020b                     move-result-wide
+000a4  3071 033e 0320           invoke-static  # CALL La/a/a/d/k;->a(La/a/a/d/k;,J)J
+000a7  e054 023c                iget-object  # FIELD La/a/a/d/k$a;->a:La/a/a/d/k;
+000a9  1071 0341 0000           invoke-static  # CALL La/a/a/d/k;->a(La/a/a/d/k;)Z
+000ac  000a                     move-result
+000ad  0038 0067                if-eqz
+000af  0071 035f 0000           invoke-static  # CALL La/a/a/d/m/a;->a()Z
+000b2  000a                     move-result
+000b3  0038 0061                if-eqz
+000b5  0071 2d46 0000           invoke-static  # CALL Ljava/lang/System;->currentTimeMillis()J
+000b8  020b                     move-result-wide
+000b9  4071 035e 32f1           invoke-static  # CALL La/a/a/d/m/a;->a(I,[F,J)Ljava/lang/String;
+000bc  0f0c                     move-result-object
+000bd  0f38 0057                if-eqz
+000bf  106e 2d12 000f           invoke-virtual  # CALL Ljava/lang/String;->length()I
+000c2  000a                     move-result
+000c3  1037 0051                if-le
+000c5  0071 0360 0000           invoke-static  # CALL La/a/a/d/m/a;->b()F
+000c8  000a                     move-result
+000c9  0114 d70a 3c23           const
+000cc  012d 0100                op_2d
+000ce  013d 0007                if-lez
+000d0  e154 023c                iget-object  # FIELD La/a/a/d/k$a;->a:La/a/a/d/k;
+000d2  1071 0342 0001           invoke-static  # CALL La/a/a/d/k;->b(La/a/a/d/k;)I
+000d5  e154 023c                iget-object  # FIELD La/a/a/d/k$a;->a:La/a/a/d/k;
+000d7  1071 0346 0001           invoke-static  # CALL La/a/a/d/k;->c(La/a/a/d/k;)Ljava/util/Set;
+000da  010c                     move-result-object
+000db  011d                     monitor-enter
+000dc  e254 023c                iget-object  # FIELD La/a/a/d/k$a;->a:La/a/a/d/k;
+000de  1071 0346 0002           invoke-static  # CALL La/a/a/d/k;->c(La/a/a/d/k;)Ljava/util/Set;
+000e1  020c                     move-result-object
+000e2  1072 2e7c 0002           invoke-interface  # CALL Ljava/util/Set;->iterator()Ljava/util/Iterator;
+000e5  020c                     move-result-object
+000e6  1072 2e43 0002           invoke-interface  # CALL Ljava/util/Iterator;->hasNext()Z
+000e9  030a                     move-result
+000ea  0338 0021                if-eqz
+000ec  1072 2e44 0002           invoke-interface  # CALL Ljava/util/Iterator;->next()Ljava/lang/Object;
+000ef  030c                     move-result-object
+000f0  3407                     op_07
+000f1  041f 008a                check-cast  # TYPE La/a/a/d/k$c;
+000f3  0589                     op_89
+000f4  e354 023c                iget-object  # FIELD La/a/a/d/k$a;->a:La/a/a/d/k;
+000f6  1071 0347 0003           invoke-static  # CALL La/a/a/d/k;->d(La/a/a/d/k;)F
+000f9  030a                     move-result
+000fa  3789                     op_89
+000fb  e354 023c                iget-object  # FIELD La/a/a/d/k$a;->a:La/a/a/d/k;
+000fd  1071 0347 0003           invoke-static  # CALL La/a/a/d/k;->d(La/a/a/d/k;)F
+00100  030a                     move-result
+00101  3989                     op_89
+00102  0071 2d46 0000           invoke-static  # CALL Ljava/lang/System;->currentTimeMillis()J
+00105  0b0b                     move-result-wide
+00106  fd07                     op_07
+00107  0a78 033a 0004           invoke-interface/range  # CALL La/a/a/d/k$c;->a(D,D,D,J,Ljava/lang/String;)V
+0010a  dc28                     goto
+0010b  011e                     monitor-exit
+0010c  0828                     goto
+0010d  0e0d                     op_0d
+0010e  011e                     monitor-exit
+0010f  0e27                     throw
+00110  0e0d                     op_0d
+00111  106e 2d60 000e           invoke-virtual  # CALL Ljava/lang/Throwable;->printStackTrace()V
+00114  000e                     return-void

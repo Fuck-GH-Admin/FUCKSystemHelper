@@ -1,0 +1,160 @@
+### La/a/a/c/f$b;-><init>(La/a/a/c/f;)V  [access=0x10001, regs=2, ins=2, outs=1, code_off=0x59578]
+00000  015b 0188                iput-object  # FIELD La/a/a/c/f$b;->m:La/a/a/c/f;
+00002  1070 0671 0000           invoke-direct  # CALL La/a/a/i/g;-><init>()V
+00005  0112                     const/4
+00006  015c 0184                iput-boolean  # FIELD La/a/a/c/f$b;->i:Z
+00008  0159 0185                iput  # FIELD La/a/a/c/f$b;->j:I
+0000a  0112                     const/4
+0000b  015b 0186                iput-object  # FIELD La/a/a/c/f$b;->k:Lorg/json/JSONArray;
+0000d  015b 0187                iput-object  # FIELD La/a/a/c/f$b;->l:Lorg/json/JSONArray;
+0000f  0122 06d4                new-instance  # TYPE Ljava/util/HashMap;
+00011  1070 2e29 0001           invoke-direct  # CALL Ljava/util/HashMap;-><init>()V
+00014  015b 0445                iput-object  # FIELD La/a/a/i/g;->d:Ljava/util/Map;
+00016  000e                     return-void
+
+### La/a/a/c/f$b;->a()V  [access=0x1, regs=5, ins=1, outs=3, code_off=0x595b8]
+00000  0071 06a5 0000           invoke-static  # CALL La/a/a/i/i;->j()Ljava/lang/String;
+00003  000c                     move-result-object
+00004  405b 0442                iput-object  # FIELD La/a/a/i/g;->a:Ljava/lang/String;
+00006  4054 0445                iget-object  # FIELD La/a/a/i/g;->d:Ljava/util/Map;
+00008  1072 2e66 0000           invoke-interface  # CALL Ljava/util/Map;->clear()V
+0000b  4054 0445                iget-object  # FIELD La/a/a/i/g;->d:Ljava/util/Map;
+0000d  011a 23c1                const-string  # STR "qt"
+0000f  021a 1a72                const-string  # STR "cltrw"
+00011  3072 2e6b 0210           invoke-interface  # CALL Ljava/util/Map;->put(Ljava/lang/Object;,Ljava/lang/Object;)Ljava/lang/Object;
+00014  0022 071a                new-instance  # TYPE Lorg/json/JSONObject;
+00016  1070 2f13 0000           invoke-direct  # CALL Lorg/json/JSONObject;-><init>()V
+00019  011a 1b0e                const-string  # STR "data"
+0001b  4254 0186                iget-object  # FIELD La/a/a/c/f$b;->k:Lorg/json/JSONArray;
+0001d  306e 2f2b 0210           invoke-virtual  # CALL Lorg/json/JSONObject;->put(Ljava/lang/String;,Ljava/lang/Object;)Lorg/json/JSONObject;
+00020  011a 1c23                const-string  # STR "frt"
+00022  4252 0185                iget  # FIELD La/a/a/c/f$b;->j:I
+00024  306e 2f29 0210           invoke-virtual  # CALL Lorg/json/JSONObject;->put(Ljava/lang/String;,I)Lorg/json/JSONObject;
+00027  0528                     goto
+00028  010d                     op_0d
+00029  106e 2c96 0001           invoke-virtual  # CALL Ljava/lang/Exception;->printStackTrace()V
+0002c  106e 2f2e 0000           invoke-virtual  # CALL Lorg/json/JSONObject;->toString()Ljava/lang/String;
+0002f  000c                     move-result-object
+00030  1071 29ca 0000           invoke-static  # CALL Lcom/baidu/location/Jni;->e(Ljava/lang/String;)Ljava/lang/String;
+00033  000c                     move-result-object
+00034  4154 0445                iget-object  # FIELD La/a/a/i/g;->d:Ljava/util/Map;
+00036  0222 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00038  1070 2d35 0002           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0003b  031a 0000                const-string  # STR ""
+0003d  206e 2d3f 0032           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00040  206e 2d3f 0002           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00043  106e 2d44 0002           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00046  000c                     move-result-object
+00047  021a 1a70                const-string  # STR "cltr[0]"
+00049  3072 2e6b 0021           invoke-interface  # CALL Ljava/util/Map;->put(Ljava/lang/Object;,Ljava/lang/Object;)Ljava/lang/Object;
+0004c  4054 0445                iget-object  # FIELD La/a/a/i/g;->d:Ljava/util/Map;
+0004e  1112                     const/4
+0004f  1071 2cae 0001           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+00052  020c                     move-result-object
+00053  031a 1a29                const-string  # STR "cfg"
+00055  3072 2e6b 0230           invoke-interface  # CALL Ljava/util/Map;->put(Ljava/lang/Object;,Ljava/lang/Object;)Ljava/lang/Object;
+00058  4054 0445                iget-object  # FIELD La/a/a/i/g;->d:Ljava/util/Map;
+0005a  0071 0646 0000           invoke-static  # CALL La/a/a/i/b;->e()La/a/a/i/b;
+0005d  020c                     move-result-object
+0005e  106e 063e 0002           invoke-virtual  # CALL La/a/a/i/b;->a()Ljava/lang/String;
+00061  020c                     move-result-object
+00062  1071 29c6 0002           invoke-static  # CALL Lcom/baidu/location/Jni;->b(Ljava/lang/String;)Ljava/lang/String;
+00065  020c                     move-result-object
+00066  031a 1fcb                const-string  # STR "info"
+00068  3072 2e6b 0230           invoke-interface  # CALL Ljava/util/Map;->put(Ljava/lang/Object;,Ljava/lang/Object;)Ljava/lang/Object;
+0006b  0062 1d71                sget-object  # FIELD Ljava/util/Locale;->CHINA:Ljava/util/Locale;
+0006d  1123 075d                new-array  # TYPE [Ljava/lang/Object;
+0006f  0071 2d46 0000           invoke-static  # CALL Ljava/lang/System;->currentTimeMillis()J
+00072  020b                     move-result-wide
+00073  2071 2cbb 0032           invoke-static  # CALL Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+00076  020c                     move-result-object
+00077  0312                     const/4
+00078  024d 0301                aput-object
+0007a  021a 00c1                const-string  # STR "%d"
+0007c  3071 2d06 0120           invoke-static  # CALL Ljava/lang/String;->format(Ljava/util/Locale;,Ljava/lang/String;,[Ljava/lang/Object;)Ljava/lang/String;
+0007f  000c                     move-result-object
+00080  4454 0445                iget-object  # FIELD La/a/a/i/g;->d:Ljava/util/Map;
+00082  011a 27e9                const-string  # STR "trtm"
+00084  3072 2e6b 0014           invoke-interface  # CALL Ljava/util/Map;->put(Ljava/lang/Object;,Ljava/lang/Object;)Ljava/lang/Object;
+00087  000e                     return-void
+
+### La/a/a/c/f$b;->a(Z)V  [access=0x1, regs=6, ins=2, outs=4, code_off=0x5975c]
+00000  0012                     const/4
+00001  0538 0067                if-eqz
+00003  4554 0444                iget-object  # FIELD La/a/a/i/g;->c:Ljava/lang/String;
+00005  0538 0063                if-eqz
+00007  0512                     const/4
+00008  0122 071a                new-instance  # TYPE Lorg/json/JSONObject;
+0000a  4254 0444                iget-object  # FIELD La/a/a/i/g;->c:Ljava/lang/String;
+0000c  2070 2f14 0021           invoke-direct  # CALL Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+0000f  1512                     const/4
+00010  0328                     goto
+00011  5107                     op_07
+00012  0501                     op_01
+00013  0538 0055                if-eqz
+00015  0138 0053                if-eqz
+00017  051a 27ed                const-string  # STR "tt"
+00019  0071 2d46 0000           invoke-static  # CALL Ljava/lang/System;->currentTimeMillis()J
+0001c  020b                     move-result-wide
+0001d  406e 2f2a 3251           invoke-virtual  # CALL Lorg/json/JSONObject;->put(Ljava/lang/String;,J)Lorg/json/JSONObject;
+00020  051a 1b0e                const-string  # STR "data"
+00022  4254 0187                iget-object  # FIELD La/a/a/c/f$b;->l:Lorg/json/JSONArray;
+00024  306e 2f2b 0251           invoke-virtual  # CALL Lorg/json/JSONObject;->put(Ljava/lang/String;,Ljava/lang/Object;)Lorg/json/JSONObject;
+00027  0522 063e                new-instance  # TYPE Ljava/io/File;
+00029  4254 0188                iget-object  # FIELD La/a/a/c/f$b;->m:La/a/a/c/f;
+0002b  1071 023a 0002           invoke-static  # CALL La/a/a/c/f;->b(La/a/a/c/f;)Ljava/lang/String;
+0002e  020c                     move-result-object
+0002f  031a 2876                const-string  # STR "wcnf.dat"
+00031  3070 2c0d 0325           invoke-direct  # CALL Ljava/io/File;-><init>(Ljava/lang/String;,Ljava/lang/String;)V
+00034  106e 2c11 0005           invoke-virtual  # CALL Ljava/io/File;->exists()Z
+00037  020a                     move-result
+00038  0239 0005                if-nez
+0003a  106e 2c0f 0005           invoke-virtual  # CALL Ljava/io/File;->createNewFile()Z
+0003d  0222 0638                new-instance  # TYPE Ljava/io/BufferedWriter;
+0003f  0322 0644                new-instance  # TYPE Ljava/io/FileWriter;
+00041  3070 2c30 0053           invoke-direct  # CALL Ljava/io/FileWriter;-><init>(Ljava/io/File;,Z)V
+00044  2070 2bf8 0032           invoke-direct  # CALL Ljava/io/BufferedWriter;-><init>(Ljava/io/Writer;)V
+00047  0522 0683                new-instance  # TYPE Ljava/lang/String;
+00049  106e 2f2e 0001           invoke-virtual  # CALL Lorg/json/JSONObject;->toString()Ljava/lang/String;
+0004c  010c                     move-result-object
+0004d  106e 2d07 0001           invoke-virtual  # CALL Ljava/lang/String;->getBytes()[B
+00050  010c                     move-result-object
+00051  2071 1c56 0001           invoke-static  # CALL Landroid/util/Base64;->encode([B,I)[B
+00054  010c                     move-result-object
+00055  031a 154c                const-string  # STR "UTF-8"
+00057  3070 2cfb 0315           invoke-direct  # CALL Ljava/lang/String;-><init>([B,Ljava/lang/String;)V
+0005a  206e 2bfb 0052           invoke-virtual  # CALL Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
+0005d  106e 2bfa 0002           invoke-virtual  # CALL Ljava/io/BufferedWriter;->flush()V
+00060  106e 2bf9 0002           invoke-virtual  # CALL Ljava/io/BufferedWriter;->close()V
+00063  0528                     goto
+00064  050d                     op_0d
+00065  106e 2c96 0005           invoke-virtual  # CALL Ljava/lang/Exception;->printStackTrace()V
+00068  405c 0184                iput-boolean  # FIELD La/a/a/c/f$b;->i:Z
+0006a  000e                     return-void
+
+### La/a/a/c/f$b;->a(Z,Lorg/json/JSONArray;,Lorg/json/JSONArray;)V  [access=0x1, regs=5, ins=4, outs=3, code_off=0x596f0]
+00000  1055 0184                iget-boolean  # FIELD La/a/a/c/f$b;->i:Z
+00002  0038 0003                if-eqz
+00004  000e                     return-void
+00005  1012                     const/4
+00006  105c 0184                iput-boolean  # FIELD La/a/a/c/f$b;->i:Z
+00008  0238 0005                if-eqz
+0000a  1059 0185                iput  # FIELD La/a/a/c/f$b;->j:I
+0000c  0428                     goto
+0000d  0212                     const/4
+0000e  1259 0185                iput  # FIELD La/a/a/c/f$b;->j:I
+00010  135b 0186                iput-object  # FIELD La/a/a/c/f$b;->k:Lorg/json/JSONArray;
+00012  145b 0187                iput-object  # FIELD La/a/a/c/f$b;->l:Lorg/json/JSONArray;
+00014  0071 01a4 0000           invoke-static  # CALL La/a/a/b/w;->d()La/a/a/b/w;
+00017  020c                     move-result-object
+00018  106e 01a2 0002           invoke-virtual  # CALL La/a/a/b/w;->b()Ljava/util/concurrent/ExecutorService;
+0001b  020c                     move-result-object
+0001c  0238 000a                if-eqz
+0001e  0071 06a5 0000           invoke-static  # CALL La/a/a/i/i;->j()Ljava/lang/String;
+00021  030c                     move-result-object
+00022  306e 0675 0321           invoke-virtual  # CALL La/a/a/i/g;->a(Ljava/util/concurrent/ExecutorService;,Ljava/lang/String;)V
+00025  0828                     goto
+00026  0071 06a5 0000           invoke-static  # CALL La/a/a/i/i;->j()Ljava/lang/String;
+00029  020c                     move-result-object
+0002a  206e 0674 0021           invoke-virtual  # CALL La/a/a/i/g;->a(Ljava/lang/String;)V
+0002d  000e                     return-void

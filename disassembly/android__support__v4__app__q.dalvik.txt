@@ -1,0 +1,271 @@
+### Landroid/support/v4/app/q;-><init>()V  [access=0x10000, regs=1, ins=1, outs=1, code_off=0xac8c4]
+00000  1070 101f 0000           invoke-direct  # CALL Landroid/support/v4/app/r;-><init>()V
+00003  000e                     return-void
+
+### Landroid/support/v4/app/q;->a(Landroid/transition/Transition;)Z  [access=0xa, regs=2, ins=1, outs=1, code_off=0xac750]
+00000  106e 1c40 0001           invoke-virtual  # CALL Landroid/transition/Transition;->getTargetIds()Ljava/util/List;
+00003  000c                     move-result-object
+00004  1071 1032 0000           invoke-static  # CALL Landroid/support/v4/app/r;->a(Ljava/util/List;)Z
+00007  000a                     move-result
+00008  0038 0019                if-eqz
+0000a  106e 1c41 0001           invoke-virtual  # CALL Landroid/transition/Transition;->getTargetNames()Ljava/util/List;
+0000d  000c                     move-result-object
+0000e  1071 1032 0000           invoke-static  # CALL Landroid/support/v4/app/r;->a(Ljava/util/List;)Z
+00011  000a                     move-result
+00012  0038 000f                if-eqz
+00014  106e 1c42 0001           invoke-virtual  # CALL Landroid/transition/Transition;->getTargetTypes()Ljava/util/List;
+00017  010c                     move-result-object
+00018  1071 1032 0001           invoke-static  # CALL Landroid/support/v4/app/r;->a(Ljava/util/List;)Z
+0001b  010a                     move-result
+0001c  0139 0003                if-nez
+0001e  0328                     goto
+0001f  0112                     const/4
+00020  0228                     goto
+00021  1112                     const/4
+00022  010f                     return
+
+### Landroid/support/v4/app/q;->a(Ljava/lang/Object;,Ljava/lang/Object;,Ljava/lang/Object;)Ljava/lang/Object;  [access=0x1, regs=4, ins=4, outs=2, code_off=0xac7d0]
+00000  011f 0411                check-cast  # TYPE Landroid/transition/Transition;
+00002  021f 0411                check-cast  # TYPE Landroid/transition/Transition;
+00004  031f 0411                check-cast  # TYPE Landroid/transition/Transition;
+00006  0138 0017                if-eqz
+00008  0238 0015                if-eqz
+0000a  0022 0413                new-instance  # TYPE Landroid/transition/TransitionSet;
+0000c  1070 1c48 0000           invoke-direct  # CALL Landroid/transition/TransitionSet;-><init>()V
+0000f  206e 1c49 0010           invoke-virtual  # CALL Landroid/transition/TransitionSet;->addTransition(Landroid/transition/Transition;)Landroid/transition/TransitionSet;
+00012  000c                     move-result-object
+00013  206e 1c49 0020           invoke-virtual  # CALL Landroid/transition/TransitionSet;->addTransition(Landroid/transition/Transition;)Landroid/transition/TransitionSet;
+00016  000c                     move-result-object
+00017  1112                     const/4
+00018  206e 1c4d 0010           invoke-virtual  # CALL Landroid/transition/TransitionSet;->setOrdering(I)Landroid/transition/TransitionSet;
+0001b  010c                     move-result-object
+0001c  0928                     goto
+0001d  0138 0003                if-eqz
+0001f  0628                     goto
+00020  0238 0004                if-eqz
+00022  2107                     op_07
+00023  0228                     goto
+00024  0112                     const/4
+00025  0338 0010                if-eqz
+00027  0022 0413                new-instance  # TYPE Landroid/transition/TransitionSet;
+00029  1070 1c48 0000           invoke-direct  # CALL Landroid/transition/TransitionSet;-><init>()V
+0002c  0138 0005                if-eqz
+0002e  206e 1c49 0010           invoke-virtual  # CALL Landroid/transition/TransitionSet;->addTransition(Landroid/transition/Transition;)Landroid/transition/TransitionSet;
+00031  206e 1c49 0030           invoke-virtual  # CALL Landroid/transition/TransitionSet;->addTransition(Landroid/transition/Transition;)Landroid/transition/TransitionSet;
+00034  0011                     return-object
+00035  0111                     return-object
+
+### Landroid/support/v4/app/q;->a(Landroid/view/ViewGroup;,Ljava/lang/Object;)V  [access=0x1, regs=3, ins=3, outs=2, code_off=0xac98c]
+00000  021f 0411                check-cast  # TYPE Landroid/transition/Transition;
+00002  2071 1c47 0021           invoke-static  # CALL Landroid/transition/TransitionManager;->beginDelayedTransition(Landroid/view/ViewGroup;,Landroid/transition/Transition;)V
+00005  000e                     return-void
+
+### Landroid/support/v4/app/q;->a(Ljava/lang/Object;,Landroid/graphics/Rect;)V  [access=0x1, regs=4, ins=3, outs=3, code_off=0xacafc]
+00000  0238 000c                if-eqz
+00002  021f 0411                check-cast  # TYPE Landroid/transition/Transition;
+00004  0022 02a4                new-instance  # TYPE Landroid/support/v4/app/q$d;
+00006  3070 1005 0310           invoke-direct  # CALL Landroid/support/v4/app/q$d;-><init>(Landroid/support/v4/app/q;,Landroid/graphics/Rect;)V
+00009  206e 1c46 0002           invoke-virtual  # CALL Landroid/transition/Transition;->setEpicenterCallback(Landroid/transition/Transition$EpicenterCallback;)V
+0000c  000e                     return-void
+
+### Landroid/support/v4/app/q;->a(Ljava/lang/Object;,Landroid/view/View;)V  [access=0x1, regs=3, ins=3, outs=2, code_off=0xac8dc]
+00000  0138 0007                if-eqz
+00002  011f 0411                check-cast  # TYPE Landroid/transition/Transition;
+00004  206e 1c3e 0021           invoke-virtual  # CALL Landroid/transition/Transition;->addTarget(Landroid/view/View;)Landroid/transition/Transition;
+00007  000e                     return-void
+
+### Landroid/support/v4/app/q;->a(Ljava/lang/Object;,Landroid/view/View;,Ljava/util/ArrayList;)V  [access=0x1, regs=5, ins=4, outs=4, code_off=0xaca98]
+00000  021f 0411                check-cast  # TYPE Landroid/transition/Transition;
+00002  0022 02a2                new-instance  # TYPE Landroid/support/v4/app/q$b;
+00004  4070 0ff9 4310           invoke-direct  # CALL Landroid/support/v4/app/q$b;-><init>(Landroid/support/v4/app/q;,Landroid/view/View;,Ljava/util/ArrayList;)V
+00007  206e 1c3d 0002           invoke-virtual  # CALL Landroid/transition/Transition;->addListener(Landroid/transition/Transition$TransitionListener;)Landroid/transition/Transition;
+0000a  000e                     return-void
+
+### Landroid/support/v4/app/q;->a(Ljava/lang/Object;,Ljava/lang/Object;,Ljava/util/ArrayList;,Ljava/lang/Object;,Ljava/util/ArrayList;,Ljava/lang/Object;,Ljava/util/ArrayList;)V  [access=0x1, regs=18, ins=8, outs=8, code_off=0xacac0]
+00000  b007                     op_07
+00001  001f 0411                check-cast  # TYPE Landroid/transition/Transition;
+00003  0922 02a3                new-instance  # TYPE Landroid/support/v4/app/q$c;
+00005  9107                     op_07
+00006  a207                     op_07
+00007  c307                     op_07
+00008  d407                     op_07
+00009  e507                     op_07
+0000a  f607                     op_07
+0000b  0708 0010                op_08
+0000d  0808 0011                op_08
+0000f  0876 0fff 0001           invoke-direct/range  # CALL Landroid/support/v4/app/q$c;-><init>(Landroid/support/v4/app/q;,Ljava/lang/Object;,Ljava/util/ArrayList;,Ljava/lang/Object;,Ljava/util/ArrayList;,Ljava/lang/Object;,Ljava/util/ArrayList;)V
+00012  206e 1c3d 0090           invoke-virtual  # CALL Landroid/transition/Transition;->addListener(Landroid/transition/Transition$TransitionListener;)Landroid/transition/Transition;
+00015  000e                     return-void
+
+### Landroid/support/v4/app/q;->a(Ljava/lang/Object;,Ljava/util/ArrayList;)V  [access=0x1, regs=6, ins=3, outs=3, code_off=0xac8fc]
+00000  041f 0411                check-cast  # TYPE Landroid/transition/Transition;
+00002  0439 0003                if-nez
+00004  000e                     return-void
+00005  4020 0413                instance-of  # TYPE Landroid/transition/TransitionSet;
+00007  0112                     const/4
+00008  0038 0014                if-eqz
+0000a  041f 0413                check-cast  # TYPE Landroid/transition/TransitionSet;
+0000c  106e 1c4c 0004           invoke-virtual  # CALL Landroid/transition/TransitionSet;->getTransitionCount()I
+0000f  000a                     move-result
+00010  0135 002e                if-ge
+00012  206e 1c4b 0014           invoke-virtual  # CALL Landroid/transition/TransitionSet;->getTransitionAt(I)Landroid/transition/Transition;
+00015  020c                     move-result-object
+00016  306e 100e 0523           invoke-virtual  # CALL Landroid/support/v4/app/q;->a(Ljava/lang/Object;,Ljava/util/ArrayList;)V
+00019  01d8 0101                op_d8
+0001b  f528                     goto
+0001c  1071 1010 0004           invoke-static  # CALL Landroid/support/v4/app/q;->a(Landroid/transition/Transition;)Z
+0001f  030a                     move-result
+00020  0339 001e                if-nez
+00022  106e 1c43 0004           invoke-virtual  # CALL Landroid/transition/Transition;->getTargets()Ljava/util/List;
+00025  030c                     move-result-object
+00026  1071 1032 0003           invoke-static  # CALL Landroid/support/v4/app/r;->a(Ljava/util/List;)Z
+00029  030a                     move-result
+0002a  0338 0014                if-eqz
+0002c  106e 2df8 0005           invoke-virtual  # CALL Ljava/util/ArrayList;->size()I
+0002f  030a                     move-result
+00030  3135 000e                if-ge
+00032  206e 2df0 0015           invoke-virtual  # CALL Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+00035  000c                     move-result-object
+00036  001f 044c                check-cast  # TYPE Landroid/view/View;
+00038  206e 1c3e 0004           invoke-virtual  # CALL Landroid/transition/Transition;->addTarget(Landroid/view/View;)Landroid/transition/Transition;
+0003b  01d8 0101                op_d8
+0003d  f328                     goto
+0003e  000e                     return-void
+
+### Landroid/support/v4/app/q;->a(Ljava/lang/Object;,Ljava/util/ArrayList;,Ljava/util/ArrayList;)V  [access=0x1, regs=7, ins=4, outs=4, code_off=0xac9c8]
+00000  041f 0411                check-cast  # TYPE Landroid/transition/Transition;
+00002  4020 0413                instance-of  # TYPE Landroid/transition/TransitionSet;
+00004  0112                     const/4
+00005  0038 0014                if-eqz
+00007  041f 0413                check-cast  # TYPE Landroid/transition/TransitionSet;
+00009  106e 1c4c 0004           invoke-virtual  # CALL Landroid/transition/TransitionSet;->getTransitionCount()I
+0000c  000a                     move-result
+0000d  0135 0052                if-ge
+0000f  206e 1c4b 0014           invoke-virtual  # CALL Landroid/transition/TransitionSet;->getTransitionAt(I)Landroid/transition/Transition;
+00012  020c                     move-result-object
+00013  406e 100f 6523           invoke-virtual  # CALL Landroid/support/v4/app/q;->a(Ljava/lang/Object;,Ljava/util/ArrayList;,Ljava/util/ArrayList;)V
+00016  01d8 0101                op_d8
+00018  f528                     goto
+00019  1071 1010 0004           invoke-static  # CALL Landroid/support/v4/app/q;->a(Landroid/transition/Transition;)Z
+0001c  030a                     move-result
+0001d  0339 0042                if-nez
+0001f  106e 1c43 0004           invoke-virtual  # CALL Landroid/transition/Transition;->getTargets()Ljava/util/List;
+00022  030c                     move-result-object
+00023  0338 003c                if-eqz
+00025  1072 2e5d 0003           invoke-interface  # CALL Ljava/util/List;->size()I
+00028  000a                     move-result
+00029  106e 2df8 0005           invoke-virtual  # CALL Ljava/util/ArrayList;->size()I
+0002c  020a                     move-result
+0002d  2033 0032                if-ne
+0002f  2072 2e56 0053           invoke-interface  # CALL Ljava/util/List;->containsAll(Ljava/util/Collection;)Z
+00032  030a                     move-result
+00033  0338 002c                if-eqz
+00035  0639 0004                if-nez
+00037  1301                     op_01
+00038  0528                     goto
+00039  106e 2df8 0006           invoke-virtual  # CALL Ljava/util/ArrayList;->size()I
+0003c  030a                     move-result
+0003d  3135 000e                if-ge
+0003f  206e 2df0 0016           invoke-virtual  # CALL Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+00042  000c                     move-result-object
+00043  001f 044c                check-cast  # TYPE Landroid/view/View;
+00045  206e 1c3e 0004           invoke-virtual  # CALL Landroid/transition/Transition;->addTarget(Landroid/view/View;)Landroid/transition/Transition;
+00048  01d8 0101                op_d8
+0004a  f328                     goto
+0004b  106e 2df8 0005           invoke-virtual  # CALL Ljava/util/ArrayList;->size()I
+0004e  030a                     move-result
+0004f  03d8 ff03                op_d8
+00051  033a 000e                if-ltz
+00053  206e 2df0 0035           invoke-virtual  # CALL Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+00056  060c                     move-result-object
+00057  061f 044c                check-cast  # TYPE Landroid/view/View;
+00059  206e 1c45 0064           invoke-virtual  # CALL Landroid/transition/Transition;->removeTarget(Landroid/view/View;)Landroid/transition/Transition;
+0005c  03d8 ff03                op_d8
+0005e  f328                     goto
+0005f  000e                     return-void
+
+### Landroid/support/v4/app/q;->a(Ljava/lang/Object;)Z  [access=0x1, regs=2, ins=2, outs=0, code_off=0xac738]
+00000  1020 0411                instance-of  # TYPE Landroid/transition/Transition;
+00002  000f                     return
+
+### Landroid/support/v4/app/q;->b(Ljava/lang/Object;)Ljava/lang/Object;  [access=0x1, regs=2, ins=2, outs=1, code_off=0xac7a8]
+00000  0138 0009                if-eqz
+00002  011f 0411                check-cast  # TYPE Landroid/transition/Transition;
+00004  106e 1c3f 0001           invoke-virtual  # CALL Landroid/transition/Transition;->clone()Landroid/transition/Transition;
+00007  000c                     move-result-object
+00008  0228                     goto
+00009  0012                     const/4
+0000a  0011                     return-object
+
+### Landroid/support/v4/app/q;->b(Ljava/lang/Object;,Ljava/lang/Object;,Ljava/lang/Object;)Ljava/lang/Object;  [access=0x1, regs=4, ins=4, outs=2, code_off=0xac84c]
+00000  0022 0413                new-instance  # TYPE Landroid/transition/TransitionSet;
+00002  1070 1c48 0000           invoke-direct  # CALL Landroid/transition/TransitionSet;-><init>()V
+00005  0138 0007                if-eqz
+00007  011f 0411                check-cast  # TYPE Landroid/transition/Transition;
+00009  206e 1c49 0010           invoke-virtual  # CALL Landroid/transition/TransitionSet;->addTransition(Landroid/transition/Transition;)Landroid/transition/TransitionSet;
+0000c  0238 0007                if-eqz
+0000e  021f 0411                check-cast  # TYPE Landroid/transition/Transition;
+00010  206e 1c49 0020           invoke-virtual  # CALL Landroid/transition/TransitionSet;->addTransition(Landroid/transition/Transition;)Landroid/transition/TransitionSet;
+00013  0338 0007                if-eqz
+00015  031f 0411                check-cast  # TYPE Landroid/transition/Transition;
+00017  206e 1c49 0030           invoke-virtual  # CALL Landroid/transition/TransitionSet;->addTransition(Landroid/transition/Transition;)Landroid/transition/TransitionSet;
+0001a  0011                     return-object
+
+### Landroid/support/v4/app/q;->b(Ljava/lang/Object;,Landroid/view/View;)V  [access=0x1, regs=3, ins=3, outs=2, code_off=0xac9a8]
+00000  0138 0007                if-eqz
+00002  011f 0411                check-cast  # TYPE Landroid/transition/Transition;
+00004  206e 1c45 0021           invoke-virtual  # CALL Landroid/transition/Transition;->removeTarget(Landroid/view/View;)Landroid/transition/Transition;
+00007  000e                     return-void
+
+### Landroid/support/v4/app/q;->b(Ljava/lang/Object;,Landroid/view/View;,Ljava/util/ArrayList;)V  [access=0x1, regs=8, ins=4, outs=3, code_off=0xacb64]
+00000  051f 0413                check-cast  # TYPE Landroid/transition/TransitionSet;
+00002  106e 1c4a 0005           invoke-virtual  # CALL Landroid/transition/TransitionSet;->getTargets()Ljava/util/List;
+00005  000c                     move-result-object
+00006  1072 2e54 0000           invoke-interface  # CALL Ljava/util/List;->clear()V
+00009  106e 2df8 0007           invoke-virtual  # CALL Ljava/util/ArrayList;->size()I
+0000c  010a                     move-result
+0000d  0212                     const/4
+0000e  1235 000e                if-ge
+00010  206e 2df0 0027           invoke-virtual  # CALL Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+00013  030c                     move-result-object
+00014  031f 044c                check-cast  # TYPE Landroid/view/View;
+00016  2071 102f 0030           invoke-static  # CALL Landroid/support/v4/app/r;->a(Ljava/util/List;,Landroid/view/View;)V
+00019  02d8 0102                op_d8
+0001b  f328                     goto
+0001c  2072 2e52 0060           invoke-interface  # CALL Ljava/util/List;->add(Ljava/lang/Object;)Z
+0001f  206e 2deb 0067           invoke-virtual  # CALL Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+00022  306e 100e 0754           invoke-virtual  # CALL Landroid/support/v4/app/q;->a(Ljava/lang/Object;,Ljava/util/ArrayList;)V
+00025  000e                     return-void
+
+### Landroid/support/v4/app/q;->b(Ljava/lang/Object;,Ljava/util/ArrayList;,Ljava/util/ArrayList;)V  [access=0x1, regs=5, ins=4, outs=4, code_off=0xacbc0]
+00000  021f 0413                check-cast  # TYPE Landroid/transition/TransitionSet;
+00002  0238 0013                if-eqz
+00004  106e 1c4a 0002           invoke-virtual  # CALL Landroid/transition/TransitionSet;->getTargets()Ljava/util/List;
+00007  000c                     move-result-object
+00008  1072 2e54 0000           invoke-interface  # CALL Ljava/util/List;->clear()V
+0000b  106e 1c4a 0002           invoke-virtual  # CALL Landroid/transition/TransitionSet;->getTargets()Ljava/util/List;
+0000e  000c                     move-result-object
+0000f  2072 2e53 0040           invoke-interface  # CALL Ljava/util/List;->addAll(Ljava/util/Collection;)Z
+00012  406e 100f 4321           invoke-virtual  # CALL Landroid/support/v4/app/q;->a(Ljava/lang/Object;,Ljava/util/ArrayList;,Ljava/util/ArrayList;)V
+00015  000e                     return-void
+
+### Landroid/support/v4/app/q;->c(Ljava/lang/Object;)Ljava/lang/Object;  [access=0x1, regs=2, ins=2, outs=2, code_off=0xac894]
+00000  0139 0004                if-nez
+00002  0012                     const/4
+00003  0011                     return-object
+00004  0022 0413                new-instance  # TYPE Landroid/transition/TransitionSet;
+00006  1070 1c48 0000           invoke-direct  # CALL Landroid/transition/TransitionSet;-><init>()V
+00009  011f 0411                check-cast  # TYPE Landroid/transition/Transition;
+0000b  206e 1c49 0010           invoke-virtual  # CALL Landroid/transition/TransitionSet;->addTransition(Landroid/transition/Transition;)Landroid/transition/TransitionSet;
+0000e  0011                     return-object
+
+### Landroid/support/v4/app/q;->c(Ljava/lang/Object;,Landroid/view/View;)V  [access=0x1, regs=4, ins=3, outs=3, code_off=0xacb28]
+00000  0338 0014                if-eqz
+00002  021f 0411                check-cast  # TYPE Landroid/transition/Transition;
+00004  0022 01b0                new-instance  # TYPE Landroid/graphics/Rect;
+00006  1070 0994 0000           invoke-direct  # CALL Landroid/graphics/Rect;-><init>()V
+00009  306e 1023 0031           invoke-virtual  # CALL Landroid/support/v4/app/r;->a(Landroid/view/View;,Landroid/graphics/Rect;)V
+0000c  0322 02a1                new-instance  # TYPE Landroid/support/v4/app/q$a;
+0000e  3070 0ff7 0013           invoke-direct  # CALL Landroid/support/v4/app/q$a;-><init>(Landroid/support/v4/app/q;,Landroid/graphics/Rect;)V
+00011  206e 1c46 0032           invoke-virtual  # CALL Landroid/transition/Transition;->setEpicenterCallback(Landroid/transition/Transition$EpicenterCallback;)V
+00014  000e                     return-void

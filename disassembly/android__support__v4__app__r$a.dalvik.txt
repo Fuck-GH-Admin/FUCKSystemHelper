@@ -1,0 +1,34 @@
+### Landroid/support/v4/app/r$a;-><init>(Landroid/support/v4/app/r;,I,Ljava/util/ArrayList;,Ljava/util/ArrayList;,Ljava/util/ArrayList;,Ljava/util/ArrayList;)V  [access=0x10000, regs=7, ins=7, outs=1, code_off=0xacbfc]
+00000  0259 0d89                iput  # FIELD Landroid/support/v4/app/r$a;->b:I
+00002  035b 0d8a                iput-object  # FIELD Landroid/support/v4/app/r$a;->c:Ljava/util/ArrayList;
+00004  045b 0d8b                iput-object  # FIELD Landroid/support/v4/app/r$a;->d:Ljava/util/ArrayList;
+00006  055b 0d8c                iput-object  # FIELD Landroid/support/v4/app/r$a;->e:Ljava/util/ArrayList;
+00008  065b 0d8d                iput-object  # FIELD Landroid/support/v4/app/r$a;->f:Ljava/util/ArrayList;
+0000a  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+0000d  000e                     return-void
+
+### Landroid/support/v4/app/r$a;->run()V  [access=0x1, regs=4, ins=1, outs=2, code_off=0xacc28]
+00000  0012                     const/4
+00001  3152 0d89                iget  # FIELD Landroid/support/v4/app/r$a;->b:I
+00003  1035 002b                if-ge
+00005  3154 0d8a                iget-object  # FIELD Landroid/support/v4/app/r$a;->c:Ljava/util/ArrayList;
+00007  206e 2df0 0001           invoke-virtual  # CALL Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+0000a  010c                     move-result-object
+0000b  011f 044c                check-cast  # TYPE Landroid/view/View;
+0000d  3254 0d8b                iget-object  # FIELD Landroid/support/v4/app/r$a;->d:Ljava/util/ArrayList;
+0000f  206e 2df0 0002           invoke-virtual  # CALL Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+00012  020c                     move-result-object
+00013  021f 0683                check-cast  # TYPE Ljava/lang/String;
+00015  2071 253a 0021           invoke-static  # CALL Lb/b/c/g/q;->a(Landroid/view/View;,Ljava/lang/String;)V
+00018  3154 0d8c                iget-object  # FIELD Landroid/support/v4/app/r$a;->e:Ljava/util/ArrayList;
+0001a  206e 2df0 0001           invoke-virtual  # CALL Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+0001d  010c                     move-result-object
+0001e  011f 044c                check-cast  # TYPE Landroid/view/View;
+00020  3254 0d8d                iget-object  # FIELD Landroid/support/v4/app/r$a;->f:Ljava/util/ArrayList;
+00022  206e 2df0 0002           invoke-virtual  # CALL Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+00025  020c                     move-result-object
+00026  021f 0683                check-cast  # TYPE Ljava/lang/String;
+00028  2071 253a 0021           invoke-static  # CALL Lb/b/c/g/q;->a(Landroid/view/View;,Ljava/lang/String;)V
+0002b  00d8 0100                op_d8
+0002d  d428                     goto
+0002e  000e                     return-void

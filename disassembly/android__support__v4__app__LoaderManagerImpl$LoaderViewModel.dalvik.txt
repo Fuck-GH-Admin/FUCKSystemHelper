@@ -1,0 +1,97 @@
+### Landroid/support/v4/app/LoaderManagerImpl$LoaderViewModel;-><clinit>()V  [access=0x10008, regs=1, ins=0, outs=1, code_off=0xb03b4]
+00000  0022 0265                new-instance  # TYPE Landroid/support/v4/app/LoaderManagerImpl$LoaderViewModel$a;
+00002  1070 0def 0000           invoke-direct  # CALL Landroid/support/v4/app/LoaderManagerImpl$LoaderViewModel$a;-><init>()V
+00005  0069 0c73                sput-object  # FIELD Landroid/support/v4/app/LoaderManagerImpl$LoaderViewModel;->b:Landroid/arch/lifecycle/o$a;
+00007  000e                     return-void
+
+### Landroid/support/v4/app/LoaderManagerImpl$LoaderViewModel;-><init>()V  [access=0x10000, regs=2, ins=1, outs=1, code_off=0xb03d4]
+00000  1070 080a 0001           invoke-direct  # CALL Landroid/arch/lifecycle/n;-><init>()V
+00003  0022 051a                new-instance  # TYPE Lb/b/c/f/l;
+00005  1070 24a1 0000           invoke-direct  # CALL Lb/b/c/f/l;-><init>()V
+00008  105b 0c72                iput-object  # FIELD Landroid/support/v4/app/LoaderManagerImpl$LoaderViewModel;->a:Lb/b/c/f/l;
+0000a  000e                     return-void
+
+### Landroid/support/v4/app/LoaderManagerImpl$LoaderViewModel;->a(Landroid/arch/lifecycle/p;)Landroid/support/v4/app/LoaderManagerImpl$LoaderViewModel;  [access=0x8, regs=3, ins=1, outs=3, code_off=0xb0384]
+00000  0022 015a                new-instance  # TYPE Landroid/arch/lifecycle/o;
+00002  0162 0c73                sget-object  # FIELD Landroid/support/v4/app/LoaderManagerImpl$LoaderViewModel;->b:Landroid/arch/lifecycle/o$a;
+00004  3070 080d 0120           invoke-direct  # CALL Landroid/arch/lifecycle/o;-><init>(Landroid/arch/lifecycle/p;,Landroid/arch/lifecycle/o$a;)V
+00007  021c 0266                const-class  # TYPE Landroid/support/v4/app/LoaderManagerImpl$LoaderViewModel;
+00009  206e 080e 0020           invoke-virtual  # CALL Landroid/arch/lifecycle/o;->a(Ljava/lang/Class;)Landroid/arch/lifecycle/n;
+0000c  020c                     move-result-object
+0000d  021f 0266                check-cast  # TYPE Landroid/support/v4/app/LoaderManagerImpl$LoaderViewModel;
+0000f  0211                     return-object
+
+### Landroid/support/v4/app/LoaderManagerImpl$LoaderViewModel;->a()V  [access=0x4, regs=2, ins=1, outs=2, code_off=0xb04f8]
+00000  106f 080b 0001           invoke-super  # CALL Landroid/arch/lifecycle/n;->a()V
+00003  1054 0c72                iget-object  # FIELD Landroid/support/v4/app/LoaderManagerImpl$LoaderViewModel;->a:Lb/b/c/f/l;
+00005  106e 24a6 0000           invoke-virtual  # CALL Lb/b/c/f/l;->b()I
+00008  000a                     move-result
+00009  1154 0c72                iget-object  # FIELD Landroid/support/v4/app/LoaderManagerImpl$LoaderViewModel;->a:Lb/b/c/f/l;
+0000b  003c 0006                if-gtz
+0000d  106e 24a3 0001           invoke-virtual  # CALL Lb/b/c/f/l;->a()V
+00010  000e                     return-void
+00011  0012                     const/4
+00012  206e 24af 0001           invoke-virtual  # CALL Lb/b/c/f/l;->e(I)Ljava/lang/Object;
+00015  010c                     move-result-object
+00016  011f 0267                check-cast  # TYPE Landroid/support/v4/app/LoaderManagerImpl$a;
+00018  1012                     const/4
+00019  206e 0df7 0001           invoke-virtual  # CALL Landroid/support/v4/app/LoaderManagerImpl$a;->a(Z)Lb/b/c/a/b;
+0001c  0112                     const/4
+0001d  0127                     throw
+
+### Landroid/support/v4/app/LoaderManagerImpl$LoaderViewModel;->a(Ljava/lang/String;,Ljava/io/FileDescriptor;,Ljava/io/PrintWriter;,[Ljava/lang/String;)V  [access=0x1, regs=8, ins=5, outs=5, code_off=0xb03fc]
+00000  3054 0c72                iget-object  # FIELD Landroid/support/v4/app/LoaderManagerImpl$LoaderViewModel;->a:Lb/b/c/f/l;
+00002  106e 24a6 0000           invoke-virtual  # CALL Lb/b/c/f/l;->b()I
+00005  000a                     move-result
+00006  003d 004f                if-lez
+00008  206e 2c47 0046           invoke-virtual  # CALL Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+0000b  001a 1184                const-string  # STR "Loaders:"
+0000d  206e 2c4b 0006           invoke-virtual  # CALL Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+00010  0022 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00012  1070 2d35 0000           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00015  206e 2d3f 0040           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00018  011a 0009                const-string  # STR "    "
+0001a  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0001d  106e 2d44 0000           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00020  000c                     move-result-object
+00021  0112                     const/4
+00022  3254 0c72                iget-object  # FIELD Landroid/support/v4/app/LoaderManagerImpl$LoaderViewModel;->a:Lb/b/c/f/l;
+00024  106e 24a6 0002           invoke-virtual  # CALL Lb/b/c/f/l;->b()I
+00027  020a                     move-result
+00028  023c 0003                if-gtz
+0002a  2b28                     goto
+0002b  3254 0c72                iget-object  # FIELD Landroid/support/v4/app/LoaderManagerImpl$LoaderViewModel;->a:Lb/b/c/f/l;
+0002d  206e 24af 0012           invoke-virtual  # CALL Lb/b/c/f/l;->e(I)Ljava/lang/Object;
+00030  020c                     move-result-object
+00031  021f 0267                check-cast  # TYPE Landroid/support/v4/app/LoaderManagerImpl$a;
+00033  206e 2c47 0046           invoke-virtual  # CALL Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+00036  041a 000a                const-string  # STR "  #"
+00038  206e 2c47 0046           invoke-virtual  # CALL Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+0003b  3354 0c72                iget-object  # FIELD Landroid/support/v4/app/LoaderManagerImpl$LoaderViewModel;->a:Lb/b/c/f/l;
+0003d  206e 24a9 0013           invoke-virtual  # CALL Lb/b/c/f/l;->c(I)I
+00040  030a                     move-result
+00041  206e 2c45 0036           invoke-virtual  # CALL Ljava/io/PrintWriter;->print(I)V
+00044  031a 0259                const-string  # STR ": "
+00046  206e 2c47 0036           invoke-virtual  # CALL Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+00049  106e 0dfe 0002           invoke-virtual  # CALL Landroid/support/v4/app/LoaderManagerImpl$a;->toString()Ljava/lang/String;
+0004c  030c                     move-result-object
+0004d  206e 2c4b 0036           invoke-virtual  # CALL Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+00050  576e 0dfb 6502           invoke-virtual  # CALL Landroid/support/v4/app/LoaderManagerImpl$a;->a(Ljava/lang/String;,Ljava/io/FileDescriptor;,Ljava/io/PrintWriter;,[Ljava/lang/String;)V
+00053  0312                     const/4
+00054  0327                     throw
+00055  000e                     return-void
+
+### Landroid/support/v4/app/LoaderManagerImpl$LoaderViewModel;->b()V  [access=0x0, regs=4, ins=1, outs=2, code_off=0xb04b8]
+00000  3054 0c72                iget-object  # FIELD Landroid/support/v4/app/LoaderManagerImpl$LoaderViewModel;->a:Lb/b/c/f/l;
+00002  106e 24a6 0000           invoke-virtual  # CALL Lb/b/c/f/l;->b()I
+00005  000a                     move-result
+00006  0112                     const/4
+00007  0135 0010                if-ge
+00009  3254 0c72                iget-object  # FIELD Landroid/support/v4/app/LoaderManagerImpl$LoaderViewModel;->a:Lb/b/c/f/l;
+0000b  206e 24af 0012           invoke-virtual  # CALL Lb/b/c/f/l;->e(I)Ljava/lang/Object;
+0000e  020c                     move-result-object
+0000f  021f 0267                check-cast  # TYPE Landroid/support/v4/app/LoaderManagerImpl$a;
+00011  106e 0dfd 0002           invoke-virtual  # CALL Landroid/support/v4/app/LoaderManagerImpl$a;->d()V
+00014  01d8 0101                op_d8
+00016  f128                     goto
+00017  000e                     return-void

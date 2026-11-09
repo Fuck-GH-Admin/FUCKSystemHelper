@@ -1,0 +1,49 @@
+### Landroid/support/v4/app/u;-><init>(Landroid/view/View;,Ljava/lang/Runnable;)V  [access=0x10002, regs=3, ins=3, outs=1, code_off=0xb0930]
+00000  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  015b 0d92                iput-object  # FIELD Landroid/support/v4/app/u;->b:Landroid/view/View;
+00005  106e 1d7b 0001           invoke-virtual  # CALL Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+00008  010c                     move-result-object
+00009  015b 0d93                iput-object  # FIELD Landroid/support/v4/app/u;->c:Landroid/view/ViewTreeObserver;
+0000b  025b 0d94                iput-object  # FIELD Landroid/support/v4/app/u;->d:Ljava/lang/Runnable;
+0000d  000e                     return-void
+
+### Landroid/support/v4/app/u;->a(Landroid/view/View;,Ljava/lang/Runnable;)Landroid/support/v4/app/u;  [access=0x9, regs=3, ins=2, outs=3, code_off=0xb08dc]
+00000  0022 02ac                new-instance  # TYPE Landroid/support/v4/app/u;
+00002  3070 1045 0210           invoke-direct  # CALL Landroid/support/v4/app/u;-><init>(Landroid/view/View;,Ljava/lang/Runnable;)V
+00005  106e 1d7b 0001           invoke-virtual  # CALL Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+00008  020c                     move-result-object
+00009  206e 1e52 0002           invoke-virtual  # CALL Landroid/view/ViewTreeObserver;->addOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
+0000c  206e 1d3d 0001           invoke-virtual  # CALL Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+0000f  0011                     return-object
+
+### Landroid/support/v4/app/u;->a()V  [access=0x1, regs=2, ins=1, outs=2, code_off=0xb0994]
+00000  1054 0d93                iget-object  # FIELD Landroid/support/v4/app/u;->c:Landroid/view/ViewTreeObserver;
+00002  106e 1e53 0000           invoke-virtual  # CALL Landroid/view/ViewTreeObserver;->isAlive()Z
+00005  000a                     move-result
+00006  0038 0005                if-eqz
+00008  1054 0d93                iget-object  # FIELD Landroid/support/v4/app/u;->c:Landroid/view/ViewTreeObserver;
+0000a  0728                     goto
+0000b  1054 0d92                iget-object  # FIELD Landroid/support/v4/app/u;->b:Landroid/view/View;
+0000d  106e 1d7b 0000           invoke-virtual  # CALL Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+00010  000c                     move-result-object
+00011  206e 1e55 0010           invoke-virtual  # CALL Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
+00014  1054 0d92                iget-object  # FIELD Landroid/support/v4/app/u;->b:Landroid/view/View;
+00016  206e 1d9d 0010           invoke-virtual  # CALL Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+00019  000e                     return-void
+
+### Landroid/support/v4/app/u;->onPreDraw()Z  [access=0x1, regs=1, ins=1, outs=1, code_off=0xb090c]
+00000  106e 1047 0000           invoke-virtual  # CALL Landroid/support/v4/app/u;->a()V
+00003  0054 0d94                iget-object  # FIELD Landroid/support/v4/app/u;->d:Ljava/lang/Runnable;
+00005  1072 2ceb 0000           invoke-interface  # CALL Ljava/lang/Runnable;->run()V
+00008  1012                     const/4
+00009  000f                     return
+
+### Landroid/support/v4/app/u;->onViewAttachedToWindow(Landroid/view/View;)V  [access=0x1, regs=2, ins=2, outs=1, code_off=0xb095c]
+00000  106e 1d7b 0001           invoke-virtual  # CALL Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+00003  010c                     move-result-object
+00004  015b 0d93                iput-object  # FIELD Landroid/support/v4/app/u;->c:Landroid/view/ViewTreeObserver;
+00006  000e                     return-void
+
+### Landroid/support/v4/app/u;->onViewDetachedFromWindow(Landroid/view/View;)V  [access=0x1, regs=2, ins=2, outs=1, code_off=0xb097c]
+00000  106e 1047 0000           invoke-virtual  # CALL Landroid/support/v4/app/u;->a()V
+00003  000e                     return-void

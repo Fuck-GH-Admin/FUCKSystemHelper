@@ -1,0 +1,33 @@
+### Landroid/support/v4/app/k$c;-><init>(Landroid/support/v4/app/k;,Landroid/view/ViewGroup;,Landroid/view/View;,Landroid/support/v4/app/e;)V  [access=0x10000, regs=5, ins=5, outs=1, code_off=0xa6aa0]
+00000  015b 0d0c                iput-object  # FIELD Landroid/support/v4/app/k$c;->d:Landroid/support/v4/app/k;
+00002  025b 0d09                iput-object  # FIELD Landroid/support/v4/app/k$c;->a:Landroid/view/ViewGroup;
+00004  035b 0d0a                iput-object  # FIELD Landroid/support/v4/app/k$c;->b:Landroid/view/View;
+00006  045b 0d0b                iput-object  # FIELD Landroid/support/v4/app/k$c;->c:Landroid/support/v4/app/e;
+00008  1070 06c2 0000           invoke-direct  # CALL Landroid/animation/AnimatorListenerAdapter;-><init>()V
+0000b  000e                     return-void
+
+### Landroid/support/v4/app/k$c;->onAnimationEnd(Landroid/animation/Animator;)V  [access=0x1, regs=8, ins=2, outs=6, code_off=0xa6ac8]
+00000  6754 0d09                iget-object  # FIELD Landroid/support/v4/app/k$c;->a:Landroid/view/ViewGroup;
+00002  6054 0d0a                iget-object  # FIELD Landroid/support/v4/app/k$c;->b:Landroid/view/View;
+00004  206e 1def 0007           invoke-virtual  # CALL Landroid/view/ViewGroup;->endViewTransition(Landroid/view/View;)V
+00007  6754 0d0b                iget-object  # FIELD Landroid/support/v4/app/k$c;->c:Landroid/support/v4/app/e;
+00009  106e 0e8d 0007           invoke-virtual  # CALL Landroid/support/v4/app/e;->h()Landroid/animation/Animator;
+0000c  070c                     move-result-object
+0000d  6054 0d0b                iget-object  # FIELD Landroid/support/v4/app/k$c;->c:Landroid/support/v4/app/e;
+0000f  0112                     const/4
+00010  206e 0e61 0010           invoke-virtual  # CALL Landroid/support/v4/app/e;->a(Landroid/animation/Animator;)V
+00013  0738 001a                if-eqz
+00015  6754 0d09                iget-object  # FIELD Landroid/support/v4/app/k$c;->a:Landroid/view/ViewGroup;
+00017  6054 0d0a                iget-object  # FIELD Landroid/support/v4/app/k$c;->b:Landroid/view/View;
+00019  206e 1e12 0007           invoke-virtual  # CALL Landroid/view/ViewGroup;->indexOfChild(Landroid/view/View;)I
+0001c  070a                     move-result
+0001d  073b 0010                if-gez
+0001f  6054 0d0c                iget-object  # FIELD Landroid/support/v4/app/k$c;->d:Landroid/support/v4/app/k;
+00021  6154 0d0b                iget-object  # FIELD Landroid/support/v4/app/k$c;->c:Landroid/support/v4/app/e;
+00023  106e 0ea8 0001           invoke-virtual  # CALL Landroid/support/v4/app/e;->x()I
+00026  020a                     move-result
+00027  0312                     const/4
+00028  0412                     const/4
+00029  0512                     const/4
+0002a  0674 0f5b 0000           invoke-virtual/range  # CALL Landroid/support/v4/app/k;->a(Landroid/support/v4/app/e;,I,I,I,Z)V
+0002d  000e                     return-void

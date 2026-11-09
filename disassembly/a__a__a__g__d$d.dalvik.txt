@@ -1,0 +1,292 @@
+### La/a/a/g/d$d;-><init>(La/a/a/g/d;)V  [access=0x10001, regs=2, ins=2, outs=1, code_off=0x6e31c]
+00000  015b 0343                iput-object  # FIELD La/a/a/g/d$d;->a:La/a/a/g/d;
+00002  1070 0a25 0000           invoke-direct  # CALL Landroid/location/GnssStatus$Callback;-><init>()V
+00005  000e                     return-void
+
+### La/a/a/g/d$d;-><init>(La/a/a/g/d;,La/a/a/g/d$a;)V  [access=0x11001, regs=3, ins=3, outs=2, code_off=0x6e338]
+00000  2070 04d7 0010           invoke-direct  # CALL La/a/a/g/d$d;-><init>(La/a/a/g/d;)V
+00003  000e                     return-void
+
+### La/a/a/g/d$d;->onFirstFix(I)V  [access=0x1, regs=2, ins=2, outs=0, code_off=0x6e350]
+00000  000e                     return-void
+
+### La/a/a/g/d$d;->onSatelliteStatusChanged(Landroid/location/GnssStatus;)V  [access=0x1, regs=16, ins=2, outs=7, code_off=0x6e364]
+00000  e054 0343                iget-object  # FIELD La/a/a/g/d$d;->a:La/a/a/g/d;
+00002  1071 0525 0000           invoke-static  # CALL La/a/a/g/d;->e(La/a/a/g/d;)Landroid/location/LocationManager;
+00005  000c                     move-result-object
+00006  0039 0003                if-nez
+00008  000e                     return-void
+00009  0f39 0003                if-nez
+0000b  000e                     return-void
+0000c  e054 0343                iget-object  # FIELD La/a/a/g/d$d;->a:La/a/a/g/d;
+0000e  0071 2d46 0000           invoke-static  # CALL Ljava/lang/System;->currentTimeMillis()J
+00011  010b                     move-result-wide
+00012  3071 0523 0210           invoke-static  # CALL La/a/a/g/d;->e(La/a/a/g/d;,J)J
+00015  106e 0a2a 000f           invoke-virtual  # CALL Landroid/location/GnssStatus;->getSatelliteCount()I
+00018  000a                     move-result
+00019  e154 0343                iget-object  # FIELD La/a/a/g/d$d;->a:La/a/a/g/d;
+0001b  1071 052c 0001           invoke-static  # CALL La/a/a/g/d;->f(La/a/a/g/d;)Ljava/util/ArrayList;
+0001e  010c                     move-result-object
+0001f  106e 2ded 0001           invoke-virtual  # CALL Ljava/util/ArrayList;->clear()V
+00022  e154 0343                iget-object  # FIELD La/a/a/g/d$d;->a:La/a/a/g/d;
+00024  1071 0530 0001           invoke-static  # CALL La/a/a/g/d;->g(La/a/a/g/d;)Ljava/util/ArrayList;
+00027  010c                     move-result-object
+00028  106e 2ded 0001           invoke-virtual  # CALL Ljava/util/ArrayList;->clear()V
+0002b  e154 0343                iget-object  # FIELD La/a/a/g/d$d;->a:La/a/a/g/d;
+0002d  1071 0532 0001           invoke-static  # CALL La/a/a/g/d;->h(La/a/a/g/d;)Ljava/util/ArrayList;
+00030  010c                     move-result-object
+00031  106e 2ded 0001           invoke-virtual  # CALL Ljava/util/ArrayList;->clear()V
+00034  e154 0343                iget-object  # FIELD La/a/a/g/d$d;->a:La/a/a/g/d;
+00036  1071 0535 0001           invoke-static  # CALL La/a/a/g/d;->i(La/a/a/g/d;)Ljava/util/ArrayList;
+00039  010c                     move-result-object
+0003a  106e 2ded 0001           invoke-virtual  # CALL Ljava/util/ArrayList;->clear()V
+0003d  0112                     const/4
+0003e  1201                     op_01
+0003f  2301                     op_01
+00040  3401                     op_01
+00041  4501                     op_01
+00042  1612                     const/4
+00043  0235 00b4                if-ge
+00045  03d8 0103                op_d8
+00047  0722 06c8                new-instance  # TYPE Ljava/util/ArrayList;
+00049  1070 2de7 0007           invoke-direct  # CALL Ljava/util/ArrayList;-><init>()V
+0004c  206e 0a28 002f           invoke-virtual  # CALL Landroid/location/GnssStatus;->getConstellationType(I)I
+0004f  080a                     move-result
+00050  206e 0a26 002f           invoke-virtual  # CALL Landroid/location/GnssStatus;->getAzimuthDegrees(I)F
+00053  090a                     move-result
+00054  1071 2c9b 0009           invoke-static  # CALL Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+00057  090c                     move-result-object
+00058  206e 2deb 0097           invoke-virtual  # CALL Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+0005b  206e 0a29 002f           invoke-virtual  # CALL Landroid/location/GnssStatus;->getElevationDegrees(I)F
+0005e  090a                     move-result
+0005f  1071 2c9b 0009           invoke-static  # CALL Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+00062  090c                     move-result-object
+00063  206e 2deb 0097           invoke-virtual  # CALL Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+00066  206e 0a27 002f           invoke-virtual  # CALL Landroid/location/GnssStatus;->getCn0DbHz(I)F
+00069  090a                     move-result
+0006a  1071 2c9b 0009           invoke-static  # CALL Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+0006d  090c                     move-result-object
+0006e  206e 2deb 0097           invoke-virtual  # CALL Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+00071  206e 0a2c 002f           invoke-virtual  # CALL Landroid/location/GnssStatus;->usedInFix(I)Z
+00074  090a                     move-result
+00075  0a15 3f80                const/high16
+00077  0938 0010                if-eqz
+00079  04d8 0104                op_d8
+0007b  1071 2c9b 000a           invoke-static  # CALL Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+0007e  090c                     move-result-object
+0007f  206e 2deb 0097           invoke-virtual  # CALL Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+00082  6833 000d                if-ne
+00084  05d8 0105                op_d8
+00086  0928                     goto
+00087  0912                     const/4
+00088  1071 2c9b 0009           invoke-static  # CALL Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+0008b  090c                     move-result-object
+0008c  206e 2deb 0097           invoke-virtual  # CALL Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+0008f  206e 0a2b 002f           invoke-virtual  # CALL Landroid/location/GnssStatus;->getSvid(I)I
+00092  090a                     move-result
+00093  9982                     op_82
+00094  1071 2c9b 0009           invoke-static  # CALL Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+00097  090c                     move-result-object
+00098  206e 2deb 0097           invoke-virtual  # CALL Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+0009b  6833 0013                if-ne
+0009d  1071 2c9b 000a           invoke-static  # CALL Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+000a0  060c                     move-result-object
+000a1  206e 2deb 0067           invoke-virtual  # CALL Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+000a4  e654 0343                iget-object  # FIELD La/a/a/g/d$d;->a:La/a/a/g/d;
+000a6  1071 052c 0006           invoke-static  # CALL La/a/a/g/d;->f(La/a/a/g/d;)Ljava/util/ArrayList;
+000a9  060c                     move-result-object
+000aa  206e 2deb 0076           invoke-virtual  # CALL Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+000ad  4628                     goto
+000ae  5612                     const/4
+000af  6833 001e                if-ne
+000b1  0615 4000                const/high16
+000b3  1071 2c9b 0006           invoke-static  # CALL Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+000b6  060c                     move-result-object
+000b7  206e 2deb 0067           invoke-virtual  # CALL Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+000ba  e654 0343                iget-object  # FIELD La/a/a/g/d$d;->a:La/a/a/g/d;
+000bc  1071 0530 0006           invoke-static  # CALL La/a/a/g/d;->g(La/a/a/g/d;)Ljava/util/ArrayList;
+000bf  060c                     move-result-object
+000c0  206e 2deb 0076           invoke-virtual  # CALL Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+000c3  e654 0343                iget-object  # FIELD La/a/a/g/d$d;->a:La/a/a/g/d;
+000c5  0071 2d46 0000           invoke-static  # CALL Ljava/lang/System;->currentTimeMillis()J
+000c8  070b                     move-result-wide
+000c9  3071 052e 0876           invoke-static  # CALL La/a/a/g/d;->g(La/a/a/g/d;,J)J
+000cc  2728                     goto
+000cd  3612                     const/4
+000ce  6833 0012                if-ne
+000d0  0615 4040                const/high16
+000d2  1071 2c9b 0006           invoke-static  # CALL Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+000d5  060c                     move-result-object
+000d6  206e 2deb 0067           invoke-virtual  # CALL Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+000d9  e654 0343                iget-object  # FIELD La/a/a/g/d$d;->a:La/a/a/g/d;
+000db  1071 0532 0006           invoke-static  # CALL La/a/a/g/d;->h(La/a/a/g/d;)Ljava/util/ArrayList;
+000de  060c                     move-result-object
+000df  cb28                     goto
+000e0  6612                     const/4
+000e1  6833 0012                if-ne
+000e3  0615 4080                const/high16
+000e5  1071 2c9b 0006           invoke-static  # CALL Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+000e8  060c                     move-result-object
+000e9  206e 2deb 0067           invoke-virtual  # CALL Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+000ec  e654 0343                iget-object  # FIELD La/a/a/g/d$d;->a:La/a/a/g/d;
+000ee  1071 0535 0006           invoke-static  # CALL La/a/a/g/d;->i(La/a/a/g/d;)Ljava/util/ArrayList;
+000f1  060c                     move-result-object
+000f2  b828                     goto
+000f3  02d8 0102                op_d8
+000f5  0029 ff4d                goto/16
+000f7  0f22 06c8                new-instance  # TYPE Ljava/util/ArrayList;
+000f9  1070 2de7 000f           invoke-direct  # CALL Ljava/util/ArrayList;-><init>()V
+000fc  e054 0343                iget-object  # FIELD La/a/a/g/d$d;->a:La/a/a/g/d;
+000fe  1071 052c 0000           invoke-static  # CALL La/a/a/g/d;->f(La/a/a/g/d;)Ljava/util/ArrayList;
+00101  000c                     move-result-object
+00102  206e 2dec 000f           invoke-virtual  # CALL Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
+00105  e054 0343                iget-object  # FIELD La/a/a/g/d$d;->a:La/a/a/g/d;
+00107  1071 0530 0000           invoke-static  # CALL La/a/a/g/d;->g(La/a/a/g/d;)Ljava/util/ArrayList;
+0010a  000c                     move-result-object
+0010b  206e 2dec 000f           invoke-virtual  # CALL Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
+0010e  e054 0343                iget-object  # FIELD La/a/a/g/d$d;->a:La/a/a/g/d;
+00110  1071 0532 0000           invoke-static  # CALL La/a/a/g/d;->h(La/a/a/g/d;)Ljava/util/ArrayList;
+00113  000c                     move-result-object
+00114  206e 2dec 000f           invoke-virtual  # CALL Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
+00117  e054 0343                iget-object  # FIELD La/a/a/g/d$d;->a:La/a/a/g/d;
+00119  1071 0535 0000           invoke-static  # CALL La/a/a/g/d;->i(La/a/a/g/d;)Ljava/util/ArrayList;
+0011c  000c                     move-result-object
+0011d  206e 2dec 000f           invoke-virtual  # CALL Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
+00120  e054 0343                iget-object  # FIELD La/a/a/g/d$d;->a:La/a/a/g/d;
+00122  2071 0501 00f0           invoke-static  # CALL La/a/a/g/d;->a(La/a/a/g/d;,Ljava/util/ArrayList;)V
+00125  ef54 0343                iget-object  # FIELD La/a/a/g/d$d;->a:La/a/a/g/d;
+00127  1812                     const/4
+00128  0912                     const/4
+00129  0a12                     const/4
+0012a  0b12                     const/4
+0012b  1c12                     const/4
+0012c  0d15 bf80                const/high16
+0012e  f707                     op_07
+0012f  0777 04f8 0007           invoke-static/range  # CALL La/a/a/g/d;->a(La/a/a/g/d;,Z,Z,Z,Z,Z,F)Ljava/util/ArrayList;
+00132  000c                     move-result-object
+00133  2071 0510 000f           invoke-static  # CALL La/a/a/g/d;->b(La/a/a/g/d;,Ljava/util/ArrayList;)Ljava/util/ArrayList;
+00136  ef54 0343                iget-object  # FIELD La/a/a/g/d$d;->a:La/a/a/g/d;
+00138  1071 0538 000f           invoke-static  # CALL La/a/a/g/d;->j(La/a/a/g/d;)Ljava/util/ArrayList;
+0013b  000c                     move-result-object
+0013c  2071 051b 000f           invoke-static  # CALL La/a/a/g/d;->c(La/a/a/g/d;,Ljava/util/ArrayList;)Ljava/lang/String;
+0013f  0f0c                     move-result-object
+00140  0f69 037b                sput-object  # FIELD La/a/a/g/d;->k0:Ljava/lang/String;
+00142  ef54 0343                iget-object  # FIELD La/a/a/g/d$d;->a:La/a/a/g/d;
+00144  1912                     const/4
+00145  1a12                     const/4
+00146  1b12                     const/4
+00147  f707                     op_07
+00148  0777 04f8 0007           invoke-static/range  # CALL La/a/a/g/d;->a(La/a/a/g/d;,Z,Z,Z,Z,Z,F)Ljava/util/ArrayList;
+0014b  000c                     move-result-object
+0014c  2071 0521 000f           invoke-static  # CALL La/a/a/g/d;->d(La/a/a/g/d;,Ljava/util/ArrayList;)Ljava/util/ArrayList;
+0014f  ef54 0343                iget-object  # FIELD La/a/a/g/d$d;->a:La/a/a/g/d;
+00151  0c12                     const/4
+00152  f707                     op_07
+00153  0777 04f8 0007           invoke-static/range  # CALL La/a/a/g/d;->a(La/a/a/g/d;,Z,Z,Z,Z,Z,F)Ljava/util/ArrayList;
+00156  000c                     move-result-object
+00157  2071 0527 000f           invoke-static  # CALL La/a/a/g/d;->e(La/a/a/g/d;,Ljava/util/ArrayList;)Ljava/util/ArrayList;
+0015a  ef54 0343                iget-object  # FIELD La/a/a/g/d$d;->a:La/a/a/g/d;
+0015c  1071 053b 000f           invoke-static  # CALL La/a/a/g/d;->k(La/a/a/g/d;)Ljava/util/ArrayList;
+0015f  000c                     move-result-object
+00160  2071 051b 000f           invoke-static  # CALL La/a/a/g/d;->c(La/a/a/g/d;,Ljava/util/ArrayList;)Ljava/lang/String;
+00163  0f0c                     move-result-object
+00164  0f69 037d                sput-object  # FIELD La/a/a/g/d;->l0:Ljava/lang/String;
+00166  0071 005e 0000           invoke-static  # CALL La/a/a/b/d;->i()La/a/a/b/d;
+00169  0f0c                     move-result-object
+0016a  ff52 003b                iget  # FIELD La/a/a/b/d;->F:I
+0016c  6f33 000f                if-ne
+0016e  0071 00b3 0000           invoke-static  # CALL La/a/a/b/i;->d()La/a/a/b/i;
+00171  0f0c                     move-result-object
+00172  e054 0343                iget-object  # FIELD La/a/a/g/d$d;->a:La/a/a/g/d;
+00174  1071 053b 0000           invoke-static  # CALL La/a/a/g/d;->k(La/a/a/g/d;)Ljava/util/ArrayList;
+00177  000c                     move-result-object
+00178  206e 00af 000f           invoke-virtual  # CALL La/a/a/b/i;->a(Ljava/util/ArrayList;)V
+0017b  0467 0363                sput  # FIELD La/a/a/g/d;->X:I
+0017d  1071 050c 0005           invoke-static  # CALL La/a/a/g/d;->b(I)I
+00180  1071 0537 0003           invoke-static  # CALL La/a/a/g/d;->j(I)I
+00183  0071 2d46 0000           invoke-static  # CALL Ljava/lang/System;->currentTimeMillis()J
+00186  020b                     move-result-wide
+00187  2071 04f4 0032           invoke-static  # CALL La/a/a/g/d;->a(J)J
+0018a  ef54 0343                iget-object  # FIELD La/a/a/g/d$d;->a:La/a/a/g/d;
+0018c  1071 0532 000f           invoke-static  # CALL La/a/a/g/d;->h(La/a/a/g/d;)Ljava/util/ArrayList;
+0018f  000c                     move-result-object
+00190  0215 bf80                const/high16
+00192  4071 04f7 260f           invoke-static  # CALL La/a/a/g/d;->a(La/a/a/g/d;,Ljava/util/ArrayList;,Z,F)Ljava/util/ArrayList;
+00195  0f0c                     move-result-object
+00196  106e 2df8 000f           invoke-virtual  # CALL Ljava/util/ArrayList;->size()I
+00199  0f0a                     move-result
+0019a  1071 0516 000f           invoke-static  # CALL La/a/a/g/d;->c(I)I
+0019d  ef54 0343                iget-object  # FIELD La/a/a/g/d$d;->a:La/a/a/g/d;
+0019f  1071 0535 000f           invoke-static  # CALL La/a/a/g/d;->i(La/a/a/g/d;)Ljava/util/ArrayList;
+001a2  000c                     move-result-object
+001a3  4071 04f7 260f           invoke-static  # CALL La/a/a/g/d;->a(La/a/a/g/d;,Ljava/util/ArrayList;,Z,F)Ljava/util/ArrayList;
+001a6  0f0c                     move-result-object
+001a7  106e 2df8 000f           invoke-virtual  # CALL Ljava/util/ArrayList;->size()I
+001aa  0f0a                     move-result
+001ab  1071 051c 000f           invoke-static  # CALL La/a/a/g/d;->d(I)I
+001ae  ef54 0343                iget-object  # FIELD La/a/a/g/d$d;->a:La/a/a/g/d;
+001b0  1071 0530 000f           invoke-static  # CALL La/a/a/g/d;->g(La/a/a/g/d;)Ljava/util/ArrayList;
+001b3  000c                     move-result-object
+001b4  4071 04f7 260f           invoke-static  # CALL La/a/a/g/d;->a(La/a/a/g/d;,Ljava/util/ArrayList;,Z,F)Ljava/util/ArrayList;
+001b7  0f0c                     move-result-object
+001b8  106e 2df8 000f           invoke-virtual  # CALL Ljava/util/ArrayList;->size()I
+001bb  0f0a                     move-result
+001bc  1071 0522 000f           invoke-static  # CALL La/a/a/g/d;->e(I)I
+001bf  ef54 0343                iget-object  # FIELD La/a/a/g/d$d;->a:La/a/a/g/d;
+001c1  1071 052c 000f           invoke-static  # CALL La/a/a/g/d;->f(La/a/a/g/d;)Ljava/util/ArrayList;
+001c4  000c                     move-result-object
+001c5  4071 04f7 210f           invoke-static  # CALL La/a/a/g/d;->a(La/a/a/g/d;,Ljava/util/ArrayList;,Z,F)Ljava/util/ArrayList;
+001c8  0f0c                     move-result-object
+001c9  106e 2df8 000f           invoke-virtual  # CALL Ljava/util/ArrayList;->size()I
+001cc  0f0a                     move-result
+001cd  1071 0528 000f           invoke-static  # CALL La/a/a/g/d;->f(I)I
+001d0  ef54 0343                iget-object  # FIELD La/a/a/g/d$d;->a:La/a/a/g/d;
+001d2  1071 0532 000f           invoke-static  # CALL La/a/a/g/d;->h(La/a/a/g/d;)Ljava/util/ArrayList;
+001d5  000c                     move-result-object
+001d6  4071 04f7 210f           invoke-static  # CALL La/a/a/g/d;->a(La/a/a/g/d;,Ljava/util/ArrayList;,Z,F)Ljava/util/ArrayList;
+001d9  0f0c                     move-result-object
+001da  106e 2df8 000f           invoke-virtual  # CALL Ljava/util/ArrayList;->size()I
+001dd  0f0a                     move-result
+001de  1071 052d 000f           invoke-static  # CALL La/a/a/g/d;->g(I)I
+001e1  ef54 0343                iget-object  # FIELD La/a/a/g/d$d;->a:La/a/a/g/d;
+001e3  1071 0535 000f           invoke-static  # CALL La/a/a/g/d;->i(La/a/a/g/d;)Ljava/util/ArrayList;
+001e6  000c                     move-result-object
+001e7  4071 04f7 210f           invoke-static  # CALL La/a/a/g/d;->a(La/a/a/g/d;,Ljava/util/ArrayList;,Z,F)Ljava/util/ArrayList;
+001ea  0f0c                     move-result-object
+001eb  106e 2df8 000f           invoke-virtual  # CALL Ljava/util/ArrayList;->size()I
+001ee  0f0a                     move-result
+001ef  1071 0531 000f           invoke-static  # CALL La/a/a/g/d;->h(I)I
+001f2  ee54 0343                iget-object  # FIELD La/a/a/g/d$d;->a:La/a/a/g/d;
+001f4  1071 0530 000e           invoke-static  # CALL La/a/a/g/d;->g(La/a/a/g/d;)Ljava/util/ArrayList;
+001f7  0f0c                     move-result-object
+001f8  4071 04f7 21fe           invoke-static  # CALL La/a/a/g/d;->a(La/a/a/g/d;,Ljava/util/ArrayList;,Z,F)Ljava/util/ArrayList;
+001fb  0e0c                     move-result-object
+001fc  106e 2df8 000e           invoke-virtual  # CALL Ljava/util/ArrayList;->size()I
+001ff  0e0a                     move-result
+00200  1071 0534 000e           invoke-static  # CALL La/a/a/g/d;->i(I)I
+00203  000e                     return-void
+
+### La/a/a/g/d$d;->onStarted()V  [access=0x1, regs=1, ins=1, outs=0, code_off=0x6e77c]
+00000  000e                     return-void
+
+### La/a/a/g/d$d;->onStopped()V  [access=0x1, regs=3, ins=1, outs=2, code_off=0x6e790]
+00000  2054 0343                iget-object  # FIELD La/a/a/g/d$d;->a:La/a/a/g/d;
+00002  0112                     const/4
+00003  2071 04fd 0010           invoke-static  # CALL La/a/a/g/d;->a(La/a/a/g/d;,Landroid/location/Location;)V
+00006  2254 0343                iget-object  # FIELD La/a/a/g/d$d;->a:La/a/a/g/d;
+00008  0012                     const/4
+00009  2071 0502 0002           invoke-static  # CALL La/a/a/g/d;->a(La/a/a/g/d;,Z)V
+0000c  0067 0363                sput  # FIELD La/a/a/g/d;->X:I
+0000e  1071 050c 0000           invoke-static  # CALL La/a/a/g/d;->b(I)I
+00011  1071 0516 0000           invoke-static  # CALL La/a/a/g/d;->c(I)I
+00014  1071 051c 0000           invoke-static  # CALL La/a/a/g/d;->d(I)I
+00017  1071 0522 0000           invoke-static  # CALL La/a/a/g/d;->e(I)I
+0001a  1071 0528 0000           invoke-static  # CALL La/a/a/g/d;->f(I)I
+0001d  1071 052d 0000           invoke-static  # CALL La/a/a/g/d;->g(I)I
+00020  1071 0531 0000           invoke-static  # CALL La/a/a/g/d;->h(I)I
+00023  1071 0534 0000           invoke-static  # CALL La/a/a/g/d;->i(I)I
+00026  1071 0537 0000           invoke-static  # CALL La/a/a/g/d;->j(I)I
+00029  f212                     const/4
+0002a  1071 053a 0002           invoke-static  # CALL La/a/a/g/d;->k(I)I
+0002d  1071 0519 0001           invoke-static  # CALL La/a/a/g/d;->c(Landroid/location/Location;)Landroid/location/Location;
+00030  000e                     return-void

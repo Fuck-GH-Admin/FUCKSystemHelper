@@ -1,0 +1,141 @@
+### La/a/a/b/s;-><clinit>()V  [access=0x10009, regs=1, ins=0, outs=0, code_off=0x5392c]
+00000  6012                     const/4
+00001  0023 0722                new-array  # TYPE [D
+00003  0026 0007 0000           fill-array-data
+00006  0069 011e                sput-object  # FIELD La/a/a/b/s;->c:[D
+00008  000e                     return-void
+00009  0000                     nop
+0000a  0300 0008 0006 0000 0000 0000 3c00 409f 0000 0000 0000 4020 0000 0000 0000 4036 ... <payload; units=28>
+
+### La/a/a/b/s;-><init>()V  [access=0x10001, regs=2, ins=1, outs=1, code_off=0x53988]
+00000  1070 2ce0 0001           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  0022 06d4                new-instance  # TYPE Ljava/util/HashMap;
+00005  1070 2e29 0000           invoke-direct  # CALL Ljava/util/HashMap;-><init>()V
+00008  105b 011c                iput-object  # FIELD La/a/a/b/s;->a:Ljava/util/HashMap;
+0000a  0022 06d4                new-instance  # TYPE Ljava/util/HashMap;
+0000c  1070 2e29 0000           invoke-direct  # CALL Ljava/util/HashMap;-><init>()V
+0000f  105b 011d                iput-object  # FIELD La/a/a/b/s;->b:Ljava/util/HashMap;
+00011  000e                     return-void
+
+### La/a/a/b/s;->b()[D  [access=0x1009, regs=1, ins=0, outs=0, code_off=0x53818]
+00000  0062 011e                sget-object  # FIELD La/a/a/b/s;->c:[D
+00002  0011                     return-object
+
+### La/a/a/b/s;->c()La/a/a/b/s;  [access=0x9, regs=1, ins=0, outs=0, code_off=0x537fc]
+00000  0071 016a 0000           invoke-static  # CALL La/a/a/b/s$a;->a()La/a/a/b/s;
+00003  000c                     move-result-object
+00004  0011                     return-object
+
+### La/a/a/b/s;->a()Ljava/util/ArrayList;  [access=0x1, regs=9, ins=1, outs=3, code_off=0x53830]
+00000  0022 06c8                new-instance  # TYPE Ljava/util/ArrayList;
+00002  1070 2de7 0000           invoke-direct  # CALL Ljava/util/ArrayList;-><init>()V
+00005  8154 011c                iget-object  # FIELD La/a/a/b/s;->a:Ljava/util/HashMap;
+00007  106e 2e2c 0001           invoke-virtual  # CALL Ljava/util/HashMap;->entrySet()Ljava/util/Set;
+0000a  010c                     move-result-object
+0000b  1072 2e7c 0001           invoke-interface  # CALL Ljava/util/Set;->iterator()Ljava/util/Iterator;
+0000e  010c                     move-result-object
+0000f  1072 2e43 0001           invoke-interface  # CALL Ljava/util/Iterator;->hasNext()Z
+00012  020a                     move-result
+00013  0238 0061                if-eqz
+00015  1072 2e44 0001           invoke-interface  # CALL Ljava/util/Iterator;->next()Ljava/lang/Object;
+00018  020c                     move-result-object
+00019  021f 06dc                check-cast  # TYPE Ljava/util/Map$Entry;
+0001b  1072 2e64 0002           invoke-interface  # CALL Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+0001e  030c                     move-result-object
+0001f  031f 0683                check-cast  # TYPE Ljava/lang/String;
+00021  1072 2e65 0002           invoke-interface  # CALL Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+00024  020c                     move-result-object
+00025  021f 0040                check-cast  # TYPE La/a/a/b/s$c;
+00027  1071 016f 0002           invoke-static  # CALL La/a/a/b/s$c;->a(La/a/a/b/s$c;)Ljava/lang/String;
+0002a  020c                     move-result-object
+0002b  0238 ffe4                if-eqz
+0002d  106e 2d12 0002           invoke-virtual  # CALL Ljava/lang/String;->length()I
+00030  040a                     move-result
+00031  0439 0003                if-nez
+00033  dc28                     goto
+00034  8454 011d                iget-object  # FIELD La/a/a/b/s;->b:Ljava/util/HashMap;
+00036  206e 2e2b 0034           invoke-virtual  # CALL Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
+00039  040a                     move-result
+0003a  0439 0008                if-nez
+0003c  8454 011d                iget-object  # FIELD La/a/a/b/s;->b:Ljava/util/HashMap;
+0003e  306e 2e2f 0234           invoke-virtual  # CALL Ljava/util/HashMap;->put(Ljava/lang/Object;,Ljava/lang/Object;)Ljava/lang/Object;
+00041  1b28                     goto
+00042  8454 011d                iget-object  # FIELD La/a/a/b/s;->b:Ljava/util/HashMap;
+00044  206e 2e2d 0034           invoke-virtual  # CALL Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+00047  040c                     move-result-object
+00048  041f 0683                check-cast  # TYPE Ljava/lang/String;
+0004a  0513 0064                const/16
+0004c  0612                     const/4
+0004d  306e 2d1a 0562           invoke-virtual  # CALL Ljava/lang/String;->substring(I,I)Ljava/lang/String;
+00050  070c                     move-result-object
+00051  306e 2d1a 0564           invoke-virtual  # CALL Ljava/lang/String;->substring(I,I)Ljava/lang/String;
+00054  040c                     move-result-object
+00055  206e 2d03 0047           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+00058  040a                     move-result
+00059  0438 0003                if-eqz
+0005b  b428                     goto
+0005c  0422 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0005e  1070 2d35 0004           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00061  206e 2d3f 0034           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00064  0313 007c                const/16
+00066  206e 2d38 0034           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+00069  206e 2d3f 0024           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0006c  106e 2d44 0004           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0006f  020c                     move-result-object
+00070  206e 2deb 0020           invoke-virtual  # CALL Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+00073  9c28                     goto
+00074  0011                     return-object
+
+### La/a/a/b/s;->a(Landroid/location/GnssNavigationMessage;,J)V  [access=0x1, regs=9, ins=4, outs=4, code_off=0x539bc]
+00000  106e 0a23 0006           invoke-virtual  # CALL Landroid/location/GnssNavigationMessage;->getSvid()I
+00003  000a                     move-result
+00004  106e 0a24 0006           invoke-virtual  # CALL Landroid/location/GnssNavigationMessage;->getType()I
+00007  010a                     move-result
+00008  0213 0101                const/16
+0000a  031a 21d1                const-string  # STR "none"
+0000c  2132 0020                if-eq
+0000e  0213 0301                const/16
+00010  2132 0019                if-eq
+00012  0213 0601                const/16
+00014  2132 0012                if-eq
+00016  0213 0501                const/16
+00018  2132 000b                if-eq
+0001a  0213 0502                const/16
+0001c  2132 0004                if-eq
+0001e  3207                     op_07
+0001f  0f28                     goto
+00020  021a 0525                const-string  # STR "CT"
+00022  0c28                     goto
+00023  021a 04f9                const-string  # STR "CO"
+00025  0928                     goto
+00026  021a 0745                const-string  # STR "E"
+00028  0628                     goto
+00029  021a 1342                const-string  # STR "R"
+0002b  0328                     goto
+0002c  021a 07e9                const-string  # STR "G"
+0002e  0422 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00030  1070 2d35 0004           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00033  206e 2d3f 0024           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00036  206e 2d3b 0004           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+00039  106e 2d44 0004           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0003c  020c                     move-result-object
+0003d  206e 2d01 0032           invoke-virtual  # CALL Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+00040  030a                     move-result
+00041  0338 0003                if-eqz
+00043  000e                     return-void
+00044  5354 011c                iget-object  # FIELD La/a/a/b/s;->a:Ljava/util/HashMap;
+00046  0339 0003                if-nez
+00048  000e                     return-void
+00049  206e 2e2b 0023           invoke-virtual  # CALL Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
+0004c  030a                     move-result
+0004d  0339 000c                if-nez
+0004f  0322 0040                new-instance  # TYPE La/a/a/b/s$c;
+00051  4070 016c 1053           invoke-direct  # CALL La/a/a/b/s$c;-><init>(La/a/a/b/s;,I,I)V
+00054  5054 011c                iget-object  # FIELD La/a/a/b/s;->a:Ljava/util/HashMap;
+00056  306e 2e2f 0320           invoke-virtual  # CALL Ljava/util/HashMap;->put(Ljava/lang/Object;,Ljava/lang/Object;)Ljava/lang/Object;
+00059  5554 011c                iget-object  # FIELD La/a/a/b/s;->a:Ljava/util/HashMap;
+0005b  206e 2e2d 0025           invoke-virtual  # CALL Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+0005e  050c                     move-result-object
+0005f  051f 0040                check-cast  # TYPE La/a/a/b/s$c;
+00061  4071 0173 8765           invoke-static  # CALL La/a/a/b/s$c;->a(La/a/a/b/s$c;,Landroid/location/GnssNavigationMessage;,J)V
+00064  000e                     return-void

@@ -1,0 +1,48 @@
+### Landroid/support/v7/widget/SearchView$o;-><clinit>()V  [access=0x10008, regs=1, ins=0, outs=1, code_off=0xe9ffc]
+00000  0022 0361                new-instance  # TYPE Landroid/support/v7/widget/SearchView$o$a;
+00002  1070 16dd 0000           invoke-direct  # CALL Landroid/support/v7/widget/SearchView$o$a;-><init>()V
+00005  0069 1069                sput-object  # FIELD Landroid/support/v7/widget/SearchView$o;->CREATOR:Landroid/os/Parcelable$Creator;
+00007  000e                     return-void
+
+### Landroid/support/v7/widget/SearchView$o;-><init>(Landroid/os/Parcel;,Ljava/lang/ClassLoader;)V  [access=0x10001, regs=3, ins=3, outs=3, code_off=0xea01c]
+00000  3070 24c3 0210           invoke-direct  # CALL Lb/b/c/g/a;-><init>(Landroid/os/Parcel;,Ljava/lang/ClassLoader;)V
+00003  0212                     const/4
+00004  206e 0ae9 0021           invoke-virtual  # CALL Landroid/os/Parcel;->readValue(Ljava/lang/ClassLoader;)Ljava/lang/Object;
+00007  010c                     move-result-object
+00008  011f 0657                check-cast  # TYPE Ljava/lang/Boolean;
+0000a  106e 2c65 0001           invoke-virtual  # CALL Ljava/lang/Boolean;->booleanValue()Z
+0000d  010a                     move-result
+0000e  015c 106a                iput-boolean  # FIELD Landroid/support/v7/widget/SearchView$o;->d:Z
+00010  000e                     return-void
+
+### Landroid/support/v7/widget/SearchView$o;-><init>(Landroid/os/Parcelable;)V  [access=0x10000, regs=2, ins=2, outs=2, code_off=0xea050]
+00000  2070 24c4 0010           invoke-direct  # CALL Lb/b/c/g/a;-><init>(Landroid/os/Parcelable;)V
+00003  000e                     return-void
+
+### Landroid/support/v7/widget/SearchView$o;->toString()Ljava/lang/String;  [access=0x1, regs=3, ins=1, outs=2, code_off=0xe9f98]
+00000  0022 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00002  1070 2d35 0000           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00005  011a 13f7                const-string  # STR "SearchView.SavedState{"
+00007  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0000a  1071 2d47 0002           invoke-static  # CALL Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+0000d  010a                     move-result
+0000e  1071 2cac 0001           invoke-static  # CALL Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+00011  010c                     move-result-object
+00012  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00015  011a 0063                const-string  # STR " isIconified="
+00017  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0001a  2255 106a                iget-boolean  # FIELD Landroid/support/v7/widget/SearchView$o;->d:Z
+0001c  206e 2d40 0020           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+0001f  021a 28df                const-string  # STR "}"
+00021  206e 2d3f 0020           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00024  106e 2d44 0000           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00027  020c                     move-result-object
+00028  0211                     return-object
+
+### Landroid/support/v7/widget/SearchView$o;->writeToParcel(Landroid/os/Parcel;,I)V  [access=0x1, regs=3, ins=3, outs=3, code_off=0xea068]
+00000  306f 24c8 0210           invoke-super  # CALL Lb/b/c/g/a;->writeToParcel(Landroid/os/Parcel;,I)V
+00003  0055 106a                iget-boolean  # FIELD Landroid/support/v7/widget/SearchView$o;->d:Z
+00005  1071 2c67 0000           invoke-static  # CALL Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+00008  000c                     move-result-object
+00009  206e 0af9 0001           invoke-virtual  # CALL Landroid/os/Parcel;->writeValue(Ljava/lang/Object;)V
+0000c  000e                     return-void

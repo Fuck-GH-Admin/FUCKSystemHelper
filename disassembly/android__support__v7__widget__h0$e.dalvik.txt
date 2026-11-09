@@ -1,0 +1,28 @@
+### Landroid/support/v7/widget/h0$e;-><init>(Landroid/support/v7/widget/h0;)V  [access=0x10000, regs=2, ins=2, outs=1, code_off=0xe7754]
+00000  015b 1141                iput-object  # FIELD Landroid/support/v7/widget/h0$e;->a:Landroid/support/v7/widget/h0;
+00002  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00005  000e                     return-void
+
+### Landroid/support/v7/widget/h0$e;->onScroll(Landroid/widget/AbsListView;,I,I,I)V  [access=0x1, regs=5, ins=5, outs=0, code_off=0xe7770]
+00000  000e                     return-void
+
+### Landroid/support/v7/widget/h0$e;->onScrollStateChanged(Landroid/widget/AbsListView;,I)V  [access=0x1, regs=3, ins=3, outs=2, code_off=0xe7784]
+00000  1112                     const/4
+00001  1233 0024                if-ne
+00003  0154 1141                iget-object  # FIELD Landroid/support/v7/widget/h0$e;->a:Landroid/support/v7/widget/h0;
+00005  106e 192f 0001           invoke-virtual  # CALL Landroid/support/v7/widget/h0;->j()Z
+00008  010a                     move-result
+00009  0139 001c                if-nez
+0000b  0154 1141                iget-object  # FIELD Landroid/support/v7/widget/h0$e;->a:Landroid/support/v7/widget/h0;
+0000d  1154 1149                iget-object  # FIELD Landroid/support/v7/widget/h0;->F:Landroid/widget/PopupWindow;
+0000f  106e 2090 0001           invoke-virtual  # CALL Landroid/widget/PopupWindow;->getContentView()Landroid/view/View;
+00012  010c                     move-result-object
+00013  0138 0012                if-eqz
+00015  0154 1141                iget-object  # FIELD Landroid/support/v7/widget/h0$e;->a:Landroid/support/v7/widget/h0;
+00017  1254 1145                iget-object  # FIELD Landroid/support/v7/widget/h0;->B:Landroid/os/Handler;
+00019  1154 1163                iget-object  # FIELD Landroid/support/v7/widget/h0;->x:Landroid/support/v7/widget/h0$g;
+0001b  206e 0ab9 0012           invoke-virtual  # CALL Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+0001e  0054 1141                iget-object  # FIELD Landroid/support/v7/widget/h0$e;->a:Landroid/support/v7/widget/h0;
+00020  0054 1163                iget-object  # FIELD Landroid/support/v7/widget/h0;->x:Landroid/support/v7/widget/h0$g;
+00022  106e 190d 0000           invoke-virtual  # CALL Landroid/support/v7/widget/h0$g;->run()V
+00025  000e                     return-void

@@ -1,0 +1,35 @@
+### La/a/a/f/d$b;-><clinit>()V  [access=0x10009, regs=5, ins=0, outs=3, code_off=0x69248]
+00000  0022 00ae                new-instance  # TYPE La/a/a/f/d$b;
+00002  0112                     const/4
+00003  021a 1257                const-string  # STR "NEED_TO_LOG"
+00005  3070 044f 0120           invoke-direct  # CALL La/a/a/f/d$b;-><init>(Ljava/lang/String;,I)V
+00008  0069 02eb                sput-object  # FIELD La/a/a/f/d$b;->b:La/a/a/f/d$b;
+0000a  0222 00ae                new-instance  # TYPE La/a/a/f/d$b;
+0000c  1312                     const/4
+0000d  041a 126e                const-string  # STR "NO_NEED_TO_LOG"
+0000f  3070 044f 0342           invoke-direct  # CALL La/a/a/f/d$b;-><init>(Ljava/lang/String;,I)V
+00012  0269 02ec                sput-object  # FIELD La/a/a/f/d$b;->c:La/a/a/f/d$b;
+00014  2412                     const/4
+00015  4423 0726                new-array  # TYPE [La/a/a/f/d$b;
+00017  004d 0104                aput-object
+00019  024d 0304                aput-object
+0001b  0469 02ed                sput-object  # FIELD La/a/a/f/d$b;->d:[La/a/a/f/d$b;
+0001d  000e                     return-void
+
+### La/a/a/f/d$b;-><init>(Ljava/lang/String;,I)V  [access=0x10001, regs=3, ins=3, outs=3, code_off=0x69294]
+00000  3070 2c8c 0210           invoke-direct  # CALL Ljava/lang/Enum;-><init>(Ljava/lang/String;,I)V
+00003  000e                     return-void
+
+### La/a/a/f/d$b;->valueOf(Ljava/lang/String;)La/a/a/f/d$b;  [access=0x9, regs=2, ins=1, outs=2, code_off=0x69200]
+00000  001c 00ae                const-class  # TYPE La/a/a/f/d$b;
+00002  2071 2c91 0010           invoke-static  # CALL Ljava/lang/Enum;->valueOf(Ljava/lang/Class;,Ljava/lang/String;)Ljava/lang/Enum;
+00005  010c                     move-result-object
+00006  011f 00ae                check-cast  # TYPE La/a/a/f/d$b;
+00008  0111                     return-object
+
+### La/a/a/f/d$b;->values()[La/a/a/f/d$b;  [access=0x9, regs=1, ins=0, outs=1, code_off=0x69224]
+00000  0062 02ed                sget-object  # FIELD La/a/a/f/d$b;->d:[La/a/a/f/d$b;
+00002  106e 2f40 0000           invoke-virtual  # CALL [La/a/a/f/d$b;->clone()Ljava/lang/Object;
+00005  000c                     move-result-object
+00006  001f 0726                check-cast  # TYPE [La/a/a/f/d$b;
+00008  0011                     return-object

@@ -1,0 +1,254 @@
+### Landroid/support/v7/widget/x0;-><init>(Landroid/content/Context;)V  [access=0x10000, regs=4, ins=2, outs=3, code_off=0xf162c]
+00000  1070 2ce0 0002           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  0022 045c                new-instance  # TYPE Landroid/view/WindowManager$LayoutParams;
+00005  1070 1e81 0000           invoke-direct  # CALL Landroid/view/WindowManager$LayoutParams;-><init>()V
+00008  205b 121e                iput-object  # FIELD Landroid/support/v7/widget/x0;->d:Landroid/view/WindowManager$LayoutParams;
+0000a  0022 01b0                new-instance  # TYPE Landroid/graphics/Rect;
+0000c  1070 0994 0000           invoke-direct  # CALL Landroid/graphics/Rect;-><init>()V
+0000f  205b 121f                iput-object  # FIELD Landroid/support/v7/widget/x0;->e:Landroid/graphics/Rect;
+00011  2012                     const/4
+00012  0123 0724                new-array  # TYPE [I
+00014  215b 1220                iput-object  # FIELD Landroid/support/v7/widget/x0;->f:[I
+00016  0023 0724                new-array  # TYPE [I
+00018  205b 1221                iput-object  # FIELD Landroid/support/v7/widget/x0;->g:[I
+0001a  235b 121b                iput-object  # FIELD Landroid/support/v7/widget/x0;->a:Landroid/content/Context;
+0001c  1071 1cb8 0003           invoke-static  # CALL Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+0001f  030c                     move-result-object
+00020  0060 16ca                sget  # FIELD Lb/b/d/a/g;->abc_tooltip:I
+00022  0112                     const/4
+00023  306e 1cbb 0103           invoke-virtual  # CALL Landroid/view/LayoutInflater;->inflate(I,Landroid/view/ViewGroup;)Landroid/view/View;
+00026  030c                     move-result-object
+00027  235b 121c                iput-object  # FIELD Landroid/support/v7/widget/x0;->b:Landroid/view/View;
+00029  0060 1678                sget  # FIELD Lb/b/d/a/f;->message:I
+0002b  206e 1d47 0003           invoke-virtual  # CALL Landroid/view/View;->findViewById(I)Landroid/view/View;
+0002e  030c                     move-result-object
+0002f  031f 04a3                check-cast  # TYPE Landroid/widget/TextView;
+00031  235b 121d                iput-object  # FIELD Landroid/support/v7/widget/x0;->c:Landroid/widget/TextView;
+00033  2354 121e                iget-object  # FIELD Landroid/support/v7/widget/x0;->d:Landroid/view/WindowManager$LayoutParams;
+00035  001c 03ca                const-class  # TYPE Landroid/support/v7/widget/x0;
+00037  106e 2c81 0000           invoke-virtual  # CALL Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+0003a  000c                     move-result-object
+0003b  206e 1e83 0003           invoke-virtual  # CALL Landroid/view/WindowManager$LayoutParams;->setTitle(Ljava/lang/CharSequence;)V
+0003e  2354 121e                iget-object  # FIELD Landroid/support/v7/widget/x0;->d:Landroid/view/WindowManager$LayoutParams;
+00040  2054 121b                iget-object  # FIELD Landroid/support/v7/widget/x0;->a:Landroid/content/Context;
+00042  106e 0847 0000           invoke-virtual  # CALL Landroid/content/Context;->getPackageName()Ljava/lang/String;
+00045  000c                     move-result-object
+00046  305b 1264                iput-object  # FIELD Landroid/view/WindowManager$LayoutParams;->packageName:Ljava/lang/String;
+00048  2254 121e                iget-object  # FIELD Landroid/support/v7/widget/x0;->d:Landroid/view/WindowManager$LayoutParams;
+0004a  0313 03ea                const/16
+0004c  2359 1266                iput  # FIELD Landroid/view/WindowManager$LayoutParams;->type:I
+0004e  e312                     const/4
+0004f  2359 1267                iput  # FIELD Landroid/view/WindowManager$LayoutParams;->width:I
+00051  2359 1263                iput  # FIELD Landroid/view/WindowManager$LayoutParams;->height:I
+00053  d312                     const/4
+00054  2359 1261                iput  # FIELD Landroid/view/WindowManager$LayoutParams;->format:I
+00056  0360 1702                sget  # FIELD Lb/b/d/a/i;->Animation_AppCompat_Tooltip:I
+00058  2359 1268                iput  # FIELD Landroid/view/WindowManager$LayoutParams;->windowAnimations:I
+0005a  0313 0018                const/16
+0005c  2359 1260                iput  # FIELD Landroid/view/WindowManager$LayoutParams;->flags:I
+0005e  000e                     return-void
+
+### Landroid/support/v7/widget/x0;->a(Landroid/view/View;)Landroid/view/View;  [access=0xa, regs=4, ins=1, outs=1, code_off=0xf158c]
+00000  106e 1d6c 0003           invoke-virtual  # CALL Landroid/view/View;->getRootView()Landroid/view/View;
+00003  000c                     move-result-object
+00004  106e 1d5b 0000           invoke-virtual  # CALL Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+00007  010c                     move-result-object
+00008  1220 045c                instance-of  # TYPE Landroid/view/WindowManager$LayoutParams;
+0000a  0238 000a                if-eqz
+0000c  011f 045c                check-cast  # TYPE Landroid/view/WindowManager$LayoutParams;
+0000e  1152 1266                iget  # FIELD Landroid/view/WindowManager$LayoutParams;->type:I
+00010  2212                     const/4
+00011  2133 0003                if-ne
+00013  0011                     return-object
+00014  106e 1d51 0003           invoke-virtual  # CALL Landroid/view/View;->getContext()Landroid/content/Context;
+00017  030c                     move-result-object
+00018  3120 016f                instance-of  # TYPE Landroid/content/ContextWrapper;
+0001a  0138 0018                if-eqz
+0001c  3120 011f                instance-of  # TYPE Landroid/app/Activity;
+0001e  0138 000d                if-eqz
+00020  031f 011f                check-cast  # TYPE Landroid/app/Activity;
+00022  106e 0708 0003           invoke-virtual  # CALL Landroid/app/Activity;->getWindow()Landroid/view/Window;
+00025  030c                     move-result-object
+00026  106e 1e72 0003           invoke-virtual  # CALL Landroid/view/Window;->getDecorView()Landroid/view/View;
+00029  030c                     move-result-object
+0002a  0311                     return-object
+0002b  031f 016f                check-cast  # TYPE Landroid/content/ContextWrapper;
+0002d  106e 0862 0003           invoke-virtual  # CALL Landroid/content/ContextWrapper;->getBaseContext()Landroid/content/Context;
+00030  030c                     move-result-object
+00031  e728                     goto
+00032  0011                     return-object
+
+### Landroid/support/v7/widget/x0;->a(Landroid/view/View;,I,I,Z,Landroid/view/WindowManager$LayoutParams;)V  [access=0x2, regs=14, ins=6, outs=5, code_off=0xf16fc]
+00000  106e 1d4b 0009           invoke-virtual  # CALL Landroid/view/View;->getApplicationWindowToken()Landroid/os/IBinder;
+00003  000c                     move-result-object
+00004  d05b 1265                iput-object  # FIELD Landroid/view/WindowManager$LayoutParams;->token:Landroid/os/IBinder;
+00006  8054 121b                iget-object  # FIELD Landroid/support/v7/widget/x0;->a:Landroid/content/Context;
+00008  106e 0848 0000           invoke-virtual  # CALL Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+0000b  000c                     move-result-object
+0000c  0160 15e0                sget  # FIELD Lb/b/d/a/d;->tooltip_precise_anchor_threshold:I
+0000e  206e 08c9 0010           invoke-virtual  # CALL Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
+00011  000a                     move-result
+00012  106e 1d7d 0009           invoke-virtual  # CALL Landroid/view/View;->getWidth()I
+00015  010a                     move-result
+00016  0134 0003                if-lt
+00018  0728                     goto
+00019  106e 1d7d 0009           invoke-virtual  # CALL Landroid/view/View;->getWidth()I
+0001c  0a0a                     move-result
+0001d  0adb 020a                op_db
+0001f  106e 1d56 0009           invoke-virtual  # CALL Landroid/view/View;->getHeight()I
+00022  010a                     move-result
+00023  0212                     const/4
+00024  0134 0012                if-lt
+00026  8054 121b                iget-object  # FIELD Landroid/support/v7/widget/x0;->a:Landroid/content/Context;
+00028  106e 0848 0000           invoke-virtual  # CALL Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+0002b  000c                     move-result-object
+0002c  0160 15df                sget  # FIELD Lb/b/d/a/d;->tooltip_precise_anchor_extra_offset:I
+0002e  206e 08c9 0010           invoke-virtual  # CALL Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
+00031  000a                     move-result
+00032  0190 000b                int-add
+00034  0bb1                     op_b1
+00035  0628                     goto
+00036  106e 1d56 0009           invoke-virtual  # CALL Landroid/view/View;->getHeight()I
+00039  010a                     move-result
+0003a  2b01                     op_01
+0003b  0013 0031                const/16
+0003d  d059 1262                iput  # FIELD Landroid/view/WindowManager$LayoutParams;->gravity:I
+0003f  8054 121b                iget-object  # FIELD Landroid/support/v7/widget/x0;->a:Landroid/content/Context;
+00041  106e 0848 0000           invoke-virtual  # CALL Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+00044  000c                     move-result-object
+00045  0c38 0005                if-eqz
+00047  0360 15e3                sget  # FIELD Lb/b/d/a/d;->tooltip_y_offset_touch:I
+00049  0328                     goto
+0004a  0360 15e2                sget  # FIELD Lb/b/d/a/d;->tooltip_y_offset_non_touch:I
+0004c  206e 08c9 0030           invoke-virtual  # CALL Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
+0004f  000a                     move-result
+00050  1071 1b15 0009           invoke-static  # CALL Landroid/support/v7/widget/x0;->a(Landroid/view/View;)Landroid/view/View;
+00053  030c                     move-result-object
+00054  0339 000a                if-nez
+00056  081a 150c                const-string  # STR "TooltipPopup"
+00058  091a 0536                const-string  # STR "Cannot find app view"
+0005a  2071 1c5b 0098           invoke-static  # CALL Landroid/util/Log;->e(Ljava/lang/String;,Ljava/lang/String;)I
+0005d  000e                     return-void
+0005e  8454 121f                iget-object  # FIELD Landroid/support/v7/widget/x0;->e:Landroid/graphics/Rect;
+00060  206e 1d80 0043           invoke-virtual  # CALL Landroid/view/View;->getWindowVisibleDisplayFrame(Landroid/graphics/Rect;)V
+00063  8454 121f                iget-object  # FIELD Landroid/support/v7/widget/x0;->e:Landroid/graphics/Rect;
+00065  4552 0538                iget  # FIELD Landroid/graphics/Rect;->left:I
+00067  053b 002b                if-gez
+00069  4452 053a                iget  # FIELD Landroid/graphics/Rect;->top:I
+0006b  043b 0027                if-gez
+0006d  8454 121b                iget-object  # FIELD Landroid/support/v7/widget/x0;->a:Landroid/content/Context;
+0006f  106e 0848 0004           invoke-virtual  # CALL Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+00072  040c                     move-result-object
+00073  051a 270d                const-string  # STR "status_bar_height"
+00075  061a 1b42                const-string  # STR "dimen"
+00077  071a 1903                const-string  # STR "android"
+00079  406e 08d1 7654           invoke-virtual  # CALL Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;,Ljava/lang/String;,Ljava/lang/String;)I
+0007c  050a                     move-result
+0007d  0538 0007                if-eqz
+0007f  206e 08ca 0054           invoke-virtual  # CALL Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+00082  050a                     move-result
+00083  0228                     goto
+00084  2501                     op_01
+00085  106e 08cb 0004           invoke-virtual  # CALL Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+00088  040c                     move-result-object
+00089  8654 121f                iget-object  # FIELD Landroid/support/v7/widget/x0;->e:Landroid/graphics/Rect;
+0008b  4752 124c                iget  # FIELD Landroid/util/DisplayMetrics;->widthPixels:I
+0008d  4452 124b                iget  # FIELD Landroid/util/DisplayMetrics;->heightPixels:I
+0008f  546e 09a0 7526           invoke-virtual  # CALL Landroid/graphics/Rect;->set(I,I,I,I)V
+00092  8454 1221                iget-object  # FIELD Landroid/support/v7/widget/x0;->g:[I
+00094  206e 1d5e 0043           invoke-virtual  # CALL Landroid/view/View;->getLocationOnScreen([I)V
+00097  8454 1220                iget-object  # FIELD Landroid/support/v7/widget/x0;->f:[I
+00099  206e 1d5e 0049           invoke-virtual  # CALL Landroid/view/View;->getLocationOnScreen([I)V
+0009c  8954 1220                iget-object  # FIELD Landroid/support/v7/widget/x0;->f:[I
+0009e  0444 0209                aget
+000a0  8554 1221                iget-object  # FIELD Landroid/support/v7/widget/x0;->g:[I
+000a2  0644 0205                aget
+000a4  64b1                     op_b1
+000a5  044b 0209                aput
+000a7  1412                     const/4
+000a8  0644 0409                aget
+000aa  0544 0405                aget
+000ac  56b1                     op_b1
+000ad  064b 0409                aput
+000af  0944 0209                aget
+000b1  a9b0                     op_b0
+000b2  106e 1d7d 0003           invoke-virtual  # CALL Landroid/view/View;->getWidth()I
+000b5  0a0a                     move-result
+000b6  0adb 020a                op_db
+000b8  a9b1                     op_b1
+000b9  d959 1269                iput  # FIELD Landroid/view/WindowManager$LayoutParams;->x:I
+000bb  2071 1d38 0022           invoke-static  # CALL Landroid/view/View$MeasureSpec;->makeMeasureSpec(I,I)I
+000be  090a                     move-result
+000bf  8a54 121c                iget-object  # FIELD Landroid/support/v7/widget/x0;->b:Landroid/view/View;
+000c1  306e 1d90 099a           invoke-virtual  # CALL Landroid/view/View;->measure(I,I)V
+000c4  8954 121c                iget-object  # FIELD Landroid/support/v7/widget/x0;->b:Landroid/view/View;
+000c6  106e 1d5f 0009           invoke-virtual  # CALL Landroid/view/View;->getMeasuredHeight()I
+000c9  090a                     move-result
+000ca  8a54 1220                iget-object  # FIELD Landroid/support/v7/widget/x0;->f:[I
+000cc  0244 040a                aget
+000ce  b2b0                     op_b0
+000cf  02b1                     op_b1
+000d0  92b1                     op_b1
+000d1  0a44 040a                aget
+000d3  1ab0                     op_b0
+000d4  0ab0                     op_b0
+000d5  0c38 0005                if-eqz
+000d7  023a 000c                if-ltz
+000d9  0d28                     goto
+000da  a9b0                     op_b0
+000db  8854 121f                iget-object  # FIELD Landroid/support/v7/widget/x0;->e:Landroid/graphics/Rect;
+000dd  106e 099b 0008           invoke-virtual  # CALL Landroid/graphics/Rect;->height()I
+000e0  080a                     move-result
+000e1  8936 0005                if-gt
+000e3  da59 126a                iput  # FIELD Landroid/view/WindowManager$LayoutParams;->y:I
+000e5  0328                     goto
+000e6  d259 126a                iput  # FIELD Landroid/view/WindowManager$LayoutParams;->y:I
+000e8  000e                     return-void
+
+### Landroid/support/v7/widget/x0;->a()V  [access=0x0, regs=3, ins=1, outs=2, code_off=0xf18e0]
+00000  106e 1b19 0002           invoke-virtual  # CALL Landroid/support/v7/widget/x0;->b()Z
+00003  000a                     move-result
+00004  0039 0003                if-nez
+00006  000e                     return-void
+00007  2054 121b                iget-object  # FIELD Landroid/support/v7/widget/x0;->a:Landroid/content/Context;
+00009  011a 2892                const-string  # STR "window"
+0000b  206e 084c 0010           invoke-virtual  # CALL Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+0000e  000c                     move-result-object
+0000f  001f 045d                check-cast  # TYPE Landroid/view/WindowManager;
+00011  2254 121c                iget-object  # FIELD Landroid/support/v7/widget/x0;->b:Landroid/view/View;
+00013  2072 1e86 0020           invoke-interface  # CALL Landroid/view/WindowManager;->removeView(Landroid/view/View;)V
+00016  000e                     return-void
+
+### Landroid/support/v7/widget/x0;->a(Landroid/view/View;,I,I,Z,Ljava/lang/CharSequence;)V  [access=0x0, regs=13, ins=6, outs=6, code_off=0xf1920]
+00000  106e 1b19 0007           invoke-virtual  # CALL Landroid/support/v7/widget/x0;->b()Z
+00003  000a                     move-result
+00004  0038 0005                if-eqz
+00006  106e 1b16 0007           invoke-virtual  # CALL Landroid/support/v7/widget/x0;->a()V
+00009  7054 121d                iget-object  # FIELD Landroid/support/v7/widget/x0;->c:Landroid/widget/TextView;
+0000b  206e 2146 00c0           invoke-virtual  # CALL Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+0000e  7654 121e                iget-object  # FIELD Landroid/support/v7/widget/x0;->d:Landroid/view/WindowManager$LayoutParams;
+00010  7107                     op_07
+00011  8207                     op_07
+00012  9301                     op_01
+00013  a401                     op_01
+00014  b501                     op_01
+00015  0676 1b17 0001           invoke-direct/range  # CALL Landroid/support/v7/widget/x0;->a(Landroid/view/View;,I,I,Z,Landroid/view/WindowManager$LayoutParams;)V
+00018  7854 121b                iget-object  # FIELD Landroid/support/v7/widget/x0;->a:Landroid/content/Context;
+0001a  091a 2892                const-string  # STR "window"
+0001c  206e 084c 0098           invoke-virtual  # CALL Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+0001f  080c                     move-result-object
+00020  081f 045d                check-cast  # TYPE Landroid/view/WindowManager;
+00022  7954 121c                iget-object  # FIELD Landroid/support/v7/widget/x0;->b:Landroid/view/View;
+00024  7754 121e                iget-object  # FIELD Landroid/support/v7/widget/x0;->d:Landroid/view/WindowManager$LayoutParams;
+00026  3072 1e84 0798           invoke-interface  # CALL Landroid/view/WindowManager;->addView(Landroid/view/View;,Landroid/view/ViewGroup$LayoutParams;)V
+00029  000e                     return-void
+
+### Landroid/support/v7/widget/x0;->b()Z  [access=0x0, regs=1, ins=1, outs=1, code_off=0xf1604]
+00000  0054 121c                iget-object  # FIELD Landroid/support/v7/widget/x0;->b:Landroid/view/View;
+00002  106e 1d67 0000           invoke-virtual  # CALL Landroid/view/View;->getParent()Landroid/view/ViewParent;
+00005  000c                     move-result-object
+00006  0038 0004                if-eqz
+00008  1012                     const/4
+00009  0228                     goto
+0000a  0012                     const/4
+0000b  000f                     return

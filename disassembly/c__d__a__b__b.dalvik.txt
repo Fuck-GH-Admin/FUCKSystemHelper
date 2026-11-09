@@ -1,0 +1,178 @@
+### Lc/d/a/b/b;-><init>()V  [access=0x10001, regs=4, ins=1, outs=1, code_off=0x11228c]
+00000  1070 2ce0 0003           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  0016 0000                const-wide/16
+00005  305a 1ba8                iput-wide  # FIELD Lc/d/a/b/b;->c:J
+00007  305a 1ba9                iput-wide  # FIELD Lc/d/a/b/b;->d:J
+00009  305a 1baa                iput-wide  # FIELD Lc/d/a/b/b;->e:J
+0000b  305a 1bab                iput-wide  # FIELD Lc/d/a/b/b;->f:J
+0000d  f212                     const/4
+0000e  3259 1bac                iput  # FIELD Lc/d/a/b/b;->g:I
+00010  305a 1bad                iput-wide  # FIELD Lc/d/a/b/b;->h:J
+00012  305a 1bae                iput-wide  # FIELD Lc/d/a/b/b;->i:J
+00014  305a 1baf                iput-wide  # FIELD Lc/d/a/b/b;->j:J
+00016  305a 1bb0                iput-wide  # FIELD Lc/d/a/b/b;->k:J
+00018  000e                     return-void
+
+### Lc/d/a/b/b;->a()Lorg/json/JSONObject;  [access=0x1, regs=7, ins=1, outs=3, code_off=0x112068]
+00000  001a 08fc                const-string  # STR "KB"
+00002  0122 071a                new-instance  # TYPE Lorg/json/JSONObject;
+00004  1070 2f13 0001           invoke-direct  # CALL Lorg/json/JSONObject;-><init>()V
+00007  0071 2995 0000           invoke-static  # CALL Lc/d/a/b/l;->a()Ljava/lang/String;
+0000a  020c                     move-result-object
+0000b  6354 1ba7                iget-object  # FIELD Lc/d/a/b/b;->b:Ljava/lang/String;
+0000d  041a 0000                const-string  # STR ""
+0000f  0339 0004                if-nez
+00011  645b 1ba7                iput-object  # FIELD Lc/d/a/b/b;->b:Ljava/lang/String;
+00013  031a 1954                const-string  # STR "appLabel"
+00015  6554 1ba7                iget-object  # FIELD Lc/d/a/b/b;->b:Ljava/lang/String;
+00017  306e 2f2b 0531           invoke-virtual  # CALL Lorg/json/JSONObject;->put(Ljava/lang/String;,Ljava/lang/Object;)Lorg/json/JSONObject;
+0001a  6354 1ba6                iget-object  # FIELD Lc/d/a/b/b;->a:Ljava/lang/String;
+0001c  0339 0004                if-nez
+0001e  645b 1ba6                iput-object  # FIELD Lc/d/a/b/b;->a:Ljava/lang/String;
+00020  031a 2355                const-string  # STR "pkgName"
+00022  6454 1ba6                iget-object  # FIELD Lc/d/a/b/b;->a:Ljava/lang/String;
+00024  306e 2f2b 0431           invoke-virtual  # CALL Lorg/json/JSONObject;->put(Ljava/lang/String;,Ljava/lang/Object;)Lorg/json/JSONObject;
+00027  031a 14eb                const-string  # STR "Time"
+00029  306e 2f2b 0231           invoke-virtual  # CALL Lorg/json/JSONObject;->put(Ljava/lang/String;,Ljava/lang/Object;)Lorg/json/JSONObject;
+0002c  021a 2496                const-string  # STR "runTime"
+0002e  0322 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00030  1070 2d35 0003           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00033  6453 1ba8                iget-wide  # FIELD Lc/d/a/b/b;->c:J
+00035  306e 2d3c 0543           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+00038  041a 2152                const-string  # STR "min"
+0003a  206e 2d3f 0043           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0003d  106e 2d44 0003           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00040  030c                     move-result-object
+00041  306e 2f2b 0321           invoke-virtual  # CALL Lorg/json/JSONObject;->put(Ljava/lang/String;,Ljava/lang/Object;)Lorg/json/JSONObject;
+00044  021a 27f2                const-string  # STR "tx1"
+00046  0322 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00048  1070 2d35 0003           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0004b  6453 1bad                iget-wide  # FIELD Lc/d/a/b/b;->h:J
+0004d  306e 2d3c 0543           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+00050  206e 2d3f 0003           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00053  106e 2d44 0003           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00056  030c                     move-result-object
+00057  306e 2f2b 0321           invoke-virtual  # CALL Lorg/json/JSONObject;->put(Ljava/lang/String;,Ljava/lang/Object;)Lorg/json/JSONObject;
+0005a  021a 249c                const-string  # STR "rx1"
+0005c  0322 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0005e  1070 2d35 0003           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00061  6453 1bae                iget-wide  # FIELD Lc/d/a/b/b;->i:J
+00063  306e 2d3c 0543           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+00066  206e 2d3f 0003           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00069  106e 2d44 0003           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0006c  030c                     move-result-object
+0006d  306e 2f2b 0321           invoke-virtual  # CALL Lorg/json/JSONObject;->put(Ljava/lang/String;,Ljava/lang/Object;)Lorg/json/JSONObject;
+00070  021a 27f3                const-string  # STR "tx2"
+00072  0322 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00074  1070 2d35 0003           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00077  6453 1baf                iget-wide  # FIELD Lc/d/a/b/b;->j:J
+00079  306e 2d3c 0543           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+0007c  206e 2d3f 0003           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0007f  106e 2d44 0003           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00082  030c                     move-result-object
+00083  306e 2f2b 0321           invoke-virtual  # CALL Lorg/json/JSONObject;->put(Ljava/lang/String;,Ljava/lang/Object;)Lorg/json/JSONObject;
+00086  021a 249d                const-string  # STR "rx2"
+00088  0322 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0008a  1070 2d35 0003           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0008d  6453 1bb0                iget-wide  # FIELD Lc/d/a/b/b;->k:J
+0008f  306e 2d3c 0543           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+00092  206e 2d3f 0003           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00095  106e 2d44 0003           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00098  030c                     move-result-object
+00099  306e 2f2b 0321           invoke-virtual  # CALL Lorg/json/JSONObject;->put(Ljava/lang/String;,Ljava/lang/Object;)Lorg/json/JSONObject;
+0009c  021a 27cd                const-string  # STR "totalData1"
+0009e  0322 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+000a0  1070 2d35 0003           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+000a3  6453 1ba9                iget-wide  # FIELD Lc/d/a/b/b;->d:J
+000a5  306e 2d3c 0543           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+000a8  206e 2d3f 0003           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000ab  106e 2d44 0003           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+000ae  030c                     move-result-object
+000af  306e 2f2b 0321           invoke-virtual  # CALL Lorg/json/JSONObject;->put(Ljava/lang/String;,Ljava/lang/Object;)Lorg/json/JSONObject;
+000b2  021a 27ce                const-string  # STR "totalData2"
+000b4  0322 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+000b6  1070 2d35 0003           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+000b9  6453 1baa                iget-wide  # FIELD Lc/d/a/b/b;->e:J
+000bb  306e 2d3c 0543           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+000be  206e 2d3f 0003           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000c1  106e 2d44 0003           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+000c4  000c                     move-result-object
+000c5  306e 2f2b 0021           invoke-virtual  # CALL Lorg/json/JSONObject;->put(Ljava/lang/String;,Ljava/lang/Object;)Lorg/json/JSONObject;
+000c8  001a 27cf                const-string  # STR "totalDataWiFi"
+000ca  0222 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+000cc  1070 2d35 0002           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+000cf  6353 1bab                iget-wide  # FIELD Lc/d/a/b/b;->f:J
+000d1  306e 2d3c 0432           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+000d4  061a 11b2                const-string  # STR "MB"
+000d6  206e 2d3f 0062           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000d9  106e 2d44 0002           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+000dc  060c                     move-result-object
+000dd  306e 2f2b 0601           invoke-virtual  # CALL Lorg/json/JSONObject;->put(Ljava/lang/String;,Ljava/lang/Object;)Lorg/json/JSONObject;
+000e0  1c28                     goto
+000e1  060d                     op_0d
+000e2  0022 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+000e4  1070 2d35 0000           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+000e7  021a 1d7f                const-string  # STR "getJsonObject->"
+000e9  206e 2d3f 0020           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000ec  106e 2f11 0006           invoke-virtual  # CALL Lorg/json/JSONException;->getMessage()Ljava/lang/String;
+000ef  060c                     move-result-object
+000f0  206e 2d3f 0060           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000f3  106e 2d44 0000           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+000f6  060c                     move-result-object
+000f7  001a 0404                const-string  # STR "AppInfo"
+000f9  2071 2988 0060           invoke-static  # CALL Lc/d/a/b/h;->b(Ljava/lang/String;,Ljava/lang/String;)V
+000fc  0111                     return-object
+
+### Lc/d/a/b/b;->a(I)V  [access=0x1, regs=2, ins=2, outs=0, code_off=0x1123e8]
+00000  0159 1bac                iput  # FIELD Lc/d/a/b/b;->g:I
+00002  000e                     return-void
+
+### Lc/d/a/b/b;->a(J)V  [access=0x1, regs=3, ins=3, outs=0, code_off=0x112300]
+00000  015a 1ba8                iput-wide  # FIELD Lc/d/a/b/b;->c:J
+00002  000e                     return-void
+
+### Lc/d/a/b/b;->a(Ljava/lang/String;)V  [access=0x1, regs=2, ins=2, outs=0, code_off=0x1122d0]
+00000  015b 1ba7                iput-object  # FIELD Lc/d/a/b/b;->b:Ljava/lang/String;
+00002  000e                     return-void
+
+### Lc/d/a/b/b;->b()I  [access=0x1, regs=1, ins=1, outs=0, code_off=0x112050]
+00000  0052 1bac                iget  # FIELD Lc/d/a/b/b;->g:I
+00002  000f                     return
+
+### Lc/d/a/b/b;->b(J)V  [access=0x1, regs=3, ins=3, outs=0, code_off=0x112318]
+00000  015a 1bae                iput-wide  # FIELD Lc/d/a/b/b;->i:J
+00002  000e                     return-void
+
+### Lc/d/a/b/b;->b(Ljava/lang/String;)V  [access=0x1, regs=2, ins=2, outs=0, code_off=0x1122e8]
+00000  015b 1ba6                iput-object  # FIELD Lc/d/a/b/b;->a:Ljava/lang/String;
+00002  000e                     return-void
+
+### Lc/d/a/b/b;->c(J)V  [access=0x1, regs=3, ins=3, outs=0, code_off=0x112330]
+00000  015a 1bb0                iput-wide  # FIELD Lc/d/a/b/b;->k:J
+00002  000e                     return-void
+
+### Lc/d/a/b/b;->d(J)V  [access=0x1, regs=3, ins=3, outs=0, code_off=0x112348]
+00000  000e                     return-void
+
+### Lc/d/a/b/b;->e(J)V  [access=0x1, regs=3, ins=3, outs=0, code_off=0x11235c]
+00000  015a 1ba9                iput-wide  # FIELD Lc/d/a/b/b;->d:J
+00002  000e                     return-void
+
+### Lc/d/a/b/b;->f(J)V  [access=0x1, regs=3, ins=3, outs=0, code_off=0x112374]
+00000  015a 1baa                iput-wide  # FIELD Lc/d/a/b/b;->e:J
+00002  000e                     return-void
+
+### Lc/d/a/b/b;->g(J)V  [access=0x1, regs=3, ins=3, outs=0, code_off=0x11238c]
+00000  015a 1bab                iput-wide  # FIELD Lc/d/a/b/b;->f:J
+00002  000e                     return-void
+
+### Lc/d/a/b/b;->h(J)V  [access=0x1, regs=3, ins=3, outs=0, code_off=0x1123a4]
+00000  015a 1bad                iput-wide  # FIELD Lc/d/a/b/b;->h:J
+00002  000e                     return-void
+
+### Lc/d/a/b/b;->i(J)V  [access=0x1, regs=3, ins=3, outs=0, code_off=0x1123bc]
+00000  015a 1baf                iput-wide  # FIELD Lc/d/a/b/b;->j:J
+00002  000e                     return-void
+
+### Lc/d/a/b/b;->j(J)V  [access=0x1, regs=3, ins=3, outs=0, code_off=0x1123d4]
+00000  000e                     return-void

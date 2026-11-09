@@ -1,0 +1,47 @@
+### Landroid/support/v7/widget/h0$f;-><init>(Landroid/support/v7/widget/h0;)V  [access=0x10000, regs=2, ins=2, outs=1, code_off=0xe788c]
+00000  015b 1142                iput-object  # FIELD Landroid/support/v7/widget/h0$f;->b:Landroid/support/v7/widget/h0;
+00002  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00005  000e                     return-void
+
+### Landroid/support/v7/widget/h0$f;->onTouch(Landroid/view/View;,Landroid/view/MotionEvent;)Z  [access=0x1, regs=5, ins=3, outs=4, code_off=0xe77e0]
+00000  106e 1d07 0004           invoke-virtual  # CALL Landroid/view/MotionEvent;->getAction()I
+00003  030a                     move-result
+00004  106e 1d0d 0004           invoke-virtual  # CALL Landroid/view/MotionEvent;->getX()F
+00007  000a                     move-result
+00008  0087                     op_87
+00009  106e 1d0f 0004           invoke-virtual  # CALL Landroid/view/MotionEvent;->getY()F
+0000c  040a                     move-result
+0000d  4487                     op_87
+0000e  0339 0032                if-nez
+00010  2154 1142                iget-object  # FIELD Landroid/support/v7/widget/h0$f;->b:Landroid/support/v7/widget/h0;
+00012  1154 1149                iget-object  # FIELD Landroid/support/v7/widget/h0;->F:Landroid/widget/PopupWindow;
+00014  0138 002c                if-eqz
+00016  106e 2095 0001           invoke-virtual  # CALL Landroid/widget/PopupWindow;->isShowing()Z
+00019  010a                     move-result
+0001a  0138 0026                if-eqz
+0001c  003a 0024                if-ltz
+0001e  2154 1142                iget-object  # FIELD Landroid/support/v7/widget/h0$f;->b:Landroid/support/v7/widget/h0;
+00020  1154 1149                iget-object  # FIELD Landroid/support/v7/widget/h0;->F:Landroid/widget/PopupWindow;
+00022  106e 2094 0001           invoke-virtual  # CALL Landroid/widget/PopupWindow;->getWidth()I
+00025  010a                     move-result
+00026  1035 001a                if-ge
+00028  043a 0018                if-ltz
+0002a  2054 1142                iget-object  # FIELD Landroid/support/v7/widget/h0$f;->b:Landroid/support/v7/widget/h0;
+0002c  0054 1149                iget-object  # FIELD Landroid/support/v7/widget/h0;->F:Landroid/widget/PopupWindow;
+0002e  106e 2091 0000           invoke-virtual  # CALL Landroid/widget/PopupWindow;->getHeight()I
+00031  000a                     move-result
+00032  0435 000e                if-ge
+00034  2254 1142                iget-object  # FIELD Landroid/support/v7/widget/h0$f;->b:Landroid/support/v7/widget/h0;
+00036  2354 1145                iget-object  # FIELD Landroid/support/v7/widget/h0;->B:Landroid/os/Handler;
+00038  2254 1163                iget-object  # FIELD Landroid/support/v7/widget/h0;->x:Landroid/support/v7/widget/h0$g;
+0003a  0016 00fa                const-wide/16
+0003c  406e 0ab8 1023           invoke-virtual  # CALL Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;,J)Z
+0003f  0d28                     goto
+00040  1412                     const/4
+00041  4333 000b                if-ne
+00043  2254 1142                iget-object  # FIELD Landroid/support/v7/widget/h0$f;->b:Landroid/support/v7/widget/h0;
+00045  2354 1145                iget-object  # FIELD Landroid/support/v7/widget/h0;->B:Landroid/os/Handler;
+00047  2254 1163                iget-object  # FIELD Landroid/support/v7/widget/h0;->x:Landroid/support/v7/widget/h0$g;
+00049  206e 0ab9 0023           invoke-virtual  # CALL Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+0004c  0212                     const/4
+0004d  020f                     return

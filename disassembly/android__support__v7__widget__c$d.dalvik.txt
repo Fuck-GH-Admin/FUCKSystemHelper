@@ -1,0 +1,75 @@
+### Landroid/support/v7/widget/c$d;-><init>(Landroid/support/v7/widget/c;,Landroid/content/Context;)V  [access=0x10001, regs=5, ins=3, outs=4, code_off=0xdb1dc]
+00000  235b 10ed                iput-object  # FIELD Landroid/support/v7/widget/c$d;->d:Landroid/support/v7/widget/c;
+00002  0060 1428                sget  # FIELD Lb/b/d/a/a;->actionOverflowButtonStyle:I
+00004  0112                     const/4
+00005  4070 1a28 0142           invoke-direct  # CALL Landroid/support/v7/widget/o;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;,I)V
+00008  1412                     const/4
+00009  206e 1fe9 0042           invoke-virtual  # CALL Landroid/widget/ImageView;->setClickable(Z)V
+0000c  206e 1fec 0042           invoke-virtual  # CALL Landroid/widget/ImageView;->setFocusable(Z)V
+0000f  0012                     const/4
+00010  206e 1ff8 0002           invoke-virtual  # CALL Landroid/widget/ImageView;->setVisibility(I)V
+00013  206e 1feb 0042           invoke-virtual  # CALL Landroid/widget/ImageView;->setEnabled(Z)V
+00016  106e 1fd1 0002           invoke-virtual  # CALL Landroid/widget/ImageView;->getContentDescription()Ljava/lang/CharSequence;
+00019  040c                     move-result-object
+0001a  2071 1aba 0042           invoke-static  # CALL Landroid/support/v7/widget/v0;->a(Landroid/view/View;,Ljava/lang/CharSequence;)V
+0001d  0422 0379                new-instance  # TYPE Landroid/support/v7/widget/c$d$a;
+0001f  4070 181e 3224           invoke-direct  # CALL Landroid/support/v7/widget/c$d$a;-><init>(Landroid/support/v7/widget/c$d;,Landroid/view/View;,Landroid/support/v7/widget/c;)V
+00022  206e 1ff6 0042           invoke-virtual  # CALL Landroid/widget/ImageView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
+00025  000e                     return-void
+
+### Landroid/support/v7/widget/c$d;->a()Z  [access=0x1, regs=1, ins=1, outs=0, code_off=0xdb104]
+00000  0012                     const/4
+00001  000f                     return
+
+### Landroid/support/v7/widget/c$d;->b()Z  [access=0x1, regs=1, ins=1, outs=0, code_off=0xdb0f0]
+00000  0012                     const/4
+00001  000f                     return
+
+### Landroid/support/v7/widget/c$d;->performClick()Z  [access=0x1, regs=3, ins=1, outs=2, code_off=0xdb118]
+00000  106f 1fe5 0002           invoke-super  # CALL Landroid/widget/ImageView;->performClick()Z
+00003  000a                     move-result
+00004  1112                     const/4
+00005  0038 0003                if-eqz
+00007  010f                     return
+00008  0012                     const/4
+00009  206e 1fe6 0002           invoke-virtual  # CALL Landroid/widget/ImageView;->playSoundEffect(I)V
+0000c  2254 10ed                iget-object  # FIELD Landroid/support/v7/widget/c$d;->d:Landroid/support/v7/widget/c;
+0000e  106e 184e 0002           invoke-virtual  # CALL Landroid/support/v7/widget/c;->i()Z
+00011  010f                     return
+
+### Landroid/support/v7/widget/c$d;->setFrame(I,I,I,I)Z  [access=0x4, regs=8, ins=5, outs=5, code_off=0xdb14c]
+00000  576f 1fed 6543           invoke-super  # CALL Landroid/widget/ImageView;->setFrame(I,I,I,I)Z
+00003  040a                     move-result
+00004  106e 1fd3 0003           invoke-virtual  # CALL Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
+00007  050c                     move-result-object
+00008  106e 1fd0 0003           invoke-virtual  # CALL Landroid/widget/ImageView;->getBackground()Landroid/graphics/drawable/Drawable;
+0000b  060c                     move-result-object
+0000c  0538 0033                if-eqz
+0000e  0638 0031                if-eqz
+00010  106e 1fe2 0003           invoke-virtual  # CALL Landroid/widget/ImageView;->getWidth()I
+00013  050a                     move-result
+00014  106e 1fd5 0003           invoke-virtual  # CALL Landroid/widget/ImageView;->getHeight()I
+00017  070a                     move-result
+00018  2071 2ccb 0075           invoke-static  # CALL Ljava/lang/Math;->max(I,I)I
+0001b  000a                     move-result
+0001c  00db 0200                op_db
+0001e  106e 1fdd 0003           invoke-virtual  # CALL Landroid/widget/ImageView;->getPaddingLeft()I
+00021  010a                     move-result
+00022  106e 1fde 0003           invoke-virtual  # CALL Landroid/widget/ImageView;->getPaddingRight()I
+00025  020a                     move-result
+00026  21b1                     op_b1
+00027  106e 1fdf 0003           invoke-virtual  # CALL Landroid/widget/ImageView;->getPaddingTop()I
+0002a  020a                     move-result
+0002b  106e 1fdc 0003           invoke-virtual  # CALL Landroid/widget/ImageView;->getPaddingBottom()I
+0002e  030a                     move-result
+0002f  32b1                     op_b1
+00030  15b0                     op_b0
+00031  05db 0205                op_db
+00033  27b0                     op_b0
+00034  07db 0207                op_db
+00036  0391 0005                int-sub
+00038  0191 0007                int-sub
+0003a  05b0                     op_b0
+0003b  07b0                     op_b0
+0003c  5771 106d 5136           invoke-static  # CALL Landroid/support/v4/graphics/drawable/a;->a(Landroid/graphics/drawable/Drawable;,I,I,I,I)V
+0003f  040f                     return

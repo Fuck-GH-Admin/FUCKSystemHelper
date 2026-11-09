@@ -1,0 +1,32 @@
+### Lb/b/c/d/b$d;-><init>()V  [access=0x10000, regs=1, ins=1, outs=1, code_off=0xb6944]
+00000  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  000e                     return-void
+
+### Lb/b/c/d/b$d;->a([B,[B)I  [access=0x1, regs=6, ins=3, outs=0, code_off=0xb68d8]
+00000  4321                     array-length
+00001  5021                     array-length
+00002  0332 0006                if-eq
+00004  4321                     array-length
+00005  5421                     array-length
+00006  43b1                     op_b1
+00007  030f                     return
+00008  0312                     const/4
+00009  3001                     op_01
+0000a  4121                     array-length
+0000b  1035 0010                if-ge
+0000d  0148 0004                aget-byte
+0000f  0248 0005                aget-byte
+00011  2132 0007                if-eq
+00013  0348 0004                aget-byte
+00015  0448 0005                aget-byte
+00017  ef28                     goto
+00018  00d8 0100                op_d8
+0001a  f028                     goto
+0001b  030f                     return
+
+### Lb/b/c/d/b$d;->compare(Ljava/lang/Object;,Ljava/lang/Object;)I  [access=0x1041, regs=3, ins=3, outs=3, code_off=0xb6920]
+00000  011f 0720                check-cast  # TYPE [B
+00002  021f 0720                check-cast  # TYPE [B
+00004  306e 2393 0210           invoke-virtual  # CALL Lb/b/c/d/b$d;->a([B,[B)I
+00007  000a                     move-result
+00008  000f                     return

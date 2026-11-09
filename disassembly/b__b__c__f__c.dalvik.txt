@@ -1,0 +1,87 @@
+### Lb/b/c/f/c;-><clinit>()V  [access=0x10008, regs=2, ins=0, outs=0, code_off=0xb9234]
+00000  0012                     const/4
+00001  0123 0724                new-array  # TYPE [I
+00003  0169 13b0                sput-object  # FIELD Lb/b/c/f/c;->a:[I
+00005  0123 0725                new-array  # TYPE [J
+00007  0169 13b1                sput-object  # FIELD Lb/b/c/f/c;->b:[J
+00009  0023 075d                new-array  # TYPE [Ljava/lang/Object;
+0000b  0069 13b2                sput-object  # FIELD Lb/b/c/f/c;->c:[Ljava/lang/Object;
+0000d  000e                     return-void
+
+### Lb/b/c/f/c;->a(I)I  [access=0x9, regs=3, ins=1, outs=0, code_off=0xb91bc]
+00000  4012                     const/4
+00001  0113 0020                const/16
+00003  1035 000c                if-ge
+00005  1112                     const/4
+00006  01b8                     op_b8
+00007  01d8 f401                op_d8
+00009  1236 0003                if-gt
+0000b  010f                     return
+0000c  00d8 0100                op_d8
+0000e  f328                     goto
+0000f  020f                     return
+
+### Lb/b/c/f/c;->a([I,I,I)I  [access=0x8, regs=6, ins=3, outs=0, code_off=0xb9130]
+00000  04d8 ff04                op_d8
+00002  0012                     const/4
+00003  4036 0015                if-gt
+00005  0190 0400                int-add
+00007  01e2 0101                op_e2
+00009  0244 0103                aget
+0000b  5235 0006                if-ge
+0000d  01d8 0101                op_d8
+0000f  1001                     op_01
+00010  f328                     goto
+00011  5237 0006                if-le
+00013  01d8 ff01                op_d8
+00015  1401                     op_01
+00016  ed28                     goto
+00017  010f                     return
+00018  037c                     op_7c
+00019  030f                     return
+
+### Lb/b/c/f/c;->a([J,I,J)I  [access=0x8, regs=8, ins=4, outs=0, code_off=0xb9174]
+00000  05d8 ff05                op_d8
+00002  0012                     const/4
+00003  5036 0017                if-gt
+00005  0190 0500                int-add
+00007  01e2 0101                op_e2
+00009  0245 0104                aget-wide
+0000b  0231 0602                op_31
+0000d  023b 0006                if-gez
+0000f  01d8 0101                op_d8
+00011  1001                     op_01
+00012  f128                     goto
+00013  023d 0006                if-lez
+00015  01d8 ff01                op_d8
+00017  1501                     op_01
+00018  eb28                     goto
+00019  010f                     return
+0001a  047c                     op_7c
+0001b  040f                     return
+
+### Lb/b/c/f/c;->a(Ljava/lang/Object;,Ljava/lang/Object;)Z  [access=0x9, regs=2, ins=2, outs=2, code_off=0xb9100]
+00000  1032 000d                if-eq
+00002  0038 0009                if-eqz
+00004  206e 2ce2 0010           invoke-virtual  # CALL Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+00007  000a                     move-result
+00008  0038 0003                if-eqz
+0000a  0328                     goto
+0000b  0012                     const/4
+0000c  0228                     goto
+0000d  1012                     const/4
+0000e  000f                     return
+
+### Lb/b/c/f/c;->b(I)I  [access=0x9, regs=1, ins=1, outs=1, code_off=0xb91ec]
+00000  00da 0400                op_da
+00002  1071 240d 0000           invoke-static  # CALL Lb/b/c/f/c;->a(I)I
+00005  000a                     move-result
+00006  00db 0400                op_db
+00008  000f                     return
+
+### Lb/b/c/f/c;->c(I)I  [access=0x9, regs=1, ins=1, outs=1, code_off=0xb9210]
+00000  00da 0800                op_da
+00002  1071 240d 0000           invoke-static  # CALL Lb/b/c/f/c;->a(I)I
+00005  000a                     move-result
+00006  00db 0800                op_db
+00008  000f                     return

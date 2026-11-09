@@ -1,0 +1,45 @@
+### Lc/a/b/e/a/c;-><clinit>()V  [access=0x10008, regs=1, ins=0, outs=1, code_off=0xf7c24]
+00000  0022 06bd                new-instance  # TYPE Ljava/security/SecureRandom;
+00002  1070 2dcf 0000           invoke-direct  # CALL Ljava/security/SecureRandom;-><init>()V
+00005  0069 1b10                sput-object  # FIELD Lc/a/b/e/a/c;->b:Ljava/security/SecureRandom;
+00007  000e                     return-void
+
+### Lc/a/b/e/a/c;-><init>()V  [access=0x10001, regs=4, ins=1, outs=3, code_off=0xf7c44]
+00000  1070 2ce0 0003           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  0012                     const/4
+00004  305b 1b0f                iput-object  # FIELD Lc/a/b/e/a/c;->a:Lc/a/b/e/a/e;
+00006  0022 0599                new-instance  # TYPE Lc/a/b/e/a/e;
+00008  0122 0596                new-instance  # TYPE Lc/a/b/e/a/b;
+0000a  1070 27a8 0001           invoke-direct  # CALL Lc/a/b/e/a/b;-><init>()V
+0000d  0213 0010                const/16
+0000f  3070 27bf 0210           invoke-direct  # CALL Lc/a/b/e/a/e;-><init>(Lc/a/b/e/a/b;,I)V
+00012  305b 1b0f                iput-object  # FIELD Lc/a/b/e/a/c;->a:Lc/a/b/e/a/e;
+00014  000e                     return-void
+
+### Lc/a/b/e/a/c;->a([B,[B,[B)[B  [access=0x9, regs=5, ins=3, outs=4, code_off=0xf7bf8]
+00000  0022 0597                new-instance  # TYPE Lc/a/b/e/a/c;
+00002  1070 27b4 0000           invoke-direct  # CALL Lc/a/b/e/a/c;-><init>()V
+00005  2112                     const/4
+00006  406e 27b5 3210           invoke-virtual  # CALL Lc/a/b/e/a/c;->a(I,[B,[B)V
+00009  206e 27b6 0040           invoke-virtual  # CALL Lc/a/b/e/a/c;->a([B)[B
+0000c  020c                     move-result-object
+0000d  0211                     return-object
+
+### Lc/a/b/e/a/c;->a(I,[B,[B)V  [access=0x1, regs=5, ins=4, outs=5, code_off=0xf7c80]
+00000  1154 1b0f                iget-object  # FIELD Lc/a/b/e/a/c;->a:Lc/a/b/e/a/e;
+00002  0062 1b10                sget-object  # FIELD Lc/a/b/e/a/c;->b:Ljava/security/SecureRandom;
+00004  506e 27c3 4321           invoke-virtual  # CALL Lc/a/b/e/a/e;->a(I,[B,[B,Ljava/security/SecureRandom;)V
+00007  000e                     return-void
+
+### Lc/a/b/e/a/c;->a([B)[B  [access=0x11, regs=4, ins=2, outs=4, code_off=0xf7bc0]
+00000  0338 000b                if-eqz
+00002  2254 1b0f                iget-object  # FIELD Lc/a/b/e/a/c;->a:Lc/a/b/e/a/e;
+00004  3021                     array-length
+00005  0112                     const/4
+00006  406e 27c4 0132           invoke-virtual  # CALL Lc/a/b/e/a/e;->a([B,I,I)[B
+00009  020c                     move-result-object
+0000a  0211                     return-object
+0000b  0222 0669                new-instance  # TYPE Ljava/lang/IllegalArgumentException;
+0000d  031a 12a4                const-string  # STR "Null input buffer"
+0000f  2070 2c9f 0032           invoke-direct  # CALL Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+00012  0227                     throw

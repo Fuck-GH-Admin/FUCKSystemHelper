@@ -1,0 +1,191 @@
+### Lb/b/c/b/i;->a(Landroid/content/Context;)Ljava/io/File;  [access=0x9, regs=6, ins=1, outs=3, code_off=0xb4ae8]
+00000  0022 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00002  1070 2d35 0000           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00005  011a 0208                const-string  # STR ".font"
+00007  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0000a  0071 0aff 0000           invoke-static  # CALL Landroid/os/Process;->myPid()I
+0000d  010a                     move-result
+0000e  206e 2d3b 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+00011  011a 01f4                const-string  # STR "-"
+00013  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00016  0071 0b00 0000           invoke-static  # CALL Landroid/os/Process;->myTid()I
+00019  020a                     move-result
+0001a  206e 2d3b 0020           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+0001d  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00020  106e 2d44 0000           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00023  000c                     move-result-object
+00024  0112                     const/4
+00025  0213 0064                const/16
+00027  2135 0024                if-ge
+00029  0222 063e                new-instance  # TYPE Ljava/io/File;
+0002b  106e 083d 0005           invoke-virtual  # CALL Landroid/content/Context;->getCacheDir()Ljava/io/File;
+0002e  030c                     move-result-object
+0002f  0422 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00031  1070 2d35 0004           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00034  206e 2d3f 0004           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00037  206e 2d3b 0014           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+0003a  106e 2d44 0004           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0003d  040c                     move-result-object
+0003e  3070 2c0b 0432           invoke-direct  # CALL Ljava/io/File;-><init>(Ljava/io/File;,Ljava/lang/String;)V
+00041  106e 2c0f 0002           invoke-virtual  # CALL Ljava/io/File;->createNewFile()Z
+00044  030a                     move-result
+00045  0338 0003                if-eqz
+00047  0211                     return-object
+00048  01d8 0101                op_d8
+0004a  db28                     goto
+0004b  0512                     const/4
+0004c  0511                     return-object
+
+### Lb/b/c/b/i;->a(Landroid/content/Context;,Landroid/content/res/Resources;,I)Ljava/nio/ByteBuffer;  [access=0x9, regs=4, ins=3, outs=3, code_off=0xb4ba4]
+00000  1071 2363 0001           invoke-static  # CALL Lb/b/c/b/i;->a(Landroid/content/Context;)Ljava/io/File;
+00003  010c                     move-result-object
+00004  0012                     const/4
+00005  0139 0003                if-nez
+00007  0011                     return-object
+00008  3071 2368 0321           invoke-static  # CALL Lb/b/c/b/i;->a(Ljava/io/File;,Landroid/content/res/Resources;,I)Z
+0000b  020a                     move-result
+0000c  0239 0006                if-nez
+0000e  106e 2c10 0001           invoke-virtual  # CALL Ljava/io/File;->delete()Z
+00011  0011                     return-object
+00012  1071 2366 0001           invoke-static  # CALL Lb/b/c/b/i;->a(Ljava/io/File;)Ljava/nio/ByteBuffer;
+00015  020c                     move-result-object
+00016  106e 2c10 0001           invoke-virtual  # CALL Ljava/io/File;->delete()Z
+00019  0211                     return-object
+0001a  020d                     op_0d
+0001b  106e 2c10 0001           invoke-virtual  # CALL Ljava/io/File;->delete()Z
+0001e  0227                     throw
+
+### Lb/b/c/b/i;->a(Landroid/content/Context;,Landroid/os/CancellationSignal;,Landroid/net/Uri;)Ljava/nio/ByteBuffer;  [access=0x9, regs=10, ins=3, outs=6, code_off=0xb4c08]
+00000  106e 0840 0007           invoke-virtual  # CALL Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+00003  070c                     move-result-object
+00004  0012                     const/4
+00005  011a 23d2                const-string  # STR "r"
+00007  406e 082c 8197           invoke-virtual  # CALL Landroid/content/ContentResolver;->openFileDescriptor(Landroid/net/Uri;,Ljava/lang/String;,Landroid/os/CancellationSignal;)Landroid/os/ParcelFileDescriptor;
+0000a  070c                     move-result-object
+0000b  0739 0008                if-nez
+0000d  0738 0005                if-eqz
+0000f  106e 0afa 0007           invoke-virtual  # CALL Landroid/os/ParcelFileDescriptor;->close()V
+00012  0011                     return-object
+00013  0822 0640                new-instance  # TYPE Ljava/io/FileInputStream;
+00015  106e 0afc 0007           invoke-virtual  # CALL Landroid/os/ParcelFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
+00018  090c                     move-result-object
+00019  2070 2c1e 0098           invoke-direct  # CALL Ljava/io/FileInputStream;-><init>(Ljava/io/FileDescriptor;)V
+0001c  106e 2c21 0008           invoke-virtual  # CALL Ljava/io/FileInputStream;->getChannel()Ljava/nio/channels/FileChannel;
+0001f  010c                     move-result-object
+00020  106e 2db2 0001           invoke-virtual  # CALL Ljava/nio/channels/FileChannel;->size()J
+00023  050b                     move-result-wide
+00024  0262 1d6e                sget-object  # FIELD Ljava/nio/channels/FileChannel$MapMode;->READ_ONLY:Ljava/nio/channels/FileChannel$MapMode;
+00026  0316 0000                const-wide/16
+00028  0674 2db1 0001           invoke-virtual/range  # CALL Ljava/nio/channels/FileChannel;->map(Ljava/nio/channels/FileChannel$MapMode;,J,J)Ljava/nio/MappedByteBuffer;
+0002b  090c                     move-result-object
+0002c  106e 2c20 0008           invoke-virtual  # CALL Ljava/io/FileInputStream;->close()V
+0002f  0738 0005                if-eqz
+00031  106e 0afa 0007           invoke-virtual  # CALL Landroid/os/ParcelFileDescriptor;->close()V
+00034  0911                     return-object
+00035  090d                     op_0d
+00036  0927                     throw
+00037  010d                     op_0d
+00038  106e 2c20 0008           invoke-virtual  # CALL Ljava/io/FileInputStream;->close()V
+0003b  0528                     goto
+0003c  080d                     op_0d
+0003d  206e 2d5b 0089           invoke-virtual  # CALL Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+00040  0127                     throw
+00041  080d                     op_0d
+00042  0827                     throw
+00043  090d                     op_0d
+00044  0738 000a                if-eqz
+00046  106e 0afa 0007           invoke-virtual  # CALL Landroid/os/ParcelFileDescriptor;->close()V
+00049  0528                     goto
+0004a  070d                     op_0d
+0004b  206e 2d5b 0078           invoke-virtual  # CALL Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+0004e  0927                     throw
+0004f  0011                     return-object
+
+### Lb/b/c/b/i;->a(Ljava/io/File;)Ljava/nio/ByteBuffer;  [access=0xa, regs=8, ins=1, outs=6, code_off=0xb4d24]
+00000  0022 0640                new-instance  # TYPE Ljava/io/FileInputStream;
+00002  2070 2c1d 0070           invoke-direct  # CALL Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
+00005  106e 2c21 0000           invoke-virtual  # CALL Ljava/io/FileInputStream;->getChannel()Ljava/nio/channels/FileChannel;
+00008  010c                     move-result-object
+00009  106e 2db2 0001           invoke-virtual  # CALL Ljava/nio/channels/FileChannel;->size()J
+0000c  050b                     move-result-wide
+0000d  0262 1d6e                sget-object  # FIELD Ljava/nio/channels/FileChannel$MapMode;->READ_ONLY:Ljava/nio/channels/FileChannel$MapMode;
+0000f  0316 0000                const-wide/16
+00011  0674 2db1 0001           invoke-virtual/range  # CALL Ljava/nio/channels/FileChannel;->map(Ljava/nio/channels/FileChannel$MapMode;,J,J)Ljava/nio/MappedByteBuffer;
+00014  070c                     move-result-object
+00015  106e 2c20 0000           invoke-virtual  # CALL Ljava/io/FileInputStream;->close()V
+00018  0711                     return-object
+00019  070d                     op_0d
+0001a  0727                     throw
+0001b  010d                     op_0d
+0001c  106e 2c20 0000           invoke-virtual  # CALL Ljava/io/FileInputStream;->close()V
+0001f  0528                     goto
+00020  000d                     op_0d
+00021  206e 2d5b 0007           invoke-virtual  # CALL Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+00024  0127                     throw
+00025  0712                     const/4
+00026  0711                     return-object
+
+### Lb/b/c/b/i;->a(Ljava/io/Closeable;)V  [access=0x9, regs=1, ins=1, outs=1, code_off=0xb4dc0]
+00000  0038 0005                if-eqz
+00002  1072 2c05 0000           invoke-interface  # CALL Ljava/io/Closeable;->close()V
+00005  000e                     return-void
+
+### Lb/b/c/b/i;->a(Ljava/io/File;,Landroid/content/res/Resources;,I)Z  [access=0x9, regs=3, ins=3, outs=2, code_off=0xb49b8]
+00000  206e 08eb 0021           invoke-virtual  # CALL Landroid/content/res/Resources;->openRawResource(I)Ljava/io/InputStream;
+00003  010c                     move-result-object
+00004  2071 2369 0010           invoke-static  # CALL Lb/b/c/b/i;->a(Ljava/io/File;,Ljava/io/InputStream;)Z
+00007  000a                     move-result
+00008  1071 2367 0001           invoke-static  # CALL Lb/b/c/b/i;->a(Ljava/io/Closeable;)V
+0000b  000f                     return
+0000c  000d                     op_0d
+0000d  0328                     goto
+0000e  000d                     op_0d
+0000f  0112                     const/4
+00010  1071 2367 0001           invoke-static  # CALL Lb/b/c/b/i;->a(Ljava/io/Closeable;)V
+00013  0027                     throw
+
+### Lb/b/c/b/i;->a(Ljava/io/File;,Ljava/io/InputStream;)Z  [access=0x9, regs=7, ins=2, outs=4, code_off=0xb4a08]
+00000  0071 0b07 0000           invoke-static  # CALL Landroid/os/StrictMode;->allowThreadDiskWrites()Landroid/os/StrictMode$ThreadPolicy;
+00003  000c                     move-result-object
+00004  0112                     const/4
+00005  0212                     const/4
+00006  0322 0642                new-instance  # TYPE Ljava/io/FileOutputStream;
+00008  3070 2c27 0153           invoke-direct  # CALL Ljava/io/FileOutputStream;-><init>(Ljava/io/File;,Z)V
+0000b  0513 0400                const/16
+0000d  5523 0720                new-array  # TYPE [B
+0000f  206e 2c38 0056           invoke-virtual  # CALL Ljava/io/InputStream;->read([B)I
+00012  020a                     move-result
+00013  f412                     const/4
+00014  4232 0006                if-eq
+00016  406e 2c2b 2153           invoke-virtual  # CALL Ljava/io/FileOutputStream;->write([B,I,I)V
+00019  f628                     goto
+0001a  1512                     const/4
+0001b  1071 2367 0003           invoke-static  # CALL Lb/b/c/b/i;->a(Ljava/io/Closeable;)V
+0001e  1071 0b08 0000           invoke-static  # CALL Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
+00021  050f                     return
+00022  050d                     op_0d
+00023  3207                     op_07
+00024  2828                     goto
+00025  050d                     op_0d
+00026  3207                     op_07
+00027  0428                     goto
+00028  050d                     op_0d
+00029  2328                     goto
+0002a  050d                     op_0d
+0002b  061a 152c                const-string  # STR "TypefaceCompatUtil"
+0002d  0322 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0002f  1070 2d35 0003           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00032  041a 077b                const-string  # STR "Error copying resource contents to temp file: "
+00034  206e 2d3f 0043           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00037  106e 2c35 0005           invoke-virtual  # CALL Ljava/io/IOException;->getMessage()Ljava/lang/String;
+0003a  050c                     move-result-object
+0003b  206e 2d3f 0053           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0003e  106e 2d44 0003           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00041  050c                     move-result-object
+00042  2071 1c5b 0056           invoke-static  # CALL Landroid/util/Log;->e(Ljava/lang/String;,Ljava/lang/String;)I
+00045  1071 2367 0002           invoke-static  # CALL Lb/b/c/b/i;->a(Ljava/io/Closeable;)V
+00048  1071 0b08 0000           invoke-static  # CALL Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
+0004b  010f                     return
+0004c  1071 2367 0002           invoke-static  # CALL Lb/b/c/b/i;->a(Ljava/io/Closeable;)V
+0004f  1071 0b08 0000           invoke-static  # CALL Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
+00052  0527                     throw

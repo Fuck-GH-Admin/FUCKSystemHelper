@@ -1,0 +1,477 @@
+### Lb/b/c/b/f;-><init>()V  [access=0x10001, regs=9, ins=1, outs=3, code_off=0xb43e0]
+00000  1070 232f 0008           invoke-direct  # CALL Lb/b/c/b/d;-><init>()V
+00003  0012                     const/4
+00004  106e 233f 0008           invoke-virtual  # CALL Lb/b/c/b/f;->a()Ljava/lang/Class;
+00007  010c                     move-result-object
+00008  206e 234a 0018           invoke-virtual  # CALL Lb/b/c/b/f;->e(Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+0000b  020c                     move-result-object
+0000c  206e 2343 0018           invoke-virtual  # CALL Lb/b/c/b/f;->b(Ljava/lang/Class;)Ljava/lang/reflect/Method;
+0000f  030c                     move-result-object
+00010  206e 2347 0018           invoke-virtual  # CALL Lb/b/c/b/f;->c(Ljava/lang/Class;)Ljava/lang/reflect/Method;
+00013  040c                     move-result-object
+00014  206e 234b 0018           invoke-virtual  # CALL Lb/b/c/b/f;->f(Ljava/lang/Class;)Ljava/lang/reflect/Method;
+00017  050c                     move-result-object
+00018  206e 2340 0018           invoke-virtual  # CALL Lb/b/c/b/f;->a(Ljava/lang/Class;)Ljava/lang/reflect/Method;
+0001b  060c                     move-result-object
+0001c  206e 2349 0018           invoke-virtual  # CALL Lb/b/c/b/f;->d(Ljava/lang/Class;)Ljava/lang/reflect/Method;
+0001f  000c                     move-result-object
+00020  1707                     op_07
+00021  0107                     op_07
+00022  7007                     op_07
+00023  2628                     goto
+00024  010d                     op_0d
+00025  0222 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00027  1070 2d35 0002           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0002a  031a 1551                const-string  # STR "Unable to collect necessary methods for class "
+0002c  206e 2d3f 0032           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0002f  106e 2ce3 0001           invoke-virtual  # CALL Ljava/lang/Object;->getClass()Ljava/lang/Class;
+00032  030c                     move-result-object
+00033  106e 2c7f 0003           invoke-virtual  # CALL Ljava/lang/Class;->getName()Ljava/lang/String;
+00036  030c                     move-result-object
+00037  206e 2d3f 0032           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0003a  106e 2d44 0002           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0003d  020c                     move-result-object
+0003e  031a 152b                const-string  # STR "TypefaceCompatApi26Impl"
+00040  3071 1c5c 0123           invoke-static  # CALL Landroid/util/Log;->e(Ljava/lang/String;,Ljava/lang/String;,Ljava/lang/Throwable;)I
+00043  0107                     op_07
+00044  1207                     op_07
+00045  2307                     op_07
+00046  3407                     op_07
+00047  4507                     op_07
+00048  5607                     op_07
+00049  805b 1362                iput-object  # FIELD Lb/b/c/b/f;->a:Ljava/lang/Class;
+0004b  825b 1363                iput-object  # FIELD Lb/b/c/b/f;->b:Ljava/lang/reflect/Constructor;
+0004d  835b 1364                iput-object  # FIELD Lb/b/c/b/f;->c:Ljava/lang/reflect/Method;
+0004f  845b 1365                iput-object  # FIELD Lb/b/c/b/f;->d:Ljava/lang/reflect/Method;
+00051  855b 1366                iput-object  # FIELD Lb/b/c/b/f;->e:Ljava/lang/reflect/Method;
+00053  865b 1367                iput-object  # FIELD Lb/b/c/b/f;->f:Ljava/lang/reflect/Method;
+00055  815b 1368                iput-object  # FIELD Lb/b/c/b/f;->g:Ljava/lang/reflect/Method;
+00057  000e                     return-void
+
+### Lb/b/c/b/f;->a(Landroid/content/Context;,Ljava/lang/Object;,Ljava/lang/String;,I,I,I,[Landroid/graphics/fonts/FontVariationAxis;)Z  [access=0x2, regs=10, ins=8, outs=3, code_off=0xb403c]
+00000  2254 1364                iget-object  # FIELD Lb/b/c/b/f;->c:Ljava/lang/reflect/Method;
+00002  0013 0008                const/16
+00004  0023 075d                new-array  # TYPE [Ljava/lang/Object;
+00006  106e 083c 0003           invoke-virtual  # CALL Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
+00009  030c                     move-result-object
+0000a  0112                     const/4
+0000b  034d 0100                aput-object
+0000d  1312                     const/4
+0000e  054d 0300                aput-object
+00010  2312                     const/4
+00011  1071 2cae 0001           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+00014  050c                     move-result-object
+00015  054d 0300                aput-object
+00017  3312                     const/4
+00018  1071 2c67 0001           invoke-static  # CALL Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+0001b  050c                     move-result-object
+0001c  054d 0300                aput-object
+0001e  4312                     const/4
+0001f  1071 2cae 0006           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+00022  050c                     move-result-object
+00023  054d 0300                aput-object
+00025  5312                     const/4
+00026  1071 2cae 0007           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+00029  050c                     move-result-object
+0002a  054d 0300                aput-object
+0002c  6312                     const/4
+0002d  1071 2cae 0008           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+00030  050c                     move-result-object
+00031  054d 0300                aput-object
+00033  7312                     const/4
+00034  094d 0300                aput-object
+00036  306e 2d7a 0042           invoke-virtual  # CALL Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;,[Ljava/lang/Object;)Ljava/lang/Object;
+00039  020c                     move-result-object
+0003a  021f 0657                check-cast  # TYPE Ljava/lang/Boolean;
+0003c  106e 2c65 0002           invoke-virtual  # CALL Ljava/lang/Boolean;->booleanValue()Z
+0003f  020a                     move-result
+00040  020f                     return
+00041  020d                     op_0d
+00042  0322 0680                new-instance  # TYPE Ljava/lang/RuntimeException;
+00044  2070 2cf0 0023           invoke-direct  # CALL Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+00047  0327                     throw
+
+### Lb/b/c/b/f;->a(Ljava/lang/Object;,Ljava/nio/ByteBuffer;,I,I,I)Z  [access=0x2, regs=8, ins=6, outs=3, code_off=0xb40ec]
+00000  2254 1365                iget-object  # FIELD Lb/b/c/b/f;->d:Ljava/lang/reflect/Method;
+00002  5012                     const/4
+00003  0023 075d                new-array  # TYPE [Ljava/lang/Object;
+00005  0112                     const/4
+00006  044d 0100                aput-object
+00008  1412                     const/4
+00009  1071 2cae 0005           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+0000c  050c                     move-result-object
+0000d  054d 0400                aput-object
+0000f  2412                     const/4
+00010  0512                     const/4
+00011  054d 0400                aput-object
+00013  3412                     const/4
+00014  1071 2cae 0006           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+00017  050c                     move-result-object
+00018  054d 0400                aput-object
+0001a  4412                     const/4
+0001b  1071 2cae 0007           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+0001e  050c                     move-result-object
+0001f  054d 0400                aput-object
+00021  306e 2d7a 0032           invoke-virtual  # CALL Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;,[Ljava/lang/Object;)Ljava/lang/Object;
+00024  020c                     move-result-object
+00025  021f 0657                check-cast  # TYPE Ljava/lang/Boolean;
+00027  106e 2c65 0002           invoke-virtual  # CALL Ljava/lang/Boolean;->booleanValue()Z
+0002a  020a                     move-result
+0002b  020f                     return
+0002c  020d                     op_0d
+0002d  0322 0680                new-instance  # TYPE Ljava/lang/RuntimeException;
+0002f  2070 2cf0 0023           invoke-direct  # CALL Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+00032  0327                     throw
+
+### Lb/b/c/b/f;->b(Ljava/lang/Object;)V  [access=0x2, regs=3, ins=2, outs=3, code_off=0xb44b0]
+00000  1154 1367                iget-object  # FIELD Lb/b/c/b/f;->f:Ljava/lang/reflect/Method;
+00002  0012                     const/4
+00003  0023 075d                new-array  # TYPE [Ljava/lang/Object;
+00005  306e 2d7a 0021           invoke-virtual  # CALL Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;,[Ljava/lang/Object;)Ljava/lang/Object;
+00008  000e                     return-void
+00009  010d                     op_0d
+0000a  0222 0680                new-instance  # TYPE Ljava/lang/RuntimeException;
+0000c  2070 2cf0 0012           invoke-direct  # CALL Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+0000f  0227                     throw
+
+### Lb/b/c/b/f;->b()Z  [access=0x2, regs=3, ins=1, outs=2, code_off=0xb41c4]
+00000  2054 1364                iget-object  # FIELD Lb/b/c/b/f;->c:Ljava/lang/reflect/Method;
+00002  0039 0009                if-nez
+00004  001a 152b                const-string  # STR "TypefaceCompatApi26Impl"
+00006  011a 1552                const-string  # STR "Unable to collect necessary private methods. Fallback to legacy implementation."
+00008  2071 1c61 0010           invoke-static  # CALL Landroid/util/Log;->w(Ljava/lang/String;,Ljava/lang/String;)I
+0000b  2254 1364                iget-object  # FIELD Lb/b/c/b/f;->c:Ljava/lang/reflect/Method;
+0000d  0238 0004                if-eqz
+0000f  1212                     const/4
+00010  0228                     goto
+00011  0212                     const/4
+00012  020f                     return
+
+### Lb/b/c/b/f;->c()Ljava/lang/Object;  [access=0x2, regs=2, ins=1, outs=2, code_off=0xb421c]
+00000  1154 1363                iget-object  # FIELD Lb/b/c/b/f;->b:Ljava/lang/reflect/Constructor;
+00002  0012                     const/4
+00003  0023 075d                new-array  # TYPE [Ljava/lang/Object;
+00005  206e 2d6d 0001           invoke-virtual  # CALL Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+00008  010c                     move-result-object
+00009  0111                     return-object
+0000a  010d                     op_0d
+0000b  0022 0680                new-instance  # TYPE Ljava/lang/RuntimeException;
+0000d  2070 2cf0 0010           invoke-direct  # CALL Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+00010  0027                     throw
+
+### Lb/b/c/b/f;->c(Ljava/lang/Object;)Z  [access=0x2, regs=3, ins=2, outs=3, code_off=0xb4174]
+00000  1154 1366                iget-object  # FIELD Lb/b/c/b/f;->e:Ljava/lang/reflect/Method;
+00002  0012                     const/4
+00003  0023 075d                new-array  # TYPE [Ljava/lang/Object;
+00005  306e 2d7a 0021           invoke-virtual  # CALL Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;,[Ljava/lang/Object;)Ljava/lang/Object;
+00008  010c                     move-result-object
+00009  011f 0657                check-cast  # TYPE Ljava/lang/Boolean;
+0000b  106e 2c65 0001           invoke-virtual  # CALL Ljava/lang/Boolean;->booleanValue()Z
+0000e  010a                     move-result
+0000f  010f                     return
+00010  010d                     op_0d
+00011  0222 0680                new-instance  # TYPE Ljava/lang/RuntimeException;
+00013  2070 2cf0 0012           invoke-direct  # CALL Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+00016  0227                     throw
+
+### Lb/b/c/b/f;->a(Landroid/content/Context;,Landroid/content/res/Resources;,I,Ljava/lang/String;,I)Landroid/graphics/Typeface;  [access=0x1, regs=14, ins=6, outs=8, code_off=0xb3fd0]
+00000  1070 2345 0008           invoke-direct  # CALL Lb/b/c/b/f;->b()Z
+00003  000a                     move-result
+00004  0039 0007                if-nez
+00006  0675 235c 0008           invoke-super/range  # CALL Lb/b/c/b/h;->a(Landroid/content/Context;,Landroid/content/res/Resources;,I,Ljava/lang/String;,I)Landroid/graphics/Typeface;
+00009  080c                     move-result-object
+0000a  0811                     return-object
+0000b  1070 2346 0008           invoke-direct  # CALL Lb/b/c/b/f;->c()Ljava/lang/Object;
+0000e  0a0c                     move-result-object
+0000f  0412                     const/4
+00010  f512                     const/4
+00011  f612                     const/4
+00012  0712                     const/4
+00013  8007                     op_07
+00014  9107                     op_07
+00015  a207                     op_07
+00016  c307                     op_07
+00017  0876 2341 0000           invoke-direct/range  # CALL Lb/b/c/b/f;->a(Landroid/content/Context;,Ljava/lang/Object;,Ljava/lang/String;,I,I,I,[Landroid/graphics/fonts/FontVariationAxis;)Z
+0001a  090a                     move-result
+0001b  0b12                     const/4
+0001c  0939 0006                if-nez
+0001e  2070 2344 00a8           invoke-direct  # CALL Lb/b/c/b/f;->b(Ljava/lang/Object;)V
+00021  0b11                     return-object
+00022  2070 2348 00a8           invoke-direct  # CALL Lb/b/c/b/f;->c(Ljava/lang/Object;)Z
+00025  090a                     move-result
+00026  0939 0003                if-nez
+00028  0b11                     return-object
+00029  206e 233e 00a8           invoke-virtual  # CALL Lb/b/c/b/f;->a(Ljava/lang/Object;)Landroid/graphics/Typeface;
+0002c  080c                     move-result-object
+0002d  0811                     return-object
+
+### Lb/b/c/b/f;->a(Landroid/content/Context;,Landroid/os/CancellationSignal;,[Lb/b/c/d/b$f;,I)Landroid/graphics/Typeface;  [access=0x1, regs=15, ins=5, outs=6, code_off=0xb3e38]
+00000  d021                     array-length
+00001  1112                     const/4
+00002  0212                     const/4
+00003  1035 0003                if-ge
+00005  0211                     return-object
+00006  1070 2345 000a           invoke-direct  # CALL Lb/b/c/b/f;->b()Z
+00009  000a                     move-result
+0000a  0039 004e                if-nez
+0000c  306e 2361 0eda           invoke-virtual  # CALL Lb/b/c/b/h;->a([Lb/b/c/d/b$f;,I)Lb/b/c/d/b$f;
+0000f  0a0c                     move-result-object
+00010  106e 0840 000b           invoke-virtual  # CALL Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+00013  0b0c                     move-result-object
+00014  106e 239b 000a           invoke-virtual  # CALL Lb/b/c/d/b$f;->c()Landroid/net/Uri;
+00017  0d0c                     move-result-object
+00018  0e1a 23d2                const-string  # STR "r"
+0001a  406e 082c cedb           invoke-virtual  # CALL Landroid/content/ContentResolver;->openFileDescriptor(Landroid/net/Uri;,Ljava/lang/String;,Landroid/os/CancellationSignal;)Landroid/os/ParcelFileDescriptor;
+0001d  0b0c                     move-result-object
+0001e  0b39 0008                if-nez
+00020  0b38 0005                if-eqz
+00022  106e 0afa 000b           invoke-virtual  # CALL Landroid/os/ParcelFileDescriptor;->close()V
+00025  0211                     return-object
+00026  0c22 01b6                new-instance  # TYPE Landroid/graphics/Typeface$Builder;
+00028  106e 0afc 000b           invoke-virtual  # CALL Landroid/os/ParcelFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
+0002b  0d0c                     move-result-object
+0002c  2070 09a8 00dc           invoke-direct  # CALL Landroid/graphics/Typeface$Builder;-><init>(Ljava/io/FileDescriptor;)V
+0002f  106e 239c 000a           invoke-virtual  # CALL Lb/b/c/d/b$f;->d()I
+00032  0d0a                     move-result
+00033  206e 09ab 00dc           invoke-virtual  # CALL Landroid/graphics/Typeface$Builder;->setWeight(I)Landroid/graphics/Typeface$Builder;
+00036  0c0c                     move-result-object
+00037  106e 239d 000a           invoke-virtual  # CALL Lb/b/c/d/b$f;->e()Z
+0003a  0a0a                     move-result
+0003b  206e 09aa 00ac           invoke-virtual  # CALL Landroid/graphics/Typeface$Builder;->setItalic(Z)Landroid/graphics/Typeface$Builder;
+0003e  0a0c                     move-result-object
+0003f  106e 09a9 000a           invoke-virtual  # CALL Landroid/graphics/Typeface$Builder;->build()Landroid/graphics/Typeface;
+00042  0a0c                     move-result-object
+00043  0b38 0005                if-eqz
+00045  106e 0afa 000b           invoke-virtual  # CALL Landroid/os/ParcelFileDescriptor;->close()V
+00048  0a11                     return-object
+00049  0a0d                     op_0d
+0004a  0a27                     throw
+0004b  0c0d                     op_0d
+0004c  0b38 000a                if-eqz
+0004e  106e 0afa 000b           invoke-virtual  # CALL Landroid/os/ParcelFileDescriptor;->close()V
+00051  0528                     goto
+00052  0b0d                     op_0d
+00053  206e 2d5b 00ba           invoke-virtual  # CALL Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+00056  0c27                     throw
+00057  0211                     return-object
+00058  3071 23a6 0cdb           invoke-static  # CALL Lb/b/c/d/b;->a(Landroid/content/Context;,[Lb/b/c/d/b$f;,Landroid/os/CancellationSignal;)Ljava/util/Map;
+0005b  0b0c                     move-result-object
+0005c  1070 2346 000a           invoke-direct  # CALL Lb/b/c/b/f;->c()Ljava/lang/Object;
+0005f  0c0c                     move-result-object
+00060  d021                     array-length
+00061  0312                     const/4
+00062  3901                     op_01
+00063  0935 002d                if-ge
+00065  0446 090d                aget-object
+00067  106e 239b 0004           invoke-virtual  # CALL Lb/b/c/d/b$f;->c()Landroid/net/Uri;
+0006a  050c                     move-result-object
+0006b  2072 2e69 005b           invoke-interface  # CALL Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+0006e  050c                     move-result-object
+0006f  051f 06a9                check-cast  # TYPE Ljava/nio/ByteBuffer;
+00071  0539 0003                if-nez
+00073  1a28                     goto
+00074  106e 239a 0004           invoke-virtual  # CALL Lb/b/c/d/b$f;->b()I
+00077  060a                     move-result
+00078  106e 239c 0004           invoke-virtual  # CALL Lb/b/c/d/b$f;->d()I
+0007b  070a                     move-result
+0007c  106e 239d 0004           invoke-virtual  # CALL Lb/b/c/d/b$f;->e()Z
+0007f  080a                     move-result
+00080  a307                     op_07
+00081  c407                     op_07
+00082  0676 2342 0003           invoke-direct/range  # CALL Lb/b/c/b/f;->a(Ljava/lang/Object;,Ljava/nio/ByteBuffer;,I,I,I)Z
+00085  030a                     move-result
+00086  0339 0006                if-nez
+00088  2070 2344 00ca           invoke-direct  # CALL Lb/b/c/b/f;->b(Ljava/lang/Object;)V
+0008b  0211                     return-object
+0008c  1301                     op_01
+0008d  09d8 0109                op_d8
+0008f  d428                     goto
+00090  0339 0006                if-nez
+00092  2070 2344 00ca           invoke-direct  # CALL Lb/b/c/b/f;->b(Ljava/lang/Object;)V
+00095  0211                     return-object
+00096  2070 2348 00ca           invoke-direct  # CALL Lb/b/c/b/f;->c(Ljava/lang/Object;)Z
+00099  0b0a                     move-result
+0009a  0b39 0003                if-nez
+0009c  0211                     return-object
+0009d  206e 233e 00ca           invoke-virtual  # CALL Lb/b/c/b/f;->a(Ljava/lang/Object;)Landroid/graphics/Typeface;
+000a0  0a0c                     move-result-object
+000a1  2071 09ac 00ea           invoke-static  # CALL Landroid/graphics/Typeface;->create(Landroid/graphics/Typeface;,I)Landroid/graphics/Typeface;
+000a4  0a0c                     move-result-object
+000a5  0a11                     return-object
+
+### Lb/b/c/b/f;->a(Landroid/content/Context;,Lb/b/c/a/d/c$b;,Landroid/content/res/Resources;,I)Landroid/graphics/Typeface;  [access=0x1, regs=15, ins=5, outs=8, code_off=0xb3d88]
+00000  1070 2345 000a           invoke-direct  # CALL Lb/b/c/b/f;->b()Z
+00003  000a                     move-result
+00004  0039 0007                if-nez
+00006  5e6f 235e dcba           invoke-super  # CALL Lb/b/c/b/h;->a(Landroid/content/Context;,Lb/b/c/a/d/c$b;,Landroid/content/res/Resources;,I)Landroid/graphics/Typeface;
+00009  0a0c                     move-result-object
+0000a  0a11                     return-object
+0000b  1070 2346 000a           invoke-direct  # CALL Lb/b/c/b/f;->c()Ljava/lang/Object;
+0000e  0d0c                     move-result-object
+0000f  106e 22dc 000c           invoke-virtual  # CALL Lb/b/c/a/d/c$b;->a()[Lb/b/c/a/d/c$c;
+00012  0c0c                     move-result-object
+00013  ce21                     array-length
+00014  0012                     const/4
+00015  0801                     op_01
+00016  0912                     const/4
+00017  e835 002c                if-ge
+00019  0046 080c                aget-object
+0001b  106e 22de 0000           invoke-virtual  # CALL Lb/b/c/a/d/c$c;->a()Ljava/lang/String;
+0001e  030c                     move-result-object
+0001f  106e 22e0 0000           invoke-virtual  # CALL Lb/b/c/a/d/c$c;->c()I
+00022  040a                     move-result
+00023  106e 22e2 0000           invoke-virtual  # CALL Lb/b/c/a/d/c$c;->e()I
+00026  050a                     move-result
+00027  106e 22e3 0000           invoke-virtual  # CALL Lb/b/c/a/d/c$c;->f()Z
+0002a  060a                     move-result
+0002b  106e 22e1 0000           invoke-virtual  # CALL Lb/b/c/a/d/c$c;->d()Ljava/lang/String;
+0002e  000c                     move-result-object
+0002f  1071 0a16 0000           invoke-static  # CALL Landroid/graphics/fonts/FontVariationAxis;->fromFontVariationSettings(Ljava/lang/String;)[Landroid/graphics/fonts/FontVariationAxis;
+00032  070c                     move-result-object
+00033  a007                     op_07
+00034  b107                     op_07
+00035  d207                     op_07
+00036  0876 2341 0000           invoke-direct/range  # CALL Lb/b/c/b/f;->a(Landroid/content/Context;,Ljava/lang/Object;,Ljava/lang/String;,I,I,I,[Landroid/graphics/fonts/FontVariationAxis;)Z
+00039  000a                     move-result
+0003a  0039 0006                if-nez
+0003c  2070 2344 00da           invoke-direct  # CALL Lb/b/c/b/f;->b(Ljava/lang/Object;)V
+0003f  0911                     return-object
+00040  08d8 0108                op_d8
+00042  d428                     goto
+00043  2070 2348 00da           invoke-direct  # CALL Lb/b/c/b/f;->c(Ljava/lang/Object;)Z
+00046  0b0a                     move-result
+00047  0b39 0003                if-nez
+00049  0911                     return-object
+0004a  206e 233e 00da           invoke-virtual  # CALL Lb/b/c/b/f;->a(Ljava/lang/Object;)Landroid/graphics/Typeface;
+0004d  0a0c                     move-result-object
+0004e  0a11                     return-object
+
+### Lb/b/c/b/f;->a(Ljava/lang/Object;)Landroid/graphics/Typeface;  [access=0x4, regs=6, ins=2, outs=3, code_off=0xb3d08]
+00000  4054 1362                iget-object  # FIELD Lb/b/c/b/f;->a:Ljava/lang/Class;
+00002  1112                     const/4
+00003  2071 2d69 0010           invoke-static  # CALL Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;,I)Ljava/lang/Object;
+00006  000c                     move-result-object
+00007  0212                     const/4
+00008  3071 2d6b 0520           invoke-static  # CALL Ljava/lang/reflect/Array;->set(Ljava/lang/Object;,I,Ljava/lang/Object;)V
+0000b  4454 1368                iget-object  # FIELD Lb/b/c/b/f;->g:Ljava/lang/reflect/Method;
+0000d  0512                     const/4
+0000e  3312                     const/4
+0000f  3323 075d                new-array  # TYPE [Ljava/lang/Object;
+00011  004d 0203                aput-object
+00013  f012                     const/4
+00014  1071 2cae 0000           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+00017  020c                     move-result-object
+00018  024d 0103                aput-object
+0001a  2112                     const/4
+0001b  1071 2cae 0000           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+0001e  000c                     move-result-object
+0001f  004d 0103                aput-object
+00021  306e 2d7a 0354           invoke-virtual  # CALL Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;,[Ljava/lang/Object;)Ljava/lang/Object;
+00024  040c                     move-result-object
+00025  041f 01b7                check-cast  # TYPE Landroid/graphics/Typeface;
+00027  0411                     return-object
+00028  040d                     op_0d
+00029  0522 0680                new-instance  # TYPE Ljava/lang/RuntimeException;
+0002b  2070 2cf0 0045           invoke-direct  # CALL Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+0002e  0527                     throw
+
+### Lb/b/c/b/f;->a()Ljava/lang/Class;  [access=0x4, regs=1, ins=1, outs=1, code_off=0xb41fc]
+00000  001a 1908                const-string  # STR "android.graphics.FontFamily"
+00002  1071 2c72 0000           invoke-static  # CALL Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+00005  000c                     move-result-object
+00006  0011                     return-object
+
+### Lb/b/c/b/f;->a(Ljava/lang/Class;)Ljava/lang/reflect/Method;  [access=0x4, regs=3, ins=2, outs=3, code_off=0xb4284]
+00000  0112                     const/4
+00001  1123 075c                new-array  # TYPE [Ljava/lang/Class;
+00003  001a 1878                const-string  # STR "abortCreation"
+00005  306e 2c7e 0102           invoke-virtual  # CALL Ljava/lang/Class;->getMethod(Ljava/lang/String;,[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+00008  010c                     move-result-object
+00009  0111                     return-object
+
+### Lb/b/c/b/f;->b(Ljava/lang/Class;)Ljava/lang/reflect/Method;  [access=0x4, regs=4, ins=2, outs=3, code_off=0xb42a8]
+00000  0213 0008                const/16
+00002  2223 075c                new-array  # TYPE [Ljava/lang/Class;
+00004  0012                     const/4
+00005  011c 0186                const-class  # TYPE Landroid/content/res/AssetManager;
+00007  014d 0002                aput-object
+00009  1012                     const/4
+0000a  011c 0683                const-class  # TYPE Ljava/lang/String;
+0000c  014d 0002                aput-object
+0000e  0062 1d60                sget-object  # FIELD Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+00010  2112                     const/4
+00011  004d 0102                aput-object
+00013  0062 1d5e                sget-object  # FIELD Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
+00015  3112                     const/4
+00016  004d 0102                aput-object
+00018  0062 1d60                sget-object  # FIELD Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+0001a  4112                     const/4
+0001b  004d 0102                aput-object
+0001d  5112                     const/4
+0001e  004d 0102                aput-object
+00020  6112                     const/4
+00021  004d 0102                aput-object
+00023  7012                     const/4
+00024  011c 0735                const-class  # TYPE [Landroid/graphics/fonts/FontVariationAxis;
+00026  014d 0002                aput-object
+00028  001a 18cd                const-string  # STR "addFontFromAssetManager"
+0002a  306e 2c7e 0203           invoke-virtual  # CALL Ljava/lang/Class;->getMethod(Ljava/lang/String;,[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+0002d  020c                     move-result-object
+0002e  0211                     return-object
+
+### Lb/b/c/b/f;->c(Ljava/lang/Class;)Ljava/lang/reflect/Method;  [access=0x4, regs=5, ins=2, outs=3, code_off=0xb4318]
+00000  5312                     const/4
+00001  3323 075c                new-array  # TYPE [Ljava/lang/Class;
+00003  0012                     const/4
+00004  011c 06a9                const-class  # TYPE Ljava/nio/ByteBuffer;
+00006  014d 0003                aput-object
+00008  0062 1d60                sget-object  # FIELD Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+0000a  1112                     const/4
+0000b  004d 0103                aput-object
+0000d  2112                     const/4
+0000e  021c 0735                const-class  # TYPE [Landroid/graphics/fonts/FontVariationAxis;
+00010  024d 0103                aput-object
+00012  3112                     const/4
+00013  004d 0103                aput-object
+00015  4112                     const/4
+00016  004d 0103                aput-object
+00018  001a 18ce                const-string  # STR "addFontFromBuffer"
+0001a  306e 2c7e 0304           invoke-virtual  # CALL Ljava/lang/Class;->getMethod(Ljava/lang/String;,[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+0001d  030c                     move-result-object
+0001e  0311                     return-object
+
+### Lb/b/c/b/f;->d(Ljava/lang/Class;)Ljava/lang/reflect/Method;  [access=0x4, regs=5, ins=2, outs=3, code_off=0xb4368]
+00000  1312                     const/4
+00001  2071 2d69 0034           invoke-static  # CALL Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;,I)Ljava/lang/Object;
+00004  040c                     move-result-object
+00005  001c 01b7                const-class  # TYPE Landroid/graphics/Typeface;
+00007  3112                     const/4
+00008  1123 075c                new-array  # TYPE [Ljava/lang/Class;
+0000a  106e 2ce3 0004           invoke-virtual  # CALL Ljava/lang/Object;->getClass()Ljava/lang/Class;
+0000d  040c                     move-result-object
+0000e  0212                     const/4
+0000f  044d 0201                aput-object
+00011  0462 1d60                sget-object  # FIELD Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+00013  044d 0301                aput-object
+00015  2212                     const/4
+00016  044d 0201                aput-object
+00018  041a 1ae5                const-string  # STR "createFromFamiliesWithDefault"
+0001a  306e 2c7a 0140           invoke-virtual  # CALL Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;,[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+0001d  040c                     move-result-object
+0001e  206e 2d7c 0034           invoke-virtual  # CALL Ljava/lang/reflect/Method;->setAccessible(Z)V
+00021  0411                     return-object
+
+### Lb/b/c/b/f;->e(Ljava/lang/Class;)Ljava/lang/reflect/Constructor;  [access=0x4, regs=2, ins=2, outs=2, code_off=0xb4264]
+00000  0012                     const/4
+00001  0023 075c                new-array  # TYPE [Ljava/lang/Class;
+00003  206e 2c77 0001           invoke-virtual  # CALL Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+00006  000c                     move-result-object
+00007  0011                     return-object
+
+### Lb/b/c/b/f;->f(Ljava/lang/Class;)Ljava/lang/reflect/Method;  [access=0x4, regs=3, ins=2, outs=3, code_off=0xb43bc]
+00000  0112                     const/4
+00001  1123 075c                new-array  # TYPE [Ljava/lang/Class;
+00003  001a 1c1a                const-string  # STR "freeze"
+00005  306e 2c7e 0102           invoke-virtual  # CALL Ljava/lang/Class;->getMethod(Ljava/lang/String;,[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+00008  010c                     move-result-object
+00009  0111                     return-object

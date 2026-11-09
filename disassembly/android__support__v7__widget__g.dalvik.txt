@@ -1,0 +1,68 @@
+### Landroid/support/v7/widget/g;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;)V  [access=0x10001, regs=4, ins=3, outs=4, code_off=0xddefc]
+00000  0060 144f                sget  # FIELD Lb/b/d/a/a;->checkboxStyle:I
+00002  4070 18f5 0321           invoke-direct  # CALL Landroid/support/v7/widget/g;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;,I)V
+00005  000e                     return-void
+
+### Landroid/support/v7/widget/g;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;,I)V  [access=0x10001, regs=4, ins=4, outs=4, code_off=0xddf18]
+00000  1071 1a4b 0001           invoke-static  # CALL Landroid/support/v7/widget/q0;->b(Landroid/content/Context;)Landroid/content/Context;
+00003  010c                     move-result-object
+00004  4070 1f28 3210           invoke-direct  # CALL Landroid/widget/CheckBox;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;,I)V
+00007  0122 0397                new-instance  # TYPE Landroid/support/v7/widget/i;
+00009  2070 193d 0001           invoke-direct  # CALL Landroid/support/v7/widget/i;-><init>(Landroid/widget/CompoundButton;)V
+0000c  015b 113c                iput-object  # FIELD Landroid/support/v7/widget/g;->b:Landroid/support/v7/widget/i;
+0000e  306e 1942 0321           invoke-virtual  # CALL Landroid/support/v7/widget/i;->a(Landroid/util/AttributeSet;,I)V
+00011  000e                     return-void
+
+### Landroid/support/v7/widget/g;->getCompoundPaddingLeft()I  [access=0x1, regs=2, ins=1, outs=2, code_off=0xdded0]
+00000  106f 1f29 0001           invoke-super  # CALL Landroid/widget/CheckBox;->getCompoundPaddingLeft()I
+00003  000a                     move-result
+00004  1154 113c                iget-object  # FIELD Landroid/support/v7/widget/g;->b:Landroid/support/v7/widget/i;
+00006  0138 0006                if-eqz
+00008  206e 193e 0001           invoke-virtual  # CALL Landroid/support/v7/widget/i;->a(I)I
+0000b  000a                     move-result
+0000c  000f                     return
+
+### Landroid/support/v7/widget/g;->getSupportButtonTintList()Landroid/content/res/ColorStateList;  [access=0x1, regs=1, ins=1, outs=1, code_off=0xdde80]
+00000  0054 113c                iget-object  # FIELD Landroid/support/v7/widget/g;->b:Landroid/support/v7/widget/i;
+00002  0038 0007                if-eqz
+00004  106e 1943 0000           invoke-virtual  # CALL Landroid/support/v7/widget/i;->b()Landroid/content/res/ColorStateList;
+00007  000c                     move-result-object
+00008  0228                     goto
+00009  0012                     const/4
+0000a  0011                     return-object
+
+### Landroid/support/v7/widget/g;->getSupportButtonTintMode()Landroid/graphics/PorterDuff$Mode;  [access=0x1, regs=1, ins=1, outs=1, code_off=0xddea8]
+00000  0054 113c                iget-object  # FIELD Landroid/support/v7/widget/g;->b:Landroid/support/v7/widget/i;
+00002  0038 0007                if-eqz
+00004  106e 1944 0000           invoke-virtual  # CALL Landroid/support/v7/widget/i;->c()Landroid/graphics/PorterDuff$Mode;
+00007  000c                     move-result-object
+00008  0228                     goto
+00009  0012                     const/4
+0000a  0011                     return-object
+
+### Landroid/support/v7/widget/g;->setButtonDrawable(I)V  [access=0x1, regs=3, ins=2, outs=2, code_off=0xddf74]
+00000  106e 1f2a 0001           invoke-virtual  # CALL Landroid/widget/CheckBox;->getContext()Landroid/content/Context;
+00003  000c                     move-result-object
+00004  2071 25a3 0020           invoke-static  # CALL Lb/b/d/b/a/a;->c(Landroid/content/Context;,I)Landroid/graphics/drawable/Drawable;
+00007  020c                     move-result-object
+00008  206e 18fa 0021           invoke-virtual  # CALL Landroid/support/v7/widget/g;->setButtonDrawable(Landroid/graphics/drawable/Drawable;)V
+0000b  000e                     return-void
+
+### Landroid/support/v7/widget/g;->setButtonDrawable(Landroid/graphics/drawable/Drawable;)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0xddf4c]
+00000  206f 1f2b 0010           invoke-super  # CALL Landroid/widget/CheckBox;->setButtonDrawable(Landroid/graphics/drawable/Drawable;)V
+00003  0054 113c                iget-object  # FIELD Landroid/support/v7/widget/g;->b:Landroid/support/v7/widget/i;
+00005  0038 0005                if-eqz
+00007  106e 1945 0000           invoke-virtual  # CALL Landroid/support/v7/widget/i;->d()V
+0000a  000e                     return-void
+
+### Landroid/support/v7/widget/g;->setSupportButtonTintList(Landroid/content/res/ColorStateList;)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0xddf9c]
+00000  0054 113c                iget-object  # FIELD Landroid/support/v7/widget/g;->b:Landroid/support/v7/widget/i;
+00002  0038 0005                if-eqz
+00004  206e 1940 0010           invoke-virtual  # CALL Landroid/support/v7/widget/i;->a(Landroid/content/res/ColorStateList;)V
+00007  000e                     return-void
+
+### Landroid/support/v7/widget/g;->setSupportButtonTintMode(Landroid/graphics/PorterDuff$Mode;)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0xddfbc]
+00000  0054 113c                iget-object  # FIELD Landroid/support/v7/widget/g;->b:Landroid/support/v7/widget/i;
+00002  0038 0005                if-eqz
+00004  206e 1941 0010           invoke-virtual  # CALL Landroid/support/v7/widget/i;->a(Landroid/graphics/PorterDuff$Mode;)V
+00007  000e                     return-void

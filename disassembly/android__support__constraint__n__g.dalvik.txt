@@ -1,0 +1,54 @@
+### Landroid/support/constraint/n/g;-><init>(I)V  [access=0x10000, regs=2, ins=2, outs=2, code_off=0x8ea34]
+00000  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  013d 0007                if-lez
+00005  1123 075d                new-array  # TYPE [Ljava/lang/Object;
+00007  015b 0b5f                iput-object  # FIELD Landroid/support/constraint/n/g;->a:[Ljava/lang/Object;
+00009  000e                     return-void
+0000a  0022 0669                new-instance  # TYPE Ljava/lang/IllegalArgumentException;
+0000c  011a 14c8                const-string  # STR "The max pool size must be > 0"
+0000e  2070 2c9f 0010           invoke-direct  # CALL Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+00011  0027                     throw
+
+### Landroid/support/constraint/n/g;->a()Ljava/lang/Object;  [access=0x1, regs=6, ins=1, outs=0, code_off=0x8e9fc]
+00000  5052 0b60                iget  # FIELD Landroid/support/constraint/n/g;->b:I
+00002  0112                     const/4
+00003  003d 000f                if-lez
+00005  02d8 ff00                op_d8
+00007  5354 0b5f                iget-object  # FIELD Landroid/support/constraint/n/g;->a:[Ljava/lang/Object;
+00009  0446 0203                aget-object
+0000b  014d 0203                aput-object
+0000d  00d8 ff00                op_d8
+0000f  5059 0b60                iput  # FIELD Landroid/support/constraint/n/g;->b:I
+00011  0411                     return-object
+00012  0111                     return-object
+
+### Landroid/support/constraint/n/g;->a([Ljava/lang/Object;,I)V  [access=0x1, regs=8, ins=3, outs=0, code_off=0x8ea68]
+00000  6021                     array-length
+00001  0737 0003                if-le
+00003  6721                     array-length
+00004  0012                     const/4
+00005  7035 0014                if-ge
+00007  0146 0006                aget-object
+00009  5252 0b60                iget  # FIELD Landroid/support/constraint/n/g;->b:I
+0000b  5354 0b5f                iget-object  # FIELD Landroid/support/constraint/n/g;->a:[Ljava/lang/Object;
+0000d  3421                     array-length
+0000e  4235 0008                if-ge
+00010  014d 0203                aput-object
+00012  02d8 0102                op_d8
+00014  5259 0b60                iput  # FIELD Landroid/support/constraint/n/g;->b:I
+00016  00d8 0100                op_d8
+00018  ed28                     goto
+00019  000e                     return-void
+
+### Landroid/support/constraint/n/g;->a(Ljava/lang/Object;)Z  [access=0x1, regs=5, ins=2, outs=0, code_off=0x8e9cc]
+00000  3052 0b60                iget  # FIELD Landroid/support/constraint/n/g;->b:I
+00002  3154 0b5f                iget-object  # FIELD Landroid/support/constraint/n/g;->a:[Ljava/lang/Object;
+00004  1221                     array-length
+00005  2035 0009                if-ge
+00007  044d 0001                aput-object
+00009  1412                     const/4
+0000a  40b0                     op_b0
+0000b  3059 0b60                iput  # FIELD Landroid/support/constraint/n/g;->b:I
+0000d  040f                     return
+0000e  0312                     const/4
+0000f  030f                     return

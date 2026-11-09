@@ -1,0 +1,303 @@
+### Lc/a/b/e/b/b;-><clinit>()V  [access=0x10008, regs=1, ins=0, outs=1, code_off=0xf8a34]
+00000  0013 0010                const/16
+00002  0023 0720                new-array  # TYPE [B
+00004  0026 000a 0000           fill-array-data
+00007  1071 27e7 0000           invoke-static  # CALL Lc/a/b/e/b/b;->c([B)[I
+0000a  000c                     move-result-object
+0000b  0069 1b23                sput-object  # FIELD Lc/a/b/e/b/b;->b:[I
+0000d  000e                     return-void
+0000e  0300 0001 0010 0000 7865 6170 646e 3320 2d32 7962 6574 6b20 ... <payload; units=12>
+
+### Lc/a/b/e/b/b;-><init>(I)V  [access=0x10001, regs=2, ins=2, outs=1, code_off=0xf8a78]
+00000  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  0159 1b22                iput  # FIELD Lc/a/b/e/b/b;->a:I
+00005  000e                     return-void
+
+### Lc/a/b/e/b/b;->a(I,I)I  [access=0xa, regs=3, ins=2, outs=0, code_off=0xf88dc]
+00000  0098 0201                int-shl
+00002  227b                     op_7b
+00003  21ba                     op_ba
+00004  01b6                     op_b6
+00005  010f                     return
+
+### Lc/a/b/e/b/b;->a([B,[B,Ljava/nio/ByteBuffer;,Ljava/nio/ByteBuffer;)V  [access=0x2, regs=11, ins=5, outs=4, code_off=0xf8a94]
+00000  106e 2dab 000a           invoke-virtual  # CALL Ljava/nio/ByteBuffer;->remaining()I
+00003  000a                     move-result
+00004  01db 4000                op_db
+00006  01d8 0101                op_d8
+00008  0212                     const/4
+00009  1235 001b                if-ge
+0000b  6352 1b22                iget  # FIELD Lc/a/b/e/b/b;->a:I
+0000d  23b0                     op_b0
+0000e  406e 27dc 3876           invoke-virtual  # CALL Lc/a/b/e/b/b;->a([B,[B,I)Ljava/nio/ByteBuffer;
+00011  030c                     move-result-object
+00012  04d8 ff01                op_d8
+00014  0513 0040                const/16
+00016  4233 0008                if-ne
+00018  04dc 4000                op_dc
+0001a  4071 27d7 43a9           invoke-static  # CALL Lc/a/b/e/b/a;->a(Ljava/nio/ByteBuffer;,Ljava/nio/ByteBuffer;,Ljava/nio/ByteBuffer;,I)V
+0001d  0428                     goto
+0001e  4071 27d7 53a9           invoke-static  # CALL Lc/a/b/e/b/a;->a(Ljava/nio/ByteBuffer;,Ljava/nio/ByteBuffer;,Ljava/nio/ByteBuffer;,I)V
+00021  02d8 0102                op_d8
+00023  e628                     goto
+00024  000e                     return-void
+
+### Lc/a/b/e/b/b;->a([I)V  [access=0x8, regs=17, ins=1, outs=5, code_off=0xf8af0]
+00000  0008 0010                op_08
+00002  0112                     const/4
+00003  1201                     op_01
+00004  0313 000a                const/16
+00006  3235 0035                if-ge
+00008  0413 000c                const/16
+0000a  0513 0008                const/16
+0000c  4612                     const/4
+0000d  5471 27e0 5610           invoke-static  # CALL Lc/a/b/e/b/b;->a([I,I,I,I,I)V
+00010  0713 000d                const/16
+00012  0813 0009                const/16
+00014  5912                     const/4
+00015  1a12                     const/4
+00016  5771 27e0 89a0           invoke-static  # CALL Lc/a/b/e/b/b;->a([I,I,I,I,I)V
+00019  0b13 000e                const/16
+0001b  6c12                     const/4
+0001c  2d12                     const/4
+0001d  5b71 27e0 3cd0           invoke-static  # CALL Lc/a/b/e/b/b;->a([I,I,I,I,I)V
+00020  0e13 000f                const/16
+00022  0f13 000b                const/16
+00024  7612                     const/4
+00025  3812                     const/4
+00026  5e71 27e0 f680           invoke-static  # CALL Lc/a/b/e/b/b;->a([I,I,I,I,I)V
+00029  5e71 27e0 3910           invoke-static  # CALL Lc/a/b/e/b/b;->a([I,I,I,I,I)V
+0002c  5471 27e0 fca0           invoke-static  # CALL Lc/a/b/e/b/b;->a([I,I,I,I,I)V
+0002f  5771 27e0 56d0           invoke-static  # CALL Lc/a/b/e/b/b;->a([I,I,I,I,I)V
+00032  0313 0009                const/16
+00034  4412                     const/4
+00035  5b71 27e0 3480           invoke-static  # CALL Lc/a/b/e/b/b;->a([I,I,I,I,I)V
+00038  02d8 0102                op_d8
+0003a  ca28                     goto
+0003b  000e                     return-void
+
+### Lc/a/b/e/b/b;->a([I,I,I,I,I)V  [access=0x8, regs=7, ins=5, outs=2, code_off=0xf8b78]
+00000  0044 0302                aget
+00002  0144 0402                aget
+00004  10b0                     op_b0
+00005  004b 0302                aput
+00007  0044 0602                aget
+00009  0144 0302                aget
+0000b  10b7                     op_b7
+0000c  0113 0010                const/16
+0000e  2071 27db 0010           invoke-static  # CALL Lc/a/b/e/b/b;->a(I,I)I
+00011  000a                     move-result
+00012  004b 0602                aput
+00014  0044 0502                aget
+00016  0144 0602                aget
+00018  10b0                     op_b0
+00019  004b 0502                aput
+0001b  0044 0402                aget
+0001d  0144 0502                aget
+0001f  10b7                     op_b7
+00020  0113 000c                const/16
+00022  2071 27db 0010           invoke-static  # CALL Lc/a/b/e/b/b;->a(I,I)I
+00025  000a                     move-result
+00026  004b 0402                aput
+00028  0044 0302                aget
+0002a  0144 0402                aget
+0002c  10b0                     op_b0
+0002d  004b 0302                aput
+0002f  0044 0602                aget
+00031  0344 0302                aget
+00033  03b7                     op_b7
+00034  0013 0008                const/16
+00036  2071 27db 0003           invoke-static  # CALL Lc/a/b/e/b/b;->a(I,I)I
+00039  030a                     move-result
+0003a  034b 0602                aput
+0003c  0344 0502                aget
+0003e  0644 0602                aget
+00040  63b0                     op_b0
+00041  034b 0502                aput
+00043  0344 0402                aget
+00045  0544 0502                aget
+00047  53b7                     op_b7
+00048  7512                     const/4
+00049  2071 27db 0053           invoke-static  # CALL Lc/a/b/e/b/b;->a(I,I)I
+0004c  030a                     move-result
+0004d  034b 0402                aput
+0004f  000e                     return-void
+
+### Lc/a/b/e/b/b;->a([I,[I)V  [access=0x8, regs=5, ins=2, outs=5, code_off=0xf8c28]
+00000  0062 1b23                sget-object  # FIELD Lc/a/b/e/b/b;->b:[I
+00002  0121                     array-length
+00003  0212                     const/4
+00004  5171 2d45 2320           invoke-static  # CALL Ljava/lang/System;->arraycopy(Ljava/lang/Object;,I,Ljava/lang/Object;,I,I)V
+00007  0062 1b23                sget-object  # FIELD Lc/a/b/e/b/b;->b:[I
+00009  0021                     array-length
+0000a  0113 0008                const/16
+0000c  5171 2d45 0324           invoke-static  # CALL Ljava/lang/System;->arraycopy(Ljava/lang/Object;,I,Ljava/lang/Object;,I,I)V
+0000f  000e                     return-void
+
+### Lc/a/b/e/b/b;->c([B)[I  [access=0x8, regs=2, ins=1, outs=2, code_off=0xf88f8]
+00000  1071 2dac 0001           invoke-static  # CALL Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
+00003  010c                     move-result-object
+00004  0062 1d6d                sget-object  # FIELD Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
+00006  206e 2da7 0001           invoke-virtual  # CALL Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+00009  010c                     move-result-object
+0000a  106e 2da4 0001           invoke-virtual  # CALL Ljava/nio/ByteBuffer;->asIntBuffer()Ljava/nio/IntBuffer;
+0000d  010c                     move-result-object
+0000e  106e 2daf 0001           invoke-virtual  # CALL Ljava/nio/IntBuffer;->remaining()I
+00011  000a                     move-result
+00012  0023 0724                new-array  # TYPE [I
+00014  206e 2dad 0001           invoke-virtual  # CALL Ljava/nio/IntBuffer;->get([I)Ljava/nio/IntBuffer;
+00017  0011                     return-object
+
+### Lc/a/b/e/b/b;->a()I  [access=0x0, regs=1, ins=1, outs=0, code_off=0xf88c4]
+00000  0013 000c                const/16
+00002  000f                     return
+
+### Lc/a/b/e/b/b;->a([B,[B,I)Ljava/nio/ByteBuffer;  [access=0x0, regs=6, ins=4, outs=4, code_off=0xf89b0]
+00000  1071 27e7 0003           invoke-static  # CALL Lc/a/b/e/b/b;->c([B)[I
+00003  030c                     move-result-object
+00004  1071 27e7 0004           invoke-static  # CALL Lc/a/b/e/b/b;->c([B)[I
+00007  040c                     move-result-object
+00008  406e 27e5 5432           invoke-virtual  # CALL Lc/a/b/e/b/b;->a([I,[I,I)[I
+0000b  020c                     move-result-object
+0000c  106e 2f3e 0002           invoke-virtual  # CALL [I->clone()Ljava/lang/Object;
+0000f  030c                     move-result-object
+00010  031f 0724                check-cast  # TYPE [I
+00012  1071 27df 0003           invoke-static  # CALL Lc/a/b/e/b/b;->a([I)V
+00015  0412                     const/4
+00016  4501                     op_01
+00017  2021                     array-length
+00018  0535 000c                if-ge
+0001a  0044 0502                aget
+0001c  0144 0503                aget
+0001e  10b0                     op_b0
+0001f  004b 0502                aput
+00021  05d8 0105                op_d8
+00023  f428                     goto
+00024  0313 0040                const/16
+00026  1071 2da2 0003           invoke-static  # CALL Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
+00029  030c                     move-result-object
+0002a  0562 1d6d                sget-object  # FIELD Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
+0002c  206e 2da7 0053           invoke-virtual  # CALL Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+0002f  030c                     move-result-object
+00030  106e 2da4 0003           invoke-virtual  # CALL Ljava/nio/ByteBuffer;->asIntBuffer()Ljava/nio/IntBuffer;
+00033  050c                     move-result-object
+00034  0013 0010                const/16
+00036  406e 2dae 0425           invoke-virtual  # CALL Ljava/nio/IntBuffer;->put([I,I,I)Ljava/nio/IntBuffer;
+00039  0311                     return-object
+
+### Lc/a/b/e/b/b;->a(Ljava/nio/ByteBuffer;,[B,[B)V  [access=0x0, regs=6, ins=4, outs=5, code_off=0xf8c58]
+00000  106e 2dab 0003           invoke-virtual  # CALL Ljava/nio/ByteBuffer;->remaining()I
+00003  000a                     move-result
+00004  106e 27da 0002           invoke-virtual  # CALL Lc/a/b/e/b/b;->a()I
+00007  010a                     move-result
+00008  10b1                     op_b1
+00009  4121                     array-length
+0000a  1034 0021                if-lt
+0000c  0539 0010                if-nez
+0000e  106e 27da 0002           invoke-virtual  # CALL Lc/a/b/e/b/b;->a()I
+00011  050a                     move-result
+00012  5523 0720                new-array  # TYPE [B
+00014  0022 06e0                new-instance  # TYPE Ljava/util/Random;
+00016  1070 2e72 0000           invoke-direct  # CALL Ljava/util/Random;-><init>()V
+00019  206e 2e73 0050           invoke-virtual  # CALL Ljava/util/Random;->nextBytes([B)V
+0001c  206e 2da9 0053           invoke-virtual  # CALL Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
+0001f  0071 27ec 0000           invoke-static  # CALL Lc/a/b/e/c/b;->a()[B
+00022  000c                     move-result-object
+00023  1071 2dac 0004           invoke-static  # CALL Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
+00026  040c                     move-result-object
+00027  5470 27de 3052           invoke-direct  # CALL Lc/a/b/e/b/b;->a([B,[B,Ljava/nio/ByteBuffer;,Ljava/nio/ByteBuffer;)V
+0002a  000e                     return-void
+0002b  0222 0669                new-instance  # TYPE Ljava/lang/IllegalArgumentException;
+0002d  031a 1b0f                const-string  # STR "data output is too small"
+0002f  2070 2c9f 0032           invoke-direct  # CALL Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+00032  0227                     throw
+
+### Lc/a/b/e/b/b;->a(Ljava/nio/ByteBuffer;)[B  [access=0x0, regs=5, ins=2, outs=5, code_off=0xf8814]
+00000  106e 2dab 0004           invoke-virtual  # CALL Ljava/nio/ByteBuffer;->remaining()I
+00003  000a                     move-result
+00004  106e 27da 0003           invoke-virtual  # CALL Lc/a/b/e/b/b;->a()I
+00007  010a                     move-result
+00008  1034 001f                if-lt
+0000a  106e 27da 0003           invoke-virtual  # CALL Lc/a/b/e/b/b;->a()I
+0000d  000a                     move-result
+0000e  0023 0720                new-array  # TYPE [B
+00010  206e 2da6 0004           invoke-virtual  # CALL Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
+00013  106e 2dab 0004           invoke-virtual  # CALL Ljava/nio/ByteBuffer;->remaining()I
+00016  010a                     move-result
+00017  1071 2da2 0001           invoke-static  # CALL Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
+0001a  010c                     move-result-object
+0001b  0071 27ed 0000           invoke-static  # CALL Lc/a/b/e/c/b;->b()[B
+0001e  020c                     move-result-object
+0001f  5470 27de 1203           invoke-direct  # CALL Lc/a/b/e/b/b;->a([B,[B,Ljava/nio/ByteBuffer;,Ljava/nio/ByteBuffer;)V
+00022  106e 2da3 0001           invoke-virtual  # CALL Ljava/nio/ByteBuffer;->array()[B
+00025  030c                     move-result-object
+00026  0311                     return-object
+00027  0322 06b3                new-instance  # TYPE Ljava/security/GeneralSecurityException;
+00029  041a 1b11                const-string  # STR "data too short"
+0002b  2070 2db8 0043           invoke-direct  # CALL Ljava/security/GeneralSecurityException;-><init>(Ljava/lang/String;)V
+0002e  0327                     throw
+
+### Lc/a/b/e/b/b;->a([B)[B  [access=0x1, regs=3, ins=2, outs=3, code_off=0xf8884]
+00000  0012                     const/4
+00001  306e 27e4 0021           invoke-virtual  # CALL Lc/a/b/e/b/b;->a([B,[B)[B
+00004  010c                     move-result-object
+00005  0111                     return-object
+
+### Lc/a/b/e/b/b;->a([B,[B)[B  [access=0x1, regs=6, ins=3, outs=4, code_off=0xf87b8]
+00000  4021                     array-length
+00001  106e 27da 0003           invoke-virtual  # CALL Lc/a/b/e/b/b;->a()I
+00004  010a                     move-result
+00005  0214 ffff 7fff           const
+00008  12b1                     op_b1
+00009  2036 0014                if-gt
+0000b  106e 27da 0003           invoke-virtual  # CALL Lc/a/b/e/b/b;->a()I
+0000e  000a                     move-result
+0000f  4121                     array-length
+00010  10b0                     op_b0
+00011  1071 2da2 0000           invoke-static  # CALL Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
+00014  000c                     move-result-object
+00015  406e 27dd 5403           invoke-virtual  # CALL Lc/a/b/e/b/b;->a(Ljava/nio/ByteBuffer;,[B,[B)V
+00018  106e 2da3 0000           invoke-virtual  # CALL Ljava/nio/ByteBuffer;->array()[B
+0001b  030c                     move-result-object
+0001c  0311                     return-object
+0001d  0322 06b3                new-instance  # TYPE Ljava/security/GeneralSecurityException;
+0001f  041a 1b10                const-string  # STR "data too long"
+00021  2070 2db8 0043           invoke-direct  # CALL Ljava/security/GeneralSecurityException;-><init>(Ljava/lang/String;)V
+00024  0327                     throw
+
+### Lc/a/b/e/b/b;->a([I,[I,I)[I  [access=0x0, regs=6, ins=4, outs=5, code_off=0xf8938]
+00000  3021                     array-length
+00001  106e 27da 0002           invoke-virtual  # CALL Lc/a/b/e/b/b;->a()I
+00004  020a                     move-result
+00005  02db 0402                op_db
+00007  0112                     const/4
+00008  2033 0014                if-ne
+0000a  0213 0010                const/16
+0000c  2223 0724                new-array  # TYPE [I
+0000e  2071 27e1 0042           invoke-static  # CALL Lc/a/b/e/b/b;->a([I,[I)V
+00011  0413 000c                const/16
+00013  054b 0402                aput
+00015  3421                     array-length
+00016  0513 000d                const/16
+00018  5471 2d45 5213           invoke-static  # CALL Ljava/lang/System;->arraycopy(Ljava/lang/Object;,I,Ljava/lang/Object;,I,I)V
+0001b  0211                     return-object
+0001c  0222 0669                new-instance  # TYPE Ljava/lang/IllegalArgumentException;
+0001e  1412                     const/4
+0001f  4423 075d                new-array  # TYPE [Ljava/lang/Object;
+00021  3321                     array-length
+00022  03da 2003                op_da
+00024  1071 2cae 0003           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+00027  030c                     move-result-object
+00028  034d 0104                aput-object
+0002a  031a 219c                const-string  # STR "need 96-bit param, but got a %d-bit param"
+0002c  2071 2d05 0043           invoke-static  # CALL Ljava/lang/String;->format(Ljava/lang/String;,[Ljava/lang/Object;)Ljava/lang/String;
+0002f  030c                     move-result-object
+00030  2070 2c9f 0032           invoke-direct  # CALL Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+00033  0227                     throw
+
+### Lc/a/b/e/b/b;->b([B)[B  [access=0x1, regs=2, ins=2, outs=2, code_off=0xf88a0]
+00000  1071 2dac 0001           invoke-static  # CALL Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
+00003  010c                     move-result-object
+00004  206e 27e2 0010           invoke-virtual  # CALL Lc/a/b/e/b/b;->a(Ljava/nio/ByteBuffer;)[B
+00007  000c                     move-result-object
+00008  0011                     return-object

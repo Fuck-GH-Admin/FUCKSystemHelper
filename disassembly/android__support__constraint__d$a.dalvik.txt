@@ -1,0 +1,58 @@
+### Landroid/support/constraint/d$a;-><init>(Landroid/content/Context;,Lorg/xmlpull/v1/XmlPullParser;)V  [access=0x10001, regs=8, ins=3, outs=3, code_off=0x84b04]
+00000  1070 2ce0 0005           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  0022 06c8                new-instance  # TYPE Ljava/util/ArrayList;
+00005  1070 2de7 0000           invoke-direct  # CALL Ljava/util/ArrayList;-><init>()V
+00008  505b 05d5                iput-object  # FIELD Landroid/support/constraint/d$a;->b:Ljava/util/ArrayList;
+0000a  f012                     const/4
+0000b  5059 05d6                iput  # FIELD Landroid/support/constraint/d$a;->c:I
+0000d  1071 1c84 0007           invoke-static  # CALL Landroid/util/Xml;->asAttributeSet(Lorg/xmlpull/v1/XmlPullParser;)Landroid/util/AttributeSet;
+00010  070c                     move-result-object
+00011  0062 0a9b                sget-object  # FIELD Landroid/support/constraint/k;->State:[I
+00013  306e 0851 0076           invoke-virtual  # CALL Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;,[I)Landroid/content/res/TypedArray;
+00016  070c                     move-result-object
+00017  106e 08fb 0007           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getIndexCount()I
+0001a  000a                     move-result
+0001b  0112                     const/4
+0001c  0135 0049                if-ge
+0001e  206e 08fa 0017           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getIndex(I)I
+00021  020a                     move-result
+00022  0360 0aa7                sget  # FIELD Landroid/support/constraint/k;->State_android_id:I
+00024  3233 000b                if-ne
+00026  5352 05d4                iget  # FIELD Landroid/support/constraint/d$a;->a:I
+00028  306e 0900 0327           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getResourceId(I,I)I
+0002b  020a                     move-result
+0002c  5259 05d4                iput  # FIELD Landroid/support/constraint/d$a;->a:I
+0002e  3428                     goto
+0002f  0360 0aa8                sget  # FIELD Landroid/support/constraint/k;->State_constraints:I
+00031  3233 0031                if-ne
+00033  5352 05d6                iget  # FIELD Landroid/support/constraint/d$a;->c:I
+00035  306e 0900 0327           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getResourceId(I,I)I
+00038  020a                     move-result
+00039  5259 05d6                iput  # FIELD Landroid/support/constraint/d$a;->c:I
+0003b  106e 0848 0006           invoke-virtual  # CALL Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+0003e  020c                     move-result-object
+0003f  5352 05d6                iget  # FIELD Landroid/support/constraint/d$a;->c:I
+00041  206e 08dc 0032           invoke-virtual  # CALL Landroid/content/res/Resources;->getResourceTypeName(I)Ljava/lang/String;
+00044  020c                     move-result-object
+00045  106e 0848 0006           invoke-virtual  # CALL Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+00048  030c                     move-result-object
+00049  5452 05d6                iget  # FIELD Landroid/support/constraint/d$a;->c:I
+0004b  206e 08da 0043           invoke-virtual  # CALL Landroid/content/res/Resources;->getResourceName(I)Ljava/lang/String;
+0004e  031a 2095                const-string  # STR "layout"
+00050  206e 2d03 0023           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+00053  020a                     move-result
+00054  0238 000e                if-eqz
+00056  0222 021f                new-instance  # TYPE Landroid/support/constraint/e;
+00058  1070 0b9d 0002           invoke-direct  # CALL Landroid/support/constraint/e;-><init>()V
+0005b  525b 05d7                iput-object  # FIELD Landroid/support/constraint/d$a;->d:Landroid/support/constraint/e;
+0005d  5352 05d6                iget  # FIELD Landroid/support/constraint/d$a;->c:I
+0005f  306e 0ba0 0362           invoke-virtual  # CALL Landroid/support/constraint/e;->a(Landroid/content/Context;,I)V
+00062  01d8 0101                op_d8
+00064  b828                     goto
+00065  106e 090a 0007           invoke-virtual  # CALL Landroid/content/res/TypedArray;->recycle()V
+00068  000e                     return-void
+
+### Landroid/support/constraint/d$a;->a(Landroid/support/constraint/d$b;)V  [access=0x0, regs=2, ins=2, outs=2, code_off=0x84be8]
+00000  0054 05d5                iget-object  # FIELD Landroid/support/constraint/d$a;->b:Ljava/util/ArrayList;
+00002  206e 2deb 0010           invoke-virtual  # CALL Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+00005  000e                     return-void

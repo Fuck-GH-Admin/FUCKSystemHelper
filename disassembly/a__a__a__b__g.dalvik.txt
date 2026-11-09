@@ -1,0 +1,51 @@
+### La/a/a/b/g;-><clinit>()V  [access=0x10009, regs=1, ins=0, outs=1, code_off=0x4aee8]
+00000  0022 067b                new-instance  # TYPE Ljava/lang/Object;
+00002  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00005  0069 0062                sput-object  # FIELD La/a/a/b/g;->b:Ljava/lang/Object;
+00007  000e                     return-void
+
+### La/a/a/b/g;-><init>()V  [access=0x10001, regs=2, ins=1, outs=1, code_off=0x4af08]
+00000  1070 2ce0 0001           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  f012                     const/4
+00004  1059 0061                iput  # FIELD La/a/a/b/g;->a:I
+00006  000e                     return-void
+
+### La/a/a/b/g;->b()La/a/a/b/g;  [access=0x9, regs=2, ins=0, outs=1, code_off=0x4aea0]
+00000  0062 0062                sget-object  # FIELD La/a/a/b/g;->b:Ljava/lang/Object;
+00002  001d                     monitor-enter
+00003  0162 0063                sget-object  # FIELD La/a/a/b/g;->c:La/a/a/b/g;
+00005  0139 0009                if-nez
+00007  0122 0018                new-instance  # TYPE La/a/a/b/g;
+00009  1070 0074 0001           invoke-direct  # CALL La/a/a/b/g;-><init>()V
+0000c  0169 0063                sput-object  # FIELD La/a/a/b/g;->c:La/a/a/b/g;
+0000e  0162 0063                sget-object  # FIELD La/a/a/b/g;->c:La/a/a/b/g;
+00010  001e                     monitor-exit
+00011  0111                     return-object
+00012  010d                     op_0d
+00013  001e                     monitor-exit
+00014  0127                     throw
+
+### La/a/a/b/g;->a()V  [access=0x1, regs=2, ins=1, outs=0, code_off=0x4af88]
+00000  f012                     const/4
+00001  1059 0061                iput  # FIELD La/a/a/b/g;->a:I
+00003  000e                     return-void
+
+### La/a/a/b/g;->a(I,I,Ljava/lang/String;)V  [access=0x1, regs=5, ins=4, outs=3, code_off=0x4af28]
+00000  1052 0061                iget  # FIELD La/a/a/b/g;->a:I
+00002  0332 0025                if-eq
+00004  1359 0061                iput  # FIELD La/a/a/b/g;->a:I
+00006  0122 01f1                new-instance  # TYPE Landroid/os/Bundle;
+00008  1070 0a86 0001           invoke-direct  # CALL Landroid/os/Bundle;-><init>()V
+0000b  001a 20e4                const-string  # STR "loctype"
+0000d  306e 0a9f 0201           invoke-virtual  # CALL Landroid/os/Bundle;->putInt(Ljava/lang/String;,I)V
+00010  021a 1b36                const-string  # STR "diagtype"
+00012  306e 0a9f 0321           invoke-virtual  # CALL Landroid/os/Bundle;->putInt(Ljava/lang/String;,I)V
+00015  106e 2d07 0004           invoke-virtual  # CALL Ljava/lang/String;->getBytes()[B
+00018  020c                     move-result-object
+00019  031a 1b35                const-string  # STR "diagmessage"
+0001b  306e 0a9b 0231           invoke-virtual  # CALL Landroid/os/Bundle;->putByteArray(Ljava/lang/String;,[B)V
+0001e  0071 004a 0000           invoke-static  # CALL La/a/a/b/c;->h()La/a/a/b/c;
+00021  020c                     move-result-object
+00022  0313 012f                const/16
+00024  306e 0038 0312           invoke-virtual  # CALL La/a/a/b/c;->a(Landroid/os/Bundle;,I)V
+00027  000e                     return-void

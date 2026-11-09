@@ -1,0 +1,83 @@
+### Lb/b/c/g/h;->a(Landroid/view/MenuItem;,Lb/b/c/g/c;)Landroid/view/MenuItem;  [access=0x9, regs=3, ins=2, outs=2, code_off=0xbc678]
+00000  1020 04f4                instance-of  # TYPE Lb/b/c/c/a/b;
+00002  0038 0009                if-eqz
+00004  011f 04f4                check-cast  # TYPE Lb/b/c/c/a/b;
+00006  2072 236a 0021           invoke-interface  # CALL Lb/b/c/c/a/b;->a(Lb/b/c/g/c;)Lb/b/c/c/a/b;
+00009  010c                     move-result-object
+0000a  0111                     return-object
+0000b  021a 11fe                const-string  # STR "MenuItemCompat"
+0000d  001a 24ff                const-string  # STR "setActionProvider: item does not implement SupportMenuItem; ignoring"
+0000f  2071 1c61 0002           invoke-static  # CALL Landroid/util/Log;->w(Ljava/lang/String;,Ljava/lang/String;)I
+00012  0111                     return-object
+
+### Lb/b/c/g/h;->a(Landroid/view/MenuItem;,C,I)V  [access=0x9, regs=5, ins=3, outs=3, code_off=0xbc6b0]
+00000  2020 04f4                instance-of  # TYPE Lb/b/c/c/a/b;
+00002  0038 0008                if-eqz
+00004  021f 04f4                check-cast  # TYPE Lb/b/c/c/a/b;
+00006  3072 2378 0432           invoke-interface  # CALL Lb/b/c/c/a/b;->setAlphabeticShortcut(C,I)Landroid/view/MenuItem;
+00009  0a28                     goto
+0000a  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+0000c  0113 001a                const/16
+0000e  1034 0005                if-lt
+00010  3072 1cf1 0432           invoke-interface  # CALL Landroid/view/MenuItem;->setAlphabeticShortcut(C,I)Landroid/view/MenuItem;
+00013  000e                     return-void
+
+### Lb/b/c/g/h;->a(Landroid/view/MenuItem;,Landroid/content/res/ColorStateList;)V  [access=0x9, regs=4, ins=2, outs=2, code_off=0xbc720]
+00000  2020 04f4                instance-of  # TYPE Lb/b/c/c/a/b;
+00002  0038 0008                if-eqz
+00004  021f 04f4                check-cast  # TYPE Lb/b/c/c/a/b;
+00006  2072 237a 0032           invoke-interface  # CALL Lb/b/c/c/a/b;->setIconTintList(Landroid/content/res/ColorStateList;)Landroid/view/MenuItem;
+00009  0a28                     goto
+0000a  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+0000c  0113 001a                const/16
+0000e  1034 0005                if-lt
+00010  2072 1cf8 0032           invoke-interface  # CALL Landroid/view/MenuItem;->setIconTintList(Landroid/content/res/ColorStateList;)Landroid/view/MenuItem;
+00013  000e                     return-void
+
+### Lb/b/c/g/h;->a(Landroid/view/MenuItem;,Landroid/graphics/PorterDuff$Mode;)V  [access=0x9, regs=4, ins=2, outs=2, code_off=0xbc758]
+00000  2020 04f4                instance-of  # TYPE Lb/b/c/c/a/b;
+00002  0038 0008                if-eqz
+00004  021f 04f4                check-cast  # TYPE Lb/b/c/c/a/b;
+00006  2072 237b 0032           invoke-interface  # CALL Lb/b/c/c/a/b;->setIconTintMode(Landroid/graphics/PorterDuff$Mode;)Landroid/view/MenuItem;
+00009  0a28                     goto
+0000a  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+0000c  0113 001a                const/16
+0000e  1034 0005                if-lt
+00010  2072 1cf9 0032           invoke-interface  # CALL Landroid/view/MenuItem;->setIconTintMode(Landroid/graphics/PorterDuff$Mode;)Landroid/view/MenuItem;
+00013  000e                     return-void
+
+### Lb/b/c/g/h;->a(Landroid/view/MenuItem;,Ljava/lang/CharSequence;)V  [access=0x9, regs=4, ins=2, outs=2, code_off=0xbc6e8]
+00000  2020 04f4                instance-of  # TYPE Lb/b/c/c/a/b;
+00002  0038 0008                if-eqz
+00004  021f 04f4                check-cast  # TYPE Lb/b/c/c/a/b;
+00006  2072 2379 0032           invoke-interface  # CALL Lb/b/c/c/a/b;->setContentDescription(Ljava/lang/CharSequence;)Lb/b/c/c/a/b;
+00009  0a28                     goto
+0000a  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+0000c  0113 001a                const/16
+0000e  1034 0005                if-lt
+00010  2072 1cf4 0032           invoke-interface  # CALL Landroid/view/MenuItem;->setContentDescription(Ljava/lang/CharSequence;)Landroid/view/MenuItem;
+00013  000e                     return-void
+
+### Lb/b/c/g/h;->b(Landroid/view/MenuItem;,C,I)V  [access=0x9, regs=5, ins=3, outs=3, code_off=0xbc790]
+00000  2020 04f4                instance-of  # TYPE Lb/b/c/c/a/b;
+00002  0038 0008                if-eqz
+00004  021f 04f4                check-cast  # TYPE Lb/b/c/c/a/b;
+00006  3072 237c 0432           invoke-interface  # CALL Lb/b/c/c/a/b;->setNumericShortcut(C,I)Landroid/view/MenuItem;
+00009  0a28                     goto
+0000a  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+0000c  0113 001a                const/16
+0000e  1034 0005                if-lt
+00010  3072 1cfc 0432           invoke-interface  # CALL Landroid/view/MenuItem;->setNumericShortcut(C,I)Landroid/view/MenuItem;
+00013  000e                     return-void
+
+### Lb/b/c/g/h;->b(Landroid/view/MenuItem;,Ljava/lang/CharSequence;)V  [access=0x9, regs=4, ins=2, outs=2, code_off=0xbc7c8]
+00000  2020 04f4                instance-of  # TYPE Lb/b/c/c/a/b;
+00002  0038 0008                if-eqz
+00004  021f 04f4                check-cast  # TYPE Lb/b/c/c/a/b;
+00006  2072 2380 0032           invoke-interface  # CALL Lb/b/c/c/a/b;->setTooltipText(Ljava/lang/CharSequence;)Lb/b/c/c/a/b;
+00009  0a28                     goto
+0000a  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+0000c  0113 001a                const/16
+0000e  1034 0005                if-lt
+00010  2072 1d04 0032           invoke-interface  # CALL Landroid/view/MenuItem;->setTooltipText(Ljava/lang/CharSequence;)Landroid/view/MenuItem;
+00013  000e                     return-void

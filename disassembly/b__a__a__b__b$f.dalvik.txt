@@ -1,0 +1,57 @@
+### Lb/a/a/b/b$f;-><init>(Lb/a/a/b/b$d;,Lb/a/a/b/b$d;)V  [access=0x10000, regs=3, ins=3, outs=1, code_off=0x7f600]
+00000  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  025b 128f                iput-object  # FIELD Lb/a/a/b/b$f;->b:Lb/a/a/b/b$d;
+00005  015b 1290                iput-object  # FIELD Lb/a/a/b/b$f;->c:Lb/a/a/b/b$d;
+00007  000e                     return-void
+
+### Lb/a/a/b/b$f;->a()Lb/a/a/b/b$d;  [access=0x2, regs=3, ins=1, outs=2, code_off=0x7f570]
+00000  2054 1290                iget-object  # FIELD Lb/a/a/b/b$f;->c:Lb/a/a/b/b$d;
+00002  2154 128f                iget-object  # FIELD Lb/a/a/b/b$f;->b:Lb/a/a/b/b$d;
+00004  1032 000a                if-eq
+00006  0139 0003                if-nez
+00008  0628                     goto
+00009  206e 21b9 0002           invoke-virtual  # CALL Lb/a/a/b/b$f;->c(Lb/a/a/b/b$d;)Lb/a/a/b/b$d;
+0000c  020c                     move-result-object
+0000d  0211                     return-object
+0000e  0212                     const/4
+0000f  0211                     return-object
+
+### Lb/a/a/b/b$f;->a(Lb/a/a/b/b$d;)V  [access=0x1, regs=3, ins=2, outs=2, code_off=0x7f620]
+00000  1054 128f                iget-object  # FIELD Lb/a/a/b/b$f;->b:Lb/a/a/b/b$d;
+00002  2033 000b                if-ne
+00004  1054 1290                iget-object  # FIELD Lb/a/a/b/b$f;->c:Lb/a/a/b/b$d;
+00006  0233 0007                if-ne
+00008  0012                     const/4
+00009  105b 1290                iput-object  # FIELD Lb/a/a/b/b$f;->c:Lb/a/a/b/b$d;
+0000b  105b 128f                iput-object  # FIELD Lb/a/a/b/b$f;->b:Lb/a/a/b/b$d;
+0000d  1054 128f                iget-object  # FIELD Lb/a/a/b/b$f;->b:Lb/a/a/b/b$d;
+0000f  2033 0008                if-ne
+00011  206e 21b8 0001           invoke-virtual  # CALL Lb/a/a/b/b$f;->b(Lb/a/a/b/b$d;)Lb/a/a/b/b$d;
+00014  000c                     move-result-object
+00015  105b 128f                iput-object  # FIELD Lb/a/a/b/b$f;->b:Lb/a/a/b/b$d;
+00017  1054 1290                iget-object  # FIELD Lb/a/a/b/b$f;->c:Lb/a/a/b/b$d;
+00019  2033 0008                if-ne
+0001b  1070 21b6 0001           invoke-direct  # CALL Lb/a/a/b/b$f;->a()Lb/a/a/b/b$d;
+0001e  020c                     move-result-object
+0001f  125b 1290                iput-object  # FIELD Lb/a/a/b/b$f;->c:Lb/a/a/b/b$d;
+00021  000e                     return-void
+
+### Lb/a/a/b/b$f;->hasNext()Z  [access=0x1, regs=1, ins=1, outs=0, code_off=0x7f5a0]
+00000  0054 1290                iget-object  # FIELD Lb/a/a/b/b$f;->c:Lb/a/a/b/b$d;
+00002  0038 0004                if-eqz
+00004  1012                     const/4
+00005  0228                     goto
+00006  0012                     const/4
+00007  000f                     return
+
+### Lb/a/a/b/b$f;->next()Ljava/lang/Object;  [access=0x1041, regs=1, ins=1, outs=1, code_off=0x7f5c0]
+00000  106e 21bc 0000           invoke-virtual  # CALL Lb/a/a/b/b$f;->next()Ljava/util/Map$Entry;
+00003  000c                     move-result-object
+00004  0011                     return-object
+
+### Lb/a/a/b/b$f;->next()Ljava/util/Map$Entry;  [access=0x1, regs=3, ins=1, outs=1, code_off=0x7f5dc]
+00000  2054 1290                iget-object  # FIELD Lb/a/a/b/b$f;->c:Lb/a/a/b/b$d;
+00002  1070 21b6 0002           invoke-direct  # CALL Lb/a/a/b/b$f;->a()Lb/a/a/b/b$d;
+00005  010c                     move-result-object
+00006  215b 1290                iput-object  # FIELD Lb/a/a/b/b$f;->c:Lb/a/a/b/b$d;
+00008  0011                     return-object

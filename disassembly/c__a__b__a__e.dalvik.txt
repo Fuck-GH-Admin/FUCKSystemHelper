@@ -1,0 +1,15 @@
+### Lc/a/b/a/e;->a([B)Ljava/lang/String;  [access=0x9, regs=2, ins=1, outs=3, code_off=0xf3d18]
+00000  0071 27cf 0000           invoke-static  # CALL Lc/a/b/e/a/g;->a()[B
+00003  000c                     move-result-object
+00004  3071 27b7 0100           invoke-static  # CALL Lc/a/b/e/a/c;->a([B,[B,[B)[B
+00007  010c                     move-result-object
+00008  0022 0683                new-instance  # TYPE Ljava/lang/String;
+0000a  2070 2cf8 0010           invoke-direct  # CALL Ljava/lang/String;-><init>([B)V
+0000d  0011                     return-object
+
+### Lc/a/b/a/e;->a(Ljava/lang/Class;,Ljava/lang/String;,[Ljava/lang/Class;)Ljava/lang/reflect/Method;  [access=0x9, regs=3, ins=3, outs=3, code_off=0xf3d44]
+00000  306e 2c7a 0210           invoke-virtual  # CALL Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;,[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+00003  000c                     move-result-object
+00004  1112                     const/4
+00005  206e 2d7c 0010           invoke-virtual  # CALL Ljava/lang/reflect/Method;->setAccessible(Z)V
+00008  0011                     return-object

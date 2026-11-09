@@ -1,0 +1,19 @@
+### Lcom/mobiletools/systemhelper/control/f$b;-><init>(Lcom/mobiletools/systemhelper/control/f;)V  [access=0x10000, regs=2, ins=2, outs=1, code_off=0x10d144]
+00000  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  000e                     return-void
+
+### Lcom/mobiletools/systemhelper/control/f$b;->a(Landroid/app/usage/UsageStats;,Landroid/app/usage/UsageStats;)I  [access=0x1, regs=5, ins=3, outs=1, code_off=0x10d0f8]
+00000  106e 078c 0004           invoke-virtual  # CALL Landroid/app/usage/UsageStats;->getTotalTimeInForeground()J
+00003  000b                     move-result-wide
+00004  106e 078c 0003           invoke-virtual  # CALL Landroid/app/usage/UsageStats;->getTotalTimeInForeground()J
+00007  020b                     move-result-wide
+00008  20bc                     op_bc
+00009  0284                     op_84
+0000a  020f                     return
+
+### Lcom/mobiletools/systemhelper/control/f$b;->compare(Ljava/lang/Object;,Ljava/lang/Object;)I  [access=0x1041, regs=3, ins=3, outs=3, code_off=0x10d120]
+00000  011f 0136                check-cast  # TYPE Landroid/app/usage/UsageStats;
+00002  021f 0136                check-cast  # TYPE Landroid/app/usage/UsageStats;
+00004  306e 2bba 0210           invoke-virtual  # CALL Lcom/mobiletools/systemhelper/control/f$b;->a(Landroid/app/usage/UsageStats;,Landroid/app/usage/UsageStats;)I
+00007  000a                     move-result
+00008  000f                     return

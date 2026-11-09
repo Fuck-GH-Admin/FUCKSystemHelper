@@ -1,0 +1,132 @@
+### La/a/a/i/f;-><clinit>()V  [access=0x10009, regs=2, ins=0, outs=0, code_off=0x7b650]
+00000  0013 0060                const/16
+00002  0123 0722                new-array  # TYPE [D
+00004  0126 000e 0000           fill-array-data
+00007  0169 0431                sput-object  # FIELD La/a/a/i/f;->c:[D
+00009  0023 0722                new-array  # TYPE [D
+0000b  0026 018b 0000           fill-array-data
+0000e  0069 0432                sput-object  # FIELD La/a/a/i/f;->d:[D
+00010  000e                     return-void
+00011  0000                     nop
+00012  0300 0008 0060 0000 3cea fe2a 98ef 405b d93c 8ccd 447e 405a cb14 ad2d 3986 4058 ... <payload; units=388>
+00196  0300 0008 0060 0000 1f4b a0ba 9bbe 4045 ae8e ddd2 3075 4045 72d6 2667 9618 4045 ... <payload; units=388>
+
+### La/a/a/i/f;-><init>()V  [access=0x10001, regs=17, ins=1, outs=6, code_off=0x7bc94]
+00000  0608 0010                op_08
+00002  0176 2ce0 0010           invoke-direct/range  # CALL Ljava/lang/Object;-><init>()V
+00005  0012                     const/4
+00006  605b 042f                iput-object  # FIELD La/a/a/i/f;->a:Ljava/util/LinkedList;
+00008  0062 0431                sget-object  # FIELD La/a/a/i/f;->c:[D
+0000a  0721                     array-length
+0000b  0022 06d9                new-instance  # TYPE Ljava/util/LinkedList;
+0000d  1070 2e4e 0000           invoke-direct  # CALL Ljava/util/LinkedList;-><init>()V
+00010  605b 042f                iput-object  # FIELD La/a/a/i/f;->a:Ljava/util/LinkedList;
+00012  0012                     const/4
+00013  0801                     op_01
+00014  00d8 ff07                op_d8
+00016  0835 003a                if-ge
+00018  6954 042f                iget-object  # FIELD La/a/a/i/f;->a:Ljava/util/LinkedList;
+0001a  0a22 00f7                new-instance  # TYPE La/a/a/i/f$b;
+0001c  0b22 00f6                new-instance  # TYPE La/a/a/i/f$a;
+0001e  0c62 0431                sget-object  # FIELD La/a/a/i/f;->c:[D
+00020  0045 080c                aget-wide
+00022  0d18 0000 0000 6a00 40f8 const-wide
+00027  02ad 0d00                op_ad
+00029  0f62 0432                sget-object  # FIELD La/a/a/i/f;->d:[D
+0002b  0045 080f                aget-wide
+0002d  04ad 0d00                op_ad
+0002f  b007                     op_07
+00030  0108 0010                op_08
+00032  0676 0658 0000           invoke-direct/range  # CALL La/a/a/i/f$a;-><init>(La/a/a/i/f;,D,D)V
+00035  0422 00f6                new-instance  # TYPE La/a/a/i/f$a;
+00037  08d8 0108                op_d8
+00039  0045 080c                aget-wide
+0003b  02ad 0d00                op_ad
+0003d  0045 080f                aget-wide
+0003f  0cad 0d00                op_ad
+00041  4007                     op_07
+00042  0108 0010                op_08
+00044  4e07                     op_07
+00045  c404                     op_04
+00046  0676 0658 0000           invoke-direct/range  # CALL La/a/a/i/f$a;-><init>(La/a/a/i/f;,D,D)V
+00049  4070 0659 eb6a           invoke-direct  # CALL La/a/a/i/f$b;-><init>(La/a/a/i/f;,La/a/a/i/f$a;,La/a/a/i/f$a;)V
+0004c  206e 2e4f 00a9           invoke-virtual  # CALL Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
+0004f  c528                     goto
+00050  000e                     return-void
+
+### La/a/a/i/f;->a()La/a/a/i/f;  [access=0x9, regs=1, ins=0, outs=1, code_off=0x7b504]
+00000  0062 0430                sget-object  # FIELD La/a/a/i/f;->b:La/a/a/i/f;
+00002  0039 0009                if-nez
+00004  0022 00f8                new-instance  # TYPE La/a/a/i/f;
+00006  1070 065d 0000           invoke-direct  # CALL La/a/a/i/f;-><init>()V
+00009  0069 0430                sput-object  # FIELD La/a/a/i/f;->b:La/a/a/i/f;
+0000b  0062 0430                sget-object  # FIELD La/a/a/i/f;->b:La/a/a/i/f;
+0000d  0011                     return-object
+
+### La/a/a/i/f;->a(D)I  [access=0x1, regs=5, ins=3, outs=0, code_off=0x7b610]
+00000  0018 8c3a e230 798e be45 const-wide
+00005  0230 0003                op_30
+00007  023b 0004                if-gez
+00009  f212                     const/4
+0000a  020f                     return
+0000b  0018 8c3a e230 798e 3e45 const-wide
+00010  022f 0003                op_2f
+00012  023d 0004                if-lez
+00014  1212                     const/4
+00015  020f                     return
+00016  0212                     const/4
+00017  020f                     return
+
+### La/a/a/i/f;->a(D,D)Z  [access=0x1, regs=14, ins=5, outs=6, code_off=0x7b530]
+00000  0012                     const/4
+00001  1112                     const/4
+00002  0822 00f6                new-instance  # TYPE La/a/a/i/f$a;
+00004  0218 0000 0000 6a00 40f8 const-wide
+00009  04ad 020a                op_ad
+0000b  06ad 020c                op_ad
+0000d  8207                     op_07
+0000e  9307                     op_07
+0000f  0676 0658 0002           invoke-direct/range  # CALL La/a/a/i/f$a;-><init>(La/a/a/i/f;,D,D)V
+00012  9a54 042f                iget-object  # FIELD La/a/a/i/f;->a:Ljava/util/LinkedList;
+00014  106e 2e50 000a           invoke-virtual  # CALL Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
+00017  0a0c                     move-result-object
+00018  0b01                     op_01
+00019  1072 2e43 000a           invoke-interface  # CALL Ljava/util/Iterator;->hasNext()Z
+0001c  0c0a                     move-result
+0001d  0c38 003e                if-eqz
+0001f  1072 2e44 000a           invoke-interface  # CALL Ljava/util/Iterator;->next()Ljava/lang/Object;
+00022  0c0c                     move-result-object
+00023  0c1f 00f7                check-cast  # TYPE La/a/a/i/f$b;
+00025  206e 065a 008c           invoke-virtual  # CALL La/a/a/i/f$b;->a(La/a/a/i/f$a;)Z
+00028  0d0a                     move-result
+00029  0d38 0003                if-eqz
+0002b  010f                     return
+0002c  206e 065b 008c           invoke-virtual  # CALL La/a/a/i/f$b;->b(La/a/a/i/f$a;)D
+0002f  020b                     move-result-wide
+00030  306e 065e 0329           invoke-virtual  # CALL La/a/a/i/f;->a(D)I
+00033  0d0a                     move-result
+00034  c254 042c                iget-object  # FIELD La/a/a/i/f$b;->a:La/a/a/i/f$a;
+00036  2253 042b                iget-wide  # FIELD La/a/a/i/f$a;->b:D
+00038  8453 042b                iget-wide  # FIELD La/a/a/i/f$a;->b:D
+0003a  42cc                     op_cc
+0003b  306e 065e 0329           invoke-virtual  # CALL La/a/a/i/f;->a(D)I
+0003e  020a                     move-result
+0003f  cc54 042d                iget-object  # FIELD La/a/a/i/f$b;->b:La/a/a/i/f$a;
+00041  c353 042b                iget-wide  # FIELD La/a/a/i/f$a;->b:D
+00043  8553 042b                iget-wide  # FIELD La/a/a/i/f$a;->b:D
+00045  53cc                     op_cc
+00046  306e 065e 0439           invoke-virtual  # CALL La/a/a/i/f;->a(D)I
+00049  0c0a                     move-result
+0004a  0d3d 0008                if-lez
+0004c  023c 0006                if-gtz
+0004e  0c3d 0004                if-lez
+00050  0bd8 010b                op_d8
+00052  0d3b ffc7                if-gez
+00054  0c3c ffc5                if-gtz
+00056  023d ffc3                if-lez
+00058  0bd8 ff0b                op_d8
+0005a  bf28                     goto
+0005b  0b39 0003                if-nez
+0005d  0228                     goto
+0005e  1001                     op_01
+0005f  000f                     return

@@ -1,0 +1,69 @@
+### Lb/b/c/b/a;-><clinit>()V  [access=0x10008, regs=1, ins=0, outs=1, code_off=0xb2710]
+00000  0022 0689                new-instance  # TYPE Ljava/lang/ThreadLocal;
+00002  1070 2d57 0000           invoke-direct  # CALL Ljava/lang/ThreadLocal;-><init>()V
+00005  000e                     return-void
+
+### Lb/b/c/b/a;->a(I,I)I  [access=0xa, regs=2, ins=2, outs=0, code_off=0xb2604]
+00000  11d1 00ff                op_d1
+00002  00d1 00ff                op_d1
+00004  01b2                     op_b2
+00005  11d3 00ff                op_d3
+00007  10d1 00ff                op_d1
+00009  000f                     return
+
+### Lb/b/c/b/a;->a(I,I,I,I,I)I  [access=0xa, regs=5, ins=5, outs=0, code_off=0xb26a4]
+00000  0439 0004                if-nez
+00002  0012                     const/4
+00003  000f                     return
+00004  00d2 00ff                op_d2
+00006  10b2                     op_b2
+00007  32b2                     op_b2
+00008  11d1 00ff                op_d1
+0000a  12b2                     op_b2
+0000b  20b0                     op_b0
+0000c  44d2 00ff                op_d2
+0000e  40b3                     op_b3
+0000f  000f                     return
+
+### Lb/b/c/b/a;->b(I,I)I  [access=0x9, regs=8, ins=2, outs=5, code_off=0xb2628]
+00000  1071 0957 0007           invoke-static  # CALL Landroid/graphics/Color;->alpha(I)I
+00003  000a                     move-result
+00004  1071 0957 0006           invoke-static  # CALL Landroid/graphics/Color;->alpha(I)I
+00007  010a                     move-result
+00008  2071 2313 0001           invoke-static  # CALL Lb/b/c/b/a;->a(I,I)I
+0000b  020a                     move-result
+0000c  1071 095b 0006           invoke-static  # CALL Landroid/graphics/Color;->red(I)I
+0000f  030a                     move-result
+00010  1071 095b 0007           invoke-static  # CALL Landroid/graphics/Color;->red(I)I
+00013  040a                     move-result
+00014  5271 2314 0413           invoke-static  # CALL Lb/b/c/b/a;->a(I,I,I,I,I)I
+00017  030a                     move-result
+00018  1071 095a 0006           invoke-static  # CALL Landroid/graphics/Color;->green(I)I
+0001b  040a                     move-result
+0001c  1071 095a 0007           invoke-static  # CALL Landroid/graphics/Color;->green(I)I
+0001f  050a                     move-result
+00020  5271 2314 0514           invoke-static  # CALL Lb/b/c/b/a;->a(I,I,I,I,I)I
+00023  040a                     move-result
+00024  1071 0959 0006           invoke-static  # CALL Landroid/graphics/Color;->blue(I)I
+00027  060a                     move-result
+00028  1071 0959 0007           invoke-static  # CALL Landroid/graphics/Color;->blue(I)I
+0002b  070a                     move-result
+0002c  5271 2314 0716           invoke-static  # CALL Lb/b/c/b/a;->a(I,I,I,I,I)I
+0002f  060a                     move-result
+00030  4071 0958 6432           invoke-static  # CALL Landroid/graphics/Color;->argb(I,I,I,I)I
+00033  060a                     move-result
+00034  060f                     return
+
+### Lb/b/c/b/a;->c(I,I)I  [access=0x9, regs=3, ins=2, outs=2, code_off=0xb26d4]
+00000  023a 000e                if-ltz
+00002  0013 00ff                const/16
+00004  0236 000a                if-gt
+00006  0014 ffff 00ff           const
+00009  01b5                     op_b5
+0000a  02e0 1802                op_e0
+0000c  21b6                     op_b6
+0000d  010f                     return
+0000e  0122 0669                new-instance  # TYPE Ljava/lang/IllegalArgumentException;
+00010  021a 18fd                const-string  # STR "alpha must be between 0 and 255."
+00012  2070 2c9f 0021           invoke-direct  # CALL Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+00015  0127                     throw

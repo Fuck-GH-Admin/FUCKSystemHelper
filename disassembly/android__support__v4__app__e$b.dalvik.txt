@@ -1,0 +1,32 @@
+### Landroid/support/v4/app/e$b;-><init>(Landroid/support/v4/app/e;)V  [access=0x10000, regs=2, ins=2, outs=1, code_off=0xa570c]
+00000  015b 0ca9                iput-object  # FIELD Landroid/support/v4/app/e$b;->a:Landroid/support/v4/app/e;
+00002  1070 0ee3 0000           invoke-direct  # CALL Landroid/support/v4/app/g;-><init>()V
+00005  000e                     return-void
+
+### Landroid/support/v4/app/e$b;->a(Landroid/content/Context;,Ljava/lang/String;,Landroid/os/Bundle;)Landroid/support/v4/app/e;  [access=0x1, regs=4, ins=4, outs=4, code_off=0xa568c]
+00000  0054 0ca9                iget-object  # FIELD Landroid/support/v4/app/e$b;->a:Landroid/support/v4/app/e;
+00002  0054 0ce9                iget-object  # FIELD Landroid/support/v4/app/e;->t:Landroid/support/v4/app/i;
+00004  406e 0ee4 3210           invoke-virtual  # CALL Landroid/support/v4/app/g;->a(Landroid/content/Context;,Ljava/lang/String;,Landroid/os/Bundle;)Landroid/support/v4/app/e;
+00007  000c                     move-result-object
+00008  0011                     return-object
+
+### Landroid/support/v4/app/e$b;->a(I)Landroid/view/View;  [access=0x1, regs=2, ins=2, outs=2, code_off=0xa56b0]
+00000  0054 0ca9                iget-object  # FIELD Landroid/support/v4/app/e$b;->a:Landroid/support/v4/app/e;
+00002  0054 0cc7                iget-object  # FIELD Landroid/support/v4/app/e;->J:Landroid/view/View;
+00004  0038 0007                if-eqz
+00006  206e 1d47 0010           invoke-virtual  # CALL Landroid/view/View;->findViewById(I)Landroid/view/View;
+00009  000c                     move-result-object
+0000a  0011                     return-object
+0000b  0022 066a                new-instance  # TYPE Ljava/lang/IllegalStateException;
+0000d  011a 07dc                const-string  # STR "Fragment does not have a view"
+0000f  2070 2ca3 0010           invoke-direct  # CALL Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+00012  0027                     throw
+
+### Landroid/support/v4/app/e$b;->a()Z  [access=0x1, regs=1, ins=1, outs=0, code_off=0xa56e8]
+00000  0054 0ca9                iget-object  # FIELD Landroid/support/v4/app/e$b;->a:Landroid/support/v4/app/e;
+00002  0054 0cc7                iget-object  # FIELD Landroid/support/v4/app/e;->J:Landroid/view/View;
+00004  0038 0004                if-eqz
+00006  1012                     const/4
+00007  0228                     goto
+00008  0012                     const/4
+00009  000f                     return

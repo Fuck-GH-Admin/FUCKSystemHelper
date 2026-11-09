@@ -1,0 +1,225 @@
+### Lb/b/c/a/d/d;->a(I)Landroid/graphics/Shader$TileMode;  [access=0xa, regs=2, ins=1, outs=0, code_off=0xb1e10]
+00000  1012                     const/4
+00001  0132 000b                if-eq
+00003  2012                     const/4
+00004  0132 0005                if-eq
+00006  0162 053d                sget-object  # FIELD Landroid/graphics/Shader$TileMode;->CLAMP:Landroid/graphics/Shader$TileMode;
+00008  0111                     return-object
+00009  0162 053e                sget-object  # FIELD Landroid/graphics/Shader$TileMode;->MIRROR:Landroid/graphics/Shader$TileMode;
+0000b  0111                     return-object
+0000c  0162 053f                sget-object  # FIELD Landroid/graphics/Shader$TileMode;->REPEAT:Landroid/graphics/Shader$TileMode;
+0000e  0111                     return-object
+
+### Lb/b/c/a/d/d;->a(Landroid/content/res/Resources;,Lorg/xmlpull/v1/XmlPullParser;,Landroid/util/AttributeSet;,Landroid/content/res/Resources$Theme;)Landroid/graphics/Shader;  [access=0x8, regs=24, ins=4, outs=8, code_off=0xb1c1c]
+00000  0008 0015                op_08
+00002  0178 2f36 0015           invoke-interface/range  # CALL Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
+00005  010c                     move-result-object
+00006  021a 1f18                const-string  # STR "gradient"
+00008  206e 2d03 0021           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+0000b  020a                     move-result
+0000c  0238 00c8                if-eqz
+0000e  0162 12d3                sget-object  # FIELD Lb/b/a/c;->GradientColor:[I
+00010  0208 0014                op_08
+00012  0308 0016                op_08
+00014  0408 0017                op_08
+00016  4071 230a 1342           invoke-static  # CALL Lb/b/c/a/d/g;->a(Landroid/content/res/Resources;,Landroid/content/res/Resources$Theme;,Landroid/util/AttributeSet;,[I)Landroid/content/res/TypedArray;
+00019  010c                     move-result-object
+0001a  0560 12df                sget  # FIELD Lb/b/a/c;->GradientColor_android_startX:I
+0001c  0612                     const/4
+0001d  071a 2701                const-string  # STR "startX"
+0001f  5671 2308 5701           invoke-static  # CALL Lb/b/c/a/d/g;->a(Landroid/content/res/TypedArray;,Lorg/xmlpull/v1/XmlPullParser;,Ljava/lang/String;,I,F)F
+00022  090a                     move-result
+00023  0560 12e0                sget  # FIELD Lb/b/a/c;->GradientColor_android_startY:I
+00025  071a 2702                const-string  # STR "startY"
+00027  5671 2308 5701           invoke-static  # CALL Lb/b/c/a/d/g;->a(Landroid/content/res/TypedArray;,Lorg/xmlpull/v1/XmlPullParser;,Ljava/lang/String;,I,F)F
+0002a  0a0a                     move-result
+0002b  0560 12db                sget  # FIELD Lb/b/a/c;->GradientColor_android_endX:I
+0002d  071a 1ba6                const-string  # STR "endX"
+0002f  5671 2308 5701           invoke-static  # CALL Lb/b/c/a/d/g;->a(Landroid/content/res/TypedArray;,Lorg/xmlpull/v1/XmlPullParser;,Ljava/lang/String;,I,F)F
+00032  0b0a                     move-result
+00033  0560 12dc                sget  # FIELD Lb/b/a/c;->GradientColor_android_endY:I
+00035  071a 1ba7                const-string  # STR "endY"
+00037  5671 2308 5701           invoke-static  # CALL Lb/b/c/a/d/g;->a(Landroid/content/res/TypedArray;,Lorg/xmlpull/v1/XmlPullParser;,Ljava/lang/String;,I,F)F
+0003a  0c0a                     move-result
+0003b  0560 12d8                sget  # FIELD Lb/b/a/c;->GradientColor_android_centerX:I
+0003d  071a 1a27                const-string  # STR "centerX"
+0003f  5671 2308 5701           invoke-static  # CALL Lb/b/c/a/d/g;->a(Landroid/content/res/TypedArray;,Lorg/xmlpull/v1/XmlPullParser;,Ljava/lang/String;,I,F)F
+00042  0e0a                     move-result
+00043  0560 12d9                sget  # FIELD Lb/b/a/c;->GradientColor_android_centerY:I
+00045  071a 1a28                const-string  # STR "centerY"
+00047  5671 2308 5701           invoke-static  # CALL Lb/b/c/a/d/g;->a(Landroid/content/res/TypedArray;,Lorg/xmlpull/v1/XmlPullParser;,Ljava/lang/String;,I,F)F
+0004a  0f0a                     move-result
+0004b  0560 12e2                sget  # FIELD Lb/b/a/c;->GradientColor_android_type:I
+0004d  0712                     const/4
+0004e  081a 27f4                const-string  # STR "type"
+00050  5771 230f 5801           invoke-static  # CALL Lb/b/c/a/d/g;->b(Landroid/content/res/TypedArray;,Lorg/xmlpull/v1/XmlPullParser;,Ljava/lang/String;,I,I)I
+00053  050a                     move-result
+00054  0860 12de                sget  # FIELD Lb/b/a/c;->GradientColor_android_startColor:I
+00056  0d1a 26f3                const-string  # STR "startColor"
+00058  5771 2309 8d01           invoke-static  # CALL Lb/b/c/a/d/g;->a(Landroid/content/res/TypedArray;,Lorg/xmlpull/v1/XmlPullParser;,Ljava/lang/String;,I,I)I
+0005b  080a                     move-result
+0005c  0d1a 1a26                const-string  # STR "centerColor"
+0005e  2071 230e 00d0           invoke-static  # CALL Lb/b/c/a/d/g;->a(Lorg/xmlpull/v1/XmlPullParser;,Ljava/lang/String;)Z
+00061  060a                     move-result
+00062  0260 12d7                sget  # FIELD Lb/b/a/c;->GradientColor_android_centerColor:I
+00064  5771 2309 2d01           invoke-static  # CALL Lb/b/c/a/d/g;->a(Landroid/content/res/TypedArray;,Lorg/xmlpull/v1/XmlPullParser;,Ljava/lang/String;,I,I)I
+00067  020a                     move-result
+00068  0d60 12da                sget  # FIELD Lb/b/a/c;->GradientColor_android_endColor:I
+0006a  031a 1ba3                const-string  # STR "endColor"
+0006c  5771 2309 d301           invoke-static  # CALL Lb/b/c/a/d/g;->a(Landroid/content/res/TypedArray;,Lorg/xmlpull/v1/XmlPullParser;,Ljava/lang/String;,I,I)I
+0006f  030a                     move-result
+00070  0d60 12e1                sget  # FIELD Lb/b/a/c;->GradientColor_android_tileMode:I
+00072  041a 2795                const-string  # STR "tileMode"
+00074  5771 230f d401           invoke-static  # CALL Lb/b/c/a/d/g;->b(Landroid/content/res/TypedArray;,Lorg/xmlpull/v1/XmlPullParser;,Ljava/lang/String;,I,I)I
+00077  040a                     move-result
+00078  0760 12dd                sget  # FIELD Lb/b/a/c;->GradientColor_android_gradientRadius:I
+0007a  0d1a 1f19                const-string  # STR "gradientRadius"
+0007c  1102 000e                op_02
+0007e  0e12                     const/4
+0007f  5e71 2308 7d01           invoke-static  # CALL Lb/b/c/a/d/g;->a(Landroid/content/res/TypedArray;,Lorg/xmlpull/v1/XmlPullParser;,Ljava/lang/String;,I,F)F
+00082  070a                     move-result
+00083  106e 090a 0001           invoke-virtual  # CALL Landroid/content/res/TypedArray;->recycle()V
+00086  0477 22f6 0014           invoke-static/range  # CALL Lb/b/c/a/d/d;->b(Landroid/content/res/Resources;,Lorg/xmlpull/v1/XmlPullParser;,Landroid/util/AttributeSet;,Landroid/content/res/Resources$Theme;)Lb/b/c/a/d/d$a;
+00089  000c                     move-result-object
+0008a  5271 22f5 6380           invoke-static  # CALL Lb/b/c/a/d/d;->a(Lb/b/c/a/d/d$a;,I,I,Z,I)Lb/b/c/a/d/d$a;
+0008d  000c                     move-result-object
+0008e  1112                     const/4
+0008f  1532 0020                if-eq
+00091  2112                     const/4
+00092  1532 0011                if-eq
+00094  0122 019f                new-instance  # TYPE Landroid/graphics/LinearGradient;
+00096  0d54 1352                iget-object  # FIELD Lb/b/c/a/d/d$a;->a:[I
+00098  0e54 1353                iget-object  # FIELD Lb/b/c/a/d/d$a;->b:[F
+0009a  1071 22f3 0004           invoke-static  # CALL Lb/b/c/a/d/d;->a(I)Landroid/graphics/Shader$TileMode;
+0009d  0f0c                     move-result-object
+0009e  1807                     op_07
+0009f  0876 095c 0008           invoke-direct/range  # CALL Landroid/graphics/LinearGradient;-><init>(F,F,F,F,[I,[F,Landroid/graphics/Shader$TileMode;)V
+000a2  0111                     return-object
+000a3  0122 01b5                new-instance  # TYPE Landroid/graphics/SweepGradient;
+000a5  0254 1352                iget-object  # FIELD Lb/b/c/a/d/d$a;->a:[I
+000a7  0054 1353                iget-object  # FIELD Lb/b/c/a/d/d$a;->b:[F
+000a9  0302 0011                op_02
+000ab  5070 09a7 2f31           invoke-direct  # CALL Landroid/graphics/SweepGradient;-><init>(F,F,[I,[F)V
+000ae  0111                     return-object
+000af  0302 0011                op_02
+000b1  0112                     const/4
+000b2  012e 0107                op_2e
+000b4  013d 0018                if-lez
+000b6  0122 01af                new-instance  # TYPE Landroid/graphics/RadialGradient;
+000b8  0254 1352                iget-object  # FIELD Lb/b/c/a/d/d$a;->a:[I
+000ba  0054 1353                iget-object  # FIELD Lb/b/c/a/d/d$a;->b:[F
+000bc  1071 22f3 0004           invoke-static  # CALL Lb/b/c/a/d/d;->a(I)Landroid/graphics/Shader$TileMode;
+000bf  130c                     move-result-object
+000c0  1d07                     op_07
+000c1  3e01                     op_01
+000c2  1002 0007                op_02
+000c4  1108 0002                op_08
+000c6  1208 0000                op_08
+000c8  0776 0993 000d           invoke-direct/range  # CALL Landroid/graphics/RadialGradient;-><init>(F,F,F,[I,[F,Landroid/graphics/Shader$TileMode;)V
+000cb  0111                     return-object
+000cc  0022 071c                new-instance  # TYPE Lorg/xmlpull/v1/XmlPullParserException;
+000ce  011a 028d                const-string  # STR "<gradient> tag requires 'gradientRadius' attribute with radial type"
+000d0  2070 2f3a 0010           invoke-direct  # CALL Lorg/xmlpull/v1/XmlPullParserException;-><init>(Ljava/lang/String;)V
+000d3  0027                     throw
+000d4  0222 071c                new-instance  # TYPE Lorg/xmlpull/v1/XmlPullParserException;
+000d6  0322 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+000d8  1070 2d35 0003           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+000db  0178 2f37 0015           invoke-interface/range  # CALL Lorg/xmlpull/v1/XmlPullParser;->getPositionDescription()Ljava/lang/String;
+000de  000c                     move-result-object
+000df  206e 2d3f 0003           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000e2  001a 0265                const-string  # STR ": invalid gradient color tag "
+000e4  206e 2d3f 0003           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000e7  206e 2d3f 0013           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+000ea  106e 2d44 0003           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+000ed  000c                     move-result-object
+000ee  2070 2f3a 0002           invoke-direct  # CALL Lorg/xmlpull/v1/XmlPullParserException;-><init>(Ljava/lang/String;)V
+000f1  0227                     throw
+
+### Lb/b/c/a/d/d;->a(Lb/b/c/a/d/d$a;,I,I,Z,I)Lb/b/c/a/d/d$a;  [access=0xa, regs=5, ins=5, outs=4, code_off=0xb1e40]
+00000  0038 0003                if-eqz
+00002  0011                     return-object
+00003  0022 04dd                new-instance  # TYPE Lb/b/c/a/d/d$a;
+00005  0338 0006                if-eqz
+00007  4070 22f1 2410           invoke-direct  # CALL Lb/b/c/a/d/d$a;-><init>(I,I,I)V
+0000a  0011                     return-object
+0000b  3070 22f0 0210           invoke-direct  # CALL Lb/b/c/a/d/d$a;-><init>(I,I)V
+0000e  0011                     return-object
+
+### Lb/b/c/a/d/d;->b(Landroid/content/res/Resources;,Lorg/xmlpull/v1/XmlPullParser;,Landroid/util/AttributeSet;,Landroid/content/res/Resources$Theme;)Lb/b/c/a/d/d$a;  [access=0xa, regs=12, ins=4, outs=4, code_off=0xb1e70]
+00000  1072 2f33 0009           invoke-interface  # CALL Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
+00003  000a                     move-result
+00004  1112                     const/4
+00005  10b0                     op_b0
+00006  0222 06c8                new-instance  # TYPE Ljava/util/ArrayList;
+00008  0313 0014                const/16
+0000a  2070 2de8 0032           invoke-direct  # CALL Ljava/util/ArrayList;-><init>(I)V
+0000d  0422 06c8                new-instance  # TYPE Ljava/util/ArrayList;
+0000f  2070 2de8 0034           invoke-direct  # CALL Ljava/util/ArrayList;-><init>(I)V
+00012  1072 2f38 0009           invoke-interface  # CALL Lorg/xmlpull/v1/XmlPullParser;->next()I
+00015  030a                     move-result
+00016  1332 0074                if-eq
+00018  1072 2f33 0009           invoke-interface  # CALL Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
+0001b  050a                     move-result
+0001c  0535 0005                if-ge
+0001e  3612                     const/4
+0001f  6332 006b                if-eq
+00021  2612                     const/4
+00022  6332 0003                if-eq
+00024  ee28                     goto
+00025  0536 ffed                if-gt
+00027  1072 2f36 0009           invoke-interface  # CALL Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
+0002a  030c                     move-result-object
+0002b  051a 206b                const-string  # STR "item"
+0002d  206e 2d03 0053           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+00030  030a                     move-result
+00031  0339 0003                if-nez
+00033  df28                     goto
+00034  0362 12d4                sget-object  # FIELD Lb/b/a/c;->GradientColorItem:[I
+00036  4071 230a 3ab8           invoke-static  # CALL Lb/b/c/a/d/g;->a(Landroid/content/res/Resources;,Landroid/content/res/Resources$Theme;,Landroid/util/AttributeSet;,[I)Landroid/content/res/TypedArray;
+00039  030c                     move-result-object
+0003a  0560 12d5                sget  # FIELD Lb/b/a/c;->GradientColorItem_android_color:I
+0003c  206e 0907 0053           invoke-virtual  # CALL Landroid/content/res/TypedArray;->hasValue(I)Z
+0003f  050a                     move-result
+00040  0660 12d6                sget  # FIELD Lb/b/a/c;->GradientColorItem_android_offset:I
+00042  206e 0907 0063           invoke-virtual  # CALL Landroid/content/res/TypedArray;->hasValue(I)Z
+00045  060a                     move-result
+00046  0538 0024                if-eqz
+00048  0638 0022                if-eqz
+0004a  0560 12d5                sget  # FIELD Lb/b/a/c;->GradientColorItem_android_color:I
+0004c  0612                     const/4
+0004d  306e 08f3 0653           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getColor(I,I)I
+00050  050a                     move-result
+00051  0660 12d6                sget  # FIELD Lb/b/a/c;->GradientColorItem_android_offset:I
+00053  0712                     const/4
+00054  306e 08f9 0763           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getFloat(I,F)F
+00057  060a                     move-result
+00058  106e 090a 0003           invoke-virtual  # CALL Landroid/content/res/TypedArray;->recycle()V
+0005b  1071 2cae 0005           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+0005e  030c                     move-result-object
+0005f  2072 2e52 0034           invoke-interface  # CALL Ljava/util/List;->add(Ljava/lang/Object;)Z
+00062  1071 2c9b 0006           invoke-static  # CALL Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+00065  030c                     move-result-object
+00066  2072 2e52 0032           invoke-interface  # CALL Ljava/util/List;->add(Ljava/lang/Object;)Z
+00069  a928                     goto
+0006a  0822 071c                new-instance  # TYPE Lorg/xmlpull/v1/XmlPullParserException;
+0006c  0a22 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0006e  1070 2d35 000a           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00071  1072 2f37 0009           invoke-interface  # CALL Lorg/xmlpull/v1/XmlPullParser;->getPositionDescription()Ljava/lang/String;
+00074  090c                     move-result-object
+00075  206e 2d3f 009a           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00078  091a 025a                const-string  # STR ": <item> tag requires a 'color' attribute and a 'offset' "
+0007a  206e 2d3f 009a           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0007d  091a 1981                const-string  # STR "attribute!"
+0007f  206e 2d3f 009a           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00082  106e 2d44 000a           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00085  090c                     move-result-object
+00086  2070 2f3a 0098           invoke-direct  # CALL Lorg/xmlpull/v1/XmlPullParserException;-><init>(Ljava/lang/String;)V
+00089  0827                     throw
+0008a  1072 2e5d 0004           invoke-interface  # CALL Ljava/util/List;->size()I
+0008d  080a                     move-result
+0008e  083d 0008                if-lez
+00090  0822 04dd                new-instance  # TYPE Lb/b/c/a/d/d$a;
+00092  3070 22f2 0248           invoke-direct  # CALL Lb/b/c/a/d/d$a;-><init>(Ljava/util/List;,Ljava/util/List;)V
+00095  0811                     return-object
+00096  0812                     const/4
+00097  0811                     return-object

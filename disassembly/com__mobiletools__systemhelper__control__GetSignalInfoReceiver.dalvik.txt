@@ -1,0 +1,186 @@
+### Lcom/mobiletools/systemhelper/control/GetSignalInfoReceiver;-><clinit>()V  [access=0x10008, regs=0, ins=0, outs=0, code_off=0x10c150]
+00000  000e                     return-void
+
+### Lcom/mobiletools/systemhelper/control/GetSignalInfoReceiver;-><init>()V  [access=0x10001, regs=2, ins=1, outs=1, code_off=0x10c164]
+00000  1070 0826 0001           invoke-direct  # CALL Landroid/content/BroadcastReceiver;-><init>()V
+00003  0022 05f5                new-instance  # TYPE Lc/d/a/b/n;
+00005  1070 29bd 0000           invoke-direct  # CALL Lc/d/a/b/n;-><init>()V
+00008  105b 1d0f                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/GetSignalInfoReceiver;->a:Lc/d/a/b/n;
+0000a  000e                     return-void
+
+### Lcom/mobiletools/systemhelper/control/GetSignalInfoReceiver;->a()Landroid/content/Context;  [access=0x1008, regs=1, ins=0, outs=0, code_off=0x10bf94]
+00000  0062 1d11                sget-object  # FIELD Lcom/mobiletools/systemhelper/control/GetSignalInfoReceiver;->c:Landroid/content/Context;
+00002  0011                     return-object
+
+### Lcom/mobiletools/systemhelper/control/GetSignalInfoReceiver;->a(Lc/d/a/b/n;)Ljava/lang/Boolean;  [access=0x9, regs=3, ins=1, outs=2, code_off=0x10c0d0]
+00000  0022 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00002  1070 2d35 0000           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00005  011a 26a3                const-string  # STR "siginfo.mncCH: "
+00007  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0000a  2154 1be2                iget-object  # FIELD Lc/d/a/b/n;->f:Ljava/lang/String;
+0000c  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0000f  106e 2d44 0000           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00012  000c                     move-result-object
+00013  011a 07f7                const-string  # STR "GetSignalInfoReceiver"
+00015  2071 2987 0001           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+00018  2054 1be2                iget-object  # FIELD Lc/d/a/b/n;->f:Ljava/lang/String;
+0001a  0112                     const/4
+0001b  1071 2c67 0001           invoke-static  # CALL Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+0001e  010c                     move-result-object
+0001f  0038 0018                if-eqz
+00021  106e 2d0f 0000           invoke-virtual  # CALL Ljava/lang/String;->isEmpty()Z
+00024  000a                     move-result
+00025  0039 0012                if-nez
+00027  2254 1be2                iget-object  # FIELD Lc/d/a/b/n;->f:Ljava/lang/String;
+00029  001a 024b                const-string  # STR "460"
+0002b  206e 2d18 0002           invoke-virtual  # CALL Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+0002e  020a                     move-result
+0002f  0238 0008                if-eqz
+00031  1212                     const/4
+00032  1071 2c67 0002           invoke-static  # CALL Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+00035  020c                     move-result-object
+00036  0211                     return-object
+00037  0111                     return-object
+
+### Lcom/mobiletools/systemhelper/control/GetSignalInfoReceiver;->a(Landroid/content/Context;)Z  [access=0x2, regs=6, ins=2, outs=3, code_off=0x10bfac]
+00000  106e 0840 0005           invoke-virtual  # CALL Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+00003  040c                     move-result-object
+00004  0012                     const/4
+00005  011a 1b32                const-string  # STR "device_provisioned"
+00007  3071 0b0c 0014           invoke-static  # CALL Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;,Ljava/lang/String;,I)I
+0000a  040a                     move-result
+0000b  1112                     const/4
+0000c  1433 0004                if-ne
+0000e  1401                     op_01
+0000f  0228                     goto
+00010  0401                     op_01
+00011  1071 2c67 0004           invoke-static  # CALL Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+00014  040c                     move-result-object
+00015  0222 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00017  1070 2d35 0002           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0001a  031a 200d                const-string  # STR "isBootWizardCompleted: "
+0001c  206e 2d3f 0032           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0001f  206e 2d3e 0042           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+00022  106e 2d44 0002           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00025  020c                     move-result-object
+00026  031a 07f7                const-string  # STR "GetSignalInfoReceiver"
+00028  2071 2987 0023           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+0002b  106e 2c65 0004           invoke-virtual  # CALL Ljava/lang/Boolean;->booleanValue()Z
+0002e  040a                     move-result
+0002f  0438 0023                if-eqz
+00031  106e 0840 0005           invoke-virtual  # CALL Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+00034  040c                     move-result-object
+00035  051a 22f9                const-string  # STR "operator_service_improve_plan"
+00037  3071 0b0e 0054           invoke-static  # CALL Landroid/provider/Settings$Secure;->getInt(Landroid/content/ContentResolver;,Ljava/lang/String;,I)I
+0003a  040a                     move-result
+0003b  1433 0003                if-ne
+0003d  1001                     op_01
+0003e  0422 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00040  1070 2d35 0004           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00043  051a 1a40                const-string  # STR "checkUserPermission:"
+00045  206e 2d3f 0054           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00048  206e 2d40 0004           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+0004b  106e 2d44 0004           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0004e  040c                     move-result-object
+0004f  2071 2987 0043           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+00052  000f                     return
+
+### Lcom/mobiletools/systemhelper/control/GetSignalInfoReceiver;->b(Landroid/content/Context;)Z  [access=0x2, regs=3, ins=2, outs=3, code_off=0x10c064]
+00000  106e 0840 0002           invoke-virtual  # CALL Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+00003  010c                     move-result-object
+00004  0212                     const/4
+00005  001a 1b32                const-string  # STR "device_provisioned"
+00007  3071 0b0c 0201           invoke-static  # CALL Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;,Ljava/lang/String;,I)I
+0000a  010a                     move-result
+0000b  1012                     const/4
+0000c  0133 0003                if-ne
+0000e  0201                     op_01
+0000f  1071 2c67 0002           invoke-static  # CALL Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+00012  010c                     move-result-object
+00013  0222 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00015  1070 2d35 0002           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00018  001a 200d                const-string  # STR "isBootWizardCompleted: "
+0001a  206e 2d3f 0002           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0001d  206e 2d3e 0012           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+00020  106e 2d44 0002           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00023  020c                     move-result-object
+00024  001a 07f7                const-string  # STR "GetSignalInfoReceiver"
+00026  2071 2987 0020           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+00029  106e 2c65 0001           invoke-virtual  # CALL Ljava/lang/Boolean;->booleanValue()Z
+0002c  010a                     move-result
+0002d  010f                     return
+
+### Lcom/mobiletools/systemhelper/control/GetSignalInfoReceiver;->a(Lcom/baidu/location/b;)V  [access=0x1, regs=4, ins=2, outs=2, code_off=0x10c18c]
+00000  1012                     const/4
+00001  1071 2a91 0000           invoke-static  # CALL Lcom/baidu/location/h;->b(Z)V
+00004  2154 1d10                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/GetSignalInfoReceiver;->b:Lcom/baidu/location/h;
+00006  0138 002f                if-eqz
+00008  206e 2a80 0031           invoke-virtual  # CALL Lcom/baidu/location/h;->a(Lcom/baidu/location/b;)V
+0000b  0322 060a                new-instance  # TYPE Lcom/baidu/location/i;
+0000d  1070 2aca 0003           invoke-direct  # CALL Lcom/baidu/location/i;-><init>()V
+00010  011a 19bc                const-string  # STR "bd09ll"
+00012  206e 2acf 0013           invoke-virtual  # CALL Lcom/baidu/location/i;->a(Ljava/lang/String;)V
+00015  0162 1c94                sget-object  # FIELD Lcom/baidu/location/i$b;->b:Lcom/baidu/location/i$b;
+00017  206e 2ace 0013           invoke-virtual  # CALL Lcom/baidu/location/i;->a(Lcom/baidu/location/i$b;)V
+0001a  206e 2ad5 0003           invoke-virtual  # CALL Lcom/baidu/location/i;->c(Z)V
+0001d  0112                     const/4
+0001e  206e 2acd 0013           invoke-virtual  # CALL Lcom/baidu/location/i;->a(I)V
+00021  206e 2ad0 0003           invoke-virtual  # CALL Lcom/baidu/location/i;->a(Z)V
+00024  2054 1d10                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/GetSignalInfoReceiver;->b:Lcom/baidu/location/h;
+00026  206e 2a87 0030           invoke-virtual  # CALL Lcom/baidu/location/h;->a(Lcom/baidu/location/i;)V
+00029  2254 1d10                iget-object  # FIELD Lcom/mobiletools/systemhelper/control/GetSignalInfoReceiver;->b:Lcom/baidu/location/h;
+0002b  106e 2ab3 0002           invoke-virtual  # CALL Lcom/baidu/location/h;->j()V
+0002e  021a 07f7                const-string  # STR "GetSignalInfoReceiver"
+00030  031a 2109                const-string  # STR "mLocationClient start!"
+00032  2071 2987 0032           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+00035  000e                     return-void
+
+### Lcom/mobiletools/systemhelper/control/GetSignalInfoReceiver;->onReceive(Landroid/content/Context;,Landroid/content/Intent;)V  [access=0x1, regs=6, ins=3, outs=3, code_off=0x10c208]
+00000  0469 1d11                sput-object  # FIELD Lcom/mobiletools/systemhelper/control/GetSignalInfoReceiver;->c:Landroid/content/Context;
+00002  051a 2484                const-string  # STR "ro.product.manufacturer"
+00004  1071 2997 0005           invoke-static  # CALL Lc/d/a/b/l;->a(Ljava/lang/String;)Ljava/lang/String;
+00007  050c                     move-result-object
+00008  1012                     const/4
+00009  1071 2a91 0000           invoke-static  # CALL Lcom/baidu/location/h;->b(Z)V
+0000c  1071 2922 0004           invoke-static  # CALL Lc/d/a/a/a;->e(Landroid/content/Context;)V
+0000f  001a 07f7                const-string  # STR "GetSignalInfoReceiver"
+00011  011a 1baf                const-string  # STR "enter GetSignalInfoReceiver --->"
+00013  2071 2987 0010           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+00016  0022 0606                new-instance  # TYPE Lcom/baidu/location/h;
+00018  0162 1d11                sget-object  # FIELD Lcom/mobiletools/systemhelper/control/GetSignalInfoReceiver;->c:Landroid/content/Context;
+0001a  2070 2a75 0010           invoke-direct  # CALL Lcom/baidu/location/h;-><init>(Landroid/content/Context;)V
+0001d  305b 1d10                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/GetSignalInfoReceiver;->b:Lcom/baidu/location/h;
+0001f  0062 1d11                sget-object  # FIELD Lcom/mobiletools/systemhelper/control/GetSignalInfoReceiver;->c:Landroid/content/Context;
+00021  1071 29b0 0004           invoke-static  # CALL Lc/d/a/b/l;->j(Landroid/content/Context;)J
+00024  010b                     move-result-wide
+00025  3071 295a 0210           invoke-static  # CALL Lc/d/a/b/a;->b(Landroid/content/Context;,J)V
+00028  0538 001f                if-eqz
+0002a  106e 2d0f 0005           invoke-virtual  # CALL Ljava/lang/String;->isEmpty()Z
+0002d  000a                     move-result
+0002e  0039 0019                if-nez
+00030  001a 2850                const-string  # STR "vivo"
+00032  206e 2d04 0005           invoke-virtual  # CALL Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+00035  050a                     move-result
+00036  0538 0009                if-eqz
+00038  0562 1d11                sget-object  # FIELD Lcom/mobiletools/systemhelper/control/GetSignalInfoReceiver;->c:Landroid/content/Context;
+0003a  2070 2b94 0053           invoke-direct  # CALL Lcom/mobiletools/systemhelper/control/GetSignalInfoReceiver;->a(Landroid/content/Context;)Z
+0003d  050a                     move-result
+0003e  0728                     goto
+0003f  0562 1d11                sget-object  # FIELD Lcom/mobiletools/systemhelper/control/GetSignalInfoReceiver;->c:Landroid/content/Context;
+00041  2070 2b95 0053           invoke-direct  # CALL Lcom/mobiletools/systemhelper/control/GetSignalInfoReceiver;->b(Landroid/content/Context;)Z
+00044  050a                     move-result
+00045  056a 1bb5                sput-boolean  # FIELD Lc/d/a/b/d;->e:Z
+00047  0563 1bb5                sget-boolean  # FIELD Lc/d/a/b/d;->e:Z
+00049  0539 0003                if-nez
+0004b  000e                     return-void
+0004c  0522 0619                new-instance  # TYPE Lcom/mobiletools/systemhelper/control/GetSignalInfoReceiver$a;
+0004e  3070 2b8d 0435           invoke-direct  # CALL Lcom/mobiletools/systemhelper/control/GetSignalInfoReceiver$a;-><init>(Lcom/mobiletools/systemhelper/control/GetSignalInfoReceiver;,Landroid/content/Context;)V
+00051  0569 1d12                sput-object  # FIELD Lcom/mobiletools/systemhelper/control/GetSignalInfoReceiver;->d:Lcom/baidu/location/b;
+00053  206e 2b93 0053           invoke-virtual  # CALL Lcom/mobiletools/systemhelper/control/GetSignalInfoReceiver;->a(Lcom/baidu/location/b;)V
+00056  0071 2956 0000           invoke-static  # CALL Lc/d/a/a/n;->c()V
+00059  1071 294c 0004           invoke-static  # CALL Lc/d/a/a/n;->a(Landroid/content/Context;)Lc/d/a/a/n$c;
+0005c  000e                     return-void
+0005d  030d                     op_0d
+0005e  0422 0680                new-instance  # TYPE Ljava/lang/RuntimeException;
+00060  2070 2cf0 0034           invoke-direct  # CALL Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+00063  0427                     throw

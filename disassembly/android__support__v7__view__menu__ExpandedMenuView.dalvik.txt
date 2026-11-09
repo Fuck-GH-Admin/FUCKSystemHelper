@@ -1,0 +1,66 @@
+### Landroid/support/v7/view/menu/ExpandedMenuView;-><clinit>()V  [access=0x10008, regs=1, ins=0, outs=0, code_off=0xd2e04]
+00000  2012                     const/4
+00001  0023 0724                new-array  # TYPE [I
+00003  0026 0007 0000           fill-array-data
+00006  0069 0f2d                sput-object  # FIELD Landroid/support/v7/view/menu/ExpandedMenuView;->d:[I
+00008  000e                     return-void
+00009  0000                     nop
+0000a  0300 0004 0002 0000 00d4 0101 0129 0101 ... <payload; units=8>
+
+### Landroid/support/v7/view/menu/ExpandedMenuView;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;)V  [access=0x10001, regs=4, ins=3, outs=4, code_off=0xd2e38]
+00000  0014 0074 0101           const
+00003  4070 1377 0321           invoke-direct  # CALL Landroid/support/v7/view/menu/ExpandedMenuView;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;,I)V
+00006  000e                     return-void
+
+### Landroid/support/v7/view/menu/ExpandedMenuView;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;,I)V  [access=0x10001, regs=6, ins=4, outs=5, code_off=0xd2e58]
+00000  3070 202f 0432           invoke-direct  # CALL Landroid/widget/ListView;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;)V
+00003  206e 206e 0022           invoke-virtual  # CALL Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
+00006  0062 0f2d                sget-object  # FIELD Landroid/support/v7/view/menu/ExpandedMenuView;->d:[I
+00008  0112                     const/4
+00009  5171 1a72 5043           invoke-static  # CALL Landroid/support/v7/widget/t0;->a(Landroid/content/Context;,Landroid/util/AttributeSet;,[I,I,I)Landroid/support/v7/widget/t0;
+0000c  030c                     move-result-object
+0000d  206e 1a80 0013           invoke-virtual  # CALL Landroid/support/v7/widget/t0;->g(I)Z
+00010  040a                     move-result
+00011  0438 0009                if-eqz
+00013  206e 1a76 0013           invoke-virtual  # CALL Landroid/support/v7/widget/t0;->b(I)Landroid/graphics/drawable/Drawable;
+00016  040c                     move-result-object
+00017  206e 2066 0042           invoke-virtual  # CALL Landroid/widget/ListView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+0001a  1412                     const/4
+0001b  206e 1a80 0043           invoke-virtual  # CALL Landroid/support/v7/widget/t0;->g(I)Z
+0001e  050a                     move-result
+0001f  0538 0009                if-eqz
+00021  206e 1a76 0043           invoke-virtual  # CALL Landroid/support/v7/widget/t0;->b(I)Landroid/graphics/drawable/Drawable;
+00024  040c                     move-result-object
+00025  206e 206a 0042           invoke-virtual  # CALL Landroid/widget/ListView;->setDivider(Landroid/graphics/drawable/Drawable;)V
+00028  106e 1a73 0003           invoke-virtual  # CALL Landroid/support/v7/widget/t0;->a()V
+0002b  000e                     return-void
+
+### Landroid/support/v7/view/menu/ExpandedMenuView;->a(Landroid/support/v7/view/menu/h;)V  [access=0x1, regs=2, ins=2, outs=0, code_off=0xd2ec0]
+00000  015b 0f2b                iput-object  # FIELD Landroid/support/v7/view/menu/ExpandedMenuView;->b:Landroid/support/v7/view/menu/h;
+00002  000e                     return-void
+
+### Landroid/support/v7/view/menu/ExpandedMenuView;->a(Landroid/support/v7/view/menu/j;)Z  [access=0x1, regs=3, ins=2, outs=3, code_off=0xd2dcc]
+00000  1154 0f2b                iget-object  # FIELD Landroid/support/v7/view/menu/ExpandedMenuView;->b:Landroid/support/v7/view/menu/h;
+00002  0012                     const/4
+00003  306e 144d 0021           invoke-virtual  # CALL Landroid/support/v7/view/menu/h;->a(Landroid/view/MenuItem;,I)Z
+00006  010a                     move-result
+00007  010f                     return
+
+### Landroid/support/v7/view/menu/ExpandedMenuView;->getWindowAnimations()I  [access=0x1, regs=1, ins=1, outs=0, code_off=0xd2dec]
+00000  0052 0f2c                iget  # FIELD Landroid/support/v7/view/menu/ExpandedMenuView;->c:I
+00002  000f                     return
+
+### Landroid/support/v7/view/menu/ExpandedMenuView;->onDetachedFromWindow()V  [access=0x4, regs=2, ins=1, outs=2, code_off=0xd2ed8]
+00000  106f 2059 0001           invoke-super  # CALL Landroid/widget/ListView;->onDetachedFromWindow()V
+00003  0012                     const/4
+00004  206e 2068 0001           invoke-virtual  # CALL Landroid/widget/ListView;->setChildrenDrawingCacheEnabled(Z)V
+00007  000e                     return-void
+
+### Landroid/support/v7/view/menu/ExpandedMenuView;->onItemClick(Landroid/widget/AdapterView;,Landroid/view/View;,I,J)V  [access=0x1, regs=6, ins=6, outs=2, code_off=0xd2ef8]
+00000  106e 2036 0000           invoke-virtual  # CALL Landroid/widget/ListView;->getAdapter()Landroid/widget/ListAdapter;
+00003  010c                     move-result-object
+00004  2072 2028 0031           invoke-interface  # CALL Landroid/widget/ListAdapter;->getItem(I)Ljava/lang/Object;
+00007  010c                     move-result-object
+00008  011f 0323                check-cast  # TYPE Landroid/support/v7/view/menu/j;
+0000a  206e 1379 0010           invoke-virtual  # CALL Landroid/support/v7/view/menu/ExpandedMenuView;->a(Landroid/support/v7/view/menu/j;)Z
+0000d  000e                     return-void

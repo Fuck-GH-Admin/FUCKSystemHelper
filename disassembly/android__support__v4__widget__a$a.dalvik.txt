@@ -1,0 +1,175 @@
+### Landroid/support/v4/widget/a$a;-><init>()V  [access=0x10000, regs=3, ins=1, outs=1, code_off=0xbf750]
+00000  1070 2ce0 0002           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  0019 8000                const-wide/high16
+00005  205a 0dd4                iput-wide  # FIELD Landroid/support/v4/widget/a$a;->e:J
+00007  0016 ffff                const-wide/16
+00009  205a 0dd8                iput-wide  # FIELD Landroid/support/v4/widget/a$a;->i:J
+0000b  0016 0000                const-wide/16
+0000d  205a 0dd5                iput-wide  # FIELD Landroid/support/v4/widget/a$a;->f:J
+0000f  0012                     const/4
+00010  2059 0dd6                iput  # FIELD Landroid/support/v4/widget/a$a;->g:I
+00012  2059 0dd7                iput  # FIELD Landroid/support/v4/widget/a$a;->h:I
+00014  000e                     return-void
+
+### Landroid/support/v4/widget/a$a;->a(F)F  [access=0x2, regs=3, ins=2, outs=0, code_off=0xbf6b4]
+00000  0115 c080                const/high16
+00002  21c8                     op_c8
+00003  21c8                     op_c8
+00004  0015 4080                const/high16
+00006  02c8                     op_c8
+00007  21c6                     op_c6
+00008  010f                     return
+
+### Landroid/support/v4/widget/a$a;->a(J)F  [access=0x2, regs=9, ins=3, outs=3, code_off=0xbf634]
+00000  6053 0dd4                iget-wide  # FIELD Landroid/support/v4/widget/a$a;->e:J
+00002  0031 0007                op_31
+00004  0112                     const/4
+00005  003b 0003                if-gez
+00007  010f                     return
+00008  6253 0dd8                iget-wide  # FIELD Landroid/support/v4/widget/a$a;->i:J
+0000a  0416 0000                const-wide/16
+0000c  0031 0402                op_31
+0000e  0415 3f80                const/high16
+00010  003a 0018                if-ltz
+00012  0031 0207                op_31
+00014  003b 0003                if-gez
+00016  1228                     goto
+00017  27bc                     op_bc
+00018  6052 0dd9                iget  # FIELD Landroid/support/v4/widget/a$a;->j:F
+0001a  02a7 0004                op_a7
+0001c  7785                     op_85
+0001d  6652 0dda                iget  # FIELD Landroid/support/v4/widget/a$a;->k:I
+0001f  6682                     op_82
+00020  67c9                     op_c9
+00021  3071 1146 0417           invoke-static  # CALL Landroid/support/v4/widget/a;->a(F,F,F)F
+00024  060a                     move-result
+00025  60c8                     op_c8
+00026  02c6                     op_c6
+00027  020f                     return
+00028  6253 0dd4                iget-wide  # FIELD Landroid/support/v4/widget/a$a;->e:J
+0002a  27bc                     op_bc
+0002b  0015 3f00                const/high16
+0002d  7785                     op_85
+0002e  6652 0dd0                iget  # FIELD Landroid/support/v4/widget/a$a;->a:I
+00030  6682                     op_82
+00031  67c9                     op_c9
+00032  3071 1146 0417           invoke-static  # CALL Landroid/support/v4/widget/a;->a(F,F,F)F
+00035  060a                     move-result
+00036  06c8                     op_c8
+00037  060f                     return
+
+### Landroid/support/v4/widget/a$a;->a()V  [access=0x1, regs=6, ins=1, outs=3, code_off=0xbf78c]
+00000  5053 0dd5                iget-wide  # FIELD Landroid/support/v4/widget/a$a;->f:J
+00002  0216 0000                const-wide/16
+00004  0031 0200                op_31
+00006  0038 0023                if-eqz
+00008  0071 1ebc 0000           invoke-static  # CALL Landroid/view/animation/AnimationUtils;->currentAnimationTimeMillis()J
+0000b  000b                     move-result-wide
+0000c  3070 1136 0105           invoke-direct  # CALL Landroid/support/v4/widget/a$a;->a(J)F
+0000f  020a                     move-result
+00010  2070 1135 0025           invoke-direct  # CALL Landroid/support/v4/widget/a$a;->a(F)F
+00013  020a                     move-result
+00014  5353 0dd5                iget-wide  # FIELD Landroid/support/v4/widget/a$a;->f:J
+00016  039c 0300                op_9c
+00018  505a 0dd5                iput-wide  # FIELD Landroid/support/v4/widget/a$a;->f:J
+0001a  3085                     op_85
+0001b  20c8                     op_c8
+0001c  5152 0dd2                iget  # FIELD Landroid/support/v4/widget/a$a;->c:F
+0001e  01c8                     op_c8
+0001f  1187                     op_87
+00020  5159 0dd6                iput  # FIELD Landroid/support/v4/widget/a$a;->g:I
+00022  5152 0dd3                iget  # FIELD Landroid/support/v4/widget/a$a;->d:F
+00024  10c8                     op_c8
+00025  0087                     op_87
+00026  5059 0dd7                iput  # FIELD Landroid/support/v4/widget/a$a;->h:I
+00028  000e                     return-void
+00029  0522 0680                new-instance  # TYPE Ljava/lang/RuntimeException;
+0002b  001a 0534                const-string  # STR "Cannot compute scroll delta before calling start()"
+0002d  2070 2cee 0005           invoke-direct  # CALL Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+00030  0527                     throw
+
+### Landroid/support/v4/widget/a$a;->a(F,F)V  [access=0x1, regs=3, ins=3, outs=0, code_off=0xbf878]
+00000  0159 0dd2                iput  # FIELD Landroid/support/v4/widget/a$a;->c:F
+00002  0259 0dd3                iput  # FIELD Landroid/support/v4/widget/a$a;->d:F
+00004  000e                     return-void
+
+### Landroid/support/v4/widget/a$a;->a(I)V  [access=0x1, regs=2, ins=2, outs=0, code_off=0xbf848]
+00000  0159 0dd1                iput  # FIELD Landroid/support/v4/widget/a$a;->b:I
+00002  000e                     return-void
+
+### Landroid/support/v4/widget/a$a;->b()I  [access=0x1, regs=1, ins=1, outs=0, code_off=0xbf6d8]
+00000  0052 0dd6                iget  # FIELD Landroid/support/v4/widget/a$a;->g:I
+00002  000f                     return
+
+### Landroid/support/v4/widget/a$a;->b(I)V  [access=0x1, regs=2, ins=2, outs=0, code_off=0xbf860]
+00000  0159 0dd0                iput  # FIELD Landroid/support/v4/widget/a$a;->a:I
+00002  000e                     return-void
+
+### Landroid/support/v4/widget/a$a;->c()I  [access=0x1, regs=1, ins=1, outs=0, code_off=0xbf6f0]
+00000  0052 0dd7                iget  # FIELD Landroid/support/v4/widget/a$a;->h:I
+00002  000f                     return
+
+### Landroid/support/v4/widget/a$a;->d()I  [access=0x1, regs=2, ins=1, outs=1, code_off=0xbf708]
+00000  1152 0dd2                iget  # FIELD Landroid/support/v4/widget/a$a;->c:F
+00002  1071 2cbe 0001           invoke-static  # CALL Ljava/lang/Math;->abs(F)F
+00005  000a                     move-result
+00006  01c9                     op_c9
+00007  1187                     op_87
+00008  010f                     return
+
+### Landroid/support/v4/widget/a$a;->e()I  [access=0x1, regs=2, ins=1, outs=1, code_off=0xbf72c]
+00000  1152 0dd3                iget  # FIELD Landroid/support/v4/widget/a$a;->d:F
+00002  1071 2cbe 0001           invoke-static  # CALL Ljava/lang/Math;->abs(F)F
+00005  000a                     move-result
+00006  01c9                     op_c9
+00007  1187                     op_87
+00008  010f                     return
+
+### Landroid/support/v4/widget/a$a;->f()Z  [access=0x1, regs=7, ins=1, outs=0, code_off=0xbf5f0]
+00000  6053 0dd8                iget-wide  # FIELD Landroid/support/v4/widget/a$a;->i:J
+00002  0216 0000                const-wide/16
+00004  0031 0200                op_31
+00006  003d 0012                if-lez
+00008  0071 1ebc 0000           invoke-static  # CALL Landroid/view/animation/AnimationUtils;->currentAnimationTimeMillis()J
+0000b  000b                     move-result-wide
+0000c  6253 0dd8                iget-wide  # FIELD Landroid/support/v4/widget/a$a;->i:J
+0000e  6652 0dda                iget  # FIELD Landroid/support/v4/widget/a$a;->k:I
+00010  6481                     op_81
+00011  42bb                     op_bb
+00012  0631 0200                op_31
+00014  063d 0004                if-lez
+00016  1612                     const/4
+00017  0228                     goto
+00018  0612                     const/4
+00019  060f                     return
+
+### Landroid/support/v4/widget/a$a;->g()V  [access=0x1, regs=6, ins=1, outs=3, code_off=0xbf800]
+00000  0071 1ebc 0000           invoke-static  # CALL Landroid/view/animation/AnimationUtils;->currentAnimationTimeMillis()J
+00003  000b                     move-result-wide
+00004  5253 0dd4                iget-wide  # FIELD Landroid/support/v4/widget/a$a;->e:J
+00006  029c 0200                op_9c
+00008  2284                     op_84
+00009  5352 0dd1                iget  # FIELD Landroid/support/v4/widget/a$a;->b:I
+0000b  0412                     const/4
+0000c  3071 1149 0342           invoke-static  # CALL Landroid/support/v4/widget/a;->a(I,I,I)I
+0000f  020a                     move-result
+00010  5259 0dda                iput  # FIELD Landroid/support/v4/widget/a$a;->k:I
+00012  3070 1136 0105           invoke-direct  # CALL Landroid/support/v4/widget/a$a;->a(J)F
+00015  020a                     move-result
+00016  5259 0dd9                iput  # FIELD Landroid/support/v4/widget/a$a;->j:F
+00018  505a 0dd8                iput-wide  # FIELD Landroid/support/v4/widget/a$a;->i:J
+0001a  000e                     return-void
+
+### Landroid/support/v4/widget/a$a;->h()V  [access=0x1, regs=5, ins=1, outs=0, code_off=0xbf894]
+00000  0071 1ebc 0000           invoke-static  # CALL Landroid/view/animation/AnimationUtils;->currentAnimationTimeMillis()J
+00003  000b                     move-result-wide
+00004  405a 0dd4                iput-wide  # FIELD Landroid/support/v4/widget/a$a;->e:J
+00006  0216 ffff                const-wide/16
+00008  425a 0dd8                iput-wide  # FIELD Landroid/support/v4/widget/a$a;->i:J
+0000a  405a 0dd5                iput-wide  # FIELD Landroid/support/v4/widget/a$a;->f:J
+0000c  0015 3f00                const/high16
+0000e  4059 0dd9                iput  # FIELD Landroid/support/v4/widget/a$a;->j:F
+00010  0012                     const/4
+00011  4059 0dd6                iput  # FIELD Landroid/support/v4/widget/a$a;->g:I
+00013  4059 0dd7                iput  # FIELD Landroid/support/v4/widget/a$a;->h:I
+00015  000e                     return-void

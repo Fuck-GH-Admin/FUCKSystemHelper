@@ -1,0 +1,69 @@
+### Landroid/support/v7/widget/h;-><clinit>()V  [access=0x10008, regs=3, ins=0, outs=0, code_off=0xddffc]
+00000  1012                     const/4
+00001  0023 0724                new-array  # TYPE [I
+00003  0112                     const/4
+00004  0214 0108 0101           const
+00007  024b 0100                aput
+00009  0069 1167                sput-object  # FIELD Landroid/support/v7/widget/h;->c:[I
+0000b  000e                     return-void
+
+### Landroid/support/v7/widget/h;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;)V  [access=0x10001, regs=4, ins=3, outs=4, code_off=0xde024]
+00000  0014 03c8 0101           const
+00003  4070 1935 0321           invoke-direct  # CALL Landroid/support/v7/widget/h;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;,I)V
+00006  000e                     return-void
+
+### Landroid/support/v7/widget/h;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;,I)V  [access=0x10001, regs=6, ins=4, outs=5, code_off=0xde044]
+00000  1071 1a4b 0003           invoke-static  # CALL Landroid/support/v7/widget/q0;->b(Landroid/content/Context;)Landroid/content/Context;
+00003  030c                     move-result-object
+00004  4070 1f2d 5432           invoke-direct  # CALL Landroid/widget/CheckedTextView;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;,I)V
+00007  0322 03cb                new-instance  # TYPE Landroid/support/v7/widget/x;
+00009  2070 1b1a 0023           invoke-direct  # CALL Landroid/support/v7/widget/x;-><init>(Landroid/widget/TextView;)V
+0000c  235b 1166                iput-object  # FIELD Landroid/support/v7/widget/h;->b:Landroid/support/v7/widget/x;
+0000e  306e 1b23 0543           invoke-virtual  # CALL Landroid/support/v7/widget/x;->a(Landroid/util/AttributeSet;,I)V
+00011  2354 1166                iget-object  # FIELD Landroid/support/v7/widget/h;->b:Landroid/support/v7/widget/x;
+00013  106e 1b1c 0003           invoke-virtual  # CALL Landroid/support/v7/widget/x;->a()V
+00016  106e 1f2f 0002           invoke-virtual  # CALL Landroid/widget/CheckedTextView;->getContext()Landroid/content/Context;
+00019  030c                     move-result-object
+0001a  0062 1167                sget-object  # FIELD Landroid/support/v7/widget/h;->c:[I
+0001c  0112                     const/4
+0001d  5171 1a72 5043           invoke-static  # CALL Landroid/support/v7/widget/t0;->a(Landroid/content/Context;,Landroid/util/AttributeSet;,[I,I,I)Landroid/support/v7/widget/t0;
+00020  030c                     move-result-object
+00021  206e 1a76 0013           invoke-virtual  # CALL Landroid/support/v7/widget/t0;->b(I)Landroid/graphics/drawable/Drawable;
+00024  040c                     move-result-object
+00025  206e 1f31 0042           invoke-virtual  # CALL Landroid/widget/CheckedTextView;->setCheckMarkDrawable(Landroid/graphics/drawable/Drawable;)V
+00028  106e 1a73 0003           invoke-virtual  # CALL Landroid/support/v7/widget/t0;->a()V
+0002b  000e                     return-void
+
+### Landroid/support/v7/widget/h;->drawableStateChanged()V  [access=0x4, regs=1, ins=1, outs=1, code_off=0xde0ac]
+00000  106f 1f2e 0000           invoke-super  # CALL Landroid/widget/CheckedTextView;->drawableStateChanged()V
+00003  0054 1166                iget-object  # FIELD Landroid/support/v7/widget/h;->b:Landroid/support/v7/widget/x;
+00005  0038 0005                if-eqz
+00007  106e 1b1c 0000           invoke-virtual  # CALL Landroid/support/v7/widget/x;->a()V
+0000a  000e                     return-void
+
+### Landroid/support/v7/widget/h;->onCreateInputConnection(Landroid/view/inputmethod/EditorInfo;)Landroid/view/inputmethod/InputConnection;  [access=0x1, regs=3, ins=2, outs=3, code_off=0xddfdc]
+00000  206f 1f30 0021           invoke-super  # CALL Landroid/widget/CheckedTextView;->onCreateInputConnection(Landroid/view/inputmethod/EditorInfo;)Landroid/view/inputmethod/InputConnection;
+00003  000c                     move-result-object
+00004  3071 19c2 0120           invoke-static  # CALL Landroid/support/v7/widget/l;->a(Landroid/view/inputmethod/InputConnection;,Landroid/view/inputmethod/EditorInfo;,Landroid/view/View;)Landroid/view/inputmethod/InputConnection;
+00007  0011                     return-object
+
+### Landroid/support/v7/widget/h;->setCheckMarkDrawable(I)V  [access=0x1, regs=3, ins=2, outs=2, code_off=0xde0d4]
+00000  106e 1f2f 0001           invoke-virtual  # CALL Landroid/widget/CheckedTextView;->getContext()Landroid/content/Context;
+00003  000c                     move-result-object
+00004  2071 25a3 0020           invoke-static  # CALL Lb/b/d/b/a/a;->c(Landroid/content/Context;,I)Landroid/graphics/drawable/Drawable;
+00007  020c                     move-result-object
+00008  206e 1f31 0021           invoke-virtual  # CALL Landroid/widget/CheckedTextView;->setCheckMarkDrawable(Landroid/graphics/drawable/Drawable;)V
+0000b  000e                     return-void
+
+### Landroid/support/v7/widget/h;->setCustomSelectionActionModeCallback(Landroid/view/ActionMode$Callback;)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0xde0fc]
+00000  2071 119c 0010           invoke-static  # CALL Landroid/support/v4/widget/l;->a(Landroid/widget/TextView;,Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode$Callback;
+00003  010c                     move-result-object
+00004  206f 1f32 0010           invoke-super  # CALL Landroid/widget/CheckedTextView;->setCustomSelectionActionModeCallback(Landroid/view/ActionMode$Callback;)V
+00007  000e                     return-void
+
+### Landroid/support/v7/widget/h;->setTextAppearance(Landroid/content/Context;,I)V  [access=0x1, regs=3, ins=3, outs=3, code_off=0xde11c]
+00000  306f 1f34 0210           invoke-super  # CALL Landroid/widget/CheckedTextView;->setTextAppearance(Landroid/content/Context;,I)V
+00003  0054 1166                iget-object  # FIELD Landroid/support/v7/widget/h;->b:Landroid/support/v7/widget/x;
+00005  0038 0005                if-eqz
+00007  306e 1b20 0210           invoke-virtual  # CALL Landroid/support/v7/widget/x;->a(Landroid/content/Context;,I)V
+0000a  000e                     return-void

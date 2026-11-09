@@ -1,0 +1,54 @@
+### Lc/a/b/c/d$a;-><init>(Lc/a/b/c/d;)V  [access=0x10000, regs=2, ins=2, outs=1, code_off=0xf4a58]
+00000  015b 1ade                iput-object  # FIELD Lc/a/b/c/d$a;->c:Lc/a/b/c/d;
+00002  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00005  0022 05b2                new-instance  # TYPE Lc/a/b/k/b;
+00007  1070 283c 0000           invoke-direct  # CALL Lc/a/b/k/b;-><init>()V
+0000a  000e                     return-void
+
+### Lc/a/b/c/d$a;->a(Ljava/lang/String;)Z  [access=0x2, regs=5, ins=2, outs=2, code_off=0xf49b8]
+00000  1071 1c37 0004           invoke-static  # CALL Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+00003  000a                     move-result
+00004  0039 0022                if-nez
+00006  0022 071a                new-instance  # TYPE Lorg/json/JSONObject;
+00008  2070 2f14 0040           invoke-direct  # CALL Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+0000b  041a 23a9                const-string  # STR "pub_lst_ts"
+0000d  206e 2f1a 0040           invoke-virtual  # CALL Lorg/json/JSONObject;->getLong(Ljava/lang/String;)J
+00010  010b                     move-result-wide
+00011  315a 1adc                iput-wide  # FIELD Lc/a/b/c/d$a;->a:J
+00013  041a 23a8                const-string  # STR "pub_info"
+00015  206e 2f1b 0040           invoke-virtual  # CALL Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+00018  040c                     move-result-object
+00019  1071 2869 0004           invoke-static  # CALL Lc/a/b/n;->b(Ljava/lang/String;)Lc/a/b/n$a;
+0001c  040c                     move-result-object
+0001d  345b 1add                iput-object  # FIELD Lc/a/b/c/d$a;->b:Lc/a/b/n$a;
+0001f  031a 1b0d                const-string  # STR "d_form_ver"
+00021  206e 2f17 0030           invoke-virtual  # CALL Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
+00024  1312                     const/4
+00025  030f                     return
+00026  0312                     const/4
+00027  030f                     return
+
+### Lc/a/b/c/d$a;->a()J  [access=0x1, regs=3, ins=1, outs=0, code_off=0xf4a40]
+00000  2053 1adc                iget-wide  # FIELD Lc/a/b/c/d$a;->a:J
+00002  0010                     return-wide
+
+### Lc/a/b/c/d$a;->a(Landroid/content/pm/PackageInfo;)Z  [access=0x1, regs=4, ins=2, outs=3, code_off=0xf496c]
+00000  2054 1ade                iget-object  # FIELD Lc/a/b/c/d$a;->c:Lc/a/b/c/d;
+00002  0054 1ae4                iget-object  # FIELD Lc/a/b/c/d;->f:Lc/a/b/i/a$a;
+00004  0122 063e                new-instance  # TYPE Ljava/io/File;
+00006  3354 050d                iget-object  # FIELD Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+00008  3354 0507                iget-object  # FIELD Landroid/content/pm/ApplicationInfo;->dataDir:Ljava/lang/String;
+0000a  2070 2c0c 0031           invoke-direct  # CALL Ljava/io/File;-><init>(Ljava/lang/String;)V
+0000d  206e 2828 0010           invoke-virtual  # CALL Lc/a/b/i/a$a;->a(Ljava/io/File;)Lc/a/b/i/a$a;
+00010  030c                     move-result-object
+00011  001a 23a7                const-string  # STR "pub.dat"
+00013  1112                     const/4
+00014  306e 282a 0103           invoke-virtual  # CALL Lc/a/b/i/a$a;->a(Ljava/lang/String;,Z)Ljava/lang/String;
+00017  030c                     move-result-object
+00018  2070 276a 0032           invoke-direct  # CALL Lc/a/b/c/d$a;->a(Ljava/lang/String;)Z
+0001b  020a                     move-result
+0001c  020f                     return
+
+### Lc/a/b/c/d$a;->b()Lc/a/b/n$a;  [access=0x1, regs=1, ins=1, outs=0, code_off=0xf4a28]
+00000  0054 1add                iget-object  # FIELD Lc/a/b/c/d$a;->b:Lc/a/b/n$a;
+00002  0011                     return-object

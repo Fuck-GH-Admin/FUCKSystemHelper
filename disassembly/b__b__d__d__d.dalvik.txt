@@ -1,0 +1,124 @@
+### Lb/b/d/d/d;-><init>()V  [access=0x10001, regs=2, ins=1, outs=2, code_off=0xcf4d4]
+00000  0012                     const/4
+00001  2070 085f 0001           invoke-direct  # CALL Landroid/content/ContextWrapper;-><init>(Landroid/content/Context;)V
+00004  000e                     return-void
+
+### Lb/b/d/d/d;-><init>(Landroid/content/Context;,I)V  [access=0x10001, regs=3, ins=3, outs=2, code_off=0xcf50c]
+00000  2070 085f 0010           invoke-direct  # CALL Landroid/content/ContextWrapper;-><init>(Landroid/content/Context;)V
+00003  0259 1a6e                iput  # FIELD Lb/b/d/d/d;->a:I
+00005  000e                     return-void
+
+### Lb/b/d/d/d;-><init>(Landroid/content/Context;,Landroid/content/res/Resources$Theme;)V  [access=0x10001, regs=3, ins=3, outs=2, code_off=0xcf4f0]
+00000  2070 085f 0010           invoke-direct  # CALL Landroid/content/ContextWrapper;-><init>(Landroid/content/Context;)V
+00003  025b 1a6f                iput-object  # FIELD Lb/b/d/d/d;->b:Landroid/content/res/Resources$Theme;
+00005  000e                     return-void
+
+### Lb/b/d/d/d;->b()Landroid/content/res/Resources;  [access=0x2, regs=4, ins=1, outs=2, code_off=0xcf3d4]
+00000  3054 1a72                iget-object  # FIELD Lb/b/d/d/d;->e:Landroid/content/res/Resources;
+00002  0039 001c                if-nez
+00004  3054 1a71                iget-object  # FIELD Lb/b/d/d/d;->d:Landroid/content/res/Configuration;
+00006  0039 0009                if-nez
+00008  106f 0863 0003           invoke-super  # CALL Landroid/content/ContextWrapper;->getResources()Landroid/content/res/Resources;
+0000b  000c                     move-result-object
+0000c  305b 1a72                iput-object  # FIELD Lb/b/d/d/d;->e:Landroid/content/res/Resources;
+0000e  1028                     goto
+0000f  0160 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00011  0213 0011                const/16
+00013  2134 000b                if-lt
+00015  206e 0861 0003           invoke-virtual  # CALL Landroid/content/ContextWrapper;->createConfigurationContext(Landroid/content/res/Configuration;)Landroid/content/Context;
+00018  000c                     move-result-object
+00019  106e 0848 0000           invoke-virtual  # CALL Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+0001c  000c                     move-result-object
+0001d  ef28                     goto
+0001e  3354 1a72                iget-object  # FIELD Lb/b/d/d/d;->e:Landroid/content/res/Resources;
+00020  0311                     return-object
+
+### Lb/b/d/d/d;->c()V  [access=0x2, regs=4, ins=1, outs=4, code_off=0xcf540]
+00000  3054 1a6f                iget-object  # FIELD Lb/b/d/d/d;->b:Landroid/content/res/Resources$Theme;
+00002  0039 0004                if-nez
+00004  1012                     const/4
+00005  0228                     goto
+00006  0012                     const/4
+00007  0038 001b                if-eqz
+00009  106e 268b 0003           invoke-virtual  # CALL Lb/b/d/d/d;->getResources()Landroid/content/res/Resources;
+0000c  010c                     move-result-object
+0000d  106e 08e8 0001           invoke-virtual  # CALL Landroid/content/res/Resources;->newTheme()Landroid/content/res/Resources$Theme;
+00010  010c                     move-result-object
+00011  315b 1a6f                iput-object  # FIELD Lb/b/d/d/d;->b:Landroid/content/res/Resources$Theme;
+00013  106e 0862 0003           invoke-virtual  # CALL Landroid/content/ContextWrapper;->getBaseContext()Landroid/content/Context;
+00016  010c                     move-result-object
+00017  106e 084e 0001           invoke-virtual  # CALL Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
+0001a  010c                     move-result-object
+0001b  0138 0007                if-eqz
+0001d  3254 1a6f                iget-object  # FIELD Lb/b/d/d/d;->b:Landroid/content/res/Resources$Theme;
+0001f  206e 08c0 0012           invoke-virtual  # CALL Landroid/content/res/Resources$Theme;->setTo(Landroid/content/res/Resources$Theme;)V
+00022  3154 1a6f                iget-object  # FIELD Lb/b/d/d/d;->b:Landroid/content/res/Resources$Theme;
+00024  3252 1a6e                iget  # FIELD Lb/b/d/d/d;->a:I
+00026  406e 2686 0213           invoke-virtual  # CALL Lb/b/d/d/d;->a(Landroid/content/res/Resources$Theme;,I,Z)V
+00029  000e                     return-void
+
+### Lb/b/d/d/d;->a()I  [access=0x1, regs=1, ins=1, outs=0, code_off=0xcf460]
+00000  0052 1a6e                iget  # FIELD Lb/b/d/d/d;->a:I
+00002  000f                     return
+
+### Lb/b/d/d/d;->a(Landroid/content/res/Resources$Theme;,I,Z)V  [access=0x4, regs=4, ins=4, outs=3, code_off=0xcf5a4]
+00000  1012                     const/4
+00001  306e 08bb 0021           invoke-virtual  # CALL Landroid/content/res/Resources$Theme;->applyStyle(I,Z)V
+00004  000e                     return-void
+
+### Lb/b/d/d/d;->attachBaseContext(Landroid/content/Context;)V  [access=0x4, regs=2, ins=2, outs=2, code_off=0xcf528]
+00000  206f 0860 0010           invoke-super  # CALL Landroid/content/ContextWrapper;->attachBaseContext(Landroid/content/Context;)V
+00003  000e                     return-void
+
+### Lb/b/d/d/d;->getAssets()Landroid/content/res/AssetManager;  [access=0x1, regs=1, ins=1, outs=1, code_off=0xcf394]
+00000  106e 268b 0000           invoke-virtual  # CALL Lb/b/d/d/d;->getResources()Landroid/content/res/Resources;
+00003  000c                     move-result-object
+00004  106e 08c3 0000           invoke-virtual  # CALL Landroid/content/res/Resources;->getAssets()Landroid/content/res/AssetManager;
+00007  000c                     move-result-object
+00008  0011                     return-object
+
+### Lb/b/d/d/d;->getResources()Landroid/content/res/Resources;  [access=0x1, regs=1, ins=1, outs=1, code_off=0xcf3b8]
+00000  1070 2688 0000           invoke-direct  # CALL Lb/b/d/d/d;->b()Landroid/content/res/Resources;
+00003  000c                     move-result-object
+00004  0011                     return-object
+
+### Lb/b/d/d/d;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;  [access=0x1, regs=3, ins=2, outs=2, code_off=0xcf478]
+00000  001a 209e                const-string  # STR "layout_inflater"
+00002  206e 2d03 0020           invoke-virtual  # CALL Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+00005  000a                     move-result
+00006  0038 0017                if-eqz
+00008  1254 1a70                iget-object  # FIELD Lb/b/d/d/d;->c:Landroid/view/LayoutInflater;
+0000a  0239 0010                if-nez
+0000c  106e 0862 0001           invoke-virtual  # CALL Landroid/content/ContextWrapper;->getBaseContext()Landroid/content/Context;
+0000f  020c                     move-result-object
+00010  1071 1cb8 0002           invoke-static  # CALL Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+00013  020c                     move-result-object
+00014  206e 1cb7 0012           invoke-virtual  # CALL Landroid/view/LayoutInflater;->cloneInContext(Landroid/content/Context;)Landroid/view/LayoutInflater;
+00017  020c                     move-result-object
+00018  125b 1a70                iput-object  # FIELD Lb/b/d/d/d;->c:Landroid/view/LayoutInflater;
+0001a  1154 1a70                iget-object  # FIELD Lb/b/d/d/d;->c:Landroid/view/LayoutInflater;
+0001c  0111                     return-object
+0001d  106e 0862 0001           invoke-virtual  # CALL Landroid/content/ContextWrapper;->getBaseContext()Landroid/content/Context;
+00020  010c                     move-result-object
+00021  206e 084c 0021           invoke-virtual  # CALL Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+00024  010c                     move-result-object
+00025  0111                     return-object
+
+### Lb/b/d/d/d;->getTheme()Landroid/content/res/Resources$Theme;  [access=0x1, regs=2, ins=1, outs=1, code_off=0xcf428]
+00000  1054 1a6f                iget-object  # FIELD Lb/b/d/d/d;->b:Landroid/content/res/Resources$Theme;
+00002  0038 0003                if-eqz
+00004  0011                     return-object
+00005  1052 1a6e                iget  # FIELD Lb/b/d/d/d;->a:I
+00007  0039 0006                if-nez
+00009  0060 1805                sget  # FIELD Lb/b/d/a/i;->Theme_AppCompat_Light:I
+0000b  1059 1a6e                iput  # FIELD Lb/b/d/d/d;->a:I
+0000d  1070 2689 0001           invoke-direct  # CALL Lb/b/d/d/d;->c()V
+00010  1154 1a6f                iget-object  # FIELD Lb/b/d/d/d;->b:Landroid/content/res/Resources$Theme;
+00012  0111                     return-object
+
+### Lb/b/d/d/d;->setTheme(I)V  [access=0x1, regs=3, ins=2, outs=1, code_off=0xcf5c0]
+00000  1052 1a6e                iget  # FIELD Lb/b/d/d/d;->a:I
+00002  2032 0007                if-eq
+00004  1259 1a6e                iput  # FIELD Lb/b/d/d/d;->a:I
+00006  1070 2689 0001           invoke-direct  # CALL Lb/b/d/d/d;->c()V
+00009  000e                     return-void

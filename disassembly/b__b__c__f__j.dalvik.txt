@@ -1,0 +1,21 @@
+### Lb/b/c/f/j;->a(I)I  [access=0x9, regs=1, ins=1, outs=1, code_off=0xbab80]
+00000  003a 0003                if-ltz
+00002  000f                     return
+00003  0022 0669                new-instance  # TYPE Ljava/lang/IllegalArgumentException;
+00005  1070 2c9e 0000           invoke-direct  # CALL Ljava/lang/IllegalArgumentException;-><init>()V
+00008  0027                     throw
+
+### Lb/b/c/f/j;->a(Ljava/lang/Object;)Ljava/lang/Object;  [access=0x9, regs=1, ins=1, outs=0, code_off=0xbaba4]
+00000  0038 0003                if-eqz
+00002  0011                     return-object
+00003  0012                     const/4
+00004  0027                     throw
+
+### Lb/b/c/f/j;->a(Ljava/lang/Object;,Ljava/lang/Object;)Ljava/lang/Object;  [access=0x9, regs=2, ins=2, outs=2, code_off=0xbabc0]
+00000  0038 0003                if-eqz
+00002  0011                     return-object
+00003  0022 0679                new-instance  # TYPE Ljava/lang/NullPointerException;
+00005  1071 2d24 0001           invoke-static  # CALL Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+00008  010c                     move-result-object
+00009  2070 2cde 0010           invoke-direct  # CALL Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+0000c  0027                     throw

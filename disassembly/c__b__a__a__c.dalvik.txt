@@ -1,0 +1,22 @@
+### Lc/b/a/a/c;-><init>()V  [access=0x10001, regs=1, ins=1, outs=1, code_off=0x108290]
+00000  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  000e                     return-void
+
+### Lc/b/a/a/c;->a([B,I,I)V  [access=0x1, regs=4, ins=4, outs=3, code_off=0x1082a8]
+00000  3071 28f9 0321           invoke-static  # CALL Lc/b/a/a/b;->b([B,I,I)Lc/b/a/a/b;
+00003  010c                     move-result-object
+00004  206e 2907 0010           invoke-virtual  # CALL Lc/b/a/a/c;->a(Lc/b/a/a/b;)V
+00007  106e 28e7 0001           invoke-virtual  # CALL Lc/b/a/a/b;->a()V
+0000a  000e                     return-void
+0000b  0022 0680                new-instance  # TYPE Ljava/lang/RuntimeException;
+0000d  011a 140b                const-string  # STR "Serializing to a byte array threw an IOException (should never happen)."
+0000f  2070 2cee 0010           invoke-direct  # CALL Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+00012  0027                     throw
+
+### Lc/b/a/a/c;->c()[B  [access=0x1, regs=4, ins=1, outs=4, code_off=0x108268]
+00000  106e 2909 0003           invoke-virtual  # CALL Lc/b/a/a/c;->b()I
+00003  000a                     move-result
+00004  0123 0720                new-array  # TYPE [B
+00006  0212                     const/4
+00007  406e 2908 0213           invoke-virtual  # CALL Lc/b/a/a/c;->a([B,I,I)V
+0000a  0111                     return-object

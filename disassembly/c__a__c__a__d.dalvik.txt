@@ -1,0 +1,85 @@
+### Lc/a/c/a/d;-><clinit>()V  [access=0x10008, regs=0, ins=0, outs=0, code_off=0xfda20]
+00000  000e                     return-void
+
+### Lc/a/c/a/d;->a()Ljava/lang/String;  [access=0x9, regs=3, ins=0, outs=2, code_off=0xfd9b4]
+00000  0022 068a                new-instance  # TYPE Ljava/lang/Throwable;
+00002  1070 2d5a 0000           invoke-direct  # CALL Ljava/lang/Throwable;-><init>()V
+00005  106e 2d5e 0000           invoke-virtual  # CALL Ljava/lang/Throwable;->getStackTrace()[Ljava/lang/StackTraceElement;
+00008  000c                     move-result-object
+00009  2112                     const/4
+0000a  0046 0100                aget-object
+0000c  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0000e  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00011  106e 2cf5 0000           invoke-virtual  # CALL Ljava/lang/StackTraceElement;->getFileName()Ljava/lang/String;
+00014  020c                     move-result-object
+00015  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00018  021a 1713                const-string  # STR "["
+0001a  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0001d  106e 2cf6 0000           invoke-virtual  # CALL Ljava/lang/StackTraceElement;->getLineNumber()I
+00020  000a                     move-result
+00021  206e 2d3b 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+00024  001a 176b                const-string  # STR "]"
+00026  206e 2d3f 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00029  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0002c  000c                     move-result-object
+0002d  0011                     return-object
+
+### Lc/a/c/a/d;->a(Ljava/lang/String;)V  [access=0x9, regs=4, ins=1, outs=2, code_off=0xfda34]
+00000  0063 1b6c                sget-boolean  # FIELD Lc/a/c/a/d;->a:Z
+00002  0038 002b                if-eqz
+00004  0071 2d4d 0000           invoke-static  # CALL Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+00007  000c                     move-result-object
+00008  106e 2d50 0000           invoke-virtual  # CALL Ljava/lang/Thread;->getStackTrace()[Ljava/lang/StackTraceElement;
+0000b  000c                     move-result-object
+0000c  0021                     array-length
+0000d  0039 0003                if-nez
+0000f  000e                     return-void
+00010  0062 1b6d                sget-object  # FIELD Lc/a/c/a/d;->b:Ljava/lang/String;
+00012  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00014  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00017  0071 2897 0000           invoke-static  # CALL Lc/a/c/a/d;->a()Ljava/lang/String;
+0001a  020c                     move-result-object
+0001b  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0001e  021a 0269                const-string  # STR ";"
+00020  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00023  206e 2d3f 0031           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00026  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00029  030c                     move-result-object
+0002a  2071 1c59 0030           invoke-static  # CALL Landroid/util/Log;->d(Ljava/lang/String;,Ljava/lang/String;)I
+0002d  000e                     return-void
+
+### Lc/a/c/a/d;->b(Ljava/lang/String;)V  [access=0x9, regs=2, ins=1, outs=2, code_off=0xfdaa0]
+00000  0071 2d4d 0000           invoke-static  # CALL Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+00003  000c                     move-result-object
+00004  106e 2d50 0000           invoke-virtual  # CALL Ljava/lang/Thread;->getStackTrace()[Ljava/lang/StackTraceElement;
+00007  000c                     move-result-object
+00008  0021                     array-length
+00009  0039 0003                if-nez
+0000b  000e                     return-void
+0000c  0062 1b6d                sget-object  # FIELD Lc/a/c/a/d;->b:Ljava/lang/String;
+0000e  2071 1c5e 0010           invoke-static  # CALL Landroid/util/Log;->i(Ljava/lang/String;,Ljava/lang/String;)I
+00011  000e                     return-void
+
+### Lc/a/c/a/d;->c(Ljava/lang/String;)V  [access=0x9, regs=4, ins=1, outs=2, code_off=0xfdad4]
+00000  0063 1b6c                sget-boolean  # FIELD Lc/a/c/a/d;->a:Z
+00002  0038 002b                if-eqz
+00004  0071 2d4d 0000           invoke-static  # CALL Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+00007  000c                     move-result-object
+00008  106e 2d50 0000           invoke-virtual  # CALL Ljava/lang/Thread;->getStackTrace()[Ljava/lang/StackTraceElement;
+0000b  000c                     move-result-object
+0000c  0021                     array-length
+0000d  0039 0003                if-nez
+0000f  000e                     return-void
+00010  0062 1b6d                sget-object  # FIELD Lc/a/c/a/d;->b:Ljava/lang/String;
+00012  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00014  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00017  0071 2897 0000           invoke-static  # CALL Lc/a/c/a/d;->a()Ljava/lang/String;
+0001a  020c                     move-result-object
+0001b  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0001e  021a 0269                const-string  # STR ";"
+00020  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00023  206e 2d3f 0031           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00026  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00029  030c                     move-result-object
+0002a  2071 1c5b 0030           invoke-static  # CALL Landroid/util/Log;->e(Ljava/lang/String;,Ljava/lang/String;)I
+0002d  000e                     return-void

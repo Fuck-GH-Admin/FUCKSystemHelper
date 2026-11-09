@@ -1,0 +1,22 @@
+### La/a/a/b/h$a;-><init>(La/a/a/b/h;)V  [access=0x10001, regs=2, ins=2, outs=1, code_off=0x4aff0]
+00000  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  000e                     return-void
+
+### La/a/a/b/h$a;->a(La/a/a/b/h$d;,La/a/a/b/h$d;)I  [access=0x1, regs=3, ins=3, outs=0, code_off=0x4afa0]
+00000  1052 006d                iget  # FIELD La/a/a/b/h$d;->b:I
+00002  2152 006d                iget  # FIELD La/a/a/b/h$d;->b:I
+00004  1037 0004                if-le
+00006  f012                     const/4
+00007  000f                     return
+00008  1033 0004                if-ne
+0000a  0012                     const/4
+0000b  000f                     return
+0000c  1012                     const/4
+0000d  000f                     return
+
+### La/a/a/b/h$a;->compare(Ljava/lang/Object;,Ljava/lang/Object;)I  [access=0x1041, regs=3, ins=3, outs=3, code_off=0x4afcc]
+00000  011f 001e                check-cast  # TYPE La/a/a/b/h$d;
+00002  021f 001e                check-cast  # TYPE La/a/a/b/h$d;
+00004  306e 0079 0210           invoke-virtual  # CALL La/a/a/b/h$a;->a(La/a/a/b/h$d;,La/a/a/b/h$d;)I
+00007  000a                     move-result
+00008  000f                     return

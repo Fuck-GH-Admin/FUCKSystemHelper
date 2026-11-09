@@ -1,0 +1,205 @@
+### Landroid/support/v4/widget/d;-><init>(Landroid/content/Context;,Landroid/database/Cursor;,Z)V  [access=0x10001, regs=4, ins=4, outs=4, code_off=0xc0440]
+00000  1070 1f0c 0000           invoke-direct  # CALL Landroid/widget/BaseAdapter;-><init>()V
+00003  0338 0004                if-eqz
+00005  1312                     const/4
+00006  0228                     goto
+00007  2312                     const/4
+00008  406e 116b 3210           invoke-virtual  # CALL Landroid/support/v4/widget/d;->a(Landroid/content/Context;,Landroid/database/Cursor;,I)V
+0000b  000e                     return-void
+
+### Landroid/support/v4/widget/d;->a()Landroid/database/Cursor;  [access=0x1, regs=1, ins=1, outs=0, code_off=0xc01ec]
+00000  0054 0df5                iget-object  # FIELD Landroid/support/v4/widget/d;->d:Landroid/database/Cursor;
+00002  0011                     return-object
+
+### Landroid/support/v4/widget/d;->a(Landroid/content/Context;,Landroid/database/Cursor;,I)V  [access=0x0, regs=7, ins=4, outs=2, code_off=0xc048c]
+00000  00dd 0106                op_dd
+00002  0112                     const/4
+00003  1212                     const/4
+00004  2033 0007                if-ne
+00006  06de 0206                op_de
+00008  325c 0df4                iput-boolean  # FIELD Landroid/support/v4/widget/d;->c:Z
+0000a  0328                     goto
+0000b  315c 0df4                iput-boolean  # FIELD Landroid/support/v4/widget/d;->c:Z
+0000d  0538 0003                if-eqz
+0000f  2101                     op_01
+00010  355b 0df5                iput-object  # FIELD Landroid/support/v4/widget/d;->d:Landroid/database/Cursor;
+00012  315c 0df3                iput-boolean  # FIELD Landroid/support/v4/widget/d;->b:Z
+00014  345b 0df6                iput-object  # FIELD Landroid/support/v4/widget/d;->e:Landroid/content/Context;
+00016  0138 0009                if-eqz
+00018  041a 1772                const-string  # STR "_id"
+0001a  2072 0916 0045           invoke-interface  # CALL Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
+0001d  040a                     move-result
+0001e  0228                     goto
+0001f  f412                     const/4
+00020  3459 0df7                iput  # FIELD Landroid/support/v4/widget/d;->f:I
+00022  2412                     const/4
+00023  46b5                     op_b5
+00024  4633 000f                if-ne
+00026  0422 02c6                new-instance  # TYPE Landroid/support/v4/widget/d$a;
+00028  2070 1161 0034           invoke-direct  # CALL Landroid/support/v4/widget/d$a;-><init>(Landroid/support/v4/widget/d;)V
+0002b  345b 0df8                iput-object  # FIELD Landroid/support/v4/widget/d;->g:Landroid/support/v4/widget/d$a;
+0002d  0422 02c7                new-instance  # TYPE Landroid/support/v4/widget/d$b;
+0002f  2070 1164 0034           invoke-direct  # CALL Landroid/support/v4/widget/d$b;-><init>(Landroid/support/v4/widget/d;)V
+00032  0428                     goto
+00033  0412                     const/4
+00034  345b 0df8                iput-object  # FIELD Landroid/support/v4/widget/d;->g:Landroid/support/v4/widget/d$a;
+00036  345b 0df9                iput-object  # FIELD Landroid/support/v4/widget/d;->h:Landroid/database/DataSetObserver;
+00038  0138 0010                if-eqz
+0003a  3454 0df8                iget-object  # FIELD Landroid/support/v4/widget/d;->g:Landroid/support/v4/widget/d$a;
+0003c  0438 0005                if-eqz
+0003e  2072 0924 0045           invoke-interface  # CALL Landroid/database/Cursor;->registerContentObserver(Landroid/database/ContentObserver;)V
+00041  3354 0df9                iget-object  # FIELD Landroid/support/v4/widget/d;->h:Landroid/database/DataSetObserver;
+00043  0338 0005                if-eqz
+00045  2072 0925 0035           invoke-interface  # CALL Landroid/database/Cursor;->registerDataSetObserver(Landroid/database/DataSetObserver;)V
+00048  000e                     return-void
+
+### Landroid/support/v4/widget/d;->b()V  [access=0x4, regs=2, ins=1, outs=1, code_off=0xc0530]
+00000  1055 0df4                iget-boolean  # FIELD Landroid/support/v4/widget/d;->c:Z
+00002  0038 0014                if-eqz
+00004  1054 0df5                iget-object  # FIELD Landroid/support/v4/widget/d;->d:Landroid/database/Cursor;
+00006  0038 0010                if-eqz
+00008  1072 0920 0000           invoke-interface  # CALL Landroid/database/Cursor;->isClosed()Z
+0000b  000a                     move-result
+0000c  0039 000a                if-nez
+0000e  1054 0df5                iget-object  # FIELD Landroid/support/v4/widget/d;->d:Landroid/database/Cursor;
+00010  1072 0926 0000           invoke-interface  # CALL Landroid/database/Cursor;->requery()Z
+00013  000a                     move-result
+00014  105c 0df3                iput-boolean  # FIELD Landroid/support/v4/widget/d;->b:Z
+00016  000e                     return-void
+
+### Landroid/support/v4/widget/d;->b(Landroid/database/Cursor;)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0xc0468]
+00000  206e 1170 0010           invoke-virtual  # CALL Landroid/support/v4/widget/d;->c(Landroid/database/Cursor;)Landroid/database/Cursor;
+00003  000c                     move-result-object
+00004  0038 0005                if-eqz
+00006  1072 0914 0000           invoke-interface  # CALL Landroid/database/Cursor;->close()V
+00009  000e                     return-void
+
+### Landroid/support/v4/widget/d;->c(Landroid/database/Cursor;)Landroid/database/Cursor;  [access=0x1, regs=4, ins=2, outs=2, code_off=0xc0204]
+00000  2054 0df5                iget-object  # FIELD Landroid/support/v4/widget/d;->d:Landroid/database/Cursor;
+00002  0333 0004                if-ne
+00004  0212                     const/4
+00005  0211                     return-object
+00006  0038 0010                if-eqz
+00008  2154 0df8                iget-object  # FIELD Landroid/support/v4/widget/d;->g:Landroid/support/v4/widget/d$a;
+0000a  0138 0005                if-eqz
+0000c  2072 0927 0010           invoke-interface  # CALL Landroid/database/Cursor;->unregisterContentObserver(Landroid/database/ContentObserver;)V
+0000f  2154 0df9                iget-object  # FIELD Landroid/support/v4/widget/d;->h:Landroid/database/DataSetObserver;
+00011  0138 0005                if-eqz
+00013  2072 0928 0010           invoke-interface  # CALL Landroid/database/Cursor;->unregisterDataSetObserver(Landroid/database/DataSetObserver;)V
+00016  235b 0df5                iput-object  # FIELD Landroid/support/v4/widget/d;->d:Landroid/database/Cursor;
+00018  0338 001f                if-eqz
+0001a  2154 0df8                iget-object  # FIELD Landroid/support/v4/widget/d;->g:Landroid/support/v4/widget/d$a;
+0001c  0138 0005                if-eqz
+0001e  2072 0924 0013           invoke-interface  # CALL Landroid/database/Cursor;->registerContentObserver(Landroid/database/ContentObserver;)V
+00021  2154 0df9                iget-object  # FIELD Landroid/support/v4/widget/d;->h:Landroid/database/DataSetObserver;
+00023  0138 0005                if-eqz
+00025  2072 0925 0013           invoke-interface  # CALL Landroid/database/Cursor;->registerDataSetObserver(Landroid/database/DataSetObserver;)V
+00028  011a 1772                const-string  # STR "_id"
+0002a  2072 0916 0013           invoke-interface  # CALL Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
+0002d  030a                     move-result
+0002e  2359 0df7                iput  # FIELD Landroid/support/v4/widget/d;->f:I
+00030  1312                     const/4
+00031  235c 0df3                iput-boolean  # FIELD Landroid/support/v4/widget/d;->b:Z
+00033  106e 1f0d 0002           invoke-virtual  # CALL Landroid/widget/BaseAdapter;->notifyDataSetChanged()V
+00036  0a28                     goto
+00037  f312                     const/4
+00038  2359 0df7                iput  # FIELD Landroid/support/v4/widget/d;->f:I
+0003a  0312                     const/4
+0003b  235c 0df3                iput-boolean  # FIELD Landroid/support/v4/widget/d;->b:Z
+0003d  106e 1f0e 0002           invoke-virtual  # CALL Landroid/widget/BaseAdapter;->notifyDataSetInvalidated()V
+00040  0011                     return-object
+
+### Landroid/support/v4/widget/d;->getCount()I  [access=0x1, regs=2, ins=1, outs=1, code_off=0xc039c]
+00000  1055 0df3                iget-boolean  # FIELD Landroid/support/v4/widget/d;->b:Z
+00002  0038 000b                if-eqz
+00004  1154 0df5                iget-object  # FIELD Landroid/support/v4/widget/d;->d:Landroid/database/Cursor;
+00006  0138 0007                if-eqz
+00008  1072 0917 0001           invoke-interface  # CALL Landroid/database/Cursor;->getCount()I
+0000b  010a                     move-result
+0000c  010f                     return
+0000d  0112                     const/4
+0000e  010f                     return
+
+### Landroid/support/v4/widget/d;->getDropDownView(I,Landroid/view/View;,Landroid/view/ViewGroup;)Landroid/view/View;  [access=0x1, regs=5, ins=4, outs=4, code_off=0xc0298]
+00000  1055 0df3                iget-boolean  # FIELD Landroid/support/v4/widget/d;->b:Z
+00002  0038 0019                if-eqz
+00004  1054 0df5                iget-object  # FIELD Landroid/support/v4/widget/d;->d:Landroid/database/Cursor;
+00006  2072 0923 0020           invoke-interface  # CALL Landroid/database/Cursor;->moveToPosition(I)Z
+00009  0339 000a                if-nez
+0000b  1254 0df6                iget-object  # FIELD Landroid/support/v4/widget/d;->e:Landroid/content/Context;
+0000d  1354 0df5                iget-object  # FIELD Landroid/support/v4/widget/d;->d:Landroid/database/Cursor;
+0000f  406e 1169 4321           invoke-virtual  # CALL Landroid/support/v4/widget/d;->a(Landroid/content/Context;,Landroid/database/Cursor;,Landroid/view/ViewGroup;)Landroid/view/View;
+00012  030c                     move-result-object
+00013  1254 0df6                iget-object  # FIELD Landroid/support/v4/widget/d;->e:Landroid/content/Context;
+00015  1454 0df5                iget-object  # FIELD Landroid/support/v4/widget/d;->d:Landroid/database/Cursor;
+00017  406e 116c 4231           invoke-virtual  # CALL Landroid/support/v4/widget/d;->a(Landroid/view/View;,Landroid/content/Context;,Landroid/database/Cursor;)V
+0001a  0311                     return-object
+0001b  0112                     const/4
+0001c  0111                     return-object
+
+### Landroid/support/v4/widget/d;->getFilter()Landroid/widget/Filter;  [access=0x1, regs=2, ins=1, outs=2, code_off=0xc0370]
+00000  1054 0dfa                iget-object  # FIELD Landroid/support/v4/widget/d;->i:Landroid/support/v4/widget/e;
+00002  0039 0009                if-nez
+00004  0022 02ca                new-instance  # TYPE Landroid/support/v4/widget/e;
+00006  2070 117b 0010           invoke-direct  # CALL Landroid/support/v4/widget/e;-><init>(Landroid/support/v4/widget/e$a;)V
+00009  105b 0dfa                iput-object  # FIELD Landroid/support/v4/widget/d;->i:Landroid/support/v4/widget/e;
+0000b  1154 0dfa                iget-object  # FIELD Landroid/support/v4/widget/d;->i:Landroid/support/v4/widget/e;
+0000d  0111                     return-object
+
+### Landroid/support/v4/widget/d;->getItem(I)Ljava/lang/Object;  [access=0x1, regs=3, ins=2, outs=2, code_off=0xc03cc]
+00000  1055 0df3                iget-boolean  # FIELD Landroid/support/v4/widget/d;->b:Z
+00002  0038 000c                if-eqz
+00004  1054 0df5                iget-object  # FIELD Landroid/support/v4/widget/d;->d:Landroid/database/Cursor;
+00006  0038 0008                if-eqz
+00008  2072 0923 0020           invoke-interface  # CALL Landroid/database/Cursor;->moveToPosition(I)Z
+0000b  1154 0df5                iget-object  # FIELD Landroid/support/v4/widget/d;->d:Landroid/database/Cursor;
+0000d  0111                     return-object
+0000e  0112                     const/4
+0000f  0111                     return-object
+
+### Landroid/support/v4/widget/d;->getItemId(I)J  [access=0x1, regs=5, ins=2, outs=2, code_off=0xc03fc]
+00000  3055 0df3                iget-boolean  # FIELD Landroid/support/v4/widget/d;->b:Z
+00002  0116 0000                const-wide/16
+00004  0038 0015                if-eqz
+00006  3054 0df5                iget-object  # FIELD Landroid/support/v4/widget/d;->d:Landroid/database/Cursor;
+00008  0038 0011                if-eqz
+0000a  2072 0923 0040           invoke-interface  # CALL Landroid/database/Cursor;->moveToPosition(I)Z
+0000d  040a                     move-result
+0000e  0438 000b                if-eqz
+00010  3454 0df5                iget-object  # FIELD Landroid/support/v4/widget/d;->d:Landroid/database/Cursor;
+00012  3352 0df7                iget  # FIELD Landroid/support/v4/widget/d;->f:I
+00014  2072 091c 0034           invoke-interface  # CALL Landroid/database/Cursor;->getLong(I)J
+00017  030b                     move-result-wide
+00018  0310                     return-wide
+00019  0110                     return-wide
+
+### Landroid/support/v4/widget/d;->getView(I,Landroid/view/View;,Landroid/view/ViewGroup;)Landroid/view/View;  [access=0x1, regs=5, ins=4, outs=4, code_off=0xc02e4]
+00000  1055 0df3                iget-boolean  # FIELD Landroid/support/v4/widget/d;->b:Z
+00002  0038 0033                if-eqz
+00004  1054 0df5                iget-object  # FIELD Landroid/support/v4/widget/d;->d:Landroid/database/Cursor;
+00006  2072 0923 0020           invoke-interface  # CALL Landroid/database/Cursor;->moveToPosition(I)Z
+00009  000a                     move-result
+0000a  0038 0014                if-eqz
+0000c  0339 000a                if-nez
+0000e  1254 0df6                iget-object  # FIELD Landroid/support/v4/widget/d;->e:Landroid/content/Context;
+00010  1354 0df5                iget-object  # FIELD Landroid/support/v4/widget/d;->d:Landroid/database/Cursor;
+00012  406e 116d 4321           invoke-virtual  # CALL Landroid/support/v4/widget/d;->b(Landroid/content/Context;,Landroid/database/Cursor;,Landroid/view/ViewGroup;)Landroid/view/View;
+00015  030c                     move-result-object
+00016  1254 0df6                iget-object  # FIELD Landroid/support/v4/widget/d;->e:Landroid/content/Context;
+00018  1454 0df5                iget-object  # FIELD Landroid/support/v4/widget/d;->d:Landroid/database/Cursor;
+0001a  406e 116c 4231           invoke-virtual  # CALL Landroid/support/v4/widget/d;->a(Landroid/view/View;,Landroid/content/Context;,Landroid/database/Cursor;)V
+0001d  0311                     return-object
+0001e  0122 066a                new-instance  # TYPE Ljava/lang/IllegalStateException;
+00020  0322 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00022  1070 2d35 0003           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00025  041a 1ad8                const-string  # STR "couldn't move cursor to position "
+00027  206e 2d3f 0043           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0002a  206e 2d3b 0023           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+0002d  106e 2d44 0003           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00030  020c                     move-result-object
+00031  2070 2ca3 0021           invoke-direct  # CALL Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+00034  0127                     throw
+00035  0122 066a                new-instance  # TYPE Ljava/lang/IllegalStateException;
+00037  021a 278d                const-string  # STR "this should only be called when the cursor is valid"
+00039  2070 2ca3 0021           invoke-direct  # CALL Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+0003c  0127                     throw

@@ -1,0 +1,35 @@
+### Landroid/arch/lifecycle/FullLifecycleObserverAdapter;-><init>(Landroid/arch/lifecycle/FullLifecycleObserver;)V  [access=0x10000, regs=2, ins=2, outs=1, code_off=0x801e4]
+00000  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  015b 04c5                iput-object  # FIELD Landroid/arch/lifecycle/FullLifecycleObserverAdapter;->a:Landroid/arch/lifecycle/FullLifecycleObserver;
+00005  000e                     return-void
+
+### Landroid/arch/lifecycle/FullLifecycleObserverAdapter;->a(Landroid/arch/lifecycle/e;,Landroid/arch/lifecycle/c$a;)V  [access=0x1, regs=4, ins=3, outs=2, code_off=0x80200]
+00000  0062 04c4                sget-object  # FIELD Landroid/arch/lifecycle/FullLifecycleObserverAdapter$a;->a:[I
+00002  106e 2c8f 0003           invoke-virtual  # CALL Ljava/lang/Enum;->ordinal()I
+00005  030a                     move-result
+00006  0344 0300                aget
+00008  032b 0030 0000           packed-switch
+0000b  2c28                     goto
+0000c  0122 0669                new-instance  # TYPE Ljava/lang/IllegalArgumentException;
+0000e  021a 12c1                const-string  # STR "ON_ANY must not been send by anybody"
+00010  2070 2c9f 0021           invoke-direct  # CALL Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+00013  0127                     throw
+00014  1154 04c5                iget-object  # FIELD Landroid/arch/lifecycle/FullLifecycleObserverAdapter;->a:Landroid/arch/lifecycle/FullLifecycleObserver;
+00016  2072 0790 0021           invoke-interface  # CALL Landroid/arch/lifecycle/FullLifecycleObserver;->a(Landroid/arch/lifecycle/e;)V
+00019  1e28                     goto
+0001a  1154 04c5                iget-object  # FIELD Landroid/arch/lifecycle/FullLifecycleObserverAdapter;->a:Landroid/arch/lifecycle/FullLifecycleObserver;
+0001c  2072 0794 0021           invoke-interface  # CALL Landroid/arch/lifecycle/FullLifecycleObserver;->e(Landroid/arch/lifecycle/e;)V
+0001f  1828                     goto
+00020  1154 04c5                iget-object  # FIELD Landroid/arch/lifecycle/FullLifecycleObserverAdapter;->a:Landroid/arch/lifecycle/FullLifecycleObserver;
+00022  2072 0793 0021           invoke-interface  # CALL Landroid/arch/lifecycle/FullLifecycleObserver;->d(Landroid/arch/lifecycle/e;)V
+00025  1228                     goto
+00026  1154 04c5                iget-object  # FIELD Landroid/arch/lifecycle/FullLifecycleObserverAdapter;->a:Landroid/arch/lifecycle/FullLifecycleObserver;
+00028  2072 0795 0021           invoke-interface  # CALL Landroid/arch/lifecycle/FullLifecycleObserver;->f(Landroid/arch/lifecycle/e;)V
+0002b  0c28                     goto
+0002c  1154 04c5                iget-object  # FIELD Landroid/arch/lifecycle/FullLifecycleObserverAdapter;->a:Landroid/arch/lifecycle/FullLifecycleObserver;
+0002e  2072 0791 0021           invoke-interface  # CALL Landroid/arch/lifecycle/FullLifecycleObserver;->b(Landroid/arch/lifecycle/e;)V
+00031  0628                     goto
+00032  1154 04c5                iget-object  # FIELD Landroid/arch/lifecycle/FullLifecycleObserverAdapter;->a:Landroid/arch/lifecycle/FullLifecycleObserver;
+00034  2072 0792 0021           invoke-interface  # CALL Landroid/arch/lifecycle/FullLifecycleObserver;->c(Landroid/arch/lifecycle/e;)V
+00037  000e                     return-void
+00038  0100 0007 0001 0000 002a 0000 0024 0000 001e 0000 0018 0000 0012 0000 000c 0000 ... <payload; units=18>

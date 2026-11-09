@@ -1,0 +1,76 @@
+### Lb/b/c/a/a;-><clinit>()V  [access=0x10008, regs=1, ins=0, outs=1, code_off=0xb0e78]
+00000  0022 067b                new-instance  # TYPE Ljava/lang/Object;
+00002  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00005  0069 1343                sput-object  # FIELD Lb/b/c/a/a;->a:Ljava/lang/Object;
+00007  000e                     return-void
+
+### Lb/b/c/a/a;->a(Landroid/content/Context;,Ljava/lang/String;)I  [access=0x9, regs=4, ins=2, outs=4, code_off=0xb0e38]
+00000  0338 000f                if-eqz
+00002  0071 0aff 0000           invoke-static  # CALL Landroid/os/Process;->myPid()I
+00005  000a                     move-result
+00006  0071 0b01 0000           invoke-static  # CALL Landroid/os/Process;->myUid()I
+00009  010a                     move-result
+0000a  406e 0838 1032           invoke-virtual  # CALL Landroid/content/Context;->checkPermission(Ljava/lang/String;,I,I)I
+0000d  020a                     move-result
+0000e  020f                     return
+0000f  0222 0669                new-instance  # TYPE Ljava/lang/IllegalArgumentException;
+00011  031a 2349                const-string  # STR "permission is null"
+00013  2070 2c9f 0032           invoke-direct  # CALL Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+00016  0227                     throw
+
+### Lb/b/c/a/a;->a(Landroid/content/Context;,I)Landroid/content/res/ColorStateList;  [access=0x9, regs=4, ins=2, outs=2, code_off=0xb0d40]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0113 0017                const/16
+00004  1034 0007                if-lt
+00006  206e 083f 0032           invoke-virtual  # CALL Landroid/content/Context;->getColorStateList(I)Landroid/content/res/ColorStateList;
+00009  020c                     move-result-object
+0000a  0211                     return-object
+0000b  106e 0848 0002           invoke-virtual  # CALL Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+0000e  020c                     move-result-object
+0000f  206e 08c6 0032           invoke-virtual  # CALL Landroid/content/res/Resources;->getColorStateList(I)Landroid/content/res/ColorStateList;
+00012  020c                     move-result-object
+00013  0211                     return-object
+
+### Lb/b/c/a/a;->a(Landroid/content/Context;,[Landroid/content/Intent;,Landroid/os/Bundle;)Z  [access=0x9, regs=5, ins=3, outs=3, code_off=0xb0e08]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0113 0010                const/16
+00004  1034 0006                if-lt
+00006  306e 0858 0432           invoke-virtual  # CALL Landroid/content/Context;->startActivities([Landroid/content/Intent;,Landroid/os/Bundle;)V
+00009  0428                     goto
+0000a  206e 0857 0032           invoke-virtual  # CALL Landroid/content/Context;->startActivities([Landroid/content/Intent;)V
+0000d  1212                     const/4
+0000e  020f                     return
+
+### Lb/b/c/a/a;->b(Landroid/content/Context;,I)Landroid/graphics/drawable/Drawable;  [access=0x9, regs=6, ins=2, outs=4, code_off=0xb0d78]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0113 0015                const/16
+00004  1034 0007                if-lt
+00006  206e 0841 0054           invoke-virtual  # CALL Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+00009  040c                     move-result-object
+0000a  0411                     return-object
+0000b  0113 0010                const/16
+0000d  1034 000b                if-lt
+0000f  106e 0848 0004           invoke-virtual  # CALL Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+00012  040c                     move-result-object
+00013  206e 08cc 0054           invoke-virtual  # CALL Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+00016  040c                     move-result-object
+00017  0411                     return-object
+00018  0062 1343                sget-object  # FIELD Lb/b/c/a/a;->a:Ljava/lang/Object;
+0001a  001d                     monitor-enter
+0001b  0162 1344                sget-object  # FIELD Lb/b/c/a/a;->b:Landroid/util/TypedValue;
+0001d  0139 0009                if-nez
+0001f  0122 041f                new-instance  # TYPE Landroid/util/TypedValue;
+00021  1070 1c7e 0001           invoke-direct  # CALL Landroid/util/TypedValue;-><init>()V
+00024  0169 1344                sput-object  # FIELD Lb/b/c/a/a;->b:Landroid/util/TypedValue;
+00026  106e 0848 0004           invoke-virtual  # CALL Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+00029  010c                     move-result-object
+0002a  0262 1344                sget-object  # FIELD Lb/b/c/a/a;->b:Landroid/util/TypedValue;
+0002c  1312                     const/4
+0002d  406e 08e4 3251           invoke-virtual  # CALL Landroid/content/res/Resources;->getValue(I,Landroid/util/TypedValue;,Z)V
+00030  0562 1344                sget-object  # FIELD Lb/b/c/a/a;->b:Landroid/util/TypedValue;
+00032  5552 1251                iget  # FIELD Landroid/util/TypedValue;->resourceId:I
+00034  001e                     monitor-exit
+00035  da28                     goto
+00036  040d                     op_0d
+00037  001e                     monitor-exit
+00038  0427                     throw

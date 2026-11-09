@@ -1,0 +1,86 @@
+### Landroid/support/constraint/l;->a(Landroid/support/constraint/n/k/k;,I,I)V  [access=0x1, regs=4, ins=4, outs=0, code_off=0x8bec8]
+00000  000e                     return-void
+
+### Landroid/support/constraint/l;->a(Landroid/util/AttributeSet;)V  [access=0x4, regs=7, ins=2, outs=3, code_off=0x8bd9c]
+00000  206f 0b6b 0065           invoke-super  # CALL Landroid/support/constraint/c;->a(Landroid/util/AttributeSet;)V
+00003  0638 002b                if-eqz
+00005  106e 1d51 0005           invoke-virtual  # CALL Landroid/view/View;->getContext()Landroid/content/Context;
+00008  000c                     move-result-object
+00009  0162 07e8                sget-object  # FIELD Landroid/support/constraint/k;->ConstraintLayout_Layout:[I
+0000b  306e 0851 0160           invoke-virtual  # CALL Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;,[I)Landroid/content/res/TypedArray;
+0000e  060c                     move-result-object
+0000f  106e 08fb 0006           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getIndexCount()I
+00012  000a                     move-result
+00013  0112                     const/4
+00014  0135 0017                if-ge
+00016  206e 08fa 0016           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getIndex(I)I
+00019  020a                     move-result
+0001a  0360 07f6                sget  # FIELD Landroid/support/constraint/k;->ConstraintLayout_Layout_android_visibility:I
+0001c  1412                     const/4
+0001d  3233 0005                if-ne
+0001f  545c 0b10                iput-boolean  # FIELD Landroid/support/constraint/l;->j:Z
+00021  0728                     goto
+00022  0360 07e9                sget  # FIELD Landroid/support/constraint/k;->ConstraintLayout_Layout_android_elevation:I
+00024  3233 0004                if-ne
+00026  545c 0b11                iput-boolean  # FIELD Landroid/support/constraint/l;->k:Z
+00028  01d8 0101                op_d8
+0002a  ea28                     goto
+0002b  106e 090a 0006           invoke-virtual  # CALL Landroid/content/res/TypedArray;->recycle()V
+0002e  000e                     return-void
+
+### Landroid/support/constraint/l;->onAttachedToWindow()V  [access=0x1, regs=9, ins=1, outs=2, code_off=0x8be0c]
+00000  106f 0b75 0008           invoke-super  # CALL Landroid/support/constraint/c;->onAttachedToWindow()V
+00003  8055 0b10                iget-boolean  # FIELD Landroid/support/constraint/l;->j:Z
+00005  0039 0006                if-nez
+00007  8055 0b11                iget-boolean  # FIELD Landroid/support/constraint/l;->k:Z
+00009  0038 004c                if-eqz
+0000b  106e 1d67 0008           invoke-virtual  # CALL Landroid/view/View;->getParent()Landroid/view/ViewParent;
+0000e  000c                     move-result-object
+0000f  0038 0046                if-eqz
+00011  0120 0211                instance-of  # TYPE Landroid/support/constraint/ConstraintLayout;
+00013  0138 0042                if-eqz
+00015  001f 0211                check-cast  # TYPE Landroid/support/constraint/ConstraintLayout;
+00017  106e 1d7c 0008           invoke-virtual  # CALL Landroid/view/View;->getVisibility()I
+0001a  010a                     move-result
+0001b  0260 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+0001d  0313 0015                const/16
+0001f  0412                     const/4
+00020  3234 0007                if-lt
+00022  106e 1d54 0008           invoke-virtual  # CALL Landroid/view/View;->getElevation()F
+00025  020a                     move-result
+00026  0228                     goto
+00027  4201                     op_01
+00028  0512                     const/4
+00029  8652 05cd                iget  # FIELD Landroid/support/constraint/c;->c:I
+0002b  6535 002a                if-ge
+0002d  8654 05cc                iget-object  # FIELD Landroid/support/constraint/c;->b:[I
+0002f  0644 0506                aget
+00031  206e 0b22 0060           invoke-virtual  # CALL Landroid/support/constraint/ConstraintLayout;->a(I)Landroid/view/View;
+00034  060c                     move-result-object
+00035  0638 001d                if-eqz
+00037  8755 0b10                iget-boolean  # FIELD Landroid/support/constraint/l;->j:Z
+00039  0738 0005                if-eqz
+0003b  206e 1dcb 0016           invoke-virtual  # CALL Landroid/view/View;->setVisibility(I)V
+0003e  8755 0b11                iget-boolean  # FIELD Landroid/support/constraint/l;->k:Z
+00040  0738 0012                if-eqz
+00042  072d 0402                op_2d
+00044  073d 000e                if-lez
+00046  0760 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00048  3734 000a                if-lt
+0004a  106e 1d7a 0006           invoke-virtual  # CALL Landroid/view/View;->getTranslationZ()F
+0004d  070a                     move-result
+0004e  27c6                     op_c6
+0004f  206e 1dca 0076           invoke-virtual  # CALL Landroid/view/View;->setTranslationZ(F)V
+00052  05d8 0105                op_d8
+00054  d528                     goto
+00055  000e                     return-void
+
+### Landroid/support/constraint/l;->setElevation(F)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0x8bedc]
+00000  206f 1dae 0010           invoke-super  # CALL Landroid/view/View;->setElevation(F)V
+00003  106e 0b67 0000           invoke-virtual  # CALL Landroid/support/constraint/c;->a()V
+00006  000e                     return-void
+
+### Landroid/support/constraint/l;->setVisibility(I)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0x8befc]
+00000  206f 1dcb 0010           invoke-super  # CALL Landroid/view/View;->setVisibility(I)V
+00003  106e 0b67 0000           invoke-virtual  # CALL Landroid/support/constraint/c;->a()V
+00006  000e                     return-void

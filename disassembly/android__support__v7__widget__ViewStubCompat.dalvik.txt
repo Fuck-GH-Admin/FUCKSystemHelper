@@ -1,0 +1,139 @@
+### Landroid/support/v7/widget/ViewStubCompat;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;)V  [access=0x10001, regs=4, ins=3, outs=4, code_off=0xf1b94]
+00000  0012                     const/4
+00001  4070 17c8 0321           invoke-direct  # CALL Landroid/support/v7/widget/ViewStubCompat;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;,I)V
+00004  000e                     return-void
+
+### Landroid/support/v7/widget/ViewStubCompat;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;,I)V  [access=0x10001, regs=6, ins=4, outs=5, code_off=0xf1bb0]
+00000  4070 1d3c 5432           invoke-direct  # CALL Landroid/view/View;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;,I)V
+00003  0012                     const/4
+00004  2059 10d7                iput  # FIELD Landroid/support/v7/widget/ViewStubCompat;->b:I
+00006  0162 1a1a                sget-object  # FIELD Lb/b/d/a/j;->ViewStubCompat:[I
+00008  506e 0852 5143           invoke-virtual  # CALL Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;,[I,I,I)Landroid/content/res/TypedArray;
+0000b  030c                     move-result-object
+0000c  0460 1a1c                sget  # FIELD Lb/b/d/a/j;->ViewStubCompat_android_inflatedId:I
+0000e  f512                     const/4
+0000f  306e 0900 0543           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getResourceId(I,I)I
+00012  040a                     move-result
+00013  2459 10d8                iput  # FIELD Landroid/support/v7/widget/ViewStubCompat;->c:I
+00015  0460 1a1d                sget  # FIELD Lb/b/d/a/j;->ViewStubCompat_android_layout:I
+00017  306e 0900 0043           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getResourceId(I,I)I
+0001a  040a                     move-result
+0001b  2459 10d7                iput  # FIELD Landroid/support/v7/widget/ViewStubCompat;->b:I
+0001d  0460 1a1b                sget  # FIELD Lb/b/d/a/j;->ViewStubCompat_android_id:I
+0001f  306e 0900 0543           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getResourceId(I,I)I
+00022  040a                     move-result
+00023  206e 1daf 0042           invoke-virtual  # CALL Landroid/view/View;->setId(I)V
+00026  106e 090a 0003           invoke-virtual  # CALL Landroid/content/res/TypedArray;->recycle()V
+00029  0313 0008                const/16
+0002b  206e 17d4 0032           invoke-virtual  # CALL Landroid/support/v7/widget/ViewStubCompat;->setVisibility(I)V
+0002e  1312                     const/4
+0002f  206e 1dcc 0032           invoke-virtual  # CALL Landroid/view/View;->setWillNotDraw(Z)V
+00032  000e                     return-void
+
+### Landroid/support/v7/widget/ViewStubCompat;->a()Landroid/view/View;  [access=0x1, regs=5, ins=1, outs=4, code_off=0xf1a94]
+00000  106e 1d67 0004           invoke-virtual  # CALL Landroid/view/View;->getParent()Landroid/view/ViewParent;
+00003  000c                     move-result-object
+00004  0038 0053                if-eqz
+00006  0120 0452                instance-of  # TYPE Landroid/view/ViewGroup;
+00008  0138 004f                if-eqz
+0000a  4152 10d7                iget  # FIELD Landroid/support/v7/widget/ViewStubCompat;->b:I
+0000c  0138 0043                if-eqz
+0000e  001f 0452                check-cast  # TYPE Landroid/view/ViewGroup;
+00010  4154 10da                iget-object  # FIELD Landroid/support/v7/widget/ViewStubCompat;->e:Landroid/view/LayoutInflater;
+00012  0138 0003                if-eqz
+00014  0928                     goto
+00015  106e 1d51 0004           invoke-virtual  # CALL Landroid/view/View;->getContext()Landroid/content/Context;
+00018  010c                     move-result-object
+00019  1071 1cb8 0001           invoke-static  # CALL Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+0001c  010c                     move-result-object
+0001d  4252 10d7                iget  # FIELD Landroid/support/v7/widget/ViewStubCompat;->b:I
+0001f  0312                     const/4
+00020  406e 1cbc 3021           invoke-virtual  # CALL Landroid/view/LayoutInflater;->inflate(I,Landroid/view/ViewGroup;,Z)Landroid/view/View;
+00023  010c                     move-result-object
+00024  4252 10d8                iget  # FIELD Landroid/support/v7/widget/ViewStubCompat;->c:I
+00026  f312                     const/4
+00027  3232 0005                if-eq
+00029  206e 1daf 0021           invoke-virtual  # CALL Landroid/view/View;->setId(I)V
+0002c  206e 1e12 0040           invoke-virtual  # CALL Landroid/view/ViewGroup;->indexOfChild(Landroid/view/View;)I
+0002f  020a                     move-result
+00030  206e 1e2e 0040           invoke-virtual  # CALL Landroid/view/ViewGroup;->removeViewInLayout(Landroid/view/View;)V
+00033  106e 1d5b 0004           invoke-virtual  # CALL Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+00036  030c                     move-result-object
+00037  0338 0006                if-eqz
+00039  406e 1de9 3210           invoke-virtual  # CALL Landroid/view/ViewGroup;->addView(Landroid/view/View;,I,Landroid/view/ViewGroup$LayoutParams;)V
+0003c  0428                     goto
+0003d  306e 1de8 0210           invoke-virtual  # CALL Landroid/view/ViewGroup;->addView(Landroid/view/View;,I)V
+00040  0022 0692                new-instance  # TYPE Ljava/lang/ref/WeakReference;
+00042  2070 2d67 0010           invoke-direct  # CALL Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+00045  405b 10d9                iput-object  # FIELD Landroid/support/v7/widget/ViewStubCompat;->d:Ljava/lang/ref/WeakReference;
+00047  4054 10db                iget-object  # FIELD Landroid/support/v7/widget/ViewStubCompat;->f:Landroid/support/v7/widget/ViewStubCompat$a;
+00049  0038 0005                if-eqz
+0004b  3072 17c6 0140           invoke-interface  # CALL Landroid/support/v7/widget/ViewStubCompat$a;->a(Landroid/support/v7/widget/ViewStubCompat;,Landroid/view/View;)V
+0004e  0111                     return-object
+0004f  0422 0669                new-instance  # TYPE Ljava/lang/IllegalArgumentException;
+00051  001a 164d                const-string  # STR "ViewStub must have a valid layoutResource"
+00053  2070 2c9f 0004           invoke-direct  # CALL Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+00056  0427                     throw
+00057  0422 066a                new-instance  # TYPE Ljava/lang/IllegalStateException;
+00059  001a 164c                const-string  # STR "ViewStub must have a non-null ViewGroup viewParent"
+0005b  2070 2ca3 0004           invoke-direct  # CALL Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+0005e  0427                     throw
+
+### Landroid/support/v7/widget/ViewStubCompat;->dispatchDraw(Landroid/graphics/Canvas;)V  [access=0x4, regs=2, ins=2, outs=0, code_off=0xf1c28]
+00000  000e                     return-void
+
+### Landroid/support/v7/widget/ViewStubCompat;->draw(Landroid/graphics/Canvas;)V  [access=0x1, regs=2, ins=2, outs=0, code_off=0xf1c3c]
+00000  000e                     return-void
+
+### Landroid/support/v7/widget/ViewStubCompat;->getInflatedId()I  [access=0x1, regs=1, ins=1, outs=0, code_off=0xf1b64]
+00000  0052 10d8                iget  # FIELD Landroid/support/v7/widget/ViewStubCompat;->c:I
+00002  000f                     return
+
+### Landroid/support/v7/widget/ViewStubCompat;->getLayoutInflater()Landroid/view/LayoutInflater;  [access=0x1, regs=1, ins=1, outs=0, code_off=0xf1a7c]
+00000  0054 10da                iget-object  # FIELD Landroid/support/v7/widget/ViewStubCompat;->e:Landroid/view/LayoutInflater;
+00002  0011                     return-object
+
+### Landroid/support/v7/widget/ViewStubCompat;->getLayoutResource()I  [access=0x1, regs=1, ins=1, outs=0, code_off=0xf1b7c]
+00000  0052 10d7                iget  # FIELD Landroid/support/v7/widget/ViewStubCompat;->b:I
+00002  000f                     return
+
+### Landroid/support/v7/widget/ViewStubCompat;->onMeasure(I,I)V  [access=0x4, regs=3, ins=3, outs=3, code_off=0xf1c50]
+00000  0112                     const/4
+00001  306e 1db3 0110           invoke-virtual  # CALL Landroid/view/View;->setMeasuredDimension(I,I)V
+00004  000e                     return-void
+
+### Landroid/support/v7/widget/ViewStubCompat;->setInflatedId(I)V  [access=0x1, regs=2, ins=2, outs=0, code_off=0xf1c6c]
+00000  0159 10d8                iput  # FIELD Landroid/support/v7/widget/ViewStubCompat;->c:I
+00002  000e                     return-void
+
+### Landroid/support/v7/widget/ViewStubCompat;->setLayoutInflater(Landroid/view/LayoutInflater;)V  [access=0x1, regs=2, ins=2, outs=0, code_off=0xf1c84]
+00000  015b 10da                iput-object  # FIELD Landroid/support/v7/widget/ViewStubCompat;->e:Landroid/view/LayoutInflater;
+00002  000e                     return-void
+
+### Landroid/support/v7/widget/ViewStubCompat;->setLayoutResource(I)V  [access=0x1, regs=2, ins=2, outs=0, code_off=0xf1c9c]
+00000  0159 10d7                iput  # FIELD Landroid/support/v7/widget/ViewStubCompat;->b:I
+00002  000e                     return-void
+
+### Landroid/support/v7/widget/ViewStubCompat;->setOnInflateListener(Landroid/support/v7/widget/ViewStubCompat$a;)V  [access=0x1, regs=2, ins=2, outs=0, code_off=0xf1cb4]
+00000  015b 10db                iput-object  # FIELD Landroid/support/v7/widget/ViewStubCompat;->f:Landroid/support/v7/widget/ViewStubCompat$a;
+00002  000e                     return-void
+
+### Landroid/support/v7/widget/ViewStubCompat;->setVisibility(I)V  [access=0x1, regs=3, ins=2, outs=2, code_off=0xf1ccc]
+00000  1054 10d9                iget-object  # FIELD Landroid/support/v7/widget/ViewStubCompat;->d:Ljava/lang/ref/WeakReference;
+00002  0038 0016                if-eqz
+00004  106e 2d68 0000           invoke-virtual  # CALL Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+00007  010c                     move-result-object
+00008  011f 044c                check-cast  # TYPE Landroid/view/View;
+0000a  0138 0006                if-eqz
+0000c  206e 1dcb 0021           invoke-virtual  # CALL Landroid/view/View;->setVisibility(I)V
+0000f  1428                     goto
+00010  0122 066a                new-instance  # TYPE Ljava/lang/IllegalStateException;
+00012  021a 2684                const-string  # STR "setVisibility called on un-referenced view"
+00014  2070 2ca3 0021           invoke-direct  # CALL Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+00017  0127                     throw
+00018  206f 1dcb 0021           invoke-super  # CALL Landroid/view/View;->setVisibility(I)V
+0001b  0238 0005                if-eqz
+0001d  4012                     const/4
+0001e  0233 0005                if-ne
+00020  106e 17c9 0001           invoke-virtual  # CALL Landroid/support/v7/widget/ViewStubCompat;->a()Landroid/view/View;
+00023  000e                     return-void

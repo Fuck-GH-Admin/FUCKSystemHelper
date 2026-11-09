@@ -1,0 +1,50 @@
+### Landroid/support/v7/app/f$a;-><init>(Ljava/lang/Thread$UncaughtExceptionHandler;)V  [access=0x10000, regs=2, ins=2, outs=1, code_off=0xc5e1c]
+00000  015b 0e8b                iput-object  # FIELD Landroid/support/v7/app/f$a;->a:Ljava/lang/Thread$UncaughtExceptionHandler;
+00002  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00005  000e                     return-void
+
+### Landroid/support/v7/app/f$a;->a(Ljava/lang/Throwable;)Z  [access=0x2, regs=3, ins=2, outs=2, code_off=0xc5dd0]
+00000  2120 0189                instance-of  # TYPE Landroid/content/res/Resources$NotFoundException;
+00002  0012                     const/4
+00003  0138 0019                if-eqz
+00005  106e 2d5d 0002           invoke-virtual  # CALL Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+00008  010c                     move-result-object
+00009  0138 0013                if-eqz
+0000b  021a 1b7a                const-string  # STR "drawable"
+0000d  206e 2d01 0021           invoke-virtual  # CALL Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+00010  020a                     move-result
+00011  0239 000a                if-nez
+00013  021a 0739                const-string  # STR "Drawable"
+00015  206e 2d01 0021           invoke-virtual  # CALL Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+00018  010a                     move-result
+00019  0138 0003                if-eqz
+0001b  1012                     const/4
+0001c  000f                     return
+
+### Landroid/support/v7/app/f$a;->uncaughtException(Ljava/lang/Thread;,Ljava/lang/Throwable;)V  [access=0x1, regs=6, ins=3, outs=3, code_off=0xc5e38]
+00000  2070 126e 0053           invoke-direct  # CALL Landroid/support/v7/app/f$a;->a(Ljava/lang/Throwable;)Z
+00003  000a                     move-result
+00004  0038 0030                if-eqz
+00006  0022 0189                new-instance  # TYPE Landroid/content/res/Resources$NotFoundException;
+00008  0122 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0000a  1070 2d35 0001           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0000d  106e 2d5d 0005           invoke-virtual  # CALL Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+00010  020c                     move-result-object
+00011  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00014  021a 0206                const-string  # STR ". If the resource you are trying to use is a vector resource, you may be referencing it in an unsupported way. See AppCompatDelegate.setCompatVectorFromResourcesEnabled() for more info."
+00016  206e 2d3f 0021           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00019  106e 2d44 0001           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0001c  010c                     move-result-object
+0001d  2070 08b9 0010           invoke-direct  # CALL Landroid/content/res/Resources$NotFoundException;-><init>(Ljava/lang/String;)V
+00020  106e 2d5c 0005           invoke-virtual  # CALL Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+00023  010c                     move-result-object
+00024  206e 2d5f 0010           invoke-virtual  # CALL Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+00027  106e 2d5e 0005           invoke-virtual  # CALL Ljava/lang/Throwable;->getStackTrace()[Ljava/lang/StackTraceElement;
+0002a  050c                     move-result-object
+0002b  206e 2d62 0050           invoke-virtual  # CALL Ljava/lang/Throwable;->setStackTrace([Ljava/lang/StackTraceElement;)V
+0002e  3354 0e8b                iget-object  # FIELD Landroid/support/v7/app/f$a;->a:Ljava/lang/Thread$UncaughtExceptionHandler;
+00030  3072 2d49 0043           invoke-interface  # CALL Ljava/lang/Thread$UncaughtExceptionHandler;->uncaughtException(Ljava/lang/Thread;,Ljava/lang/Throwable;)V
+00033  0628                     goto
+00034  3354 0e8b                iget-object  # FIELD Landroid/support/v7/app/f$a;->a:Ljava/lang/Thread$UncaughtExceptionHandler;
+00036  3072 2d49 0543           invoke-interface  # CALL Ljava/lang/Thread$UncaughtExceptionHandler;->uncaughtException(Ljava/lang/Thread;,Ljava/lang/Throwable;)V
+00039  000e                     return-void

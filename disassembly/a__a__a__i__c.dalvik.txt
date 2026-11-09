@@ -1,0 +1,237 @@
+### La/a/a/i/c;->a(Ljava/util/ArrayList;)I  [access=0x9, regs=2, ins=1, outs=1, code_off=0x7ad58]
+00000  1071 0649 0001           invoke-static  # CALL La/a/a/i/c;->c(Ljava/util/ArrayList;)I
+00003  000a                     move-result
+00004  1071 0648 0001           invoke-static  # CALL La/a/a/i/c;->b(Ljava/util/ArrayList;)I
+00007  010a                     move-result
+00008  1182                     op_82
+00009  0082                     op_82
+0000a  01c9                     op_c9
+0000b  1071 2cd3 0001           invoke-static  # CALL Ljava/lang/Math;->round(F)I
+0000e  010a                     move-result
+0000f  010f                     return
+
+### La/a/a/i/c;->b(Ljava/util/ArrayList;)I  [access=0x9, regs=7, ins=1, outs=2, code_off=0x7ad88]
+00000  0012                     const/4
+00001  0112                     const/4
+00002  0201                     op_01
+00003  106e 2df8 0006           invoke-virtual  # CALL Ljava/util/ArrayList;->size()I
+00006  030a                     move-result
+00007  3135 0039                if-ge
+00009  206e 2df0 0016           invoke-virtual  # CALL Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+0000c  030c                     move-result-object
+0000d  031f 06c8                check-cast  # TYPE Ljava/util/ArrayList;
+0000f  0338 002e                if-eqz
+00011  106e 2df8 0003           invoke-virtual  # CALL Ljava/util/ArrayList;->size()I
+00014  040a                     move-result
+00015  2512                     const/4
+00016  5437 0027                if-le
+00018  206e 2df0 0053           invoke-virtual  # CALL Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+0001b  040c                     move-result-object
+0001c  041f 0667                check-cast  # TYPE Ljava/lang/Float;
+0001e  106e 2c98 0004           invoke-virtual  # CALL Ljava/lang/Float;->floatValue()F
+00021  040a                     move-result
+00022  042d 0004                op_2d
+00024  043d 0019                if-lez
+00026  206e 2df0 0053           invoke-virtual  # CALL Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+00029  040c                     move-result-object
+0002a  041f 0667                check-cast  # TYPE Ljava/lang/Float;
+0002c  106e 2c98 0004           invoke-virtual  # CALL Ljava/lang/Float;->floatValue()F
+0002f  040a                     move-result
+00030  1512                     const/4
+00031  206e 2df0 0053           invoke-virtual  # CALL Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+00034  030c                     move-result-object
+00035  031f 0667                check-cast  # TYPE Ljava/lang/Float;
+00037  106e 2c98 0003           invoke-virtual  # CALL Ljava/lang/Float;->floatValue()F
+0003a  030a                     move-result
+0003b  34c8                     op_c8
+0003c  42c6                     op_c6
+0003d  01d8 0101                op_d8
+0003f  c428                     goto
+00040  1071 2cd3 0002           invoke-static  # CALL Ljava/lang/Math;->round(F)I
+00043  060a                     move-result
+00044  060f                     return
+
+### La/a/a/i/c;->c(Ljava/util/ArrayList;)I  [access=0x9, regs=6, ins=1, outs=2, code_off=0x7ae24]
+00000  0012                     const/4
+00001  0101                     op_01
+00002  106e 2df8 0005           invoke-virtual  # CALL Ljava/util/ArrayList;->size()I
+00005  020a                     move-result
+00006  2035 0025                if-ge
+00008  206e 2df0 0005           invoke-virtual  # CALL Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+0000b  020c                     move-result-object
+0000c  021f 06c8                check-cast  # TYPE Ljava/util/ArrayList;
+0000e  0238 001a                if-eqz
+00010  106e 2df8 0002           invoke-virtual  # CALL Ljava/util/ArrayList;->size()I
+00013  030a                     move-result
+00014  2412                     const/4
+00015  4337 0013                if-le
+00017  206e 2df0 0042           invoke-virtual  # CALL Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+0001a  020c                     move-result-object
+0001b  021f 0667                check-cast  # TYPE Ljava/lang/Float;
+0001d  106e 2c98 0002           invoke-virtual  # CALL Ljava/lang/Float;->floatValue()F
+00020  020a                     move-result
+00021  0312                     const/4
+00022  022d 0302                op_2d
+00024  023d 0004                if-lez
+00026  01d8 0101                op_d8
+00028  00d8 0100                op_d8
+0002a  d828                     goto
+0002b  010f                     return
+
+### La/a/a/i/c;->d(Ljava/util/ArrayList;)I  [access=0x9, regs=6, ins=1, outs=2, code_off=0x7ae8c]
+00000  0012                     const/4
+00001  0101                     op_01
+00002  106e 2df8 0005           invoke-virtual  # CALL Ljava/util/ArrayList;->size()I
+00005  020a                     move-result
+00006  2035 0026                if-ge
+00008  206e 2df0 0005           invoke-virtual  # CALL Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+0000b  020c                     move-result-object
+0000c  021f 06c8                check-cast  # TYPE Ljava/util/ArrayList;
+0000e  0238 001b                if-eqz
+00010  106e 2df8 0002           invoke-virtual  # CALL Ljava/util/ArrayList;->size()I
+00013  030a                     move-result
+00014  2412                     const/4
+00015  4337 0014                if-le
+00017  206e 2df0 0042           invoke-virtual  # CALL Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+0001a  020c                     move-result-object
+0001b  021f 0667                check-cast  # TYPE Ljava/lang/Float;
+0001d  106e 2c98 0002           invoke-virtual  # CALL Ljava/lang/Float;->floatValue()F
+00020  020a                     move-result
+00021  0315 4170                const/high16
+00023  022d 0302                op_2d
+00025  023a 0004                if-ltz
+00027  01d8 0101                op_d8
+00029  00d8 0100                op_d8
+0002b  d728                     goto
+0002c  010f                     return
+
+### La/a/a/i/c;->e(Ljava/util/ArrayList;)I  [access=0x9, regs=6, ins=1, outs=2, code_off=0x7aef8]
+00000  0012                     const/4
+00001  0101                     op_01
+00002  106e 2df8 0005           invoke-virtual  # CALL Ljava/util/ArrayList;->size()I
+00005  020a                     move-result
+00006  2035 0026                if-ge
+00008  206e 2df0 0005           invoke-virtual  # CALL Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+0000b  020c                     move-result-object
+0000c  021f 06c8                check-cast  # TYPE Ljava/util/ArrayList;
+0000e  0238 001b                if-eqz
+00010  106e 2df8 0002           invoke-virtual  # CALL Ljava/util/ArrayList;->size()I
+00013  030a                     move-result
+00014  2412                     const/4
+00015  4337 0014                if-le
+00017  206e 2df0 0042           invoke-virtual  # CALL Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+0001a  020c                     move-result-object
+0001b  021f 0667                check-cast  # TYPE Ljava/lang/Float;
+0001d  106e 2c98 0002           invoke-virtual  # CALL Ljava/lang/Float;->floatValue()F
+00020  020a                     move-result
+00021  0315 41a0                const/high16
+00023  022d 0302                op_2d
+00025  023a 0004                if-ltz
+00027  01d8 0101                op_d8
+00029  00d8 0100                op_d8
+0002b  d728                     goto
+0002c  010f                     return
+
+### La/a/a/i/c;->f(Ljava/util/ArrayList;)I  [access=0x9, regs=2, ins=1, outs=1, code_off=0x7af64]
+00000  1071 064d 0001           invoke-static  # CALL La/a/a/i/c;->g(Ljava/util/ArrayList;)I
+00003  000a                     move-result
+00004  0082                     op_82
+00005  1071 0649 0001           invoke-static  # CALL La/a/a/i/c;->c(Ljava/util/ArrayList;)I
+00008  010a                     move-result
+00009  1182                     op_82
+0000a  10c9                     op_c9
+0000b  1071 2cd3 0000           invoke-static  # CALL Ljava/lang/Math;->round(F)I
+0000e  010a                     move-result
+0000f  010f                     return
+
+### La/a/a/i/c;->g(Ljava/util/ArrayList;)I  [access=0x9, regs=7, ins=1, outs=2, code_off=0x7af94]
+00000  0012                     const/4
+00001  0112                     const/4
+00002  0201                     op_01
+00003  106e 2df8 0006           invoke-virtual  # CALL Ljava/util/ArrayList;->size()I
+00006  030a                     move-result
+00007  3135 002d                if-ge
+00009  206e 2df0 0016           invoke-virtual  # CALL Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+0000c  030c                     move-result-object
+0000d  031f 06c8                check-cast  # TYPE Ljava/util/ArrayList;
+0000f  0338 0022                if-eqz
+00011  106e 2df8 0003           invoke-virtual  # CALL Ljava/util/ArrayList;->size()I
+00014  040a                     move-result
+00015  2512                     const/4
+00016  5437 001b                if-le
+00018  206e 2df0 0053           invoke-virtual  # CALL Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+0001b  040c                     move-result-object
+0001c  041f 0667                check-cast  # TYPE Ljava/lang/Float;
+0001e  106e 2c98 0004           invoke-virtual  # CALL Ljava/lang/Float;->floatValue()F
+00021  040a                     move-result
+00022  042d 0004                op_2d
+00024  043d 000d                if-lez
+00026  206e 2df0 0053           invoke-virtual  # CALL Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+00029  030c                     move-result-object
+0002a  031f 0667                check-cast  # TYPE Ljava/lang/Float;
+0002c  106e 2c98 0003           invoke-virtual  # CALL Ljava/lang/Float;->floatValue()F
+0002f  030a                     move-result
+00030  32c6                     op_c6
+00031  01d8 0101                op_d8
+00033  d028                     goto
+00034  1071 2cd3 0002           invoke-static  # CALL Ljava/lang/Math;->round(F)I
+00037  060a                     move-result
+00038  060f                     return
+
+### La/a/a/i/c;->h(Ljava/util/ArrayList;)I  [access=0x9, regs=10, ins=1, outs=2, code_off=0x7b018]
+00000  0013 0025                const/16
+00002  0023 0724                new-array  # TYPE [I
+00004  0112                     const/4
+00005  1201                     op_01
+00006  106e 2df8 0009           invoke-virtual  # CALL Ljava/util/ArrayList;->size()I
+00009  030a                     move-result
+0000a  1412                     const/4
+0000b  3235 003f                if-ge
+0000d  206e 2df0 0029           invoke-virtual  # CALL Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+00010  030c                     move-result-object
+00011  031f 06c8                check-cast  # TYPE Ljava/util/ArrayList;
+00013  0338 0034                if-eqz
+00015  106e 2df8 0003           invoke-virtual  # CALL Ljava/util/ArrayList;->size()I
+00018  050a                     move-result
+00019  053d 002e                if-lez
+0001b  206e 2df0 0013           invoke-virtual  # CALL Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+0001e  050c                     move-result-object
+0001f  051f 0667                check-cast  # TYPE Ljava/lang/Float;
+00021  106e 2c98 0005           invoke-virtual  # CALL Ljava/lang/Float;->floatValue()F
+00024  050a                     move-result
+00025  5589                     op_89
+00026  0718 0000 0000 8000 4076 const-wide
+0002b  0530 0705                op_30
+0002d  053b 001a                if-gez
+0002f  206e 2df0 0013           invoke-virtual  # CALL Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+00032  030c                     move-result-object
+00033  031f 0667                check-cast  # TYPE Ljava/lang/Float;
+00035  106e 2c98 0003           invoke-virtual  # CALL Ljava/lang/Float;->floatValue()F
+00038  030a                     move-result
+00039  0515 4120                const/high16
+0003b  53c9                     op_c9
+0003c  3589                     op_89
+0003d  2071 2cc4 0065           invoke-static  # CALL Ljava/lang/Math;->ceil(D)D
+00040  050b                     move-result-wide
+00041  538a                     op_8a
+00042  0544 0300                aget
+00044  45b0                     op_b0
+00045  054b 0300                aput
+00047  02d8 0102                op_d8
+00049  bd28                     goto
+0004a  0913 0024                const/16
+0004c  9436 000b                if-gt
+0004e  0944 0400                aget
+00050  093d 0004                if-lez
+00052  01d8 0101                op_d8
+00054  04d8 0104                op_d8
+00056  f428                     goto
+00057  1982                     op_82
+00058  0015 4210                const/high16
+0005a  09c9                     op_c9
+0005b  0015 447a                const/high16
+0005d  09c8                     op_c8
+0005e  1071 2cd3 0009           invoke-static  # CALL Ljava/lang/Math;->round(F)I
+00061  090a                     move-result
+00062  090f                     return
+00063  010f                     return

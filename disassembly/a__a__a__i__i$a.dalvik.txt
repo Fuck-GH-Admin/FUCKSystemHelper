@@ -1,0 +1,21 @@
+### La/a/a/i/i$a;-><init>()V  [access=0x10001, regs=1, ins=1, outs=1, code_off=0x7d614]
+00000  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  000e                     return-void
+
+### La/a/a/i/i$a;->checkClientTrusted([Ljava/security/cert/X509Certificate;,Ljava/lang/String;)V  [access=0x1, regs=3, ins=3, outs=0, code_off=0x7d62c]
+00000  000e                     return-void
+
+### La/a/a/i/i$a;->checkServerTrusted([Ljava/security/cert/X509Certificate;,Ljava/lang/String;)V  [access=0x1, regs=4, ins=3, outs=1, code_off=0x7d640]
+00000  2121                     array-length
+00001  0312                     const/4
+00002  1335 000a                if-ge
+00004  0046 0302                aget-object
+00006  106e 2dd8 0000           invoke-virtual  # CALL Ljava/security/cert/X509Certificate;->checkValidity()V
+00009  03d8 0103                op_d8
+0000b  f728                     goto
+0000c  000e                     return-void
+
+### La/a/a/i/i$a;->getAcceptedIssuers()[Ljava/security/cert/X509Certificate;  [access=0x1, regs=1, ins=1, outs=0, code_off=0x7d5fc]
+00000  0012                     const/4
+00001  0023 0761                new-array  # TYPE [Ljava/security/cert/X509Certificate;
+00003  0011                     return-object

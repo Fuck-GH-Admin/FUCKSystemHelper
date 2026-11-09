@@ -1,0 +1,518 @@
+### Landroid/support/v7/widget/ActionBarContainer;-><init>(Landroid/content/Context;)V  [access=0x10001, regs=3, ins=2, outs=3, code_off=0xd8d80]
+00000  0012                     const/4
+00001  3070 15c7 0021           invoke-direct  # CALL Landroid/support/v7/widget/ActionBarContainer;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;)V
+00004  000e                     return-void
+
+### Landroid/support/v7/widget/ActionBarContainer;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;)V  [access=0x10001, regs=5, ins=3, outs=3, code_off=0xd8d9c]
+00000  3070 1f54 0432           invoke-direct  # CALL Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;,Landroid/util/AttributeSet;)V
+00003  0022 0375                new-instance  # TYPE Landroid/support/v7/widget/b;
+00005  2070 1812 0020           invoke-direct  # CALL Landroid/support/v7/widget/b;-><init>(Landroid/support/v7/widget/ActionBarContainer;)V
+00008  2071 2535 0002           invoke-static  # CALL Lb/b/c/g/q;->a(Landroid/view/View;,Landroid/graphics/drawable/Drawable;)V
+0000b  0062 1858                sget-object  # FIELD Lb/b/d/a/j;->ActionBar:[I
+0000d  306e 0851 0043           invoke-virtual  # CALL Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;,[I)Landroid/content/res/TypedArray;
+00010  030c                     move-result-object
+00011  0460 185b                sget  # FIELD Lb/b/d/a/j;->ActionBar_background:I
+00013  206e 08f8 0043           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+00016  040c                     move-result-object
+00017  245b 1005                iput-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->f:Landroid/graphics/drawable/Drawable;
+00019  0460 185d                sget  # FIELD Lb/b/d/a/j;->ActionBar_backgroundStacked:I
+0001b  206e 08f8 0043           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+0001e  040c                     move-result-object
+0001f  245b 1006                iput-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->g:Landroid/graphics/drawable/Drawable;
+00021  0460 1868                sget  # FIELD Lb/b/d/a/j;->ActionBar_height:I
+00023  f012                     const/4
+00024  306e 08f7 0043           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getDimensionPixelSize(I,I)I
+00027  040a                     move-result
+00028  2459 100a                iput  # FIELD Landroid/support/v7/widget/ActionBarContainer;->k:I
+0002a  106e 1f70 0002           invoke-virtual  # CALL Landroid/widget/FrameLayout;->getId()I
+0002d  040a                     move-result
+0002e  0060 1697                sget  # FIELD Lb/b/d/a/f;->split_action_bar:I
+00030  1112                     const/4
+00031  0433 000c                if-ne
+00033  215c 1008                iput-boolean  # FIELD Landroid/support/v7/widget/ActionBarContainer;->i:Z
+00035  0460 185c                sget  # FIELD Lb/b/d/a/j;->ActionBar_backgroundSplit:I
+00037  206e 08f8 0043           invoke-virtual  # CALL Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+0003a  040c                     move-result-object
+0003b  245b 1007                iput-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->h:Landroid/graphics/drawable/Drawable;
+0003d  106e 090a 0003           invoke-virtual  # CALL Landroid/content/res/TypedArray;->recycle()V
+00040  2355 1008                iget-boolean  # FIELD Landroid/support/v7/widget/ActionBarContainer;->i:Z
+00042  0412                     const/4
+00043  0338 0007                if-eqz
+00045  2354 1007                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->h:Landroid/graphics/drawable/Drawable;
+00047  0339 000c                if-nez
+00049  0b28                     goto
+0004a  2354 1005                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->f:Landroid/graphics/drawable/Drawable;
+0004c  0339 0007                if-nez
+0004e  2354 1006                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->g:Landroid/graphics/drawable/Drawable;
+00050  0339 0003                if-nez
+00052  0228                     goto
+00053  4101                     op_01
+00054  206e 1fa7 0012           invoke-virtual  # CALL Landroid/widget/FrameLayout;->setWillNotDraw(Z)V
+00057  000e                     return-void
+
+### Landroid/support/v7/widget/ActionBarContainer;->a(Landroid/view/View;)I  [access=0x2, regs=3, ins=2, outs=1, code_off=0xd8d4c]
+00000  106e 1d5b 0002           invoke-virtual  # CALL Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+00003  010c                     move-result-object
+00004  011f 048c                check-cast  # TYPE Landroid/widget/FrameLayout$LayoutParams;
+00006  106e 1d5f 0002           invoke-virtual  # CALL Landroid/view/View;->getMeasuredHeight()I
+00009  020a                     move-result
+0000a  1052 1271                iget  # FIELD Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
+0000c  02b0                     op_b0
+0000d  1152 126e                iget  # FIELD Landroid/widget/FrameLayout$LayoutParams;->bottomMargin:I
+0000f  12b0                     op_b0
+00010  020f                     return
+
+### Landroid/support/v7/widget/ActionBarContainer;->b(Landroid/view/View;)Z  [access=0x2, regs=3, ins=2, outs=1, code_off=0xd8c54]
+00000  0238 0013                if-eqz
+00002  106e 1d7c 0002           invoke-virtual  # CALL Landroid/view/View;->getVisibility()I
+00005  010a                     move-result
+00006  0013 0008                const/16
+00008  0132 000b                if-eq
+0000a  106e 1d5f 0002           invoke-virtual  # CALL Landroid/view/View;->getMeasuredHeight()I
+0000d  010a                     move-result
+0000e  0139 0003                if-nez
+00010  0328                     goto
+00011  0112                     const/4
+00012  0228                     goto
+00013  1112                     const/4
+00014  010f                     return
+
+### Landroid/support/v7/widget/ActionBarContainer;->drawableStateChanged()V  [access=0x4, regs=3, ins=1, outs=2, code_off=0xd8e5c]
+00000  106f 1f62 0002           invoke-super  # CALL Landroid/widget/FrameLayout;->drawableStateChanged()V
+00003  2054 1005                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->f:Landroid/graphics/drawable/Drawable;
+00005  0038 0011                if-eqz
+00007  106e 09ee 0000           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->isStateful()Z
+0000a  000a                     move-result
+0000b  0038 000b                if-eqz
+0000d  2054 1005                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->f:Landroid/graphics/drawable/Drawable;
+0000f  106e 1f6d 0002           invoke-virtual  # CALL Landroid/widget/FrameLayout;->getDrawableState()[I
+00012  010c                     move-result-object
+00013  206e 0a03 0010           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setState([I)Z
+00016  2054 1006                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->g:Landroid/graphics/drawable/Drawable;
+00018  0038 0011                if-eqz
+0001a  106e 09ee 0000           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->isStateful()Z
+0001d  000a                     move-result
+0001e  0038 000b                if-eqz
+00020  2054 1006                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->g:Landroid/graphics/drawable/Drawable;
+00022  106e 1f6d 0002           invoke-virtual  # CALL Landroid/widget/FrameLayout;->getDrawableState()[I
+00025  010c                     move-result-object
+00026  206e 0a03 0010           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setState([I)Z
+00029  2054 1007                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->h:Landroid/graphics/drawable/Drawable;
+0002b  0038 0011                if-eqz
+0002d  106e 09ee 0000           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->isStateful()Z
+00030  000a                     move-result
+00031  0038 000b                if-eqz
+00033  2054 1007                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->h:Landroid/graphics/drawable/Drawable;
+00035  106e 1f6d 0002           invoke-virtual  # CALL Landroid/widget/FrameLayout;->getDrawableState()[I
+00038  020c                     move-result-object
+00039  206e 0a03 0020           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setState([I)Z
+0003c  000e                     return-void
+
+### Landroid/support/v7/widget/ActionBarContainer;->getTabContainer()Landroid/view/View;  [access=0x1, regs=1, ins=1, outs=0, code_off=0xd8c3c]
+00000  0054 1002                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->c:Landroid/view/View;
+00002  0011                     return-object
+
+### Landroid/support/v7/widget/ActionBarContainer;->jumpDrawablesToCurrentState()V  [access=0x1, regs=2, ins=1, outs=1, code_off=0xd8ee8]
+00000  106f 1f85 0001           invoke-super  # CALL Landroid/widget/FrameLayout;->jumpDrawablesToCurrentState()V
+00003  1054 1005                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->f:Landroid/graphics/drawable/Drawable;
+00005  0038 0005                if-eqz
+00007  106e 09f0 0000           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->jumpToCurrentState()V
+0000a  1054 1006                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->g:Landroid/graphics/drawable/Drawable;
+0000c  0038 0005                if-eqz
+0000e  106e 09f0 0000           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->jumpToCurrentState()V
+00011  1154 1007                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->h:Landroid/graphics/drawable/Drawable;
+00013  0138 0005                if-eqz
+00015  106e 09f0 0001           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->jumpToCurrentState()V
+00018  000e                     return-void
+
+### Landroid/support/v7/widget/ActionBarContainer;->onFinishInflate()V  [access=0x1, regs=2, ins=1, outs=2, code_off=0xd8f2c]
+00000  106f 1f89 0001           invoke-super  # CALL Landroid/widget/FrameLayout;->onFinishInflate()V
+00003  0060 1646                sget  # FIELD Lb/b/d/a/f;->action_bar:I
+00005  206e 1f64 0001           invoke-virtual  # CALL Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
+00008  000c                     move-result-object
+00009  105b 1003                iput-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->d:Landroid/view/View;
+0000b  0060 164e                sget  # FIELD Lb/b/d/a/f;->action_context_bar:I
+0000d  206e 1f64 0001           invoke-virtual  # CALL Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
+00010  000c                     move-result-object
+00011  105b 1004                iput-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->e:Landroid/view/View;
+00013  000e                     return-void
+
+### Landroid/support/v7/widget/ActionBarContainer;->onHoverEvent(Landroid/view/MotionEvent;)Z  [access=0x1, regs=2, ins=2, outs=2, code_off=0xd8c90]
+00000  206f 1f8a 0010           invoke-super  # CALL Landroid/widget/FrameLayout;->onHoverEvent(Landroid/view/MotionEvent;)Z
+00003  1012                     const/4
+00004  000f                     return
+
+### Landroid/support/v7/widget/ActionBarContainer;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z  [access=0x1, regs=3, ins=2, outs=2, code_off=0xd8cac]
+00000  1055 1001                iget-boolean  # FIELD Landroid/support/v7/widget/ActionBarContainer;->b:Z
+00002  0039 000b                if-nez
+00004  206f 1f8b 0021           invoke-super  # CALL Landroid/widget/FrameLayout;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
+00007  010a                     move-result
+00008  0138 0003                if-eqz
+0000a  0328                     goto
+0000b  0112                     const/4
+0000c  0228                     goto
+0000d  1112                     const/4
+0000e  010f                     return
+
+### Landroid/support/v7/widget/ActionBarContainer;->onLayout(Z,I,I,I,I)V  [access=0x1, regs=10, ins=6, outs=6, code_off=0xd8f64]
+00000  0675 1f8c 0004           invoke-super/range  # CALL Landroid/widget/FrameLayout;->onLayout(Z,I,I,I,I)V
+00003  4554 1002                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->c:Landroid/view/View;
+00005  0713 0008                const/16
+00007  1912                     const/4
+00008  0012                     const/4
+00009  0538 000a                if-eqz
+0000b  106e 1d7c 0005           invoke-virtual  # CALL Landroid/view/View;->getVisibility()I
+0000e  010a                     move-result
+0000f  7132 0004                if-eq
+00011  9101                     op_01
+00012  0228                     goto
+00013  0101                     op_01
+00014  0538 001f                if-eqz
+00016  106e 1d7c 0005           invoke-virtual  # CALL Landroid/view/View;->getVisibility()I
+00019  020a                     move-result
+0001a  7232 0019                if-eq
+0001c  106e 1f73 0004           invoke-virtual  # CALL Landroid/widget/FrameLayout;->getMeasuredHeight()I
+0001f  070a                     move-result
+00020  106e 1d5b 0005           invoke-virtual  # CALL Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+00023  020c                     move-result-object
+00024  021f 048c                check-cast  # TYPE Landroid/widget/FrameLayout$LayoutParams;
+00026  106e 1d5f 0005           invoke-virtual  # CALL Landroid/view/View;->getMeasuredHeight()I
+00029  030a                     move-result
+0002a  0391 0307                int-sub
+0002c  2252 126e                iget  # FIELD Landroid/widget/FrameLayout$LayoutParams;->bottomMargin:I
+0002e  23b1                     op_b1
+0002f  27b1                     op_b1
+00030  576e 1d8f 8365           invoke-virtual  # CALL Landroid/view/View;->layout(I,I,I,I)V
+00033  4655 1008                iget-boolean  # FIELD Landroid/support/v7/widget/ActionBarContainer;->i:Z
+00035  0638 0015                if-eqz
+00037  4554 1007                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->h:Landroid/graphics/drawable/Drawable;
+00039  0538 000f                if-eqz
+0003b  106e 1f75 0004           invoke-virtual  # CALL Landroid/widget/FrameLayout;->getMeasuredWidth()I
+0003e  060a                     move-result
+0003f  106e 1f73 0004           invoke-virtual  # CALL Landroid/widget/FrameLayout;->getMeasuredHeight()I
+00042  070a                     move-result
+00043  576e 09f7 6005           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setBounds(I,I,I,I)V
+00046  0029 0070                goto/16
+00048  0901                     op_01
+00049  6d28                     goto
+0004a  4654 1005                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->f:Landroid/graphics/drawable/Drawable;
+0004c  0638 004f                if-eqz
+0004e  4654 1003                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->d:Landroid/view/View;
+00050  106e 1d7c 0006           invoke-virtual  # CALL Landroid/view/View;->getVisibility()I
+00053  060a                     move-result
+00054  0639 0020                if-nez
+00056  4654 1005                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->f:Landroid/graphics/drawable/Drawable;
+00058  4754 1003                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->d:Landroid/view/View;
+0005a  106e 1d5c 0007           invoke-virtual  # CALL Landroid/view/View;->getLeft()I
+0005d  070a                     move-result
+0005e  4854 1003                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->d:Landroid/view/View;
+00060  106e 1d76 0008           invoke-virtual  # CALL Landroid/view/View;->getTop()I
+00063  080a                     move-result
+00064  4054 1003                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->d:Landroid/view/View;
+00066  106e 1d6b 0000           invoke-virtual  # CALL Landroid/view/View;->getRight()I
+00069  000a                     move-result
+0006a  4254 1003                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->d:Landroid/view/View;
+0006c  106e 1d50 0002           invoke-virtual  # CALL Landroid/view/View;->getBottom()I
+0006f  020a                     move-result
+00070  526e 09f7 0876           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setBounds(I,I,I,I)V
+00073  2728                     goto
+00074  4654 1004                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->e:Landroid/view/View;
+00076  0638 001f                if-eqz
+00078  106e 1d7c 0006           invoke-virtual  # CALL Landroid/view/View;->getVisibility()I
+0007b  060a                     move-result
+0007c  0639 0019                if-nez
+0007e  4654 1005                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->f:Landroid/graphics/drawable/Drawable;
+00080  4754 1004                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->e:Landroid/view/View;
+00082  106e 1d5c 0007           invoke-virtual  # CALL Landroid/view/View;->getLeft()I
+00085  070a                     move-result
+00086  4854 1004                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->e:Landroid/view/View;
+00088  106e 1d76 0008           invoke-virtual  # CALL Landroid/view/View;->getTop()I
+0008b  080a                     move-result
+0008c  4054 1004                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->e:Landroid/view/View;
+0008e  106e 1d6b 0000           invoke-virtual  # CALL Landroid/view/View;->getRight()I
+00091  000a                     move-result
+00092  4254 1004                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->e:Landroid/view/View;
+00094  d828                     goto
+00095  4654 1005                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->f:Landroid/graphics/drawable/Drawable;
+00097  506e 09f7 0006           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setBounds(I,I,I,I)V
+0009a  9001                     op_01
+0009b  415c 1009                iput-boolean  # FIELD Landroid/support/v7/widget/ActionBarContainer;->j:Z
+0009d  0138 ffab                if-eqz
+0009f  4654 1006                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->g:Landroid/graphics/drawable/Drawable;
+000a1  0638 ffa7                if-eqz
+000a3  106e 1d5c 0005           invoke-virtual  # CALL Landroid/view/View;->getLeft()I
+000a6  070a                     move-result
+000a7  106e 1d76 0005           invoke-virtual  # CALL Landroid/view/View;->getTop()I
+000aa  080a                     move-result
+000ab  106e 1d6b 0005           invoke-virtual  # CALL Landroid/view/View;->getRight()I
+000ae  000a                     move-result
+000af  106e 1d50 0005           invoke-virtual  # CALL Landroid/view/View;->getBottom()I
+000b2  050a                     move-result
+000b3  556e 09f7 0876           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setBounds(I,I,I,I)V
+000b6  0938 0005                if-eqz
+000b8  106e 1f82 0004           invoke-virtual  # CALL Landroid/widget/FrameLayout;->invalidate()V
+000bb  000e                     return-void
+
+### Landroid/support/v7/widget/ActionBarContainer;->onMeasure(I,I)V  [access=0x1, regs=6, ins=3, outs=3, code_off=0xd90ec]
+00000  3054 1003                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->d:Landroid/view/View;
+00002  0115 8000                const/high16
+00004  0039 0018                if-nez
+00006  1071 1d36 0005           invoke-static  # CALL Landroid/view/View$MeasureSpec;->getMode(I)I
+00009  000a                     move-result
+0000a  1033 0012                if-ne
+0000c  3052 100a                iget  # FIELD Landroid/support/v7/widget/ActionBarContainer;->k:I
+0000e  003a 000e                if-ltz
+00010  1071 1d37 0005           invoke-static  # CALL Landroid/view/View$MeasureSpec;->getSize(I)I
+00013  050a                     move-result
+00014  2071 2ccf 0050           invoke-static  # CALL Ljava/lang/Math;->min(I,I)I
+00017  050a                     move-result
+00018  2071 1d38 0015           invoke-static  # CALL Landroid/view/View$MeasureSpec;->makeMeasureSpec(I,I)I
+0001b  050a                     move-result
+0001c  306f 1f8d 0543           invoke-super  # CALL Landroid/widget/FrameLayout;->onMeasure(I,I)V
+0001f  3454 1003                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->d:Landroid/view/View;
+00021  0439 0003                if-nez
+00023  000e                     return-void
+00024  1071 1d36 0005           invoke-static  # CALL Landroid/view/View$MeasureSpec;->getMode(I)I
+00027  040a                     move-result
+00028  3054 1002                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->c:Landroid/view/View;
+0002a  0038 0045                if-eqz
+0002c  106e 1d7c 0000           invoke-virtual  # CALL Landroid/view/View;->getVisibility()I
+0002f  000a                     move-result
+00030  0213 0008                const/16
+00032  2032 003d                if-eq
+00034  0015 4000                const/high16
+00036  0432 0039                if-eq
+00038  3054 1003                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->d:Landroid/view/View;
+0003a  2070 15c9 0003           invoke-direct  # CALL Landroid/support/v7/widget/ActionBarContainer;->b(Landroid/view/View;)Z
+0003d  000a                     move-result
+0003e  0039 0009                if-nez
+00040  3054 1003                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->d:Landroid/view/View;
+00042  2070 15c8 0003           invoke-direct  # CALL Landroid/support/v7/widget/ActionBarContainer;->a(Landroid/view/View;)I
+00045  000a                     move-result
+00046  0d28                     goto
+00047  3054 1004                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->e:Landroid/view/View;
+00049  2070 15c9 0003           invoke-direct  # CALL Landroid/support/v7/widget/ActionBarContainer;->b(Landroid/view/View;)Z
+0004c  000a                     move-result
+0004d  0039 0005                if-nez
+0004f  3054 1004                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->e:Landroid/view/View;
+00051  f128                     goto
+00052  0012                     const/4
+00053  1433 0007                if-ne
+00055  1071 1d37 0005           invoke-static  # CALL Landroid/view/View$MeasureSpec;->getSize(I)I
+00058  040a                     move-result
+00059  0428                     goto
+0005a  0414 ffff 7fff           const
+0005d  106e 1f75 0003           invoke-virtual  # CALL Landroid/widget/FrameLayout;->getMeasuredWidth()I
+00060  050a                     move-result
+00061  3154 1002                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->c:Landroid/view/View;
+00063  2070 15c8 0013           invoke-direct  # CALL Landroid/support/v7/widget/ActionBarContainer;->a(Landroid/view/View;)I
+00066  010a                     move-result
+00067  10b0                     op_b0
+00068  2071 2ccf 0040           invoke-static  # CALL Ljava/lang/Math;->min(I,I)I
+0006b  040a                     move-result
+0006c  306e 1fa3 0453           invoke-virtual  # CALL Landroid/widget/FrameLayout;->setMeasuredDimension(I,I)V
+0006f  000e                     return-void
+
+### Landroid/support/v7/widget/ActionBarContainer;->onTouchEvent(Landroid/view/MotionEvent;)Z  [access=0x1, regs=2, ins=2, outs=2, code_off=0xd8cdc]
+00000  206f 1f92 0010           invoke-super  # CALL Landroid/widget/FrameLayout;->onTouchEvent(Landroid/view/MotionEvent;)Z
+00003  1012                     const/4
+00004  000f                     return
+
+### Landroid/support/v7/widget/ActionBarContainer;->setPrimaryBackground(Landroid/graphics/drawable/Drawable;)V  [access=0x1, regs=6, ins=2, outs=5, code_off=0xd91dc]
+00000  4054 1005                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->f:Landroid/graphics/drawable/Drawable;
+00002  0038 000b                if-eqz
+00004  0112                     const/4
+00005  206e 09f9 0010           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
+00008  4054 1005                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->f:Landroid/graphics/drawable/Drawable;
+0000a  206e 1fa9 0004           invoke-virtual  # CALL Landroid/widget/FrameLayout;->unscheduleDrawable(Landroid/graphics/drawable/Drawable;)V
+0000d  455b 1005                iput-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->f:Landroid/graphics/drawable/Drawable;
+0000f  0538 0024                if-eqz
+00011  206e 09f9 0045           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
+00014  4554 1003                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->d:Landroid/view/View;
+00016  0538 001d                if-eqz
+00018  4054 1005                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->f:Landroid/graphics/drawable/Drawable;
+0001a  106e 1d5c 0005           invoke-virtual  # CALL Landroid/view/View;->getLeft()I
+0001d  050a                     move-result
+0001e  4154 1003                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->d:Landroid/view/View;
+00020  106e 1d76 0001           invoke-virtual  # CALL Landroid/view/View;->getTop()I
+00023  010a                     move-result
+00024  4254 1003                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->d:Landroid/view/View;
+00026  106e 1d6b 0002           invoke-virtual  # CALL Landroid/view/View;->getRight()I
+00029  020a                     move-result
+0002a  4354 1003                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->d:Landroid/view/View;
+0002c  106e 1d50 0003           invoke-virtual  # CALL Landroid/view/View;->getBottom()I
+0002f  030a                     move-result
+00030  536e 09f7 2150           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setBounds(I,I,I,I)V
+00033  4555 1008                iget-boolean  # FIELD Landroid/support/v7/widget/ActionBarContainer;->i:Z
+00035  1012                     const/4
+00036  0112                     const/4
+00037  0538 0007                if-eqz
+00039  4554 1007                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->h:Landroid/graphics/drawable/Drawable;
+0003b  0539 000c                if-nez
+0003d  0b28                     goto
+0003e  4554 1005                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->f:Landroid/graphics/drawable/Drawable;
+00040  0539 0007                if-nez
+00042  4554 1006                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->g:Landroid/graphics/drawable/Drawable;
+00044  0539 0003                if-nez
+00046  0228                     goto
+00047  1001                     op_01
+00048  206e 1fa7 0004           invoke-virtual  # CALL Landroid/widget/FrameLayout;->setWillNotDraw(Z)V
+0004b  106e 1f82 0004           invoke-virtual  # CALL Landroid/widget/FrameLayout;->invalidate()V
+0004e  000e                     return-void
+
+### Landroid/support/v7/widget/ActionBarContainer;->setSplitBackground(Landroid/graphics/drawable/Drawable;)V  [access=0x1, regs=5, ins=2, outs=5, code_off=0xd928c]
+00000  3054 1007                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->h:Landroid/graphics/drawable/Drawable;
+00002  0038 000b                if-eqz
+00004  0112                     const/4
+00005  206e 09f9 0010           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
+00008  3054 1007                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->h:Landroid/graphics/drawable/Drawable;
+0000a  206e 1fa9 0003           invoke-virtual  # CALL Landroid/widget/FrameLayout;->unscheduleDrawable(Landroid/graphics/drawable/Drawable;)V
+0000d  345b 1007                iput-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->h:Landroid/graphics/drawable/Drawable;
+0000f  0012                     const/4
+00010  0438 0018                if-eqz
+00012  206e 09f9 0034           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
+00015  3455 1008                iget-boolean  # FIELD Landroid/support/v7/widget/ActionBarContainer;->i:Z
+00017  0438 0011                if-eqz
+00019  3454 1007                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->h:Landroid/graphics/drawable/Drawable;
+0001b  0438 000d                if-eqz
+0001d  106e 1f75 0003           invoke-virtual  # CALL Landroid/widget/FrameLayout;->getMeasuredWidth()I
+00020  010a                     move-result
+00021  106e 1f73 0003           invoke-virtual  # CALL Landroid/widget/FrameLayout;->getMeasuredHeight()I
+00024  020a                     move-result
+00025  526e 09f7 1004           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setBounds(I,I,I,I)V
+00028  3455 1008                iget-boolean  # FIELD Landroid/support/v7/widget/ActionBarContainer;->i:Z
+0002a  1112                     const/4
+0002b  0438 0008                if-eqz
+0002d  3454 1007                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->h:Landroid/graphics/drawable/Drawable;
+0002f  0439 000d                if-nez
+00031  1001                     op_01
+00032  0a28                     goto
+00033  3454 1005                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->f:Landroid/graphics/drawable/Drawable;
+00035  0439 0007                if-nez
+00037  3454 1006                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->g:Landroid/graphics/drawable/Drawable;
+00039  0439 0003                if-nez
+0003b  f628                     goto
+0003c  206e 1fa7 0003           invoke-virtual  # CALL Landroid/widget/FrameLayout;->setWillNotDraw(Z)V
+0003f  106e 1f82 0003           invoke-virtual  # CALL Landroid/widget/FrameLayout;->invalidate()V
+00042  000e                     return-void
+
+### Landroid/support/v7/widget/ActionBarContainer;->setStackedBackground(Landroid/graphics/drawable/Drawable;)V  [access=0x1, regs=6, ins=2, outs=5, code_off=0xd9324]
+00000  4054 1006                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->g:Landroid/graphics/drawable/Drawable;
+00002  0038 000b                if-eqz
+00004  0112                     const/4
+00005  206e 09f9 0010           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
+00008  4054 1006                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->g:Landroid/graphics/drawable/Drawable;
+0000a  206e 1fa9 0004           invoke-virtual  # CALL Landroid/widget/FrameLayout;->unscheduleDrawable(Landroid/graphics/drawable/Drawable;)V
+0000d  455b 1006                iput-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->g:Landroid/graphics/drawable/Drawable;
+0000f  0538 0028                if-eqz
+00011  206e 09f9 0045           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
+00014  4555 1009                iget-boolean  # FIELD Landroid/support/v7/widget/ActionBarContainer;->j:Z
+00016  0538 0021                if-eqz
+00018  4554 1006                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->g:Landroid/graphics/drawable/Drawable;
+0001a  0538 001d                if-eqz
+0001c  4054 1002                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->c:Landroid/view/View;
+0001e  106e 1d5c 0000           invoke-virtual  # CALL Landroid/view/View;->getLeft()I
+00021  000a                     move-result
+00022  4154 1002                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->c:Landroid/view/View;
+00024  106e 1d76 0001           invoke-virtual  # CALL Landroid/view/View;->getTop()I
+00027  010a                     move-result
+00028  4254 1002                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->c:Landroid/view/View;
+0002a  106e 1d6b 0002           invoke-virtual  # CALL Landroid/view/View;->getRight()I
+0002d  020a                     move-result
+0002e  4354 1002                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->c:Landroid/view/View;
+00030  106e 1d50 0003           invoke-virtual  # CALL Landroid/view/View;->getBottom()I
+00033  030a                     move-result
+00034  536e 09f7 2105           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setBounds(I,I,I,I)V
+00037  4555 1008                iget-boolean  # FIELD Landroid/support/v7/widget/ActionBarContainer;->i:Z
+00039  1012                     const/4
+0003a  0112                     const/4
+0003b  0538 0007                if-eqz
+0003d  4554 1007                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->h:Landroid/graphics/drawable/Drawable;
+0003f  0539 000c                if-nez
+00041  0b28                     goto
+00042  4554 1005                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->f:Landroid/graphics/drawable/Drawable;
+00044  0539 0007                if-nez
+00046  4554 1006                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->g:Landroid/graphics/drawable/Drawable;
+00048  0539 0003                if-nez
+0004a  0228                     goto
+0004b  1001                     op_01
+0004c  206e 1fa7 0004           invoke-virtual  # CALL Landroid/widget/FrameLayout;->setWillNotDraw(Z)V
+0004f  106e 1f82 0004           invoke-virtual  # CALL Landroid/widget/FrameLayout;->invalidate()V
+00052  000e                     return-void
+
+### Landroid/support/v7/widget/ActionBarContainer;->setTabContainer(Landroid/support/v7/widget/m0;)V  [access=0x1, regs=3, ins=2, outs=2, code_off=0xd93dc]
+00000  1054 1002                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->c:Landroid/view/View;
+00002  0038 0005                if-eqz
+00004  206e 1f94 0001           invoke-virtual  # CALL Landroid/widget/FrameLayout;->removeView(Landroid/view/View;)V
+00007  125b 1002                iput-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->c:Landroid/view/View;
+00009  0238 0013                if-eqz
+0000b  206e 1f56 0021           invoke-virtual  # CALL Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
+0000e  106e 1faf 0002           invoke-virtual  # CALL Landroid/widget/HorizontalScrollView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+00011  010c                     move-result-object
+00012  f012                     const/4
+00013  1059 1256                iput  # FIELD Landroid/view/ViewGroup$LayoutParams;->width:I
+00015  e012                     const/4
+00016  1059 1255                iput  # FIELD Landroid/view/ViewGroup$LayoutParams;->height:I
+00018  0112                     const/4
+00019  206e 19e1 0012           invoke-virtual  # CALL Landroid/support/v7/widget/m0;->setAllowCollapse(Z)V
+0001c  000e                     return-void
+
+### Landroid/support/v7/widget/ActionBarContainer;->setTransitioning(Z)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0xd9428]
+00000  015c 1001                iput-boolean  # FIELD Landroid/support/v7/widget/ActionBarContainer;->b:Z
+00002  0138 0005                if-eqz
+00004  0115 0006                const/high16
+00006  0328                     goto
+00007  0115 0004                const/high16
+00009  206e 1f9e 0010           invoke-virtual  # CALL Landroid/widget/FrameLayout;->setDescendantFocusability(I)V
+0000c  000e                     return-void
+
+### Landroid/support/v7/widget/ActionBarContainer;->setVisibility(I)V  [access=0x1, regs=4, ins=2, outs=3, code_off=0xd9454]
+00000  206f 1fa6 0032           invoke-super  # CALL Landroid/widget/FrameLayout;->setVisibility(I)V
+00003  0012                     const/4
+00004  0339 0004                if-nez
+00006  1312                     const/4
+00007  0228                     goto
+00008  0301                     op_01
+00009  2154 1005                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->f:Landroid/graphics/drawable/Drawable;
+0000b  0138 0005                if-eqz
+0000d  306e 0a07 0031           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setVisible(Z,Z)Z
+00010  2154 1006                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->g:Landroid/graphics/drawable/Drawable;
+00012  0138 0005                if-eqz
+00014  306e 0a07 0031           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setVisible(Z,Z)Z
+00017  2254 1007                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->h:Landroid/graphics/drawable/Drawable;
+00019  0238 0005                if-eqz
+0001b  306e 0a07 0032           invoke-virtual  # CALL Landroid/graphics/drawable/Drawable;->setVisible(Z,Z)Z
+0001e  000e                     return-void
+
+### Landroid/support/v7/widget/ActionBarContainer;->startActionModeForChild(Landroid/view/View;,Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;  [access=0x1, regs=3, ins=3, outs=0, code_off=0xd8c04]
+00000  0012                     const/4
+00001  0011                     return-object
+
+### Landroid/support/v7/widget/ActionBarContainer;->startActionModeForChild(Landroid/view/View;,Landroid/view/ActionMode$Callback;,I)Landroid/view/ActionMode;  [access=0x1, regs=4, ins=4, outs=4, code_off=0xd8c18]
+00000  0338 0007                if-eqz
+00002  406f 1fa8 3210           invoke-super  # CALL Landroid/widget/FrameLayout;->startActionModeForChild(Landroid/view/View;,Landroid/view/ActionMode$Callback;,I)Landroid/view/ActionMode;
+00005  000c                     move-result-object
+00006  0011                     return-object
+00007  0012                     const/4
+00008  0011                     return-object
+
+### Landroid/support/v7/widget/ActionBarContainer;->verifyDrawable(Landroid/graphics/drawable/Drawable;)Z  [access=0x4, regs=3, ins=2, outs=2, code_off=0xd8cf8]
+00000  1054 1005                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->f:Landroid/graphics/drawable/Drawable;
+00002  0233 0006                if-ne
+00004  1055 1008                iget-boolean  # FIELD Landroid/support/v7/widget/ActionBarContainer;->i:Z
+00006  0038 0018                if-eqz
+00008  1054 1006                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->g:Landroid/graphics/drawable/Drawable;
+0000a  0233 0006                if-ne
+0000c  1055 1009                iget-boolean  # FIELD Landroid/support/v7/widget/ActionBarContainer;->j:Z
+0000e  0039 0010                if-nez
+00010  1054 1007                iget-object  # FIELD Landroid/support/v7/widget/ActionBarContainer;->h:Landroid/graphics/drawable/Drawable;
+00012  0233 0006                if-ne
+00014  1055 1008                iget-boolean  # FIELD Landroid/support/v7/widget/ActionBarContainer;->i:Z
+00016  0039 0008                if-nez
+00018  206f 1faa 0021           invoke-super  # CALL Landroid/widget/FrameLayout;->verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
+0001b  010a                     move-result
+0001c  0138 0004                if-eqz
+0001e  1112                     const/4
+0001f  0228                     goto
+00020  0112                     const/4
+00021  010f                     return

@@ -1,0 +1,25 @@
+### Landroid/support/v7/view/menu/t$b;-><init>(Landroid/support/v7/view/menu/t;)V  [access=0x10000, regs=2, ins=2, outs=1, code_off=0xd7c54]
+00000  015b 0fe9                iput-object  # FIELD Landroid/support/v7/view/menu/t$b;->b:Landroid/support/v7/view/menu/t;
+00002  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00005  000e                     return-void
+
+### Landroid/support/v7/view/menu/t$b;->onViewAttachedToWindow(Landroid/view/View;)V  [access=0x1, regs=2, ins=2, outs=0, code_off=0xd7c70]
+00000  000e                     return-void
+
+### Landroid/support/v7/view/menu/t$b;->onViewDetachedFromWindow(Landroid/view/View;)V  [access=0x1, regs=4, ins=2, outs=2, code_off=0xd7c84]
+00000  2054 0fe9                iget-object  # FIELD Landroid/support/v7/view/menu/t$b;->b:Landroid/support/v7/view/menu/t;
+00002  0054 0ff8                iget-object  # FIELD Landroid/support/v7/view/menu/t;->q:Landroid/view/ViewTreeObserver;
+00004  0038 0019                if-eqz
+00006  106e 1e53 0000           invoke-virtual  # CALL Landroid/view/ViewTreeObserver;->isAlive()Z
+00009  000a                     move-result
+0000a  0039 000a                if-nez
+0000c  2054 0fe9                iget-object  # FIELD Landroid/support/v7/view/menu/t$b;->b:Landroid/support/v7/view/menu/t;
+0000e  106e 1d7b 0003           invoke-virtual  # CALL Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+00011  010c                     move-result-object
+00012  015b 0ff8                iput-object  # FIELD Landroid/support/v7/view/menu/t;->q:Landroid/view/ViewTreeObserver;
+00014  2054 0fe9                iget-object  # FIELD Landroid/support/v7/view/menu/t$b;->b:Landroid/support/v7/view/menu/t;
+00016  0154 0ff8                iget-object  # FIELD Landroid/support/v7/view/menu/t;->q:Landroid/view/ViewTreeObserver;
+00018  0054 0ff2                iget-object  # FIELD Landroid/support/v7/view/menu/t;->k:Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
+0001a  206e 1e54 0001           invoke-virtual  # CALL Landroid/view/ViewTreeObserver;->removeGlobalOnLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
+0001d  206e 1d9d 0023           invoke-virtual  # CALL Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+00020  000e                     return-void

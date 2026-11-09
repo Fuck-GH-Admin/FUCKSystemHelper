@@ -1,0 +1,19 @@
+### Landroid/support/v7/widget/l;->a(Landroid/view/inputmethod/InputConnection;,Landroid/view/inputmethod/EditorInfo;,Landroid/view/View;)Landroid/view/inputmethod/InputConnection;  [access=0x8, regs=4, ins=3, outs=1, code_off=0xdf644]
+00000  0138 0020                if-eqz
+00002  2054 126b                iget-object  # FIELD Landroid/view/inputmethod/EditorInfo;->hintText:Ljava/lang/CharSequence;
+00004  0039 001c                if-nez
+00006  106e 1d67 0003           invoke-virtual  # CALL Landroid/view/View;->getParent()Landroid/view/ViewParent;
+00009  030c                     move-result-object
+0000a  3020 044c                instance-of  # TYPE Landroid/view/View;
+0000c  0038 0014                if-eqz
+0000e  3020 0372                instance-of  # TYPE Landroid/support/v7/widget/a1;
+00010  0038 000b                if-eqz
+00012  031f 0372                check-cast  # TYPE Landroid/support/v7/widget/a1;
+00014  1072 17e5 0003           invoke-interface  # CALL Landroid/support/v7/widget/a1;->a()Ljava/lang/CharSequence;
+00017  030c                     move-result-object
+00018  235b 126b                iput-object  # FIELD Landroid/view/inputmethod/EditorInfo;->hintText:Ljava/lang/CharSequence;
+0001a  0628                     goto
+0001b  1072 1e3d 0003           invoke-interface  # CALL Landroid/view/ViewParent;->getParent()Landroid/view/ViewParent;
+0001e  030c                     move-result-object
+0001f  eb28                     goto
+00020  0111                     return-object

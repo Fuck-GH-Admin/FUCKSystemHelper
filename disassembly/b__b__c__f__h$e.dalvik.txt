@@ -1,0 +1,140 @@
+### Lb/b/c/f/h$e;-><init>(Lb/b/c/f/h;)V  [access=0x10000, regs=2, ins=2, outs=1, code_off=0xba890]
+00000  015b 13cd                iput-object  # FIELD Lb/b/c/f/h$e;->b:Lb/b/c/f/h;
+00002  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00005  000e                     return-void
+
+### Lb/b/c/f/h$e;->add(Ljava/lang/Object;)Z  [access=0x1, regs=2, ins=2, outs=1, code_off=0xba660]
+00000  0022 068c                new-instance  # TYPE Ljava/lang/UnsupportedOperationException;
+00002  1070 2d65 0000           invoke-direct  # CALL Ljava/lang/UnsupportedOperationException;-><init>()V
+00005  0027                     throw
+
+### Lb/b/c/f/h$e;->addAll(Ljava/util/Collection;)Z  [access=0x1, regs=2, ins=2, outs=1, code_off=0xba67c]
+00000  0022 068c                new-instance  # TYPE Ljava/lang/UnsupportedOperationException;
+00002  1070 2d65 0000           invoke-direct  # CALL Ljava/lang/UnsupportedOperationException;-><init>()V
+00005  0027                     throw
+
+### Lb/b/c/f/h$e;->clear()V  [access=0x1, regs=1, ins=1, outs=1, code_off=0xba8ac]
+00000  0054 13cd                iget-object  # FIELD Lb/b/c/f/h$e;->b:Lb/b/c/f/h;
+00002  106e 2474 0000           invoke-virtual  # CALL Lb/b/c/f/h;->a()V
+00005  000e                     return-void
+
+### Lb/b/c/f/h$e;->contains(Ljava/lang/Object;)Z  [access=0x1, regs=2, ins=2, outs=2, code_off=0xba698]
+00000  0054 13cd                iget-object  # FIELD Lb/b/c/f/h$e;->b:Lb/b/c/f/h;
+00002  206e 247a 0010           invoke-virtual  # CALL Lb/b/c/f/h;->b(Ljava/lang/Object;)I
+00005  000a                     move-result
+00006  003a 0004                if-ltz
+00008  1012                     const/4
+00009  0228                     goto
+0000a  0012                     const/4
+0000b  000f                     return
+
+### Lb/b/c/f/h$e;->containsAll(Ljava/util/Collection;)Z  [access=0x1, regs=3, ins=2, outs=2, code_off=0xba6c0]
+00000  1072 2e11 0002           invoke-interface  # CALL Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+00003  020c                     move-result-object
+00004  1072 2e43 0002           invoke-interface  # CALL Ljava/util/Iterator;->hasNext()Z
+00007  000a                     move-result
+00008  0038 000e                if-eqz
+0000a  1072 2e44 0002           invoke-interface  # CALL Ljava/util/Iterator;->next()Ljava/lang/Object;
+0000d  000c                     move-result-object
+0000e  206e 2466 0001           invoke-virtual  # CALL Lb/b/c/f/h$e;->contains(Ljava/lang/Object;)Z
+00011  000a                     move-result
+00012  0039 fff2                if-nez
+00014  0112                     const/4
+00015  010f                     return
+00016  1112                     const/4
+00017  010f                     return
+
+### Lb/b/c/f/h$e;->isEmpty()Z  [access=0x1, regs=1, ins=1, outs=1, code_off=0xba700]
+00000  0054 13cd                iget-object  # FIELD Lb/b/c/f/h$e;->b:Lb/b/c/f/h;
+00002  106e 247e 0000           invoke-virtual  # CALL Lb/b/c/f/h;->c()I
+00005  000a                     move-result
+00006  0039 0004                if-nez
+00008  1012                     const/4
+00009  0228                     goto
+0000a  0012                     const/4
+0000b  000f                     return
+
+### Lb/b/c/f/h$e;->iterator()Ljava/util/Iterator;  [access=0x1, regs=3, ins=1, outs=3, code_off=0xba86c]
+00000  0022 0511                new-instance  # TYPE Lb/b/c/f/h$a;
+00002  2254 13cd                iget-object  # FIELD Lb/b/c/f/h$e;->b:Lb/b/c/f/h;
+00004  1112                     const/4
+00005  3070 2432 0120           invoke-direct  # CALL Lb/b/c/f/h$a;-><init>(Lb/b/c/f/h;,I)V
+00008  0011                     return-object
+
+### Lb/b/c/f/h$e;->remove(Ljava/lang/Object;)Z  [access=0x1, regs=3, ins=2, outs=2, code_off=0xba728]
+00000  1054 13cd                iget-object  # FIELD Lb/b/c/f/h$e;->b:Lb/b/c/f/h;
+00002  206e 247a 0020           invoke-virtual  # CALL Lb/b/c/f/h;->b(Ljava/lang/Object;)I
+00005  020a                     move-result
+00006  023a 0009                if-ltz
+00008  1154 13cd                iget-object  # FIELD Lb/b/c/f/h$e;->b:Lb/b/c/f/h;
+0000a  206e 2475 0021           invoke-virtual  # CALL Lb/b/c/f/h;->a(I)V
+0000d  1112                     const/4
+0000e  010f                     return
+0000f  0112                     const/4
+00010  010f                     return
+
+### Lb/b/c/f/h$e;->removeAll(Ljava/util/Collection;)Z  [access=0x1, regs=7, ins=2, outs=3, code_off=0xba75c]
+00000  5054 13cd                iget-object  # FIELD Lb/b/c/f/h$e;->b:Lb/b/c/f/h;
+00002  106e 247e 0000           invoke-virtual  # CALL Lb/b/c/f/h;->c()I
+00005  000a                     move-result
+00006  0112                     const/4
+00007  1201                     op_01
+00008  0135 001b                if-ge
+0000a  5354 13cd                iget-object  # FIELD Lb/b/c/f/h$e;->b:Lb/b/c/f/h;
+0000c  1412                     const/4
+0000d  306e 2472 0413           invoke-virtual  # CALL Lb/b/c/f/h;->a(I,I)Ljava/lang/Object;
+00010  030c                     move-result-object
+00011  2072 2e10 0036           invoke-interface  # CALL Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+00014  030a                     move-result
+00015  0338 000c                if-eqz
+00017  5254 13cd                iget-object  # FIELD Lb/b/c/f/h$e;->b:Lb/b/c/f/h;
+00019  206e 2475 0012           invoke-virtual  # CALL Lb/b/c/f/h;->a(I)V
+0001c  01d8 ff01                op_d8
+0001e  00d8 ff00                op_d8
+00020  4201                     op_01
+00021  41b0                     op_b0
+00022  e628                     goto
+00023  020f                     return
+
+### Lb/b/c/f/h$e;->retainAll(Ljava/util/Collection;)Z  [access=0x1, regs=7, ins=2, outs=3, code_off=0xba7b4]
+00000  5054 13cd                iget-object  # FIELD Lb/b/c/f/h$e;->b:Lb/b/c/f/h;
+00002  106e 247e 0000           invoke-virtual  # CALL Lb/b/c/f/h;->c()I
+00005  000a                     move-result
+00006  0112                     const/4
+00007  1201                     op_01
+00008  0135 001b                if-ge
+0000a  5354 13cd                iget-object  # FIELD Lb/b/c/f/h$e;->b:Lb/b/c/f/h;
+0000c  1412                     const/4
+0000d  306e 2472 0413           invoke-virtual  # CALL Lb/b/c/f/h;->a(I,I)Ljava/lang/Object;
+00010  030c                     move-result-object
+00011  2072 2e10 0036           invoke-interface  # CALL Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+00014  030a                     move-result
+00015  0339 000c                if-nez
+00017  5254 13cd                iget-object  # FIELD Lb/b/c/f/h$e;->b:Lb/b/c/f/h;
+00019  206e 2475 0012           invoke-virtual  # CALL Lb/b/c/f/h;->a(I)V
+0001c  01d8 ff01                op_d8
+0001e  00d8 ff00                op_d8
+00020  4201                     op_01
+00021  41b0                     op_b0
+00022  e628                     goto
+00023  020f                     return
+
+### Lb/b/c/f/h$e;->size()I  [access=0x1, regs=1, ins=1, outs=1, code_off=0xba80c]
+00000  0054 13cd                iget-object  # FIELD Lb/b/c/f/h$e;->b:Lb/b/c/f/h;
+00002  106e 247e 0000           invoke-virtual  # CALL Lb/b/c/f/h;->c()I
+00005  000a                     move-result
+00006  000f                     return
+
+### Lb/b/c/f/h$e;->toArray()[Ljava/lang/Object;  [access=0x1, regs=2, ins=1, outs=2, code_off=0xba82c]
+00000  1154 13cd                iget-object  # FIELD Lb/b/c/f/h$e;->b:Lb/b/c/f/h;
+00002  1012                     const/4
+00003  206e 247d 0001           invoke-virtual  # CALL Lb/b/c/f/h;->b(I)[Ljava/lang/Object;
+00006  010c                     move-result-object
+00007  0111                     return-object
+
+### Lb/b/c/f/h$e;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;  [access=0x1, regs=3, ins=2, outs=3, code_off=0xba84c]
+00000  1154 13cd                iget-object  # FIELD Lb/b/c/f/h$e;->b:Lb/b/c/f/h;
+00002  1012                     const/4
+00003  306e 2479 0021           invoke-virtual  # CALL Lb/b/c/f/h;->a([Ljava/lang/Object;,I)[Ljava/lang/Object;
+00006  010c                     move-result-object
+00007  0111                     return-object

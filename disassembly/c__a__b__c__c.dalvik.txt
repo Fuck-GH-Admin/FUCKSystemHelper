@@ -1,0 +1,29 @@
+### Lc/a/b/c/c;-><init>(Lc/a/b/c/c$a;)V  [access=0x10001, regs=5, ins=2, outs=3, code_off=0xf4908]
+00000  1070 2ce0 0003           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  0022 06d4                new-instance  # TYPE Ljava/util/HashMap;
+00005  1070 2e29 0000           invoke-direct  # CALL Ljava/util/HashMap;-><init>()V
+00008  305b 1adb                iput-object  # FIELD Lc/a/b/c/c;->a:Ljava/util/Map;
+0000a  1072 2764 0004           invoke-interface  # CALL Lc/a/b/c/c$a;->a()Ljava/util/List;
+0000d  040c                     move-result-object
+0000e  1072 2e59 0004           invoke-interface  # CALL Ljava/util/List;->iterator()Ljava/util/Iterator;
+00011  040c                     move-result-object
+00012  1072 2e43 0004           invoke-interface  # CALL Ljava/util/Iterator;->hasNext()Z
+00015  000a                     move-result
+00016  0038 0012                if-eqz
+00018  1072 2e44 0004           invoke-interface  # CALL Ljava/util/Iterator;->next()Ljava/lang/Object;
+0001b  000c                     move-result-object
+0001c  001f 0584                check-cast  # TYPE Lc/a/b/c/a;
+0001e  3154 1adb                iget-object  # FIELD Lc/a/b/c/c;->a:Ljava/util/Map;
+00020  106e 275d 0000           invoke-virtual  # CALL Lc/a/b/c/a;->a()Ljava/lang/String;
+00023  020c                     move-result-object
+00024  3072 2e6b 0021           invoke-interface  # CALL Ljava/util/Map;->put(Ljava/lang/Object;,Ljava/lang/Object;)Ljava/lang/Object;
+00027  eb28                     goto
+00028  000e                     return-void
+
+### Lc/a/b/c/c;->a()Ljava/util/List;  [access=0x1, regs=2, ins=1, outs=2, code_off=0xf48e0]
+00000  0022 06c8                new-instance  # TYPE Ljava/util/ArrayList;
+00002  1154 1adb                iget-object  # FIELD Lc/a/b/c/c;->a:Ljava/util/Map;
+00004  1072 2e6f 0001           invoke-interface  # CALL Ljava/util/Map;->values()Ljava/util/Collection;
+00007  010c                     move-result-object
+00008  2070 2de9 0010           invoke-direct  # CALL Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+0000b  0011                     return-object

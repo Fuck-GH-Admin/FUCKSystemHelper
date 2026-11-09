@@ -1,0 +1,77 @@
+### Lc/d/a/a/d;-><init>()V  [access=0x10001, regs=1, ins=1, outs=1, code_off=0x10f860]
+00000  1070 2911 0000           invoke-direct  # CALL Lc/d/a/a/a;-><init>()V
+00003  000e                     return-void
+
+### Lc/d/a/a/d;->d(Landroid/content/Context;)Z  [access=0x2, regs=3, ins=2, outs=3, code_off=0x10f7f4]
+00000  106e 0840 0002           invoke-virtual  # CALL Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+00003  010c                     move-result-object
+00004  0212                     const/4
+00005  001a 1b32                const-string  # STR "device_provisioned"
+00007  3071 0b0c 0201           invoke-static  # CALL Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;,Ljava/lang/String;,I)I
+0000a  010a                     move-result
+0000b  1012                     const/4
+0000c  0133 0003                if-ne
+0000e  0201                     op_01
+0000f  1071 2c67 0002           invoke-static  # CALL Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+00012  010c                     move-result-object
+00013  0222 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00015  1070 2d35 0002           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00018  001a 200d                const-string  # STR "isBootWizardCompleted: "
+0001a  206e 2d3f 0002           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0001d  206e 2d3e 0012           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+00020  106e 2d44 0002           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00023  020c                     move-result-object
+00024  001a 0725                const-string  # STR "DeviceInfoReaderOPPO"
+00026  2071 2987 0020           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+00029  106e 2c65 0001           invoke-virtual  # CALL Ljava/lang/Boolean;->booleanValue()Z
+0002c  010a                     move-result
+0002d  010f                     return
+
+### Lc/d/a/a/d;->a(Landroid/content/Context;,Lcom/mobiletools/systemhelper/control/b;)V  [access=0x1, regs=6, ins=3, outs=3, code_off=0x10f878]
+00000  306f 2918 0543           invoke-super  # CALL Lc/d/a/a/a;->a(Landroid/content/Context;,Lcom/mobiletools/systemhelper/control/b;)V
+00003  0022 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00005  1070 2d35 0000           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00008  011a 0726                const-string  # STR "DeviceInfoReaderOPPO module:"
+0000a  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0000d  0162 0554                sget-object  # FIELD Landroid/os/Build;->MODEL:Ljava/lang/String;
+0000f  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00012  106e 2d44 0000           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00015  000c                     move-result-object
+00016  011a 0725                const-string  # STR "DeviceInfoReaderOPPO"
+00018  2071 2987 0001           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+0001b  001a 247d                const-string  # STR "ro.build.hardware.version"
+0001d  1071 2997 0000           invoke-static  # CALL Lc/d/a/b/l;->a(Ljava/lang/String;)Ljava/lang/String;
+00020  000c                     move-result-object
+00021  505b 1d2f                iput-object  # FIELD Lcom/mobiletools/systemhelper/control/b;->c:Ljava/lang/String;
+00023  2070 292a 0043           invoke-direct  # CALL Lc/d/a/a/d;->d(Landroid/content/Context;)Z
+00026  000a                     move-result
+00027  006a 1bb5                sput-boolean  # FIELD Lc/d/a/b/d;->e:Z
+00029  0022 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+0002b  1070 2d35 0000           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0002e  021a 0806                const-string  # STR "GlobalSetting.isUserPermissionOpen"
+00030  206e 2d3f 0020           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00033  0263 1bb5                sget-boolean  # FIELD Lc/d/a/b/d;->e:Z
+00035  206e 2d40 0020           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+00038  106e 2d44 0000           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+0003b  000c                     move-result-object
+0003c  2071 2987 0001           invoke-static  # CALL Lc/d/a/b/h;->a(Ljava/lang/String;,Ljava/lang/String;)V
+0003f  0063 1bb5                sget-boolean  # FIELD Lc/d/a/b/d;->e:Z
+00041  0039 0008                if-nez
+00043  031a 2052                const-string  # STR "isUserPermissionOpen==false, do not read!"
+00045  2071 2988 0031           invoke-static  # CALL Lc/d/a/b/h;->b(Ljava/lang/String;,Ljava/lang/String;)V
+00048  000e                     return-void
+00049  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+0004b  0213 001e                const/16
+0004d  2034 0006                if-lt
+0004f  306e 291c 0543           invoke-virtual  # CALL Lc/d/a/a/a;->b(Landroid/content/Context;,Lcom/mobiletools/systemhelper/control/b;)V
+00052  1728                     goto
+00053  0322 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00055  1070 2d35 0003           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+00058  041a 1563                const-string  # STR "Unsupported API:"
+0005a  206e 2d3f 0043           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0005d  0460 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+0005f  206e 2d3b 0043           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+00062  106e 2d44 0003           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00065  030c                     move-result-object
+00066  2071 2988 0031           invoke-static  # CALL Lc/d/a/b/h;->b(Ljava/lang/String;,Ljava/lang/String;)V
+00069  000e                     return-void

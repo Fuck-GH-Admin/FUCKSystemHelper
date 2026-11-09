@@ -1,0 +1,31 @@
+### Landroid/support/v7/view/menu/k$a;-><init>(Landroid/support/v7/view/menu/k;,Landroid/content/Context;,Landroid/view/ActionProvider;)V  [access=0x10001, regs=4, ins=4, outs=2, code_off=0xd6618]
+00000  015b 0fd4                iput-object  # FIELD Landroid/support/v7/view/menu/k$a;->c:Landroid/support/v7/view/menu/k;
+00002  2070 24e0 0020           invoke-direct  # CALL Lb/b/c/g/c;-><init>(Landroid/content/Context;)V
+00005  035b 0fd3                iput-object  # FIELD Landroid/support/v7/view/menu/k$a;->b:Landroid/view/ActionProvider;
+00007  000e                     return-void
+
+### Landroid/support/v7/view/menu/k$a;->a(Landroid/view/SubMenu;)V  [access=0x1, regs=3, ins=2, outs=2, code_off=0xd6638]
+00000  1054 0fd3                iget-object  # FIELD Landroid/support/v7/view/menu/k$a;->b:Landroid/view/ActionProvider;
+00002  1154 0fd4                iget-object  # FIELD Landroid/support/v7/view/menu/k$a;->c:Landroid/support/v7/view/menu/k;
+00004  206e 13e5 0021           invoke-virtual  # CALL Landroid/support/v7/view/menu/c;->a(Landroid/view/SubMenu;)Landroid/view/SubMenu;
+00007  010c                     move-result-object
+00008  206e 1c8f 0010           invoke-virtual  # CALL Landroid/view/ActionProvider;->onPrepareSubMenu(Landroid/view/SubMenu;)V
+0000b  000e                     return-void
+
+### Landroid/support/v7/view/menu/k$a;->a()Z  [access=0x1, regs=1, ins=1, outs=1, code_off=0xd65d8]
+00000  0054 0fd3                iget-object  # FIELD Landroid/support/v7/view/menu/k$a;->b:Landroid/view/ActionProvider;
+00002  106e 1c8a 0000           invoke-virtual  # CALL Landroid/view/ActionProvider;->hasSubMenu()Z
+00005  000a                     move-result
+00006  000f                     return
+
+### Landroid/support/v7/view/menu/k$a;->c()Landroid/view/View;  [access=0x1, regs=1, ins=1, outs=1, code_off=0xd65b8]
+00000  0054 0fd3                iget-object  # FIELD Landroid/support/v7/view/menu/k$a;->b:Landroid/view/ActionProvider;
+00002  106e 1c8c 0000           invoke-virtual  # CALL Landroid/view/ActionProvider;->onCreateActionView()Landroid/view/View;
+00005  000c                     move-result-object
+00006  0011                     return-object
+
+### Landroid/support/v7/view/menu/k$a;->d()Z  [access=0x1, regs=1, ins=1, outs=1, code_off=0xd65f8]
+00000  0054 0fd3                iget-object  # FIELD Landroid/support/v7/view/menu/k$a;->b:Landroid/view/ActionProvider;
+00002  106e 1c8e 0000           invoke-virtual  # CALL Landroid/view/ActionProvider;->onPerformDefaultAction()Z
+00005  000a                     move-result
+00006  000f                     return

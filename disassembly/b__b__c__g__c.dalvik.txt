@@ -1,0 +1,57 @@
+### Lb/b/c/g/c;-><init>(Landroid/content/Context;)V  [access=0x10001, regs=2, ins=2, outs=1, code_off=0xbc154]
+00000  1070 2ce0 0000           invoke-direct  # CALL Ljava/lang/Object;-><init>()V
+00003  000e                     return-void
+
+### Lb/b/c/g/c;->a(Landroid/view/MenuItem;)Landroid/view/View;  [access=0x1, regs=2, ins=2, outs=1, code_off=0xbc0e8]
+00000  106e 24e7 0000           invoke-virtual  # CALL Lb/b/c/g/c;->c()Landroid/view/View;
+00003  000c                     move-result-object
+00004  0011                     return-object
+
+### Lb/b/c/g/c;->a(Landroid/view/SubMenu;)V  [access=0x1, regs=2, ins=2, outs=0, code_off=0xbc16c]
+00000  000e                     return-void
+
+### Lb/b/c/g/c;->a(Lb/b/c/g/c$a;)V  [access=0x1, regs=2, ins=2, outs=0, code_off=0xbc198]
+00000  000e                     return-void
+
+### Lb/b/c/g/c;->a(Lb/b/c/g/c$b;)V  [access=0x1, regs=4, ins=2, outs=2, code_off=0xbc1ac]
+00000  2054 13e8                iget-object  # FIELD Lb/b/c/g/c;->a:Lb/b/c/g/c$b;
+00002  0038 0027                if-eqz
+00004  0338 0025                if-eqz
+00006  0022 0685                new-instance  # TYPE Ljava/lang/StringBuilder;
+00008  1070 2d35 0000           invoke-direct  # CALL Ljava/lang/StringBuilder;-><init>()V
+0000b  011a 2686                const-string  # STR "setVisibilityListener: Setting a new ActionProvider.VisibilityListener when one is already set. Are you reusing this "
+0000d  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00010  106e 2ce3 0002           invoke-virtual  # CALL Ljava/lang/Object;->getClass()Ljava/lang/Class;
+00013  010c                     move-result-object
+00014  106e 2c81 0001           invoke-virtual  # CALL Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+00017  010c                     move-result-object
+00018  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+0001b  011a 0060                const-string  # STR " instance while it is still in use somewhere else?"
+0001d  206e 2d3f 0010           invoke-virtual  # CALL Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+00020  106e 2d44 0000           invoke-virtual  # CALL Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+00023  000c                     move-result-object
+00024  011a 0333                const-string  # STR "ActionProvider(support)"
+00026  2071 1c61 0001           invoke-static  # CALL Landroid/util/Log;->w(Ljava/lang/String;,Ljava/lang/String;)I
+00029  235b 13e8                iput-object  # FIELD Lb/b/c/g/c;->a:Lb/b/c/g/c$b;
+0002b  000e                     return-void
+
+### Lb/b/c/g/c;->a()Z  [access=0x1, regs=1, ins=1, outs=0, code_off=0xbc104]
+00000  0012                     const/4
+00001  000f                     return
+
+### Lb/b/c/g/c;->b()Z  [access=0x1, regs=1, ins=1, outs=0, code_off=0xbc118]
+00000  1012                     const/4
+00001  000f                     return
+
+### Lb/b/c/g/c;->d()Z  [access=0x1, regs=1, ins=1, outs=0, code_off=0xbc12c]
+00000  0012                     const/4
+00001  000f                     return
+
+### Lb/b/c/g/c;->e()Z  [access=0x1, regs=1, ins=1, outs=0, code_off=0xbc140]
+00000  0012                     const/4
+00001  000f                     return
+
+### Lb/b/c/g/c;->f()V  [access=0x1, regs=2, ins=1, outs=0, code_off=0xbc180]
+00000  0012                     const/4
+00001  105b 13e8                iput-object  # FIELD Lb/b/c/g/c;->a:Lb/b/c/g/c$b;
+00003  000e                     return-void

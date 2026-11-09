@@ -1,0 +1,31 @@
+### Landroid/support/v7/app/AlertController$g;-><init>(Landroid/content/DialogInterface;)V  [access=0x10001, regs=3, ins=2, outs=2, code_off=0xc45a4]
+00000  1070 0aab 0001           invoke-direct  # CALL Landroid/os/Handler;-><init>()V
+00003  0022 0692                new-instance  # TYPE Ljava/lang/ref/WeakReference;
+00005  2070 2d67 0020           invoke-direct  # CALL Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+00008  105b 0e4c                iput-object  # FIELD Landroid/support/v7/app/AlertController$g;->a:Ljava/lang/ref/WeakReference;
+0000a  000e                     return-void
+
+### Landroid/support/v7/app/AlertController$g;->handleMessage(Landroid/os/Message;)V  [access=0x1, regs=4, ins=2, outs=3, code_off=0xc45cc]
+00000  3052 0559                iget  # FIELD Landroid/os/Message;->what:I
+00002  d112                     const/4
+00003  1032 0014                if-eq
+00005  e112                     const/4
+00006  1032 0011                if-eq
+00008  f112                     const/4
+00009  1032 000e                if-eq
+0000b  1212                     const/4
+0000c  2032 0003                if-eq
+0000e  1a28                     goto
+0000f  3254 0557                iget-object  # FIELD Landroid/os/Message;->obj:Ljava/lang/Object;
+00011  021f 0175                check-cast  # TYPE Landroid/content/DialogInterface;
+00013  1072 0869 0002           invoke-interface  # CALL Landroid/content/DialogInterface;->dismiss()V
+00016  1228                     goto
+00017  3054 0557                iget-object  # FIELD Landroid/os/Message;->obj:Ljava/lang/Object;
+00019  001f 0171                check-cast  # TYPE Landroid/content/DialogInterface$OnClickListener;
+0001b  2254 0e4c                iget-object  # FIELD Landroid/support/v7/app/AlertController$g;->a:Ljava/lang/ref/WeakReference;
+0001d  106e 2d68 0002           invoke-virtual  # CALL Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+00020  020c                     move-result-object
+00021  021f 0175                check-cast  # TYPE Landroid/content/DialogInterface;
+00023  3352 0559                iget  # FIELD Landroid/os/Message;->what:I
+00025  3072 0866 0320           invoke-interface  # CALL Landroid/content/DialogInterface$OnClickListener;->onClick(Landroid/content/DialogInterface;,I)V
+00028  000e                     return-void

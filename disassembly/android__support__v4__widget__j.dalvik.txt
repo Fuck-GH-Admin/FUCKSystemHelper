@@ -1,0 +1,84 @@
+### Landroid/support/v4/widget/j;->a(Landroid/widget/PopupWindow;,I)V  [access=0x9, regs=8, ins=2, outs=3, code_off=0xc335c]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0113 0017                const/16
+00004  1034 0006                if-lt
+00006  206e 20a3 0076           invoke-virtual  # CALL Landroid/widget/PopupWindow;->setWindowLayoutType(I)V
+00009  000e                     return-void
+0000a  0063 0dfe                sget-boolean  # FIELD Landroid/support/v4/widget/j;->b:Z
+0000c  0112                     const/4
+0000d  1212                     const/4
+0000e  0039 0017                if-nez
+00010  001c 0499                const-class  # TYPE Landroid/widget/PopupWindow;
+00012  031a 268e                const-string  # STR "setWindowLayoutType"
+00014  2423 075c                new-array  # TYPE [Ljava/lang/Class;
+00016  0562 1d60                sget-object  # FIELD Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+00018  054d 0104                aput-object
+0001a  306e 2c7a 0430           invoke-virtual  # CALL Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;,[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+0001d  000c                     move-result-object
+0001e  0069 0dfd                sput-object  # FIELD Landroid/support/v4/widget/j;->a:Ljava/lang/reflect/Method;
+00020  206e 2d7c 0020           invoke-virtual  # CALL Ljava/lang/reflect/Method;->setAccessible(Z)V
+00023  026a 0dfe                sput-boolean  # FIELD Landroid/support/v4/widget/j;->b:Z
+00025  0062 0dfd                sget-object  # FIELD Landroid/support/v4/widget/j;->a:Ljava/lang/reflect/Method;
+00027  0038 000d                if-eqz
+00029  2223 075d                new-array  # TYPE [Ljava/lang/Object;
+0002b  1071 2cae 0007           invoke-static  # CALL Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+0002e  070c                     move-result-object
+0002f  074d 0102                aput-object
+00031  306e 2d7a 0260           invoke-virtual  # CALL Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;,[Ljava/lang/Object;)Ljava/lang/Object;
+00034  000e                     return-void
+
+### Landroid/support/v4/widget/j;->a(Landroid/widget/PopupWindow;,Landroid/view/View;,I,I,I)V  [access=0x9, regs=7, ins=5, outs=5, code_off=0xc33f4]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0113 0013                const/16
+00004  1034 0006                if-lt
+00006  566e 20a5 5432           invoke-virtual  # CALL Landroid/widget/PopupWindow;->showAsDropDown(Landroid/view/View;,I,I,I)V
+00009  1b28                     goto
+0000a  1071 253f 0003           invoke-static  # CALL Lb/b/c/g/q;->d(Landroid/view/View;)I
+0000d  000a                     move-result
+0000e  2071 24eb 0006           invoke-static  # CALL Lb/b/c/g/d;->a(I,I)I
+00011  060a                     move-result
+00012  06dd 0706                op_dd
+00014  5012                     const/4
+00015  0633 000c                if-ne
+00017  106e 2094 0002           invoke-virtual  # CALL Landroid/widget/PopupWindow;->getWidth()I
+0001a  060a                     move-result
+0001b  106e 1d7d 0003           invoke-virtual  # CALL Landroid/view/View;->getWidth()I
+0001e  000a                     move-result
+0001f  06b1                     op_b1
+00020  64b1                     op_b1
+00021  406e 20a4 5432           invoke-virtual  # CALL Landroid/widget/PopupWindow;->showAsDropDown(Landroid/view/View;,I,I)V
+00024  000e                     return-void
+
+### Landroid/support/v4/widget/j;->a(Landroid/widget/PopupWindow;,Z)V  [access=0x9, regs=6, ins=2, outs=3, code_off=0xc32b4]
+00000  0060 0551                sget  # FIELD Landroid/os/Build$VERSION;->SDK_INT:I
+00002  0113 0017                const/16
+00004  1034 0006                if-lt
+00006  206e 20a0 0054           invoke-virtual  # CALL Landroid/widget/PopupWindow;->setOverlapAnchor(Z)V
+00009  3428                     goto
+0000a  0113 0015                const/16
+0000c  1034 0031                if-lt
+0000e  0063 0e00                sget-boolean  # FIELD Landroid/support/v4/widget/j;->d:Z
+00010  011a 1330                const-string  # STR "PopupWindowCompatApi21"
+00012  0039 0019                if-nez
+00014  1012                     const/4
+00015  021c 0499                const-class  # TYPE Landroid/widget/PopupWindow;
+00017  031a 2110                const-string  # STR "mOverlapAnchor"
+00019  206e 2c79 0032           invoke-virtual  # CALL Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+0001c  020c                     move-result-object
+0001d  0269 0dff                sput-object  # FIELD Landroid/support/v4/widget/j;->c:Ljava/lang/reflect/Field;
+0001f  206e 2d73 0002           invoke-virtual  # CALL Ljava/lang/reflect/Field;->setAccessible(Z)V
+00022  0728                     goto
+00023  020d                     op_0d
+00024  031a 06b2                const-string  # STR "Could not fetch mOverlapAnchor field from PopupWindow"
+00026  3071 1c5f 0231           invoke-static  # CALL Landroid/util/Log;->i(Ljava/lang/String;,Ljava/lang/String;,Ljava/lang/Throwable;)I
+00029  006a 0e00                sput-boolean  # FIELD Landroid/support/v4/widget/j;->d:Z
+0002b  0062 0dff                sget-object  # FIELD Landroid/support/v4/widget/j;->c:Ljava/lang/reflect/Field;
+0002d  0038 0010                if-eqz
+0002f  1071 2c67 0005           invoke-static  # CALL Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+00032  050c                     move-result-object
+00033  306e 2d72 0540           invoke-virtual  # CALL Ljava/lang/reflect/Field;->set(Ljava/lang/Object;,Ljava/lang/Object;)V
+00036  0728                     goto
+00037  040d                     op_0d
+00038  051a 06cd                const-string  # STR "Could not set overlap anchor field in PopupWindow"
+0003a  3071 1c5f 0451           invoke-static  # CALL Landroid/util/Log;->i(Ljava/lang/String;,Ljava/lang/String;,Ljava/lang/Throwable;)I
+0003d  000e                     return-void

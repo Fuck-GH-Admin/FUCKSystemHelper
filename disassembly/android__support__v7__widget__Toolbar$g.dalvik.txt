@@ -1,0 +1,31 @@
+### Landroid/support/v7/widget/Toolbar$g;-><clinit>()V  [access=0x10008, regs=1, ins=0, outs=1, code_off=0xeddc0]
+00000  0022 036b                new-instance  # TYPE Landroid/support/v7/widget/Toolbar$g$a;
+00002  1070 1751 0000           invoke-direct  # CALL Landroid/support/v7/widget/Toolbar$g$a;-><init>()V
+00005  0069 10ab                sput-object  # FIELD Landroid/support/v7/widget/Toolbar$g;->CREATOR:Landroid/os/Parcelable$Creator;
+00007  000e                     return-void
+
+### Landroid/support/v7/widget/Toolbar$g;-><init>(Landroid/os/Parcel;,Ljava/lang/ClassLoader;)V  [access=0x10001, regs=3, ins=3, outs=3, code_off=0xedde0]
+00000  3070 24c3 0210           invoke-direct  # CALL Lb/b/c/g/a;-><init>(Landroid/os/Parcel;,Ljava/lang/ClassLoader;)V
+00003  106e 0ae4 0001           invoke-virtual  # CALL Landroid/os/Parcel;->readInt()I
+00006  020a                     move-result
+00007  0259 10ac                iput  # FIELD Landroid/support/v7/widget/Toolbar$g;->d:I
+00009  106e 0ae4 0001           invoke-virtual  # CALL Landroid/os/Parcel;->readInt()I
+0000c  010a                     move-result
+0000d  0138 0004                if-eqz
+0000f  1112                     const/4
+00010  0228                     goto
+00011  0112                     const/4
+00012  015c 10ad                iput-boolean  # FIELD Landroid/support/v7/widget/Toolbar$g;->e:Z
+00014  000e                     return-void
+
+### Landroid/support/v7/widget/Toolbar$g;-><init>(Landroid/os/Parcelable;)V  [access=0x10001, regs=2, ins=2, outs=2, code_off=0xede1c]
+00000  2070 24c4 0010           invoke-direct  # CALL Lb/b/c/g/a;-><init>(Landroid/os/Parcelable;)V
+00003  000e                     return-void
+
+### Landroid/support/v7/widget/Toolbar$g;->writeToParcel(Landroid/os/Parcel;,I)V  [access=0x1, regs=3, ins=3, outs=3, code_off=0xede34]
+00000  306f 24c8 0210           invoke-super  # CALL Lb/b/c/g/a;->writeToParcel(Landroid/os/Parcel;,I)V
+00003  0252 10ac                iget  # FIELD Landroid/support/v7/widget/Toolbar$g;->d:I
+00005  206e 0af0 0021           invoke-virtual  # CALL Landroid/os/Parcel;->writeInt(I)V
+00008  0055 10ad                iget-boolean  # FIELD Landroid/support/v7/widget/Toolbar$g;->e:Z
+0000a  206e 0af0 0001           invoke-virtual  # CALL Landroid/os/Parcel;->writeInt(I)V
+0000d  000e                     return-void

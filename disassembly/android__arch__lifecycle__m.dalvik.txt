@@ -1,0 +1,100 @@
+### Landroid/arch/lifecycle/m;-><init>()V  [access=0x10001, regs=1, ins=1, outs=1, code_off=0x818dc]
+00000  1070 0752 0000           invoke-direct  # CALL Landroid/app/Fragment;-><init>()V
+00003  000e                     return-void
+
+### Landroid/arch/lifecycle/m;->a(Landroid/app/Activity;)V  [access=0x9, regs=4, ins=1, outs=3, code_off=0x819a4]
+00000  106e 06fd 0003           invoke-virtual  # CALL Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
+00003  030c                     move-result-object
+00004  001a 1904                const-string  # STR "android.arch.lifecycle.LifecycleDispatcher.report_fragment_tag"
+00006  206e 075c 0003           invoke-virtual  # CALL Landroid/app/FragmentManager;->findFragmentByTag(Ljava/lang/String;)Landroid/app/Fragment;
+00009  010c                     move-result-object
+0000a  0139 0015                if-nez
+0000c  106e 075a 0003           invoke-virtual  # CALL Landroid/app/FragmentManager;->beginTransaction()Landroid/app/FragmentTransaction;
+0000f  010c                     move-result-object
+00010  0222 0157                new-instance  # TYPE Landroid/arch/lifecycle/m;
+00012  1070 07fe 0002           invoke-direct  # CALL Landroid/arch/lifecycle/m;-><init>()V
+00015  306e 075d 0021           invoke-virtual  # CALL Landroid/app/FragmentTransaction;->add(Landroid/app/Fragment;,Ljava/lang/String;)Landroid/app/FragmentTransaction;
+00018  000c                     move-result-object
+00019  106e 075e 0000           invoke-virtual  # CALL Landroid/app/FragmentTransaction;->commit()I
+0001c  106e 075b 0003           invoke-virtual  # CALL Landroid/app/FragmentManager;->executePendingTransactions()Z
+0001f  000e                     return-void
+
+### Landroid/arch/lifecycle/m;->a(Landroid/arch/lifecycle/c$a;)V  [access=0x2, regs=3, ins=2, outs=2, code_off=0x818f4]
+00000  106e 0753 0001           invoke-virtual  # CALL Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
+00003  010c                     move-result-object
+00004  1020 0150                instance-of  # TYPE Landroid/arch/lifecycle/g;
+00006  0038 000c                if-eqz
+00008  011f 0150                check-cast  # TYPE Landroid/arch/lifecycle/g;
+0000a  1072 07ed 0001           invoke-interface  # CALL Landroid/arch/lifecycle/g;->a()Landroid/arch/lifecycle/f;
+0000d  010c                     move-result-object
+0000e  206e 07de 0021           invoke-virtual  # CALL Landroid/arch/lifecycle/f;->a(Landroid/arch/lifecycle/c$a;)V
+00011  000e                     return-void
+00012  1020 014c                instance-of  # TYPE Landroid/arch/lifecycle/e;
+00014  0038 0011                if-eqz
+00016  011f 014c                check-cast  # TYPE Landroid/arch/lifecycle/e;
+00018  1072 07d7 0001           invoke-interface  # CALL Landroid/arch/lifecycle/e;->a()Landroid/arch/lifecycle/c;
+0001b  010c                     move-result-object
+0001c  1020 014f                instance-of  # TYPE Landroid/arch/lifecycle/f;
+0001e  0038 0007                if-eqz
+00020  011f 014f                check-cast  # TYPE Landroid/arch/lifecycle/f;
+00022  206e 07de 0021           invoke-virtual  # CALL Landroid/arch/lifecycle/f;->a(Landroid/arch/lifecycle/c$a;)V
+00025  000e                     return-void
+
+### Landroid/arch/lifecycle/m;->a(Landroid/arch/lifecycle/m$a;)V  [access=0x2, regs=2, ins=2, outs=1, code_off=0x81950]
+00000  0138 0005                if-eqz
+00002  1072 07fb 0001           invoke-interface  # CALL Landroid/arch/lifecycle/m$a;->a()V
+00005  000e                     return-void
+
+### Landroid/arch/lifecycle/m;->b(Landroid/arch/lifecycle/m$a;)V  [access=0x2, regs=2, ins=2, outs=1, code_off=0x8196c]
+00000  0138 0005                if-eqz
+00002  1072 07fc 0001           invoke-interface  # CALL Landroid/arch/lifecycle/m$a;->b()V
+00005  000e                     return-void
+
+### Landroid/arch/lifecycle/m;->c(Landroid/arch/lifecycle/m$a;)V  [access=0x2, regs=2, ins=2, outs=1, code_off=0x81988]
+00000  0138 0005                if-eqz
+00002  1072 07fd 0001           invoke-interface  # CALL Landroid/arch/lifecycle/m$a;->c()V
+00005  000e                     return-void
+
+### Landroid/arch/lifecycle/m;->onActivityCreated(Landroid/os/Bundle;)V  [access=0x1, regs=2, ins=2, outs=2, code_off=0x819f4]
+00000  206f 0754 0010           invoke-super  # CALL Landroid/app/Fragment;->onActivityCreated(Landroid/os/Bundle;)V
+00003  0154 04fb                iget-object  # FIELD Landroid/arch/lifecycle/m;->b:Landroid/arch/lifecycle/m$a;
+00005  2070 0801 0010           invoke-direct  # CALL Landroid/arch/lifecycle/m;->a(Landroid/arch/lifecycle/m$a;)V
+00008  0162 04e2                sget-object  # FIELD Landroid/arch/lifecycle/c$a;->ON_CREATE:Landroid/arch/lifecycle/c$a;
+0000a  2070 0800 0010           invoke-direct  # CALL Landroid/arch/lifecycle/m;->a(Landroid/arch/lifecycle/c$a;)V
+0000d  000e                     return-void
+
+### Landroid/arch/lifecycle/m;->onDestroy()V  [access=0x1, regs=2, ins=1, outs=2, code_off=0x81a20]
+00000  106f 0755 0001           invoke-super  # CALL Landroid/app/Fragment;->onDestroy()V
+00003  0062 04e3                sget-object  # FIELD Landroid/arch/lifecycle/c$a;->ON_DESTROY:Landroid/arch/lifecycle/c$a;
+00005  2070 0800 0001           invoke-direct  # CALL Landroid/arch/lifecycle/m;->a(Landroid/arch/lifecycle/c$a;)V
+00008  0012                     const/4
+00009  105b 04fb                iput-object  # FIELD Landroid/arch/lifecycle/m;->b:Landroid/arch/lifecycle/m$a;
+0000b  000e                     return-void
+
+### Landroid/arch/lifecycle/m;->onPause()V  [access=0x1, regs=2, ins=1, outs=2, code_off=0x81a48]
+00000  106f 0756 0001           invoke-super  # CALL Landroid/app/Fragment;->onPause()V
+00003  0062 04e4                sget-object  # FIELD Landroid/arch/lifecycle/c$a;->ON_PAUSE:Landroid/arch/lifecycle/c$a;
+00005  2070 0800 0001           invoke-direct  # CALL Landroid/arch/lifecycle/m;->a(Landroid/arch/lifecycle/c$a;)V
+00008  000e                     return-void
+
+### Landroid/arch/lifecycle/m;->onResume()V  [access=0x1, regs=2, ins=1, outs=2, code_off=0x81a6c]
+00000  106f 0757 0001           invoke-super  # CALL Landroid/app/Fragment;->onResume()V
+00003  1054 04fb                iget-object  # FIELD Landroid/arch/lifecycle/m;->b:Landroid/arch/lifecycle/m$a;
+00005  2070 0802 0001           invoke-direct  # CALL Landroid/arch/lifecycle/m;->b(Landroid/arch/lifecycle/m$a;)V
+00008  0062 04e5                sget-object  # FIELD Landroid/arch/lifecycle/c$a;->ON_RESUME:Landroid/arch/lifecycle/c$a;
+0000a  2070 0800 0001           invoke-direct  # CALL Landroid/arch/lifecycle/m;->a(Landroid/arch/lifecycle/c$a;)V
+0000d  000e                     return-void
+
+### Landroid/arch/lifecycle/m;->onStart()V  [access=0x1, regs=2, ins=1, outs=2, code_off=0x81a98]
+00000  106f 0758 0001           invoke-super  # CALL Landroid/app/Fragment;->onStart()V
+00003  1054 04fb                iget-object  # FIELD Landroid/arch/lifecycle/m;->b:Landroid/arch/lifecycle/m$a;
+00005  2070 0803 0001           invoke-direct  # CALL Landroid/arch/lifecycle/m;->c(Landroid/arch/lifecycle/m$a;)V
+00008  0062 04e6                sget-object  # FIELD Landroid/arch/lifecycle/c$a;->ON_START:Landroid/arch/lifecycle/c$a;
+0000a  2070 0800 0001           invoke-direct  # CALL Landroid/arch/lifecycle/m;->a(Landroid/arch/lifecycle/c$a;)V
+0000d  000e                     return-void
+
+### Landroid/arch/lifecycle/m;->onStop()V  [access=0x1, regs=2, ins=1, outs=2, code_off=0x81ac4]
+00000  106f 0759 0001           invoke-super  # CALL Landroid/app/Fragment;->onStop()V
+00003  0062 04e7                sget-object  # FIELD Landroid/arch/lifecycle/c$a;->ON_STOP:Landroid/arch/lifecycle/c$a;
+00005  2070 0800 0001           invoke-direct  # CALL Landroid/arch/lifecycle/m;->a(Landroid/arch/lifecycle/c$a;)V
+00008  000e                     return-void
