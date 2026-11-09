@@ -1,0 +1,110 @@
+name: Decompile Java resources and ARM64 libraries
+on:
+  push:
+    paths:
+      - '.github/workflows/decompile.yml'
+      - 'original/SystemHelper.apk'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: systemhelper-decompile
+  cancel-in-progress: false
+jobs:
+  decompile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - name: Verify exact input
+        shell: bash
+        run: |
+          echo '38a9010600bc91fd468701f53ba37ea0d43cb8e906544d0700a799f592011428  original/SystemHelper.apk' | sha256sum -c -
+      - name: Install pinned reverse engineering tools
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -fL --retry 3 'https://github.com/skylot/jadx/releases/download/v1.5.6/jadx-1.5.6.zip' -o "$RUNNER_TEMP/jadx.zip"
+          mkdir -p "$RUNNER_TEMP/jadx"
+          unzip -q "$RUNNER_TEMP/jadx.zip" -d "$RUNNER_TEMP/jadx"
+          chmod +x "$RUNNER_TEMP/jadx/bin/jadx"
+          curl -fL --retry 3 'https://github.com/iBotPeaches/Apktool/releases/download/v3.0.3/apktool_3.0.3.jar' -o "$RUNNER_TEMP/apktool.jar"
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq binutils-aarch64-linux-gnu
+          mkdir -p decompiled/logs
+          "$RUNNER_TEMP/jadx/bin/jadx" --version > decompiled/logs/versions.txt
+          java -jar "$RUNNER_TEMP/apktool.jar" --version >> decompiled/logs/versions.txt
+          aarch64-linux-gnu-objdump --version | head -n1 >> decompiled/logs/versions.txt
+      - name: Recover Java source with JADX
+        shell: bash
+        run: |
+          mkdir -p decompiled/jadx decompiled/logs
+          set +e
+          "$RUNNER_TEMP/jadx/bin/jadx" -j 4 --no-res -d decompiled/jadx original/SystemHelper.apk > decompiled/logs/jadx.log 2>&1
+          status=$?
+          echo "$status" > decompiled/logs/jadx.exitcode
+          echo "jadx exit code: $status"
+          tail -n 20 decompiled/logs/jadx.log || true
+          exit 0
+      - name: Recover manifest, smali and resources with Apktool
+        shell: bash
+        run: |
+          mkdir -p decompiled/logs
+          set +e
+          java -jar "$RUNNER_TEMP/apktool.jar" d -f original/SystemHelper.apk -o decompiled/apktool > decompiled/logs/apktool.log 2>&1
+          status=$?
+          if [ "$status" -ne 0 ]; then
+            rm -rf decompiled/apktool
+            java -jar "$RUNNER_TEMP/apktool.jar" d -f -r original/SystemHelper.apk -o decompiled/apktool > decompiled/logs/apktool-fallback.log 2>&1
+            status=$?
+          fi
+          echo "$status" > decompiled/logs/apktool.exitcode
+          echo "apktool exit code: $status"
+          exit 0
+      - name: ARM64 native code disassembly and symbols
+        shell: bash
+        run: |
+          mkdir -p decompiled/native decompiled/logs
+          for f in extracted/lib/arm64-v8a/*.so; do
+            [ -f "$f" ] || continue
+            name="$(basename "$f")"
+            aarch64-linux-gnu-objdump -d -C "$f" > "decompiled/native/$name.asm" 2> "decompiled/logs/$name.objdump.log" || true
+            readelf -aW "$f" > "decompiled/native/$name.readelf.txt" 2> "decompiled/logs/$name.readelf.log" || true
+            strings -a -n 6 "$f" > "decompiled/native/$name.strings.txt" || true
+          done
+      - name: Write run receipt and commit reverse engineering work
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import hashlib, pathlib, datetime
+          p=pathlib.Path("decompiled")
+          lines=["# Reproducible decompilation run", "",
+                 "Source: original/SystemHelper.apk",
+                 "Source SHA256: 38a9010600bc91fd468701f53ba37ea0d43cb8e906544d0700a799f592011428", "",
+                 "Pinned JADX: v1.5.6; Apktool: v3.0.3; ARM64: binutils-aarch64-linux-gnu", "",
+                 "## Tool exit statuses (0 means success)",""]
+          for name in ["jadx", "apktool"]:
+              q=p/"logs"/(name+".exitcode")
+              lines.append(f"- {name}: {q.read_text().strip() if q.exists() else 'NOT RUN'}")
+          lines+=["","## Output quantities",""]
+          for sub in ["jadx","apktool","native"]:
+              d=p/sub
+              files=sum(1 for f in d.rglob("*") if f.is_file()) if d.exists() else 0
+              lines.append(f"- {sub}: {files} files")
+          lines+=["","This output is best-effort decompilation, **not original source code**. See logs for warnings and failures. The application was not executed on a device. No network requests were made by the APK."]
+          (p/"README.md").write_text("\n".join(lines)+"\n",encoding="utf-8")
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add decompiled/
+          if ! git diff --cached --quiet; then
+            git commit -m 'decompile: add JADX, apktool, and ARM64 disassembly outputs'
+            git push origin HEAD:main
+          fi
