@@ -1,0 +1,36 @@
+name: Restore audited APK and extracted artifacts
+on:
+  push:
+    paths:
+      - 'archives/parts/**'
+      - '.github/workflows/restore.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Reconstruct archive and verify provenance
+        shell: bash
+        run: |
+          cat archives/parts/audit_*.bin > archives/FUCKSystemHelper-full-reverse-artifacts.tar.gz
+          echo 'ac46ba2286504e53a1f04bddc3b24603b8ba5d16a2760b0a50cd669a75e8647a  archives/FUCKSystemHelper-full-reverse-artifacts.tar.gz' | sha256sum -c -
+          tar -xzf archives/FUCKSystemHelper-full-reverse-artifacts.tar.gz --strip-components=1
+          echo '38a9010600bc91fd468701f53ba37ea0d43cb8e906544d0700a799f592011428  original/SystemHelper.apk' | sha256sum -c -
+          test -s decoded/AndroidManifest.xml
+          test -s decoded/dex-xrefs.json
+          test -s analysis/SECURITY-AND-LOGIC-REPORT.md
+      - name: Commit reconstructed originals, work products and archive
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add original extracted decoded disassembly analysis tools archives/FUCKSystemHelper-full-reverse-artifacts.tar.gz
+          if ! git diff --cached --quiet; then
+            git commit -m 'artifacts: restore original APK and complete static audit bundle'
+            git push origin HEAD:main
+          fi
