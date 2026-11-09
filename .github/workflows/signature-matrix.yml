@@ -1,0 +1,43 @@
+name: Verify Vivo and BBK signature API ranges
+on:
+  push:
+    paths:
+      - '.github/workflows/signature-matrix.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  verify-signature-matrix:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify v3 signers for Android API levels
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p analysis/verification
+          echo '38a9010600bc91fd468701f53ba37ea0d43cb8e906544d0700a799f592011428  original/SystemHelper.apk' | sha256sum -c -
+          tool="$(find "$ANDROID_HOME/build-tools" -type f -name apksigner | sort -V | tail -n1)"
+          if [ -z "$tool" ]; then echo "apksigner missing"; exit 1; fi
+          echo "$tool" > analysis/verification/apksigner-tool-path.txt
+          for api in 31 32 33 34 35; do
+            set +e
+            "$tool" verify --verbose --print-certs --min-sdk-version "$api" --max-sdk-version "$api" original/SystemHelper.apk > "analysis/verification/signature-api-$api.txt" 2>&1
+            status=$?
+            set -e
+            printf '%s\n' "$status" > "analysis/verification/signature-api-$api.exitcode"
+            echo "API $api: exit=$status"
+            grep -E 'Verifies|V3.0 Signer: certificate (DN|SHA-256 digest)' "analysis/verification/signature-api-$api.txt" | head -n 5 || true
+          done
+      - name: Commit signed artifact verification
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add analysis/verification/
+          if ! git diff --cached --quiet; then
+            git commit -m 'verification: check OEM signing certificate per Android API level'
+            git push origin HEAD:main
+          fi
