@@ -71,9 +71,10 @@ if [[ $INSTALL_STATUS -ne 0 ]]; then
     python3 - "$D/dex-only-signed.apk" <<'PY_VERIFY_DEX'
 import hashlib, sys, zipfile
 with zipfile.ZipFile('original/SystemHelper.apk') as o, zipfile.ZipFile(sys.argv[1]) as d:
-    assert o.read('classes.dex') == d.read('classes.dex'), "DEX changed unexpectedly"
+    original_dex = o.read('classes.dex')
+    assert original_dex == d.read('classes.dex'), "DEX changed unexpectedly"
     assert not any(x.startswith('lib/') and x.endswith('.so') for x in d.namelist()), "Native SO remains"
-print('DEX identical SHA256',hashlib.sha256(d.read('classes.dex')).hexdigest())
+print('DEX identical SHA256', hashlib.sha256(original_dex).hexdigest())
 PY_VERIFY_DEX
     record original_install FAILED 'original APK cannot install on x86_64 because it carries ARM64-only libraries'
     record derived_variant ONLY_DEX 'stripped ARM64 SOs; resigned with disposable test key; byte-identical classes.dex'
