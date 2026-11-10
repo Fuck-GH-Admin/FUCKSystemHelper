@@ -52,10 +52,47 @@ adb install -r original/SystemHelper.apk > "$OUT/adb-install.txt" 2>&1
 INSTALL_STATUS=$?
 set -e
 if [[ $INSTALL_STATUS -ne 0 ]]; then
-  record install FAILED "adb install exit=$INSTALL_STATUS; see adb-install.txt"
-  exit 0
+  if grep -q "INSTALL_FAILED_NO_MATCHING_ABIS" "$OUT/adb-install.txt"; then
+    # Not the original APK: explicitly labeled Java/DEX-only repack for x86 smoke testing.
+    # Do not claim OEM privilege, official signature or ARM64 native execution.
+    D="$RUNNER_TEMP/systemhelper-derived"
+    mkdir -p "$D"
+    cp original/SystemHelper.apk "$D/dex-only-unsigned.apk"
+    zip -d "$D/dex-only-unsigned.apk" 'lib/arm64-v8a/*' > "$OUT/derive-zip.txt" 2>&1
+    SDK_ROOT="${ANDROID_HOME:-${ANDROID_SDK_ROOT:-}}"
+    BUILD_TOOLS="$(find "$SDK_ROOT/build-tools" -type f -name apksigner -printf '%h\n' | sort -V | tail -n1)"
+    "$BUILD_TOOLS/zipalign" -f 4 "$D/dex-only-unsigned.apk" "$D/dex-only-aligned.apk" > "$OUT/derive-align.txt" 2>&1
+    keytool -genkeypair -alias offline-test -keyalg RSA -keysize 2048 -validity 1 \
+      -keystore "$D/test-only.jks" -storepass changeit -keypass changeit \
+      -dname 'CN=Disposable Emulator Test Only' -noprompt > "$OUT/derive-key.txt" 2>&1
+    "$BUILD_TOOLS/apksigner" sign --ks "$D/test-only.jks" --ks-key-alias offline-test \
+      --ks-pass pass:changeit --key-pass pass:changeit \
+      --out "$D/dex-only-signed.apk" "$D/dex-only-aligned.apk" > "$OUT/derive-sign.txt" 2>&1
+    python3 - "$D/dex-only-signed.apk" <<'PY_VERIFY_DEX'
+import hashlib, sys, zipfile
+with zipfile.ZipFile('original/SystemHelper.apk') as o, zipfile.ZipFile(sys.argv[1]) as d:
+    assert o.read('classes.dex') == d.read('classes.dex'), "DEX changed unexpectedly"
+    assert not any(x.startswith('lib/') and x.endswith('.so') for x in d.namelist()), "Native SO remains"
+print('DEX identical SHA256',hashlib.sha256(d.read('classes.dex')).hexdigest())
+PY_VERIFY_DEX
+    record original_install FAILED 'original APK cannot install on x86_64 because it carries ARM64-only libraries'
+    record derived_variant ONLY_DEX 'stripped ARM64 SOs; resigned with disposable test key; byte-identical classes.dex'
+    set +e
+    adb install -r "$D/dex-only-signed.apk" > "$OUT/adb-install-derived.txt" 2>&1
+    INSTALL_STATUS=$?
+    set -e
+    if [[ $INSTALL_STATUS -ne 0 ]]; then
+      record derived_install FAILED "derived install exit=$INSTALL_STATUS"
+      exit 0
+    fi
+    record derived_install PASS 'DEX-only derived APK installed; THIS IS NOT original OEM APK'
+  else
+    record install FAILED "adb install exit=$INSTALL_STATUS; see adb-install.txt"
+    exit 0
+  fi
+else
+  record original_install PASS 'unaltered APK installed; native ARM64 may not be loadable on x86_64'
 fi
-record install PASS 'adb install -r returned 0'
 read_shell pm path com.mobiletools.systemhelper > "$OUT/pm-path.txt"
 read_shell dumpsys package com.mobiletools.systemhelper > "$OUT/dumpsys-package.txt"
 read_shell cmd appops get com.mobiletools.systemhelper > "$OUT/appops.txt"
@@ -97,6 +134,7 @@ summary={
  "virtual_device":"Android API 33 google_apis x86_64",
  "vivo_framework_present":False,
  "arm64_native_code_executed":False,
+ "sample_variant":("DEX-only offline resign, identical classes.dex" if "derived_install" in status else "original APK"),
  "real_user_data":False,
  "network_containment":"guest IPv4+IPv6 OUTPUT REJECT installed BEFORE APK install",
  "raw_logcat_sha256":hashlib.sha256(raw.encode()).hexdigest(),
