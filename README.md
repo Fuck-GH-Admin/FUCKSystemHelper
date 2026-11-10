@@ -10,6 +10,8 @@
 
 - [恶意软件视角主报告](analysis/malware/PRIMARY-MALWARE-THREAT-ASSESSMENT.md) — 技术行为矩阵、主要疑点、木马判定门槛。
 - [原生库解密/机器码证据](analysis/malware/NATIVE-FORENSICS.md) — 已恢复 231 条隐藏字符串、2 个 `system` 和 4 个 `ptrace` 调用点。
+- [DEX 全量恶意能力扫描](analysis/malware/DEX-TECHNIQUE-SCAN.md) — 跨应用使用、定位、环境扫描、动态 DEX、短信/通讯录/音视频与远控接口的直接引用审计。
+- [环境指纹专项](analysis/malware/AMBIENT-RECONNAISSANCE.md) — Wi‑Fi、BLE、蜂窝、传感器的 SDK 能力与宿主可达边界。
 - [完整原生解码证据 JSON](analysis/malware/native-triage.json) — 逐调用点虚拟地址、解码字符串、ELF 依赖。
 - [网络指标及本地工件](analysis/malware/IOC-AND-ARTIFACT-CATALOG.md) — 区分宿主服务器与第三方 SDK 域名。
 - [隔离运行态取证计划](analysis/malware/ISOLATED-RUNTIME-FORENSICS-PLAN.md) — 如何证明真实执行、流量与反分析条件。
