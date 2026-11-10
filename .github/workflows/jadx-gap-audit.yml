@@ -1,0 +1,66 @@
+name: Enumerate JADX decompilation gaps
+on:
+  push:
+    paths:
+      - '.github/workflows/jadx-gap-audit.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  audit-gaps:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Inventory Java methods with failed reconstruction
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p analysis/verification
+          python3 - <<'PY'
+          import pathlib, re
+          base=pathlib.Path('decompiled/jadx/sources')
+          fallback=pathlib.Path('decompiled/jadx-fallback/sources')
+          errors=[]; warnings=[]; fallback_missing=[]
+          for p in sorted(base.rglob('*.java')):
+              text=p.read_text(encoding='utf-8',errors='replace')
+              for idx,line in enumerate(text.splitlines(),1):
+                  if 'Method not decompiled:' in line or 'JADX ERROR' in line:
+                      errors.append((str(p),idx,line.strip()[:280]))
+                  if 'Code decompiled incorrectly' in line:
+                      warnings.append((str(p),idx,line.strip()[:180]))
+              if not fallback.joinpath(p.relative_to(base)).exists():
+                  fallback_missing.append(str(p))
+          md=['# Java decompilation gaps', '',
+              'This enumerates markers in normal JADX Java output; CLI reported 6 decompilation errors, but error count need not equal marker count.',
+              'Smali is the authoritative reference for code that could not be decompiled.',
+              '',
+              f'- Normal Java files: {sum(1 for _ in base.rglob("*.java"))}',
+              f'- Fallback files: {sum(1 for _ in fallback.rglob("*.java"))}',
+              f'- Method failure/error markers: {len(errors)}',
+              f'- Restructure-warning markers: {len(warnings)}',
+              f'- Normal-mode paths with no same-path fallback: {len(fallback_missing)}',
+              '',
+              '## Failure locations', '']
+          for path,line,s in errors:
+              md.append(f'- \`{path}:{line}\` — \`{s}\`')
+          if not errors:md.append('(No explicit failure markers found in generated Java.)')
+          md+=['','## Control-flow restructuring warning locations (may be repetitive)', '']
+          for path,line,s in warnings[:100]:
+              md.append(f'- \`{path}:{line}\`')
+          md+=['','## Missing same-path fallback files','']
+          for p in fallback_missing[:100]:md.append(f'- \`{p}\`')
+          md+=['','## Interpretation','',
+              'Normal JADX failure does not mean a corresponding class is missing from bytecode: all 1,149 classes have Apktool Smali. The fallback representation is less readable and must be verified against original DEX before semantic conclusions.']
+          pathlib.Path('analysis/verification/jadx-method-gaps.md').write_text('\n'.join(md)+'\n',encoding='utf-8')
+          PY
+      - name: Commit method gap index
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add analysis/verification/jadx-method-gaps.md
+          if ! git diff --cached --quiet; then
+            git commit -m 'verification: enumerate actual failed JADX methods and fallback coverage'
+            git push origin HEAD:main
+          fi
