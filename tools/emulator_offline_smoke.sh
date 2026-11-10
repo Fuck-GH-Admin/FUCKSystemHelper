@@ -2,7 +2,7 @@
 # Offline sandbox smoke test of the exact supplied sample.
 # No modification of the sample, no real user data, no real SIM, no live internet.
 set -uo pipefail
-ROOT="$(cd "$(dirname "$0")/../../.." && pwd)"
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT"
 OUT="analysis/malware/runtime/emulator-api33-x86_64"
 mkdir -p "$OUT"
