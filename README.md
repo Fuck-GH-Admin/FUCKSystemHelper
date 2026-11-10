@@ -6,13 +6,16 @@
 
 ## 导航
 
-- `analysis/SECURITY-AND-LOGIC-REPORT.md` — 功能、调用链、数据结构、风险分级、限制。
+- [完整静态审计报告](analysis/SECURITY-AND-LOGIC-REPORT.md) — 功能、调用链、数据结构、风险分级与剩余限制（包含更新）。
+- [深入逻辑复核](analysis/DEEP-DIVE-20261110.md) — 启动时序、24小时应用统计集合、失效的先删后发队列、加密与身份鉴权、精确 IPC 事务。
+- [证据地图](analysis/EVIDENCE-MAP.md) — 具体方法、源码与风险的可点击定位。
+- [签名独立验证结果](analysis/verification/v3-independent.json) — 两个 API 分段 signer、APK 内容摘要与签名的数学验证。
 - `analysis/critical-methods-index.txt` — 257 个核心方法的字符串与调用交叉索引。
 - `decoded/AndroidManifest.xml` — 解码后的组件、权限与导出声明。
 - `decoded/dex-symbols.txt` — 类、字段、方法全集。
 - `decoded/dex-xrefs.json` — 方法中的 DEX 引用（方法、字段、字符串、类型），含代码偏移。
 - `decoded/dex-classes.json`、`decoded/dex-method-metadata.json`、`decoded/dex-strings.txt`、`decoded/static-values.json` — DEX 原始语义索引。
-- `decoded/signing-metadata.json` 与 `decoded/signing_certificates/` — APK v2/v3 的签名证书链提取结果，**不等同于完成签名密码学验证**。
+- `decoded/signing-metadata.json` 与 `decoded/signing_certificates/` — APK v2/v3 的签名证书链提取结果；**另已对 v3 两组 signer 完成独立 RSA 签名与 APK 摘要验证**。
 - `decoded/native-symbols-*.txt` — ARM64 共享库 ELF 符号表。
 - `disassembly/*.dalvik.txt` — 按类拆分的方法指令流、字节码单元、字符串与调用符号，全部保留指令字。**不是等价 Java 源码，也不是可以直接回编译的 smali**。
 - `extracted/` — APK 的 ZIP 内容（原始 Manifest、DEX、资源、原生库与证书文件等）。
@@ -23,11 +26,13 @@
 - `decompiled/logs/` — 工具版本、输出与退出状态；`analysis/verification/` — 类覆盖与 APK 签名校验。
 - `archives/parts/` — 完整压缩归档的 byte-exact 二进制分片；`archives/FUCKSystemHelper-full-reverse-artifacts.tar.gz` — 自动重组校验后的完整原始静态分析归档。
 - `original/SystemHelper.apk` — 未修改的输入原件。
-- `tools/apk_inspect.py`、`tools/static_values.py`、`tools/apk_signing.py` — 脱离网络、仅依赖 Python 标准库（签名脚本另需 cryptography）的可重放提取程序。
+- `tools/apk_inspect.py`、`tools/static_values.py`、`tools/apk_signing.py`、`tools/verify_v3_signers.py` — 离线可重放的解析、证书提取和签名验证程序（签名脚本需 cryptography）。
 
 ## 重要边界
 
 - 静态分析能够确认代码中存在的调用路径、可访问的数据字段和声明的组件，但不能证明实际手机固件给定的系统服务状态、每次通信发生时的负载、服务器后续处理或用户授权 UI。
+- 已独立确认 v3 的 BBK/iQOO (API 24–32) 与 Vivo platform (API33+) 两组 RSA 签名合法、APK 内容摘要一致。Android `apksigner --print-certs` 对指定 API 范围显示的证书与原始签名块的分段结果有差异，已在报告中如实标记；不能把签名正确等同于 OEM 固件来源链认证。
+- 最新复核发现缓存队列先删后传、采集应用列表范围与默认传输鉴权问题，旧版本报告已订正。
 - 初始本地归档含完整 DEX 原件与逐方法 Dalvik 字节码视图；**随后由 GitHub Actions 额外完成 JADX 与 Apktool 反编译**。JADX 常规输出有 6 个错误，详见补充 fallback 与 CI 日志。
 - 两份原生 SO 已生成 AArch64 指令级 objdump 反汇编，但**未人工逐函数进行控制流与业务语义重建**。
 - 在公开仓库再分发厂商 APK/SDK 可能涉及版权、第三方密钥和公开传播风险；应由仓库维护者确认发布范围。
@@ -38,6 +43,7 @@
 python3 tools/apk_inspect.py
 python3 tools/static_values.py
 python3 tools/apk_signing.py
+python3 tools/verify_v3_signers.py
 sha256sum original/SystemHelper.apk
 # 从仓库分片重新组装最初的静态分析归档：
 cat archives/parts/audit_*.bin > /tmp/FUCKSystemHelper-full-reverse-artifacts.tar.gz
