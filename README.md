@@ -15,6 +15,7 @@
 - [完整原生解码证据 JSON](analysis/malware/native-triage.json) — 逐调用点虚拟地址、解码字符串、ELF 依赖。
 - [网络指标及本地工件](analysis/malware/IOC-AND-ARTIFACT-CATALOG.md) — 区分宿主服务器与第三方 SDK 域名。
 - [隔离运行态取证计划](analysis/malware/ISOLATED-RUNTIME-FORENSICS-PLAN.md) — 如何证明真实执行、流量与反分析条件。
+- [Android 13 虚拟机实测报告](analysis/malware/runtime/emulator-api33-x86_64/VERIFIED-FINDINGS.md) — 真实执行、权限拒绝、五个唤醒闹钟、崩溃栈与架构限制；[机器可读结果](analysis/malware/runtime/emulator-api33-x86_64/verified-results.json)；[原始运行证据](https://github.com/Fuck-GH-Admin/FUCKSystemHelper/actions/runs/42737147153/artifacts/13726724288)。
 
 **截至当前**：宿主“长期终端遥测/敏感数据上报”能力已由代码确认。原生库存在 Shell 及反调试兼容的调用，但其在特定设备的装载和触发尚未证明；未找到完整远程指令执行型木马链。传统 IPC、缓存、加密设计薄弱点列为第二主线，不取代恶意行为研究。
 
