@@ -63,14 +63,20 @@ read_shell dumpsys alarm > "$OUT/dumpsys-alarm-before.txt"
 
 adb logcat -c >/dev/null 2>&1 || true
 # The activity intentionally probes the app's own permission checks.
+set +e
 timeout 20s adb shell am start -W -n 'com.mobiletools.systemhelper/com.mobiletools.systemhelper.Activity.TestActivity' > "$OUT/activity-start.txt" 2>&1
-record activity "$?" 'am start -W of exported TestActivity'
+ACTIVITY_STATUS=$?
+set -e
+record activity "$ACTIVITY_STATUS" 'am start -W of exported TestActivity'
 sleep 8
 read_shell pidof com.mobiletools.systemhelper > "$OUT/pidof-main.txt" || true
 read_shell dumpsys activity activities > "$OUT/activity-after.txt" || true
 # Harmless explicit non-system action: probe whether exported component is reachable.
+set +e
 timeout 20s adb shell am broadcast -n 'com.mobiletools.systemhelper/com.mobiletools.systemhelper.control.OnBootReceiver' -a 'com.lab.systemhelper.EMULATOR_PROBE' > "$OUT/exported-receiver-probe.txt" 2>&1
-record exported_broadcast "$?" 'explicit non-protected Intent to exported OnBootReceiver'
+RECEIVER_STATUS=$?
+set -e
+record exported_broadcast "$RECEIVER_STATUS" 'explicit non-protected Intent to exported OnBootReceiver'
 sleep 7
 adb logcat -d -v threadtime > "$OUT/emulator-logcat.txt" 2>&1 || true
 read_shell dumpsys alarm > "$OUT/dumpsys-alarm-after.txt" || true
