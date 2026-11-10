@@ -13,7 +13,7 @@
 - 原件大小：4,107,356 bytes；SHA-256 `38a9010600bc91fd468701f53ba37ea0d43cb8e906544d0700a799f592011428`。
 - 包名：`com.mobiletools.systemhelper`；`versionCode=31`；`versionName=3.0.1-20250515`；minSdk 31 / targetSdk 33 / compileSdk 33。
 - `android:sharedUserId="com.mobiletools.systemhelper.uid"`。这是设备安装时的 UID 配置请求；其实际共享关系需要现场 `pm` 数据验证，不可据此推断与任何其他具体 APP 共用 UID。
-- APK Signing Block：v2 一名 BBK/iQOO 签名者，v3 两名签名者：适用于 SDK 33+ 的 Vivo platform app 与适用于 SDK 24–32 的 BBK/iQOO。证书 SHA-256 为：Vivo `915191fccf5058fa4b21c9c8ea8897040d313d18838850e986fc00055117d1db`；BBK `bcc35d4d3606f154f0402ab7634e8490c0b244c2675c3c6238986987024f0c02`。这强烈支持 OEM 来源，**但目前仅提取证书，未验 APK 签名摘要/签名合法性，亦未和当前固件基线对比**。
+- APK Signing Block：v2 一名 BBK/iQOO 签名者，v3 两名签名者：适用于 SDK 33+ 的 Vivo platform app 与适用于 SDK 24–32 的 BBK/iQOO。证书 SHA-256 为：Vivo `915191fccf5058fa4b21c9c8ea8897040d313d18838850e986fc00055117d1db`；BBK `bcc35d4d3606f154f0402ab7634e8490c0b244c2675c3c6238986987024f0c02`。这强烈支持 OEM 来源，**现已独立复核两个 v3 signer 的签名及 APK 内容摘要，均有效；但仍未和当前固件的可信证书基线对比**。
 - 内置 `assets/pub.cer`：主题与签发者均为 `UNICOM`，RSA 1024 位，证书自签。它用于业务数据的 RSA 加密，不是 Android APK 的代码签名证书。
 
 证据：`decoded/AndroidManifest.xml`；`decoded/signing-metadata.json`；`decoded/static-values.json`。
@@ -126,19 +126,35 @@ Manifest: `RegisterHelperService` exported=true 且没有 `android:permission`�
 
 **不应直接宣称**：APK 是木马、所有采集项都已经传输、外部应用能够解密重定向后的密文、服务端保留了多少天、厂商已违反何法律，或特定手机固件实际开启了哪项 AppOps。以上均需要另证。
 
-## 11. 本次交付的完整程度与未完成任务
+## 11. 最新还原状态与未完成任务（2026-11-10 复核）
 
-已完成：原始 APK 保存、全部 ZIP 成员提取、Manifest 解码、1,149 类/8,767 实际声明方法的结构索引、8,308 个有字节码方法的逐方法指令字记录（包括 xrefs）、静态值表、证书提取、两个 ELF 的符号表、核心逻辑审计与风险判断。
+- 原始 APK、所有 ZIP 成员、完整 DEX 及 1,149 份 Smali：**已保存**。
+- 8,767 个定义方法、8,308 个带代码方法、86,395 条引用索引：**已保存**。
+- JADX 常规模式：585 份 Java 文件，报告 6 个反编译错误；fallback 模式：586 份 Java 文件且退出码 0。**不是无损原始源码**。
+- 两份 AArch64 SO：**整库 objdump 已生成**，但未逐 JNI 函数语义审计。
+- Android v3 签名：`apksigner` 校验返回成功；另通过 [独立验证脚本](../tools/verify_v3_signers.py) 对所有 v3 signer 验证 RSA 签名及 APK chunk digest，**两个 signer 均通过**。详细校验 [v3-independent.json](verification/v3-independent.json)。
+- **深入业务复核**：[DEEP-DIVE-20261110.md](DEEP-DIVE-20261110.md) 追踪上报队列删除、每类应用统计范围、确切计时配置、RSA 签名误称、弱报文鉴权等内容。
+- 静态未完成：所有 Java/Smali 异常与动态分派分支、原生 SO 全部 JNI 算法、可重放单元测试与文件级细粒度结果对照。
+- 动态未完成：目标系统 AppOps/SELinux/共享 UID、生效条件、Binder 测试、实际位置及真实 HTTP 流量、运营商服务器后续处理。静态能力不等于真实发生频率。
 
-未完成：JADX 源码级可读 Java 反编译、所有 try/catch 控制流与跨方法动态分派恢复、完整 ARM64 SO 逐函数逆向、资源表全 XML 化、APK 签名摘要的密码学验证、真机 Android framework 权限/AppOps 与 Binder 验证、真实联网流量取证和服务端行为验证。因此不能称为逐函数语义完全复原；**原件和可重放的 Dalvik 级索引已保存，遗漏均透明列明**。
+## 12. 代码审计新增校正
 
-后续动态取证的最小要求：隔离测试手机、备份原厂 APK 与分区清单、记录 `dumpsys package`/`appops`/`dumpsys jobscheduler`/`alarm`/`ps`、由本机生成的仅测试数据负载、隔离网络中的 DNS/HTTP(S) 观察，以及对导出服务的本地权限边界验证。未经授权不要攻击实际运营商服务器。
+1. [AppInfo 采集](../decompiled/jadx/sources/com/mobiletools/systemhelper/control/f.java) 以最近 24h `UsageStats` 为循环主体，安装应用枚举用来匹配 UID 和名称；[DeviceManager](../decompiled/jadx/sources/c/d/a/a/n.java) 过滤 `com.android*`。此前笼统的“全量已安装列表会上传”结论不严谨。
+2. [HistoryDatabaseHelper](../decompiled/jadx/sources/c/d/a/b/e.java) `a(): JSONObject` 在上报结果确定前先 DELETE；[HistoryPostThread](../decompiled/jadx/sources/com/mobiletools/systemhelper/control/e.java) 失败时不重新写入。数据丢失风险明确。
+3. [SignalDatabaseHelper](../decompiled/jadx/sources/c/d/a/b/m.java) 上限近 100 条，`RegType=R` 先清空后安排上报；异常中断有丢失窗口。
+4. [加密代码](../decompiled/jadx/sources/c/d/a/b/c.java) 把 MD5(JSON) 直接用作 AES-128/ECB 密钥；[RSA helper](../decompiled/jadx/sources/c/d/a/b/j.java) 使用**公开 RSA 公钥加密**同一 MD5。URL 参数名叫 `sign`，但不是可以证明客户端身份的私钥数字签名。仅凭这套机制不能完成发送者鉴权。
+5. [SIMStateReceiver](../decompiled/jadx/sources/com/mobiletools/systemhelper/control/SIMStateReceiver.java) 日志宣称等待 6 分钟，但 Smali 常量是 `180000` ms，即**3 分钟**。
+6. [RegisterThread](../decompiled/jadx/sources/com/mobiletools/systemhelper/control/g.java) 将 HTTP 200 识别为成功，遇到 HTTP 416 也按成功处理，并启动**一次**历史队列回传线程（非整库循环）。
 
+## 13. 签名的独立复核与工具差异
 
-## 12. 后续逆向验证更新（高层反编译）
+APK v3 块中发现两组按 Android SDK 分段的 signer：
 
-GitHub Actions 运行 JADX 1.5.6 / Apktool 3.0.3 / ARM64 objdump：Apktool 成功生成 1,149 个 Smali 文件；JADX 常规模式 585 个 Java 文件、退出码 3（报告六处反编译错误）；JADX fallback 模式 586 个 Java 文件、退出码 0。AArch64 两份 SO 均生成完整反汇编文本。以上是工具层面的恢复，不代表原始源码语义无损。
+| 范围 | 证书 | 内容摘要与 RSA 签名 |
+|---|---|---|
+| API 33–2147483647 | `vivo platform app`，SHA256 `915191fccf5058fa4b21c9c8ea8897040d313d18838850e986fc00055117d1db` | **通过独立校验** |
+| API 24–32 | BBK/iQOO，SHA256 `bcc35d4d3606f154f0402ab7634e8490c0b244c2675c3c6238986987024f0c02` | **通过独立校验** |
 
-使用 Android apksigner 的初次校验在样本默认 API 范围内显示 **v3 签名验证成功**，证书是 BBK/iQOO（SHA-256 `bcc35d4d3606f154f0402ab7634e8490c0b244c2675c3c6238986987024f0c02`）；Vivo API 33+ 证书已从 Signing Block 提取，但该次命令尚未独立指定 API 33 范围复验。详见 `analysis/verification/apksigner.txt`。
+两个 signer 的 `signedData` 签名均经内置证书公钥执行 RSA PKCS#1 v1.5 SHA-256 验证成功；APK 的分块 SHA-256 摘要也与两者所签内容完全一致（`153fed1251229788a8cd9a2294989126cc2c705bcb6b1d2373d0c8682054aec8`）。具体算法与过程见 [验证脚本](../tools/verify_v3_signers.py)。
 
-导出的 Binder 事务号已按 JADX 源码 `decompiled/jadx/sources/com/mobiletools/systemhelper/service/a.java` 与 `RegisterHelperService.java` 交叉核对（1 修改地址，2 调度间隔，3 删除配置，4 改日志，5 查询日志）。
+需要保留一个**工具结果差异**：既有 Android build-tools 37 `apksigner verify --print-certs --min-sdk-version N --max-sdk-version N` 对 API 31–35 均打印 BBK 证书，尽管 v3 SignedData 内的 API 33+ signer 是 Vivo。当前不能用这个打印结果推断“API33+ 只使用 BBK 证书”，也不能忽略此差异；详见 [独立复核 JSON](verification/v3-independent.json) 与 `signature-api-*.txt`。这不影响两个签名数学上合法的独立验证，**但实际固件安装许可/签名信任仍需设备级确认**。
