@@ -4,6 +4,18 @@
 
 **样本** `com.mobiletools.systemhelper` / 3.0.1-20250515，4,107,356 bytes，SHA-256 `38a9010600bc91fd468701f53ba37ea0d43cb8e906544d0700a799f592011428`。
 
+## 当前审计主线（2026-11-10）
+
+**主线已改为恶意预装程序 / 间谍软件 / 潜在木马的逆向审计。** 将全部相关权限和系统预装能力视为可以使用，优先查**隐蔽驻留、位置及跨应用行为收集、出站数据、运行时控制、原生反调试与命令执行**，并用代码、可达路径和现场证据三个层级评判。
+
+- [恶意软件视角主报告](analysis/malware/PRIMARY-MALWARE-THREAT-ASSESSMENT.md) — 技术行为矩阵、主要疑点、木马判定门槛。
+- [原生库解密/机器码证据](analysis/malware/NATIVE-FORENSICS.md) — 已恢复 231 条隐藏字符串、2 个 `system` 和 4 个 `ptrace` 调用点。
+- [完整原生解码证据 JSON](analysis/malware/native-triage.json) — 逐调用点虚拟地址、解码字符串、ELF 依赖。
+- [网络指标及本地工件](analysis/malware/IOC-AND-ARTIFACT-CATALOG.md) — 区分宿主服务器与第三方 SDK 域名。
+- [隔离运行态取证计划](analysis/malware/ISOLATED-RUNTIME-FORENSICS-PLAN.md) — 如何证明真实执行、流量与反分析条件。
+
+**截至当前**：宿主“长期终端遥测/敏感数据上报”能力已由代码确认。原生库存在 Shell 及反调试兼容的调用，但其在特定设备的装载和触发尚未证明；未找到完整远程指令执行型木马链。传统 IPC、缓存、加密设计薄弱点列为第二主线，不取代恶意行为研究。
+
 ## 导航
 
 - [完整静态审计报告](analysis/SECURITY-AND-LOGIC-REPORT.md) — 功能、调用链、数据结构、风险分级与剩余限制（包含更新）。
