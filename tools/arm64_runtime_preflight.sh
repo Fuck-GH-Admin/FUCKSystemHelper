@@ -5,8 +5,8 @@
 set -eo pipefail
 
 PKG="com.mobiletools.systemhelper"
-ANDROID_SERIAL=""
-OUT=""
+ANDROID_SERIAL="${ANDROID_SERIAL-}"
+OUT="${OUT-}"
 
 if [ -n "$ANDROID_SERIAL" ]; then
   :
@@ -92,9 +92,10 @@ capture "process.txt" sh -c "pidof $PKG 2>&1; ps -A -o PID,UID,NAME 2>&1 | grep 
       adb_cmd shell "if [ -e '$DIR/$LIB' ]; then echo PRESENT:$DIR/$LIB; toybox sha256sum '$DIR/$LIB' 2>/dev/null || sha256sum '$DIR/$LIB' 2>/dev/null || true; fi" 2>&1 || true
     done
   done
+  adb_cmd shell "for DIR in /apex/*/lib64; do for LIB in libapp_BaiduVIlib.so libmml_framework.so; do if [ -e \"\$DIR/\$LIB\" ]; then echo PRESENT:\$DIR/\$LIB; toybox sha256sum \"\$DIR/\$LIB\" 2>/dev/null || true; fi; done; done" 2>&1 || true
 } > "$OUT/native-dependencies.txt"
 
-PID="$(adb_cmd shell pidof "$PKG" 2>/dev/null | tr -d '\r' || true)"
+PID="$(adb_cmd shell pidof "$PKG" 2>/dev/null | tr -d '\r' | awk '{print $1}' || true)"
 if [ -n "$PID" ]; then
   adb_cmd shell "cat /proc/$PID/maps 2>&1 | grep -E 'lib(indoor|locSDK8b|app_BaiduVIlib|mml_framework)\.so' || true" > "$OUT/native-maps.txt" 2>&1 || true
 else
