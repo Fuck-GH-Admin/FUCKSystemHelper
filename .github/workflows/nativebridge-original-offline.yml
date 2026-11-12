@@ -8,6 +8,9 @@ on:
       - tools/nativebridge_offline_original_ci.sh
       - analysis/malware/workstreams/04-arm64-runtime/offline_arm64_probe.sh
   workflow_dispatch:
+concurrency:
+  group: nativebridge-exact-original-${{ github.ref }}
+  cancel-in-progress: true
 permissions:
   contents: read
 jobs:
@@ -24,6 +27,7 @@ jobs:
         run: |
           echo '38a9010600bc91fd468701f53ba37ea0d43cb8e906544d0700a799f592011428  original/SystemHelper.apk' | sha256sum -c -
           bash -n tools/nativebridge_offline_original_ci.sh
+          python3 tools/check_runtime_probe_syntax.py
           bash -n analysis/malware/workstreams/04-arm64-runtime/offline_arm64_probe.sh
       - name: Prepare KVM permissions
         shell: bash
