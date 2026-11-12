@@ -1,0 +1,75 @@
+name: SystemHelper workstream acceptance (offline)
+
+on:
+  push:
+    branches:
+      - work/native-runtime-audit-20261111
+    paths:
+      - analysis/malware/workstreams/**
+      - analysis/malware/runtime/arm64/PLAN.md
+      - .github/workflows/workstream-audit.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: systemhelper-workstream-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  static-evidence:
+    name: Static provenance and cross-workstream audit
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify pinned APK, ELF dependencies, workstream consistency
+        run: python3 -B analysis/malware/workstreams/integration/validate.py
+      - name: Independently check host components and Binder anchors
+        run: python3 -B analysis/malware/workstreams/03-host-ipc/verify_host_ipc.py
+      - name: Validate native static models against pinned bytes
+        run: |
+          python3 -B analysis/malware/workstreams/02-locsdk/offline_checks.py
+          python3 -B analysis/malware/workstreams/02-locsdk/murmur64a_model.py
+          python3 -B analysis/malware/workstreams/02-locsdk/encoder_layer_model.py
+          python3 -B analysis/malware/workstreams/02-locsdk/test_coordinate_transform_model.py
+      - name: Validate ARM64 probe fail-closed behavior using mocks only
+        run: bash analysis/malware/workstreams/04-arm64-runtime/tests/test_preflight.sh
+
+  loopback-helper-tests:
+    name: Local-only extracted Java helper tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Install test-only crypto dependency
+        run: python3 -m pip install 'cryptography>=43,<47'
+      - name: Run strictly within a Linux network namespace
+        shell: bash
+        run: |
+          set -euo pipefail
+          if sudo unshare --net -- true; then
+            sudo unshare --net -- bash -ceu '
+              ip link set lo up
+              python3 -B analysis/malware/workstreams/05-network-protocol/tests/test_host_protocol.py
+              python3 -B analysis/malware/workstreams/05-network-protocol/tests/test_sdk_tls.py
+              python3 -B analysis/malware/workstreams/05-network-protocol/tests/test_loadurl_cast.py
+            '
+          else
+            echo "::warning::No network namespace permission: helper tests were NOT_RUN, not PASS."
+          fi
