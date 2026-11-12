@@ -104,8 +104,8 @@ receipt["unmatched_broadcast_diagnostics"] = category_flags("receiver-unmatched-
 })
 receipt["logcat_diagnostics"] = category_flags("logcat.PRIVATE.txt", {
   "fatal_exception": r"FATAL EXCEPTION",
-  "security_exception": r"(?:java\\.lang\\.)?SecurityException",
-  "imei_callsite": r"getImei\\(",
+  "security_exception": r"(?:java\.lang\.)?SecurityException",
+  "imei_callsite": r"getImei\(",
   "unsatisfied_link_error": r"UnsatisfiedLinkError",
   "dlopen_failed": r"dlopen failed",
   "native_bridge_error": r"libndk_translation.*failed|NativeBridge.*failed",
