@@ -112,9 +112,13 @@ adb -s "$serial" shell ip6tables -I OUTPUT 1 -j REJECT \
   || { stage="GUEST_IPV6_RULE_FAILED"; exit 2; }
 v4="$(adb -s "$serial" shell iptables -S OUTPUT | tr -d '\r')"
 v6="$(adb -s "$serial" shell ip6tables -S OUTPUT | tr -d '\r')"
-[[ "$(printf '%s\n' "$v4" | awk '/^-A OUTPUT / {print; exit}')" == '-A OUTPUT -j REJECT' ]] \
+r4="$(printf '%s\n' "$v4" | awk '/^-A OUTPUT / {print; exit}')"
+r6="$(printf '%s\n' "$v6" | awk '/^-A OUTPUT / {print; exit}')"
+[[ "$r4" == '-A OUTPUT -j REJECT' ||
+   "$r4" == '-A OUTPUT -j REJECT --reject-with icmp-port-unreachable' ]] \
   || { stage="GUEST_IPV4_NOT_DENIED"; exit 2; }
-[[ "$(printf '%s\n' "$v6" | awk '/^-A OUTPUT / {print; exit}')" == '-A OUTPUT -j REJECT' ]] \
+[[ "$r6" == '-A OUTPUT -j REJECT' ||
+   "$r6" == '-A OUTPUT -j REJECT --reject-with icmp6-port-unreachable' ]] \
   || { stage="GUEST_IPV6_NOT_DENIED"; exit 2; }
 guest_isolated=1
 stage="T1_NETWORK_GATES_PASSED"
