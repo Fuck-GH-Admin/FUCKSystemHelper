@@ -43,6 +43,8 @@ jobs:
         run: python3 -B analysis/malware/workstreams/integration/trace_coordinate_dispatch.py
       - name: Extract PF update native instruction evidence (static only)
         run: python3 -B analysis/malware/workstreams/integration/trace_pf_update.py
+      - name: Extract post-PF state helper instructions (static only)
+        run: python3 -B analysis/malware/workstreams/integration/trace_pf_postprocess.py
       - name: Validate ARM64 probe fail-closed behavior using mocks only
         run: bash analysis/malware/workstreams/04-arm64-runtime/tests/test_preflight.sh
 
