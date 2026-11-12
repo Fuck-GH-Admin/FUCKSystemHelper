@@ -4,6 +4,7 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+PROBE="$ROOT/analysis/malware/workstreams/04-arm64-runtime/offline_arm64_probe.sh"
 : "$RUNNER_TEMP"
 PRIVATE="$RUNNER_TEMP/systemhelper-private-nativebridge"
 RECEIPT="$ROOT/analysis/malware/runtime/arm64/nativebridge-original-ci-receipt.json"
