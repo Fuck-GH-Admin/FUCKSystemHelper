@@ -1,0 +1,53 @@
+name: Offline exact-original SystemHelper on Android35 Native Bridge
+on:
+  push:
+    branches:
+      - work/native-runtime-audit-20261111
+    paths:
+      - .github/workflows/nativebridge-original-offline.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  original-apk-translated-arm64:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - name: Checkout evidence without persisted credentials
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Statically verify original sample and fail-closed shell syntax
+        shell: bash
+        run: |
+          echo '38a9010600bc91fd468701f53ba37ea0d43cb8e906544d0700a799f592011428  original/SystemHelper.apk' | sha256sum -c -
+          bash -n tools/nativebridge_offline_original_ci.sh
+          bash -n analysis/malware/workstreams/04-arm64-runtime/offline_arm64_probe.sh
+      - name: Prepare KVM permissions
+        shell: bash
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+          test -e /dev/kvm
+      - name: Boot disposable guest and enforce dual-stack host/guest egress deny before APK install
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 35
+          target: google_apis
+          arch: x86_64
+          cores: 2
+          ram-size: 3072M
+          heap-size: 512M
+          disk-size: 4096M
+          disable-animations: true
+          emulator-options: -no-window -no-snapshot -noaudio -no-boot-anim -gpu swiftshader_indirect
+          script: bash tools/nativebridge_offline_original_ci.sh
+      - name: Upload sanitized result only (never raw logcat or identifiers)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: systemhelper-api35-exact-original-sanitized
+          path: analysis/malware/runtime/arm64/nativebridge-original-ci-receipt.json
+          if-no-files-found: warn
+          retention-days: 7
