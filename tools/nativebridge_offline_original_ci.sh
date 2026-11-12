@@ -75,6 +75,42 @@ if summary.exists():
         if (sep and k in allowed) or (sep and k.endswith(".so")):
             values[k] = v[:300]
     receipt["sanitized_probe_status"] = values
+# Only boolean error classes are exported; not raw command output or log lines.
+import re
+private = Path(os.environ["FINAL_PRIVATE"])
+def category_flags(name, dictionary):
+    target = private / "evidence" / name
+    if not target.is_file():
+        return {"captured": False}
+    body = target.read_text(encoding="utf-8", errors="replace")
+    result = {"captured": True}
+    result.update({key:bool(re.search(pattern,body,re.I)) for key,pattern in dictionary.items()})
+    return result
+receipt["activity_diagnostics"] = category_flags("activity.txt", {
+  "activity_start_status_ok": r"Status:\s*ok",
+  "permission_denial": r"Permission Denial|SecurityException",
+  "activity_not_found": r"Error type 3|does not exist",
+  "process_crashed": r"Status:\s*crashed|Force finishing",
+  "activity_wait_timeout": r"Status:\s*timeout|Timeout",
+})
+receipt["matched_broadcast_diagnostics"] = category_flags("receiver-matched-shell-uid.txt", {
+  "broadcast_completed": r"Broadcast completed",
+  "permission_denial": r"Permission Denial|SecurityException",
+  "broadcast_timeout": r"Timeout",
+})
+receipt["unmatched_broadcast_diagnostics"] = category_flags("receiver-unmatched-shell-uid.txt", {
+  "broadcast_completed": r"Broadcast completed",
+  "permission_denial": r"Permission Denial|SecurityException",
+})
+receipt["logcat_diagnostics"] = category_flags("logcat.PRIVATE.txt", {
+  "fatal_exception": r"FATAL EXCEPTION",
+  "security_exception": r"(?:java\\.lang\\.)?SecurityException",
+  "imei_callsite": r"getImei\\(",
+  "unsatisfied_link_error": r"UnsatisfiedLinkError",
+  "dlopen_failed": r"dlopen failed",
+  "native_bridge_error": r"libndk_translation.*failed|NativeBridge.*failed",
+  "permission_denial": r"Permission Denial",
+})
 Path(os.environ["FINAL_RECEIPT"]).write_text(json.dumps(receipt, indent=2, ensure_ascii=False)+"\n")
 print(json.dumps(receipt, indent=2, ensure_ascii=False))
 PY
