@@ -19,6 +19,19 @@
 
 **截至当前**：宿主“长期终端遥测/敏感数据上报”能力已由代码确认。原生库存在 Shell 及反调试兼容的调用，但其在特定设备的装载和触发尚未证明；未找到完整远程指令执行型木马链。传统 IPC、缓存、加密设计薄弱点列为第二主线，不取代恶意行为研究。
 
+## 2026-11-13：五专项并行逆向工作进展
+
+目前统一在 `work/native-runtime-audit-20261111` 分支进行专项研究，`main` 尚未合并这些阶段性结果。完整状态与交叉验收见 [五专项统一整合报告](analysis/malware/workstreams/integration/STATUS-20261113.md)；自动一致性校验为 [integration/validate.py](analysis/malware/workstreams/integration/validate.py)。
+
+- [01 · 室内原生库](analysis/malware/workstreams/01-libindoor/REPORT.md)：134 个 JNI 导出，当前逐函数语义矩阵为 3 个已理解、45 个部分理解、86 个仅识别用途；3 个 GPS Checker DEX 声明缺少同名导出，提供者待核。
+- [02 · 定位原生库](analysis/malware/workstreams/02-locsdk/REPORT.md)：18 个 JNI 导出（8 个当前 DEX 声明），已完成部分算法与平坦化分派器静态恢复；复杂编码路径和 mode 映射待闭合。
+- [03 · 宿主与 IPC](analysis/malware/workstreams/03-host-ipc/REPORT.md)：12 个组件、13 个外部入口/IPC 项，17 个运行时用例仍全部未执行。
+- [04 · ARM64 动态验证](analysis/malware/workstreams/04-arm64-runtime/REPORT.md)：已完成样本校验与隔离预检工具，尚无合格 ARM64 guest 上的原版 APK / JNI / syscall 真实运行记录。
+- [05 · 网络与协议](analysis/malware/workstreams/05-network-protocol/REPORT.md)：宿主与 SDK 静态链及本地提取方法实验有进展，但 D-helper 不能替代原版 D-APK。
+- [GitHub Actions 离线一致性与回归测试](.github/workflows/workstream-audit.yml)：只读核验静态证据；提取 Java 的网络实验只在回环隔离环境运行，不接触生产服务器。
+
+**重要区分：** 两个 SO 的直接依赖不同，`libindoor.so` 直接依赖两份未随 APK 提供的百度私有库，`liblocSDK8b.so` 则没有这两份库的直接 `DT_NEEDED`。不能把库中的 Shell/PTRACE 指令存在等同于其在目标固件上已执行，也不能将潜在控制面风险等同于远控木马已经证实。
+
 ## 导航
 
 - [完整静态审计报告](analysis/SECURITY-AND-LOGIC-REPORT.md) — 功能、调用链、数据结构、风险分级与剩余限制（包含更新）。
