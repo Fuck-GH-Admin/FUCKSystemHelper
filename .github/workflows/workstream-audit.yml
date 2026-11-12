@@ -39,6 +39,8 @@ jobs:
           python3 -B analysis/malware/workstreams/02-locsdk/murmur64a_model.py
           python3 -B analysis/malware/workstreams/02-locsdk/encoder_layer_model.py
           python3 -B analysis/malware/workstreams/02-locsdk/test_coordinate_transform_model.py
+      - name: Extract bounded coordinate JNI dispatch evidence (static only)
+        run: python3 -B analysis/malware/workstreams/integration/trace_coordinate_dispatch.py
       - name: Validate ARM64 probe fail-closed behavior using mocks only
         run: bash analysis/malware/workstreams/04-arm64-runtime/tests/test_preflight.sh
 
