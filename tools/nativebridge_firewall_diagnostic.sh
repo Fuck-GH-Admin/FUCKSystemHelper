@@ -27,4 +27,19 @@ echo "OUTPUT_CHAIN_POLICY:"
 adb -s "$dev" shell iptables -L OUTPUT -n --line-numbers | head -n 8
 echo "OUTPUT6_CHAIN_POLICY:"
 adb -s "$dev" shell ip6tables -L OUTPUT -n --line-numbers | head -n 8
+echo "SAFE_SYSTEM_SETTINGS_CONTROL:"
+set +e
+control="$(timeout 20s adb -s "$dev" shell am start -W -n com.android.settings/.Settings 2>&1)"
+control_rc="$?"
+set -e
+if [[ "$control" == *'Status: ok'* ]]; then
+  echo "CONTROL_SETTINGS_RESULT=OK"
+elif [[ "$control" == *'Status: timeout'* || "$control_rc" == 124 ]]; then
+  echo "CONTROL_SETTINGS_RESULT=TIMEOUT"
+elif [[ "$control" == *'Error type'* || "$control" == *'Error:'* ]]; then
+  echo "CONTROL_SETTINGS_RESULT=ERROR"
+else
+  echo "CONTROL_SETTINGS_RESULT=UNCLASSIFIED"
+fi
+echo "CONTROL_SETTINGS_RC=$control_rc"
 echo "NO APK WAS INSTALLED OR EXECUTED"
